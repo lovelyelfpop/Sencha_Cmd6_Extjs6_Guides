@@ -100,7 +100,7 @@
        <h1>Sencha Cmd 包(Packages)</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 包含了 Sencha 包管理器. 包设计用于解决二个基本问题: 使用和发布. 本向导聚焦于这些主题. 同时请查看 <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a> 来获得关于创建和共享包的资料.</p> 
+       <p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 包含了 Sencha 包管理器. 包设计用于解决二个基本问题: 使用和发布. 本向导聚焦于这些主题. 同时请查看 <a href="cmd_creating_packages.html">创建 Sencha Cmd 包(Packages)</a> 来获得关于创建和共享包的资料.</p> 
        <h2 id="The__code__quot_packages_quot___code__Folder"> <code>&quot;packages&quot;</code> 文件夹</h2> 
        <p>所有由 Sencha Cmd 生成的工作区的根目录下都有一个 <code>&quot;packages&quot;</code> 文件夹. 这个文件夹的位置可以进行配置,但没什么实际意义, <code>&quot;packages&quot;</code>文件夹的角色是服务于工作区中的应用(或者其它包)使用到的所有包的存储.</p> 
        <pre mode="javascript" theme="chrome"><code>packages/       # Container folder for shared Cmd packages
@@ -118,102 +118,102 @@
        <p>按照上面给出的要求, <code>sencha app build</code> 和 <code>sencha app refresh</code> 命令都将执行用于集成这个包到你的应用中的步骤. 典型的处理是在修改了包的要求后,你需要运行 <code>sencha app refresh</code> 以便这些需要元素来支持 “dev mode” 获得更新.</p> 
        <p>不管你使用哪个命令, Sencha Cmd 都将会下载和解开这个包到你的 <code>&quot;packages/remote&quot;</code> 文件夹. 完成这个操作后你会在你工作区下的这个目录下看到这个 <code>&quot;packages/remote/cool-stuff&quot;</code> 包.</p> 
        <h2 id="Local_Packages">本地包</h2> 
-       <p>One use of packages is simply to hold code or themes that are available for multiple applications in the workspace. These packages need never be distributed (beyond source control) to provide value to your development.</p> 
-       <p>To add a package to your workspace, you just generate the package:</p> 
+       <p>包的一个用途是简单的保留一个工作区内为多个应用使用的代码或主题.这些包不需要发布出来给你的开发提供价值(在源代码控制之外).</p> 
+       <p>添加一个包到你的工作区,你只需要生成这个包:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha generate package common</code></pre> 
-       <p>This generates a new package to the <code>&quot;packages/local/common&quot;</code> folder. This package is also marked as <code>local: true</code> in its <code>&quot;package.json&quot;</code>. This flag prevents Sencha Cmd from ever overwriting the package with a version from a remote repository (see below). This would become important if the packages folders were combined (as they were in previous releases) by editing <code>&quot;workspace.json&quot;</code>.</p> 
-       <p>Then add “common” as a requirement to your application’s <code>&quot;app.json&quot;</code> as described above:</p> 
+       <p>这将在 <code>&quot;packages/local/common&quot;</code> 文件夹中生成一个新的包.这个包也在 <code>&quot;package.json&quot;</code>文件中被标识为 <code>local: true</code>. 这个标志用于防止 Sencha Cmd 可能从一个远程库(见下面)中去获取一个版本的包来覆盖. 如果包文件夹通过编辑<code>&quot;workspace.json&quot;</code>组合 (因为它们在以前的发布的版本中) 这个就变得非常重要<code></code>.</p> 
+       <p>然后在你的应用的 <code>&quot;app.json&quot;</code>文件中添加 “common” 包的引入:</p> 
        <pre mode="javascript" theme="chrome"><code>{
     &quot;name&quot;: &quot;MyApp&quot;,
     &quot;requires&quot;: [
         &quot;common&quot;
     ]
 }</code></pre> 
-       <p>For more details, especially regarding how to distribute packages to others, see <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <p>要获取更多资料, 尤其是关于怎么发布包给其他开发者,参考 <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
        <h2 id="Remote_Packages">远程包</h2> 
-       <p>While 本地包 can be very valuable in large applications, one of the most useful aspects of packages is the ability to distribute packages for others to consume.</p> 
-       <p>Packages are shared and distributed using package repositories. Sencha Cmd automatically creates a “本地库” for caching packages as well as for publishing packages. The role of the 本地库 for package authoring is not discussed in this guide. For details on that topic see <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <p>当本地包在大型应用中特别有价值, 包的一个最重要的方面就是能发布出来提供给其他开发者使用.</p> 
+       <p>包通过使用包库来分享和发布. Sencha Cmd 自动创建一个 “本地库” 来缓存包也用来发布包. 包作者本地库的作用在这个向导中不做讨论.详细的信息参考 <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a> 主题.</p> 
        <h3 id="Local_Repository">本地库</h3> 
-       <p>Many operations implicitly use the 本地库. Sencha Cmd follows these basic steps when it encounters the <code>requires</code> statement in <code>&quot;app.json&quot;</code>:</p> 
+       <p>许多操作显式地使用本地库. 在 <code>&quot;app.json&quot;</code>文件中配置了<code>requires</code> Senc语句时, Sencha Cmd 遵循下面的基本步骤:</p> 
        <ul> 
-        <li>Look in the workspace to see if the package is already present.</li> 
-        <li>Check the 本地库 to see if there is a version already downloaded.</li> 
-        <li>Look at the set of 远程库 defined to see if any has the package.</li> 
-        <li>Download the package from the remote repository and add to the local repository.</li> 
+        <li>先在工作区间查看是否存在这个包.</li> 
+        <li>检查本地库来查看是否已经下载了一个对应版本的包.</li> 
+        <li>查看设置定义的远程库查看是否有一个这样的包.</li> 
+        <li>从远程库下载这个包和添加到本地库中.</li> 
        </ul> 
-       <p>Once the package has been downloaded, subsequent requirements for this package will not require downloading; the package will be found in the 本地库.</p> 
+       <p>当一个包下载完成后,随后对这个包的请求就不再需要下载了,这个包就能在本地库找到了.</p> 
        <h4 id="Location_of_the_Local_Repository">本地库的位置</h4> 
-       <p>The 本地库 is created in a folder “beside” the various versions to facilitate caching. For example, the default install directory of Sencha Cmd on Windows for user Foo might be something like this:</p> 
+       <p>本地库 在一个有着各种用于缓存的版本号的文件夹“旁边”的文件夹中生成.例如在Windows上为用户 Foo 安装Sencha Cmd的默认安装目录象下面这样:</p> 
        <pre mode="javascript" theme="chrome"><code>C:\Users\Foo\bin\Sencha\Cmd\n.n.n.n</code></pre> 
-       <p>Given that install directory, the 本地库 would be located at:</p> 
+       <p>给定这个安装目录, 本地库会被位于:</p> 
        <pre mode="javascript" theme="chrome"><code>C:\Users\Foo\bin\Sencha\Cmd\repo</code></pre> 
-       <p>This can be changed by editing the <code>&quot;sencha.cfg&quot;</code> in the Sencha Cmd install folder.</p> 
-       <p>The contents of the 本地库 are discussed further in <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <p>这个也可以通过编辑在Sencha Cmd 安装目录下的<code>&quot;sencha.cfg&quot;文件来进行修改</code>.</p> 
+       <p> 本地库中的内容将在 <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a> 进行进一步的讨论.</p> 
        <h3 id="Remote_Repositories">远程库</h3> 
-       <p>In order to download packages to the 本地库, Sencha Cmd must know about 远程库. By default, Sencha Cmd automatically adds the Sencha Package Repository as a remote repository named “sencha”.</p> 
-       <p>To see the list of 远程库, run the <code>sencha repository list</code> command:</p> 
+       <p>为了将包下载到本地库, Sencha Cmd 必须知道远程库.默认情况下, Sencha Cmd自动添加 Sencha Package 库作为远程库并命名为 “sencha”.</p> 
+       <p>查看远程库的列表, 运行这个 <code>sencha repository list</code> 命令:</p> 
        <pre mode="javascript" theme="chrome"><code>&gt; sencha repository list
 ...
 [INF] Remote repository connections (1):
 [INF]
 [INF]     sencha - http://cdn.sencha.com/cmd/packages/</code></pre> 
-       <p>You can add and remove repositories from this list using <code>sencha repository add</code> and <code>sencha repository remove</code> commands. Your 本地库 is in fact a valid remote repository for others if you chose to host it. For details on this, see <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <p>你可以通过 <code>sencha repository add</code> 和 <code>sencha repository remove</code> 命令来添加和删除远程库. 你的本地库如果选择通过主机进行发布实际上对于其他开发者来说也是一个有效的远程库. 更多详细信息,参考 <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
        <h2 id="The_Package_Catalog">包目录</h2> 
-       <p>The set of packages available to use is listed in the “catalog”. You can display the contents of the global catalog using this command:</p> 
+       <p>可供使用的包的设置在 “catalog” 中列出来了.你通过这个命令可以显示全局目录中的内容:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha package list</code></pre> 
-       <p>When you list packages you will notice that the listing includes names and versions.</p> 
+       <p>当你列出这些包后,你会注意到列表中包含了名字和版本.</p> 
        <h3 id="Name_Assignment">命名赋值</h3> 
-       <p>Because Sencha Cmd’s repository management is distributed and you can add or remove 远程库 as you see fit, there is no Universal namespace of packages. If you retain the default “sencha” connection to the Sencha Package Repository, then you can view the content of that repository as a naming standard.</p> 
-       <p>Packages published by Sencha (not included inside a Sencha Framework) will use names of the following forms:</p> 
+       <p>因为 Sencha Cmd 的库管理被发布了并且你可以按照需要来添加和删除远程库,这就没一个包的通用命名空间.如果你保留默认的 “sencha” 连接到 Sencha Package Repository ( Sencha 包库), 那么你能查看库中的内容来作为命名标准.</p> 
+       <p>通过Sencha发布的包 (不包括 Sencha 框架里面的包) 会使用下面形式的名字:</p> 
        <ul> 
         <li>sencha-*</li> 
         <li>ext-*</li> 
         <li>touch-*</li> 
         <li>cmd-*</li> 
        </ul> 
-       <p>All package names beginning with the above prefixes are reserved by Sencha with respect to the Sencha Package Repository. It is recommended that you avoid conflicting with these names even if you disconnect from the Sencha Package Repository.</p> 
+       <p>所有通过Sencha以上面的前缀开始命名的包名由都保留给Sencha Package Repository来使用. 即使你从Sencha Package Repository远程库断开了也建议你避免与这些名字冲突.</p> 
        <h2 id="Version_Management">版本管理</h2> 
-       <p>To connect packages and their consumers (that is, applications or other packages), it is important to consider the versions involved. To help manage this, all packages have version numbers which are used by the <code>requires</code> statement to handle 版本约束.</p> 
+       <p>为连接包和它们的使用者 (就是应用和其它包), 重要的是要考虑包的版本. 为了帮助管理这些,所有包都有一个版本号用于在使用 <code>requires</code> 语句来处理版本约束.</p> 
        <h3 id="Package_Versions">包的版本</h3> 
-       <p>All packages are described by the combination of their name and their version. For each version of a package, however, there is another version number that describes its level of backwards compatibility. This version is a statement made by the package creator that they believe the particular version of their package to be backwards compatible to some specific previous version level.</p> 
-       <p>In the <code>&quot;package.json&quot;</code> descriptor there are two important properties: <code>version</code> and <code>compatVersion</code>. For example:</p> 
+       <p>所有包都通过它们的名字和版本组合来描述. 对一个包的所一个版本,然而还有另外一个版本数字来描述向后兼容的程度.这个版本是包的创建者生成的一个说明,他们相信包的特殊版本向后兼容一些特定的以前版本的级别.</p> 
+       <p>在 <code>&quot;package.json&quot;</code> 文件描述中有二个重要的属性: <code>version</code> and <code>compatVersion</code>. 例如:</p> 
        <pre mode="javascript" theme="chrome"><code>{
     ...
     &quot;version&quot;: &quot;n.n.n&quot;,
     &quot;compatVersion&quot;: &quot;2.4.2&quot;,
     ...
 }</code></pre> 
-       <p>This number must be of this format:</p> 
+       <p>这个数字必须是以下的格式:</p> 
        <pre mode="javascript" theme="chrome"><code>\d+(\.\d+)*</code></pre> 
        <h3 id="Version_Restrictions">版本约束</h3> 
-       <p>When using the <code>requires</code> property above we only specified the package name to keep the example as simple as possible. What that means precisely is “the latest version”. In some cases this is acceptable, but it can be a risky requirement should that package’s next release be a complete redesign and offer no level of backwards compatibility.</p> 
-       <p>To protect your application from this, we can change the <code>require</code> statement to be very restrictive and lock down the version number we want:</p> 
+       <p>当使用上面的 <code>requires</code> 属性我们只是定义了包的名字来让这个例子尽可能简单.这就是说恰好用的是 “最新版本”.有些情况下这是可以接受的,但当一个包的下一个版本进行了完全重构并没有提供向后兼容的级别时会带来风险要求.</p> 
+       <p>为避免你的应用产生这个情况,我们能修改 <code>require</code> 语句来进行非常严格的约束并且锁信我们需要的版本号:</p> 
        <pre mode="javascript" theme="chrome"><code>{
     &quot;name&quot;: &quot;MyApp&quot;,
     &quot;requires&quot;: [
         &quot;ext-easy-button@1.0&quot;
     ]
 }</code></pre> 
-       <p>This approach has its place, but it prevents even maintenance releases of the package from being picked up. In final stages of a project, this may be exactly what is desired, but during development perhaps we want to be a little less restrictive and accept any compatible version.</p> 
-       <p>The following change will do that:</p> 
+       <p>这种方法有它的地方,但它防止甚至维护的版本会被使用.在项目的最终阶段,这可能是理想的,但在开发时也许我们要少一些约束并且可以接受任一兼容的版本.</p> 
+       <p>下面的修改可以满足这点:</p> 
        <pre mode="javascript" theme="chrome"><code>{
     &quot;name&quot;: &quot;MyApp&quot;,
     &quot;requires&quot;: [
         &quot;ext-easy-button@1.0?&quot;
     ]
 }</code></pre> 
-       <p>The above requests the latest available version of <code>&quot;ext-easy-button&quot;</code> that has described itself as backwards compatible with version 1.0.</p> 
-       <p>Other ways to restrict version matching are:</p> 
+       <p>上面请求的是f <code>&quot;ext-easy-button&quot;</code>最后有效的版本,并且自描述为可以兼容到版 1.0 .</p> 
+       <p>另外一个约束版本匹配的方法是:</p> 
        <ul> 
-        <li>-1.2 (no lower limit - up to version 1.2)</li> 
-        <li>1.0- (no upper limit - version 1.0 or higher)</li> 
-        <li>1.0+ (same as above - version 1.0 or higher)</li> 
-        <li>1.0-1.2 (versions 1.0 up to 1.2 inclusive)</li> 
-        <li>1.0-1.2? (compatible with versions 1.0 up to 1.2 inclusive)</li> 
+        <li>-1.2 (无下被 - 向上到版本 1.2)</li> 
+        <li>1.0- (无上限 - 版本 1.0 或更高)</li> 
+        <li>1.0+ (同上 - 版本 1.0 或更高)</li> 
+        <li>1.0-1.2 (版本 1.0 以上 到 1.2 包含 )</li> 
+        <li>1.0-1.2? (与 1.0 版本兼容以上到 1.2 含 )</li> 
        </ul> 
        <h3 id="Resolving_Versions">解决版本</h3> 
-       <p>Given all of the desired and available versions, Sencha Cmd will determine the best set of matching packages and ensure that these are in your workspace.</p> 
-       <p>If there are mutually exclusive requirements this process may fail. In this case, you will see an error message explaining what requirements could not be satisfied.</p> 
+       <p>鉴于所有的所需的和可用的版本, Sencha Cmd 会决定最好的一套匹配包并且确保这些在你的工作区.</p> 
+       <p>如果有相互排斥的需求,那么就可能失败. 在这种情况下,你会看到一个解释哪个需求不能满足要求的信息.</p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 
