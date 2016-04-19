@@ -26,7 +26,7 @@
  </head> 
  <body> 
   <div id="header"> 
-   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <a href="http://www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
    <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
    <div id="mobile_menu"> 
     <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
@@ -171,8 +171,8 @@
        <p>经典工具包包含支持传统的浏览器，平板电脑和触摸屏笔记本电脑的Ext JS代码库。现代工具包包含一个对触摸支持比较好的代码库，支持现代浏览器，平板电脑和手机</p> 
        <p>让我们开始吧！</p> 
        <ol> 
-        <li><p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">下载并安装Sencha Cmd 6</a></p></li> 
-        <li><p><a href="../../../../www.sencha.com/products/extjs/evaluate/default.htm">下载并解压缩Ext JS SDK</a></p></li> 
+        <li><p><a href="http://www.sencha.com/products/sencha-cmd/default.htm">下载并安装Sencha Cmd 6</a></p></li> 
+        <li><p><a href="http://www.sencha.com/products/extjs/evaluate/default.htm">下载并解压缩Ext JS SDK</a></p></li> 
         <li><p>打开你的终端或控制台窗口并发出这些命令：</p> 
           <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/extjs/framework generate app AppName path/to/app
 cd /path/to/app
@@ -180,27 +180,27 @@ sencha app watch</code></pre></li>
        </ol> 
        <p><strong>注意：</strong>出于此演练的目的，App名称将定为MyApp，path/to/app则是./MyApp.
 </p> 
-       <p>就是这样.您已经创建并部署了一个应用程序服务器，现在转到<a href="../../../../localhost_3A1841/default.htm">http://localhost:1841</a>或者你的本地主机.你现在可以查看新生成的Ext JS 6应用程序.它应该是这样的：</p> 
+       <p>就是这样.您已经创建并部署了一个应用程序服务器，现在转到<a href="http://localhost:1841">http://localhost:1841</a>或者你的本地主机.你现在可以查看新生成的Ext JS 6应用程序. 它应该是这样的：</p> 
        <p>Sencha Cmd现在正在监控你应用程序的改动。你会看到 <em>&ldquo;Waiting for changes…&rdquo;</em>，这表明，您的应用程序是最新的.当你修改并保存文件，您将看到打印了其他消息，但是这些很快就会出现另一个 <em>&ldquo;Waiting for changes…&rdquo;</em>.这个周期通常需要几秒钟的时间，所以一定要在保存文件之后预留足够的时间，然后再刷新浏览器.</p>
-       <p><strong>Note:</strong> <em>If <code>sencha app watch</code> fails to pick up your changes for any reason, you can simply stop (CTRL + c) and restart app watch.</em></p> 
-       <p><strong>Note:</strong> <em>If you’re curious about what the above steps entail, you may want to check out our <a href="../../../cmd/6.x/intro_to_cmd.html">Sencha Cmd 介绍 Guide</a>.</em></p> 
-       <h2 id="Next_Steps">Next Steps</h2> 
-       <p>As mentioned above, Universal applications are made up of three important areas:</p> 
+       <p><strong>注意:</strong> <em>如果<code>sencha app watch</code> 因为某些原因导致没能监控到变更, 你只要简单地停止 (CTRL + c) 并重新启动 app watch.</em></p> 
+       <p><strong>注意:</strong> <em>如果你想了解上面的步骤具体包含什么内容, 请看<a href="../../../cmd/6.x/intro_to_cmd.html">Sencha Cmd 介绍</a>.</em></p> 
+       <h2 id="Next_Steps">下一步</h2> 
+       <p>像上面提到的, 通用(Universal)应用程序有三部分构成:</p> 
        <ul> 
-        <li>Shared app area (most suitable for stores, models, and controllers). This area can be found in the <code>app</code> folder in your application’s root.</li> 
-        <li>Classic app area (views and logic specific to the classic aspect of your application). This area can be found in the <code>classic/src</code> folder in your application’s root.</li> 
-        <li>Modern app area (views and logic specific to the modern aspect of your application). This area can be found in the <code>modern/src</code> folder in your application’s root.</li> 
+        <li>共享 app 部分 (通常是 stores, models, 和 controllers 最合适). 这部分位于应用程序根目录的<code>app</code>文件夹内.</li> 
+        <li>Classic app 部分 (views 和 特定于应用程序 classic 方面的 ). 这部分位于应用程序目录下的 <code>classic/src</code> 文件夹内.</li> 
+        <li>Modern app 部分 (views 和 特定于应用程序 modern 方面的). 这部分位于应用程序目录下的 <code>modern/src</code> 文件夹内.</li> 
        </ul> 
-       <p>It should be noted that this small application illustrates a huge number of features in Ext JS. There is not enough space to discuss everything in-depth, so we will do a small overview for the pertinent bits. We’ll make sure to point you to more in-depth information for each topic when possible.</p> 
-       <p>Let’s begin by evaluating the Main classic view found in <code>MyApp/classic/src/view/main/</code>.</p> 
+       <p>应该注意的是,这个小应用程序演示了很多 Ext JS 的特性. 没有足够空间深入讨论所有内容, 所以我们将对这些相关的点做一个简要概述. 每个主题中, 我们会尽可能向你提供更深入的信息</p> 
+       <p>我们先来看看 Main classic 视图 ，它位于 <code>MyApp/classic/src/view/main/</code>.</p> 
        <h3 id="Classic">Classic</h3> 
-       <p>The Main classic view will appear anytime someone is using a desktop browser or a tablet, unless otherwise specified in your <a href="../../../cmd/6.x/intro_to_cmd.html">build targets</a>.</p> 
-       <p>Using your favorite IDE or text editor, open <code>MyApp/classic/src/view/main/Main.js</code>. This is the main entry point for our classic application. It’s also the container that houses our tabpanel and its four tabs. Additionally, you’ll see that the first tab includes our grid class.</p> 
-       <p>Let’s walk through tabs.</p> 
-       <h4 id="Tabs">Tabs</h4> 
-       <p><a href="../6.0.1-classic/#!/api/Ext.tab.Panel" data-full-load="true">TabPanels</a> can be used similarly to standard <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Panel</a> for layout purposes, but they also have special support for containing child Components (items). These items are managed using a <a href="../6.0.1-classic/#!/api/Ext.layout.container.Card" data-full-load="true">Card</a> layout manager, and displayed as separate tabs.</p> 
-       <p><a href="../6.0.1-classic/#!/api/Ext.tab.Tab" data-full-load="true">Tabs</a> typically default to horizontally residing at the top of your item content. However, in this application, we have gotten a little clever with the tabs.</p> 
-       <p>You may notice that our tabs don’t look like traditional tabs. That’s because we’ve created a custom UI for them.</p> 
+       <p>Main classic 视图会在桌面浏览器或者平板设备上显示, 除非你指定了<a href="../../../cmd/6.x/intro_to_cmd.html">build targets</a>.</p> 
+       <p>用你最喜欢的 IDE 或文本编辑器, 打开 <code>MyApp/classic/src/view/main/Main.js</code>. 这是我们这个 classic 应用程序的主要入口. 它也是容纳一个 tabpanel 和它的四个子 tab 页的容器. 另外, 你还可以看到第一个 tab 里面用到了我们的 表格(grid) 类.</p> 
+       <p>让我们来看看各个 tab.</p> 
+       <h4 id="Tabs">标签页(Tabs)</h4> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.tab.Panel" data-full-load="true">TabPanels</a> 同样可用于标准<a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">面板(Panel)</a>布局, 也可以容纳子组件(items). 这些子组件被 <a href="../6.0.1-classic/#!/api/Ext.layout.container.Card" data-full-load="true">卡片(Card)</a> 布局管理, 并呈现为一个个标签页的样式.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.tab.Tab" data-full-load="true">Tabs</a> 通常横向配列在顶部. 不过, 在这个应用程序中, 我们聪明地改造了一下.</p> 
+       <p>你应该注意到了我们的 tabs 不像一般的 tabs. 这是因为我们创建了一个自定义 UI.</p> 
        <h5 id="UI_Styling">UI Styling</h5> 
        <p>Every component in the Ext JS framework has a <code>ui</code> configuration that defaults to <code>default</code>. This property can be changed to allow components in your application to have different styles.</p> 
        <p>Most Ext JS components have SASS @mixin’s that allow you to quickly generate new UIs. These include: Ext.panel.Panel, Ext.button.Button, Ext.Toolbar, Ext.window.Window, and many more.</p> 
@@ -324,7 +324,7 @@ header: {
        <p>Once watch has completed, refresh the page and you should see that your application has gotten a face-lift.</p> 
        <h3 id="Styling_Your_Application">Styling Your Application</h3> 
        <p>On most occasions, you’ll need to customize the look of your application beyond the capacity of a default theme. Your application looks pretty good, but blue just isn’t working. Let’s try and get those active tab colors to be more unique to our application.</p> 
-       <p><em><strong>Note:</strong> The following steps will style the classic views within your application. In the near future, Ext JS 6 will be improved to allow for theming the views of both toolkits within the same application.</em></p> 
+       <p><em><strong>注意:</strong> The following steps will style the classic views within your application. In the near future, Ext JS 6 will be improved to allow for theming the views of both toolkits within the same application.</em></p> 
        <p>You can easily and efficiently style your application by creating and modifying SCSS files.</p> 
        <p>SCSS (Sassy CSS) is a syntax of SASS, which allows you to add nested rules, variables and mixins to your design code. These new additions are then processed and converted to traditional CSS files for your application’s consumption.</p> 
        <p>To see a list of global SCSS variables, check out this page from our API docs: <a href="../6.0.1-classic/#!/api/Global_CSS" data-full-load="true">Global_CSS</a></p> 
@@ -360,13 +360,13 @@ header: {
     <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
    </div> 
    <div id="footer-content"> 
-    <a href="../../../../www.sencha.com/products">Products</a> | 
-    <a href="../../../../www.sencha.com/services">Services</a> | 
-    <a href="../../../../www.sencha.com/support">Support</a> | 
-    <a href="../../../../www.sencha.com/training">Training</a> | 
-    <a href="../../../../www.sencha.com/partners">Partners</a> | 
-    <a href="../../../../www.sencha.com/blog">Community</a> | 
-    <a href="../../../../www.sencha.com/company">Company</a> 
+    <a href="http://www.sencha.com/products">Products</a> | 
+    <a href="http://www.sencha.com/services">Services</a> | 
+    <a href="http://www.sencha.com/support">Support</a> | 
+    <a href="http://www.sencha.com/training">Training</a> | 
+    <a href="http://www.sencha.com/partners">Partners</a> | 
+    <a href="http://www.sencha.com/blog">Community</a> | 
+    <a href="http://www.sencha.com/company">Company</a> 
    </div> 
   </div> 
   <div id="menu-product-container" style="display:none;"> 
@@ -528,7 +528,7 @@ header: {
       <div class="menu-landing-doc-heading">
         3.1 
       </div> 
-      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <a href="http://www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
       <br /> 
       <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
       <br /> 
