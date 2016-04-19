@@ -26,7 +26,7 @@
  </head> 
  <body> 
   <div id="header"> 
-   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <a href="http://www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
    <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
    <div id="mobile_menu"> 
     <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
@@ -81,126 +81,126 @@
     <div id="tpl-content"> 
      <div> 
       <div class="toc-page" style="display:block;">
-        Contents 
+        内容导航 
        <a class="toc-page-h2" href="#Prerequisites" title="Prerequisites">前提</a> 
        <a class="toc-page-h2" href="#Generating_Your_Application" title="Generating Your Application">创建你的应用程序</a> 
-       <a class="toc-page-h2" href="#Building_Your_Application" title="Building Your Application">Building Your Application</a> 
-       <a class="toc-page-h2" href="#Development_Mode" title="Development Mode">Development Mode</a> 
+       <a class="toc-page-h2" href="#Building_Your_Application" title="Building Your Application">构建(Build) 你的应用程序</a> 
+       <a class="toc-page-h2" href="#Development_Mode" title="Development Mode">开发模式</a> 
        <a class="toc-page-h3" href="#sencha_app_watch" title="sencha app watch">sencha app watch</a> 
-       <a class="toc-page-h3" href="#Development_Builds_and_Refresh" title="Development Builds and Refresh">Development Builds and Refresh</a> 
-       <a class="toc-page-h2" href="#Extending_Your_Application" title="Extending Your Application">Extending Your Application</a> 
-       <a class="toc-page-h3" href="#Generating_Models" title="Generating Models">Generating Models</a> 
-       <a class="toc-page-h3" href="#Generating_Views" title="Generating Views">Generating Views</a> 
-       <a class="toc-page-h3" href="#Generating_Controllers" title="Generating Controllers">Generating Controllers</a> 
-       <a class="toc-page-h2" href="#Customizing_The_Build" title="Customizing The Build">Customizing The Build</a> 
-       <a class="toc-page-h3" href="#Going_Further" title="Going Further">Going Further</a> 
+       <a class="toc-page-h3" href="#Development_Builds_and_Refresh" title="Development Builds and Refresh">构建开发版本(Development Builds) 和 刷新</a> 
+       <a class="toc-page-h2" href="#Extending_Your_Application" title="Extending Your Application">扩展你的应用程序</a> 
+       <a class="toc-page-h3" href="#Generating_Models" title="Generating Models">创建 Models</a> 
+       <a class="toc-page-h3" href="#Generating_Views" title="Generating Views">创建 Views</a> 
+       <a class="toc-page-h3" href="#Generating_Controllers" title="Generating Controllers">创建 Controllers</a> 
+       <a class="toc-page-h2" href="#Customizing_The_Build" title="Customizing The Build">自定义 Build</a> 
+       <a class="toc-page-h3" href="#Going_Further" title="Going Further">深入学习</a> 
        <a class="toc-page-h3" href="#The_classpath" title="The classpath">The classpath</a> 
-       <a class="toc-page-h3" href="#Further_Reading" title="Further Reading">Further Reading</a> 
-       <a class="toc-page-h2" href="#Upgrading_Your_Application" title="Upgrading Your Application">Upgrading Your Application</a> 
-       <a class="toc-page-h2" href="#Porting_Application_to_Sencha_Cmd" title="Porting Application to Sencha Cmd">Porting Application to Sencha Cmd</a> 
-       <a class="toc-page-h3" href="#Configuration" title="Configuration">Configuration</a> 
-       <a class="toc-page-h3" href="#Alternatives" title="Alternatives">Alternatives</a> 
-       <a class="toc-page-h2" href="#Next_Steps" title="Next Steps">Next Steps</a> 
+       <a class="toc-page-h3" href="#Further_Reading" title="Further Reading">进一步阅读</a> 
+       <a class="toc-page-h2" href="#Upgrading_Your_Application" title="Upgrading Your Application">升级你的应用程序</a> 
+       <a class="toc-page-h2" href="#Porting_Application_to_Sencha_Cmd" title="Porting Application to Sencha Cmd">移植应用程序到 Sencha Cmd</a> 
+       <a class="toc-page-h3" href="#Configuration" title="Configuration">配置</a> 
+       <a class="toc-page-h3" href="#Alternatives" title="Alternatives">替代方案</a> 
+       <a class="toc-page-h2" href="#Next_Steps" title="Next Steps">下一步</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
        <h1>Sencha Cmd 结合 Ext JS 6 使用</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p>这篇指南详细介绍了 <a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 结合 Ext JS 6 使用的过程，以 <code>sencha generate app</code> 命令开始，最后创建了一个可以运行的应用程序.</p> 
-       <p>The process for upgrading an existing (non-Sencha Cmd) application to conform to the expectations of Sencha Cmd is covered at the end of this guide. It is important to first understand the “ideal” or “default” structure as a point of comparison. The differences between this default structure and the structure of an existing application are what drive the upgrade process for existing applications.</p> 
+       <p>这篇指南详细介绍了 <a href="http://www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 结合 Ext JS 6 使用的过程，以 <code>sencha generate app</code> 命令开始，最后创建了一个可以运行的应用程序.</p> 
+       <p>升级一个现有 (非 Sencha Cmd) 应用程序以符合 Sencha Cmd 要求的过程，在本指南末尾有涉及. 重要的是先了解“理想”或“默认”结构作为比较的切入点. 默认目录结构和现有应用程序目录结构的差异，才是推动现有应用程序的升级过程的决定性因素.</p> 
        <h2 id="Prerequisites">前提</h2> 
-       <p>The following guides are recommended reading before proceeding further:</p> 
+       <p>推荐先阅读下面的向导:</p> 
        <ul> 
         <li><a href="../intro_to_cmd.html">Sencha Cmd 介绍</a></li> 
        </ul> 
        <h2 id="Generating_Your_Application">创建你的应用程序</h2> 
-       <p>Our starting point is to generate an application skeleton. This is done using the following command:</p> 
+       <p>我们的出发点是生成一个应用程序骨架. 可以执行下面的命令:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/ext6 generate app MyApp /path/to/my-app</code></pre> 
-       <p>To use the Trial edition, you can automatically download it at the same time using this command:</p> 
+       <p>要使用试用版, 你可以用下面的命令，此命令会自动下载试用版:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha generate app -ext MyApp /path/to/my-app</code></pre> 
-       <p>If you have purchased the Commercial edition, you will need to download the Ext JS ZIP archive and use the first command shown.</p> 
-       <p>The application files generated by either of the above commands will have the following structure:</p> 
-       <pre mode="javascript" theme="chrome"><code>.sencha/                        # Sencha-specific files (primarily configuration)
-    app/                        # Application-specific content
-        sencha.cfg              # Application configuration file for Sencha Cmd
-        Boot.js                 # Private, low-level dynamic loader for JS and CSS
-        Microloader.js          # Loads app based on app.json content
-        build-impl.xml          # Standard application build script
-        *-impl.xml              # Implementations of various build phases
-        defaults.properties     # Default values and docs for build properties
-        ext.properties          # Build property values specific to Ext JS
-        *.defaults.properties   # Build properties by environment (e.g. &quot;testing&quot;)
-        plugin.xml              # Application-level plugin for Sencha Cmd
-        codegen.json            # Data for merging generated code during upgrade
-    workspace/                  # Workspace-specific content (see below)
-        sencha.cfg              # Workspace configuration file for Sencha Cmd
-        plugin.xml              # Workspace-level plugin for Sencha Cmd
+       <p>如果你购买了商业版, 你要下载 Ext JS ZIP 压缩包，并使用上面第一个命令.</p> 
+       <p>使用上面任意一个命令生成的应用程序的命令结构如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>.sencha/                        # Sencha 特定文件 (主要配置)
+    app/                        # Application 特定内容
+        sencha.cfg              # 用于 Sencha Cmd 的 应用程序配置文件
+        Boot.js                 # 私有, 底层的动态 JS 和 CSS 加载器
+        Microloader.js          # 根据 app.json 的内容加载应用程序
+        build-impl.xml          # 标准的应用程序构建(build) 脚本
+        *-impl.xml              # 不同构建(build)阶段的脚本实现
+        defaults.properties     # 构建(build)相关的属性的默认值和文档说明
+        ext.properties          # 特定于Ext JS 的，构建(build)相关的属性值 
+        *.defaults.properties   # 特定于不同环境的构建(build)相关的属性 (比如 &quot;testing&quot;)
+        plugin.xml              # 用于 Sencha Cmd 的 应用程序级别的 plugin
+        codegen.json            # 用于在升级时合并生成的代码的数据
+    workspace/                  # Workspace 特定内容 (看下面)
+        sencha.cfg              # 用于 Sencha Cmd 的 Workspace 配置文件
+        plugin.xml              # 用于 Sencha Cmd 的 Workspace 级别的 plugin
 
-ext/                            # A copy of the Ext JS SDK
-    cmd/                        # Framework-specific content for Sencha Cmd
-        sencha.cfg              # Framework configuration file for Sencha Cmd
-    classic/                    # Packages related to the Classic Toolkit
-        classic/                # Ext JS Classic Toolkit package
-        theme-neptune/          # Classic Toolkit Theme Package for Neptune
-        theme-triton/           # Classic Toolkit Theme Package for Triton
+ext/                            # Ext JS SDK 的副本
+    cmd/                        # 用于 Sencha Cmd 的 框架的特定内容
+        sencha.cfg              # 用于 Sencha Cmd 的 框架配置文件
+    classic/                    # Classic Toolkit 相关的包
+        classic/                # Ext JS Classic Toolkit 包
+        theme-neptune/          # Classic Toolkit 主题包 Neptune
+        theme-triton/           # Classic Toolkit 主题包 Triton
         ...
-    modern/                     # Packages related to the Modern Toolkit
-        modern/                 # Ext JS Modern Toolkit package
-        theme-neptune/          # Modern Toolkit Theme Package for Neptune
-        theme-triton/           # Modern Toolkit Theme Package for Triton
+    modern/                     # Modern Toolkit 相关的包
+        modern/                 # Ext JS Modern Toolkit 包
+        theme-neptune/          # Modern Toolkit 主题包 for Neptune
+        theme-triton/           # Modern Toolkit 主题包 for Triton
         ...
-    packages/                   # Framework supplied packages
-        charts/                 # Charts package
-        ux/                     # Contents of &quot;Ext.ux&quot; namespace
+    packages/                   # 框架提供的包
+        charts/                 # 图表包
+        ux/                     # &quot;Ext.ux&quot; 命名空间的内容
     ...
 
-index.html                      # The entry point to your application
-app.json                        # Application manifest
-app.js                          # Launches the Application class
-app/                            # Your application's source code in MVC structure
-    model/                      # Folder for application model classes
-    store/                      # Folder for application stores
-    view/                       # Folder for application view classes
-        main/                   # Folder for the classes implementing the Main View
-            Main.js             # The Main View
-            MainModel.js        # The `Ext.app.ViewModel` for the Main View
-            MainController.js   # The `Ext.app.ViewController` for the Main View
-    Application.js              # The `Ext.app.Application` class
+index.html                      # 你的应用程序的入口
+app.json                        # 应用程序清单文件
+app.js                          # 应用程序启动的类
+app/                            # 应用程序 MVC 结构源码
+    model/                      # model 类存放目录
+    store/                      # stores 类存放目录
+    view/                       # view 类存放目录
+        main/                   # Main 视图类的存放目录
+            Main.js             # Main 视图类
+            MainModel.js        # Main 视图的 `Ext.app.ViewModel`
+            MainController.js   # Main 视图的 `Ext.app.ViewController`
+    Application.js              #  `Ext.app.Application` 类
 
-packages/                       # Sencha Cmd packages
-workspace.json                  # Workspace JSON descriptor
+packages/                       # Sencha Cmd 包
+workspace.json                  # Workspace JSON 描述文件
 
-build/                          # The folder where build output is placed</code></pre> 
-       <p>There is no distinction between Workspace and app content in a single-page application. To learn about Workspaces, see <a href="../workspaces.html">Sencha Cmd 的 Workspace</a>.</p> 
-       <h2 id="Building_Your_Application">Building Your Application</h2> 
-       <p>All that is required to build your application is to run the following command:</p> 
+build/                          # build 输出目录</code></pre> 
+       <p>单页应用程序的内容和 workspace 没有区别. 更多关于 Workspaces 的内容, 请看 <a href="../workspaces.html">Sencha Cmd 的 Workspace</a>.</p> 
+       <h2 id="Building_Your_Application">构建(Build) 你的应用程序</h2> 
+       <p>构建(build)你的应用程序只需要执行下面的命令:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha app build</code></pre> 
-       <p>This command builds your markup page, JavaScript code and themes into the <code>&quot;build&quot;</code> folder.</p> 
-       <p><strong>Important.</strong> In order to execute this command, the current directory <strong>must</strong> be the top-level folder of your application (in this case, <code>&quot;/path/to/my-app&quot;</code>).</p> 
-       <p><strong>Important</strong> Do NOT specify the <code>-sdk</code> parameter for <code>sencha app</code> commands. Because these commands must be run from the application’s root folder, Sencha Cmd knows which SDK to use. Using <code>-sdk</code> on these commands causes Sencha Cmd to believe your current directory is the SDK specified, which is not the proper current directory for an application.</p> 
-       <h2 id="Development_Mode">Development Mode</h2> 
-       <p>Sencha Cmd generates what is called a “bootstrap” based on your <code>&quot;app.json&quot;</code> file and the source code in your application. The bootstrap passes this information on to the dynamic class loader (<code>Ext.Loader</code> and the Microloader) so you don’t have to maintain this manually.</p> 
-       <p>The bootstrap is not effected by changes to your JavaScript source code, so the normal workflow of “edit, save, reload, repeat” works as expected. Occasionally changes to styling or movement and renaming of JavaScript code will invalidate this bootstrap information or the generated CSS needed to run your application.</p> 
-       <p>There are two basic approaches to updating the bootstrap.</p> 
+       <p>这个命令 构建(build) HTML文件, JavaScript 代码和主题，输出到 <code>&quot;build&quot;</code> 文件夹下.</p> 
+       <p><strong>重要.</strong> 执行这个命令，<strong>必须</strong>把当前目录设为应用程序的顶层目录(此处则是 <code>&quot;/path/to/my-app&quot;</code>).</p> 
+       <p><strong>重要</strong> 不要在<code>sencha app</code>命令中指定 <code>-sdk</code> 参数. 因为这些命令需要运行在当前应用程序的根目录下, Sencha Cmd 知道用哪个 SDK. 如果加上了 <code>-sdk</code>参数，会导致 Sencha Cmd 以为你的当前目录需要指定 SDK, 也就是说当前目录不是一个正确的应用程序目录.</p> 
+       <h2 id="Development_Mode">开发模式</h2> 
+       <p>Sencha Cmd 根据<code>&quot;app.json&quot;</code>文件和应用程序源码，生成了一个名为 “引导(bootstrap)”的东西. 引导(bootstrap) 把这些信息传给 动态类加载器 (<code>Ext.Loader</code> 和 Microloader)，所以你不需要手动维护.</p> 
+       <p>改变 JavaScript 代码并不会影响到 引导(bootstrap), 所以“编辑, 保存, 重新加载, 重复”这些通常的流程还是正常操作. 有时候，对于样式的改动或者重命名了 JavaScript 代码可能导致 bootstrap 的信息失效，或者 CSS 失效.</p> 
+       <p>有2种基本的方法来更新 引导(bootstrap).</p> 
        <h3 id="sencha_app_watch">sencha app watch</h3> 
-       <p>The simplest way to keep your application runnable in the browser is to run <code>app watch</code>:</p> 
+       <p>要使应用程序一直保持可运行，最简单的办法就是执行 <code>app watch</code>:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha app watch</code></pre> 
-       <p>This command will start by performing a “development build” (see below) but instead of dropping back to the command prompt, <code>app watch</code> waits and watches for changes to any of the files it just built.</p> 
-       <p>Watch also starts the internal Sencha Cmd web server to serve files from your workspace via “http:”. This web server uses default port 1841.</p> 
-       <p>To access the Sencha Cmd web server, use: </p> 
+       <p>这个命令会首先执行一次“开发构建(development build)” (见下面) , <code>app watch</code> 等待并监控所有文件的更改.</p> 
+       <p>Watch 命令也会启动一个内置的 Sencha Cmd web 服务器, 管理 workspace 下的文件. 这个 web 服务器默认端口是 1841.</p> 
+       <p>要访问这个 Sencha Cmd web 服务器, 可以打开: </p> 
        <pre mode="javascript" theme="chrome"><code>http://localhost:1841/</code></pre> 
-       <p>Watch runs until stopped with Ctrl+C.</p> 
-       <p>Using <code>app watch</code>, you can also enable Fashion and use Live Update to keep your CSS up to date as it changes.</p> 
-       <h3 id="Development_Builds_and_Refresh">Development Builds and Refresh</h3> 
-       <p>If you want to update the bootstrap and CSS manually, there are two commands to use:</p> 
+       <p>Watch 命令可以用 Ctrl+C 终止.</p> 
+       <p>使用 <code>app watch</code>, 同时也会启用 Fashion，并在样式发生变更的时候保持 CSS 的实时更新.</p> 
+       <h3 id="Development_Builds_and_Refresh">构建开发版本(Development Builds) 和 刷新</h3> 
+       <p>如果你要手动更新 bootstrap 和 CSS, 需要执行2个命令:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha app build development
 sencha app refresh</code></pre> 
-       <p>The <code>app refresh</code> command only updates the JavaScript portion of the bootstrap. This is the fastest update to run and is all that is needed when changing locations of classes due to renames or other movement of code.</p> 
-       <p>The <code>app build development</code> command will perform a <code>refresh</code> but will also compile your styling to generate a fresh CSS file.</p> 
-       <h2 id="Extending_Your_Application">Extending Your Application</h2> 
-       <p>The <code>sencha generate</code> command helps you quickly generate common MVC components such as controllers or models:</p> 
+       <p><code>app refresh</code> 命令只更新 bootstrap 的 JavaScript 部分. 如果重命名了类，移动了类文件的位置或者其它行为等, 这个命令更新速度最快, 也只需要执行这个命令就足够了.</p> 
+       <p><code>app build development</code> 命令会执行一次 <code>refresh</code>，也会编译你的样式为新的 CSS 文件.</p> 
+       <h2 id="Extending_Your_Application">扩展你的应用程序</h2> 
+       <p><code>sencha generate</code> 命令可以帮助你快速创建 MVC 架构中的组件，比如 controllers 或 models:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha help generate</code></pre> 
-       <p>You should see this:</p> 
+       <p>你可以看到下面的输出:</p> 
        <pre mode="javascript" theme="chrome"><code>Sencha Cmd vX.Y.Z.nnn
 sencha generate
 
@@ -208,96 +208,96 @@ This category contains code generators used to generate applications as well
 as add new classes to the application.
 
 Commands
-  * app - Generates a starter application
-  * controller - Generates a Controller for the current application
-  * form - Generates a Form for the current application (Sencha Touch Specific)
-  * model - Generates a Model for the current application
-  * package - Generates a starter package
-  * profile - Generates a Profile for the current application (Sencha Touch Specific)
-  * theme - Generates a theme page for slice operations (Ext JS Specific)
-  * view - Generates a View for the current application (Ext JS Specific)
-  * workspace - Initializes a multi-app workspace</code></pre> 
-       <p><strong>Important.</strong> In order to execute the commands discussed below, the current directory on the console <strong>must</strong> be inside your application (in this case, “/path/to/MyApp”).</p> 
-       <h3 id="Generating_Models">Generating Models</h3> 
-       <p>Adding a model to your application is done by making the <code>&quot;/path/to/MyApp&quot;</code> your current directory and running Sencha Cmd, like this:</p> 
+  * app - 创建一个 应用程序
+  * controller - 在当前应用程序下创建一个 Controller
+  * form - 在当前应用程序下创建一个 Form (只用于Sencha Touch)
+  * model - 在当前应用程序下创建一个 Model 
+  * package - 创建一个 包
+  * profile - 在当前应用程序下创建一个 Profile (只用于Sencha Touch)
+  * theme - 创建一个主题页面，用于图像切片(slice)操作 (只用于 Ext JS)
+  * view - 在当前应用程序下创建一个 view (只用于 Ext JS)
+  * workspace - 初始化一个多 app 的 workspace</code></pre> 
+       <p><strong>重要.</strong> 为了执行下面的命令, 命令行当前目录 <strong>必须</strong> 是应用程序根目录 (此处则是“/path/to/MyApp”).</p> 
+       <h3 id="Generating_Models">创建 Models</h3> 
+       <p>添加一个 model 到你的应用程序，只需要在 <code>&quot;/path/to/MyApp&quot;</code>下运行 Sencha Cmd 命令，像这样:</p> 
        <pre mode="javascript" theme="chrome"><code>cd /path/to/MyApp
 sencha generate model User id:int,name,email</code></pre> 
-       <p>This command adds a model class called <code>User</code> with the given 3 fields.</p> 
-       <p><strong>Note.</strong> This is the only <code>generate</code> command that is compatible with a <a href="../../../../www.sencha.com/products/architect/default.htm">Sencha Architect</a> project. The typical use of this command is to automate or script the creation of data models in Sencha Architect.</p> 
-       <h3 id="Generating_Views">Generating Views</h3> 
-       <p>Adding a view to your application is similar:</p> 
+       <p>此命令添加了一个名为<code>User</code>的 model 类，带有3个字段.</p> 
+       <p><strong>注意.</strong> 这是唯一一个可以与 <a href="http://www.sencha.com/products/architect/default.htm">Sencha Architect</a> 项目兼容的<code>generate</code> 命令. 在 Sencha Architect 中, 通常这个命令的用法是做成自动化或脚本的形式来创建 models.</p> 
+       <h3 id="Generating_Views">创建 Views</h3> 
+       <p>为你的应用程序添加一个 view，也是类似的:</p> 
        <pre mode="javascript" theme="chrome"><code>cd /path/to/MyApp
 sencha generate view foo.Thing</code></pre> 
-       <p>The above will generate the following files:</p> 
+       <p>上述命令会创建下面的文件:</p> 
        <pre mode="javascript" theme="chrome"><code>app/
     view/
-        foo/                    # Folder for the classes implementing the new view
-            Thing.js            # The new view
-            ThingModel.js       # The `Ext.app.ViewModel` for the new view
-            ThingController.js  # The `Ext.app.ViewController` for the new view</code></pre> 
-       <p>There are no required parameters in this case beyond the view name. You can, however, add a base class if desired:</p> 
+        foo/                    # 视图类的存放目录
+            Thing.js            # 视图类
+            ThingModel.js       # 视图类的 `Ext.app.ViewModel`
+            ThingController.js  # 视图类的 `Ext.app.ViewController`</code></pre> 
+       <p>除了 view 的类名，不需要其它参数. 不过，你也可以指定基类:</p> 
        <pre mode="javascript" theme="chrome"><code>cd /path/to/MyApp
 sencha generate view -base Ext.tab.Panel foo.Thing</code></pre> 
-       <p>This will change the <code>extend</code> used by the view class to use <code>Ext.tab.Panel</code>.</p> 
-       <p><strong>Note.</strong> This command is <em>not</em> compatible with a <a href="../../../../www.sencha.com/products/architect/default.htm">Sencha Architect</a> project.</p> 
-       <h3 id="Generating_Controllers">Generating Controllers</h3> 
-       <p>In Ext JS 5+, each view generated by Sencha Cmd has a default <code>Ext.app.ViewController</code>, so it is not necessary to generate global controllers based on <code>Ext.app.Controller</code> in most cases. If you need a new controller, you can generate one in the same basic way as with Models and Views:</p> 
+       <p>这个命令会把 view 类的 <code>extend</code> 设为 <code>Ext.tab.Panel</code>.</p> 
+       <p><strong>注意.</strong> 这个命令 <em>不</em>兼容 <a href="http://www.sencha.com/products/architect/default.htm">Sencha Architect</a> 项目.</p> 
+       <h3 id="Generating_Controllers">创建 Controllers</h3> 
+       <p>在 Ext JS 5+, Sencha Cmd 创建的每一个 view 默认都有<code>Ext.app.ViewController</code>, 所以大部分情况下不需要创建继承自<code>Ext.app.Controller</code>的全局 controllers. 如果你需要一个新的 controller, 你可以类似地创建:</p> 
        <pre mode="javascript" theme="chrome"><code>cd /path/to/MyApp
 sencha generate controller Central</code></pre> 
-       <p>There are no other parameters in this case beyond the controller name.</p> 
-       <p><strong>Note.</strong> This command is <em>not</em> compatible with a <a href="../../../../www.sencha.com/products/architect/default.htm">Sencha Architect</a> project.</p> 
-       <h2 id="Customizing_The_Build">Customizing The Build</h2> 
-       <p>The first place to look when you need to customize the build is <code>&quot;app.json&quot;</code>. This file contains many options and associated documented. There is also the <code>&quot;workspace.json&quot;</code> file that contains additional settings.</p> 
-       <h3 id="Going_Further">Going Further</h3> 
-       <p>Going beyond the <code>&quot;.json&quot;</code> files is not recommended but may be needed in some cases. If you need to modify files in the <code>&quot;.sencha&quot;</code> folders of the application or workspace, you may end up with an unsupported configuration. In previous releases the <code>&quot;.sencha/app/*.properties&quot;</code> files, the <code>&quot;.sencha/app/sencha.cfg&quot;</code> file and the <code>&quot;.sencha/workspace/sencha.cfg&quot;</code> file were occasionally modified. With Sencha Cmd 6, this practice should be avoided.</p> 
-       <p>Sencha Support may elect to close tickets if a problem cannot be reproduced by only modifying the JSON descriptors. If there are tasks you cannot accomplish in the JSON files, please file a Feature Request on our <a href="../../../../https@www.sencha.com/forum/forumdisplay.php@8-Sencha-Cmd">forum</a> or in the <a href="../../../../https@support.sencha.com/default.htm">Support Portal</a>.</p> 
+       <p>除了 controller 的类名，不需要其它参数.</p> 
+       <p><strong>注意.</strong> 这个命令 <em>不</em> 兼容 <a href="http://www.sencha.com/products/architect/default.htm">Sencha Architect</a> 项目.</p> 
+       <h2 id="Customizing_The_Build">自定义 Build</h2> 
+       <p>如果你要自定义 build，首先要看的地方应该是 <code>&quot;app.json&quot;</code>. 这个文件包含了很多选项和相关记录. 此外还有<code>&quot;workspace.json&quot;</code>文件，其中包含额外的设置. </p> 
+       <h3 id="Going_Further">深入学习</h3> 
+       <p>不推荐修改除 <code>&quot;.json&quot;</code> 以外的文件，不过某些情况下确是必须的. 如果你要修改应用程序或者 workspace 的 <code>&quot;.sencha&quot;</code> 目录下的文件, 结果可能是你改的是一个不支持的配置. 以前的版本中, 偶尔地会修改 <code>&quot;.sencha/app/*.properties&quot;</code> 下的文件, <code>&quot;.sencha/app/sencha.cfg&quot;</code> 下的文件，以及 <code>&quot;.sencha/workspace/sencha.cfg&quot;</code>下的文件. 从 Sencha Cmd 6 开始, 应该避免这样做.</p> 
+       <p>如果某个问题不能通过修改 JSON 描述文件搞定，Sencha Support 可能会改进的. 如果有什么任务不能通过 JSON 文件实现, 请到<a href="https://www.sencha.com/forum/forumdisplay.php?8-Sencha-Cmd">论坛</a> 或 <a href="https://support.sencha.com/">Support Portal</a> 发起一个功能请求.</p> 
        <h3 id="The_classpath">The classpath</h3> 
-       <p>The <code>sencha app build</code> command knows where to find the source of your application due to the <code>classpath</code> property stored in <code>&quot;app.json&quot;</code>. By default, this value is:</p> 
+       <p><code>sencha app build</code> 命令知道去哪里找应用程序的源码，是因为<code>&quot;app.json&quot;</code>里的<code>classpath</code> 属性. 它的默认值是:</p> 
        <pre mode="javascript" theme="chrome"><code>&quot;classpath&quot;: [
     &quot;app&quot;,
     &quot;${toolkit.name}/src&quot;
 ],</code></pre> 
-       <p>Adding directories to this array informs the compiler where to find the source code required to build the application.</p> 
-       <h3 id="Further_Reading">Further Reading</h3> 
-       <p>To learn more about the build process provided by Sencha Cmd, please refer to <a href="../advanced_cmd/cmd_build.html">Inside The App Build Process</a>.</p> 
-       <h2 id="Upgrading_Your_Application">Upgrading Your Application</h2> 
-       <p>Generated applications include two basic kinds of content relevant to Sencha Cmd: build scripts (or scaffolding) and the important content of the used Sencha SDK’s. As such, you will occasionally need to upgrade these pieces. You can do this with the following command:</p> 
+       <p>可以向这个数组中添加其它目录，以通知编译器去这些目录下寻找应用程序需要的源码.</p> 
+       <h3 id="Further_Reading">进一步阅读</h3> 
+       <p>想了解更多关于 Sencha Cmd 的 build 过程, 请看<a href="../advanced_cmd/cmd_build.html">应用程序 build 过程内部机制</a>.</p> 
+       <h2 id="Upgrading_Your_Application">升级你的应用程序</h2> 
+       <p>应用程序包括两种和 Sencha Cmd 相关的基本内容: 构建(build)脚本(scripts) (或支持文件) 和 Sencha SDK 的重要内容. 因此,你有时候会需要升级这几个部分. 可以执行下面的命令:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha app upgrade [ path-to-new-framework ]</code></pre> 
-       <p>The “path-to-new-framework” is optional and is used to upgrade both the Sencha Cmd scaffold <em>and</em> the framework used by the application.</p> 
-       <p>See <a href="../cmd_upgrade.html">Understand App Upgrade</a> for more details.</p> 
-       <h2 id="Porting_Application_to_Sencha_Cmd">Porting Application to Sencha Cmd</h2> 
-       <p>The key pieces of scaffold produced by Sencha Cmd are these:</p> 
+       <p>“path-to-new-framework”是可选的，用来同时升级 Sencha Cmd 支持文件 和 应用程序框架.</p> 
+       <p>查看<a href="../cmd_upgrade.html">理解应用程序升级</a>，以获得更多内容.</p> 
+       <h2 id="Porting_Application_to_Sencha_Cmd">移植应用程序到 Sencha Cmd</h2> 
+       <p>Sencha Cmd 生成的支持文件的关键部分是这些:</p> 
        <pre mode="javascript" theme="chrome"><code>.sencha/
 app.json
 build.xml
 index.html</code></pre> 
-       <p>The first three of these can be simply copied from an application generated to a temp folder. An existing application will typically have some markup entry page and if this is not <code>&quot;index.html&quot;</code>, you can add the following to your <code>&quot;app.json&quot;</code>:</p> 
+       <p>前面三项可以直接从某个 Sencha Cmd 生成的应用程序中复制到 临时文件夹下. 现有的应用程序通常会有自己的入口页面, 如果不是 <code>&quot;index.html&quot;</code>, 你应该在 <code>&quot;app.json&quot;</code>中添加下面的内容:</p> 
        <pre mode="javascript" theme="chrome"><code>{
     ...
 
     &quot;indexHtmlPath&quot;: &quot;index.php&quot;
 }</code></pre> 
-       <p>Naturally, the value should be whatever is correct for the application. In order for the generated build script to understand this markup file, however, the file should contain the standard boilerplate found in the generated <code>&quot;index.html&quot;</code>:</p> 
+       <p>indexHtmlPath 的值应该是你应用程序里页面的文件名. 不过，为了让构建(build)脚本(scripts)能够理解你的页面文件, 这个文件里应该含有和<code>&quot;index.html&quot;</code>相同的一些模板代码:</p> 
        <pre mode="javascript" theme="chrome"><code>&lt;script id=&quot;microloader&quot; type=&quot;text/javascript&quot; src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;</code></pre> 
-       <p>In development mode, this loads a file generated by Sencha Cmd during <code>sencha app build</code> or <code>sencha app refresh</code>. The <code>sencha app build</code> command is a complete build which includes as one step the “refresh” operation.</p> 
-       <h3 id="Configuration">Configuration</h3> 
-       <p>There are probably several pieces of an existing application that will not match with the default structure of a Sencha Cmd application. At this point, there are two paths to consider:</p> 
+       <p>开发模式下, 这段代码加载一个文件，此文件是 Sencha Cmd 通过 <code>sencha app build</code>或 <code>sencha app refresh</code> 自动生成的.  <code>sencha app build</code> 命令时一个完整的 build，其中已经包含了“refresh” 这一步操作.</p> 
+       <h3 id="Configuration">配置</h3> 
+       <p>现有应用程序中可能有一些与 Sencha Cmd 生成的应用程序目录结构不一致的地方. 关于这一点, 可以考虑2种方法:</p> 
        <ul> 
-        <li>Restructure the application to conform to the generated structure</li> 
-        <li>Configure the build process to match the application structure</li> 
+        <li>重构现有应用程序目录结构，以符合 Sencha Cmd 生成的应用程序的目录结构</li> 
+        <li>配置 build 过程，以匹配现有应用程序的结构</li> 
        </ul> 
-       <p>For details on how to configuring the build process, consult <a href="../advanced_cmd/cmd_build.html">Inside The App Build Process</a>.</p> 
-       <h3 id="Alternatives">Alternatives</h3> 
-       <p>If an existing application cannot be made to conform with the expectations of the build script (either by restructuring the app or configuring the build), Sencha Cmd still has useful functionality accessible via low-level commands.</p> 
-       <p>For lower-level details, see</p> 
+       <p>关于配置 build 过程的详细内容, 请看 <a href="../advanced_cmd/cmd_build.html">应用程序 build 过程内部机制</a>.</p> 
+       <h3 id="Alternatives">替代方案</h3> 
+       <p>如果现有应用程序不能做到和 build script 匹配(重构应用程序结构 或 配置 build 过程), Sencha Cmd 仍然有一些低级命令可供使用.</p> 
+       <p>低级命令相关内容, 请看</p> 
        <ul> 
         <li><a href="../advanced_cmd/cmd_compiler_reference.html">Sencha 编译器 参考</a></li> 
         <li><a href="../advanced_cmd/cmd_ant.html">Ant 集成</a></li> 
        </ul> 
-       <h2 id="Next_Steps">Next Steps</h2> 
+       <h2 id="Next_Steps">下一步</h2> 
        <ul> 
         <li><a href="../workspaces.html">Sencha Cmd 的 Workspace</a></li> 
-        <li><a href="../advanced_cmd/cmd_build.html">Inside The App Build Process</a></li> 
+        <li><a href="../advanced_cmd/cmd_build.html">应用程序 build 过程内部机制</a></li> 
        </ul> 
       </div> 
       <div class="tpl-content-lastUpdated">
@@ -315,13 +315,13 @@ index.html</code></pre>
     <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
    </div> 
    <div id="footer-content"> 
-    <a href="../../../../www.sencha.com/products">Products</a> | 
-    <a href="../../../../www.sencha.com/services">Services</a> | 
-    <a href="../../../../www.sencha.com/support">Support</a> | 
-    <a href="../../../../www.sencha.com/training">Training</a> | 
-    <a href="../../../../www.sencha.com/partners">Partners</a> | 
-    <a href="../../../../www.sencha.com/blog">Community</a> | 
-    <a href="../../../../www.sencha.com/company">Company</a> 
+    <a href="http://www.sencha.com/products">Products</a> | 
+    <a href="http://www.sencha.com/services">Services</a> | 
+    <a href="http://www.sencha.com/support">Support</a> | 
+    <a href="http://www.sencha.com/training">Training</a> | 
+    <a href="http://www.sencha.com/partners">Partners</a> | 
+    <a href="http://www.sencha.com/blog">Community</a> | 
+    <a href="http://www.sencha.com/company">Company</a> 
    </div> 
   </div> 
   <div id="menu-product-container" style="display:none;"> 
@@ -483,7 +483,7 @@ index.html</code></pre>
       <div class="menu-landing-doc-heading">
         3.1 
       </div> 
-      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <a href="http://www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
       <br /> 
       <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
       <br /> 
