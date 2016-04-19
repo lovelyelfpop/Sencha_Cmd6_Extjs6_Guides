@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Setup &amp; 快速入门</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="getting_started.html" title="Get Started">Setup &amp; 快速入门</a></li> 
+        <li class="file"><a href="extjs_faq.html" title="">Ext JS - FAQ</a></li> 
+        <li class="file"><a href="login_app.html" title="">Create a Sample Login App</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Upgrades &amp; Migrations</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 图标字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">内容 <a href="#Next_Steps" title="Next Steps">下一个步骤</a><a class="toc-page-h2" href="#Next_Steps" title="Next Steps"></a> 
+       <a class="toc-page-h3" href="#Classic" title="Classic">经典</a> 
+       <a class="toc-page-h4" href="#Tabs" title="Tabs">选项卡</a> 
+       <a class="toc-page-h5" href="#UI_Styling" title="UI Styling">UI样式</a> 
+       <a class="toc-page-h5" href="#Responsive" title="Responsive">响应</a> 
+       <a class="toc-page-h5" href="#View_Models_and_Data_Binding" title="View Models and Data Binding">视图模型和数据绑定</a> 
+       <a class="toc-page-h4" href="#Grids" title="Grids">Grids</a> 
+       <a class="toc-page-h5" href="#Store" title="Store">Store</a> 
+       <a class="toc-page-h5" href="#Listeners" title="Listeners">监听</a> 
+       <a class="toc-page-h3" href="#Modern" title="Modern">Modern</a> 
+       <a class="toc-page-h4" href="#Tabs" title="Tabs">Tabs</a> 
+       <a class="toc-page-h4" href="#Modern_Grid" title="Modern Grid">现代Grid</a> 
+       <a class="toc-page-h3" href="#Universal" title="Universal">通用</a> 
+       <a class="toc-page-h3" href="#Change_Themes" title="Change Themes">通用</a> 
+       <a class="toc-page-h3" href="#Styling_Your_Application" title="Styling Your Application">样式应用程序</a> 
+       <a class="toc-page-h2" href="#Wrap_Up" title="Wrap Up">总结</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>快速入门</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>Ext JS 6和Sencha CMD 6的入门再简单不过了。一个命令，将生成一个功能完整的“通用”的用程序，您可以在本地服务器上运行。. </p> 
+       <p>这个&ldquo;通用&rdquo;的应用程序包含一组核心的stores，模型和控制器，过两个工具包：经典(Classic)和现代(Moden)，展示不同的视图</p> 
+       <p>经典工具包包含支持传统的浏览器，平板电脑和触摸屏笔记本电脑的Ext JS代码库。现代工具包包含一个对触摸支持比较好的代码库，支持现代浏览器，平板电脑和手机</p> 
+       <p>让我们开始吧！</p> 
+       <ol> 
+        <li><p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">下载并安装Sencha Cmd 6</a></p></li> 
+        <li><p><a href="../../../../www.sencha.com/products/extjs/evaluate/default.htm">下载并解压缩Ext JS SDK</a></p></li> 
+        <li><p>打开你的终端或控制台窗口并发出这些命令：</p> 
+          <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/extjs/framework generate app AppName path/to/app
+cd /path/to/app
+sencha app watch</code></pre></li> 
+       </ol> 
+       <p><strong>注意：</strong>出于此演练的目的，App名称将定为MyApp，path/to/app则是./MyApp.
+</p> 
+       <p>就是这样.您已经创建并部署了一个应用程序服务器，现在转到<a href="../../../../localhost_3A1841/default.htm">http://localhost:1841</a>或者你的本地主机.你现在可以查看新生成的Ext JS 6应用程序.它应该是这样的：</p> 
+       <p>Sencha Cmd现在正在监控你应用程序的改动。你会看到 <em>&ldquo;Waiting for changes…&rdquo;</em>，这表明，您的应用程序是最新的.当你修改并保存文件，您将看到打印了其他消息，但是这些很快就会出现另一个 <em>&ldquo;Waiting for changes…&rdquo;</em>.这个周期通常需要几秒钟的时间，所以一定要在保存文件之后预留足够的时间，然后再刷新浏览器.</p>
+       <p><strong>Note:</strong> <em>If <code>sencha app watch</code> fails to pick up your changes for any reason, you can simply stop (CTRL + c) and restart app watch.</em></p> 
+       <p><strong>Note:</strong> <em>If you’re curious about what the above steps entail, you may want to check out our <a href="../../../cmd/6.x/intro_to_cmd.html">Sencha Cmd 介绍 Guide</a>.</em></p> 
+       <h2 id="Next_Steps">Next Steps</h2> 
+       <p>As mentioned above, Universal applications are made up of three important areas:</p> 
+       <ul> 
+        <li>Shared app area (most suitable for stores, models, and controllers). This area can be found in the <code>app</code> folder in your application’s root.</li> 
+        <li>Classic app area (views and logic specific to the classic aspect of your application). This area can be found in the <code>classic/src</code> folder in your application’s root.</li> 
+        <li>Modern app area (views and logic specific to the modern aspect of your application). This area can be found in the <code>modern/src</code> folder in your application’s root.</li> 
+       </ul> 
+       <p>It should be noted that this small application illustrates a huge number of features in Ext JS. There is not enough space to discuss everything in-depth, so we will do a small overview for the pertinent bits. We’ll make sure to point you to more in-depth information for each topic when possible.</p> 
+       <p>Let’s begin by evaluating the Main classic view found in <code>MyApp/classic/src/view/main/</code>.</p> 
+       <h3 id="Classic">Classic</h3> 
+       <p>The Main classic view will appear anytime someone is using a desktop browser or a tablet, unless otherwise specified in your <a href="../../../cmd/6.x/intro_to_cmd.html">build targets</a>.</p> 
+       <p>Using your favorite IDE or text editor, open <code>MyApp/classic/src/view/main/Main.js</code>. This is the main entry point for our classic application. It’s also the container that houses our tabpanel and its four tabs. Additionally, you’ll see that the first tab includes our grid class.</p> 
+       <p>Let’s walk through tabs.</p> 
+       <h4 id="Tabs">Tabs</h4> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.tab.Panel" data-full-load="true">TabPanels</a> can be used similarly to standard <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Panel</a> for layout purposes, but they also have special support for containing child Components (items). These items are managed using a <a href="../6.0.1-classic/#!/api/Ext.layout.container.Card" data-full-load="true">Card</a> layout manager, and displayed as separate tabs.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.tab.Tab" data-full-load="true">Tabs</a> typically default to horizontally residing at the top of your item content. However, in this application, we have gotten a little clever with the tabs.</p> 
+       <p>You may notice that our tabs don’t look like traditional tabs. That’s because we’ve created a custom UI for them.</p> 
+       <h5 id="UI_Styling">UI Styling</h5> 
+       <p>Every component in the Ext JS framework has a <code>ui</code> configuration that defaults to <code>default</code>. This property can be changed to allow components in your application to have different styles.</p> 
+       <p>Most Ext JS components have SASS @mixin’s that allow you to quickly generate new UIs. These include: Ext.panel.Panel, Ext.button.Button, Ext.Toolbar, Ext.window.Window, and many more.</p> 
+       <p>Let’s open our tabpanel’s custom UI and take a look at what’s being done. You can find your tabpanel UI definitions here:</p> 
+       <pre mode="javascript" theme="chrome"><code>`classic/sass/src/view/main/Main.scss`</code></pre> 
+       <p>As you can see, creating UIs is simple. Simply call the associated @mixin for the component for which you want to create a UI.</p> 
+       <pre mode="javascript" theme="chrome"><code>@include extjs-tab-panel-ui(
+    $ui: 'navigation'
+);</code></pre> 
+       <p>All of the variables within the @mixin can be modified in any way you like. </p> 
+       <p>You then attach the UI to your component like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>ui: 'navigation',</code></pre> 
+       <p>We’ll discuss styling your application with SASS in greater detail below. </p> 
+       <h5 id="Responsive">Responsive</h5> 
+       <p>You may have also noticed that we added the <a href="../6.0.1-classic/#!/api/Ext.plugin.Responsive" data-full-load="true">Responsive</a> plugin to the tabPanel and the <code>tabConfig</code>. </p> 
+       <pre mode="javascript" theme="chrome"><code>// TabPanel 
+responsiveConfig: {
+    tall: {
+        headerPosition: 'top'
+    },
+    wide: {
+        headerPosition: 'left'
+    }
+},
+
+// Tab Config
+tabConfig: {
+    plugins: 'responsive',
+    responsiveConfig: {
+        wide: {
+            iconAlign: 'left',
+            textAlign: 'left'
+        },
+        tall: {
+            iconAlign: 'top',
+            textAlign: 'center',
+            width: 120
+        }
+    }
+}</code></pre> 
+       <p>This plugin allows us to set rules that modify the tabpanel and tab text/glyph positions based on the width and height of the viewport. In this case, if you make the browser window less wide than tall, the tabpanel will move to the top of the screen and the tab text and glyphs will reposition.</p> 
+       <p>If the viewport is wider than tall, the tabs will appear on the left and adjust the tab text/glyph positions appropriately.</p> 
+       <p>You can read more about the responsive plugin and building your application for multiple environments <a href="../application_architecture/developing_for_multiple_screens_and_environments.html">here</a>.</p> 
+       <p>You may notice that there’s no hard-coded data in tabs 2, 3, and 4. That’s because we’re binding data from a ViewModel.</p> 
+       <h5 id="View_Models_and_Data_Binding">View Models and Data Binding</h5> 
+       <p>Together, <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">View Models</a> and <a href="../../application_architecture/view_models_data_binding.html">Data Binding</a><br />allow you to do more with less code and write in a much more declarative style.</p> 
+       <p>A <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">View Model</a> is a class that manages a data object. It then allows components interested in this data to bind to it and be notified when it changes. The ViewModel, like <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">ViewController</a>, is owned by the view that references it. </p> 
+       <p>For the most part, any config that may be “set” with a setter method, can be bound to the data in the ViewModel. For this example, we’ll utilize <code>setHtml()</code> and <code>setTitle()</code>.</p> 
+       <p>Let’s take a look at the following lines:</p> 
+       <pre mode="javascript" theme="chrome"><code>// View Model Declaration
+viewModel: 'main',
+
+// Binding to header's title
+header: {
+    title: {
+        bind: {
+            text: '{name}'
+        },
+        flex: 0
+    }
+},
+
+// Binding to tab's HTML config
+{
+    title: 'Users',
+    iconCls: 'fa-user',
+    bind: {
+        html: '{loremIpsum}'
+    }
+}</code></pre> 
+       <p>You can see that data is bound from the universal ViewModel (<code>app/view/main/MainModel.js</code>) to the tabs and app title. The data in the ViewModel is set statically, but in most cases, this would be generated via proxy.</p> 
+       <p>Check out our <a href="../application_architecture/view_models_data_binding.html">ViewModels and Data Binding Guide</a> for more information.</p> 
+       <h4 id="Grids">Grids</h4> 
+       <p>Next, let’s look at the <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> by opening <code>MyApp/classic/src/view/main/List.js</code>.<br />List.js contains the grid that loads within the first tab of your Main tabpanel. With this minimal amount of code, we’ve created a fully functional grid. By default, each <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">column</a> is sortable and will toggle between ASC and DESC sorting when you click on its header. Each column header is also re-orderable by default, and each gains a drop-down menu with options to hide and show columns. </p> 
+       <p>Not only that, but it’s incredibly easy to configure each column independently.</p> 
+       <p>Let’s dissect a couple of the grid configs a little further:</p> 
+       <h5 id="Store">Store</h5> 
+       <p>As you can see, we are setting <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">store</a> to a type of personnel. If you look carefully, you’ll probably notice that there isn’t a store definition anywhere in the classic area. That’s because this store lives in the universal area, <code>app/store/Personnel.js</code>. We have placed the store here so that the Classic grid AND the Modern grid can share the same store and data.</p> 
+       <p>In a real world situation, the above store would have a <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">proxy</a> with a url property allowing the proxy to pull information from a server. We are keeping the data in-line in this example for the sake of visualization. However, most situations would not call for having in-line data.</p> 
+       <h5 id="Listeners">Listeners</h5> 
+       <p>You’ll also notice that the Listeners object contains a <code>select</code> event that calls ‘onItemSelected’. Again, you won’t find a view controller with that logic in the Classic area. You will find <code>MainController.js</code> in the universal section because both Modern and Classic’s grid share the <code>select</code> event and react to it similarly.</p> 
+       <p>If you haven’t already, let’s open <code>app/view/main/MainController.js</code>.</p> 
+       <p>You’ll see some very basic logic:</p> 
+       <pre mode="javascript" theme="chrome"><code>onItemSelected: function (sender, record) {
+    Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+},</code></pre> 
+       <p>In both our grid and the Modern toolkit’s grid (more in a minute), we are handling the <code>select</code> event. The controller logic handles both components’ <code>select</code> events identically.</p> 
+       <p>We’ll talk more about universal controllers further down the page.</p> 
+       <p>We’ve covered most of the meat and potatoes from the Classic toolkit. Let’s move on to the Modern toolkit.</p> 
+       <h3 id="Modern">Modern</h3> 
+       <p>As with Classic, let’s begin by reviewing <code>MyApp/modern/src/view/main/Main.js</code>.<br />This is the main entry point to our Modern application. In much the same fashion, you’ll notice Main is a container that houses our tabpanel, and its four tabs. Additionally, you’ll see the first tab includes our Modern Grid.</p> 
+       <h4 id="Tabs">Tabs</h4> 
+       <p>Modern toolkit’s tabpanels are a great way to allow the user to switch between several views that are all fullscreen. Each Component in the TabPanel gets its own Tab, which shows the Component when tapped. Tabs can be positioned at the top or the bottom of the TabPanel.</p> 
+       <p>You’ll see many similarities between this view and the Classic view. For instance:</p> 
+       <ul> 
+        <li>Shared ViewController</li> 
+        <li>Shared ViewModel</li> 
+        <li>Bound Configs</li> 
+       </ul> 
+       <h4 id="Modern_Grid">Modern Grid</h4> 
+       <p>The Modern Toolkit includes a lightweight grid that is optimized for touch devices. The Modern grid makes it easy to fetch, sort, filter, and edit large amounts of data on touch devices. It’s also simple to configure and customize any column using column renderers.</p> 
+       <p>As with the Classic Toolkit’s grid, you can see a shared universal store and a listeners object that is capturing the <code>select</code> event.</p> 
+       <h3 id="Universal">Universal</h3> 
+       <p>We’ve touched on all of the code sitting within the universal section of our application. That said, you’ll need to make sure you’re careful and consistent when utilizing this space. At this time, you should avoid placing application views themselves in the universal section. If you require or make reference to a class that does not exist in one toolkit or the other, you’ll encounter errors when building your application.</p> 
+       <p>This area should generally be reserved for things found in the core of both toolkits.</p> 
+       <ul> 
+        <li>ViewControllers</li> 
+        <li>ViewModels</li> 
+        <li>Models</li> 
+        <li>Stores</li> 
+       </ul> 
+       <p>Going forward, we are working towards component parity so that sharing view terminology will be less of a concern in the future.</p> 
+       <p>Lastly, you’ll want to be sure that any events you’re trying to utilize have the same parameters and are triggered with the same intent across both toolkits.</p> 
+       <h3 id="Change_Themes">Change Themes</h3> 
+       <p>Now let’s focus on the look and feel of the application. The default theme (Triton) is generated with every new application unless told otherwise. That said, it’s incredibly easy to swap themes once your application has been created.</p> 
+       <p>Let’s try out the Ext JS Crisp theme.</p> 
+       <p>All you need to do is open your app.json file in your application root and update the <code>theme</code> property from:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;theme-neptune&quot;</code></pre> 
+       <p>to:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;theme-crisp&quot;</code></pre> 
+       <p>Once watch has completed, refresh the page and you should see that your application has gotten a face-lift.</p> 
+       <h3 id="Styling_Your_Application">Styling Your Application</h3> 
+       <p>On most occasions, you’ll need to customize the look of your application beyond the capacity of a default theme. Your application looks pretty good, but blue just isn’t working. Let’s try and get those active tab colors to be more unique to our application.</p> 
+       <p><em><strong>Note:</strong> The following steps will style the classic views within your application. In the near future, Ext JS 6 will be improved to allow for theming the views of both toolkits within the same application.</em></p> 
+       <p>You can easily and efficiently style your application by creating and modifying SCSS files.</p> 
+       <p>SCSS (Sassy CSS) is a syntax of SASS, which allows you to add nested rules, variables and mixins to your design code. These new additions are then processed and converted to traditional CSS files for your application’s consumption.</p> 
+       <p>To see a list of global SCSS variables, check out this page from our API docs: <a href="../6.0.1-classic/#!/api/Global_CSS" data-full-load="true">Global_CSS</a></p> 
+       <p>Individual components also have specific SCSS variables for you to change. For instance, you can view specific Panel SCSS variables by visiting the Panel API page and scrolling to the “CSS Variables” section: <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a></p> 
+       <p>If you open up your <code>classic/sass/src/view/main/</code> folder, you’ll see a file called <code>Main.scss</code>. These folders and files will need to be added manually as needed. For each class in your application, Sencha Cmd checks for a corresponding SCSS file in <code>sass/var/</code> for variables, and <code>sass/src/</code> for rules.</p> 
+       <p>These files will be picked up by <code>sencha app watch</code> when you add them. </p> 
+       <p>Let’s go ahead and look at our <code>Main.scss</code> file. </p> 
+       <p>As you can see, we have some specific SCSS rules set up for the main view. The top panel is set by the following line:</p> 
+       <pre mode="javascript" theme="chrome"><code>$ui-header-background-color: $base-color,</code></pre> 
+       <p>You have a couple of options here in terms of the scope of your color change. If you<br />only want this one piece to not be blue, you can explicitly set it to a specific color like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>$ui-header-background-color: #87BD3E,</code></pre> 
+       <p>Once the change is picked up and processed by watch, you can refresh your page and see that your active tab color is now green (#87BD3E). </p> 
+       <p>However, if you want to replace blue for green across the entire application, you can change the value of <code>$base-color</code>. In order to do this, create an SCSS file for your global rules in the following location:</p> 
+       <pre mode="javascript" theme="chrome"><code>classic/sass/etc/all.scss // all.scss may contain any SASS / CSS rules</code></pre> 
+       <p>Once you’ve created your file, you can add a new <code>$base-color</code> declaration that will override the app theme’s <code>$base-color</code> value. In this case, let’s do the same green.</p> 
+       <pre mode="javascript" theme="chrome"><code>$base-color: #87BD3E !dynamic;</code></pre> 
+       <p>After your application is refreshed, you should now see that many components are that color of green. </p> 
+       <h2 id="Wrap_Up">Wrap Up</h2> 
+       <p>Now you see how easy it is to get an application up and running using Ext JS and Sencha Cmd. Make sure to check out the API docs for all of the Components and classes that we explored throughout this walkthrough. </p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

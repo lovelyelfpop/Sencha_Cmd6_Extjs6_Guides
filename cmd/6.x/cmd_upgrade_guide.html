@@ -1,0 +1,657 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Sencha Cmd 6 - 升级向导</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Installer_Changes" title="Installer 变化">Installer 变化</a> 
+       <a class="toc-page-h3" href="#Windows_PATH" title="Windows PATH">Windows PATH</a> 
+       <a class="toc-page-h3" href="#Mac_OS_X___Linux" title="Mac OS X / Linux">Mac OS X / Linux</a> 
+       <a class="toc-page-h2" href="#Migration_Process" title="迁移过程">迁移过程</a> 
+       <a class="toc-page-h3" href="#Before_You_Start" title="迁移前">迁移前</a> 
+       <a class="toc-page-h4" href="#Clean_Slate" title="从头再来">从头再来</a> 
+       <a class="toc-page-h4" href="#Install_Merge_Tool__Recommended_" title="安装合并工具(推荐)">安装合并工具(推荐)</a> 
+       <a class="toc-page-h3" href="#Upgrade_Sencha_Cmd" title="升级 Sencha Cmd">升级 Sencha Cmd</a> 
+       <a class="toc-page-h4" href="#Configure_Merge_Tool" title="配置合并工具">配置合并工具</a> 
+       <a class="toc-page-h3" href="#App_Upgrade" title="应用升级">应用升级</a> 
+       <a class="toc-page-h3" href="#Check_Point" title="检查点">检查点</a> 
+       <a class="toc-page-h3" href="#Clean_and_Build" title="清理和构建">清理和构建</a> 
+       <a class="toc-page-h3" href="#Check_Point" title="检查点">检查点</a> 
+       <a class="toc-page-h2" href="#Watch" title="Watch">Watch</a> 
+       <a class="toc-page-h2" href="#Application_Updates" title="应用更新">应用更新</a> 
+       <a class="toc-page-h3" href="#app_json" title="app.json">app.json</a> 
+       <a class="toc-page-h4" href="#The__sass__object" title="“sass” 对象">“sass” 对象</a> 
+       <a class="toc-page-h4" href="#The__css__array" title="“css” 数组">“css” 数组</a> 
+       <a class="toc-page-h2" href="#Workspace_Updates" title="工作区更新">工作区更新</a> 
+       <a class="toc-page-h3" href="#workspace_json" title="workspace.json">workspace.json</a> 
+       <a class="toc-page-h2" href="#Sencha_Space_Updates" title="Sencha Space 更新">Sencha Space 更新</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Sencha Cmd 6 升级向导</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>本向导用于帮助开发人员使用 Sencha Cmd 来将 Ext JS 5.x 或 Sencha Touch 2.4.x 迁移至 Ext JS 6.0.x .即使在这个版本中有很多重要的变化,我们试着让这个升级过程尽可能的无痛苦.在我们开始前,值得提出的是这个向导做了一些假设条件.</p> 
+       <ul> 
+        <li>你的应用是使用 Ext JS 5.x 或者 Sencha Touch 2.4.x版本来构建的</li> 
+        <li>你的应用使用的是我们推荐的 MVC 模式来设计的</li> 
+        <li>你的应用目前是用Sencha Cmd来构建的</li> 
+       </ul> 
+       <p>我们意识到不是所有的客户都有这个条件运行在最新的框架和最新的Sencha Cmd. 在企业里由于时间限制,工作期限和支持许可等原因会决定使用什么版本.如果你的应用是基于一个较老的 Sencha 框架,你可以翻阅与那些版本相关的升级向导作为一个起始点来获得更进一步的信息. 例如,  <a href="../5.x/cmd_upgrade_guide.html">Sencha Cmd 5 升级向导</a>.</p> 
+       <h2 id="Installer_Changes">Installer 变化</h2> 
+       <p>在 Sencha Cmd 6中, 我们介绍一个允许非 管理员/root 用户来安装这个应用的新的安装工具. 我们也包含了Sencha Cmd 需要的 JRE,这样你就不需要另外下载和安装了.如果你有一个上一版本发布的 Sencha Cmd 这里有几个在你升级过程中会遇到的问题.</p> 
+       <h3 id="Windows_PATH">Windows PATH</h3> 
+       <p>对于老版本的 Sencha Cmd Windows用户的环境变量 PATH 的修改的副作用是你会看到新版的“sencha” 没有在 PATH 的最前面. 这是正常的.你可以使用控制面板来管理你的PATH:</p> 
+       <p><img src="images/upgrade_guide_env_vars.png" alt="image alt text" /></p> 
+       <p>为修改用户或系统的 PATH 环境变量,在这个对话框中找到这个PATH的入口:</p> 
+       <p><img src="images/upgrade_guide_path.png" alt="image alt text" /></p> 
+       <p>在最终的 PATH 环境变量里,系统的 PATH 字符串会在用户的 PATH 字符串前面出现.老版本的 Sencha Cmd 路径被安装到了系统 PATH 中,这样就会将新版本 &quot;隐藏&quot;起来..</p> 
+       <h3 id="Mac_OS_X___Linux">Mac OS X / Linux</h3> 
+       <p>在非Windows平台上,安装工具现在只要添加一个位置到PATH中,这个可以通过修改 <code>~/.bash_profile</code>　来完成:</p> 
+       <pre mode="javascript" theme="chrome"><code>export PATH=~/bin/Sencha/Cmd:$PATH</code></pre> 
+       <p>在以前的安装工具安装后,你可能会找到象下面这样的多条记录:</p> 
+       <pre mode="javascript" theme="chrome"><code>export PATH=~/bin/Sencha/Cmd/5.1.1.39:$PATH
+
+export PATH=~/bin/Sencha/Cmd/5.1.2.52:$PATH
+
+export PATH=~/bin/Sencha/Cmd/5.1.3.61:$PATH</code></pre> 
+       <p>新的安装工具现在维护一个连接 “~/bin/Sencha/Cmd/sencha” 这个连接指向最新安装的版本.</p> 
+       <h2 id="Migration_Process">迁移过程</h2> 
+       <h3 id="Before_You_Start">迁移前</h3> 
+       <h4 id="Clean_Slate">从头再来</h4> 
+       <p>迁移过程的第一个步骤是确保你没有修改等待提交到你的源代码控制系统中.不建议在你还有变更待提交时就开始升级. 这个允许你更容易阅读 Sencha Cmd做的变更而确保你自己做的任何定制化开发还在.</p> 
+       <h4 id="Install_Merge_Tool__Recommended_">安装合并工具(推荐)</h4> 
+       <p>在升级过程中, Sencha Cmd 可能需要应用一些你可能也改过的文件的变更.那么在这种情况下你修改了 Sencha Cmd需要更新的相同行,这会导致一个合并冲突.</p> 
+       <p>好消息是,象版本控制,有一些工具可以解决这些合并冲突. Sencha Cmd 可以使用可视化合并工具,这个工具你可以通过命令行运行(几乎所有的).这个步骤可选,但是 为使升级处理起来更为简单,我们高度建议.</p> 
+       <p>下面是一些非常流行的合并工具列表用于选择 (有些是免费的,有些是商业的):</p> 
+       <ul> 
+        <li><a href="../../../www.perforce.com/product/components/perforce-visual-merge-and-diff-tools">p4merge</a></li> 
+        <li><a href="../../../www.sourcegear.com/diffmerge/index.html">SourceGear</a></li> 
+        <li><a href="../../../sourceforge.net/projects/kdiff3/files/kdiff3/default.htm">kdiff3</a></li> 
+        <li><a href="../../../www.syntevo.com/smartsynchronize/default.htm">Syntevo SmartSynchronize 3</a></li> 
+        <li><a href="../../../tortoisesvn.net/default.htm">TortoiseMerge</a> - (part of TortoiseSVN)</li> 
+        <li><a href="../../../www.araxis.com/merge/default.htm">AraxisMerge</a></li> 
+       </ul> 
+       <p>我们会在下一步中配置 Sencha Cmd 使用你建议的合并工具.</p> 
+       <h3 id="Upgrade_Sencha_Cmd">升级 Sencha Cmd</h3> 
+       <p>然后,你需要获取 Sencha Cmd 6　的最新版本.　你可以从 <a href="../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha web site</a> 上下载 Sencha Cmd 6.</p> 
+       <p>安装Sencha Cmd 和重启你的终端. 如果你有一个老版本的 Sencha Cmd 你可能要修正你的 PATH (参见上面说明).</p> 
+       <p><strong>注意:</strong><em>如果你安装了以前版本的, 安装不会替换掉,但在运行 Cmd 软件时会优先使用新版.　参考上面的详细说明t</em></p> 
+       <h4 id="Configure_Merge_Tool">配置合并工具</h4> 
+       <p>如果你选择好了合并工具,我们需要配置 Sencha Cmd 使用它.你需要在配置文件中添加下面2个属性来完成:</p> 
+       <pre mode="javascript" theme="chrome"><code>cmd.merge.tool
+cmd.merge.tool.args</code></pre> 
+       <p>我们可以在 Sencha Cmd 的安装目录下的 <code>&quot;sencha.cfg&quot;</code> 文件中设置这2个属性.或者,这2个属性设置成版本无关的方式而应用在 Sencha Cmd的所有版本中.详细内容请看一下<code>&quot;sencha.cfg&quot;</code> 文件中的结尾部分.</p> 
+       <h3 id="App_Upgrade">应用升级</h3> 
+       <p>我们准备好了开始升级.　只要在你应用的根目录下运行下面这个命令来进行.:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade path/to/ext6</code></pre> 
+       <p>你应该可以看到为数不多的几行绿色字体的信息,来让你知道你的应用已经成功的升级了. </p> 
+       <p>如果你是从 Ext JS 4.x 升级,你需要参考一下 <a href="../5.x/cmd_upgrade_guide.html">Sencha Cmd 5 升级向导</a> 中的 <strong>Microloader</strong> 和 <strong>Build Properties</strong> 章节 <a href="../5.x/cmd_upgrade_guide.html"></a>. 同样,如果你使用了 Cordova 或者 PhoneGap, 你也要看一下这些章节.</p> 
+       <h3 id="Check_Point">检查点</h3> 
+       <p>一旦应用升级完成,你也解决了可能会报出的合并冲突,现在是时候在源代码控制中来看一下这些差别了. 如果所有看起来都是好的,那就好好的提交变更,然后回到一个干净的环境中了.</p> 
+       <h3 id="Clean_and_Build">清理和构建</h3> 
+       <p>下一步就是从应用的根目录下运行一个快速的构建:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build --clean development</code></pre> 
+       <p>发现使用  <code>--clean</code> 开关会删除构建输出目录下的所有文件. 这会确保不会从上个版本的构建中留下什么东西从而更加安全,我们在进行进一步操作前要确保所有变更都已提交.</p> 
+       <p>你可以还要做些什么才能让应用可以构建,尤其是你如果在使用 Sencha Touch. 如果那样,上面会显示构建错误. 当所有构建错误修改后,这个构建命令会成功地运行.</p> 
+       <h3 id="Check_Point">检查点</h3> 
+       <p>当所有构建错误都解决了,那就是时候来提交变更了. 整个 Cmd 的升级阶段就完成了. 由于框架升级可能会有更多的变更,但最好是开始于一个可以构建的应用.</p> 
+       <h2 id="Watch">Watch</h2> 
+       <p>通过使用 Sencha Fashion (我们新的主题编译器),为使用自动更新特性可能, 应用必须采用 <code>app watch</code>.</p> 
+       <p>使用 watch, 你现在能在你自己的 web 服务器 localhost 或者是 <a href="../../../localhost_3A1841/default.htm">http://localhost:1841</a> 查看你的应用了,这个服务器是我们自动为你启动的.这个web服务器现在是 <code>app watch</code> 的默认部分. 在 Sencha Cmd 5 版本中, 你不得不另外运行 <code>sencha web start</code> 来使用 Sencha Cmd 的web 服务器. 你可以通过使用下面这些属性来调整 web 服务器(下面是它们的默认值):</p> 
+       <pre mode="javascript" theme="chrome"><code>build.web.port=1841
+build.web.root=${workspace.dir}</code></pre> 
+       <h2 id="Application_Updates">应用更新</h2> 
+       <p>当使用 Sencha Cmd 来生成一个Ext JS 6 的应用时,下面的命令会生成一个通用应用 (一个同时使用了classic和 modern 工具包的应用):</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk path/to/ext6 generate app YourAppName ./AppFolder</code></pre> 
+       <p>生成一个只用 classic 工具包的 Ext JS 6 的应用时, 加上 <code>--classic</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk path/to/ext6 generate app --classic YourAppName ./AppFolder</code></pre> 
+       <p>类似地,一个只为 modern 工具包的应用:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk path/to/ext6 generate app --modern YourAppName ./AppFolder</code></pre> 
+       <h3 id="app_json">app.json</h3> 
+       <p>生成的 Ext JS 6 应用有一个更为完善的 <code>app.json</code> 文件. 标准的<code>app.json</code>文件中的特定片段可能需要加入到已经存在的应用的 app.json文件中去.</p> 
+       <h4 id="The__sass__object">“sass” 对象</h4> 
+       <p>这个对象包含了控制样式编译的属性.下面的片段是在一个新生成的应用中会提供些什么.如果你的 <code>app.json</code> 没有一个 “sass” 对象你可以直接粘贴下面的配置.</p> 
+       <pre mode="javascript" theme="chrome"><code>/**
+ * Sass configuration properties.
+ */
+&quot;sass&quot;: {
+    /**
+     * The root namespace to use when mapping *.scss files to classes in the
+     * sass/src and sass/var directories. For example, &quot;App.view.Foo&quot; would
+     * map to &quot;sass/src/view/Foo.scss&quot;. If we changed this to &quot;App.view&quot; then
+     * it would map to &quot;sass/src/Foo.scss&quot;. To style classes outside the app's
+     * root namespace, change this to &quot;&quot;. Doing so would change the mapping of
+     * &quot;App.view.Foo&quot; to &quot;sass/src/App/view/Foo.scss&quot;.
+     */
+    &quot;namespace&quot;: &quot;App&quot;,
+
+    /**
+     * Comma-separated list of files or folders containing extra Sass. These
+     * files are automatically included in the Sass compilation. By default this
+     * is just &quot;etc/all.scss&quot; to allow import directives to control the order
+     * other files are included.
+     *
+     * All &quot;etc&quot; files are included at the top of the Sass compilation in their
+     * dependency order:
+     *
+     *      +-------+---------+
+     *      |       | base    |
+     *      | theme +---------+
+     *      |       | derived |
+     *      +-------+---------+
+     *      | packages        |  (in package dependency order)
+     *      +-----------------+
+     *      | application     |
+     *      +-----------------+
+     */
+    &quot;etc&quot;: [
+        &quot;sass/etc/all.scss&quot;,
+        &quot;${toolkit.name}/sass/etc/all.scss&quot;
+    ],
+
+    /**
+     * Comma-separated list of folders containing Sass variable definitions
+     * files. These file can also define Sass mixins for use by components.
+     *
+     * All &quot;var&quot; files are included after &quot;etc&quot; files in the Sass compilation in
+     * dependency order:
+     *
+     *      +-------+---------+
+     *      |       | base    |
+     *      | theme +---------+
+     *      |       | derived |
+     *      +-------+---------+
+     *      | packages        |  (in package dependency order)
+     *      +-----------------+
+     *      | application     |
+     *      +-----------------+
+     *
+     * The &quot;sass/var/all.scss&quot; file is always included at the start of the var
+     * block before any files associated with JavaScript classes.
+     */
+    &quot;var&quot;: [
+        &quot;sass/var/all.scss&quot;,
+        &quot;sass/var&quot;,
+        &quot;${toolkit.name}/sass/var&quot;
+    ],
+
+    /**
+     * Comma-separated list of folders containing Sass rule files.
+     *
+     * All &quot;src&quot; files are included after &quot;var&quot; files in the Sass compilation in
+     * dependency order (the same order as &quot;etc&quot;):
+     *
+     *      +-------+---------+
+     *      |       | base    |
+     *      | theme +---------+
+     *      |       | derived |
+     *      +-------+---------+
+     *      | packages        |  (in package dependency order)
+     *      +-----------------+
+     *      | application     |
+     *      +-----------------+
+     */
+    &quot;src&quot;: [
+        &quot;sass/src&quot;,
+        &quot;${toolkit.name}/sass/src&quot;
+    ],
+
+    /**
+     * File used to save sass variables edited via Sencha Inspector. This file
+     * content will override all other variables.
+     */
+    // &quot;save&quot;: &quot;sass/save.scss&quot;
+},</code></pre> 
+       <p>上面的属性将会替换掉添加到 <code>&quot;.sencha/app/sencha.cfg&quot;</code> 文件中的 “app.sass.*” 属性.</p> 
+       <p>尽管 Fashion 不是一个真正的 Sass的实现,因为它有一个这些路径设置的历史我们在这里仍使用“sass”这一术语.</p> 
+       <h4 id="The__css__array">“css” 数组 </h4> 
+       <p>以前,应用有如下这两种设置 (从 Ext JS 5 或 Sencha Con EA 版本):</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;path&quot;: &quot;bootstrap.css&quot;,
+    &quot;bootstrap&quot;: true
+},
+
+{
+    &quot;path&quot;: &quot;${build.out.css.path}&quot;
+    &quot;bundle&quot;: true
+}</code></pre> 
+       <p>这个值必须替换成:,</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;path&quot;: &quot;${build.out.css.path}&quot;
+    &quot;bundle&quot;: true,
+    &quot;exclude&quot;: [&quot;fashion&quot;]
+}</code></pre> 
+       <p>这个我们添加的 <code>exclude</code> 属性确保如果我们使用 Fashion时CSS文件被忽略, 这个会从<code>.scss</code>源文件编译为 CSS文件.</p> 
+       <h2 id="Workspace_Updates">工作区更新</h2> 
+       <p>在 Sencha Cmd 6 中, 在工作区的根目录增加了一个 <code>workspace.json</code> 文件. 这个文件在需要时会被生成,它会在升级过程中要注意的事项带来些益处..</p> 
+       <h3 id="workspace_json">workspace.json</h3> 
+       <p>这个文件默认看起来有点象这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    /**
+     * An array of the paths to all the applications present in
+     * this workspace
+     */
+    &quot;apps&quot;: [
+        &quot;app1&quot;
+    ],
+
+    /**
+     * This is the folder for build outputs in the workspace.
+     */
+    &quot;build&quot;: {
+        &quot;dir&quot;: &quot;${workspace.dir}/build&quot;
+    },
+
+    /**
+     * These configs determine where packages are generated and
+     * extracted to (when downloaded).
+     */
+    &quot;packages&quot;: {
+        /**
+         * This folder contains all local packages.
+         * If a comma-separated string is used as value the first
+         * path will be used as the path to generate new packages.
+         */
+        &quot;dir&quot;: &quot;${workspace.dir}/packages/local,${workspace.dir}/packages&quot;,
+
+        /**
+         * This folder contains all extracted (remote) packages.
+         */
+        &quot;extract&quot;: &quot;${workspace.dir}/packages/remote&quot;
+    }
+}</code></pre> 
+       <p>这个 “apps” 数组包含了在这个工作区中 Sencha Cmd 应用的相对路径.这个列表由<strong>sencha generate app</strong> 维护,但删除或移动应用需要手工维护这个数组.以前生成的应用也需要手工加上去.这个数组目前不再是必须的但是在未来的工具中用于查看工作区的应用列表将会非常重要.</p> 
+       <h2 id="Sencha_Space_Updates">Sencha Space 更新</h2> 
+       <p>“Sencha Space” 已经更名为 “Sencha Web Application Manager”.如果你用 Sencha Cmd 集成了 Sencha Space , 你需要在<code> app.json 文件中将 </code> “space” 对象改为 “manager”.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../https@s.adroll.com" : "../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 类系统</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Upgrades &amp; Migrations</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Overview" title="概览">概览</a> 
+       <a class="toc-page-h2" href="#Naming_Conventions" title="命名约定">命名约定</a> 
+       <a class="toc-page-h3" href="#Classes" title="类">类</a> 
+       <a class="toc-page-h3" href="#Source_Files" title="源文件">源文件</a> 
+       <a class="toc-page-h3" href="#Methods_and_Variables" title="方法和变量">方法和变量</a> 
+       <a class="toc-page-h3" href="#Examples" title="例子">例子</a> 
+       <a class="toc-page-h3" href="#Properties" title="属性">属性</a> 
+       <a class="toc-page-h2" href="#Declaration" title="声明">声明</a> 
+       <a class="toc-page-h3" href="#Configuration" title="配置">配置</a> 
+       <a class="toc-page-h3" href="#Statics" title="静态">静态</a> 
+       <a class="toc-page-h2" href="#Errors_Handling__amp__Debugging" title="错误处理 &amp; 和调试">错误处理和调试</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>类系统</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Overview">概览</h2> 
+       <p>Ext JS 附带几百个类。迄今为止我们有超过200万开发者并且他们来自不同的背景和地点。 在如此规模下提供公共代码架构，我们面对一个巨大的挑战是：</p> 
+       <ul> 
+        <li>熟悉且简单易学</li> 
+        <li>快速开发，易于调试，无痛部署</li> 
+        <li>有组织的，可扩展性和可维护性</li> 
+       </ul> 
+       <p>由于JavaScript是一种没有类的，<a href="../../../../en.wikipedia.org/wiki/Prototype-based_programming">面向原型</a>的语言，它最强大的功能之一是灵活性。对任何问题使用许多不同的编码风格和技巧有多种解决方案。 然而，这种导致不可预知的成本。如果没有一个统一的结构，JavaScript代码可能很难理解， 维护和复用。</p> 
+       <p><a href="../../../../en.wikipedia.org/wiki/Class-based_programming">基于类的编程</a>，在另一方面，仍然是面向对象编程最流行的模式。<a href="../../../../en.wikipedia.org/wiki/Category_3AClass-based_programming_languages">基于类的语言</a> 通常需要强类型，封装，和标准编码约定。随着时间的推移，通过使开发者坚持一套大的原则，代码是更可能可预测的， 可扩展的, 可度量的。然而，这种模式不具备JavaScript的动态能力。</p> 
+       <p>每种方法都有其优点和缺点，但是我们能否保留好的部件的同时把坏的部件隐藏起来吗？答案是能的，你可以用Ext JS 找到解决方案。</p> 
+       <h2 id="Naming_Conventions">命名约定</h2> 
+       <p>使用一致的命名约定来贯穿你的整个代码库类、名字空间和文件命名，有助于保持你的代码有组织行性，结构化和可读性。</p> 
+       <h3 id="Classes">类</h3> 
+       <p>类名只包含字<strong>字母数字</strong> 字符。允许用数字但不建议使用，除非它们属于一个技术术语。不要使用下划线，连字号，或其他任何非字母数字字符。例如：</p> 
+       <ul> 
+        <li><code>MyCompany.useful_util.Debug_Toolbar</code> 不鼓励用</li> 
+        <li><code>MyCompany.util.Base64</code> 最好这样用</li> 
+       </ul> 
+       <p>在使用对象的属性点(.)时，使用正确的命名空间，类名应该被组合成包。至少，应该有一个唯一的顶层名字空间后跟类名。例如：</p> 
+       <pre mode="javascript" theme="chrome"><code>MyCompany.data.CoolProxy
+MyCompany.Application</code></pre> 
+       <p>顶层命名空间和实际的类名应该用驼峰命名法。其他都应该小写。例如：</p> 
+       <pre mode="javascript" theme="chrome"><code>MyCompany.form.action.AutoLoad</code></pre> 
+       <p>其他不是由Sencha发布的的类，都不能使用<code>Ext</code> 作为顶层命名空间。</p> 
+       <p>首字母缩略词也应该遵循上面列出驼峰命名约定。例如：</p> 
+       <ul> 
+        <li><code>Ext.data.JsonProxy</code> 代替 <code>Ext.data.JSONProxy</code></li> 
+        <li><code>MyCompany.util.HtmlParser</code> 代替 <code>MyCompary.parser.HTMLParser</code></li> 
+        <li><code>MyCompany.server.Http</code> 代替 <code>MyCompany.server.HTTP</code></li> 
+       </ul> 
+       <h3 id="Source_Files">源文件</h3> 
+       <p>类的名称直接映射到它们所存储的文件路径。其结果是，必须只有每个文件一个类。例如：</p> 
+       <ul> 
+        <li><code>Ext.util.Observable</code> 存放在 <code>path/to/src/Ext/util/Observable.js</code></li> 
+        <li><code>Ext.form.action.Submit</code> 存放在 <code>path/to/src/Ext/form/action/Submit.js</code></li> 
+        <li><code>MyCompany.chart.axis.Numeric</code> 存放在 <code>path/to/src/MyCompany/chart/axis/Numeric.js</code></li> 
+       </ul> 
+       <p><code>path/to/src</code> 是你的应用程序类的目录。所有的类应该放到这个共同的根目录并且可以适当命名空间的来获得最佳开发，维护和部署经验。</p> 
+       <h3 id="Methods_and_Variables">方法和变量</h3> 
+       <ul> 
+        <li>以类似的方式对类名，方法和变量名可以仅包含<strong>字母数字</strong>字符串。 允许用数字但不建议使用，除非它们属于一个技术术语。不要使用下划线，连字号，或其他任何非字母数字字符。</li> 
+        <li>方法和变量名应该总是使用驼峰命名法。这也适用于缩略词。</li> 
+       </ul> 
+       <h3 id="Examples">例子</h3> 
+       <ul> 
+        <li><p>合理的方法名：</p> 
+         <ul> 
+          <li>encodeUsingMd5()</li> 
+          <li>getHtml() 代替 getHTML()</li> 
+          <li>getJsonResponse() 代替 <code>getJSONResponse()</code></li> 
+          <li>parseXmlContent() 代替 <code>parseXMLContent()</code></li> 
+         </ul></li> 
+        <li><p>合理的变量名：</p> 
+         <ul> 
+          <li>var isGoodName</li> 
+          <li>var base64Encoder</li> 
+          <li>var xmlReader</li> 
+          <li>var httpServer</li> 
+         </ul></li> 
+       </ul> 
+       <h3 id="Properties">属性</h3> 
+       <ul> 
+        <li><p>类属性命名应当遵循同样的命名约定，除非它们是静态常量。</p></li> 
+        <li><p>静态类属性应当全部大写。例如：</p> 
+         <ul> 
+          <li><code>Ext.MessageBox.YES = &quot;Yes&quot;</code></li> 
+          <li><code>Ext.MessageBox.NO = &quot;No&quot;</code></li> 
+          <li><code>MyCompany.alien.Math.PI = &quot;4.13&quot;</code></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Declaration">声明</h2> 
+       <p>你可以使用类创建一个方法： <code>Ext.define</code>。它的基本语法如下：</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define(className, members, onClassCreated);</code></pre> 
+       <ul> 
+        <li><code>className</code>：类名</li> 
+        <li><code>members</code> 是代表类成员的键 - 值对的集合对象</li> 
+        <li><code>onClassCreated</code> 当所定义的类的所有依赖都准备好被调用和类本身是完全创建一个可选的回调函数。由于类创建的异步特性，这个回调可以在许多情况下非常有用。这些都将进一步在<a href="#Errors_Handling__amp__Debugging">第四节</a>进行讨论</li> 
+       </ul> 
+       <p><strong>Example:</strong></p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('My.sample.Person', {
+    name: 'Unknown',
+
+    constructor: function(name) {
+        if (name) {
+            this.name = name;
+        }
+    },
+
+    eat: function(foodType) {
+        alert(this.name + &quot; is eating: &quot; + foodType);
+    }
+});
+
+var bob = Ext.create('My.sample.Person', 'Bob');
+
+bob.eat(&quot;Salad&quot;); // alert(&quot;Bob is eating: Salad&quot;);</code></pre> 
+       <p><strong>注意：</strong> 我们创建了一个新的实例 <code>My.sample.Person</code> 使用 <code>Ext.create()</code> 方法。我们可以使用 <code>new</code> 关键字 (<code>new My.sample.Person()</code>)。不过，推荐习惯使用 <code>Ext.create</code> 自从它允许你利用动态加载的优势。 有关动态加载的更多信息请参阅 <a href="../getting_started/getting_started.html">快速入门指南</a></p> 
+       <h3 id="Configuration">配置(config)</h3> 
+       <p>另外，在类创建之前，有个会被强大的 Ext.Class 预处理器预先处理的 <code>config</code> 属性。其特点包括：</p> 
+       <ul> 
+        <li>和其它其他类成员不一样，配置项完全被包裹封装在一起</li> 
+        <li>如果没有显式定义getter和setter方法，类创建过程中会对每个配置属性自动生成getter和setter方法，并添加到到类的原型(prototype)中。</li> 
+        <li>自动生成的setter方法会在set值之前调用apply方法（如果类中定义了此方法）。如果您需要在set值之前执行自定义逻辑，您可以覆盖这个配置项的apply方法。 如果您的apply方法无返回值，setter方法将不会给这个配置项set值。当配置项被set了一个与原先不一样的值，update方法（如果类中定义了）也将被调用。 新值和旧值都会作为参数，传递进apply和update方法。</li> 
+       </ul> 
+       <p>对于 Ext 类使用这些配置，没必要手动调用 <code>initConfig()</code> 。 然而，对于你自己写的，继承自自 <code>Ext.Base</code> 的类，仍旧需要调用 <code>initConfig()</code> 。</p> 
+       <p>你可以看到下面的配置实例。</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('My.own.Window', {
+   extend: 'Ext.Component',
+   /** @readonly */
+   isWindow: true,
+
+   config: {
+       title: 'Title Here',
+
+       bottomBar: {
+           height: 50,
+           resizable: false
+       }
+   },
+
+   applyTitle: function(title) {
+       if (!Ext.isString(title) || title.length === 0) {
+           alert('Error: Title must be a valid non-empty string');
+       }
+       else {
+           return title;
+       }
+   },
+
+   applyBottomBar: function(bottomBar) {
+       if (bottomBar) {
+           if (!this.bottomBar) {
+               return Ext.create('My.own.WindowBottomBar', bottomBar);
+           }
+           else {
+               this.bottomBar.setConfig(bottomBar);
+           }
+       }
+   }
+});
+
+/** A child component to complete the example. */
+Ext.define('My.own.WindowBottomBar', {
+   config: {
+       height: undefined,
+       resizable: true
+   }
+});</code></pre> 
+       <p>这里是如何使用它的例子：</p> 
+       <pre mode="javascript" theme="chrome"><code>var myWindow = Ext.create('My.own.Window', {
+    title: 'Hello World',
+    bottomBar: {
+        height: 60
+    }
+});
+
+alert(myWindow.getTitle()); // alerts &quot;Hello World&quot;
+
+myWindow.setTitle('Something New');
+
+alert(myWindow.getTitle()); // alerts &quot;Something New&quot;
+
+myWindow.setTitle(null); // alerts &quot;Error: Title must be a valid non-empty string&quot;
+
+myWindow.setBottomBar({ height: 100 });
+
+alert(myWindow.getBottomBar().getHeight()); // alerts 100</code></pre> 
+       <h3 id="Statics">静态</h3> 
+       <p>静态成员可以使用 <code>statics</code> 来定义</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Computer', {
+    statics: {
+        instanceCount: 0,
+        factory: function(brand) {
+            // 'this' in static methods refer to the class itself
+            return new this({brand: brand});
+        }
+    },
+
+    config: {
+        brand: null
+    }
+});
+
+var dellComputer = Computer.factory('Dell');
+var appleComputer = Computer.factory('Mac');
+
+alert(appleComputer.getBrand()); // using the auto-generated getter to get the value of a config property. Alerts &quot;Mac&quot;</code></pre> 
+       <h2 id="Errors_Handling__amp__Debugging">错误处理和调试</h2> 
+       <p>Ext JS的有一些很有用的功能，可以帮助你调试和处理错误。</p> 
+       <ul> 
+        <li><p>你可以使用 <code>Ext.getDisplayName()</code> 得到任何方法的显示名称。在抛出错误有类名和方法名的描述是特别有用：</p> <pre mode="javascript" theme="chrome"><code>throw new Error('['+ Ext.getDisplayName(arguments.callee) +'] Some message here');</code></pre></li> 
+        <li><p>当使用 <code>Ext.define()</code> 定义任何类的任何方法时抛出错误，你应该看到的方法和类的名称调用堆栈，如果您使用的是基于WebKit的浏览器（Chrome或Safari）。例如，在Chrome中它会是什么样子：</p><p><img src="images/call-stack.png" /></p></li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

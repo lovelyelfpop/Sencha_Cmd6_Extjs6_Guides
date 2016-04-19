@@ -1,0 +1,988 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Touch 2.4 to 6 - 升级向导</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Introduction" title="Introduction">Introduction</a> 
+       <a class="toc-page-h2" href="#Sencha_Cmd_Upgrade_Process" title="Sencha Cmd Upgrade Process">Sencha Cmd Upgrade Process</a> 
+       <a class="toc-page-h2" href="#Browser_Support" title="Browser Support">Browser Support</a> 
+       <a class="toc-page-h3" href="#Desktop" title="Desktop">Desktop</a> 
+       <a class="toc-page-h3" href="#Mobile" title="Mobile">Mobile</a> 
+       <a class="toc-page-h2" href="#Adding_DOCTYPE_and_Meta_Tags" title="Adding DOCTYPE and Meta Tags">Adding DOCTYPE and Meta Tags</a> 
+       <a class="toc-page-h2" href="#Distribution" title="Distribution">Distribution</a> 
+       <a class="toc-page-h2" href="#_theme__js____theme__css" title="{theme}.js / {theme}.css">{theme}.js / {theme}.css</a> 
+       <a class="toc-page-h2" href="#Ext_ux" title="Ext.ux">Ext.ux</a> 
+       <a class="toc-page-h2" href="#Element" title="Element">Element</a> 
+       <a class="toc-page-h3" href="#Ext_dom_Helper" title="Ext.dom.Helper">Ext.dom.Helper</a> 
+       <a class="toc-page-h3" href="#Ext_fly__" title="Ext.fly()">Ext.fly()</a> 
+       <a class="toc-page-h3" href="#Element_Selection_Methods__select__query_" title="Element Selection Methods (select, query)">Element Selection Methods (select, query)</a> 
+       <a class="toc-page-h3" href="#Element_Position_Query" title="Element Position Query">Element Position Query</a> 
+       <a class="toc-page-h2" href="#Changes_to_platformConfig" title="Changes to platformConfig">Changes to platformConfig</a> 
+       <a class="toc-page-h2" href="#Theming" title="Theming">Theming</a> 
+       <a class="toc-page-h3" href="#iconCls___Pictos" title="iconCls / Pictos">iconCls / Pictos</a> 
+       <a class="toc-page-h3" href="#Theming_Upgrade" title="Theming Upgrade">Theming Upgrade</a> 
+       <a class="toc-page-h3" href="#Fashion" title="Fashion">Fashion</a> 
+       <a class="toc-page-h4" href="#Dynamic_Variables" title="Dynamic Variables">Dynamic Variables</a> 
+       <a class="toc-page-h4" href="#Compass_Extensions" title="Compass Extensions">Compass Extensions</a> 
+       <a class="toc-page-h2" href="#Events" title="Events">Events</a> 
+       <a class="toc-page-h3" href="#Declarative_Listeners" title="Declarative Listeners">Declarative Listeners</a> 
+       <a class="toc-page-h3" href="#Updating__before__Event_Listeners" title="Updating “before” Event Listeners">Updating “before” Event Listeners</a> 
+       <a class="toc-page-h4" href="#Details" title="Details">Details</a> 
+       <a class="toc-page-h3" href="#Event_listening" title="Event listening">Event listening</a> 
+       <a class="toc-page-h2" href="#Scrolling" title="Scrolling">Scrolling</a> 
+       <a class="toc-page-h2" href="#Data" title="Data">Data</a> 
+       <a class="toc-page-h3" href="#Ext_data_Model" title="Ext.data.Model">Ext.data.Model</a> 
+       <a class="toc-page-h4" href="#Properties___Configs" title="Properties / Configs">Properties / Configs</a> 
+       <a class="toc-page-h5" href="#_strong_Methods__strong_" title="&lt;strong&gt;Methods&lt;/strong&gt;"><strong>Methods</strong></a> 
+       <a class="toc-page-h3" href="#Ext_data_Store" title="Ext.data.Store">Ext.data.Store</a> 
+       <a class="toc-page-h4" href="#Events" title="Events">Events</a> 
+       <a class="toc-page-h4" href="#Added" title="Added">Added</a> 
+       <a class="toc-page-h4" href="#Changed" title="Changed">Changed</a> 
+       <a class="toc-page-h4" href="#Deprecated___Removed_" title="Deprecated / Removed:">Deprecated / Removed:</a> 
+       <a class="toc-page-h3" href="#Ext_data_Proxy" title="Ext.data.Proxy">Ext.data.Proxy</a> 
+       <a class="toc-page-h4" href="#Proxy" title="Proxy">Proxy</a> 
+       <a class="toc-page-h5" href="#Proxy_CRUD" title="Proxy CRUD">Proxy CRUD</a> 
+       <a class="toc-page-h4" href="#Writer" title="Writer">Writer</a> 
+       <a class="toc-page-h3" href="#Ext_data_Field" title="Ext.data.Field">Ext.data.Field</a> 
+       <a class="toc-page-h3" href="#Ext_data_Validations" title="Ext.data.Validations">Ext.data.Validations</a> 
+       <a class="toc-page-h2" href="#Sessions__NEW_" title="Sessions (NEW)">Sessions (NEW)</a> 
+       <a class="toc-page-h2" href="#Schema__NEW_" title="Schema (NEW)">Schema (NEW)</a> 
+       <a class="toc-page-h2" href="#ModelManager__DEPRECATED_" title="ModelManager (DEPRECATED)">ModelManager (DEPRECATED)</a> 
+       <a class="toc-page-h2" href="#Associations" title="Associations">Associations</a> 
+       <a class="toc-page-h2" href="#Ext_data_association____REPLACED_" title="Ext.data.association.* (REPLACED)">Ext.data.association.* (REPLACED)</a> 
+       <a class="toc-page-h2" href="#Ext_plugin_BufferedList" title="Ext.plugin.BufferedList">Ext.plugin.BufferedList</a> 
+       <a class="toc-page-h2" href="#mainView" title="mainView">mainView</a> 
+       <a class="toc-page-h2" href="#Viewport" title="Viewport">Viewport</a> 
+       <a class="toc-page-h2" href="#Removed_Ext_DateExtras" title="Removed Ext.DateExtras">Removed Ext.DateExtras</a> 
+       <a class="toc-page-h2" href="#Ext_data_plugin_Buffered_has_been_removed" title="Ext.data.plugin.Buffered has been removed">Ext.data.plugin.Buffered has been removed</a> 
+       <a class="toc-page-h2" href="#Legacy_Package" title="Legacy Package">Legacy Package</a> 
+       <a class="toc-page-h3" href="#Ext_device___API_have_been_moved_to_legacy_package" title="Ext.device.* API have been moved to legacy package">Ext.device.* API have been moved to legacy package</a> 
+       <a class="toc-page-h2" href="#Ext_data_proxy_Sql_has_been_removed" title="Ext.data.proxy.Sql has been removed">Ext.data.proxy.Sql has been removed</a> 
+       <a class="toc-page-h2" href="#Charts_Package" title="Charts Package">Charts Package</a> 
+       <a class="toc-page-h3" href="#Ext_draw_Component" title="Ext.draw.Component">Ext.draw.Component</a> 
+       <a class="toc-page-h2" href="#Instance_IDs" title="Instance IDs">Instance IDs</a> 
+       <a class="toc-page-h2" href="#Ext_ComponentManager" title="Ext.ComponentManager">Ext.ComponentManager</a> 
+       <a class="toc-page-h2" href="#Ext_Container" title="Ext.Container">Ext.Container</a> 
+       <a class="toc-page-h2" href="#Ext_mixin_Selectable__affects_Ext_dataview_DataView__Ext_List__Ext_grid_Grid__amp__subclasses_" title="Ext.mixin.Selectable (affects Ext.dataview.DataView, Ext.List, Ext.grid.Grid &amp; subclasses)">Ext.mixin.Selectable (affects Ext.dataview.DataView, Ext.List, Ext.grid.Grid &amp; subclasses)</a> 
+       <a class="toc-page-h2" href="#Forms" title="Forms">Forms</a> 
+       <a class="toc-page-h3" href="#Ext_field_Text__and_subclasses_" title="Ext.field.Text (and subclasses)">Ext.field.Text (and subclasses)</a> 
+       <a class="toc-page-h3" href="#Ext_field_Checkbox" title="Ext.field.Checkbox">Ext.field.Checkbox</a> 
+       <a class="toc-page-h3" href="#Ext_field_DatePicker__Ext_field_Select" title="Ext.field.DatePicker, Ext.field.Select">Ext.field.DatePicker, Ext.field.Select</a> 
+       <a class="toc-page-h3" href="#Ext_field_SingleSlider" title="Ext.field.SingleSlider">Ext.field.SingleSlider</a> 
+       <a class="toc-page-h3" href="#Ext_field_Slider" title="Ext.field.Slider">Ext.field.Slider</a> 
+       <a class="toc-page-h3" href="#Ext_field_Toggle" title="Ext.field.Toggle">Ext.field.Toggle</a> 
+       <a class="toc-page-h2" href="#Misc" title="Misc">Misc</a> 
+       <a class="toc-page-h3" href="#Ext_util_Draggable" title="Ext.util.Draggable">Ext.util.Draggable</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">Conclusion</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Upgrading from Touch 2.4.x to Ext JS Modern Toolkit</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Introduction">Introduction</h2> 
+       <p>This guide walks through the most important changes and their potential impact on updating your Touch applications to the Ext JS modern toolkit. There are many changes due to the modern toolkit sharing the core package, where Touch did not. If you have used Ext JS 5+, you’ll probably be familiar with most of the items in this guide.</p> 
+       <p>If you are new to the Ext JS side of Sencha, you may want to review our notable additions in Ext JS 5 as many of these will apply to the modern toolkit in Ext JS 6. In particular the additions and improvements to the core and charts packages are most likely relevant.</p> 
+       <p><a href="../../5.1/whats_new/5.0/whats_new.html">What’s New in Ext JS 5</a></p> 
+       <p><a href="../../5.1/whats_new/5.0.1/whats_new.html">What’s New in Ext JS 5.0.1</a></p> 
+       <p><a href="../../5.1/whats_new/5.1.0/whats_new.html">What’s New in Ext JS 5.1</a></p> 
+       <h2 id="Sencha_Cmd_Upgrade_Process">Sencha Cmd Upgrade Process</h2> 
+       <p>The first step in the upgrade process is to upgrade the <code>&quot;.sencha&quot;</code> folder and other key parts of your application. Run <code>sencha app upgrade</code> from your application root folder:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade ../path/to/ext6</code></pre> 
+       <p>Alternatively, you can generate a stock modern app and replace its <code>&quot;app&quot;</code> folder with your own:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk path/to/ext6 generate app --modern YourAppName ./AppFolder</code></pre> 
+       <p><strong>Note:</strong> Be sure to use your Touch application’s App Name in place of <code>YourAppName</code> above.</p> 
+       <h2 id="Browser_Support">Browser Support</h2> 
+       <p>The following browsers are supported by the modern toolkit. </p> 
+       <h3 id="Desktop">Desktop</h3> 
+       <ul> 
+        <li>IE11+</li> 
+        <li>Firefox and Firefox ESR (Latest Versions)</li> 
+        <li>Chrome (Latest Versions)</li> 
+        <li>Safari 7+</li> 
+       </ul> 
+       <h3 id="Mobile">Mobile</h3> 
+       <ul> 
+        <li>IE11+</li> 
+        <li>Safari 7+</li> 
+        <li>Android 4.0+ Chrome</li> 
+        <li>Android 4.4+ Native</li> 
+       </ul> 
+       <h2 id="Adding_DOCTYPE_and_Meta_Tags">Adding DOCTYPE and Meta Tags</h2> 
+       <p>We recommend the usage of the HTML5 doctype. We also recommend the X-UA-Compatible meta tag to ensure Internet Explorer does not activate “Compatibility Mode”. The viewport meta tag is necessary for mobile devices to prevent viewport zooming from interfering with the framework’s gesture recognition.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;</code></pre> 
+       <p>Omitting these tags may result in strange behavior and, potentially, a non-functioning application.</p> 
+       <h2 id="Distribution">Distribution</h2> 
+       <p>There is now a Sencha Cmd package named “ext” which contains the framework.</p> 
+       <p>The move to being a package means the build outputs are stored in a “build” folder. This folder is useful if you want to use Ext JS directly without Sencha Cmd.</p> 
+       <p>The “packages” and “src” folders are used by Sencha Cmd applications to build only what your application requires.</p> 
+       <h2 id="_theme__js____theme__css">{theme}.js / {theme}.css</h2> 
+       <p>Themes may contain JavaScript overrides to tune default configs for some components. Generally, you’ll need a script tag following “ext*.js” in order to include the JavaScript portion of a theme:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/modern/{theme}/{theme}(-debug).js</code></pre> 
+       <p>The <code>-debug</code> token is optional and, when present, selects the uncompressed JavaScript build of the theme overrides.</p> 
+       <p>The compiled theme files are now present in the following folder off the root of the distribution:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/modern/{theme}/resources/{theme}-all(-debug).css</code></pre> 
+       <h2 id="Ext_ux">Ext.ux</h2> 
+       <p>“User Extensions” are provided as a starting point in building useful components. They are often useable as-is, but are intended to serve as examples of how to go beyond the core framework. The “ux” content is basically the same as before but has been converted into an “ux” package. Add “ux” the “requires” array in <code>&quot;app.json&quot;</code>. If you are not using Sencha Cmd, then you’ll need to add the build outputs of the “ux” package found here:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/packages/ux/modern/ux(-debug).js
+build/packages/ux/modern/modern-neptune/resources/ux-all.css</code></pre> 
+       <p>The “ux” package only builds using the <code>theme-neptune</code> in the modern toolkit because it is not sensitive to theme changes.</p> 
+       <h2 id="Element">Element</h2> 
+       <h3 id="Ext_dom_Helper">Ext.dom.Helper</h3> 
+       <p>There is a minor change in DomHelper behavior with regards to generating HTML markup. For element attributes whose values are <code>undefined</code>, no attribute markup will be generated. When a valueless attribute is desired, use an empty string instead:</p> 
+       <pre mode="javascript" theme="chrome"><code>el.createChild({
+    tag: 'div',
+    foo: '',
+    bar: undefined
+});</code></pre> 
+       <p>The new DOM element will look like this: </p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;div foo=&quot;&quot;&gt;&lt;/div&gt;</code></pre> 
+       <h3 id="Ext_fly__">Ext.fly()</h3> 
+       <p><code>Ext.dom.Fly</code> is now a separate class, and just like <code>Ext.dom.Element</code>, it should not be instantiated by calling the constructor. Always use <code>Ext.fly()</code> to retrieve a flyweight element instance. The major change in behavior for flyweight Elements is that you can no longer attach event listeners (addListener and removeListener raise errors in development mode). Always use <code>Ext.get()</code> to retrieve an Element instance if it will be used to attach event listeners. Using <code>Ext.get()</code> adds the Element to the internal Element cache which allows its listeners to be cleared upon destruction. While adding listeners to flyweight Elements was not previously recommended, it is now prohibited.</p> 
+       <p>Another minor change to the behavior of <code>Ext.fly()</code> is that it will no longer allow text nodes to be wrapped, but will return <code>null</code> if a text node is passed. This was done for consistency with the behavior of <code>Ext.get()</code>.</p> 
+       <h3 id="Element_Selection_Methods__select__query_">Element Selection Methods (select, query)</h3> 
+       <p>For better performance, we have changed the <code>select()</code> and <code>query()</code> methods to use <code>querySelector</code> or <code>querySelectorAll</code>, and have removed the <code>Ext.dom.Query</code> requirement. Developers who require the advanced selectors supported by <code>Ext.dom.Query</code> can use <code>Ext.dom.Query</code> directly. You may also restore the old functionality of <code>Ext.dom.Element</code> <code>query()</code> and <code>select()</code> methods, using an override such as the this:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Ext.ElementCompat', {
+    override: 'Ext.dom.Element',
+    requires: [ 'Ext.dom.Query' ],
+
+    select: function(selector, composite) {
+        var elements;
+
+        if (typeof selector == &quot;string&quot;) {
+            elements = Ext.dom.Query.select(selector, this.dom);
+        }
+        else if (selector.length !== undefined) {
+            elements = selector;
+        }
+
+        return composite ? new Ext.CompositeElement(elements)
+                  : new Ext.CompositeElementLite(elements);
+    }
+}, function(DQ) {
+    Ext.query = function(selector, root, type, single) {
+        return DQ.select(selector, root, type, single);
+    };
+});</code></pre> 
+       <h3 id="Element_Position_Query">Element Position Query</h3> 
+       <p>To provide better inspection of DOM element position, Ext JS allows querying the Left, Right, Top, and Bottom of an element based on its local position and its absolute position. Previously, <code>Element.getLeft()</code> would always return a local coordinate. In order to achieve the same behavior, one will need to call <code>Element.getLeft(true)</code> to force the local coordinate system. This also applies to <code>getRight</code>, <code>getTop</code>, and <code>getBottom</code>.</p> 
+       <p>In Sencha Touch 2.x, the following <code>Ext.dom.Element</code> methods returned “local” coordinates by default. Local coordinates are relative to their <code>offsetParent</code>. In Ext JS 6, however, these methods return “global” coordinates (relative to the page) by default:</p> 
+       <ul> 
+        <li>getTop()</li> 
+        <li>getRight()</li> 
+        <li>getLeft()</li> 
+        <li>getBottom()</li> 
+       </ul> 
+       <p>Users may revert to using local coordinates by passing true as the first parameter to any of these methods, for example: </p> 
+       <pre mode="javascript" theme="chrome"><code>myElement.getTop(true);</code></pre> 
+       <h2 id="Changes_to_platformConfig">Changes to platformConfig</h2> 
+       <p>To provide for more control over run-time configuration the <code>platformConfig</code> directive has been overhauled to now work with <code>Ext.platformTags</code>. This is an object populated early in the framework load process with various identifiers such as <strong>phone</strong>, <strong>tablet</strong>, <strong>desktop</strong>, <strong>ios</strong> or <strong>android</strong> etc..</p> 
+       <p>In Sencha Touch 2.x <code>platformConfig</code> was specified in the following syntax:</p> 
+       <pre mode="javascript" theme="chrome"><code>platformConfig: [{
+    platform: 'phone',
+    theme: ['Windows'],
+    itemHeight: 43
+},{
+    theme: ['Cupertino'],
+    itemHeight: 49
+}]</code></pre> 
+       <p>In Ext JS 6, <code>platformConfig</code> is now an object that uses expressions as keys. Whenever the expression is true, those properties are applied. The expressions are implicitly based on the properties of <code>Ext.platformTags</code>.</p> 
+       <pre mode="javascript" theme="chrome"><code>platformConfig: {
+    'phone &amp;&amp; windows': {
+       itemHeight: 43
+    },
+    ios: {
+       itemHeight: 49
+    }
+}</code></pre> 
+       <p><strong>Note:</strong> The theme is not a tag available to <code>platformConfig</code>. If one wished to make the theme (or other tag) available for <code>platformConfig</code> usage, it can be simply added using the <code>tags</code> property in <code>&quot;app.json&quot;</code> (perhaps in a build profile):</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;cupertino&quot;: {
+       &quot;toolkit&quot;: &quot;modern&quot;,
+       &quot;theme&quot;: &quot;theme-cupertino&quot;,
+
+       &quot;tags&quot;: &quot;cupertino&quot;  // added to platformTags for this build
+    }
+}</code></pre> 
+       <p>Alternatively, applications can provide <code>Ext.beforeLoad()</code> which is given this object and it is also valid to modify it if needed. Perhaps, to add a custom tag.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var Ext = Ext || {}; // Ext namespace won't be defined yet...
+
+    Ext.beforeLoad = function (tags) {
+        // ... tags === Ext.platformTags 
+        tags.custom = true;
+    };
+&lt;/script&gt;</code></pre> 
+       <h2 id="Theming">Theming</h2> 
+       <h3 id="iconCls___Pictos">iconCls / Pictos</h3> 
+       <p>The Pictos icon font is no longer included by default. It is now a separate package you’ll need to require explicitly in <code>&quot;app.json&quot;</code> or <code>&quot;package.json&quot;</code> as appropriate:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;requires&quot;: [
+    &quot;font-pictos&quot;
+]</code></pre> 
+       <p>Once required, you can use the following syntax for <code>iconCls</code> configs in order to use icons from the Pictos library:</p> 
+       <pre mode="javascript" theme="chrome"><code>// pictos-{iconName} is used to set a named icon from the Pictos icon set
+iconCls: 'pictos pictos-home'</code></pre> 
+       <p>A similar requirement step and <code>iconCls</code> syntax will be used if you prefer to use icons from the new “font-awesome” package.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;requires&quot;: [
+    &quot;font-awesome&quot;
+]
+
+// fa-{iconName} is used to set a named icon from the Font Awesome icon set
+iconCls: 'x-fa fa-home’</code></pre> 
+       <h3 id="Theming_Upgrade">Theming Upgrade</h3> 
+       <p>Creating custom themes in Touch is very different than how it’s handled in Ext JS. Any custom theme style rules that existed in your Touch Application will need to move into the appropriate folders.</p> 
+       <p>See our <a href="../core_concepts/theming.html">Theming Guide</a> for more information about theming Ext JS.</p> 
+       <h3 id="Fashion">Fashion</h3> 
+       <p>We are very excited to introduce our new theme compiler named Fashion. Fashion compiles most Sass code (<code>.scss</code> files) but is in fact not Sass. It is an extended language with additional features to improve use in tools like Sencha Inspector.</p> 
+       <h4 id="Dynamic_Variables">Dynamic Variables</h4> 
+       <p>When upgrading to Ext JS 6, the internal use of dynamic variables could impact how these variables are assigned in applications and custom themes. Although not necessary, it is recommended to change variable assignments to use <code>dynamic()</code>. In most cases, this will mean mechanically replacing <code>!default</code> (the approach taken in previous releases) with <code>dynamic()</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>// before:
+$base-color: green !default;
+
+// after:
+$base-color: dynamic(green);</code></pre> 
+       <p>This will make it more obvious if an error is generated based on the more restrictive nature of assignment to dynamic variables.</p> 
+       <h4 id="Compass_Extensions">Compass Extensions</h4> 
+       <p>Compass functionality depending on Ruby code will be unavailable since Ruby is no longer being utilized. An equivalent will have to be created using JavaScript. This can be provided in many cases using <code>require()</code> to implement the missing functionality in JavaScript. The Sass code from Compass, however, is included in Fashion, so not all Compass functionality is impacted. Generally speaking, if you have not used any custom Compass functionality, you will most likely not need to make any changes.</p> 
+       <p>See the <a href="../../../cmd/6.x/fashion.html">Fashion Guide</a> for more information.</p> 
+       <h2 id="Events">Events</h2> 
+       <h3 id="Declarative_Listeners">Declarative Listeners</h3> 
+       <p>Previously, listeners declared on the class body would be merged at a property level with listener declarations on subclasses or instance configs. This could lead to surprising results should options like <code>delay</code> and <code>buffer</code> get merged.</p> 
+       <p>Now, listeners declared on the class body will never be merged. Instead, listeners defined on subclasses, or in instance configs will be added to any existing listeners inherited from super classes and/or mixins. This enables listeners to be safely defined in a declarative manner.</p> 
+       <p>In the following example all three listeners will be called:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('SuperButton', {
+    extend: 'Ext.button.Button',
+
+    listeners: {
+        click: function() {
+            console.log('button clicked (superclass handler)');
+        }
+    }
+});
+
+Ext.define('SubButton', {
+    extend: 'SuperButton',
+
+    listeners: {
+        click: function() {
+            console.log('button clicked (subclass handler)');
+        }
+    }
+});
+
+Ext.create('SubButton', {
+    renderTo: Ext.getBody(),
+
+    text: 'click me',
+
+    listeners: {
+        click: function() {
+            console.log('button clicked (instance handler)');
+        }
+    }
+});</code></pre> 
+       <p>Users who were dependent upon the past behavior of declarative listeners that overrode their parent class’s listeners will need to change their code to override the handler method instead.</p> 
+       <h3 id="Updating__before__Event_Listeners">Updating “before” Event Listeners</h3> 
+       <p>Sencha Touch and Ext JS had different approaches to <code>before</code> and <code>after</code> events. In Sencha Touch, you might see code like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>listeners: {
+    activeitemchange: 'onBeforeActiveItemChange',
+    order: 'before'
+}</code></pre> 
+       <p>This listener would be called prior to the change of active item and could veto that change by returning false. In Ext JS, the above should be changed to:</p> 
+       <pre mode="javascript" theme="chrome"><code>listeners: {
+    beforeactiveitemchange: 'onBeforeActiveItemChange'
+}</code></pre> 
+       <p>This would also apply to many cases using onBefore directly:</p> 
+       <pre mode="javascript" theme="chrome"><code>// Before:
+comp.onBefore('activeitemchange', 'onBeforeActiveItemChange', this);
+
+// After:
+comp.on('beforeactiveitemchange', 'onBeforeActiveItemChange', this);</code></pre> 
+       <p>The <code>after</code> event order and <code>onAfter</code> method, which is also deprecated, are similar but should function in much the same way as in Sencha Touch.</p> 
+       <h4 id="Details">Details</h4> 
+       <p>In the core event system with Ext JS 6, the <code>order</code> option on listeners is deprecated and simply maps to a <code>priority</code> value to control the order of event listeners. While this preserves the ordering of listeners to an event, it does not have the expected result for <code>before</code> listeners in all cases.</p> 
+       <p>This is particularly true when listening to events fired using <a href="../../../touch/2.4/2.4.1-apidocs/#!/api/Ext.mixin.Observable-method-fireAction">fireAction</a> (the implementation that was behind <a href="../../../touch/2.4/2.4.1-apidocs/#!/api/Ext.Evented">eventedConfigs</a>). In Sencha Touch, the one event (“activeitemchange” for example) would be fired to all “before” listeners. If none returned false, the action function would be called and then all remaining listeners would receive the event. To handle animations and the like, the event delivery would be suspended and resumed (typically by the action function).</p> 
+       <p>With Ext JS 6, this is split into two events (“beforeactiveitemchange” and “activeitemchange”) and the action function is called between the two events (if no “before” event listeners returned false).</p> 
+       <h3 id="Event_listening">Event listening</h3> 
+       <p>Advanced listening features like listening directly on elements or components using wildcard and advanced selectors may not work the same. Application level event handlers using controllers or viewControllers, however, will work the same.</p> 
+       <h2 id="Scrolling">Scrolling</h2> 
+       <p>The <code>scrollable</code> config of <code>Ext.container</code> now configures an <code>Ext.util.Scroller</code> instead of an instance of <code>Ext.scroll.View</code>.</p> 
+       <p>With many touch-enabled devices, special logic is needed to efficiently manage scrolling. To normalize all this device-specific behavior, we’ve added <code>Ext.scroll.Scroller</code>. An instance of this class is created by the framework when using configs like <code>autoScroll</code>, <code>overflowX</code> and <code>overflowY</code> configs, but it can now be more fully controlled using the new <code>scrollable</code> config.</p> 
+       <p>This config can now be a config object for the Scroller. To retrieve the Scroller, you call <code>getScrollable()</code>. This object provides useful APIs like <code>scrollTo</code> and <code>scrollBy</code>, so you no longer need to worry about how the scrolling is managed on the current device.</p> 
+       <p>The properties in a scrollable config object are transferred to configs of a <code>Ext.util.Scroller</code>.</p> 
+       <p>Now you can use the preferable shorthand like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>scrollable: 'x'   // equivalent to 'horizontal'
+scrollable: 'y'   // equivalent to 'vertical'</code></pre> 
+       <h2 id="Data">Data</h2> 
+       <p>The <code>Ext.data</code> namespace is perhaps the most impacted by the merge of Ext JS and Sencha Touch.</p> 
+       <h3 id="Ext_data_Model">Ext.data.Model</h3> 
+       <p>The way to define models has changed to not require a config block, because they are not instance level configurations:</p> 
+       <pre mode="javascript" theme="chrome"><code>// Old
+Ext.define('Order', {
+    extend: 'Ext.data.Model',
+    config: {
+        fields: ['id', {
+            name: 'date',
+            type: 'date'
+        }],
+        hasMany: 'OrderItem'
+    }
+});
+
+// New
+Ext.define('Order', {
+    extend: 'Ext.data.Model',
+    fields: ['id', {
+        name: 'date',
+        type: 'date'
+    }],
+    hasMany: 'OrderItem'          
+});</code></pre> 
+       <p>The internals of <code>Ext.data.Model</code> have been heavily optimized to include support for calculated fields, better identity (“id” property) management, and undeclared fields.</p> 
+       <p>This last item takes a bit of unpacking. Basically if the following are true for a field then that field no longer has to be listed in the fields array:</p> 
+       <ul> 
+        <li>Needs no conversion beyond deserialization (say from JSON)</li> 
+        <li>Has no default value</li> 
+        <li>Does not need to be validated (at the Model level)</li> 
+       </ul> 
+       <h4 id="Properties___Configs">Properties / Configs</h4> 
+       <ul> 
+        <li><p><strong>data</strong>: Undeclared model fields will remain intact where they were previously pruned in Touch. This allows Models to only define the fields that need to be processed in some way. The data object passed to the constructor simply becomes the <code>data</code> property and defaulting and conversions are applied in place.</p></li> 
+        <li><p><strong>raw</strong>: Because of the changes to the data property, there is no longer a separate raw data property tracked on each record. Should your existing applications rely on this previously reader-generated property, you can approximate the old behavior during the transition with a simple override to copy the data before it is updated:</p> <pre mode="javascript" theme="chrome"><code>Ext.define('App.overrides.data.Model', {
+    override: 'Ext.data.Model',
+    constructor: function (data) {
+        this.raw = Ext.apply({}, data);
+        this.callParent(arguments);
+    }
+});</code></pre></li> 
+        <li><p><strong>id / internalId</strong>: When a record is created and no “id” is given, one will be generated. This is handled by the Model’s <code>identifier</code> config. This is placed as <code>id</code> on the record (accessed using the <code>getId</code> method) as well as in the <code>data</code> object as the <code>idProperty</code>. Historically, the id would often be copied to the internalId. This is no longer the case. The <code>internalId</code> is a separately generated value that is unique across all records and should never be changed. The <code>id</code>, however, may be changed.</p></li> 
+        <li><p><strong>clientIdProperty:</strong> <code>clientIdProperty</code> is now a config for writer that is used to rename “id” as it is sent to the server for create operations. If now present, the generated “id” will be sent. The server’s response is used to send back the server-generated id as needed. The id sent to the server is read back using the existing <code>clientIdProperty</code> on Model. When using a Session, the “foreign key” fields of all associated records will be updated, if maintained within the same session.</p></li> 
+        <li><p><strong>modified:</strong> <code>Ext.data.Model</code> previously returned an empty object for the modified property if no records had changed. Accessing the Model’s <code>modified</code> property will now return <code>undefined</code> if no changed records have been appended. Changes such as these allow the Data package to remain as slim as possible.</p></li> 
+        <li><p><strong>useCache:</strong> Sencha Touch gave users the ability to cache model instances by defining their models with the <code>useCache</code> config. This was replaced by <code>Ext.data.Session</code> to allow for better scope control over the cache. Alternatively, developers can load records via ViewModel and share it in that manner.</p></li> 
+       </ul> 
+       <p>Users should now utilize the model’s “modified” methods to ascertain change. These include:</p> 
+       <ul> 
+        <li><p><strong>isModified</strong>()</p></li> 
+        <li><p><strong>getModified</strong>()</p></li> 
+        <li><p><strong>getChanges</strong>()</p></li> 
+        <li><p><strong>belongsTo</strong>: <code>belongsTo</code> can often be simplified using the <code>reference</code> config on field.</p></li> 
+        <li><p><strong>hasMany</strong>: The typical use of <code>hasMany</code> is deprecated in favor of <code>reference</code> config on field. See below. Use of <code>hasMany</code> to describe child items that do not contain a foreign key is still appropriate.</p></li> 
+        <li><p><strong>associations</strong>: Same as above since this config is just an alternative way of expressing <code>belongsTo</code> and <code>hasMany</code>.</p></li> 
+        <li><p>association data will not be read via the model constructor, this will need to be parsed by a reader:</p> <pre mode="javascript" theme="chrome"><code>var results = MyModel.getProxy().getReader().read(rawData);</code></pre></li> 
+        <li><p><strong>validations</strong>: validations are supported but deprecated for creating validators associated with a single field. Instead, use the <code>validators</code> config object which is keyed by field name.</p></li> 
+       </ul> 
+       <h5 id="_strong_Methods__strong_"><strong>Methods</strong></h5> 
+       <ul> 
+        <li><p><strong>constructor</strong>: To construct a record, you simply pass the data object. The second argument is the owning <code>Ext.data.Session</code> (see below).</p></li> 
+        <li><p><strong>drop</strong>: There is now a <code>drop</code> method that marks the record to be removed, but does not save it immediately. </p></li> 
+       </ul> 
+       <h3 id="Ext_data_Store">Ext.data.Store</h3> 
+       <p>There are several internal changes to stores in Ext JS 6. Many are inherited from Sencha Touch and others are to support chained stores.</p> 
+       <h4 id="Events">Events</h4> 
+       <p>The <code>addrecords</code>, <code>removerecords</code> and <code>updaterecords</code> events now become <code>add</code>, <code>remove</code> and <code>update</code> respectively. The <code>add</code> and <code>remove</code> events may be fired multiple times for a single operation, an event will be fired for each contiguous block of records.</p> 
+       <pre mode="javascript" theme="chrome"><code>// This will cause 2 remove events to be fired, one for each block of records
+var records = [0, 1, 4, 5, 6, 9, 10, 12].map(function(idx) {
+    return store.getAt(idx);
+});
+// Fires 4 remove events:
+// 0..1
+// 4..6
+// 9..10
+// 12
+store.remove(records);</code></pre> 
+       <p><strong>datachanged event:</strong> In some cases, previous Sencha Touch 2 releases did not always fire this event consistently. Ext JS now assures that this event is raised for all manual bulk load methods such as <code>loadData</code>, <code>add</code>, or <code>insert</code>. Note that this event is not raised initially when a store is instantiated with inline <code>data: [ ]</code>.</p> 
+       <h4 id="Added">Added</h4> 
+       <p><strong>beginUpdate / endUpdate:</strong> These methods can be called before making multiple changes to a store and after. These translate to new <code>beginupdate</code> and <code>endupdate</code> events as these transition an internal update counter from or back to 0. This allows views observing the store to defer expensive operations out to the <code>endupdate</code> event.</p> 
+       <h4 id="Changed">Changed</h4> 
+       <p><strong>getById / getByInternalId:</strong> In Sencha Touch 2, only <code>getByInternalId</code> was a map lookup, and since <code>internalId</code> was not always the same as id, applications needed to call <code>getById</code>. In Sencha Touch 2, that was a linear search, but both are backed by maps.</p> 
+       <p><strong>destroy / destroyStore</strong>: In Sencha Touch 2, the “destroy” method was used to send a remote request to the server to delete records. This conflicts with the common usage of “destroy” across the framework to mean to clean up resources. To bring this in line, the “destroy” method now cleans up a store. To send a delete request to the server, the “erase” method (same as model) should be used. “destroyStore” is deprecated.</p> 
+       <h4 id="Deprecated___Removed_">Deprecated / Removed:</h4> 
+       <p><strong>“buffered” config:</strong> The <code>buffered</code> config is supported for Ext.create and operator new, but is deprecated. It is recommended to create a buffered store using <code>type: 'buffered'</code>. If you are deriving a store from <code>Ext.data.Store</code>, the <code>buffered</code> config is not supported. Instead derive from <code>Ext.data.BufferedStore</code>. Here’s an example of a grid store config:</p> 
+       <pre mode="javascript" theme="chrome"><code>store: {
+    type: 'buffered',  // was &quot;buffered: true&quot;,
+    ...
+}</code></pre> 
+       <p><strong>groupers:</strong> Support for multiple grouping levels was never realized in Sencha Touch 2 and groupers was really nothing more than extra sorters. This has been replaced by the <code>grouper</code> config and the <code>getGroupString</code> method that was previously configured on the store is now configured on the <code>grouper</code>. The internal structures are now much closer to being able to support nested groupers and this config will most likely be restored when that functionality is available.</p> 
+       <h3 id="Ext_data_Proxy">Ext.data.Proxy</h3> 
+       <p><code>Ext.data.Operation</code> has now been split into four subclasses, one for each type of CRUD operation. These operation classes should be used in favor of <code>Ext.data.operation.Operation</code> directly.</p> 
+       <h4 id="Proxy">Proxy</h4> 
+       <ul> 
+        <li><p><strong>“destroy” / “erase”</strong>: Similar to <code>model</code> &amp; <code>store</code>, the <code>destroy()</code> method has been corrected to mean clean up any resources. To send a delete request to the server, the <code>erase</code> method should be used.</p></li> 
+        <li><p>“<strong>doRequest</strong>”: Now takes a single argument, an <code>Ext.data.operation.Operation</code>. Callbacks should be attached to operation directly.</p></li> 
+       </ul> 
+       <h5 id="Proxy_CRUD">Proxy CRUD</h5> 
+       <p>One could previously pass a callback and scope into proxy CRUD methods. This has been removed. The callback from the proxy would return the operation where now one would use a callback on the operation which returns the results instead.</p> 
+       <h4 id="Writer">Writer</h4> 
+       <ul> 
+        <li><strong>writeAllFields</strong>: The default for this config was true and is now false to optimize data transfer. This config is used to tell the Writer to send all fields on an update even if those fields have not changed.</li> 
+       </ul> 
+       <h3 id="Ext_data_Field">Ext.data.Field</h3> 
+       <p>One of the biggest changes to fields is that the various field types are now defined as classes in a small class hierarchy <code>Ext.data.field.*</code>. Now you can write custom field types and use them in your Models by simply giving them an alias (for example, <code>data.field.foo</code>) and using that name as the type config on a field (for example, ‘foo’).</p> 
+       <ul> 
+        <li><p><strong>depends</strong>: You can now declare the field names that a <code>convert</code> function uses to calculate its value and this field will automatically be updated whenever any of these fields are set.</p></li> 
+        <li><p><strong>calculate</strong>: This new config allows you to write a simple function that produces the value of a field given the record’s data object. Instead of declaring a <code>convert</code> function and the <code>depends</code> array, this text of this function is parsed to extract the field dependencies.</p></li> 
+        <li><p><strong>reference</strong>: To make it simple to relate one Model with another, when a field contains the id of another record (a “foreign key”), you can add this config and simply give the name of the Model being referenced. This is enough to populate association data for both this Model and the referenced Model.</p></li> 
+        <li><p><strong>validators</strong>: This config is typically used when deriving a custom field type, but this is an easy way to list the rules that describe a valid field value.</p></li> 
+        <li><p><strong>useNull</strong>: This config is now named <code>allowNull</code>.</p></li> 
+       </ul> 
+       <p>The ability to derive custom field types replaces the <code>Ext.data.Types</code> static class, which has been deprecated.</p> 
+       <h3 id="Ext_data_Validations">Ext.data.Validations</h3> 
+       <p>Has been replaced by <code>Ext.data.validator.*</code>. </p> 
+       <h2 id="Sessions__NEW_">Sessions (NEW)</h2> 
+       <p>The new Session class will help manage editing of multiple records and their associations. If you are manually saving records and stores and have to work out the proper sequence to save all of your edits, the Session class will likely be very helpful. Check out the API documentation on <code>Ext.data.Session</code> to determine if you might benefit from coordinated Model management.</p> 
+       <h2 id="Schema__NEW_">Schema (NEW)</h2> 
+       <p>Collecting and managing all of your Model definitions and their associations is now handled by the Schema class <code>Ext.data.schema.Schema</code>. The Schema class knows, for example, when one class declares an association with another and ensures that both classes are “decorated” with appropriate accessor methods - regardless of the order in which those classes are loaded.</p> 
+       <h2 id="ModelManager__DEPRECATED_">ModelManager (DEPRECATED)</h2> 
+       <p>The <code>Ext.data.ModelManager</code> class is deprecated. Its features have been replaced by <code>Ext.data.schema.Schema</code>.</p> 
+       <h2 id="Associations">Associations</h2> 
+       <p>The way you declare associations has been streamlined. The old syntax is supported but, in many cases, field’s new “reference” config makes the declaration much simpler. Further, Ext JS now supports “Many-To-Many” associations using the <code>ManyToMany</code> Model config.</p> 
+       <h2 id="Ext_data_association____REPLACED_">Ext.data.association.* (REPLACED)</h2> 
+       <p>The contents of this namespace have been replaced by Schema. Direct use of these classes in applications is rare and the configs that corresponded to these classes (“belongsTo”, etc) are still supported though most deprecated.</p> 
+       <h2 id="Ext_plugin_BufferedList">Ext.plugin.BufferedList</h2> 
+       <p>We have removed <code>Ext.plugin.BufferedList</code>. Please use <code>infinite: true</code> on list instead.</p> 
+       <h2 id="mainView">mainView</h2> 
+       <p>Using <code>mainView</code> is the preferred way to launch your application. While you can still utilize the launch method, it’s more tool friendly to use <code>mainView</code>.</p> 
+       <p>The <code>mainView</code> config can, however, conflict with a “Main” view listed in the <code>views</code> array:</p> 
+       <pre mode="javascript" theme="chrome"><code>views: [
+    'Main'   // generated getter conflicts with mainView config getter
+]</code></pre> 
+       <p>To resolve this conflict, you can:</p> 
+       <ul> 
+        <li>Switch the Main view to be created via the <code>mainView</code> config.</li> 
+        <li>Rename the Main view.</li> 
+        <li>Remove the “Main” entry in the <code>views</code> array (and check calls to <code>getMainView</code>).</li> 
+       </ul> 
+       <h2 id="Viewport">Viewport</h2> 
+       <p>Previously in Touch the Viewport was available at the time of <code>onReady</code>. ExtJS 6+ now has an event that fires when the Viewport is ready.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.on('viewportready', cb);</code></pre> 
+       <p>Using the <code>viewportready</code> event will allow users to access the viewport as soon as it is created from anywhere in there application.</p> 
+       <h2 id="Removed_Ext_DateExtras">Removed Ext.DateExtras</h2> 
+       <p>The <code>Ext.DateExtras</code> singleton class has been removed. Most of the methods found in <code>Ext.DateExtras</code> can be found in <code>Ext.Date</code> instead.</p> 
+       <h2 id="Ext_data_plugin_Buffered_has_been_removed">Ext.data.plugin.Buffered has been removed</h2> 
+       <p>Use <code>Ext.data.BufferedStore</code>. At present, <code>Ext.data.BufferedStore</code> may not support Create, Write and Delete operations. However, we are in process of making modern components accept BufferedStores.</p> 
+       <h2 id="Legacy_Package">Legacy Package</h2> 
+       <p>We have created a legacy package that contains no longer supported code (like <code>Ext.device.*</code>, see below). The intent of the legacy package is to give users a chance to update their code before the code they may have used is completely removed.</p> 
+       <h3 id="Ext_device___API_have_been_moved_to_legacy_package">Ext.device.* API have been moved to legacy package</h3> 
+       <p>We have removed the Sencha Touch device API’s from the modern toolkit, but they can still be utilized by requiring the legacy package. While <code>Ext.device.*</code> can still be used, we recommend using native HTML5 API’s or, for native packaged applications, Cordova or PhoneGap APIs are the preferred method of providing native device support.</p> 
+       <h2 id="Ext_data_proxy_Sql_has_been_removed">Ext.data.proxy.Sql has been removed</h2> 
+       <p><code>Ext.data.proxy.Sql</code> was based on webSQL, which is no longer being developed. Additionally, it’s only supported in webkit browsers. </p> 
+       <h2 id="Charts_Package">Charts Package</h2> 
+       <h3 id="Ext_draw_Component">Ext.draw.Component</h3> 
+       <p><code>Ext.draw.Component</code> has changed to <code>Ext.draw.Container</code>.</p> 
+       <h2 id="Instance_IDs">Instance IDs</h2> 
+       <p>As part of our performance optimization efforts in Ext JS 6, we have removed the overhead for handling identifiers with invalid characters from certain core areas. To help catch such ids before they fail, we have added checks in key places such as <code>Ext.get()</code> and the <code>Ext.Component</code> constructor. These checks use <code>Ext.validIdRe</code>, which is defined as:</p> 
+       <pre mode="javascript" theme="chrome"><code>validIdRe: /^[a-z_][a-z0-9\-_]*$/i</code></pre> 
+       <p>In a nutshell, create ids that adhere to the above regex in order to future-proof your application.</p> 
+       <h2 id="Ext_ComponentManager">Ext.ComponentManager</h2> 
+       <p><code>Ext.ComponentManager</code> is seldom used directly by applications, but its internals have been streamlined and it no longer provides a HashMap of components. Instead look at the methods this class provides to access the registered components.</p> 
+       <h2 id="Ext_Container">Ext.Container</h2> 
+       <p><code>Ext.Container</code> API has been changed to be more consistent with <code>Ext.container.Container</code> API in Classic toolkit. The changes include:</p> 
+       <ul> 
+        <li>When calling <code>add</code> method with multiple items to add, the return value will be an array of <code>Ext.Component</code> instances that were added to the Container.</li> 
+        <li><code>remove</code> method accepts three types of item selectors: an <code>Ext.Component</code> instance, <code>itemId</code> of a child Component, or numeric index of the child Component in the <code>items</code> collection.</li> 
+        <li><code>remove</code> method will return the removed item instead of <code>this</code>.</li> 
+        <li><code>removeAll</code> method will return an array of removed items instead of <code>this</code>.</li> 
+        <li><code>removeAt</code> method will return the removed Component instead of <code>this</code>.</li> 
+        <li><code>removeInnerAt</code> method will return the removed Component instead of <code>this</code>.</li> 
+       </ul> 
+       <h2 id="Ext_mixin_Selectable__affects_Ext_dataview_DataView__Ext_List__Ext_grid_Grid__amp__subclasses_">Ext.mixin.Selectable (affects Ext.dataview.DataView, Ext.List, Ext.grid.Grid &amp; subclasses)</h2> 
+       <p>The <code>getSelection</code> method now returns a single record, the most recently selected one. This can be used for databinding:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'formpanel',
+    items: [{
+        xtype: 'textfield',
+        bind: '{theList.selection.name}'
+    }]
+}</code></pre> 
+       <p>Use <code>getSelections</code> to return an <code>Ext.data.Model[]</code> that has all selected records.</p> 
+       <h2 id="Forms">Forms</h2> 
+       <h3 id="Ext_field_Text__and_subclasses_">Ext.field.Text (and subclasses)</h3> 
+       <p>The <code>change</code> event now fires immediately as the input changes, instead of when the field blurs. To have a delay to capture multiple change events in succession, use a buffer on the listener:</p> 
+       <pre mode="javascript" theme="chrome"><code>listeners: {
+    // Each time the change occurs, it will wait 500ms. If no other change has happened in
+    // that period, the event will fire. Otherwise, if a change does happened, the timer will
+    // be reset and the process will repeat
+    buffer: 500, 
+    change: function() {}
+}</code></pre> 
+       <h3 id="Ext_field_Checkbox">Ext.field.Checkbox</h3> 
+       <p>The <code>check</code> and <code>uncheck</code> events no longer pass the event object as it was only available under some circumstances, the event was fired whether the change occurred via the UI or not.</p> 
+       <h3 id="Ext_field_DatePicker__Ext_field_Select">Ext.field.DatePicker, Ext.field.Select</h3> 
+       <p>This class no longer extends <code>Ext.field.Select</code>, the picker related functionality has been abstracted into <code>Ext.field.Picker</code>, both of these classes now extend <code>Ext.field.Picker</code>.</p> 
+       <h3 id="Ext_field_SingleSlider">Ext.field.SingleSlider</h3> 
+       <p>This class has been introduced to assist with data binding. It is very similar to the superclass, <code>Ext.field.Slider</code>, however the <code>getValue</code> method and <code>value</code> binding always return a <code>Number</code>, not a <code>Number[]</code>.</p> 
+       <h3 id="Ext_field_Slider">Ext.field.Slider</h3> 
+       <p>The <code>change</code> event is now consistent with other form fields, the the signature is now:</p> 
+       <pre mode="javascript" theme="chrome"><code>change: function(field, newValue, oldValue) {}</code></pre> 
+       <p>What was previously the <code>change</code> event is now named <code>dragchange</code>. </p> 
+       <p>A new <code>liveUpdate</code> config was added to determine when the <code>change</code> event fires, either real time as the slider is modified, or when the drag is complete.</p> 
+       <h3 id="Ext_field_Toggle">Ext.field.Toggle</h3> 
+       <p>The type of <code>value</code> for this field is now a Boolean. It will still accept numeric values.</p> 
+       <h2 id="Misc">Misc</h2> 
+       <h3 id="Ext_util_Draggable">Ext.util.Draggable</h3> 
+       <p>To veto a drag, listen to the <code>beforedragstart</code> event and return false. In previous versions this would be done in the <code>dragstart</code> event.</p> 
+       <h2 id="Conclusion">Conclusion</h2> 
+       <p>As you can see, there are many new additions for users moving from Touch to the Modern toolkit. As always, if you have questions regarding guide content, be sure to ask on the <a href="../../../../https@www.sencha.com/forum/default.htm">community forums</a> or by submitting a Support ticket through the <a href="../../../../https@support.sencha.com/default.htm">Support Portal</a> (<a href="../../../../www.sencha.com/support/default.htm">Sencha Support customer</a> access only).</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

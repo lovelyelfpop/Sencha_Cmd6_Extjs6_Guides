@@ -1,0 +1,616 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | 创建包(Packages)</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Generating_Packages" title="生成包">生成包</a> 
+       <a class="toc-page-h2" href="#Anatomy_of_a_Package" title="包剖析">包剖析</a> 
+       <a class="toc-page-h2" href="#Integrating_Packages_in_Application_Builds" title="在应用中集成包">在应用中集成包</a> 
+       <a class="toc-page-h3" href="#Package_Type" title="包类型">包类型</a> 
+       <a class="toc-page-h3" href="#Source_Code" title="包的源代码">包的源代码</a> 
+       <a class="toc-page-h3" href="#Styling" title="样式">样式</a> 
+       <a class="toc-page-h3" href="#Resources" title="包的资源">包的资源</a> 
+       <a class="toc-page-h3" href="#Overrides" title="覆写">覆写</a> 
+       <a class="toc-page-h3" href="#Package_Versions" title="包的版本">包的版本</a> 
+       <a class="toc-page-h3" href="#Package_Requirements" title="包的要求">包的要求</a> 
+       <a class="toc-page-h3" href="#Package_Inheritance" title="包的继承">包的继承</a> 
+       <a class="toc-page-h2" href="#Building_The_Package" title="构建包">构建包</a> 
+       <a class="toc-page-h3" href="#framework" title="框架">框架</a> 
+       <a class="toc-page-h3" href="#theme" title="theme">主题</a> 
+       <a class="toc-page-h2" href="#Local_Repository" title="本地库">本地库</a> 
+       <a class="toc-page-h3" href="#Structure" title="结构">结构</a> 
+       <a class="toc-page-h3" href="#Author_Identity" title="作者标识">作者标识</a> 
+       <a class="toc-page-h3" href="#Public_Private_Keys" title="Public/Private Keys">Public/Private Keys</a> 
+       <a class="toc-page-h3" href="#Content" title="Content">Content</a> 
+       <a class="toc-page-h3" href="#Repository_Hooks" title="库钩子">库钩子</a> 
+       <a class="toc-page-h2" href="#Adding_Packages" title="添加包">添加包</a> 
+       <a class="toc-page-h2" href="#Hosting_A_Package_Repository" title="建立一个包库主机">建立一个包库主机</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Creating Sencha Cmd 包(Packages)</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 包含了一个 Sencha 包管理器.即使你不愿意发布你的包,包仍然有很多用处.这个向导包含了创建包的过程和发布.关于包的使用详情,请参考 <a href="cmd_packages.html">Sencha Cmd 包(Packages)</a>.</p> 
+       <h2 id="Generating_Packages">生成包</h2> 
+       <p>在我们能生成一个新包前,我们必须要先为它建立一个存储位置: 一个 <a href="#!/guide/command_workspace">工作区</a>. 在这个例子中我们会要用 Ext JS 来生成这个包,因此我们从这个命令开始:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/ext-n.n.n generate workspace /path/to/workspace</code></pre> 
+       <p>现在我们浏览这个新的工作区然后生成这个包:</p> 
+       <pre mode="javascript" theme="chrome"><code>cd /path/to/workspace
+sencha generate package foo</code></pre> 
+       <h2 id="Anatomy_of_a_Package">包剖析</h2> 
+       <p>上面的步骤产生了一个包含了很多常用的文件的基础包.你能删除其中的大多数文件,但重要的是要完整的保留 <code>&quot;.sencha&quot;</code> 文件夹.</p> 
+       <p> <code>sencha generate package</code> 生成包的结构如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>packages/
+    local/
+        foo/                        # Top-level folder for the package
+            .sencha/
+                package/
+                    sencha.cfg      # Sencha Cmd configuration for this package
+                    build-impl.xml  # Generated build script for package
+                    plugin.xml      # Sencha Cmd plugin for this package
+                    codegen.json    # Data to support 3-way merge in code generator
+            classic/                # Classic toolkit-specific src code
+            examples/               # Example applications demonstrating the package
+            licenses/               # License agreement
+            modern/                 # Modern toolkit-specific src code
+            overrides/              # Folder for automatically activated overrides
+            resources/              # Static resources (typically has images folder)
+            sass/                   # Container for styling code
+                etc/                # General, non-component oriented styling
+                example/            # - internal use
+                src/                # Style rules named by component
+                var/                # Variables and mixins named by component
+            src/                    # Folder for normal JavaScript code
+            build.xml               # Build script (called by `sencha package build`)
+            package.json            # Package descriptor
+            Readme.md               # High-level information about this package</code></pre> 
+       <p>上面的内容相当广泛,一个包最必要的部分是 <code>&quot;package.json&quot;</code> 和 <code>&quot;.sencha/package/sencha.cfg&quot;</code>.</p> 
+       <p>  <code>&quot;package.json&quot;</code> 文件包含了包的描述. 下面这个例子来自于 <code>&quot;theme-neptune&quot;</code> 包:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;theme-neptune&quot;,
+    &quot;type&quot;: &quot;theme&quot;,
+    &quot;creator&quot;: &quot;Sencha&quot;,
+    &quot;summary&quot;: &quot;Ext JS Neptune Theme&quot;,
+    &quot;detailedDescription&quot;: &quot;The Neptune Theme provides a clean, modern style for Ext JS&quot;,
+    &quot;version&quot;: &quot;n.n.n&quot;,
+    &quot;compatVersion&quot;: &quot;n.n.n&quot;,
+    &quot;format&quot;: &quot;1&quot;,
+    &quot;extend&quot;: &quot;theme-neutral&quot;
+}</code></pre> 
+       <p><code>creator</code> 属性是你要用来设置包的作者什么的. 这个内容没有检验,但它必须和你在我们后面会讨论到的你本地包库中的名字一致.</p> 
+       <h2 id="Integrating_Packages_in_Application_Builds">在应用中集成包</h2> 
+       <p>大多数包的目的是被集成到一个应用中 (最终) . 为完成这个功能, 在  <code>sencha app build</code> 运行过程中,Sencha Cmd 组织需要包的各个片段到应用中.</p> 
+       <p>严格来说这个具体是怎么完成的依赖于包的类型.</p> 
+       <h3 id="Package_Type">包类型 </h3> 
+       <p>不同的包有着不同的角色. Sencha Cmd 支持以下几种类型的包:</p> 
+       <ul> 
+        <li><strong><code>code</code></strong> - 由应用或其它包使用的任意一个代码包.这些包通是通用的并且在使用一个 <code>require</code> 语句来选择时被包含进来..</li> 
+        <li><strong><code>theme</code></strong> - 用于应用主题的包.主题包的特别之处是在一次构建中只一个类型为 <code>theme</code> 包通许被设为“active(激活)”.在  <code>app.json</code> 文件中的 <code>theme</code> 属性来选定主题.主题能够从其它的主题包中通过使用 <code>extend</code> 来继承其中的样式和资源.</li> 
+        <li><strong><code>locale</code></strong> - 这种包类型在一个在其路径中包含theme.name的一个标准包中已被放弃.例子参见 Ext JS <code>locale</code> package.</li> 
+       </ul> 
+       <h3 id="Source_Code">包的源代码</h3> 
+       <p><code>&quot;src&quot;</code> 文件夹是用于存放一个例如定制化组件或其它有用的代码的类的地方.这些代码包含在  <code>classpath</code> 中,可以用于通过  <code>require</code> 要求的应用和其它包来使用.</p> 
+       <p>这是你最可能放置你的 JavaScript 代码的地方. 放在这个文件夹下的类必须遵循 <a href="../advanced_cmd/cmd_compiler_reference.html">对编译器友好的代码原则</a>.</p> 
+       <h3 id="Styling">样式</h3> 
+       <p><code>&quot;sass&quot;</code> 文件夹包含三个设计用于处理不同方面的样式编译的子文件夹.</p> 
+       <ul> 
+        <li><code>&quot;sass/etc&quot;</code> - 不直接与 JavaScript类有关系的代码</li> 
+        <li><code>&quot;sass/var&quot;</code> - 变量定义 (反映 JavaScript 类层次)</li> 
+        <li><code>&quot;sass/src&quot;</code> - 混和的和规则 (反映 JavaScript 类层次)</li> 
+       </ul> 
+       <p><code>在&quot;sass/var&quot;</code>和<code>&quot;sass/src&quot;目录下的文件夹和文件组织成实现的 JavaScript 类的镜像.</code> 这种对应关系允许 Sencha Cmd 包含应用所需要的文件.在这些文件夹下面的不符合这一原则的文件将不会被包含, 因这这一过程会将 JavaScript类层次结构映射到文件系统并且不会扫描这些文件夹.</p> 
+       <p>名致的对应关系由<code>&quot;package.json&quot;</code>文件中的<code>namespace</code>属性来宝义:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;MyPkg&quot;,
+    ...
+
+    &quot;sass&quot;: {
+        &quot;namespace&quot;: &quot;MyPkg&quot;,
+        ...
+}</code></pre> 
+       <p>当映射一个需要的 JavaScript 类的类名到对应的 .scss 文件时,命名空间开始起作用. 例如,上面给出的类 <code>MyPkg.foo.Bar</code> 和 <code>namespace (命名空间)</code> , Sencha Cmd 移除 “MyPkg.” 然后在 <code>&quot;sass/var&quot;</code> 中查找一个 “foo/Bar.js” 的相对路径和<code>&quot;sass/src&quot;</code> 文件夹.</p> 
+       <p><em>注意:</em> 尽管 Fashion 不是对Sass的实现, 这个关于 “sass” 的配置为了兼容缘故仍然保留.</p> 
+       <h3 id="Resources">包的资源</h3> 
+       <p><code>&quot;resources&quot;</code> 文件夹是用于存放包需要的静态资源的地方. 当应用使用这个包时,它们会拷贝这些资源到自己的由包名命名的<code>&quot;resources&quot;</code>文件夹的子目录中.在这个例子中, <code>&quot;resources/foo&quot;</code>. 如果你使用的是<code>theme-background-image</code> 方法,CSS文件的相对路径将被自动修动.</p> 
+       <h3 id="Overrides">覆写</h3> 
+       <p>这个<code>&quot;overrides&quot;</code> 文件夹是一个为你的包提供强制覆写的专门目的, 因此这的名字是这个. 由于放在这个目录下的代码会自动被包含到你使用这个包的任一应用,这种机制必须要小心使用.</p> 
+       <p> Ext JS Neptune 主题使用这一机制来修改各个组件的某些缺省配置. Locale (本地)包使用这个机制来在各个组件原型上来注入他们自己的文本或者提供事务的本地化特定的逻辑例如日期格式等.</p> 
+       <h3 id="Package_Versions">包的版本</h3> 
+       <p>包有一个描述其当前版本号码的 <code>version</code> 属性.另外,这个当前版本 (在 <code>version</code> 属性中的), 通过使用<code>compatVersion</code>属性包能够标识出向后兼容的情况.</p> 
+       <p>当解决版本的需求时,这些版本信息可以用到.一个包的版本发布必须有一个更新的版本号码.这意味着由Sencha提供的版本号码赋予的意义可以帮助你:</p> 
+       <pre mode="javascript" theme="chrome"><code>x.y.z.b
+
+x = Major release number (large, impacting changes and features)
+y = Minor release number (new functionality but few if any breaking changes)
+z = Patch release number (bug fix / maintenance release - goal of 100% compatible)
+b = Build number (assigned by build system)</code></pre> 
+       <p><code>version</code> 属性典型的是维护最易. <code>compatVersion</code>, 而是,一个关于用户能转换升级和不需要代码修改程序的一个特意说明.</p> 
+       <h3 id="Package_Requirements">包的要求</h3> 
+       <p>包可以包含其它包,同样应用也可以包含包. 方法是,你可以添加 <code>requires</code> 列表:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;bar&quot;,
+    &quot;type&quot;: &quot;code&quot;,
+    &quot;creator&quot;: &quot;anonymous&quot;,
+    &quot;summary&quot;: &quot;Short summary&quot;,
+    &quot;detailedDescription&quot;: &quot;Long description of package&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;compatVersion&quot;: &quot;1.0.0&quot;,
+    &quot;format&quot;: &quot;1&quot;,
+    &quot;local&quot;: true,
+    &quot;requires&quot;: [
+        'ext-easy-button'
+    ]
+}</code></pre> 
+       <p><strong>注意</strong>: 当使用版本约束作为包作者,重要的是要注意一个应用所有必须的包要使用一个普通的版本.如果你特别强调约束,这个过程会在为所有需要的包找到一个双方都同意的版本时失败.</p> 
+       <h3 id="Package_Inheritance">包的继承</h3> 
+       <p>包继承的概念是专门针对主题的. 这是被继承包的内容批量进入衍生包的最重要的方法.:</p> 
+       <ul> 
+        <li>被继承包的 <code>&quot;resources&quot;</code> 文件夹将复制到  <code>&quot;build&quot;</code> 输出目录的 <code>&quot;resources&quot;</code> 文件夹.</li> 
+        <li>基础包的 <code>overrides</code> 会自动在衍生包的构建输出目录会自动包含.</li> 
+       </ul> 
+       <h2 id="Building_The_Package">构建包</h2> 
+       <p>发布一个包,你需要使用下面的命令构建:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package build</code></pre> 
+       <p>这个命令在包内产生一个叫做 <code>&quot;build&quot;</code>的文件夹. 这个是当它们运行在 &quot;开发模式&quot;时应用需要的文件 (没有被编译的). </p> 
+       <p>它同时也会在你的工作区的 <code>&quot;build&quot;</code>文件夹中产生一个 <code>&quot;foo.pkg&quot;</code> 的文件. 这个文件由于下述原因没有放在包的 <code>&quot;build&quot;</code>文件夹中:</p> 
+       <ul> 
+        <li>它是你的包文件夹的一个压缩文件.</li> 
+        <li>它不是这个包用户需要的.</li> 
+       </ul> 
+       <p>这个 <code>&quot;foo.pkg&quot;</code> 文件用于将这个包加到你的本地库中.参见下节.</p> 
+       <h3 id="framework">框架</h3> 
+       <p>你需要手动在你的 <code>&quot;package.json&quot;</code>文件中添加包的框架名称.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;framework&quot;: &quot;ext&quot;</code></pre> 
+       <h3 id="theme">主题</h3> 
+       <p>你需要手动在你的 <code>&quot;package.json&quot;</code>文件中添加包的主题. 这个值应是用来生成 CSS 文件的主师包的名字.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;theme-triton&quot;</code></pre> 
+       <h2 id="Local_Repository">本地库</h2> 
+       <p>本地库是在<a href="cmd_packages.html">Sencha Cmd 包(Packages)</a>中引进的, 但当你要发布你写的包时还有更多的东西需要了解.</p> 
+       <h3 id="Structure">结构</h3> 
+       <p>Sencha Cmd 生成的本地包象下面这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>.sencha/
+    repo/
+        sencha.cfg                  # Sencha Cmd configuration for the repo
+        plugin.xml                  # Plugin for repository hooks
+        private-key.json            # Private key for repo
+
+        remotes/                    # Storage for remote repositories
+            remoteName/             # Name given at `sencha repo add`
+                catalog.json        # Last catalog from this remote
+
+        trust/                      # Unused in this release
+            &lt;somename&gt;.cert.json    # Copy of `cert.json` (a public key)
+
+pkgs/
+    catalog.json                    # Catalog of all packages in this repo
+    cert.json                       # Public key for this repo
+
+    Foo/
+        catalog.json                # Catalog for all versions of Foo package
+        cert.json                   # Public key for creator of Foo package
+
+        1.0/                        # Folder containing version 1.0
+            Foo.pkg                 # Zip file of package
+            package.json            # Extracted package descriptor
+        1.1/
+            ...
+
+    Bar/
+        ...</code></pre> 
+       <h3 id="Author_Identity">作者标识</h3> 
+       <p>当 Sencha Cmd 生成默认的本地包时,它不需要你提供任何类型的标识.因为它的作用是作为缓存,这是好的,但做为包的作者你要将你的名字放进你发布的包中.在你能发布包前,你要用一个标识来初始化你的本地库:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package repo init -name &quot;My Company&quot; -email &quot;support@mycompany.com&quot;</code></pre> 
+       <p>完成这个后,你的名字和电子邮件地址会通过一个新 <a href="../../../../en.wikipedia.org/wiki/Public-key_cryptography">public/private 密钥对</a> 记录进本地库中.</p> 
+       <p><strong>注意</strong>: 这个 <code>name</code> 参数必须和你在 <code>&quot;package.json&quot;</code>文件中设置的 createor 属性的值相同.</p> 
+       <h3 id="Public_Private_Keys">Public/Private 密钥</h3> 
+       <p>你的名字,电子邮件和公共密钥存储在<code>&quot;pkgs/cert.json&quot;</code> 文件中. 这个文件会自动加到你开发的包来来标识你是这个包的作者.</p> 
+       <p>显然给了它名字,你的私有密钥是不愿意和别人分享.它是存储在你本地库的一个叫做 <code>&quot;.sencha/repo/private-key.json&quot;文件中</code>.</p> 
+       <p>你可能要备份这两个文件,因为在未来的版本中它们将发挥重要的作用.</p> 
+       <h3 id="Content">内容</h3> 
+       <p><code>&quot;pkgs&quot;</code> 文件夹是所有包存储的地方.这些可以是你要开发的包或者是你要下载的包.</p> 
+       <p>当你添加包 <code>&quot;.pkg&quot;</code> 文件时,这些包会被拷贝到  <code>&quot;pkgs&quot;</code> 目录树中.</p> 
+       <h3 id="Repository_Hooks">库钩子</h3> 
+       <p><code>&quot;.sencha/repo/plugin.xml&quot;</code> 文件是你以提供 &quot;hooks&quot;到库里动作例如象 <code>sencha package add</code> 命令一样的  <a href="../../../../ant.apache.org/default.htm">Ant</a> 脚本. 更多关于这个的详情,参考这个生成文件中的注释.</p> 
+       <h2 id="Adding_Packages">添加包</h2> 
+       <p>当你从构建中有了 <code>&quot;.pkg&quot;</code> 文件,假定你在你的本地库设置了你的标识名称和你在<code>&quot;package.json&quot;</code>文件中的 creator 属性设置的一致,你能运行下面的命令:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package add foo.pkg</code></pre> 
+       <p>Sencha Cmd 会使用你的私有密钥产生这个 &quot;.pkg&quot;文件中的一个哈希值并将它加入你定义好的 &quot;.pkg&quot;文件中,然后会将这个文件拷贝到你的本地库.</p> 
+       <p>现在这个包进了本地库,如果其它的开发者将你的库作为远程库加入了的话,它们就能 &quot;require&quot; 这个包.</p> 
+       <p>这个要求的过程 Sencha 添加你的 &quot;.pkg&quot;到 Sencha 包库仍然等待定稿,但你能通过检查<a href="../../../../https@market.sencha.com/default.htm">Sencha Market</a> 来更新.</p> 
+       <h2 id="Hosting_A_Package_Repository">建立一个包库主机</h2> 
+       <p><code>&quot;pkgs&quot;</code> 文件夹的结构是和远程库要求一样的结构.其他人要求这个你开发的包时他们需要做的是添加一个远程包库:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package repo add my-company http://my.company.com/packages</code></pre> 
+       <p>这是,假定你将 &quot;pkgs&quot;文件夹内容按上面的 HTTP URL 发布到了主机上.通过 HTTP GET 访问这样一个静态文件服务器或通过CDN没有什么要求就能工作.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

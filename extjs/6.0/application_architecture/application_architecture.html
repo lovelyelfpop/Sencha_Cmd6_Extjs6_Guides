@@ -1,0 +1,880 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 应用程序架构介绍</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="http://www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#What_is_MVC_" title="What is MVC?">什么是 MVC?</a> 
+       <a class="toc-page-h2" href="#What_is_MVVM_" title="What is MVVM?">什么是 MVVM?</a> 
+       <a class="toc-page-h2" href="#Returning_Users" title="Returning Users">Returning Users</a> 
+       <a class="toc-page-h2" href="#MVC_and_MVVM" title="MVC and MVVM">MVC 和 MVVM</a> 
+       <a class="toc-page-h2" href="#Building_a_Sample_App" title="Building a Sample App">构建一个示例应用程序</a> 
+       <a class="toc-page-h2" href="#Application_Overview" title="Application Overview">应用程序概览</a> 
+       <a class="toc-page-h3" href="#File_Structure" title="File Structure">文件结构</a> 
+       <a class="toc-page-h3" href="#Namespace" title="Namespace">命名空间(Namespace)</a> 
+       <a class="toc-page-h2" href="#Application" title="Application">应用程序</a> 
+       <a class="toc-page-h3" href="#app_js" title="app.js">app.js</a> 
+       <a class="toc-page-h3" href="#Application_js" title="Application.js">Application.js</a> 
+       <a class="toc-page-h2" href="#Views" title="Views">视图(Views)</a> 
+       <a class="toc-page-h3" href="#Controller_Config" title="Controller Config">controller 配置项</a> 
+       <a class="toc-page-h3" href="#ViewModel_Config" title="ViewModel Config">viewModel 配置项</a> 
+       <a class="toc-page-h2" href="#Controllers" title="Controllers">控制器(Controllers)</a> 
+       <a class="toc-page-h2" href="#ViewModels" title="ViewModels">视图模型(ViewModels)</a> 
+       <a class="toc-page-h2" href="#Models_and_Stores" title="Models and Stores">模型(Models) 和 Stores</a> 
+       <a class="toc-page-h3" href="#Models" title="Models">模型(Models)</a> 
+       <a class="toc-page-h4" href="#Fields" title="Fields">字段(Fields)</a> 
+       <a class="toc-page-h3" href="#Stores" title="Stores">Stores</a> 
+       <a class="toc-page-h2" href="#Next_Steps" title="Next Steps">下一步</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>应用程序架构介绍</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>Ext JS 支持 MVC 和 MVVM 这2种应用程序架构. 这两种架构方式共享某些概念，并在逻辑层面划分程序代码. 每一种方式在选择如何分割应用程序上都有各自的优点.</p> 
+       <p>本指南的目的是向您提供有关构成这些架构组件的基础知识. </p> 
+       <h2 id="What_is_MVC_">什么是 MVC?</h2> 
+       <p>在 MVC 架构中, 大部分类都是 模型(Models), 视图(Views) 或者 控制器(Controllers). 用户和视图(Views)交互, 展示模型(Models)中的数据. 这些交互是由一个控制器监控, 然后相应这些交互并更新模型(Models)和视图(Views). </p> 
+       <p>视图(View)和模型(Model) 一般互不关心，因为更新它们是控制器(Controllers) 的责任. 一般来说, 在一个 MVC 应用程序中，控制器(Controllers) 包含着应用程序的大部分逻辑. 理想状态下视图(Views)基本没有业务逻辑. 模型(Models) 主要是一个数据接口，只包含和管理数据和表现数据有关的业务逻辑. </p> 
+       <p>MVC 的目标是让个各类分工明确. 在大的环境中，只有每个类都有自己的职责了, 它们才会低耦合. 这可以方便应用程序的测试和维护, 而且代码也可以复用.</p> 
+       <h2 id="What_is_MVVM_">什么是 MVVM?</h2> 
+       <p>MVC 和 MVVM 的关键区别是，MVVM 为 视图(View) 提供了一个名为 视图控制器(ViewModel) 的抽象. 视图控制器(ViewModel) 协调了模型(Model)的数据 和 视图(View)对数据的展现，使用了一种叫“数据绑定(data binding)”的技术.</p> 
+       <p>结果是,模型(Model)和框架完成尽可能多的工作, 最大限度地减少或消除能够直接操纵视图的应用程序逻辑.</p> 
+       <h2 id="Returning_Users">Returning Users</h2> 
+       <p>Ext JS 5 引入了 MVVM 架构支持，同时也改进了 MVC 中的 C(控制器). 我们鼓励你去研究和利用这些改进, 需要注意的是, 我们已经尽了一切努力来确保现有的 Ext JS 4 的 MVC 可以不经过修改就能继续正常运行.</p> 
+       <h2 id="MVC_and_MVVM">MVC 和 MVVM</h2> 
+       <p>为了理解你的应用程序适合哪种选择, 我们应该首先进一步了解各种缩写代表什么.</p> 
+       <ul> 
+        <li><p><strong>模型(M) Model</strong> - 这是应用程序中的数据. 一些类 (称为 “模型”) 定义了各自数据的字段 (比如，User 这个模型包含 user-name 和 password 字段). 模型知道在数据封装过程中如何持久化存储数据，而且可以通过关系(associations)链接到其它模型.</p><p>模型(Models)一般和 Store 一起用，为表格(Grids)和其他组件提供数据. 模型(Models)里也是你存放某些业务逻辑的理想位置，比如数据验证(validation), 数据转换(conversion), 等等.</p></li> 
+        <li><p><strong>视图(V) View</strong> - 视图可以是呈现出来的任意组件. 比如, 表格(grids), 树(trees) 和 面板(panels) 都可以看做视图.</p></li> 
+        <li><p><strong>控制器(C) Controller</strong> - 控制器是用来放视图的逻辑的. 可能包括渲染视图，路由导航，实例化模型(Models), 或其他应用程序逻辑.</p></li> 
+        <li><p><strong>视图控制器(VM) ViewModel</strong> - 视图控制器是为某个特定视图(View)管理数据的.<br />可以将它绑定到相关组件上，并在数据发生变更时，也更新组件的呈现.</p></li> 
+       </ul> 
+       <p>这些应用程序架构为你的框架代码提供结构性和一致性。遵循我们建议，可以有一系列重要的好处:</p> 
+       <ul> 
+        <li><p>每个应用程序都用相同的规范, 所以你只需要学一次.</p></li> 
+        <li><p>各个应用程序之间可以方便共享代码.</p></li> 
+        <li><p>你可以用 <a href="http://www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 来为应用程序构建优化过的 production 版本.</p></li> 
+       </ul> 
+       <h2 id="Building_a_Sample_App">构建一个示例应用程序</h2> 
+       <p>再继续下去之前, 我们用<a href="http://www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a>来构建一个示例应用程序. 首先, 下载并解压 <a href="http://www.sencha.com/products/extjs/evaluate/default.htm">Ext JS SDK</a>. 然后, 执行下面的命令行代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk local/path/to/ExtJS generate app MyApp MyApp
+cd app
+sencha app watch</code></pre> 
+       <p><strong>注意:</strong> 如果你不知道上面发生了什么, 请查看 <a href="../getting_started/getting_started.html">快速入门</a>.</p> 
+       <h2 id="Application_Overview">应用程序概览</h2> 
+       <p>再继续讨论 MVC, MVVM, MVC+VM 模式的组成之前, 我们先来看下 Cmd 生成的应用程序的结构.</p> 
+       <h3 id="File_Structure">文件结构</h3> 
+       <p>每一个 Ext JS 应用程序都有着同样的目录结构. 我们推荐, 所有 Store, Model, ViewModel, 和 ViewController 的类都放在<code>app</code> 文件夹 (_然后 Models 放在<code>model</code> 文件夹, Stores 放在<code>store</code>文件夹, ViewModels和Controllers 放在 <code>view</code>文件夹_). 最好的方式是把 <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">ViewControllers</a> 和 <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">ViewModels</a> 一起放在 <code>app/view/</code> 目录下的一个子文件夹内，就像 视图(views)类一样 (请看下图的“app/view/main/” 和 “classic/src/view/main/” 文件夹). </p> 
+       <p><img src="images/file_structure.jpeg" /></p> 
+       <h3 id="Namespace">命名空间(Namespace)</h3> 
+       <p>每个类的第一行是一个类似于地址路径的东西. 这个 “地址路径” 叫做命名空间(Namespace). 命名空间的规则是:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;应用程序名&gt;.&lt;文件夹名&gt;.&lt;类名和文件名&gt;</code></pre> 
+       <p>在这个示例中, “MyApp”是;应用程序名, “view” 是文件夹名, “main”是子文件夹名， “Main” 是类名和文件名. 根据这些信息, 框架就会去找下面路径下的 <code>Main.js</code>文件:</p> 
+       <pre mode="javascript" theme="chrome"><code>// Classic
+classic/src/view/main/Main.js
+
+// Modern
+modern/src/view/main/Main.js
+
+// Core
+// &quot;MyApp.view.main.MainController&quot; 类被 Modern 和 Classic 共享，则位于:
+app/view/main/MainController.js</code></pre> 
+       <p>如果文件未找到, Ext JS 会抛出异常.</p> 
+       <p><img src="images/missing_class_error.jpeg" /></p> 
+       <h2 id="Application">应用程序</h2> 
+       <p>让我们来观察一下 <code>index.html</code>.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html manifest=&quot;&quot;&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+
+    &lt;title&gt;MyApp&lt;/title&gt;
+
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var Ext = Ext || {}; // Ext namespace won't be defined yet...
+
+        // This function is called by the Microloader after it has performed basic
+        // device detection. The results are provided in the &quot;tags&quot; object. You can
+        // use these tags here or even add custom tags. These can be used by platform
+        // filters in your manifest or by platformConfig expressions in your app.
+        //
+        Ext.beforeLoad = function (tags) {
+            var s = location.search,  // the query string (ex &quot;?foo=1&amp;bar&quot;)
+                profile;
+
+            // For testing look for &quot;?classic&quot; or &quot;?modern&quot; in the URL to override
+            // device detection default.
+            //
+            if (s.match(/\bclassic\b/)) {
+                profile = 'classic';
+            }
+            else if (s.match(/\bmodern\b/)) {
+                profile = 'modern';
+            }
+            else {
+                profile = tags.desktop ? 'classic' : 'modern';
+                //profile = tags.phone ? 'modern' : 'classic';
+            }
+
+            Ext.manifest = profile; // this name must match a build profile name
+
+            // This function is called once the manifest is available but before
+            // any data is pulled from it.
+            //
+            //return function (manifest) {
+                // peek at / modify the manifest object
+            //};
+        };
+    &lt;/script&gt;
+
+
+    &lt;!-- The line below must be kept intact for Sencha Cmd to build your application --&gt;
+    &lt;script id=&quot;microloader&quot; type=&quot;text/javascript&quot; src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+       <p>Ext JS 使用一个叫 微加载器(Microloader)的东西来加载应用程序<code>app.json</code>文件中描述的资源. 然后把这些资源添加到 <code>index.html</code>. 有了 <code>app.json</code> ，所有的应用程序元数据信息都存在于这个文件中.<br />于是<a href="http://www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a>才可以简单高效地编译你的应用程序.</p> 
+       <p><code>app.json</code> 含有大量注释，提供了关于如何配置的一些信息.</p> 
+       <p>更多有关 <code>beforeLoad</code> 部分，还有特定平台构建的内容，请看 <a href="../whats_new/6.0.0/developing_for_multiple_screens_and_environments.html">多平台多屏幕开发</a>.</p> 
+       <h3 id="app_js">app.js</h3> 
+       <p>在之前创建的应用程序中, 创建了一个类 (<code>Application.js</code>里) ，并启动了它的一个实例 (<code>app.js</code>里). 可以看到 <code>app.js</code> 有如下内容:</p> 
+       <pre mode="javascript" theme="chrome"><code>/*
+ * This file is generated and updated by Sencha Cmd. You can edit this file as
+ * needed for your application, but these edits will have to be merged by
+ * Sencha Cmd when upgrading.
+ */
+Ext.application({
+    name: 'MyApp',
+
+    extend: 'MyApp.Application',
+
+    requires: [
+        'MyApp.view.main.Main'
+    ],
+
+    // The name of the initial view to create. With the classic toolkit this class
+    // will gain a &quot;viewport&quot; plugin if it does not extend Ext.Viewport. With the
+    // modern toolkit, the main view will be added to the Viewport.
+    //
+    mainView: 'MyApp.view.main.Main'
+
+    //-------------------------------------------------------------------------
+    // Most customizations should be made to MyApp.Application. If you need to
+    // customize this file, doing so below this section reduces the likelihood
+    // of merge conflicts when upgrading to new versions of Sencha Cmd.
+    //-------------------------------------------------------------------------
+});</code></pre> 
+       <p>你可以通过指定一个容器类作为 <a href="../6.0.1-classic/#!/api/Ext.app.Application-cfg-mainView" data-full-load="true">mainView</a>, 来将它作为 视区(Viewport). 上面的例子中, 我们把 <code>MyApp.view.main.Main</code> (一个<a href="../6.0.1-classic/#!/api/Ext.tab.Panel" data-full-load="true">标签页面板(TabPanel) 类</a>) 作为 视区(Viewport).</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.app.Application-cfg-mainView" data-full-load="true">mainView</a> 配置项 命令应用程序创建此视图，然后给它附加上一个插件(plugin)<a href="../6.0.1-classic/#!/api/Ext.plugin.Viewport" data-full-load="true">Viewport 插件(Plugin)</a>.这样就把视图和 HTML文档body 联系起来了.</p> 
+       <h3 id="Application_js">Application.js</h3> 
+       <p>每个 Ext JS 应用程序都通过 <a href="../6.0.1-classic/#!/api/Ext.app.Application" data-full-load="true">Application 类</a>的实例启动. 这个类本来是用来被<code>app.js</code>启动的，你也可以实例化它用来测试.</p> 
+       <p>当你用 Sencha Cmd 创建应用程序时，下面的<code>Application.js</code> 内容是自动生成的. </p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.Application', {
+    extend: 'Ext.app.Application',
+
+    name: 'MyApp',
+
+    stores: [
+        // TODO: add global / shared stores here
+    ],
+
+    launch: function () {
+        // TODO - Launch the application
+    },
+
+    onAppUpdate: function () {
+        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
+            function (choice) {
+                if (choice === 'yes') {
+                    window.location.reload();
+                }
+            }
+        );
+    }
+});</code></pre> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.app.Application" data-full-load="true">Application 类</a> 包含了你的应用程序的全局设置, 比如命名空间, 共享的 stores, 等等. 当你的应用程序版本过时(_浏览器当前缓存的版本 vs 服务器上最新版本_)的时候会调用<code>onAppUpdate</code> 函数. 然后会提示用户是否重新加载应用程序.</p> 
+       <h2 id="Views">视图(Views)</h2> 
+       <p>视图就是一个组件(Component), 是 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Ext.Component</a>的派生类.<br />视图构成了应用程序的视觉部分。</p> 
+       <p>打开 <code>classic/src/view/main/Main.js</code> 文件可以看到下面的代码.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.Main', {
+    extend: 'Ext.tab.Panel',
+    xtype: 'app-main',
+
+    requires: [
+        'Ext.plugin.Viewport',
+        'Ext.window.MessageBox',
+
+        'MyApp.view.main.MainController',
+        'MyApp.view.main.MainModel',
+        'MyApp.view.main.List'
+    ],
+
+    controller: 'main',
+    viewModel: 'main',
+
+    ui: 'navigation',
+
+    tabBarHeaderPosition: 1,
+    titleRotation: 0,
+    tabRotation: 0,
+
+    header: {
+        layout: {
+            align: 'stretchmax'
+        },
+        title: {
+            bind: {
+                text: '{name}'
+            },
+            flex: 0
+        },
+        iconCls: 'fa-th-list'
+    },
+
+    tabBar: {
+        flex: 1,
+        layout: {
+            align: 'stretch',
+            overflowHandler: 'none'
+        }
+    },
+
+    responsiveConfig: {
+        tall: {
+            headerPosition: 'top'
+        },
+        wide: {
+            headerPosition: 'left'
+        }
+    },
+
+    defaults: {
+        bodyPadding: 20,
+        tabConfig: {
+            plugins: 'responsive',
+            responsiveConfig: {
+                wide: {
+                    iconAlign: 'left',
+                    textAlign: 'left'
+                },
+                tall: {
+                    iconAlign: 'top',
+                    textAlign: 'center',
+                    width: 120
+                }
+            }
+        }
+    },
+
+    items: [{
+        title: 'Home',
+        iconCls: 'fa-home',
+        // The following grid shares a store with the classic version's grid as well!
+        items: [{
+            xtype: 'mainlist'
+        }]
+    }, {
+        title: 'Users',
+        iconCls: 'fa-user',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }, {
+        title: 'Groups',
+        iconCls: 'fa-users',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }, {
+        title: 'Settings',
+        iconCls: 'fa-cog',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }]
+});</code></pre> 
+       <p>要注意的是这个视图不包含任何应用程序逻辑. 所有视图的逻辑都应该放在 <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">视图控制器(ViewController)</a>, 我们将在下一部分介绍. </p> 
+       <p>视图类中2个很有趣的东西就是 <code>controller</code> 和 <code>viewModel</code> 配置项.</p> 
+       <p>第二个就是“List” 视图： <code>classic/src/main/view/List</code>.</p> 
+       <pre mode="javascript" theme="chrome"><code>/**
+ * This view is an example list of people.
+ */
+Ext.define('MyApp.view.main.List', {
+    extend: 'Ext.grid.Panel',
+    xtype: 'mainlist',
+
+    requires: [
+        'MyApp.store.Personnel'
+    ],
+
+    title: 'Personnel',
+
+    store: {
+        type: 'personnel'
+    },
+
+    columns: [
+        { text: 'Name',  dataIndex: 'name' },
+        { text: 'Email', dataIndex: 'email', flex: 1 },
+        { text: 'Phone', dataIndex: 'phone', flex: 1 }
+    ],
+
+    listeners: {
+        select: 'onItemSelected'
+    }
+});</code></pre> 
+       <h3 id="Controller_Config">controller 配置项</h3> 
+       <p><code>controller</code> 配置项用来给视图指定一个<a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">视图控制器(ViewController)</a>. 当给视图指定了<a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">视图控制器(ViewController)</a>, 这个视图控制器就用来容纳事件处理函数和控件引用. 这就给了 <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">视图控制器(ViewController)</a>从组件到视图事件的一对一的关系. 我们将在下一部分讨论更多关于控制器的内容.</p> 
+       <h3 id="ViewModel_Config">viewModel 配置项</h3> 
+       <p><code>viewModel</code> 配置项用来给视图指定一个<a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">视图模型(ViewModel)</a>. 视图模型用来给组件和子视图提供数据. 视图模型中的数据一般通过配置组件的 bind，来绑定需要展现或编辑的数据.</p> 
+       <p>在“Main” 视图中, 你可以看到 tabpanel 标题栏的 <code>title</code> 绑定到了视图模型上. 这意味着 <code>title</code>会用视图模型管理的数据中的“name” 的值来填充. 如果视图模型的数据发生变化, <code>title</code>的值也会自动更新. 我们稍后讨论视图模型.</p> 
+       <h2 id="Controllers">控制器(Controllers)</h2> 
+       <p>接下来，我们看看 <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">控制器(Controllers)</a>. 上面创建的应用程序自带的视图控制器 <code>MainController.js</code>代码如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend: 'Ext.app.ViewController',
+
+    alias: 'controller.main',
+
+    onItemSelected: function (sender, record) {
+        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    },
+
+    onConfirm: function (choice) {
+        if (choice === 'yes') {
+            //
+        }
+    }
+});</code></pre> 
+       <p>如果你回头看看 List 这个视图, <code>List.js</code>, 你会注意到<code>grid</code>的 select 事件指定了一个处理函数. <code>handler</code> 映射到了一个名为<code>onItemSelected</code> 的函数，这个函数在父视图<code>Main.js</code>的控制器中定义. 可以看到, 控制器不需要特殊的设置就可以处理这个事件了.</p> 
+       <p>这使得给应用程序添加逻辑变得非常简单. 你要做的就是定义一个<code>onItemSelected</code> 函数，因为你的控制器和视图是一一对应的关系.</p> 
+       <p>点击表格中的一行, 会创建一个消息框(MessageBox). 消息框会调用一个名为 <code>onConfirm</code>的函数, 这个函数位于的是同一个控制器中.</p> 
+       <p>视图控制器(ViewControllers) 被设计用来:</p> 
+       <ul> 
+        <li><p>使用 “listeners” 和 “reference” 配置项使得控制器和视图的关系变得明显.</p></li> 
+        <li><p>利用视图控制器来管理视图的生命周期. 从实例化到销毁, Ext.app.ViewController 和引用了它的组件是联系在一起的. 再次创建一个视图实例的话，它将有自己的一个视图控制器实例. 当视图销毁的时候, 相关的视图控制器实例也会被销毁.</p></li> 
+        <li><p>提供封装，使得嵌套的视图更加直观.</p></li> 
+       </ul> 
+       <h2 id="ViewModels">视图模型(ViewModels)</h2> 
+       <p>接下来, 我们看看 <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">视图模型(ViewModels)</a>. 打开 <code>app/view/main/MainModel.js</code>文件可以看到下面的代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainModel', {
+    extend: 'Ext.app.ViewModel',
+
+    alias: 'viewmodel.main',
+
+    data: {
+        name: 'MyApp',
+
+        loremIpsum: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }
+
+    //TODO - add data, formulas and/or methods to support your view
+});</code></pre> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">视图模型(ViewModels)</a>是一个管理数据对象的类. view可以绑定到此类的数据上面，而且可以在数据发生变化的时候通知view进行更新. 视图模型, 和视图控制器一样, 只被引用了它的view所拥有. 因为视图模型和view是关联着的, 视图模型可以链接到父视图模型(view的父容器的视图模型). 这样，子视图就可以用从父视图模型“继承”过来的数据.</p> 
+       <p>“Main.js”文件中，我们使用 viewModel 这个配置项，在视图和视图模型之间建立了联系. 这种联系使得 绑定此配置项的setter访问器 能自动把 viewModel 的数据设置到 view 上. 在“MainModel.js” 例子中，数据是内嵌的. 也就是说, 你的数据可能是任何形式，来自任何地方. 数据可能是有任何 数据代理(Proxy) 提供的 (AJAX, REST, 等等).</p> 
+       <h2 id="Models_and_Stores">模型(Models) 和 Stores</h2> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">模型(Models)</a> 和 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Stores</a> 组成了应用程序的信息入口. 你的大部分数据都是被这2个类所发送，获取，组织和“模拟”的.</p> 
+       <h3 id="Models">模型(Models)</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a> 表现了任何类型的可持久化数据. 每一个 model 都有 字段(fields) 和 函数，来模拟应用程序的数据结构. 模型(Models)经常和 Stores 一起用. Stores 之后才可以被 表格(grids), 树(trees), 和 图表(charts) 所使用.</p> 
+       <p>我们的例子程序没有内置 model，所以我们来加一个:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.model.User', {
+    extend: 'Ext.data.Model',
+    fields: [
+        {name: 'name',  type: 'string'},
+        {name: 'age',   type: 'int'}
+    ]
+});</code></pre> 
+       <p>上面的 命名空间 部分我们提到过, 你应该在“app/model/”目录下创建 <code>User.js</code>.</p> 
+       <h4 id="Fields">字段(Fields)</h4> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a> 用来描述带属性和属性值的数据记录的是 “<a href="../6.0.1-classic/#!/api/Ext.data.Model-cfg-fields" data-full-load="true">fields</a>”. Model 类使用<code>fields</code> 配置项来声明字段. 在这个例子中, <code>name</code>字段被声明成了 <a href="../6.0.1-classic/#!/api/Ext.data.field.String" data-full-load="true">字符串(string)</a>， age 则是 <a href="../6.0.1-classic/#!/api/Ext.data.field.Integer" data-full-load="true">整型(integer)</a>. API 文档中还有其他 <a href="../6.0.1-classic/#!/api/Ext.data.field.Field" data-full-load="true">字段类型</a> 可用. </p> 
+       <p>虽然声明字段和类型有很多好处, 但是这并不是必须的. 如果你没有配置 fields, 数据会自动读取并插入到 data 对象中. 你可以按需定义 fields:</p> 
+       <ul> 
+        <li><p>验证</p></li> 
+        <li><p>默认值</p></li> 
+        <li><p>数据转换函数</p></li> 
+       </ul> 
+       <p>我们来创建一个 store，来看看这两者如何一起使用.</p> 
+       <h3 id="Stores">Stores</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Store</a> 是客户端数据记录(Model 类的实例)缓存 . Stores 提供了数据排序, 过滤 和 检索数据的功能.</p> 
+       <p>这个示例应用程序没有 store, 不要担心，我们来简单定义一个 store，并设置它的 model.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.store.Users', {
+    extend: 'Ext.data.Store',
+    alias: 'store.users',
+    model: 'MyApp.model.User',
+    data : [
+     {firstName: 'Seth', age: '34'},
+     {firstName: 'Scott', age: '72'},
+     {firstName: 'Gary', age: '19'},
+     {firstName: 'Capybara', age: '208'}
+    ]
+});</code></pre> 
+       <p>添加上述代码到 <code>app/store/</code>下的<code>Users.js</code>文件中.</p> 
+       <p>如果你需要一个全局的 store 实例，你可以把这个 store 添加到 <code>Application.js</code>的 store配置项中. <code>Application.js</code> 文件的 stores 配置项如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>stores: [
+    'Users'
+],</code></pre> 
+       <p>在这个例子中, store直接包含了一些静态数据. 大部分实际情况，你需要通过一个设置在 model或 store 中的 数据代理(proxy) 来获取数据. 数据代理(Proxies) 作为数据提供者 和 应用程序之间的数据传输通道. </p> 
+       <p>更多关于models, stores, 和数据提供者(data providers) 的内容请看<a href="../core_concepts/data_package.html">数据封装</a>.</p> 
+       <h2 id="Next_Steps">下一步</h2> 
+       <p>我们已经创建了一个强大、有帮助的应用程序<a href="../../../../dev.sencha.com/ext/5.0.0/examples/ticket-app/index.html">Ticket 应用</a>. 这样应用程序有登录/注销会话管理, 数据绑定, 还有使用 MVC+VM 架构的时候会显示“best practice”. 这个示例里面有很多注释，所以基本上各个地方都很清楚.</p> 
+       <p>我们建议你花些时间浏览下<a href="../../../../dev.sencha.com/ext/5.0.0/examples/ticket-app/index.html">Ticket 应用</a>，学习更多关于 MVC+VM  的应用程序架构.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="http://www.sencha.com/products">Products</a> | 
+    <a href="http://www.sencha.com/services">Services</a> | 
+    <a href="http://www.sencha.com/support">Support</a> | 
+    <a href="http://www.sencha.com/training">Training</a> | 
+    <a href="http://www.sencha.com/partners">Partners</a> | 
+    <a href="http://www.sencha.com/blog">Community</a> | 
+    <a href="http://www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="http://www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,956 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Ext JS 6 新特性</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Introduction" title="Introduction">Introduction</a> 
+       <a class="toc-page-h2" href="#Merging_Ext_JS_and_Sencha_Touch" title="Merging Ext JS and Sencha Touch">Merging Ext JS and Sencha Touch</a> 
+       <a class="toc-page-h3" href="#Toolkits" title="Toolkits">Toolkits</a> 
+       <a class="toc-page-h3" href="#Common_Core" title="Common Core">Common Core</a> 
+       <a class="toc-page-h3" href="#Coming_From_Sencha_Touch" title="Coming From Sencha Touch">Coming From Sencha Touch</a> 
+       <a class="toc-page-h3" href="#Universal_Applications_and_Smart_Phones" title="Universal Applications and Smart Phones">Universal Applications and Smart Phones</a> 
+       <a class="toc-page-h2" href="#Triton_Theme" title="Triton Theme">Triton Theme</a> 
+       <a class="toc-page-h3" href="#Touch_Sizing" title="Touch Sizing">Touch Sizing</a> 
+       <a class="toc-page-h3" href="#Fashion" title="Fashion">Fashion</a> 
+       <a class="toc-page-h2" href="#Promises_Support" title="Promises Support">Promises Support</a> 
+       <a class="toc-page-h3" href="#Promises_in_Ext_Ajax" title="Promises in Ext.Ajax">Promises in Ext.Ajax</a> 
+       <a class="toc-page-h3" href="#Creating_Promises" title="Creating Promises">Creating Promises</a> 
+       <a class="toc-page-h2" href="#Classic_Grid" title="Classic Grid">Classic Grid</a> 
+       <a class="toc-page-h3" href="#Spreadsheet" title="Spreadsheet">Spreadsheet</a> 
+       <a class="toc-page-h3" href="#Actionable_Mode__无障碍_" title="Actionable Mode (无障碍)">Actionable Mode (无障碍)</a> 
+       <a class="toc-page-h3" href="#Locking_grids" title="Locking grids">Locking grids</a> 
+       <a class="toc-page-h2" href="#Modern_Grid" title="Modern Grid">Modern Grid</a> 
+       <a class="toc-page-h2" href="#The_Treelist_Widget" title="The Treelist Widget">The Treelist Widget</a> 
+       <a class="toc-page-h2" href="#Responsive_Column_Layout" title="Responsive Column Layout">Responsive Column Layout</a> 
+       <a class="toc-page-h2" href="#Theming_In_The_Modern_Toolkit" title="Theming In The Modern Toolkit">Theming In The Modern Toolkit</a> 
+       <a class="toc-page-h2" href="#Charts" title="Charts">Charts</a> 
+       <a class="toc-page-h3" href="#Pie_3D" title="Pie 3D">Pie 3D</a> 
+       <a class="toc-page-h3" href="#Plugins" title="Plugins">Plugins</a> 
+       <a class="toc-page-h3" href="#Events" title="Events">Events</a> 
+       <a class="toc-page-h2" href="#Ext_JS_Premium" title="Ext JS Premium">Ext JS Premium</a> 
+       <a class="toc-page-h3" href="#Pivot_Grid" title="Pivot Grid">Pivot Grid</a> 
+       <a class="toc-page-h4" href="#Enhanced_Configurator" title="Enhanced Configurator">Enhanced Configurator</a> 
+       <a class="toc-page-h4" href="#Exporter_Plugin" title="Exporter Plugin">Exporter Plugin</a> 
+       <a class="toc-page-h4" href="#Label_filter_operators" title="Label filter operators">Label filter operators</a> 
+       <a class="toc-page-h3" href="#Exporter" title="Exporter">Exporter</a> 
+       <a class="toc-page-h4" href="#Exporter_plugin" title="Exporter plugin">Exporter plugin</a> 
+       <a class="toc-page-h4" href="#Content" title="Content">Content</a> 
+       <a class="toc-page-h4" href="#Generate_Excel_XML_documents" title="Generate Excel XML documents">Generate Excel XML documents</a> 
+       <a class="toc-page-h4" href="#Custom_Exporters" title="Custom Exporters">Custom Exporters</a> 
+       <a class="toc-page-h3" href="#More_To_Come" title="More To Come">More To Come</a> 
+       <a class="toc-page-h2" href="#Screen_Reader_Support__无障碍_" title="Screen Reader Support (无障碍)">Screen Reader Support (无障碍)</a> 
+       <a class="toc-page-h2" href="#Microloader" title="Microloader">Microloader</a> 
+       <a class="toc-page-h2" href="#Browser_Support" title="Browser Support">Browser Support</a> 
+       <a class="toc-page-h3" href="#Modern_Toolkit" title="Modern Toolkit">Modern Toolkit</a> 
+       <a class="toc-page-h4" href="#Desktop" title="Desktop">Desktop</a> 
+       <a class="toc-page-h4" href="#Mobile" title="Mobile">Mobile</a> 
+       <a class="toc-page-h3" href="#Classic_Toolkit" title="Classic Toolkit">Classic Toolkit</a> 
+       <a class="toc-page-h4" href="#Desktop" title="Desktop">Desktop</a> 
+       <a class="toc-page-h4" href="#Tablet" title="Tablet">Tablet</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>What’s New In Ext JS 6</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Introduction">Introduction</h2> 
+       <p>With Ext JS 6, Sencha introduces a single framework for creating applications that run across all types of devices, from phones to tablets to desktops. You will be able to produce an optimal user experience while writing less code. Combined with a compelling new theme, Ext JS 6 has everything you need to create amazing experiences on any device.</p> 
+       <h2 id="Merging_Ext_JS_and_Sencha_Touch">Merging Ext JS and Sencha Touch</h2> 
+       <p>The process of merging Ext JS and Sencha Touch has come a long way. In Ext JS 5, Sencha reconciled the core of its frameworks (Ext.data, Ext.app and much more) into the “core” package. The visual layer remained as part of Ext JS proper in the “ext” package. The final step of merging the Sencha Touch visual components required a home for these distinct aspects of the framework. To differentiate the component families from each other in Ext JS 6, we use the term “<strong>toolkit</strong>”.</p> 
+       <h3 id="Toolkits">Toolkits</h3> 
+       <p>A “toolkit” is a package that contains only the visual elements of the framework. These include components like panels, buttons, grids and the rest. There are two toolkits in Ext JS 6: <strong>classic</strong> and <strong>modern</strong>.</p> 
+       <p>The visual elements of Ext JS are now contained in the <strong>classic</strong> toolkit of Ext JS 6, while the visual elements of Sencha Touch are now contained in the <strong>modern</strong> toolkit.</p> 
+       <p>Applications can simply choose their toolkit and add this to their <code>&quot;app.json&quot;</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;toolkit&quot;: &quot;classic&quot;,  // or &quot;modern&quot;</code></pre> 
+       <h3 id="Common_Core">Common Core</h3> 
+       <p>Below the toolkits is the common “core” package. The core package provides a common API for things like data (<code>Ext.data</code>) and application architecture (<code>Ext.app</code>). Based on the common core, applications can share code for managing data as well as ViewModels or control logic for communicating with the back-end.</p> 
+       <h3 id="Coming_From_Sencha_Touch">Coming From Sencha Touch</h3> 
+       <p>If you are upgrading from Sencha Touch, you’ll immediately benefit from access to ViewModels and ViewControllers when using the <strong>modern</strong> toolkit and the common core. You’ll also be using the multi-device event system introduced with Ext JS 5, so mouse events will seamlessly translate to event listeners like <code>touchstart</code> without need to detect device capabilities.</p> 
+       <h3 id="Universal_Applications_and_Smart_Phones">Universal Applications and Smart Phones</h3> 
+       <p>With Ext JS 6 and Sencha Cmd 6, however, you can create <strong>Universal Applications</strong> that can use both toolkits. In this way you can create a single application that targets mobile devices like smart phones or corporate desktops running IE8 or any device or browser in between.</p> 
+       <p>You can indicate which toolkits use which themes by omitting a toolkit key in your Sencha Cmd generated <code>&quot;app.json&quot;</code> and, instead, include a modified <code>builds</code> block.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;classic&quot;: {
+        &quot;toolkit&quot;: &quot;classic&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    },
+
+    &quot;modern&quot;: {
+        &quot;toolkit&quot;: &quot;modern&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    }
+}</code></pre> 
+       <p>As you can see, we are designating “theme-triton” for both classic and modern toolkits, but you could adjust the themes in any way you see fit.</p> 
+       <p>If you have the above <code>builds</code> block in your <code>&quot;app.json&quot;</code> a “sencha app build” would build both designated builds into unique folders. You may also singularly build by targeting the build key name. For instance:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build modern</code></pre> 
+       <p>Our Sencha Cmd generated starter app provides you with a working sandbox to use as a entry point for your application. Or even better, check out the new Admin Dashboard application template we’ve created (see below).</p> 
+       <p>For more information about build profiles, please checkout the <a href="../application_architecture/developing_for_multiple_screens_and_environments.html">多屏幕开发 and Environments</a> guide</p> 
+       <h2 id="Triton_Theme">Triton Theme</h2> 
+       <p>Central to this release is our latest theme named Triton. Triton is a flat, minimalistic theme that puts the focus on your content and not on decorations like rounded corners or gradients. The Triton theme is the first Ext JS theme to provide comprehensive support for “font icons”. Many of the icons used in Triton are from Font Awesome with some useful additions to complete the ensemble. Using Triton, applications can easily control the size and color of these scalable, vector images.</p> 
+       <p>Support for font icons includes such items as panel tools, tree icons, form field triggers, button arrows, checkboxes, radio buttons, grid action icons, grid column and filter menus, slider thumbs, box and border splitters, toolbar overflow indicators … and more. Pretty much all visual elements can use font icons.</p> 
+       <p><img src="images/triton.png" alt="Triton theme" /></p> 
+       <h3 id="Touch_Sizing">Touch Sizing</h3> 
+       <p>The Triton theme strikes a balance between desktop sizing and tablet sizing. For <strong>classic</strong> toolkit, this one size approach is simpler to manage compared to the approach taken by Neptune and Crisp which each provided a “touch-sized” derived theme.</p> 
+       <p>For the <strong>modern</strong> toolkit, however, due to the use of CSS layouts, we are able to make size more flexibly controlled. On smart phones, the <code>html</code> element automatically gains an <code>x-big</code> class that will scale many items (such as buttons) to give them a larger target area.</p> 
+       <p><img src="images/modern-big.png" alt="Modern Triton theme touch sizing" /></p> 
+       <p>The KitchenSink buttons on the left are more suitable for desktop, while those on the right would be more comfortable on a phone. You can change the default sizing by simply adding or removing <code>x-big</code> from the <code>html</code> element when your application launches.</p> 
+       <h3 id="Fashion">Fashion</h3> 
+       <p><a href="../../../cmd/6.x/fashion.html">Fashion</a> is Sencha’s new compiler for building themes based on <code>&quot;*.scss&quot;</code> files. Fashion is a Sass-like language with a few useful extensions to support tooling. Fashion is implemented in JavaScript and runs within the browser and, when combined with PhantomJS, Sencha Cmd can use Fashion for theme builds as well as for <code>app watch</code>. </p> 
+       <p>This means no more Ruby system requirement! Because Fashion runs in the browser, we will not need to build the style rules twice (once for the slicer and again with the minimum required content). More importantly, we can do incremental rebuilds of the theme during <code>app watch</code>, which is a real benefit during development.</p> 
+       <p>But there is an even more important benefit to <code>app watch</code> using Fashion - Live Updates! You can open an application in a (modern) browser and the <code>.scss</code> files we be loaded instead of the generated CSS. Fashion can then react to file changes and update the CSS without reloading the page.</p> 
+       <h2 id="Promises_Support">Promises Support</h2> 
+       <p>Ext JS 6 includes a standards-based implementation of promises that conforms to the <a href="../../../../wiki.commonjs.org/wiki/Promises/A">Promises/A spec</a> and <a href="../../../../https@github.com/promises-aplus/promises-tests">tests suite</a>. A big “thanks” goes to the <a href="../../../../deftjs.org/default.htm">DeftJS team</a> for submitting their field tested implementation!</p> 
+       <h3 id="Promises_in_Ext_Ajax">Promises in Ext.Ajax</h3> 
+       <p>In future releases we will incorporate promises support in more areas of the framework, but for Ext JS 6 we are starting with <code>Ext.Ajax.request()</code>. This method historically returned an object to track the request in progress. That object is now an instance of a class derived from <code>Ext.data.request.Base</code> which is <code>then-able</code> (in promises terminology). In this way we preserve the current API of <code>Ext.Ajax.request()</code> as well as allow you to write code like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.Ajax.request({
+    url: 'some/url',
+}).then(function (response) {
+    // use response
+});</code></pre> 
+       <h3 id="Creating_Promises">Creating Promises</h3> 
+       <p>Promises can be created in one of two forms: <code>new Ext.Promise()</code>, following the ECMAScript 6 standard <code>Promise</code> class, and <code>new Ext.Deferred()</code> which has several useful enhancements.</p> 
+       <p>Using <code>Ext.Promise</code> is the same as using the new <code>Promise</code> constructor:</p> 
+       <pre mode="javascript" theme="chrome"><code>function getAjax (url) {
+    // The function passed to Ext.Promise() is called immediately to start
+    // the asynchronous action.
+    //
+    return new Ext.Promise(function (resolve, reject) {
+        Ext.Ajax({
+            url: url,
+            success: function (response) {
+                // Use the provided &quot;resolve&quot; method to deliver the result.
+                //
+                resolve(response);
+            },
+            failure: function (response) {
+                // Use the provided &quot;reject&quot; method to deliver the error
+                //
+                reject(response);
+            }
+        });
+    });
+}</code></pre> 
+       <p>Of course, now that <code>Ext.Ajax.request()</code> supports promises there is no need to do this, but it illustrates how an asynchronous action can be converted to use <code>Ext.Promise</code>.</p> 
+       <p>On browsers that natively support <code>Promise</code>, the <code>Ext.Promise</code> reference will be assigned to <code>Promise</code> and will therefore only include the native features of a promise.</p> 
+       <p>The equivalent using <code>new Ext.Deferred()</code> method looks like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>function getAjax (url) {
+    var deferred = new Ext.Deferred();
+
+    Ext.Ajax({
+        url: url,
+        success: function (response) {
+            // Use the provided &quot;resolve&quot; method to deliver the result.
+            //
+            deferred.resolve(response);
+        },
+        failure: function (response) {
+            // Use the provided &quot;reject&quot; method to deliver the error
+            //
+            deferred.reject(response);
+        }
+    });
+
+    return deferred.promise;
+}</code></pre> 
+       <p>The key difference between <code>Ext.Promise</code> and <code>Ext.Deferred</code> is that the creator has direct access to the “behind-the-scenes” object managing the user’s promise, that is the <code>Ext.Deferred</code> instance. Using this object, the provider of the asynchronous operation can use additional features (such as progress updates) that go beyond the current promises standard. In addition, the promise instance returned by <code>Ext.Deferred</code> has additional methods that go along with the extra features provided by <code>Ext.Deferred</code>.</p> 
+       <h2 id="Classic_Grid">Classic Grid</h2> 
+       <h3 id="Spreadsheet">Spreadsheet</h3> 
+       <p>The new spreadsheet model introduced in Ext JS 5.1 now has a couple of cool new features. The selection can be made <strong>extensible</strong> (by setting <code>extensible:true</code>). This adds the “drag-corner” or a small block on the bottom-right corner of the selection. This allows the current selection to be extended either vertically or horizontally.</p> 
+       <p><img src="images/selection.png" alt="image alt text" /></p> 
+       <p>This will be often combined with a plugin that will use the current selection to replicate values into the expanded area (again like a spreadsheet).</p> 
+       <h3 id="Actionable_Mode__无障碍_">Actionable Mode (无障碍)</h3> 
+       <p>Grids also support ARIA’s “actionable mode” - an extension of our traditional cell edit mode. This allows all kinds of cell content to be focused and activated using only the keyboard. This is a huge step for accessibility but also makes for happy keyboard users since they can interact with anything in the grid without their hands leaving the keyboard.</p> 
+       <p>Enter actionable mode using the F2 key. ENTER also starts cell editing which is now an example of actionable mode.</p> 
+       <h3 id="Locking_grids">Locking grids</h3> 
+       <p>Navigation within a locking grid now navigates across the locking boundary. This is in both “navigable mode” (the default cell navigation mode) and “actionable mode” when cell contents are accessible and visited using the TAB key.</p> 
+       <h2 id="Modern_Grid">Modern Grid</h2> 
+       <p>The grid component in the <strong>modern</strong> toolkit has many new exciting developments as well. In the <strong>modern</strong> toolkit, much of the grid feature set is actually part of <code>Ext.dataview.List</code> (its base class). The grid is a component list that uses a <code>Ext.grid.Row</code> for each item in its store.</p> 
+       <p>Unlike the Sencha Touch Grid, however, in Ext JS 6, the Row component is now a lightweight container for cell widgets. In fact, cells are instances of classes in the <code>Ext.grid.cell</code> namespace. These widgets come together with ViewModels making it easy to manage cells and their configs using data binding, like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'grid',
+
+    // Configure the Row (the List item):
+    //
+    itemConfig: {
+        // viewModel: true,  // a default viewmodel
+        // or:
+        //
+        viewModel: {
+            type: 'mygrid-row'  // enable formulas etc.
+        }
+    },
+
+    columns: [{
+        text: 'Age',
+        // ...
+        cell: {
+            bind: {
+                cls: '{record.cls}'
+            }
+        }
+    }]
+}</code></pre> 
+       <p>The Row component ensures that the <code>record</code> property is published to its ViewModel (if it is configured with one). All Cells in the row are implicitly connected to the Row’s ViewModel which of course inherits any higher-level ViewModels via the Grid.</p> 
+       <p>The “infinite” list (buffered renderer) will only create a handful of Row components and will recycle them by reconfiguring their <code>record</code> to that of the needed record. This will naturally update the bound configs on child Cells.</p> 
+       <p>Finally, using <code>widgetcell</code> (<code>Ext.grid.cell.Widget</code>) we can put components in a grid cell. And, of course, they can leverage data binding as well.</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'grid',
+    //...
+
+    columns: [{
+        text: 'Verify',
+        // ...
+
+        cell: {
+            xtype: 'widgetcell',
+
+            widget: {
+                xtype: 'button',
+                ui: 'action',
+                bind: 'Verify {record.firstName}',
+                handler: 'onVerifyUser'  // route to ViewController
+            }
+        }
+    }]
+}</code></pre> 
+       <p>To see the <strong>modern</strong> grid in action, check out the KitchenSink.</p> 
+       <h2 id="The_Treelist_Widget">The Treelist Widget</h2> 
+       <p>The Admin Dashboard application template showcases not only our new Triton theme but also the newest member of the growing Widget family: <code>treelist</code>. Being a Widget, <code>treelist</code> is available in both the <strong>modern</strong> and the <strong>classic</strong> toolkits.</p> 
+       <p><img src="images/app-template.png" alt="Admin Dashboard app template" /></p> 
+       <p>Beyond use in a navigation area, the <code>treelist</code> can be used similarly to a <code>tree</code> component. There are a few key differences:</p> 
+       <ul> 
+        <li>Treelist provides a ui mixin (it generated the navigation view above).</li> 
+        <li>Treelist has a “micro” mode where only top-level node icons are visible. Children are displayed in a floating element (as seen above).</li> 
+        <li>Treelist renders all nodes in its <code>TreeStore</code> (it does not support buffered rendering). Nodes can, of course, be fetched asynchronously.</li> 
+        <li>Treelist nodes are themselves rendered as Widgets.</li> 
+        <li>Treelist supports selection and hover “indicator” (the vertical blue strip on the selected node).</li> 
+        <li>Treelist only supports single-selection.</li> 
+        <li>Treelist does not support additional columns.</li> 
+        <li>Treelist does not support grid plugins.</li> 
+       </ul> 
+       <p>This makes a <code>treelist</code> suitable for trees that don’t contain too many nodes. For large datasets, the standard <code>tree</code> component should still be preferred.</p> 
+       <p>The KitchenSink example allows you to play with some of the configs on the <code>treelist</code> on-the-fly.</p> 
+       <p><img src="images/treelist.png" alt="Treelist widget" /></p> 
+       <p>As you can see here, the <code>ui</code> config can be set dynamically and the tree will update accordingly.</p> 
+       <p>In the <strong>modern</strong> KitchenSink sink example, the <code>treelist</code> looks almost identical:</p> 
+       <p><img src="images/modern-treelist.png" alt="Treelist in modern toolkit" /></p> 
+       <h2 id="Responsive_Column_Layout">Responsive Column Layout</h2> 
+       <p>The Admin Dashboard also leverages our newest layout for the <strong>classic</strong> toolkit: <code>responsivecolumn</code>. A common design goal for applications is to present content in a grid-like form with a variable number of columns based on the available space. With IE8’s lack of CSS <code>@media</code> support, this goal can be a challenge to achieve. This is where <code>responsivecolumn</code> comes in.</p> 
+       <p>You create a container using <code>responsivecolumn</code> and describe the layout states you want to handle.</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'container',
+    layout: {
+        type: 'responsivecolumn',
+        states: {
+            small: 800,
+            large: 0
+        }
+    },
+    items: [{
+        xtype: 'panel',
+        responsiveCls: 'large-50 small-100'
+    },{
+        xtype: 'panel',
+        responsiveCls: 'large-50 small-100'
+    }]
+}</code></pre> 
+       <p>We then add CSS rules to match these classes:</p> 
+       <pre mode="javascript" theme="chrome"><code>.large-100 {
+    @include responsivecolumn-item(100%);
+}
+
+.large-50 {
+    @include responsivecolumn-item(50%);
+}
+
+.x-responsivecolumn-small {
+    &gt; .small-100 {
+        @include responsivecolumn-item(100%);
+    }
+}</code></pre> 
+       <p>The result is that each panel takes up 50% of the width when the viewport is “large” (more than 800px) and 100% of the width when the viewport is “small” (less than 800px).</p> 
+       <p>The <code>responsivecolumn</code> layout will add a CSS class to the container based on which state matches the current viewport size. These dynamically maintained classes allow all browsers to apply appropriate styling without requiring <code>@media</code>. The <code>responsivecolumn</code> layout is found in the “ux” package.</p> 
+       <h2 id="Theming_In_The_Modern_Toolkit">Theming In The Modern Toolkit</h2> 
+       <p>With the introduction of Triton in the <strong>modern</strong> toolkit we have given a lot of attention to theme creation. We’ve organized themes into packages to enable theme derivation. In fact the Triton theme extends the Neptune theme which is also available now in the <strong>modern</strong> toolkit. We’ve also revisited the concept of the “ui” config and optimized how it is handled. Since modern browsers don’t require complex solutions like framing, ui mixins can be made significantly simpler and therefore more flexible and efficient.</p> 
+       <p>We started with buttons and created the new <code>button-ui</code> mixin. This mixin takes many optional arguments (currently 45!) that you can use to tune almost every visual aspect of the <code>Ext.Button</code> component. The key difference from the <strong>classic</strong> mixin is that this mixin will only generate the few <em>additional</em> style rules needed to achieve the given adjustments.</p> 
+       <p>To see how this works, consider this use of <code>button-ui</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'button',
+    ui: 'rounded'
+}
+
+//...
+
+@include button-ui(
+    $ui: 'rounded',
+    $border-radius: 8px,
+    $border-radius-big: 12px  // size when x-big is present
+);</code></pre> 
+       <p>The entire generated CSS would look something like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>.x-button-rounded {
+    border-radius: 8px;
+}
+.x-big .x-button-round {
+    border-radius: 12px;
+}</code></pre> 
+       <p>This implies that the <code>button</code> element will get most of its styling from the <code>x-button</code> CSS class and will gain the above styles <em>as well</em>. You can even use multiple names in the <code>ui</code> config to compose multiple adjustments:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'button',
+    ui: 'rounded red'
+}
+
+//...
+
+@include button-ui(
+    $ui: 'red',
+    $background-color: red
+);</code></pre> 
+       <p>The tiny additional CSS needed to make buttons red would then apply via <code>x-button-red</code> in addition to the border radius from <code>x-button-rounded</code>.</p> 
+       <p>We are delighted with what we’ve seen from this approach and are confident it will help applications achieve their aesthetic goals while at the same time future proof their code by keeping the details behind the mixin API. Look for more ui mixins for other components following this pattern in future releases.</p> 
+       <h2 id="Charts">Charts</h2> 
+       <h3 id="Pie_3D">Pie 3D</h3> 
+       <p>The biggest new features in the charts package are the improvements to the 3D pie series (‘pie3d’). It now supports labels, legend, highlighting, tooltips, bevels and has improved shading with configurable level of 3D effect.</p> 
+       <p><img src="images/3dchart.png" alt="image alt text" /></p> 
+       <p>The various sliders in the new Charts KitchenSink example allow you play with each of those and see how they alter the appearance of the chart.</p> 
+       <h3 id="Plugins">Plugins</h3> 
+       <p>The new <strong>itemedit</strong> plugin allows users to drag ‘bar’ series items and markers of the ‘scatter’ series to edit the underlying data.</p> 
+       <p><img src="images/scatter_itemedit.png" alt="image alt text" /></p> 
+       <p><img src="images/bar_itemedit.png" alt="image alt text" /></p> 
+       <h3 id="Events">Events</h3> 
+       <p>Declarative renderers (named methods implemented by a ViewController) are now supported for axis labels as well as series labels, items and tooltips.</p> 
+       <h2 id="Ext_JS_Premium">Ext JS Premium</h2> 
+       <p>With Ext JS Premium there are two additional code packages: exporter and pivot. These packages provide Excel data export and the Pivot Grid to help users display and analyze their data.</p> 
+       <h3 id="Pivot_Grid">Pivot Grid</h3> 
+       <p>The pivot grid component is now provided in the <code>pivot</code> package and lives in the <code>Ext.pivot</code> namespace. The main enhancements to the pivot grid are seen in the Configurator plugin.</p> 
+       <h4 id="Enhanced_Configurator">Enhanced Configurator</h4> 
+       <p><img src="images/configurator.png" alt="image alt text" /></p> 
+       <p>The interface to the configurator has been revamped and can now be docked on any side, including on the right (or left) as shown above. You can also configure whether or not the configurator panel is collapsible.</p> 
+       <h4 id="Exporter_Plugin">Exporter Plugin</h4> 
+       <p>The <code>pivotexporter</code> plugin replaces the old Excel export plugin. This one uses a more generic approach and allows you to export the pivot grid data to any Exporter available in the class system.</p> 
+       <p>The <code>pivot</code> package requires the <code>exporter</code> package so you’ll need both in your “packages” folder.</p> 
+       <p>Example:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'pivotgrid',
+    plugins: [{
+        ptype: 'pivotexporter'
+    }]
+}
+
+// Somewhere on a button you may have something like this
+//
+grid.saveDocumentAs({
+    type: 'excel', // exporter alias
+    title: 'Excel export',
+
+    onlyExpandedNodes: false,
+    showSummary: true,
+
+    fileName: 'export.xml'
+});
+
+// saveDocumentAs will try to save the file in the browser. If your browser is not
+// supported then do this
+//
+var xml = grid.getDocumentData({
+     type: 'excel', // exporter alias
+     title: 'Excel export',
+
+     onlyExpandedNodes: false,
+     showSummary: true
+});
+
+// and probably send the xml content to the server</code></pre> 
+       <h4 id="Label_filter_operators">Label filter operators</h4> 
+       <p>There are two new Label filter operators available: <code>in</code> and <code>not in</code>.</p> 
+       <pre mode="javascript" theme="chrome"><code>leftAxis: [{
+    header: 'Country',
+    dataIndex: 'country',
+
+    filter: {
+        type: 'label',
+        operator: 'in',
+        value: [ 'USA', 'Canada', 'Australia' ]
+    }
+}]</code></pre> 
+       <h3 id="Exporter">Exporter</h3> 
+       <p>The exporter package contains classes you can use to create Excel documents as well as a grid plugin that you can add to your grid to add Excel export capability.</p> 
+       <h4 id="Exporter_plugin">Exporter plugin</h4> 
+       <p>This plugin enables grid data to be exported to Excel. It can either save the file if the browser supports it or generate the content for further processing. Grid columns that should not be exported need to have their <code>ignoreExport</code> config set.</p> 
+       <p>This plugin is part of the <code>exporter</code> package which means that it should be added to the app packages folder and required in <code>app.json</code>.</p> 
+       <p>Example:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'grid',
+    plugins: [{
+        ptype: 'gridexporter'
+    }]
+}
+
+// Somewhere on a button you may have something like this
+//
+grid.saveDocumentAs({
+    type: 'excel', // exporter alias
+    title: 'Excel export',
+
+    fileName: 'export.xml'
+});
+
+// saveDocumentAs will try to save the file in the browser. If your browser
+// is not supported then do this
+//
+var xml = grid.getDocumentData({
+    type: 'excel', // exporter alias
+    title: 'Excel export'
+});
+
+// and probably send the xml content to the server</code></pre> 
+       <h4 id="Content">Content</h4> 
+       <p><img src="images/exporter_structure.png" alt="image alt text" /></p> 
+       <h4 id="Generate_Excel_XML_documents">Generate Excel XML documents</h4> 
+       <p>The <code>exporter</code> package contains classes that allows you to generate Excel XML documents with any data that you need. </p> 
+       <p>Here is a basic example of how to achieve this:</p> 
+       <pre mode="javascript" theme="chrome"><code>var workbook = Ext.create('Ext.exporter.file.excel.Workbook', {
+        title: 'My document',
+        author: 'John Doe'
+    });
+
+var table = workbook.addWorksheet({
+        name: 'Sheet 1'
+    }).addTable();
+
+// Add formatting to the first two columns of the spreadsheet
+//
+table.addColumn({
+    width:  120,
+    styleId: workbook.addStyle({
+        format: 'Long Time'
+    }).getId()
+});
+
+// ... etc ...
+
+// Add a formula on the 4th row which sums up the previous 2 rows
+table.addRow().addCell({
+    index: 2,
+    formula: '=SUM(R[-2]C:R[-1]C)'
+});
+
+// Save the document in the browser
+//
+Ext.exporter.File.saveAs(workbook.render(), 'document.xml', 'UTF-8');</code></pre> 
+       <p>The above document will look something like this:</p> 
+       <p><img src="images/whatsnew_image_6.png" alt="image alt text" /></p> 
+       <h4 id="Custom_Exporters">Custom Exporters</h4> 
+       <p>The Excel Exporter comes with the <code>exporter</code> package and it is used by both grid and pivot grid plugins to generate Excel documents. You can write your own custom exporter classes by extending from <code>Ext.exporter.Base</code> and direct the plugins to use your custom format.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('My.custom.Exporter', {
+    extend: 'Ext.exporter.Base',
+    alias: 'exporter.custom',
+    ...
+});
+
+grid.saveDocumentAs({
+    type: 'custom',
+    title: 'Custom export',
+
+    fileName: 'custom-format.xml'
+});</code></pre> 
+       <h3 id="More_To_Come">More To Come</h3> 
+       <p>In future releases we will add additional packages to Ext JS Premium as well as continue to enhance the Ext JS foundations.</p> 
+       <h2 id="Screen_Reader_Support__无障碍_">Screen Reader Support (无障碍)</h2> 
+       <p>We have integrated ARIA functionality directly into the component life-cycle. This means you won’t need a special “aria” package to get correct ARIA behavior. Applications will now support screen readers (like JAWS) without additional effort.</p> 
+       <h2 id="Microloader">Microloader</h2> 
+       <p>Sencha Cmd 6 now includes localStorage caching of assets. This is similar to Sencha Touch’s production microloader but with some important improvements.</p> 
+       <ul> 
+        <li>Caching can be disabled in app.json</li> 
+        <li>Only the current version of an app will be kept in local storage</li> 
+        <li>Only microloader content will ever be erased by the microloader</li> 
+       </ul> 
+       <h2 id="Browser_Support">Browser Support</h2> 
+       <h3 id="Modern_Toolkit">Modern Toolkit</h3> 
+       <h4 id="Desktop">Desktop</h4> 
+       <ul> 
+        <li>IE11+</li> 
+        <li>Firefox and Firefox ESR (Latest 2 Versions)</li> 
+        <li>Chrome (Latest 2 Versions)</li> 
+        <li>Safari 7+</li> 
+       </ul> 
+       <h4 id="Mobile">Mobile</h4> 
+       <ul> 
+        <li>IE11+</li> 
+        <li>Safari 7+</li> 
+        <li>Android 4.0+ Chrome</li> 
+        <li>Android 4.4+ Native</li> 
+       </ul> 
+       <h3 id="Classic_Toolkit">Classic Toolkit</h3> 
+       <h4 id="Desktop">Desktop</h4> 
+       <ul> 
+        <li>IE8+ (Strict DOCTYPE)</li> 
+        <li>Firefox and Firefox ESR (Latest 2 Versions)</li> 
+        <li>Chrome (Latest 2 Versions)</li> 
+        <li>Safari 7+</li> 
+        <li>Opera (Latest 2 Versions)</li> 
+       </ul> 
+       <h4 id="Tablet">Tablet</h4> 
+       <ul> 
+        <li>Safari 7+ (iPad)</li> 
+        <li>Android 4.0+ Chrome</li> 
+        <li>Android 4.4+ Native</li> 
+        <li>Windows 8 Touch Screen - IE10+</li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 创建一个简单的登录应用</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Upgrades &amp; Migrations</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖拽">拖拽</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Step_1___Generate_your_Application" title="Step 1 - Generate your Application">第一步 - 生成您的应用程序</a> 
+       <a class="toc-page-h2" href="#Step_2___Create_the_Login_View_Components" title="Step 2 - Create the Login View Components">第二步 - 创建登录视图组件</a> 
+       <a class="toc-page-h2" href="#Step_3___Disable_mainView" title="Step 3 - Disable mainView">第三步 - 禁用主视图</a> 
+       <a class="toc-page-h2" href="#Step_4___Create_the_Login_Window" title="Step 4 - Create the Login Window">第四步 - 创建一个登录窗体</a> 
+       <a class="toc-page-h3" href="#requires" title="requires">requires</a> 
+       <a class="toc-page-h3" href="#controller" title="controller">controller</a> 
+       <a class="toc-page-h3" href="#bodyPadding" title="bodyPadding">bodyPadding</a> 
+       <a class="toc-page-h3" href="#title" title="title">title</a> 
+       <a class="toc-page-h3" href="#closable" title="closable">closable</a> 
+       <a class="toc-page-h3" href="#autoShow" title="autoShow">autoShow</a> 
+       <a class="toc-page-h3" href="#Window_items" title="Window items">Window items</a> 
+       <a class="toc-page-h3" href="#xtype" title="xtype">xtype</a> 
+       <a class="toc-page-h3" href="#Form_Items" title="Form Items">Form Items</a> 
+       <a class="toc-page-h3" href="#buttons" title="buttons">buttons</a> 
+       <a class="toc-page-h3" href="#formBind" title="formBind">formBind</a> 
+       <a class="toc-page-h3" href="#listeners" title="listeners">listeners</a> 
+       <a class="toc-page-h2" href="#Step_5___Add_Login_Logic" title="Step 5 - Add Login Logic">第五步 - 加载登录逻辑</a> 
+       <a class="toc-page-h3" href="#onLoginClick__" title="onLoginClick()">onLoginClick()</a> 
+       <a class="toc-page-h3" href="#localStorage" title="localStorage">localStorage</a> 
+       <a class="toc-page-h3" href="#getView__" title="getView()">getView()</a> 
+       <a class="toc-page-h3" href="#Ext_create___xtype___app_main____" title="Ext.create({ xtype: ‘app-main’ })">Ext.create({ xtype: ‘app-main’ })</a> 
+       <a class="toc-page-h2" href="#Step_6___Add_Launch_Logic_to_Application_js" title="Step 6 - Add Launch Logic to Application.js">第六步 - 添加启动逻辑到 Application.js</a> 
+       <a class="toc-page-h3" href="#requires" title="requires">requires</a> 
+       <a class="toc-page-h3" href="#launch" title="launch">launch</a> 
+       <a class="toc-page-h3" href="#localStorage_getItem__" title="localStorage.getItem()">localStorage.getItem()</a> 
+       <a class="toc-page-h3" href="#Create_Ternary" title="Create Ternary">Create Ternary</a> 
+       <a class="toc-page-h2" href="#Step_7___Add_Viewport_Plugin___Logout_Button" title="Step 7 - Add Viewport Plugin / Logout Button">第七步- 添加 Viewport 插件 / Logout 按钮(Button)</a> 
+       <a class="toc-page-h2" href="#Step_8___Add_Main_Logic" title="Step 8 - Add Main Logic">第八步 - 添加主逻辑</a> 
+       <a class="toc-page-h2" href="#Wrap_Up" title="Wrap Up">小结</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>构建一个登录系统</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>其中教程中最频繁被提到的是如何做一个登录系统。我们将通过即将开始的教程来构建她。 请注意，这只是创建一个登录系统的<strong>一种</strong>方式。还有很多其他可行的选择。这意味着向您展示一种方法来创建具有登录/注销功能的应用程序。对于本指南中，我们将使用ExtJS 6 中的经典工具包来构建登录应用程序例子。</p> 
+       <p><strong>注意：</strong>ExtJS 6 创建应用程式时提供了经典的工具包，现代化的工具，或同时使用两种的(在通用应用程序中)应用程序选项。本指南特别侧重于经典的工具包。这就是说，应用程序架构使用现代工具和它是一样的， 因此你在以后翻译适当的组件时没必要感到困惑。通常应用程序把包含 <code>经典</code> 和 <code>现代</code> 的视图放到同一个应用根目录下。如果你按照本指南，并创建了一个通用的应用程序，您的视图将存放在 <code>{appRoot}/classic/view/</code> 而不是 <code>{appRoot}/app/view/</code>目录下。</p> 
+       <p><strong>免责声明：</strong> 本教程意在给用户展示可以创建包含 “logged in” 和 “logged out” 视图的应用程序的一种方法。本教程并不试图实现安全数据连接，会话管理，真实的身份验证等。它仅用于教育目的。</p> 
+       <h2 id="Step_1___Generate_your_Application">第一步 - 生成您的应用程序</h2> 
+       <p>我们想要生成应用程序的第一件事情就是使用 <a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a>。您可以通过命令行界面，或CLI执行以下命令：</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/ExtSDK generate app -classic TutorialApp ./TutorialApp</code></pre> 
+       <p><strong>注意：</strong> 为了完整起见，下面的语句将产生一个现代的应用程序：</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/ExtSDK generate app -classic TutorialApp ./TutorialApp</code></pre> 
+       <p>而下面会产生一个通用的应用程序：</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/ExtSDK generate app TutorialApp ./TutorialApp</code></pre> 
+       <p><strong>注意：</strong> 如果你没有 Sencha Cmd，或者不熟悉使用她，请在处理之前阅读 <a href="../../../cmd/5.x/intro_to_cmd.html" data-full-load="true">Cmd 简介指南</a> 。</p> 
+       <p>由此产生的TutorialApp是一个功能齐全的由Cmd的生成应用程序，我们将作为登录/注销应用程序的基础。您可以通过导航到应用程序的位置在您的Web服务器查看该应用程序。例如：</p> 
+       <pre mode="javascript" theme="chrome"><code>http://localhost/TutorialApp</code></pre> 
+       <p>或者通过由新生成的TutorialApp文件夹内运行“sencha app watch”。这将加速一个Jetty服务器，它移除了传统web服务器的需求。如果你使用 “sencha app watch”, 你可以在这里使用这个来启动该应用程序：</p> 
+       <pre mode="javascript" theme="chrome"><code>http://localhost:1841/</code></pre> 
+       <h2 id="Step_2___Create_the_Login_View_Components">第二步 - 创建登录视图组件</h2> 
+       <p>接下来，我们要定位到我们新生成的TutorialApp. 向下展开到生成的应用程序“app/view/”文件夹中。你应该看到默认生成的“main”文件夹中。这个目录包含 <strong>Main.js</strong>, <strong>MainController.js</strong>, 和 <strong>MainModel.js</strong> 等文件。</p> 
+       <p>让我们继续前进，并通过创建名为“Login”的新的应用app/view 目录为准备登录功能项目做准备。创建“app/view/login/”文件夹后，下面的文件添加到提到的文件夹中：</p> 
+       <pre mode="javascript" theme="chrome"><code>- Login.js
+- LoginController.js</code></pre> 
+       <p>由此产生的文件结构应该是这样的：</p> 
+       <p><img src="images/filestructure.jpeg" /></p> 
+       <h2 id="Step_3___Disable_mainView">第三步 - 禁用主视图(mainView)</h2> 
+       <p>应用程序的<a href="../6.0.1-classic/#!/api/Ext.app.Application-cfg-mainView" data-full-load="true">主视图</a> 配置<a href="../6.0.1-classic/#!/api/Ext-method-application" data-full-load="true"></a> 是一种非常方便的方式来自动加载并利用<a href="../6.0.1-classic/#!/api/Ext.plugin.Viewport" data-full-load="true">Viewport 插件</a>实例化“TutorialApp.view.main.Main”。然而，我们在挑选初始化视图之前需要评估一下Ext.application的<a href="../6.0.1-classic/#!/api/Ext.app.Application-method-launch" data-full-load="true">启动方法</a>。 举例来说，如果用户还没有登录，我们不希望创建的主视图。</p> 
+       <p>对于这个练习的目的，让我们删除 <code>mainView</code> 配置 <a href="../6.0.1-classic/#!/api/Ext-method-application" data-full-load="true">从应用程序</a> 在 “{appRoot}/app.js” 的配置</p> 
+       <p><strong>注意：</strong> 既然我们已经删除 <code>mainView</code>，刷新您的应用程序会导致一个空白页，因为没有类被实例化。</p> 
+       <h2 id="Step_4___Create_the_Login_Window">第四步 - 创建登录窗口</h2> 
+       <p>接下来，让我们创建一个登录视图。要做到这一点，我们将打开我们的空白 “{appRoot}/app/view/login/Login.js” 文件，并开始定义登录窗口。</p> 
+       <p>首先，让我们来定义继承自 <a href="../6.0.1-classic/#!/api/Ext.window.Window" data-full-load="true">Window</a> 基类的类。这看起来像这样：</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.view.login.Login', {
+    extend: 'Ext.window.Window',
+    xtype: 'login'
+});</code></pre> 
+       <p>现在，我们已经定义了我们的 Login 类作为<a href="../6.0.1-classic/#!/api/Ext.window.Window" data-full-load="true">Ext.window.Window</a>的延伸，其可使用 xtype <code>login</code>来初始化。让我们开始给我们的类的一些独特的属性。我们将从windows本身开始，增加一定的附加配置。</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.view.login.Login', {
+    extend: 'Ext.window.Window',
+    xtype: 'login',
+
+    requires: [
+        'TutorialApp.view.login.LoginController',
+        'Ext.form.Panel'
+    ],
+
+    controller: 'login',
+    bodyPadding: 10,
+    title: 'Login Window',
+    closable: false,
+    autoShow: true
+});</code></pre> 
+       <p>我们将逐步演示这些配置的意思。</p> 
+       <h3 id="requires">要求(requires)</h3> 
+       <p>这个 <a href="../6.0.1-classic/#!/api/Ext.Class-cfg-requires" data-full-load="true">requires</a> 块可以确保我们初始化 Login 窗体之前需要依赖的任何类都包括进来。我们需要包括 <code>LoginController.js</code> 因为我们要把它指定为我们下一行控制器。 我们还需要包括 <a href="../6.0.1-classic/#!/api/Ext.form.Panel" data-full-load="true">Ext.form.Panel</a> 因为我们的视图包含一个表格面板。</p> 
+       <h3 id="controller">控制器(controller)</h3> 
+       <p>这个 <a href="../6.0.1-classic/#!/api/Ext.window.Window-cfg-controller" data-full-load="true">controller</a> 配置将指派到 <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">ViewController</a>，并被Login窗口实例关联到。这个控制器(controller)提供了一个地方包括了和Login窗体或者它的子组件相关联的所有逻辑。在这里，我们指定控制器进行登录 <code>login</code>，这将是我们的控制器的别名。</p> 
+       <h3 id="bodyPadding">主体填充(bodyPadding)</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.window.Window-cfg-bodyPadding" data-full-load="true">主体填充(bodyPadding)</a> 的配置是纯美学的。 这个“10px”填充配置应用于窗体主体内容的外观。</p> 
+       <h3 id="title">标题(title)</h3> 
+       <p>该字符串传递给创建一个<a href="../6.0.1-classic/#!/api/Ext.window.Window-cfg-title" data-full-load="true">标题(title)</a><a href="../6.0.1-classic/#!/api/Ext.panel.Header" data-full-load="true">头(header)</a>配置结果，并添加字符串值作为它的标题。</p> 
+       <h3 id="closable">可关闭(closable)</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.window.Window-cfg-closable" data-full-load="true">可关闭(closable)</a> 决定窗口是否可以关闭。窗口在默认情况下有个可关闭按钮。然而，由于这是一个登录窗口，我们不希望用户关闭它。如果他们一定要(DID)关闭它，会留下一个空白页。</p> 
+       <h3 id="autoShow">自动显示(autoShow)</h3> 
+       <p>窗体是默认是隐藏的。设置 <a href="../6.0.1-classic/#!/api/Ext.window.Window-cfg-autoShow" data-full-load="true">autoShow</a> 为 <code>true</code> ，当窗体创建时就会显示。另一个选择是，当我们想窗口是可见的是用编程方式调用窗口<a href="../6.0.1-classic/#!/api/Ext.window.Window-method-show" data-full-load="true">show</a> 方法。</p> 
+       <p>现在，我们已经讨论过的Windows配置，让我们给它的一些子组件。由于这将是一个登录表单，我们将创建一个表单面板作为窗口的子类。然后，我们将添加两个<a href="../6.0.1-classic/#!/api/Ext.form.field.Text" data-full-load="true">textfields</a>文本字段，一个 <a href="../6.0.1-classic/#!/api/Ext.form.field.Display" data-full-load="true">Display field</a>显示字段，以及一个提交 <a href="../6.0.1-classic/#!/api/Ext.button.Button" data-full-load="true">Button</a>。</p> 
+       <p>此文件的最终代码应显示如下：</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.view.login.Login', {
+    extend: 'Ext.window.Window',
+    xtype: 'login',
+
+    requires: [
+        'TutorialApp.view.login.LoginController',
+        'Ext.form.Panel'
+    ],
+
+    controller: 'login',
+    bodyPadding: 10,
+    title: 'Login Window',
+    closable: false,
+    autoShow: true,
+
+    items: {
+        xtype: 'form',
+        reference: 'form',
+        items: [{
+            xtype: 'textfield',
+            name: 'username',
+            fieldLabel: 'Username',
+            allowBlank: false
+        }, {
+            xtype: 'textfield',
+            name: 'password',
+            inputType: 'password',
+            fieldLabel: 'Password',
+            allowBlank: false
+        }, {
+            xtype: 'displayfield',
+            hideEmptyLabel: false,
+            value: 'Enter any non-blank password'
+        }],
+        buttons: [{
+            text: 'Login',
+            formBind: true,
+            listeners: {
+                click: 'onLoginClick'
+            }
+        }]
+    }
+});</code></pre> 
+       <p>让我们来讨论这些附加的内容。</p> 
+       <h3 id="Window_items">窗体项目(Window items)</h3> 
+       <p>我们添加到Login窗体中的第一个配置是 <a href="../6.0.1-classic/#!/api/Ext.window.Window-cfg-items" data-full-load="true">items</a> 配置。在 <a href="../6.0.1-classic/#!/api/Ext.container.Container" data-full-load="true">容器中(containers)</a>，如表格面板和Login窗体本身，<code>items</code> 配置 可容纳 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">组件(Component)</a> 或者一个组件(Component)配置对象。 <code>items</code> 的配置也可以是组件或组件配置对象的阵列。这些组件将显示在使用容器的<a href="../6.0.1-classic/#!/api/Ext.container.Container-cfg-layout" data-full-load="true">布局(layout)</a>容器的主体内。</p> 
+       <h3 id="xtype">xtype</h3> 
+       <p>每个组件类都有自己的 <a href="../6.0.1-classic/#!/api/Ext.Component-cfg-xtype" data-full-load="true">xtype</a>。你可以把一个 <code>xtype</code> 当作轻松地创建一个组件的实例的快捷方式。在这种情况下，我们已经配置了用“form” <code>xtype</code> 带子项的Login窗体(“form” 作为 <a href="../6.0.1-classic/#!/api/Ext.form.Panel" data-full-load="true">Ext.form.Panel</a> 类的 <code>xtype</code>)。 Form 面板是特殊类型的面板(Panels)，其中包括用于输入领域的方便的配置选项。</p> 
+       <h3 id="Form_Items">表单项目(Form Items)</h3> 
+       <p>接下来，你会看到另一个 <code>items</code> 数组(array)的熟悉的面孔。这里我们构建额外的 items 通过使用更深层次的 items array。我们放置了更多的 Components 在它的父组件 Form panel 里。在这种情况下，我们嵌套的组件是表单字段构成登录表单。</p> 
+       <p>因为他们是非常完美的解释，我们可以快速地通过这个数组组件。第一项(item)有个 <code>xtype</code> 来自于 <a href="../6.0.1-classic/#!/api/default.htm" data-full-load="true">Ext.form.field.Text textfield</a>，<a href="../6.0.1-classic/#!/api/Ext.form.field.Text-cfg-name" data-full-load="true">名称叫</a> “username”，一个 <a href="../6.0.1-classic/#!/api/Ext.form.field.Text-cfg-fieldLabel" data-full-load="true">fieldLabel</a> 的 “username”, 和 <a href="../6.0.1-classic/#!/api/Ext.form.field.Text-cfg-allowBlank" data-full-load="true">allowBlank</a> 的属性 “false”。这可以归结为一个名字值和字段标签的文本字段。该字段不能留空，并通过验证 <em>(见下文 “formBind” )</em>。</p> 
+       <p>下一个字段是几乎相同的除了所述类型被设置为“密码”(“password”)。这将您输入 <code>*</code> 为了安全起见。</p> 
+       <p>最后一个 <code>items</code> 数组(array)成员是 <a href="../6.0.1-classic/#!/api/Ext.form.field.Display" data-full-load="true">displayfield</a>。一个Display字段是文本字段，不是表单提交的字段。它是用于传送数据非常有用不需要之前提到的用户数据。在这种情况下，我们可以通知任何非空密码将允许提交表单的用户。</p> 
+       <h3 id="buttons">按钮(buttons)</h3> 
+       <p>我们在这里添加的最后一位是一个 <a href="../6.0.1-classic/#!/api/Ext.form.Panel-cfg-buttons" data-full-load="true">buttons</a> 列表(array)。 这是个用于在你的面板(panel)添加按钮(Buttons) 到页脚<a href="../6.0.1-classic/#!/api/Ext.toolbar.Toolbar" data-full-load="true">Toolbar</a>工具栏的便捷配置(config)。这种特殊的按钮包含文本“Login”，将用于点击提交到lgoin 窗体。</p> 
+       <h3 id="formBind">表单绑定(formBind)</h3> 
+       <p>我们的按钮(Button)包含一个名为 <a href="../6.0.1-classic/#!/api/Ext.Component-cfg-formBind" data-full-load="true">formBind</a>配置(config)，这个设置为“true”。当一个组件(Component)的 <code>formBind</code> 设置成“true”，它的 disabled/enabled 取决于Form的有效性状态。这意味着该按钮(Button)将无法点击，直到两个输入字段包含值。</p> 
+       <h3 id="listeners">侦听器(listeners)</h3> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.button.Button-cfg-listeners" data-full-load="true">listeners</a> 对象被配置事件和方法/函数，将被这些事件触发响应。在这种情况下，我们将等着别人来点击按钮(Button)。当有人点击按钮时，我们转发“forward” 事件到<code>onLoginClick</code>方法。 这个 <code>onLoginClick</code> 方法将在我们的Login控制器(controller)后面被定义。</p> 
+       <p><strong>注意：</strong> 我们还没有实例化Login视图，因此刷新应用程序不会看到任何变化。</p> 
+       <h2 id="Step_5___Add_Login_Logic">第五步- 增加登录逻辑</h2> 
+       <p>下一步，让我们创建 Login 控制器(controller)，它是一个包含和用户Login视图(view)交互逻辑的类。要做到这一点，我们要打开空白的 <code>{appRoot}/app/view/login/LoginController.js</code> 文件， 并且开始定义我们的Login窗体逻辑。</p> 
+       <p>The entirety of <code>LoginController.js</code> is as follows:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.view.login.LoginController', {
+    extend: 'Ext.app.ViewController',
+    alias: 'controller.login',
+
+    onLoginClick: function() {
+
+        // This would be the ideal location to verify the user's credentials via
+        // a server-side lookup. We'll just move forward for the sake of this example.
+
+        // Set the localStorage value to true
+        localStorage.setItem(&quot;TutorialLoggedIn&quot;, true);
+
+        // Remove Login Window
+        this.getView().destroy();
+
+        // Add the main view to the viewport
+        Ext.create({
+            xtype: 'app-main'
+        });
+
+    }
+});</code></pre> 
+       <p>上面的代码可能有点断章取义，它会使我们在下面讨论 <code>launch</code> 方法更有意义。这个类包括一个 <code>onLoginClick</code> 方法当点击lgoin按钮是被调用。</p> 
+       <p>这些代码位有注释来描述每个语句的目的，但让我们来看看他们一块块作进一步的解释。</p> 
+       <h3 id="onLoginClick__">onLoginClick()</h3> 
+       <p>首先，我们要创建一个名为 <code>onLoginClick</code>onLongClick方法。这个方法时直接对应到Lgoin视图(view) 上的登录按钮点击事件。</p> 
+       <p>作为注释中所提到的，这里就是你调用你的服务器，以验证用户的凭据是有效的地方。这通常会来在AJAX或REST请求的形式。然而，在本教程中， 我们将接受任何非空白输入。成功后，你就会进入代码的其余部分。如果失败，你将允许用户重新输入其凭据。当然，还有在这种情况下，没有失败的可能性，所以让我们继续前进！</p> 
+       <h3 id="localStorage">本地存储(localStorage)</h3> 
+       <p>我们正在利用 <a href="../../../../https@developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">本地存储(localStorage)</a> 本地存储在本教程中，以保持用户登录状态。经过一个成功的凭证检查，我们可以确定用户的主要应用视图适当的访问。然后，我们可以设置本地存储(localStorage)键/值对让应用程序知道用户是有效的。 接下来，我们将检查记录在 <code>TutorialLoggedIn</code> localStorage 设置为“真”在我们最初的<code>启动(launch)</code> 方法 <em>(覆盖在下面更详细的“launch”一节中)。</em></p> 
+       <h3 id="getView__">getView()</h3> 
+       <p>ViewControllers 推出了一个名为 <a href="../6.0.1-classic/#!/api/Ext.app.Controller-method-getView" data-full-load="true">getView()</a>非常有帮助的方法。该<code>getView()</code> getView（）方法返回与ViewController中从它被称为关联的当前视图。在这种情况下，视图是Login窗口。由于我们处理登录点击作为一个成功的登录，我们不希望再出现登录窗口。所有，我们使用<code>this.getView().destroy()</code> 来获得对应的Login窗体然后 <a href="../6.0.1-classic/#!/api/Ext.window.Window-method-destroy" data-full-load="true">销毁(destroy)</a>它。</p> 
+       <h3 id="Ext_create___xtype___app_main____">Ext.create({ xtype: ‘app-main’ })</h3> 
+       <p>现在，我们已经摧毁了登录窗口，我们要改变视图显示主视图。在这种情况下，我们使用 <code>Ext.create({ xtype: 'app-main' })</code> 来初始化 “{appRoot}/app/view/main/Main.js” 视图。</p> 
+       <p><strong>注意：</strong> <code>'app-main'</code> 指的是xtype定义在由Sencha Cmd生成的"TutorialApp.view.main.Main”类位于”{appRoot}/app/view/main.Main.js”。</p> 
+       <h2 id="Step_6___Add_Launch_Logic_to_Application_js">第六步 - 加入启动逻辑到Application.js</h2> 
+       <p> 接下来,让我们讨论“{appRoot}/app/Application.js” <code>启动(launch)</code> 功能。</p> 
+       <p>”Application.js”是应用程序的核心。你可以“Application.js”同一层找到你的“view”、““store”,和“model”文件夹。它提供了一个方便的方法在 <code>启动(launch)</code> 时触发应用程序加载所有的需要的类。下面是完整的教程 “Application.js” 代码文件。</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.Application', {
+    extend: 'Ext.app.Application',
+
+    name: 'TutorialApp',
+
+    stores: [
+        // TODO: add global / shared stores here
+    ],
+
+    views: [
+        'TutorialApp.view.login.Login',
+        'TutorialApp.view.main.Main'
+    ],
+    launch: function () {
+
+        // It's important to note that this type of application could use
+        // any type of storage, i.e., Cookies, LocalStorage, etc.
+        var loggedIn;
+
+        // Check to see the current value of the localStorage key
+        loggedIn = localStorage.getItem(&quot;TutorialLoggedIn&quot;);
+
+        // This ternary operator determines the value of the TutorialLoggedIn key.
+        // If TutorialLoggedIn isn't true, we display the login window,
+        // otherwise, we display the main view
+        Ext.create({
+            xtype: loggedIn ? 'app-main' : 'login'
+        });
+
+    },
+
+    onAppUpdate: function () {
+        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
+            function (choice) {
+                if (choice === 'yes') {
+                    window.location.reload();
+                }
+            }
+        );
+    }
+});</code></pre> 
+       <p>让我们来检查一下这些代码都在做什么。</p> 
+       <h3 id="requires">requires</h3> 
+       <p>我们已经描述了requires是干嘛的，但让我们接触这个特殊的数组。 对于“application.js中”的目的，我们需要准加载Login或Main图，为此，我们必须要载入“TutorialApp.view.main.Main”和“TutorialApp.view.login.Login”，保证这两个类是可用的。</p> 
+       <h3 id="launch">启动(launch)</h3> 
+       <p>如前所述，<code>launch</code> 时执行的方法是一个函数应用程序加载运行所需的前提。这是一个理想的地方执行关于用户登录/注销申请状态的逻辑。</p> 
+       <h3 id="localStorage_getItem__">localStorage.getItem()</h3> 
+       <p>下一步是检查之前的组件，称为 <code>TutorialLoggedIn</code> 的 localStorage 键。们只是设置 <strong>loggedIn</strong> 变量的值。 如果它不存在, <strong>loggedIn</strong> 将为null。如果它存在,我们之前设置 <code>TutorialLoggedIn</code> 在LoginController中的逻辑就是 <strong>正确</strong> 的。</p> 
+       <h3 id="Create_Ternary">三元创建(Create Ternary)</h3> 
+       <p>大多数编程语言包含条件速记称为三元运算符的一种形式。三元操作符允许您最小化所需的代码数量，如传统的 if/else 语句。 在本例中,我们使用三元运算符， “如果 <strong>loggedIn</strong> 存在 <em>(不为null),</em> 我们就加载Main视图，否则加载Login视图”。然后我们使用 <code>Ext.create</code> 方法来实例化三元运算符的结果。</p> 
+       <h2 id="Step_7___Add_Viewport_Plugin___Logout_Button">第七步 - 加入 Viewport 插件 / Logout 按钮</h2> 
+       <p> 你可能还记得，我们从之前再本教程中删除了 <code>mainView</code> 配置。由于我们没有一个定义好的 <a href="../6.0.1-classic/#!/api/Ext.container.Viewport" data-full-load="true">Viewport</a> ， 你的Main视图就不知道在哪里来渲染它。我们要改变这种混入的<a href="../6.0.1-classic/#!/api/Ext.plugin.Viewport" data-full-load="true">viewport 插件</a>,这样“{appRoot}/app/view/main/Main.js”将作为我们的应用程序的窗口。这种方式,MainView占用所有可用的浏览器内的宽度和高度。就这么简单添加以下一行代码到 “{appRoot}/app/view/main/Main.js”：</p> 
+       <pre mode="javascript" theme="chrome"><code>plugins: 'viewport',</code></pre> 
+       <p>我们也应该向应用程序添加一个注销按钮的到主要导航视图。我们会将它添加到主标签面板的标题,从任何标签的应用程序访问。我们注销按钮将处理 <code>单击</code> 事件使用 <code>onClickButton</code> 方法，在下一节中,我们将配置方法。</p> 
+       <p>我们程序的 <code>{appRoot}/app/view/main/Main.js</code>文件是这样的：</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.view.main.Main', {
+    extend: 'Ext.tab.Panel',
+    xtype: 'app-main',
+
+    requires: [
+        'Ext.plugin.Viewport',
+        'Ext.window.MessageBox',
+
+        'TutorialApp.view.main.MainController',
+        'TutorialApp.view.main.MainModel',
+        'TutorialApp.view.main.List'
+    ],
+
+    controller: 'main',
+    viewModel: 'main',
+    plugins: 'viewport',
+
+    ui: 'navigation',
+
+    tabBarHeaderPosition: 1,
+    titleRotation: 0,
+    tabRotation: 0,
+
+    header: {
+        layout: {
+            align: 'stretchmax'
+        },
+        title: {
+            bind: {
+                text: '{name}'
+            },
+            flex: 0
+        },
+        iconCls: 'fa-th-list',
+        items: [{
+            xtype: 'button',
+            text: 'Logout',
+            margin: '10 0',
+            handler: 'onClickButton'
+        }]
+    },
+
+    tabBar: {
+        flex: 1,
+        layout: {
+            align: 'stretch',
+            overflowHandler: 'none'
+        }
+    },
+
+    responsiveConfig: {
+        tall: {
+            headerPosition: 'top'
+        },
+        wide: {
+            headerPosition: 'left'
+        }
+    },
+
+    defaults: {
+        bodyPadding: 20,
+        tabConfig: {
+            plugins: 'responsive',
+            responsiveConfig: {
+                wide: {
+                    iconAlign: 'left',
+                    textAlign: 'left'
+                },
+                tall: {
+                    iconAlign: 'top',
+                    textAlign: 'center',
+                    width: 120
+                }
+            }
+        }
+    },
+
+    items: [{
+        title: 'Home',
+        iconCls: 'fa-home',
+        // The following grid shares a store with the classic version's grid as well!
+        items: [{
+            xtype: 'mainlist'
+        }]
+    }, {
+        title: 'Users',
+        iconCls: 'fa-user',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }, {
+        title: 'Groups',
+        iconCls: 'fa-users',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }, {
+        title: 'Settings',
+        iconCls: 'fa-cog',
+        bind: {
+            html: '{loremIpsum}'
+        }
+    }]
+});</code></pre> 
+       <h2 id="Step_8___Add_Main_Logic">第八步 - 加入主逻辑</h2> 
+       <p>我们几乎完成了!现在剩下的就是给用户注销的应用程序,这将改变localStorage中的 <code>TutorialLoggedIn</code>键的值。这个逻辑应该发生在“{appRoot}/app/view/main/MainController.js”文件。我们将添加 <code>onClickButton</code> 方法在 ViewController 处理注销操作。<br />这是本教程最后的“MainController.js”:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('TutorialApp.view.main.MainController', {
+    extend: 'Ext.app.ViewController',
+
+    alias: 'controller.main',
+
+    onItemSelected: function (sender, record) {
+        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+    },
+
+    onConfirm: function (choice) {
+        if (choice === 'yes') {
+            //
+        }
+    },
+
+    onClickButton: function () {
+        // Remove the localStorage key/value
+        localStorage.removeItem('TutorialLoggedIn');
+
+        // Remove Main View
+        this.getView().destroy();
+
+        // Add the Login Window
+        Ext.create({
+            xtype: 'login'
+        });
+    }
+});</code></pre> 
+       <p>我们不应该需要很深入,因为它基本上是我们能倒推出 <code>{appRoot}/app/view/login/LoginController.js</code> 的代码。</p> 
+       <p>总结一下这个功能，<code>onClickButton</code> 由按钮调用的函数处理程序生成 “{appMain}/app/view/main/Main.js” 视图。一旦检测到 <code>click</code> 单击事件,采取以下步骤: </p> 
+       <ul> 
+        <li><p>删除 localStorage 键维护用户的登录状态。</p></li> 
+        <li><p>销毁当前视图,这里是 <strong>TutorialApp.view.main.Main</strong>。</p></li> 
+        <li><p>重新创建登录视图。</p></li> 
+       </ul> 
+       <p>现在,您应该能够在浏览器中加载应用程序,看看一个功能完备的登录/注销应用程序。</p> 
+       <h2 id="Wrap_Up">小结</h2> 
+       <p>我们希望你喜欢这个教程。 T这仅仅是一个应用程序的基础,但希望我们介绍的几个概念,让你在未来的项目更容易入手。请随时通过我们的<a href="../../../../www.sencha.com/forum/default.htm">论坛</a>，表明对未来的教程的想法。此外，随意通过支持<a href="../../../../https@support.sencha.com/default.htm">门户网站</a> 或 <a href="../../../../www.sencha.com/forum/default.htm">论坛</a>的问题跟进。</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

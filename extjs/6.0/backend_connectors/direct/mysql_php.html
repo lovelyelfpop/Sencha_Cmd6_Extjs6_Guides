@@ -1,0 +1,807 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Ext Direct 结合 MySQL 和 PHP</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Requirements" title="Requirements">Requirements</a> 
+       <a class="toc-page-h2" href="#Generate_an_Application" title="Generate an Application">Generate an Application</a> 
+       <a class="toc-page-h2" href="#Direct_Proxy" title="Direct Proxy">Direct Proxy</a> 
+       <a class="toc-page-h2" href="#Populating_the_Database" title="Populating the Database">Populating the Database</a> 
+       <a class="toc-page-h2" href="#Creating_the_Query" title="Creating the Query">Creating the Query</a> 
+       <a class="toc-page-h2" href="#Config" title="Config">Config</a> 
+       <a class="toc-page-h2" href="#Router" title="Router">Router</a> 
+       <a class="toc-page-h2" href="#API" title="API">API</a> 
+       <a class="toc-page-h2" href="#Updating_app_json" title="Updating app.json">Updating app.json</a> 
+       <a class="toc-page-h2" href="#Provider" title="Provider">Provider</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">Conclusion</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Ext Direct with PHP and MySQL</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>Most web applications require the use of a client-side and a server-side. The client-side code cannot directly call server-side functions. Instead, the client sends requests, the server handles the requests, and then returns information to the client. Ext Direct allows developers to expose a list of server-side classes that can then be called directly from the client-side code, making the process of building applications much simpler. This allows you to streamline communication between client-side and server-side, resulting in less code, naming parity throughout your environment, and smarter XHR handling. Other benefits include:</p> 
+       <ul> 
+        <li>Ext Direct is platform agnostic, so it works with any server-side language</li> 
+        <li>Multiple Direct function calls are bundled into a single Ajax request (by default, all those sent in the first 10ms) so the server only has to send back a single response</li> 
+        <li>Two “providers” offer multiple ways to communicate with the server: 
+         <ul> 
+          <li>Remoting Provider - Exposes server side functions to the client</li> 
+          <li>Polling Provider - Allows sending events from server to the client via periodic polling</li> 
+         </ul></li> 
+       </ul> 
+       <p>To put this into practice, let’s say you have a server-side class named <code>Dog</code> with a method named <code>bark</code>. When using Ext Direct, you can call <code>Dog.bark()</code> from within your JavaScript code. </p> 
+       <p>To do this, you simply need to provide Ext Direct with a list of your server-side classes and methods and Ext Direct will then act as a proxy, giving you front-end access to your server-side environment.</p> 
+       <p><strong>Note:</strong> There are many variations in server side technology, but this guide uses the Remoting Provider along with PHP and MySQL.</p> 
+       <h2 id="Requirements">Requirements</h2> 
+       <ul> 
+        <li>A server running PHP 5.3+</li> 
+        <li>A server running MySQL 4.1+</li> 
+        <li>Ext JS 4+ (this example uses Ext JS 6)</li> 
+        <li>Sencha Cmd</li> 
+       </ul> 
+       <h2 id="Generate_an_Application">Generate an Application</h2> 
+       <p>To begin, let’s generate an application using Sencha Cmd. Simply open your terminal, and issue the following command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk path/to/ext/ generate app -classic DirectApp ./DirectApp</code></pre> 
+       <p>You should now have a fully functional Classic application. We’ll work with the pre-configured views in this starter app to demonstrate connecting with Ext Direct. </p> 
+       <p><strong>Note:</strong> Your application should be available at <a href="../../../../../localhost/DirectApp">http://localhost/DirectApp</a> or <a href="../../../../../localhost_3A1841/default.htm">http://localhost:1841/</a> if you’re using “sencha app watch”.</p> 
+       <h2 id="Direct_Proxy">Direct Proxy</h2> 
+       <p>Our starter app already has a <a href="../../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">grid</a> displaying names, emails, and phone numbers. However, it is using local data by way of a <a href="../../6.0.1-classic/#!/api/Ext.data.proxy.Memory" data-full-load="true">memory proxy</a>. Let’s begin by opening the “app/store/Personnel.js” file. Once opened, remove the data object and change the proxy type to ‘direct’, and add a <code>directFn</code> of “QueryDatabase.getResults”. This is the function that we will create using PHP. The resulting code should look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('DirectApp.store.Personnel', {
+    extend: 'Ext.data.Store',
+
+    alias: 'store.personnel',
+
+    fields: [
+        'name', 'email', 'phone'
+    ],
+
+    proxy: {
+        type: 'direct',
+        directFn: &quot;QueryDatabase.getResults&quot;
+    },
+
+    autoLoad: true
+ });</code></pre> 
+       <p>Refreshing your app should now result in an empty grid since we have not yet provided any data via our <a href="../../6.0.1-classic/#!/api/Ext.data.proxy.Direct" data-full-load="true">direct proxy</a>.</p> 
+       <h2 id="Populating_the_Database">Populating the Database</h2> 
+       <p>Let’s replace the data with something that already fits the name/email/phone fields. Use this SQL to create a “heroes” table:</p> 
+       <pre mode="javascript" theme="chrome"><code>DROP TABLE IF EXISTS `heroes`;
+
+ CREATE TABLE `heroes` (
+   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+   `name` varchar(70) DEFAULT NULL,
+   `email` varchar(255) DEFAULT NULL,
+   `phone` varchar(10) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ LOCK TABLES `heroes` WRITE;
+ /*!40000 ALTER TABLE `heroes` DISABLE KEYS */;
+
+ INSERT INTO `heroes` (`id`, `name`, `email`, `phone`)
+ VALUES
+      (1,'Thanos','thanos@infgauntlet.com','5555555555'),
+      (2,'Spider Man','peter.parker@thebugle.net','2125555555'),
+      (3,'Daredevil','matt.murdock@nelsonandmurdock.org','2125555555'),
+      (4,'The Maker','reed.richards@therealreedrichards.net','2125555555'),
+      (5,'Rocket','rocket@starlordstinks.com','5555555555'),
+      (6,'Galactus','galactus@worldeater.com','5555555555'),
+      (7,'Silver Surfer','norrin.radd@zenn-la.gov','5555555555'),
+      (8,'Hulk','bruce.banner@hulkout.org','2125555555'),
+      (9,'Squirrel Girl','doreen.green@nannyservices.net','2125555555'),
+      (10,'Thor','thor@odinson.gov','5555555555');
+
+ /*!40000 ALTER TABLE `heroes` ENABLE KEYS */;
+ UNLOCK TABLES;</code></pre> 
+       <p>You should now have a MySQL table populated with 10 records that we’ll display in our grid. Now that we have data, let’s create a connection. </p> 
+       <h2 id="Creating_the_Query">Creating the Query</h2> 
+       <p>In the root directory of our app, create a folder called ‘php’ followed by another one inside it called “classes”. Within “classes” create a file called “QueryDatabase.php”.</p> 
+       <p>We’ll be utilizing PHP’s MySQLi extension which works with MySQL 4.1.3 and above (any version released after mid-2004 will be fine).</p> 
+       <p>We won’t delve too far into the PHP code. Most of it should be pretty straight forward for anyone who has queried MySQL via PHP. We’re defining a new class, declaring some variables, creating a connector, and making a function that gets results from the database.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;?php
+
+ class QueryDatabase {
+
+    private $_db;
+    protected $_result;
+    public $results;
+
+    public function __construct() {
+        $this-&gt;_db = new mysqli('host', 'username' ,'password', 'database');
+
+        $_db = $this-&gt;_db;
+
+        if ($_db-&gt;connect_error) {
+            die('Connection Error: ' . $_db-&gt;connect_error);
+        }
+
+        return $_db;
+    }
+
+    public function getResults($params) {
+        $_db = $this-&gt;_db;
+
+        $_result = $_db-&gt;query(&quot;SELECT name,email,phone FROM heroes&quot;) or
+                   die('Connection Error: ' . $_db-&gt;connect_error);
+
+        $results = array();
+
+        while ($row = $_result-&gt;fetch_assoc()) {
+            array_push($results, $row);
+        }
+
+        $this-&gt;_db-&gt;close();
+
+        return $results;
+    }
+
+ }</code></pre> 
+       <p>To recap, we declared some variables at the top of the class and and made two functions that will help us as we expand our application. </p> 
+       <p>The first function (__construct) creates the database connection instance. If it fails to connect, it will provide a detailed error message. </p> 
+       <p>The second function (getResults) uses the first function to open a connection and queries the database for all of the column fields. We then push all of the results into an array called <code>$results</code> by way of a while statement. Finally, we close the connection to the database and return the results. </p> 
+       <p><strong>Note:</strong> Replace <code>hostname</code>, <code>password</code>, and <code>database</code> with your own credentials.</p> 
+       <h2 id="Config">Config</h2> 
+       <p>Let’s go up a level to the “php” directory and create a new file called “config.php” and add the following code:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;?php
+
+ function get_extdirect_api() {
+
+    $API = array(
+        'QueryDatabase' =&gt; array(
+            'methods' =&gt; array(
+                'getResults' =&gt; array(
+                    'len' =&gt; 1
+                )
+            )
+        )
+    );
+
+    return $API;
+ }</code></pre> 
+       <p>This exposes the functions we want to be made available to our Ext application to call the server. For now, we only need to add the ‘getResults’ method we created above.</p> 
+       <p>That’s all there is to our config.php file for now.</p> 
+       <h2 id="Router">Router</h2> 
+       <p>Next, we’ll need a router to make sure the correct methods are called. The router is where the calls from <code>Ext Direct</code> get routed to the correct class using a Remote Procedure Call (RPC).</p> 
+       <p>While still in the “php” directory, let’s create another file called “router.php” and add the following code. </p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;?php
+ require('config.php');
+
+ class BogusAction {
+    public $action;
+    public $method;
+    public $data;
+    public $tid;
+ }
+
+ $isForm = false;
+ $isUpload = false;
+
+ if (isset($HTTP_RAW_POST_DATA)) {
+    header('Content-Type: text/javascript');
+    $data = json_decode($HTTP_RAW_POST_DATA);
+ }
+ else if(isset($_POST['extAction'])){ // form post
+    $isForm = true;
+    $isUpload = $_POST['extUpload'] == 'true';
+    $data = new BogusAction();
+    $data-&gt;action = $_POST['extAction'];
+    $data-&gt;method = $_POST['extMethod'];
+    $data-&gt;tid = isset($_POST['extTID']) ? $_POST['extTID'] : null;
+    $data-&gt;data = array($_POST, $_FILES);
+ }
+ else {
+    die('Invalid request.');
+ }
+
+ function doRpc($cdata){
+    $API = get_extdirect_api('router');
+
+    try {
+        if (!isset($API[$cdata-&gt;action])) {
+            throw new Exception('Call to undefined action: ' . $cdata-&gt;action);
+        }
+
+        $action = $cdata-&gt;action;
+        $a = $API[$action];
+
+        $method = $cdata-&gt;method;
+        $mdef = $a['methods'][$method];
+
+        if (!$mdef){
+            throw new Exception(&quot;Call to undefined method: $method &quot; .
+                                &quot;in action $action&quot;);
+        }
+
+        $r = array(
+            'type'=&gt;'rpc',
+            'tid'=&gt;$cdata-&gt;tid,
+            'action'=&gt;$action,
+            'method'=&gt;$method
+        );
+
+        require_once(&quot;classes/$action.php&quot;);
+        $o = new $action();
+
+        if (isset($mdef['len'])) {
+            $params = isset($cdata-&gt;data) &amp;&amp; is_array($cdata-&gt;data) ? $cdata-&gt;data : array();
+        }
+ else {
+            $params = array($cdata-&gt;data);
+        }
+
+        array_push($params, $cdata-&gt;metadata);
+
+        $r['result'] = call_user_func_array(array($o, $method), $params);
+    }
+
+    catch(Exception $e){
+        $r['type'] = 'exception';
+        $r['message'] = $e-&gt;getMessage();
+        $r['where'] = $e-&gt;getTraceAsString();
+    }
+
+    return $r;
+ }
+
+ $response = null;
+
+ if (is_array($data)) {
+    $response = array();
+    foreach($data as $d){
+        $response[] = doRpc($d);
+    }
+ }
+ else{
+    $response = doRpc($data);
+ }
+
+ if ($isForm &amp;&amp; $isUpload){
+    echo '&lt;html&gt;&lt;body&gt;&lt;textarea&gt;';
+    echo json_encode($response);
+    echo '&lt;/textarea&gt;&lt;/body&gt;&lt;/html&gt;';
+ }
+ else{
+    echo json_encode($response);
+ }</code></pre> 
+       <p>This code will require the config file containing the methods we defined for API exposure. We also add a <code>doRpc</code> function that will provide important information about our data and responses from the server. </p> 
+       <p><strong>Note:</strong> Slightly more advanced version of router.php (and api.php in the next section) can be found within the “ext/examples/kitchensink/data/direct” folder within the SDK. </p> 
+       <h2 id="API">API</h2> 
+       <p>Finally, let’s create a file called ‘api.php’ and populate it with the following code:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;?php
+ require('config.php');
+ header('Content-Type: text/javascript');
+
+ // convert API config to Ext Direct spec
+ $API = get_extdirect_api();
+ $actions = array();
+
+ foreach ($API as $aname=&gt;&amp;$a) {
+    $methods = array();
+    foreach ($a['methods'] as $mname=&gt;&amp;$m) {
+        if (isset($m['len'])) {
+            $md = array(
+                'name'=&gt;$mname,
+                'len'=&gt;$m['len']
+            );
+        } else {
+            $md = array(
+                'name'=&gt;$mname,
+                'params'=&gt;$m['params']
+            );
+        }
+        if (isset($m['formHandler']) &amp;&amp; $m['formHandler']) {
+            $md['formHandler'] = true;
+        }
+        $methods[] = $md;
+    }
+    $actions[$aname] = $methods;
+ }
+
+ $cfg = array(
+    'url'=&gt;'php/router.php',
+    'type'=&gt;'remoting',
+    'actions'=&gt;$actions
+ );
+
+ echo 'var Ext = Ext || {}; Ext.REMOTING_API = ';
+
+ echo json_encode($cfg);
+ echo ';';</code></pre> 
+       <p>This file uses the “config.php” file we made earlier and sets the output header to JavaScript. This ensures that the browser will interpret any output as JavaScript. It then proceeds to turn our config and router PHP files into JSON so the right method is called when Ext Direct calls it.</p> 
+       <p>Again, the content of “api.php” can be found within the “ext/examples/kitchensink/data/direct” folder within the SDK. </p> 
+       <h2 id="Updating_app_json">Updating app.json</h2> 
+       <p>Next, let’s tell Cmd about “api.php”, the application’s “entry point” to our Direct. The best way to communicate our needs to Cmd is by way of “app.json’s” javascript array. Open “app.json” and find the JS array. Then add “api.php” as a remote inclusion. The resulting array should look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;js&quot;: [
+    {
+        &quot;path&quot;: &quot;php/api.php&quot;,
+        &quot;remote&quot;: true
+    },
+    {
+        &quot;path&quot;: &quot;app.js&quot;,
+        &quot;bundle&quot;: true
+    }
+ ],</code></pre> 
+       <p>If you are not using Cmd to build your application, you can add “api.php” to a script tag in your application’s “index.html” file. Just make sure that “api.php” line comes before the “app.js” line.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+     &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+     &lt;title&gt;App Title&lt;/title&gt;
+     &lt;!--Ext JS--&gt;
+     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;resources/css/ext-all.css&quot;&gt;
+     &lt;script src=&quot;extjs/ext-all-debug.js&quot;&gt;&lt;/script&gt;
+     &lt;!--Application JS→
+     &lt;script src=&quot;php/api.php&quot;&gt;&lt;/script&gt;
+     &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;</code></pre> 
+       <p>Because we’re using the HTML5 document type, we’re allowed to omit the type in a script tag, it assumes that all <code>&lt;script&gt;</code> tags will be JavaScript which helps cut down our bytes.</p> 
+       <h2 id="Provider">Provider</h2> 
+       <p>We’ve made it to our final step to populate the grid with results! We now need to add a provider to the direct manager. As we discussed earlier, there are two providers in the framework, but we’ll be using the remoting api for this particular project. Open your “Application.js” file and add the provider to the direct manager within the launch function. It should like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>launch: function () {
+    Ext.direct.Manager.addProvider(Ext.REMOTING_API);
+ },</code></pre> 
+       <p><strong>Note:</strong> “Ext.REMOTING_API” is the name of the variable that was created by the JavaScript code printed in “api.php”. You can use any variable name you like but it should be the same in both places.</p> 
+       <h2 id="Conclusion">Conclusion</h2> 
+       <p>Refreshing your application should now display our new grid results. As you can see, there’s a little bit of setup involved, but once complete, adding new methods is simply a matter of writing them and adding them to your config file. You then have direct access to your server side methods, which streamlines your code and a whole lot more!</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../../https@s.adroll.com" : "../../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

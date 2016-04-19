@@ -1,0 +1,616 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Sencha 编译器 参考</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="../cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Prerequisites" title="Prerequisites">Prerequisites</a> 
+       <a class="toc-page-h2" href="#Sets_And_The_Current_Set" title="Sets And The Current Set">Sets And The Current Set</a> 
+       <a class="toc-page-h3" href="#Frameworks_and_The_Classpath" title="Frameworks and The Classpath">Frameworks and The Classpath</a> 
+       <a class="toc-page-h2" href="#Generating_Output_with__code_concat__code_" title="Generating Output with &lt;code&gt;concat&lt;/code&gt;">Generating Output with <code>concat</code></a> 
+       <a class="toc-page-h3" href="#Generating_Metadata" title="Generating Metadata">Generating Metadata</a> 
+       <a class="toc-page-h2" href="#Saving_And_Restoring_Sets" title="Saving And Restoring Sets">Saving And Restoring Sets</a> 
+       <a class="toc-page-h2" href="#Set_Operations" title="Set Operations">Set Operations</a> 
+       <a class="toc-page-h3" href="#A_Little_Set_Theory" title="A Little Set Theory">A Little Set Theory</a> 
+       <a class="toc-page-h3" href="#Set__code_include__code__and__code_exclude__code_" title="Set &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt;">Set <code>include</code> and <code>exclude</code></a> 
+       <a class="toc-page-h3" href="#Negating__code_include__code__and__code_exclude__code__with__code__not__code_" title="Negating &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt; with &lt;code&gt;-not&lt;/code&gt;">Negating <code>include</code> and <code>exclude</code> with <code>-not</code></a> 
+       <a class="toc-page-h3" href="#The__code_all__code__Set" title="The &lt;code&gt;all&lt;/code&gt; Set">The <code>all</code> Set</a> 
+       <a class="toc-page-h3" href="#Union" title="Union">Union</a> 
+       <a class="toc-page-h3" href="#Transitivity_Recursive_Union" title="Transitivity/Recursive Union">Transitivity/Recursive Union</a> 
+       <a class="toc-page-h3" href="#Intersect__Strict_" title="Intersect (Strict)">Intersect (Strict)</a> 
+       <a class="toc-page-h3" href="#Intersect__Fuzzy_" title="Intersect (Fuzzy)">Intersect (Fuzzy)</a> 
+       <a class="toc-page-h2" href="#Compiler_Directives" title="Compiler Directives">Compiler Directives</a> 
+       <a class="toc-page-h3" href="#Character_Encoding" title="Character Encoding">Character Encoding</a> 
+       <a class="toc-page-h3" href="#Tagging" title="Tagging">Tagging</a> 
+       <a class="toc-page-h3" href="#Dealing_with__Other__JavaScript_Files" title="Dealing with “Other” JavaScript Files">Dealing with “Other” JavaScript Files</a> 
+       <a class="toc-page-h2" href="#Conditional_Compilation" title="Conditional Compilation">Conditional Compilation</a> 
+       <a class="toc-page-h3" href="#The_debug_directive" title="The debug directive">The debug directive</a> 
+       <a class="toc-page-h3" href="#The_if_directive" title="The if directive">The if directive</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Sencha 编译器 参考</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>One of the major components in <a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> is its compiler, which provides a JavaScript-to-JavaScript, framework-aware optimizer. The optimizer “understands” your high-level Ext JS and Sencha Touch code and produces the smallest, most efficient code possible to support these high-level abstractions.</p> 
+       <h2 id="Prerequisites">Prerequisites</h2> 
+       <p>The following guides are recommended reading before proceeding further:</p> 
+       <ul> 
+        <li><a href="../intro_to_cmd.html">Sencha Cmd 介绍</a></li> 
+        <li><a href="../cmd_compiler.html">对编译器友好的代码原则</a></li> 
+        <li><a href="../extjs/cmd_app.html">Using Sencha Cmd</a></li> 
+       </ul> 
+       <h2 id="Sets_And_The_Current_Set">Sets And The Current Set</h2> 
+       <p>Under the covers, the compiler manages a set of source files and analyzes these files to determine their dependencies. The set of all files is determined by the <code>classpath</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=common,app ...</code></pre> 
+       <p>In this example, the compiler recursively loads <code>&quot;*.js&quot;</code> from the specified list of folders. This set of all files defines the basis for all operations to follow (that is, it defines its “universe”).</p> 
+       <p>The default <code>classpath</code> used by the compiler comes from these configuration properties:</p> 
+       <pre mode="javascript" theme="chrome"><code>${framework.classpath},${workspace.classpath},${app.classpath}</code></pre> 
+       <p>When running high-level commands like <code>sencha app build</code>, Sencha Cmd will know the SDK in use and load the appropriate configuration as well as include the <code>&quot;src&quot;</code> folder of that framework in the <code>classpath</code>. When using the compiler outside of these contexts you will probably need to use the <code>-sdk</code> switch:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/sdk compile -classpath=common,app ...</code></pre> 
+       <p>The compiler’s output commands (for example, <code>concat</code> and <code>metadata</code>) operate on the set of files called the “current set”. The current set starts out equal to the universe of all files, but this can be manipulated using the many commands provided to perform set operations.</p> 
+       <p><strong>Note</strong> With the compiler, you often see rather long command lines using the <code>and</code> command chaining mechanism. Also, in practical use cases, for long command lines, you should consider using <a href="cmd_ant.html">Ant</a> or a “response file”. See <a href="cmd_advanced.html">Sencha Cmd 进阶</a>. </p> 
+       <p>In this guide, all command lines are complete (and potentially long) to keep the examples as clear as possible.</p> 
+       <h3 id="Frameworks_and_The_Classpath">Frameworks and The Classpath</h3> 
+       <p>Ultimately the compiler needs to reach the <code>&quot;src&quot;</code> folder of the desired SDK, but simply adding this to the <code>-classpath</code> will not produce the optimal result. Instead, as shown in the example above, the <code>-sdk</code> switch should be used to inform the compiler which Sencha framework is in use. This will enable the compiler to understand framework-specific things like config properties that imply class dependencies (such as the <code>model</code> config on an <code>Ext.data.Store</code>).</p> 
+       <h2 id="Generating_Output_with__code_concat__code_">Generating Output with <code>concat</code></h2> 
+       <p>A compiler ultimately is all about writing useful output given some number of inputs. The <code>concat</code> command concatenates the source for the current set of files in the appropriate dependency order.</p> 
+       <p>The one required parameter is <code>-out</code>, which indicates the name of the output file. Other options affect the generated file. You can pick one of the following options for compression:</p> 
+       <ul> 
+        <li><code>-compress</code> - Compresses the generated file using the default compressor. Currently this is the same as <code>-yui</code>.</li> 
+        <li><code>-closure</code> - Compresses the generated file using the <a href="../../../../https@developers.google.com/closure/compiler/default.htm">Google Closure Compiler</a>.</li> 
+        <li><code>-yui</code> - Compresses the source file using the <a href="../../../../yui.github.io/yuicompressor/default.htm">YUI Compressor</a>.</li> 
+        <li><code>-strip</code> - Strips comments from the output file, but preserves whitespace. This option converts “ext-all-debug-w-comments.js” into “ext-all-debug.js”.</li> 
+       </ul> 
+       <p>The following command produces three flavors of output from a single read of the source.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile \
+    exclude -namespace Ext.chart and \
+    concat ext-all-nocharts-debug-w-comments.js and \
+    -debug=true \
+    concat -strip ext-all-nocharts-debug.js and \
+    -debug=false \
+    concat -yui ext-all-nocharts.js</code></pre> 
+       <h3 id="Generating_Metadata">Generating Metadata</h3> 
+       <p>The compiler can also generate metadata in many useful ways, for example, the names of all source files, the set of files in dependency order, etc. To see what is available, see the <a href="cmd_metadata.html">Generating Metadata</a> guide.</p> 
+       <h2 id="Saving_And_Restoring_Sets">Saving And Restoring Sets</h2> 
+       <p>When you need to produce multiple output files, it can be very helpful to save the current set for later use:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile \
+    exclude -namespace Ext.chart and \
+    save nocharts and \
+    ...
+    restore nocharts and \
+    ...</code></pre> 
+       <p>The <code>save</code> command takes a snapshot of the current set and stores it under the given name (<code>nocharts</code> in this example).</p> 
+       <p>The simplest use of a saved set is with the <code>restore</code> command, which does the reverse and restores the current set to its state at the time of the <code>save</code>.</p> 
+       <h2 id="Set_Operations">Set Operations</h2> 
+       <p>Many of the commands provided by the compiler are classified as set operations, which are operations that work on and produce sets. In the case of the compiler, this means sets of files or classes. Let’s first take a look at set terminology.</p> 
+       <h3 id="A_Little_Set_Theory">A Little Set Theory</h3> 
+       <p>There are three classic set operations:</p> 
+       <ul> 
+        <li><p>Intersection - The intersection of two sets is a set containing only what was in both sets. <img src="images/set-intersect.png" /></p></li> 
+        <li><p>Union - The union of two sets is a set containing whatever was in either of the sets. <img src="images/set-union.png" /></p></li> 
+        <li><p>Difference - The difference of two sets is the set of all things in the first set that are not in the second set.</p><p><img src="images/set-difference.png" /></p></li> 
+       </ul> 
+       <h3 id="Set__code_include__code__and__code_exclude__code_">Set <code>include</code> and <code>exclude</code></h3> 
+       <p>These two set operations are probably the most common (and flexible) set operations. Both support these basic switches:</p> 
+       <ul> 
+        <li><code>-namespace</code> - Matches files that define types in the specified namespace.</li> 
+        <li><code>-class</code> - Matches a specific defined type.</li> 
+        <li><code>-file</code> - Matches filenames and/or folder names using Ant-style glob patterns (a &quot;*“ matches only filename characters, where ”**&quot; matches folders). </li> 
+        <li><code>-tag</code> - Matches any files with the specified tag(s) (see below).</li> 
+        <li><code>-set</code> - The files that are present in any of the specified named sets.</li> 
+       </ul> 
+       <p>In all of these cases, the next command line argument is a list of match criteria separated by commas. Also, a single <code>exclude</code> or <code>include</code> can have as many switch/value pairs as needed.</p> 
+       <p>So, let’s start with a simple example and build an <code>&quot;ext-all-no-charts-debug-w-comments.js&quot;</code>.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile \
+    exclude -namespace Ext.chart and \
+    ...</code></pre> 
+       <p>What is happening here is that we started with only the Ext JS sources (in <code>&quot;sdk/src&quot;</code>) and they were all part of the “current set”. We then performed a set difference by excluding all files in the <code>Ext.chart</code> namespace. The current set was then equivalent to <code>&quot;ext-all.js&quot;</code> but without use of the Chart package.</p> 
+       <h3 id="Negating__code_include__code__and__code_exclude__code__with__code__not__code_">Negating <code>include</code> and <code>exclude</code> with <code>-not</code></h3> 
+       <p>Both <code>include</code> and <code>exclude</code> support a rich set of matching criteria. This is rounded out by the <code>-not</code> switch, which negates the matching criteria that follows it. This means that the files included or excluded are all those that do not match the criteria.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile -classpath=js \
+    ... \
+    exclude -not -namespace Ext and \
+    ...</code></pre> 
+       <p>The <code>exclude</code> command excludes from the current set any classes that are not in the <code>Ext</code> namespace.</p> 
+       <h3 id="The__code_all__code__Set">The <code>all</code> Set</h3> 
+       <p>In some cases, it is very handy to restore the current set to all files or to the empty set. To do this, simply use <code>include</code> or <code>exclude</code> with the <code>-all</code> switch. To build on the previous example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile -classpath=js \
+    ... \
+    include -all and \
+    ... \
+    exclude -all and \
+    ...</code></pre> 
+       <p>After the <code>include -all</code>, the current set is all files. After <code>exclude -all</code> it is the empty set.</p> 
+       <h3 id="Union">Union</h3> 
+       <p>As shown already, the <code>include</code> command is a form of set union: it performs a union of the current set with the set of matching files. Sometimes it is desirable to not include the current set in the union and only include those file matching the desired criteria. This is what the <code>union</code> command does.</p> 
+       <p>The <code>union</code> command has all of the options of <code>include</code>. Consider this <code>union</code> command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile -classpath=js ... and \
+    union -namespace Ext.grid,Ext.chart and \
+    ...</code></pre> 
+       <p>It is exactly equivalent to this pair of <code>exclude</code> and <code>include</code> commands:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile -classpath=js ... and \
+    exclude -all and \
+    include -namespace Ext.grid,Ext.chart and \
+    ...</code></pre> 
+       <h3 id="Transitivity_Recursive_Union">Transitivity/Recursive Union</h3> 
+       <p>One of the most important set operations is the union of all files explicitly specified and all of the files they require. This is the core of a build process, since this is how you select only the set of files you need. So, if you have a small set of top-level files to start the process, say the class <code>MyApp.App</code>, you can use:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile -classpath=app \
+    union -r -class MyApp.App and \
+    ...</code></pre> 
+       <p>The <code>union</code> command starts with no current set, includes only the class <code>MyApp.App</code> and then proceeds to include all the things it needs recursively. The resulting current set is all files needed by the application.</p> 
+       <h3 id="Intersect__Strict_">Intersect (Strict)</h3> 
+       <p>The <code>intersect</code> command is a bit less flexible in the criteria it supports: it only accepts named sets (using <code>-set</code>).</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk sdk compile -classpath=common,page1/src,page2/src \
+    ... \
+    intersect -set page1,page2 and \
+    ... \</code></pre> 
+       <p>This command intersects the two page sets and produces their intersection as the current set.</p> 
+       <h3 id="Intersect__Fuzzy_">Intersect (Fuzzy)</h3> 
+       <p>When dealing with more than two sets, <code>intersect</code> has an option called <code>-min</code> that sets the threshold for membership in the current set.</p> 
+       <p>For example,</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile ... \
+    intersect -min=2 -set page1,page2,page3 and \
+    ...</code></pre> 
+       <p>This use of <code>intersect</code> produces in the current set all files that are found in two of the three sets specified.</p> 
+       <h2 id="Compiler_Directives">Compiler Directives</h2> 
+       <p>In many situations, it is helpful to embed metadata in files that only the compiler will pick up. To do this, the compiler recognizes special line comments as directives. These directives are single-line comments starting with a @-prefix word. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>// @define Foo.bar.Thing</code></pre> 
+       <p>The list of directives is:</p> 
+       <ul> 
+        <li><code>// @charset</code></li> 
+        <li><code>// @tag</code></li> 
+        <li><code>// @define</code></li> 
+        <li><code>// @require</code></li> 
+       </ul> 
+       <h3 id="Character_Encoding">Character Encoding</h3> 
+       <p>There is no standard way to specify the character encoding of a particular JS file. The Sencha Cmd compiler, therefore, understands the following directive:</p> 
+       <pre mode="javascript" theme="chrome"><code>// @charset ISO-9959-1</code></pre> 
+       <p>This must be the first line of the JS file. The value to the right of <code>charset</code> can be any valid <a href="../../../../docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">Java charset</a> name. The default is “UTF-8”.</p> 
+       <p>The <code>charset</code> directive is used to describe the encoding of an input file to the compiler. This does not affect the encoding of the output file. The content of the input file is converted to Unicode internally.</p> 
+       <h3 id="Tagging">Tagging</h3> 
+       <p>In an ideal world, a namespace would be sufficient to define a set of interest. Sometimes, however, a set can be quite arbitrary and even cross namespace boundaries. Rather than move this issue to the command-line level, the compiler can track arbitrary tags in files.</p> 
+       <p>Consider the example:</p> 
+       <pre mode="javascript" theme="chrome"><code>// @tag foo,bar</code></pre> 
+       <p>This assigns the tags <code>foo</code> and <code>bar</code> to the file. These tags can be used in the <code>include</code>, <code>exclude</code> and <code>union</code> commands with their <code>-tag</code> option.</p> 
+       <h3 id="Dealing_with__Other__JavaScript_Files">Dealing with “Other” JavaScript Files</h3> 
+       <p>In some cases, JavaScript files define classes or objects and require classes or objects that are not expressed in terms of <code>Ext.define</code> and <code>requires</code> or <code>Ext.require</code>. Using <code>Ext.define</code> you can still say that a class <code>requires</code> such things and the dynamic loader will not complain so long as those things exist (if they do not exist, the loader will try to load them, which will most likely fail).</p> 
+       <p>To support arbitrary JavaScript approaches to defining and requiring types, the compiler also provides these directives:</p> 
+       <pre mode="javascript" theme="chrome"><code>// @define Foo.bar.Thing
+// @require Bar.foo.Stuff</code></pre> 
+       <p>These directives set up the same basic metadata in the compiler that tracks what file defines a type and what types that a file requires. In most ways, then, these directives accomplish the same thing as an <code>Ext.define</code> with a <code>requires</code> property.</p> 
+       <p>You can use either of these directives in a file without using the other.</p> 
+       <h2 id="Conditional_Compilation">Conditional Compilation</h2> 
+       <p>The compiler supports conditional compilation directives, such as:</p> 
+       <pre mode="javascript" theme="chrome"><code>foo: function () {
+    //&lt;debug&gt;
+    if (sometest) {
+        Ext.log.warn(&quot;Something is wrong...&quot;);
+    }
+    //&lt;/debug&gt;
+
+    this.bar();
+}</code></pre> 
+       <p>This may be the most useful of the conditional directives, which you can use for code that you want to run in a development environment but not in production. </p> 
+       <p><strong>Important</strong> When you use conditional compilation, remember that unless you always run compiled code, the directives are just comments and the conditional code will be “live” during development.</p> 
+       <h3 id="The_debug_directive">The debug directive</h3> 
+       <p>When compiling, by default, none of the preprocessor statements are examined. So in this case, the result is development mode. If we switch on <code>-debug</code> we get a very similar result, but with the preprocessor active. In fact, the only difference is that the preprocessor directives are removed.</p> 
+       <p>For example, this command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=... \
+    -debug \
+    ...</code></pre> 
+       <p>Generates code like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>foo: function () {
+    if (sometest) {
+        Ext.log.warn(&quot;Something is wrong...&quot;);
+    }
+
+    this.bar();
+}</code></pre> 
+       <p>However, this command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=... \
+    -debug=false \
+    ...</code></pre> 
+       <p>Generates code like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>foo: function () {
+    this.bar();
+}</code></pre> 
+       <p>You can see that the <code>if</code> test and the log statement are both removed.</p> 
+       <h3 id="The_if_directive">The if directive</h3> 
+       <p>The most general directive is <code>if</code>. The <code>if</code> directive tests one or more configured options against the attributes of the directive and removes the code in the block if any are false.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>//&lt;if debug&gt;
+//&lt;/if&gt;</code></pre> 
+       <p>This is equivalent to the <code>&lt;debug&gt;</code> directive.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

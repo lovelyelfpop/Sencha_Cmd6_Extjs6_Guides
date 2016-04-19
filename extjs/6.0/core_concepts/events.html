@@ -1,0 +1,793 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 事件和手势</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#What_Are_Events_" title="什么是事件?">什么是事件?</a> 
+       <a class="toc-page-h2" href="#Listening_to_Events" title="监听事件">监听事件</a> 
+       <a class="toc-page-h2" href="#Adding_Listeners_Later" title="后续添加监听">后续添加监听</a> 
+       <a class="toc-page-h2" href="#Removing_Listeners" title="删除监听">删除监听</a> 
+       <a class="toc-page-h2" href="#Scope_Listener_Option" title="确听监听范围选项">确听监听范围选项</a> 
+       <a class="toc-page-h2" href="#Listening_to_an_Event_Once" title="一次性监听事件">一次性监听事件</a> 
+       <a class="toc-page-h2" href="#Using_a_Buffer_Configuration" title="使用缓冲配置">使用缓冲配置</a> 
+       <a class="toc-page-h2" href="#Firing_Custom_Events" title="触发定制事件">触发定制事件</a> 
+       <a class="toc-page-h2" href="#Listening_for_DOM_Events" title="监听DOM事件">监听DOM事件</a> 
+       <a class="toc-page-h2" href="#Event_Normalization" title="事件标准化">事件标准化</a> 
+       <a class="toc-page-h2" href="#Gestures" title="手势">手势</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>使用事件</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>Ext JS 的组件和类在它们的生命周期的各个点上触发很宽泛的事件.应用中的事件允许你编写代码来响应.事件是Ext JS 中的一个关键概念.</p> 
+       <h2 id="What_Are_Events_">什么是事件?</h2> 
+       <p>事件每当一个你的类发生一些有趣的事时触发.例如, 当 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Ext.Component</a> 渲染到屏幕时, Ext JS 在完成渲染后触发一个事件.我们能通过配置一个简单<code>listeners</code>对象来监听:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>Ext.create('Ext.Panel', {
+    html: 'My Panel',
+    renderTo: Ext.getBody(),
+    listeners: {
+        afterrender: function() {
+            Ext.Msg.alert('We have been rendered');
+        }
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>在这个例子中,当你点击 <b>预览</b> 按钮, 这个面板渲染到屏幕上,紧接接弹出一个定义好的消息.一个类触发的所有事件都在类的API页中列出来了. - 例如, <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a> 现在有 45 个事件.</p> 
+       <h2 id="Listening_to_Events">监听事件</h2> 
+       <p>虽然在某些情况下 <a href="../6.0.1-classic/#!/api/Ext.Component-event-afterrender" data-full-load="true">Ext.Component-event-afterrender</a> 事件很有用,但你可能使用其它事件更为频繁. 例如, <a href="../6.0.1-classic/#!/api/Ext.button.Button" data-full-load="true">Ext.button.Button</a> 按钮当点击时触发 click 事件:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>Ext.create('Ext.Button', {
+    text: 'Click Me',
+    renderTo: Ext.getBody(),
+    listeners: {
+        click: function() {
+            Ext.Msg.alert('I was clicked!');
+        }
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>一个组件可以包含按照需要足够多的事件监听器. 下面的例子中,我们配置用户在鼠标离开监听器中调用 <code>this.hide()</code> 方法来隐藏一个按钮. 然后我们在1秒后又显示这个按钮. 当 <code>this.hide()</code> 调用后,这个按钮隐藏并且 <code>hide</code> 事件触发. 这个 hide 事件触发我们的  <code>hide</code> 监听器,这个监听器将会等待1秒然后再显示这个按钮:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'My Button',
+    listeners: {
+        mouseover: function() {
+            this.hide();
+        },
+        hide: function() {
+            // Waits 1 second (1000ms), then shows the button again
+            Ext.defer(function() {
+                this.show();
+            }, 1000, this);
+        }
+    }
+ });</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>事件监听器每调用一次事件触发一次,因此你可以随意的连续的隐藏和显示这个按钮.</p> 
+       <h2 id="Adding_Listeners_Later">后续添加监听</h2> 
+       <p>在上面的例子中,当类实例化后我们将监听器传给组件.然而,如果我们已经有了一个实例,我们能通过使用这个 <code>on</code> 函数来增加监听器:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'My Button'
+});
+
+button.on('click', function() {
+    Ext.Msg.alert('Event listener attached by .on');
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>你可以通过使用这个 <code>.on</code> 方法指定多个监听器,类似于使用监听器配置,下面重写上面这个设置鼠标离开时事件按钮的可见性的例子:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'My Button'
+});
+
+button.on({
+    mouseover: function() {
+        this.hide();
+    },
+    hide: function() {
+        Ext.defer(function() {
+            this.show();
+        }, 1000, this);
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <h2 id="Removing_Listeners">删除监听</h2> 
+       <p>和我们可以在任意时候添加监听器一样,我们也能删除监听器.这回我们使用这个 <code>un</code> 函数. 删除一个监听器,我们需要这个函数的引用.在上面的例了中,我们一个函数到监听器的对象或这个  <code>on</code> 调用. 这次,我们先创建这个函数然后将它设置为一个叫做 <code>doSomething 的变量</code>, 这个函数包含了我们定制的函数. 因我们初始化时传递这个新的 <code>doSomething</code> 函数给我们的监听器对象,这段代码和前面的开始一样.在最后有一个 <a href="../6.0.1-classic/#!/api/Ext-method-defer" data-full-load="true">Ext-method-defer</a> 函数, 按这个按钮的前3秒弹出一个提示信息.3秒后这个监听器被删除了,这个再按就没有反应了:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>var doSomething = function() {
+    Ext.Msg.alert('listener called');
+};
+
+var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'My Button',
+    listeners: {
+        click: doSomething,
+    }
+});
+
+Ext.defer(function() {
+    button.un('click', doSomething);
+}, 3000);</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <h2 id="Scope_Listener_Option">确听监听范围选项</h2> 
+       <p>监听范围设置处理器函数里面的值.默认的情况下,这是对触发事件的实例的设置.经常来说是这样,但并不是全部,你要的功能.这个功能允许我们调用  <code>this.hide()</code> 方法来隐藏按钮就象我们这个向导早前的第二个例子一样.在下面的这个例子中,我们创建一个按钮和一个面板.我们然后在面板范围内来监听这个按钮的点击事件.为了这么做,我们需要传递一个对象而不是一个处理器函数.这个对象包含忱个处理器函数<strong> 和 </strong>范围:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor">
+	  <pre><code>var panel = Ext.create('Ext.Panel', {
+    html: 'Panel HTML'
+})
+
+var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'Click Me'
+});
+
+button.on({
+    click: {
+        scope: panel,
+        fn: function() {
+            Ext.Msg.alert(this.getXType());
+        }
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>当你运行这个示例时,点击处理器中 <code>this</code> 的值是这个Panel面板的引用. 为看到这个说明,我们弹出这个范围组件的 <code>xtype</code> . 当这个按钮被点击,我们可以看到这个Panel(面板)  <code>xtype</code> 在消息中弹出来了.</p> 
+       <h2 id="Listening_to_an_Event_Once">一次性监听事件</h2> 
+       <p>你可能只需要监听一次某一个事件. 这个事件本身可以触发任意次数,但我们只需要监听一次.下面的代码演示了这种情形:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'Click Me',
+    listeners: {
+        click: {
+            single: true,
+            fn: function() {
+                Ext.Msg.alert('I will say this only once');
+            }
+        }
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <h2 id="Using_a_Buffer_Configuration">使用缓冲配置</h2> 
+       <p>在短时间内接连角发多次事件时,我们减少监听器的次数叫做使用缓冲配置. 在这个例子中我们的按钮点击事件监听器在2秒内只调用一次,而不管你点了多少次:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor">
+	  <pre><code>var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: 'Click Me',
+    listeners: {
+        click: {
+            buffer: 2000,
+            fn: function() {
+                Ext.Msg.alert('I say this only once every 2 seconds');
+            }
+        }
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <h2 id="Firing_Custom_Events">触发定制事件</h2> 
+       <p>通过调用包含事件名称的  <code>fireEvent</code> 来角发你自己的事件. 下面的例子中我们触发一个传递2个参数的叫做 myEvent 的事件 -2个参数是按钮本身和一个1至100的随机数:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor"><pre><code>var button = Ext.create('Ext.Button', {
+    renderTo: Ext.getBody(),
+    text: &quot;Just wait 2 seconds&quot;,
+    listeners: {
+        myEvent: function(button, points) {
+            Ext.Msg.alert('myEvent fired! You score ' + points + ' points');
+        }
+    }
+});
+
+Ext.defer(function() {
+    var number = Math.ceil(Math.random() * 100);
+
+    button.fireEvent('myEvent', button, number);
+}, 2000);</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>我们再次使用了 <code>Ext.defer</code> 来延迟加载我们触发定制事件的函数, 这次是2秒钟. 当事件被触发时,  <code>myEvent</code> 监听器获得监听并且显示我们传过去的参数.</p> 
+       <h2 id="Listening_for_DOM_Events">监听DOM事件</h2> 
+       <p>不是每一个 ExtJS 组件触发每一个事件. 然而,通过确定容器的元素,我们可以附加很多组件可以监听的原生事件. 这个例子中,我们确定为 <a href="../6.0.1-classic/#!/api/Ext.container.Container" data-full-load="true">Ext.container.Container</a>. 容器没有点击事件.那我们给它一个!</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在 Fiddle 中打开</a>
+	<div class="code-editor">
+	  <pre><code>var container = Ext.create('Ext.Container', 
+    renderTo: Ext.getBody(),
+    html: 'Click Me!',
+    listeners: {
+        click: function(){
+            Ext.Msg.alert('I have been clicked!')  
+        }
+    }
+});
+
+container.getEl().on('click', function(){ 
+    this.fireEvent('click', container); 
+}, container);</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>没有第二块代码,容器的点击事件处理器不会被触发.因此我们确定了容器元素为目标并且附加了单击的监听器,我们继承了容器的事件能力.</p> 
+       <h2 id="Event_Normalization">事件标准化</h2> 
+       <p>事件标准化是允许 Ext JS 5+ 应用运行在触屏设备上的关键. 标准化发生在这个背景下并且是一个从标准鼠标事件到它们相等的触点事件的转换.</p> 
+       <p>触点击事件是一个处理在屏幕上定位目标指定的一套动作的 w3c 标准,与输入设备无关(鼠标,触摸,触笔等等)</p> 
+       <p>当你代码需要一个鼠标事件的监听器时,框架按需要附加一个相似的触点事件.例如,如果一个应用尝试附加一个 mousedown 监听器:</p> 
+       <pre mode="javascript" theme="chrome"><code>myElement.on('mousedown', someFunction);</code></pre> 
+       <p>事件处理系统将这个点击转换为一个支持触点事件设备上的 touchstart 事件:</p> 
+       <pre mode="javascript" theme="chrome"><code>myElement.on('touchstart', someFunction);</code></pre> 
+       <p>或者, pointerdown 如果是在支持点事件的设备上:</p> 
+       <pre mode="javascript" theme="chrome"><code>myElement.on('pointerdown', someFunction);</code></pre> 
+       <p>这种转换准备好了,这样你可以不需要额外的代码就可以支持平板和触屏设备.</p> 
+       <p>大多数情况下框架可以在鼠标、触屏和触点输入中做无缝转换.但是,有少数的交互(如鼠标离开mouseover)事件不能在触屏类交互中转换.这些事件需要区别对待的基础方法,下面的章节会说明.</p> 
+       <h2 id="Gestures">手势</h2> 
+       <p>与标准 DOM 事件不同, 元素可以触发人工 “gesture”(手势) 事件. 尽管 Sencha Touch 事件系统形成了事件系统的基础, Sencha Touch 用户可能已经对这些概念已经熟悉.</p> 
+       <p>从浏览器的方面来看, 有3种主要的点、触 和鼠标事件 -  start,(开始),move(移动), 和 end(结束):</p> 
+       <table> 
+        <tbody> 
+         <tr> 
+          <th>Event</th> 
+          <th>Touch</th> 
+          <th>Pointer</th> 
+          <th>Mouse</th> 
+         </tr> 
+         <tr> 
+          <th>Start</th> 
+          <td>touchstart</td> 
+          <td>pointerdown</td> 
+          <td>mousedown</td> 
+         </tr> 
+         <tr> 
+          <th>Move</th> 
+          <td>touchmove</td> 
+          <td>pointermove</td> 
+          <td>mousemove</td> 
+         </tr> 
+         <tr> 
+          <th>Stop</th> 
+          <td>touchend</td> 
+          <td>pointerup</td> 
+          <td></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <p>理解这些事件的顺序和时机,框架可以无缝的转换更为复杂的事件诸如 <code>drag</code>(拖), <code>swipe(滑动)</code>, <code>longpress</code>(长按), <code>pinch(捏)</code>, <code>rotate(旋转)</code>, 和 <code>tap(轻触)</code>. Ext JS 应用能够就象其它事件一样监听这些手势事件,例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.get('myElement').on('longpress', handlerFunction);</code></pre> 
+       <p>原始的l Sencha Touch 手势系统内心来讲是为主要处理触屏事件而设计的. 通过增加对点击类和鼠标事件到手势系统, Ext JS 5 允许任意手势来响应任意类型的输入. 这意味着不管是使用触碰所有手势能被触发,而且所有单点手势 (如tap(轻触), swipe(滑动)等.) 也能象鼠标一样被触发.手势处理系统的这一结果可以在输入类型无关的设备间无缝工作.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

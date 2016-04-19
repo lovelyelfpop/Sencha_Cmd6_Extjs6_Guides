@@ -1,0 +1,918 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Between 6.0.1 &amp; 6.0.2 Modern</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Ext" title="Ext">Ext</a> 
+       <a class="toc-page-h2" href="#Ext_Component" title="Ext.Component">Ext.Component</a> 
+       <a class="toc-page-h2" href="#Ext_Container" title="Ext.Container">Ext.Container</a> 
+       <a class="toc-page-h2" href="#Ext_MessageBox" title="Ext.MessageBox">Ext.MessageBox</a> 
+       <a class="toc-page-h2" href="#Ext_Number" title="Ext.Number">Ext.Number</a> 
+       <a class="toc-page-h2" href="#Ext_Panel" title="Ext.Panel">Ext.Panel</a> 
+       <a class="toc-page-h2" href="#Ext_SegmentedButton" title="Ext.SegmentedButton">Ext.SegmentedButton</a> 
+       <a class="toc-page-h2" href="#Ext_app_Application" title="Ext.app.Application">Ext.app.Application</a> 
+       <a class="toc-page-h2" href="#Ext_data_ResultSet" title="Ext.data.ResultSet">Ext.data.ResultSet</a> 
+       <a class="toc-page-h2" href="#Ext_data_Store" title="Ext.data.Store">Ext.data.Store</a> 
+       <a class="toc-page-h2" href="#Ext_data_TreeStore" title="Ext.data.TreeStore">Ext.data.TreeStore</a> 
+       <a class="toc-page-h2" href="#Ext_data_proxy_Direct" title="Ext.data.proxy.Direct">Ext.data.proxy.Direct</a> 
+       <a class="toc-page-h2" href="#Ext_dataview_IndexBar" title="Ext.dataview.IndexBar">Ext.dataview.IndexBar</a> 
+       <a class="toc-page-h2" href="#Ext_dataview_List" title="Ext.dataview.List">Ext.dataview.List</a> 
+       <a class="toc-page-h2" href="#Ext_grid_Grid" title="Ext.grid.Grid">Ext.grid.Grid</a> 
+       <a class="toc-page-h2" href="#Ext_grid_cell_Base" title="Ext.grid.cell.Base">Ext.grid.cell.Base</a> 
+       <a class="toc-page-h2" href="#Ext_grid_plugin_ColumnResizing" title="Ext.grid.plugin.ColumnResizing">Ext.grid.plugin.ColumnResizing</a> 
+       <a class="toc-page-h2" href="#Ext_list_AbstractTreeItem" title="Ext.list.AbstractTreeItem">Ext.list.AbstractTreeItem</a> 
+       <a class="toc-page-h2" href="#Ext_list_Tree" title="Ext.list.Tree">Ext.list.Tree</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name">
+       <h1>Differences Between Ext JS 6.0.2 Classic and Ext JS 6.0.1 Classic</h1>
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <style>
+.toc-page{
+     display:none !important;
+}
+</style>  
+       <p>We believe developers can glean a lot of useful information by evaluating these diff guides when upgrading their applications. That said, these reports are automated and may not always accurately depict change in these early releases. Unwanted change may be indicated due to doc updates, formatting omissions, etc. We will review and adjust these guides for accuracy prior our GA release. In the meantime, please evaluate these diffs knowing that some level of inaccuracy may exist. If you see anything in this report that is incorrect or undesirable, please report them on the Ext JS 6 forums.</p> 
+       <h1>Added</h1> 
+       <ul> 
+        <li>Ext.chart.sprite.Label</li> 
+       </ul> 
+       <h1>Removed</h1> 
+       <ul> 
+        <li>Ext.chart.label.Label</li> 
+        <li>Ext.chart.TipSurface</li> 
+       </ul> 
+       <h1>Modified</h1> 
+       <h2 id="Ext">Ext</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>resolveResource</li> 
+           </ul></li> 
+          <li>property 
+           <ul> 
+            <li>isEdge</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_Component">Ext.Component</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>fromElement 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>return type is void</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>return type is Ext.Component/null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_Container">Ext.Container</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>control 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>default value is {}</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>default value is null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_MessageBox">Ext.MessageBox</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>getIconCls 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>return type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>return type is String</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_Number">Ext.Number</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>isEqual</li> 
+            <li>log10</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_Panel">Ext.Panel</h2> 
+       <ul> 
+        <li><p>Added</p> 
+         <ul> 
+          <li>cssMixin 
+           <ul> 
+            <li>panel-ui</li> 
+           </ul></li> 
+         </ul></li> 
+        <li><p>Modified</p> 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>header 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>type is Boolean/Object</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>icon 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>type is String</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>iconCls 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>type is String</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>title 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>type is String/Object</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>tools 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>type is Object[]/Ext.panel.Tool[]</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Removed 
+         <ul> 
+          <li>cssVar 
+           <ul> 
+            <li> 
+             <link href="../css/main.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script><script type="text/javascript" src="../ace/ace.js"></script> 
+             <link rel="icon" type="image/x-icon" href="../favicon.ico" /><script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script>er-icon-opacity</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_SegmentedButton">Ext.SegmentedButton</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>forceSelection</li> 
+            <li>value</li> 
+           </ul></li> 
+          <li>event 
+           <ul> 
+            <li>change</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Modified 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>pressedButtons 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>default value is []</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>default value is null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_app_Application">Ext.app.Application</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>mainView 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>type is String/Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>type is String/Object/Ext.Component</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_data_ResultSet">Ext.data.ResultSet</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>metadata</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_data_Store">Ext.data.Store</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>onProxyLoad 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>protected is false</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>protected is true</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_data_TreeStore">Ext.data.TreeStore</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>filterer</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>onProxyLoad 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>protected is false</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+                <li>protected is true</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_data_proxy_Direct">Ext.data.proxy.Direct</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>abort 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_dataview_IndexBar">Ext.dataview.IndexBar</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>event 
+           <ul> 
+            <li>directionchange</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_dataview_List">Ext.dataview.List</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>getScrollDockedItems 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>return type is Array</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>return type is Ext.Component[]</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_grid_Grid">Ext.grid.Grid</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-column-resize-marker-background-color</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_grid_cell_Base">Ext.grid.cell.Base</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>align 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>default value is ‘left’</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>default value is null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_grid_plugin_ColumnResizing">Ext.grid.plugin.ColumnResizing</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>realtime</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_list_AbstractTreeItem">Ext.list.AbstractTreeItem</h2> 
+       <ul> 
+        <li>Added 
+         <ul> 
+          <li>config 
+           <ul> 
+            <li>over</li> 
+           </ul></li> 
+          <li>event 
+           <ul> 
+            <li>itemclick</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Ext_list_Tree">Ext.list.Tree</h2> 
+       <ul> 
+        <li>Modified 
+         <ul> 
+          <li>method 
+           <ul> 
+            <li>getMicro 
+             <ul> 
+              <li>6.0.1 
+               <ul> 
+                <li>return type is Object</li> 
+               </ul></li> 
+              <li>6.0.2 
+               <ul> 
+                <li>return type is Boolean</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+        April 1, 2016
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

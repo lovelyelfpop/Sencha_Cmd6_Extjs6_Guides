@@ -1,0 +1,1153 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Pivot Grid</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Requirements" title="Requirements">Requirements</a> 
+       <a class="toc-page-h3" href="#Ext_JS" title="Ext JS">Ext JS</a> 
+       <a class="toc-page-h3" href="#Sencha_Cmd" title="Sencha Cmd">Sencha Cmd</a> 
+       <a class="toc-page-h2" href="#Installation" title="Installation">Installation</a> 
+       <a class="toc-page-h3" href="#Using_the_Pivot_Grid_with_Sencha_Cmd" title="Using the Pivot Grid with Sencha Cmd">Using the Pivot Grid with Sencha Cmd</a> 
+       <a class="toc-page-h3" href="#Using_the_Pivot_Grid_without_Sencha_Cmd" title="Using the Pivot Grid without Sencha Cmd">Using the Pivot Grid without Sencha Cmd</a> 
+       <a class="toc-page-h2" href="#Using_Pivot_Grid" title="Using Pivot Grid">Using Pivot Grid</a> 
+       <a class="toc-page-h3" href="#Axis" title="Axis">Axis</a> 
+       <a class="toc-page-h3" href="#Aggregation" title="Aggregation">Aggregation</a> 
+       <a class="toc-page-h2" href="#Functionality" title="Functionality">Functionality</a> 
+       <a class="toc-page-h3" href="#Sorting_Results" title="Sorting Results">Sorting Results</a> 
+       <a class="toc-page-h3" href="#Multiple_Grand_Totals" title="Multiple Grand Totals">Multiple Grand Totals</a> 
+       <a class="toc-page-h3" href="#Range_Grouping" title="Range Grouping">Range Grouping</a> 
+       <a class="toc-page-h3" href="#Filtering" title="Filtering">Filtering</a> 
+       <a class="toc-page-h4" href="#Label_filter" title="Label filter">Label filter</a> 
+       <a class="toc-page-h4" href="#_strong_Value_filter__strong_" title="&lt;strong&gt;Value filter&lt;/strong&gt;"><strong>Value filter</strong></a> 
+       <a class="toc-page-h3" href="#Buffered_Rendering" title="Buffered Rendering">Buffered Rendering</a> 
+       <a class="toc-page-h2" href="#Appearance" title="Appearance">Appearance</a> 
+       <a class="toc-page-h3" href="#Layout" title="Layout">Layout</a> 
+       <a class="toc-page-h4" href="#outline" title="outline">outline</a> 
+       <a class="toc-page-h4" href="#compact" title="compact">compact</a> 
+       <a class="toc-page-h3" href="#Totals_Positioning" title="Totals Positioning">Totals Positioning</a> 
+       <a class="toc-page-h3" href="#Renderer" title="Renderer">Renderer</a> 
+       <a class="toc-page-h3" href="#Stateful" title="Stateful">Stateful</a> 
+       <a class="toc-page-h3" href="#Locked_Grids" title="Locked Grids">Locked Grids</a> 
+       <a class="toc-page-h2" href="#Plugins" title="Plugins">Plugins</a> 
+       <a class="toc-page-h3" href="#Range_editor" title="Range editor">Range editor</a> 
+       <a class="toc-page-h3" href="#Drill_down" title="Drill down">Drill down</a> 
+       <a class="toc-page-h3" href="#Exporter" title="Exporter">Exporter</a> 
+       <a class="toc-page-h3" href="#Configurator" title="Configurator">Configurator</a> 
+       <a class="toc-page-h2" href="#Matrix_Class" title="Matrix Class">Matrix Class</a> 
+       <a class="toc-page-h3" href="#Events" title="Events">Events</a> 
+       <a class="toc-page-h3" href="#Base_matrix" title="Base matrix">Base matrix</a> 
+       <a class="toc-page-h3" href="#Local_matrix" title="Local matrix">Local matrix</a> 
+       <a class="toc-page-h3" href="#Remote_matrix" title="Remote matrix">Remote matrix</a> 
+       <a class="toc-page-h2" href="#FAQ" title="FAQ">FAQ</a> 
+       <a class="toc-page-h3" href="#What_is_sent_to_the_server_" title="What is sent to the server?">What is sent to the server?</a> 
+       <a class="toc-page-h3" href="#What_should_the_JSON_response_look_like_" title="What should the JSON response look like?">What should the JSON response look like?</a> 
+       <a class="toc-page-h3" href="#How_do_I_calculate_on_the_server_" title="How do I calculate on the server?">How do I calculate on the server?</a> 
+       <a class="toc-page-h2" href="#Error_Handling" title="Error Handling">Error Handling</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">Conclusion</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Pivot Grid in Ext JS 6</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>The Pivot Grid component enables rapid summarization of large sets of data. It provides a simple way to condense many data points into a format that makes trends and insights more apparent. A classic example is sales data. A company will often have a record of all sales it makes for a given period. This will often encompass thousands of rows of data. The Pivot Grid allows you to see how well each salesperson performed, which cities generate the most revenue, how products perform between cities, etc.</p> 
+       <p><strong>Note:</strong> This guide covers both the <a href="../../../../www.sencha.com/products/extjs/pivot-grid-evaluate/default.htm">stand-alone PivotGrid</a> download used with Ext JS versions prior to 6.x and the PivotGrid package bundled in the Premium version of the Ext JS 6 SDK. This guide assumes you are working with the Ext JS 6 pivot package. The following will need to be substituted throughout the guide when working with the stand-alone download.</p> 
+       <ul> 
+        <li>All “Mz” namespaced classes are namespaced with “Ext” in Ext JS 6</li> 
+        <li>“Mz.aggregate.*” classes are “Ext.pivot.*” in Ext JS 6</li> 
+        <li>The <code>Mz.aggregate.matrix.Abstract.grandTotalKey</code> of ‘_mzgrandtotal_’ is <code>Ext.pivot.matrix.Abstract.grandTotalKey</code> of ‘grandtotal’ in Ext JS 6</li> 
+       </ul> 
+       <p>Imagine you had the following grid panel:</p> 
+       <p><img src="images/pivot_image_0.png" alt="image alt text" /></p> 
+       <p>How could you easily implement a client-side solution that answered the following questions?</p> 
+       <ol> 
+        <li><p>What is John Doe’s total order amount?</p></li> 
+        <li><p>What are the total order amounts by country?</p></li> 
+        <li><p>How did a salespeople perform in a specific year?</p></li> 
+       </ol> 
+       <p>These are the sorts of challenges that the Pivot Grid solves. Let’s take a look at how the answers may be visualized.</p> 
+       <p><img src="images/pivot_image_1.png" alt="image alt text" /></p> 
+       <p><img src="images/pivot_image_2.png" alt="image alt text" /></p> 
+       <p>The Pivot Grid is not bundled within the Ext JS framework, but is easy to require into your application. Whether you’re working with an application generated by Sencha Cmd or with an application structure of your own design, including the Pivot Grid code and styling only requires a couple of steps.</p> 
+       <h2 id="Requirements">Requirements</h2> 
+       <h3 id="Ext_JS">Ext JS</h3> 
+       <p>Sencha Pivot Grid works with the classic toolkit of Sencha Ext JS 6.</p> 
+       <h3 id="Sencha_Cmd">Sencha Cmd</h3> 
+       <p>Sencha Cmd is not required to utilize the Pivot Grid. However, using Cmd allows you to seamlessly include the Pivot Grid package via your application’s <code>app.json</code> file.</p> 
+       <h2 id="Installation">Installation</h2> 
+       <h3 id="Using_the_Pivot_Grid_with_Sencha_Cmd">Using the Pivot Grid with Sencha Cmd</h3> 
+       <p>The Pivot Grid is delivered with full source code that is packaged in a way that makes it easy to deploy to your application’s packages folder.</p> 
+       <p>To include the Pivot Grid in an application that uses the classic toolkit then simply modify your <code>app.json</code> file in your application root directory to require the Pivot Grid package:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+
+    &quot;name&quot;: &quot;YourApp&quot;,
+
+    &quot;requires&quot;: [
+
+        &quot;pivot&quot;
+
+    ],
+
+    &quot;id&quot;: &quot;391a5ff6-2fd8-4e10-84d3-9114e1980e2d&quot;
+
+}</code></pre> 
+       <p>In case of an universal application then simply modify the <code>classic</code> key of <code>app.json</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+
+    &quot;name&quot;: &quot;YourApp&quot;,
+
+    &quot;classic&quot;: {
+        &quot;js&quot;: [
+            {
+                // Remove this entry to individually load sources from the framework.
+                &quot;path&quot;: &quot;${framework.dir}/build/ext-all-rtl-debug.js&quot;
+            }
+        ],
+        &quot;requires&quot;: [
+            &quot;pivot&quot;
+        ]
+    },
+
+    &quot;id&quot;: &quot;391a5ff6-2fd8-4e10-84d3-9114e1980e2d&quot;
+
+}</code></pre> 
+       <h3 id="Using_the_Pivot_Grid_without_Sencha_Cmd">Using the Pivot Grid without Sencha Cmd</h3> 
+       <p>The SDK contains a compiled version of the Pivot Grid’s code that is available for those not using Sencha Cmd. To include the Pivot Grid in this manner, link the following assets from your index page:</p> 
+       <pre mode="javascript" theme="chrome"><code>{unzippedFolder}/packages/pivot/build/pivot.js
+
+{unzippedFolder}/packages/pivot/build/{themeName}/resources/pivot-all.css</code></pre> 
+       <p>Include the following in your application directory:</p> 
+       <pre mode="javascript" theme="chrome"><code>{unzippedFolder}/packages/pivot/build/{themeName}/resources/images/</code></pre> 
+       <h2 id="Using_Pivot_Grid">Using Pivot Grid</h2> 
+       <p>The Pivot Grid relies on two pieces that extend the native grid panel - Axis and Aggregation. Axis allows you to determine row and column placement while aggregation manages the grouping calculations.</p> 
+       <h3 id="Axis">Axis</h3> 
+       <p>Let’s delve into the Pivot Grid by imagining the use case we discussed above. First, we’ll break the dataset into salespeople and years. We can do this by configuring the top and left axis:</p> 
+       <pre mode="javascript" theme="chrome"><code>leftAxis: [{
+
+    width: 80,
+
+    dataIndex: 'salesperson',
+
+    header: 'Salesperson'
+
+}],
+
+topAxis: [{
+
+    dataIndex: 'year',
+
+    header: 'Year',
+
+    direction: 'ASC'
+
+}]</code></pre> 
+       <p>This results in a view like this:</p> 
+       <p><img src="images/pivot_image_3.png" alt="image alt text" /></p> 
+       <h3 id="Aggregation">Aggregation</h3> 
+       <p>Next, we’ll set up the aggregation so the cell values can be appropriately calculated.<br />The Pivot Grid includes many aggregation methods out of the box.</p> 
+       <ul> 
+        <li><p><strong>sum</strong></p></li> 
+        <li><p><strong>average</strong></p></li> 
+        <li><p><strong>min</strong></p></li> 
+        <li><p><strong>max</strong></p></li> 
+        <li><p><strong>count</strong></p></li> 
+        <li><p><strong>groupSumPercentage</strong> - If John sold items in the US and Germany you may want to see what percentage was sold to US from the total sales. The groupSumPercentage method calculates the percentage of the current item sum out of the parent item sum.</p></li> 
+        <li><p><strong>groupCountPercentage</strong> - This is the same as groupSumPercentage, but uses count instead of sum.</p></li> 
+        <li><p><strong>variance</strong></p></li> 
+        <li><p><strong>varianceP</strong></p></li> 
+        <li><p><strong>stdDev</strong></p></li> 
+        <li><p><strong>stdDevP</strong></p></li> 
+       </ul> 
+       <p>You may also provide your own aggregation function for customized processing. The following example demonstrates how to aggregate multiple fields (sales and quantity) by configuring each aggregator in the aggregate array. As you can see, we’re using a custom aggregator for Quantity.</p> 
+       <pre mode="javascript" theme="chrome"><code>aggregate: [{
+
+    measure: 'amount',
+
+    header: 'Sales',
+
+    aggregator: 'sum',
+
+    align: 'right',
+
+    width: 85,
+
+    renderer: Ext.util.Format.numberRenderer('0,000.00')
+
+}, {
+
+    measure: 'orderid',
+
+    header: 'Qnt',
+
+    aggregator: function(records, measure, matrix, rowGroupKey, colGroupKey) {
+
+        // custom aggregator logic
+
+        return records.length;
+
+    },
+
+    align: 'right',
+
+    width: 85,
+
+    renderer: Ext.util.Format.numberRenderer('0,000.00')
+
+}]</code></pre> 
+       <p>The above is a simple example to show what’s possible. If you are writing your own aggregation methods, it’s best to override <code>Ext.pivot.Aggregators</code>. In the override you can add your functions and use the function name as the aggregator config name.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Overrides.pivot.Aggregators', {
+
+    override: 'Ext.pivot.Aggregators',
+
+    myOwnFn: function(records) {
+
+        // custom aggregator logic
+
+        return records.length;
+
+    }
+
+});
+
+// Then you can define your aggregate config in this manner
+
+aggregate: [{
+
+    // ...
+
+    measure:    'field',
+
+    aggregator: 'myOwnFn'
+
+    // ...
+
+}]</code></pre> 
+       <h2 id="Functionality">Functionality</h2> 
+       <h3 id="Sorting_Results">Sorting Results</h3> 
+       <p>When defining a dimension, you can set the following configs to affect sorting results.</p> 
+       <ul> 
+        <li><p><strong>sortable</strong>: True to sort the results (_default is <strong>true</strong>_).</p></li> 
+        <li><p><strong>direction</strong>: You may specify whether you want the results to be sorted (ascending) ASC or (descending) DESC (_default is <strong>ASC</strong>_).</p></li> 
+        <li><p><strong>caseSensitiveSort</strong>: Configure as true to make the filtering match with exact case matching (_default is <strong>true</strong>_).</p></li> 
+        <li><p><strong>sorterFn</strong>: Custom sorter function.</p></li> 
+        <li><p><strong>sortIndex</strong>: You may want to sort your results using the value of another field on the record. Let’s say you have one field “month-name” with values like Jan, Feb, etc. and another field “month-value” with values like 1, 2, etc. It makes sense to have the results from “month-name” (dataIndex) and sort by “month-value” (sortIndex).</p></li> 
+       </ul> 
+       <h3 id="Multiple_Grand_Totals">Multiple Grand Totals</h3> 
+       <p>By default, the Pivot Grid calculates grand totals on rows. You may choose whether or not to display the grand total. Adding multiple grand totals on rows is possible in two ways:</p> 
+       <ul> 
+        <li><p>You can listen to the <code>pivotbuildtotals</code> event, which is fired by the Pivot Grid. The event handler is passed as a parameter, which contains an array of grand total values and the default value. Each object in that array should have a “title” and a “values” array that will be used to generate the totals record.</p></li> 
+        <li><p>You can extend one of the matrix classes and use the template method <code>onBuildTotals</code> to perform the same logic as above.</p></li> 
+       </ul> 
+       <p>The new grand totals that you provide will be styled as the default grand total in the Pivot Grid.</p> 
+       <pre mode="javascript" theme="chrome"><code>// ...
+
+listeners: {
+
+    pivotbuildtotals: function(matrix, totals) {
+
+        var dataAvg = {},
+
+            dataMax = {};
+
+        Ext.Array.each(matrix.model, function(field) {
+
+            var result,
+
+            agg;
+
+            if (field.col &amp;&amp; field.agg) {
+
+                agg = matrix.aggregate.getByKey(field.agg);
+
+                result = matrix.results.get(matrix.grandTotalKey, field.col);
+
+                if (result &amp;&amp; agg) {
+
+                    dataAvg[field.name] = result.calculateByFn(
+                                            'totalavg', 
+                                            agg.dataIndex, 
+                                            Ext.pivot.Aggregators.avg);
+
+                    dataMax[field.name] = result.calculateByFn(
+                                            'totalmax', 
+                                            agg.dataIndex, 
+                                            Ext.pivot.Aggregators.max);
+
+                }
+
+            }
+
+        });
+
+        totals.push({
+
+            title: 'Grand total (avg)',
+
+            values: dataAvg
+
+        }, {
+
+            title: 'Grand total (max)',
+
+            values: dataMax
+
+        });
+
+    }
+
+}
+
+// ...</code></pre> 
+       <h3 id="Range_Grouping">Range Grouping</h3> 
+       <p>Let’s say that you have results for years on one axis and you want to group them as 80‘, 90’, and so on. You can achieve this in two ways:</p> 
+       <ul> 
+        <li><p>You can define a “grouperFn” on the dimension that will will be passed the record and should return the group value (i.e. 80‘, 90’ etc).</p></li> 
+        <li><p>You can define a new field on the source model that has a “convert” function and does the same thing as above.</p></li> 
+       </ul> 
+       <p>grouperFn example:</p> 
+       <pre mode="javascript" theme="chrome"><code>leftAxis: [{
+
+    // ...
+
+    grouperFn: function(record) {
+
+        var dataIndex = this.dataIndex,
+
+            recIndex = record.get(dataIndex);
+
+        if (recIndex &gt;= 1980 &amp;&amp; recIndex &lt; 1990) return &quot;80'&quot;;
+
+        if (recIndex &gt;= 1990 &amp;&amp; recIndex &lt; 2000) return &quot;90'&quot;;
+
+        return 'Rest';
+
+    }
+
+    // ...
+
+}]</code></pre> 
+       <h3 id="Filtering">Filtering</h3> 
+       <p>The Pivot Grid provides two types of filters:</p> 
+       <h4 id="Label_filter">Label filter</h4> 
+       <p>The label filter allows you to filter results by evaluating the values generated for top or left axis results (i.e. begins with, does not begin with, ends with, etc.).</p> 
+       <h4 id="_strong_Value_filter__strong_"><strong>Value filter</strong></h4> 
+       <p>The value filter allows you to filter results by evaluating the values calculated for each top/left axis pair (i.e. equals to, greater than, top 10 items, top 10 percent, top 10 sum, etc.).</p> 
+       <p>The filter is configured on a dimension item of the left or top axis.</p> 
+       <pre mode="javascript" theme="chrome"><code>leftAxis: [{
+
+    // ...
+
+    filter: {
+
+        type: 'value',
+
+        operator: 'top10',
+
+        topOrder: 'top',
+
+        topType: 'sum',
+
+        value: 9500,
+
+        dimensionId: 'agg2'
+
+    }
+
+    // ...
+
+}]</code></pre> 
+       <p>For more information check out the filter classes (Ext.pivot.filter.*).</p> 
+       <h3 id="Buffered_Rendering">Buffered Rendering</h3> 
+       <p>There may be thousands of records in the Pivot store once the Pivot Grid’s calculations have completed. To prevent the DOM from being overwhelmed, you may want to use the BufferedRenderer plugin. BufferedRenderer has been available since version Ext JS 4.2.0. In version 5+ BufferedRendering is used on the grid panel by default.</p> 
+       <p>The BufferedRenderer allows users to scroll through thousand of records without the performance penalties of rendering all of the records on screen at once.</p> 
+       <h2 id="Appearance">Appearance</h2> 
+       <h3 id="Layout">Layout</h3> 
+       <p>Pivot Grid provides two layout types with the <code>viewLayoutType</code> config: outline and compact.</p> 
+       <h4 id="outline">outline</h4> 
+       <p><img src="images/pivot_image_4.png" alt="image alt text" /></p> 
+       <h4 id="compact">compact</h4> 
+       <p><img src="images/pivot_image_5.png" alt="image alt text" /></p> 
+       <h3 id="Totals_Positioning">Totals Positioning</h3> 
+       <p>The position of the grand totals can be configured for both the left and top axis. The total can be set as <code>first</code>, <code>last</code>, or <code>none</code>.</p> 
+       <p>The group totals will always be visible when the group is collapsed. This occurs regardless of what is configured for the totals when you have multiple dimensions configured on one axis. The same configuration will also be used when the group is expanded.</p> 
+       <h3 id="Renderer">Renderer</h3> 
+       <p>Renderers can be used to style the cell or to format the output value. To style a cell you should define the renderer function on the aggregate dimension. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>// ...
+
+aggregator: 'sum',
+
+renderer: function(value, meta, record) {
+
+    if (value &gt; 40000) {
+
+        meta.style = &quot;background-color: yellow;&quot;;
+
+    }
+
+    return Ext.util.Format.number(value, '0,000.00');
+
+}
+
+// ...</code></pre> 
+       <p>Using the above renderer, the resulting grid output would appear as:</p> 
+       <p><img src="images/pivot_image_6.png" alt="image alt text" /></p> 
+       <p>You can also define more complex logic in the renderer function. For instance, the below renderer styles the cell differently when the sum is lower than the average of some other field on the model.</p> 
+       <pre mode="javascript" theme="chrome"><code>// ...
+
+aggregator: 'sum',
+
+renderer: function(value, meta, record, recordIndex, columnIndex, store, view) {
+
+    var grid = view.up('pivotgrid'),
+
+        topItem = grid.getTopAxisItem(meta.column),
+
+        leftItem = grid.getLeftAxisItem(record),
+
+        result;
+
+    if (topItem &amp;&amp; leftItem) {
+
+        result = grid.getMatrix().results.get(leftItem.key, topItem.key);
+
+        // if you already have the avg configured on another 
+        // dimension just fetch the result
+
+        // result.getValue('avg')
+
+        // otherwise calculate the result
+
+        result.calculateByFn('avg', 'some-other-field', Ext.pivot.Aggregators.avg);
+
+        if (value &lt; result.getValue('avg')) {
+
+            meta.style = &quot;background-color: yellow;&quot;;
+
+        }
+
+    }
+
+    return Ext.util.Format.number(value, '0,000.00');
+
+}
+
+// ...</code></pre> 
+       <h3 id="Stateful">Stateful</h3> 
+       <p>Pivot Grids may be configured as stateful by using <code>stateful: true</code> along with a <code>stateId</code>. The state will save all dimension configs that you provided for the left, top, and aggregate. It will additionally recall the state of expanded or collapsed groups.</p> 
+       <h3 id="Locked_Grids">Locked Grids</h3> 
+       <p>You can “lock” left axis columns by setting <code>enableLocking: true</code> on the Pivot Grid.<br />This allows you scroll <strong>just</strong> the top axis generated columns.</p> 
+       <h2 id="Plugins">Plugins</h2> 
+       <h3 id="Range_editor">Range editor</h3> 
+       <p>This plugin allows users to edit Pivot Grid results. Users can double click a Pivot Grid cell which opens a window that contains various fields to update. The following types of edits are available:</p> 
+       <ul> 
+        <li><p><strong>percentage</strong>: The provided value is a percentage that should be used to increase the values on all records behind that cell.</p></li> 
+        <li><p><strong>increment</strong>: The provided value will be added to the existing value on each record.</p></li> 
+        <li><p><strong>overwrite</strong>: The provided value will replace the existing value on each record.</p></li> 
+        <li><p><strong>uniformly</strong>: The provided value will be distributed uniformly on all records.</p></li> 
+       </ul> 
+       <p>The plugin also provides two template methods that you can use to pre / post process the edit: <code>onBeforeRecordsUpdate</code> and <code>onAfterRecordsUpdate</code>.</p> 
+       <h3 id="Drill_down">Drill down</h3> 
+       <p>The drill down plugin allows the user to drill down into Pivot Grid results. Users can double click a Pivot Grid cell which opens a dialog window housing a grid containing records sourced by the cell.</p> 
+       <p>The grid presented in that drill down window may be customized by configuring the <code>columns</code> config on the plugin in the same way as a normal Ext JS grid.</p> 
+       <h3 id="Exporter">Exporter</h3> 
+       <p>The Exporter plugin allows Pivot Grid results export to any Exporter type available in the class system. The plugin uses the <code>exporter</code> package which comes out of the box with an Excel XML Exporter.</p> 
+       <p>The plugin adds two new methods to the Pivot Grid component:</p> 
+       <ul> 
+        <li><p><strong>saveDocumentAs</strong>: If browser supports it then this function will save the exported file</p></li> 
+        <li><p><strong>getDocumentData</strong>: Returns the export document content</p></li> 
+       </ul> 
+       <p>Both functions accept a config object as parameter:</p> 
+       <ul> 
+        <li><p><strong>type</strong>: This is the exporter type (_defaults to <strong>excel</strong>).</p></li> 
+        <li><p><strong>onlyExpandedNodes</strong>: Set to true to export only the expanded groups (_defaults to <strong>false</strong>_).</p></li> 
+        <li><p><strong>showSummary</strong>: Set to false to exclude the totals from the export (_defaults to <strong>true</strong>_).</p></li> 
+        <li><p><strong>title</strong>: Set a title to be shown above column headers in the exported document.</p></li> 
+        <li><p><strong>fileName</strong>: Name of the saved file.</p></li> 
+       </ul> 
+       <p>Each Exporter may come with its own set of additional configs. Those can be provided to the above config object when one of those functions is called.</p> 
+       <p>If <strong>saveDocumentAs</strong> doesn’t work in your browser then it’s preferable to send the XML data to the server and have the server respond back with the proper headers for a downloadable file.</p> 
+       <p>You can provide a function in your Pivot Grid extension like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>// ...
+
+onExport: function() {
+
+    var me = this,
+
+        form = Ext.DomHelper.createDom({
+
+            tag: 'form',
+
+            action: 'url', // this is a URL on your server that receives the xml content
+
+            method: 'POST',
+
+            children: [{
+
+                tag: 'input',
+
+                type: 'hidden',
+
+                name: 'filename',
+
+                value: me.title
+
+            }, {
+
+                tag: 'input',
+
+                type: 'hidden',
+
+                name: 'content',
+
+                value: encodeURIComponent(me.getDocumentData( {type: 'excel'} ))
+
+            }]
+
+        });
+
+    form.submit();
+
+}
+
+// …</code></pre> 
+       <p>Using a PHP script on your server side, you could do something along these lines:</p> 
+       <pre mode="javascript" theme="chrome"><code>// ...
+
+$fileName = $_POST['filename'].'.xml';
+
+$fileContent = urldecode($_POST['content']);
+
+header('Content-Length: '.strlen($fileContent));
+
+header(&quot;Content-Type:   application/vnd.ms-excel; charset=utf-8&quot;);
+
+header(&quot;Content-Disposition: attachment; filename=\&quot;$fileName\&quot;&quot;);
+
+header(&quot;Expires: 0&quot;);
+
+header(&quot;Cache-Control: must-revalidate, post-check=0, pre-check=0&quot;);
+
+header(&quot;Cache-Control: private&quot;, false);
+
+echo $fileContent;
+
+// ...</code></pre> 
+       <h3 id="Configurator">Configurator</h3> 
+       <p>The configurator plugin allows the user to easily configure a Pivot Grid with drag and drop functionality. </p> 
+       <p>Following configs are available on the plugin:</p> 
+       <ul> 
+        <li><p><strong>dock</strong>: The configurator panel is dockable to <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> and <strong>left</strong> of the pivot grid (_defaults to <strong>right</strong>).</p></li> 
+        <li><p><strong>collapsible</strong>: Is this configurator panel collapsible (_defaults to <strong>true</strong>)?</p></li> 
+        <li><p><strong>fields</strong>: An array of available fields to drag and drop on dimensions. The plugin will automatically extract all fields from the store model when using a Local matrix if the fields config is empty.</p></li> 
+       </ul> 
+       <p>If you have custom fields, you’ll need to configure each field with:</p> 
+       <ul> 
+        <li><p><strong>dataIndex</strong>: The field name on the model that provides the field value</p></li> 
+        <li><p><strong>header</strong>: The field title displayed in the view</p></li> 
+        <li><p>any other dimension item config</p></li> 
+       </ul> 
+       <h2 id="Matrix_Class">Matrix Class</h2> 
+       <h3 id="Events">Events</h3> 
+       <p>Most events fired by matrix classes are relayed to the Pivot Grid along with a <code>pivot</code> prefix.</p> 
+       <h3 id="Base_matrix">Base matrix</h3> 
+       <p>The Base matrix class builds the top and left axis items. It also calculates the result for each left / top item pair.</p> 
+       <h3 id="Local_matrix">Local matrix</h3> 
+       <p>Setting your matrix type to <code>local</code> indicates that the browser will be responsible for calculating data. The Local matrix is ideal for small to medium-sized data sets.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.pivot.Grid', {
+
+    // ...
+
+    matrixConfig: {
+
+        type: 'local', // default value
+
+        store: 'YourStore',
+
+        recordsPerJob: 1000,
+
+        timeBetweenJobs: 2
+
+    }
+
+    // ...
+
+});</code></pre> 
+       <p>The Local matrix processes store records in multiple jobs to help prevent overloading the browser when working with medium-sized data sets. You can optionally configure how many records should be processed per job and how long to wait between jobs. </p> 
+       <h3 id="Remote_matrix">Remote matrix</h3> 
+       <p>Calculating large data sets in the browser can take a lot of time and may cause the browser to become unresponsive. If you are working with large data sets, you should use the Remote matrix. The Remote matrix will serialize all of your configs and send them to the server so that you may perform your calculations remotely.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.pivot.Grid', {
+
+    // ...
+
+    matrixConfig: {
+
+        type: 'remote',
+
+        url: 'http://your-backend-url',
+
+        timeout: 3000 // optional config used by the Ajax call
+
+    }
+
+    // ...
+
+});</code></pre> 
+       <h2 id="FAQ">FAQ</h2> 
+       <h3 id="What_is_sent_to_the_server_">What is sent to the server?</h3> 
+       <p>The leftAxis, topAxis, and aggregate are arrays of dimension item objects. These arrays are serialized and sent as params in the Ajax request.</p> 
+       <pre mode="javascript" theme="chrome"><code>params = {
+
+    leftAxis: leftAxis,
+
+    topAxis: topAxis,
+
+    aggregate: aggregate,
+
+    grandTotalKey: 'grandtotal', // the value configured for grandTotalKey on the matrix
+
+    keysSeparator: '#_#' // the value configured for keysSeparator on the matrix
+
+};
+
+// ...
+
+Ext.Ajax.request({
+
+    // ...
+
+    url: me.url,
+
+    timeout: me.timeout,
+
+    jsonData: params,
+
+    // ...
+
+});</code></pre> 
+       <p>Before doing the Ajax call, additional params are collected via the <code>beforerequest</code> event (which is actually relayed to the Pivot Grid as <code>pivotbeforerequest</code>) or via the template method <code>onBeforeRequest</code>.</p> 
+       <h3 id="What_should_the_JSON_response_look_like_">What should the JSON response look like?</h3> 
+       <p>The Pivot Grid expects a JSON response in a specific format. The response should return an array of items for the leftAxis and topAxis and all results for the left / top item pairs. </p> 
+       <p><strong>Note:</strong> The “id” property is very important. An id will be generated if not specified.</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+
+    success: true,
+
+    leftAxis: [{
+
+        key: '-1276511163', // provide your own key but be careful to avoid conflicts with keysSeparator
+
+        value: 'Macromedia',
+
+        // following is the id of the dimension, the one that you 
+        // provided or was generated
+
+        dimensionId: 'leftAxis1'
+
+    }, {
+
+        // when multiple dimensions are provided then the result key 
+        // should be formatted like this
+
+        key: '-1276511163#_#243243', // use the keysSeparator that was sent to the server
+
+        value: 'Steve',
+
+        // following is the id of the dimension, the one that you 
+        // provided or was generated
+
+        dimensionId: 'leftAxis2'
+
+    }],
+
+    topAxis: [{
+
+        // same like leftAxis
+
+    }],
+
+    results: [{
+
+        leftKey: '-1276511163',
+
+        topKey: '34535345435',
+
+        values: {
+
+            agg1: 4345.34, // agg1 is the id of the aggregate dimension
+
+            agg2: 244 // agg2 is the id of the 2nd aggregate dimension defined
+
+        }
+
+    }]
+
+}</code></pre> 
+       <p>A key called “grandtotal” is generated for the matrix in regards to grand total calculations. You can modify this naming scheme by changing the value of <code>matrix.grandTotalKey</code>.</p> 
+       <p>If used on both <code>leftKey</code> and <code>topKey</code>, it represents the grand total for both axis.</p> 
+       <p>If used for <code>leftKey</code>, it represents the grand total for columns for each topKey provided.</p> 
+       <p>If used for <code>topKey</code>, it represents the grand total for rows for each leftKey provided.</p> 
+       <h3 id="How_do_I_calculate_on_the_server_">How do I calculate on the server?</h3> 
+       <p>The examples folder contains a PHP example that shows one approach to server side calculations. That said, you can also author your own implementation in any server-side language as long as it returns the JSON object described above.</p> 
+       <h2 id="Error_Handling">Error Handling</h2> 
+       <p>If server calculations fail, you can send back <code>success: false</code> along with any additional metadata information you may wish to process in the Pivot client. The Remote matrix class will recognize that the call failed and will fire the “requestexception” event, which is relayed to the Pivot Grid as “pivotrequestexception”. </p> 
+       <h2 id="Conclusion">Conclusion</h2> 
+       <p>The Sencha Pivot Grid provides an ideal solution for gleaning summarization from large datasets. Specific fields from the dataset can be highlighted as quantitative roll-ups of the complete dataset, which allows users to visualize the dataset from multiple viewpoints. </p> 
+       <p>For more examples of how to configure the Pivot Grid see the examples folder in the SDK download.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

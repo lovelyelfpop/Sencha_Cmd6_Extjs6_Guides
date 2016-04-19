@@ -1,0 +1,730 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Components</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="drag_drop.html" title="拖拽">拖拽</a></li> 
+        <li class="file"><a href="theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        目录 
+       <a class="toc-page-h2" href="#The_Component_Hierarchy" title="组件结构">组件结构</a> 
+       <a class="toc-page-h2" href="#XTypes_and_Lazy_Instantiation" title="Xtype和延迟实例化">Xtype和延迟实例化</a> 
+       <a class="toc-page-h2" href="#Showing_and_Hiding" title="显示和隐藏">显示和隐藏</a> 
+       <a class="toc-page-h2" href="#Floating_Components" title="浮动组件">浮动组件</a> 
+       <a class="toc-page-h2" href="#Creating_Custom_Components" title="创建定制组件">创建定制组件</a> 
+       <a class="toc-page-h3" href="#Composition_or_Extension" title="创建或继承">创建或继承</a> 
+       <a class="toc-page-h3" href="#Subclassing" title="创建子类">创建子类</a> 
+       <a class="toc-page-h3" href="#Template_Methods" title="模版方法">模版方法</a> 
+       <a class="toc-page-h3" href="#Which_Class_To_Extend" title="基于哪个类来继承">基于哪个类来继承</a> 
+       <a class="toc-page-h4" href="#Component" title="Component组件">Component组件</a> 
+       <a class="toc-page-h4" href="#Container" title="Container容器">Container容器</a> 
+       <a class="toc-page-h4" href="#Panel" title="Panel面板">Panel面板</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Component组件</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>一个 Ext JS 应用的界面由一个或多个叫做 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">组件</a>的控件组成. 所有的组件都是 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Ext.Component</a> 类的子类，这个类可以允许参与包含实例化、渲染、自动大小和位置以及销毁的全自动生命周期管理. Ext JS  默认提供了相当广泛的有用的Component组件,并且任一组件能够简单地扩展出定制的组件.</p> 
+       <h2 id="The_Component_Hierarchy">组件结构</h2> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.container.Container" data-full-load="true">容器</a> 是一种能够包含别的组件的特殊类型的组件.一个典型应用是由许多以叫做组件结构的树形结构嵌套组件构成. 容器负责其下的组件的生命周期管理 ,包含创建、渲染、自动大小 、位置和销毁. 一个典型的应用组件结构开始于一个在顶层的 <a href="../6.0.1-classic/#!/api/Ext.container.Viewport" data-full-load="true">Viewport</a> 组件,该组件包含容器和/或其下面嵌套组件.:</p> 
+       <p><img src="images/component_heirarchy_5.png" alt="Component Hierarchy" /></p> 
+       <p>通过使用容器的<a href="../6.0.1-classic/#!/api/Ext.container.Container-cfg-items" data-full-load="true">items</a>配置属性将子组件加入容器中.  这个示例使用 <a href="../6.0.1-classic/#!/api/Ext-method-create" data-full-load="true">Ext.create()</a> 来实例外二个 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Panel</a>,然后将这些面板作为子组件加入Viewport:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">用Fiddle打开</a>
+	<div class="code-editor"><pre><code>var childPanel1 = Ext.create('Ext.panel.Panel', {
+    title: 'Child Panel 1',
+    html: 'A Panel'
+});
+
+var childPanel2 = Ext.create('Ext.panel.Panel', {
+    title: 'Child Panel 2',
+    html: 'Another Panel'
+});
+
+Ext.create('Ext.container.Viewport', {
+    items: [ childPanel1, childPanel2 ]
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       容器使用 <a href="../6.0.1-classic/#!/api/Ext.layout.container.Container" data-full-load="true">Layout Manager</a>来确定子组件的大小和位置. 更多关于布局和容器的内容请参考<a href="layouts.html">布局和容器向导 </a> 
+       <h2 id="XTypes_and_Lazy_Instantiation">Xtype和延迟实例化</h2> 
+       <p>每个组件都 有一个叫做<a href="../6.0.1-classic/#!/api/Ext.Component-cfg-xtype" data-full-load="true">xtype</a>的符号名称.  例如 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a> 有一个 <code>xtype</code> 符号名称叫 ‘panel’. 上面的例子演示了如何将已经实例化了的组件加入到一个容器中.在大型应用中,这不是理想的情况，因为并不是所有的组件需要立即实例化,依赖于应用的使用情况 有些组件可能从来不需要实例化. 例 如在一个使用了<a href="../6.0.1-classic/#!/api/Ext.tab.Panel" data-full-load="true">Tab Panel</a> 的应用中只有用户点击的标签页的内容需要被渲染.这就是xtype提供的一个功能允许先配置好容器的子组件,但在容器认为需要时才进行实例 化.</p> 
+       <p>下面的示例代码演示延后实例化和使用多标签页Panel(面板)的渲染.每个标签页在渲染时有一个显示一个弹出消息的侦听事件.</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">Editor</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">Preview</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">Open in Fiddle</a>
+	<div class="code-editor"><pre><code>    Ext.create('Ext.tab.Panel', {
+        renderTo: Ext.getBody(),
+        height: 100,
+        width: 200,
+        items: [
+            {
+                // Explicitly define the xtype of this Component configuration.
+                // This tells the Container (the tab panel in this case)
+                // to instantiate a Ext.panel.Panel when it deems necessary
+                xtype: 'panel',
+                title: 'Tab One',
+                html: 'The first tab',
+                listeners: {
+                    render: function() {
+                        Ext.MessageBox.alert('Rendered One', 'Tab One was rendered.');
+                    }
+                }
+            },
+            {
+                // xtype for all Component configurations in a Container
+                title: 'Tab Two',
+                html: 'The second tab',
+                listeners: {
+                    render: function() {
+                        Ext.MessageBox.alert('Rendered One', 'Tab Two was rendered.');
+                    }
+                }
+            }
+        ]
+    });</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>运行这段代码结果是会立即为第一个标签页弹了消息. 这是因为它是默认的激活标签页,如是容器标签页Panel立即实例化和渲染了.</p> 
+       <p><img src="images/lazy_render1.png" alt="Lazy Render 1" /></p> 
+       <p>第二个标签页的弹出框将直到这个标签页被点击才会显示.这个说明了这个标签页直到需要时才被渲染,因而渲染的事件直到该标签页激活时才被触发.</p> 
+       <p><img src="images/lazy_render2.png" alt="Lazy Render 2" /></p> 
+       <h2 id="Showing_and_Hiding">显示和隐藏</h2> 
+       <p>所有的 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">组件</a> 内置肯 <a href="../6.0.1-classic/#!/api/Ext.Component-method-show" data-full-load="true">show</a>和<a href="../6.0.1-classic/#!/api/Ext.Component-method-hide" data-full-load="true">hide</a> 二个方法. 默认的 CSS 方法用于隐藏组件的是 “display: none”, 但是这个可以使用 <a href="../6.0.1-classic/#!/api/Ext.Component-cfg-hideMode" data-full-load="true">hideMode</a> 配置来修改:</p> 
+       <pre mode="javascript" theme="chrome"><code>var panel = Ext.create('Ext.panel.Panel', {
+        renderTo: Ext.getBody(),
+        title: 'Test',
+        html: 'Test Panel',
+        hideMode: 'visibility' // use the CSS visibility property to show and hide this
+component
+    });
+
+    panel.hide(); // hide the component
+
+    panel.show(); // show the component</code></pre> 
+       <h2 id="Floating_Components">浮动组件</h2> 
+       <p>浮动 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">组件</a> 使用CSS的绝对定位功能定位在document的外部, 不参与空喊的布局.一些组件像 <a href="../6.0.1-classic/#!/api/Ext.window.Window" data-full-load="true">Window(窗体)</a> 是默认浮动的,但任意一个组件都可以使用 <a href="../6.0.1-classic/#!/api/Ext.Component-cfg-floating" data-full-load="true">floating(浮动)</a> 的配置设置成可浮动的.</p> 
+       <pre mode="javascript" theme="chrome"><code>var panel = Ext.create('Ext.panel.Panel', {
+    width: 200,
+    height: 100,
+    floating: true, // make this panel an absolutely-positioned floating component
+    title: 'Test',
+    html: 'Test Panel'
+});</code></pre> 
+       <p>上面的代码中实例化一个 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Panel(面板)</a> 但并不渲染. 通常一个组件有一个配置好的 <a href="../6.0.1-classic/#!/api/Ext.Component-cfg-renderTo" data-full-load="true">renderTo</a> , 或者做为一个加入 <a href="../6.0.1-classic/#!/api/Ext.container.Container" data-full-load="true">Containe（容器）</a>的子组件, 但在浮动组件这种情况下这二个都不需要. 浮动组件当它们的<a href="../6.0.1-classic/#!/api/Ext.Component-method-show" data-full-load="true">show</a> 方法第一次调用时自动渲染到 html文档的正文里(html body):</p> 
+       <pre mode="javascript" theme="chrome"><code>panel.show(); // render and show the floating panel</code></pre> 
+       <p>这里是一些其它值得注意的关于浮动组件的配置和方法:</p> 
+       <ul> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.Component-cfg-draggable" data-full-load="true">draggable</a> - 允许在屏幕中拖动一个浮动组件.</li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.Component-cfg-shadow" data-full-load="true">shadow</a> - 自定义一个浮动组件阴影的样子.</li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.Component-method-alignTo" data-full-load="true">alignTo()</a> - 将浮动组件与一个特定的元素对齐.</li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.Component-method-center" data-full-load="true">center()</a> - 在浮动组件的窗口中居中.</li> 
+       </ul> 
+       <h2 id="Creating_Custom_Components">创建定制组件</h2> 
+       <h3 id="Composition_or_Extension">创建或继承</h3> 
+       <p>当我们创建一个新的用户界面类时，我们必须决定这个类是需要有一个属于自己的<a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Component(组件) </a> 或者是继承那个组件.</p> 
+       <p>建议继承一个你需要的功能的一个最接近的基类. 这是因为Ext JS的自动组件生命周期管理功能提供了当一个合适的布局管理器会自动管理组件的按需渲染,自动大小的组件位置,并且自动从一个  <a href="../6.0.1-classic/#!/api/Ext.container.Container" data-full-load="true">Container（容器）</a> 中销毁.</p> 
+       <p>写一个新的组件类,并且以组件结构来管理位置相对于写一个有 Ext JS 组件的新类然后不得不在框架外去渲染它要相对容易.</p> 
+       <h3 id="Subclassing">创建子类,</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.Class" data-full-load="true">类系统</a> 使得继承任意一部分的 Ext JS 框架变得容易.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.Base" data-full-load="true">Ext.Base</a> 是所有 Ext JS 类的构建代码块, 这个类的原型和静态成员会被所有其它类继承.</p> 
+       <p>当你确定要在Ext.Base的最底层增加新的功能时,大多数情况下开发人员要在继承链中开始一些高级的处理.</p> 
+       <p>下面的例子新建一个 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Ext.Component 的子类</a>:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('My.custom.Component', {
+    extend: 'Ext.Component',
+
+    newMethod : function() {
+       //...
+    }
+});</code></pre> 
+       <p>这个例子新建了一个类叫做, My.custom.Component, 它继承了 Ext.Component的所有功能(方法,属性等等),同时可以定义任意新的方法和属性.</p> 
+       <h3 id="Template_Methods">模版方法</h3> 
+       <p>Ext JS 使用 <a href="../../../../en.wikipedia.org/wiki/Template_method_design_pattern">Template method pattern(模版方法模式)</a> 代理子类,子类特定的行为.</p> 
+       <p>这个意味着在组件的生命周期中在继承链条中的每个类在确定的阶段都会&quot;贡献&quot;一些特别的逻辑片段.每个类实现了它自己的动作而允许在继承链条中的其它类可以继续贡献它们自己的逻辑.</p> 
+       <p>一个例子是这个render(渲染)函数. <code>render</code> 是 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Componen(组件)</a>中定义的一个函数. 它负责发起组件的生命周期中的渲染阶段. <code>render</code> 一定不能被覆写,但它在执行过程中会调用 <code>onRender</code> ,这个允许子类实现时增加一个 <code>onRender</code> 方法来执行子类特定的处理. 每个 <code>onRender</code> 方法在&quot;贡献&quot;自己特殊逻辑时要先调用父类的 <code>onRender</code> 方法.</p> 
+       <p>下图说明了 <code>onRender</code> 模版方法的功能. </p> 
+       <p>调用 <code>render</code> 方法 (这个是通过窗口的布局管理器完成). 这个方法不能覆写并且由 Ext 的基础类来实现. 它会调用当前子类实现的 <code>this.onRender</code> 方法(如果实现了). 这会调用叫父类版本等的父类版本. 最终,每个类提供了它自己的功能,控件再返回  <code>render</code> 函数.</p> 
+       <p><img src="images/template_pattern.png" alt="Template Pattern" />这是一个实现了<code>onRender</code> 方法的组件子类示例:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('My.custom.Component', {
+    extend: 'Ext.Component',
+    onRender: function() {
+        this.callParent(arguments); // call the superclass onRender method
+
+        // perform additional rendering tasks here.
+    }
+});</code></pre> 
+       <p>要重点关注的是很多模版方法同时有一个相关的事件. 例如这个 <a href="../6.0.1-classic/#!/api/Ext.Component-event-render" data-full-load="true">render</a> 事件在组件渲染后被触发. 创建一个子类时,然而在类的生命周期重要的阶段还是必须要用模版方法来执行类的逻辑而不是事件. 事件可能被程序挂起，或者被一个处理器停止</p> 
+       <p>下面的模版方法能被组件的子类实现:</p> 
+       <ul> 
+        <li><code>initComponent</code> 这个方法由构造器调用.用于初始化数据,建立配置和关联事件处理器.</li> 
+        <li><code>beforeShow</code> 这个方法在组件显示前调用.</li> 
+        <li><code>onShow</code> 允许在显示操作时增加额外的操作.在调用父类的 onShow 后, 组件会显示.</li> 
+        <li><code>afterShow</code> 这个方法在组件显示完后被调用.</li> 
+        <li><code>onShowComplete</code> 这个方法在 <code>afterShow</code> 方法执行完成后调用.</li> 
+        <li><code>onHide</code> 允许在隐藏操作时增加额外的操作. 调用父类的 onHide后, 组件会隐藏.</li> 
+        <li><code>afterHide</code> 这个方法在组件隐藏完后调用.</li> 
+        <li><code>onRender</code> 允许在渲染阶段执行额外的操作.</li> 
+        <li><code>afterRender</code> 允许在渲染完成后执行额外的操作. 在这个阶段组件的元素会根据配置样式化了,会配置好已增加的 CSS 样式,会配置成可见和配置可用的状态.</li> 
+        <li><code>onEnable</code> 允许启用操作执行的额外操作. 在调用父类的 onEnable后,组件将启用.</li> 
+        <li><code>onDisable</code> 允许禁用操作执行的额外操作. 在调用父类的 onDisable后,组件将禁用.</li> 
+        <li><code>onAdded</code> 允许添加新的组件到容器时执行额外操作. 在这个阶段,组件在父容器的子组件列表中. 在调用父类的 onAdded 时, 将展现 ownerCt 引用, 如果配置了引用, refOwner 将被设置.</li> 
+        <li><code>onRemoved</code> 允许从父容器中删除一个组件时执行的额外操作. 在这个阶段,组件已经从父容器的子组件表表中删除了, 但还没被销毁 (如果父容器的 autoDestroy 设为 true,那就会被销毁, 或者这个删除调用的第二个参数传递为真值). 调用父类的 onRemoved 方法后,  ownerCt 和  refOwner 将不会展现.</li> 
+        <li><code>onResize</code> 允许改变组件大小时执行额外操作.</li> 
+        <li><code>onPosition</code> 允许改变组件位置时执行额外操作.</li> 
+        <li><code>onDestroy</code> 允许销毁操作时执行额外操作. 在调用父类的 onDestroy 方法后, 组件将被销毁.</li> 
+        <li><code>beforeDestroy</code> 这个方法在组件被销毁前调用.</li> 
+        <li><code>afterSetPosition</code> 这个方法在组件位置被设置后调用.</li> 
+        <li><code>afterComponentLayout</code> 这个方法在组件布局完成后调用.</li> 
+        <li><code>beforeComponentLayout</code> 这个方法在组件布局完成前调用.</li> 
+       </ul> 
+       <h3 id="Which_Class_To_Extend">基于哪个类来继承</h3> 
+       <p>选择最好的类来继承主要是效率问题,和基类必须提供哪些能力. 每当有一套UI组件需要渲染和管理时,有一个趋势是总是继承 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a> .</p> 
+       <p>Panel(面板) 类有很多能力:</p> 
+       <ul> 
+        <li>Border(边界)</li> 
+        <li>Header(头部)</li> 
+        <li>Header tools(头部工具)</li> 
+        <li>Footer(底部)</li> 
+        <li>Footer buttons(底部按钮)</li> 
+        <li>Top toolbar(顶端工具栏)</li> 
+        <li>Bottom toolbar(底部工具栏)</li> 
+        <li>Containing and managing child Components(包含和管理子组件)</li> 
+       </ul> 
+       <p>如果不需要这些,那么使用面板(Panel)就是一种资源浪费.</p> 
+       <h4 id="Component">Component</h4> 
+       <p>如果这个需要的UI组件不需要包含其它组件,就是说,如果它只是封装一些HTML表单来实现需求,那么继承 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Ext.Component</a> 是合适的. 例如, 下面这个类是一个包装一个HTML image元素的组件,并允许设置和获取 image的 <code>src</code> 属性. 它同时在图片加载时触发一个 <code>load(加载)</code> 事件:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Ext.ux.Image', {
+    extend: 'Ext.Component', // subclass Ext.Component
+    alias: 'widget.managedimage', // this component will have an xtype of 'managedimage'
+
+    autoEl: {
+        tag: 'img',
+        src: Ext.BLANK_IMAGE_URL,
+        cls: 'my-managed-image'
+    },
+
+    // Add custom processing to the onRender phase.
+    // Add a 'load' listener to the element.
+    onRender: function() {
+        this.autoEl = Ext.apply({}, this.initialConfig, this.autoEl);
+        this.callParent(arguments);
+        this.el.on('load', this.onLoad, this);
+    },
+
+    onLoad: function() {
+        this.fireEvent('load', this);
+    },
+
+    setSrc: function(src) {
+        if (this.rendered) {
+            this.el.dom.src = src;
+        } else {
+            this.src = src;
+        }
+    },
+
+    getSrc: function(src) {
+        return this.el.dom.src || this.src;
+    }
+});</code></pre> 
+       <p>使用方法:</p> 
+       <pre mode="javascript" theme="chrome"><code>var image = Ext.create('Ext.ux.Image');
+
+Ext.create('Ext.panel.Panel', {
+    title: 'Image Panel',
+    height: 200,
+    renderTo: Ext.getBody(),
+    items: [ image ]
+});
+
+image.on('load', function() {
+    console.log('image loaded: ', image.getSrc());
+});
+
+image.setSrc('http://www.sencha.com/img/sencha-large.png');</code></pre> 
+       <p><em>这个例子仅仅用于演示目的 - 这个 <a href="../6.0.1-classic/#!/api/Ext.Img" data-full-load="true">Ext.Img</a> 类在一个真害的应用中应该用于管理图片..</em></p> 
+       <h4 id="Container">Container(容器)</h4> 
+       <p>如果这个需要的UI组件需要包含其它组件,但是不需要<a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Panel(面板)</a> 中前面提到的任一一个特别的能力, 那么 <a href="../6.0.1-classic/#!/api/Ext.container.Container" data-full-load="true">Ext.container.Container</a> 是需要继承的合适的类. 在这个 Container(容器) 层面, 重要的是记住哪个 <a href="../6.0.1-classic/#!/api/Ext.layout.container.Container" data-full-load="true">Ext.layout.container.Container</a> 用于渲染和管理子组件.</p> 
+       <p>Container(容器) 有以下附加的模版方法:</p> 
+       <ul> 
+        <li><code>onBeforeAdd</code> 在添加一个新的子组件前调用. 这个方法传递新的组件,在修改组件时可以用到,或者在以一定方式准备容器时.异常退出添加操作时返回false.</li> 
+        <li><code>onAdd</code> 这个方法在一个新的组件添加完成后被调用. 这个方法传递刚刚已添加的组件.这个方法可能用于更新任意依赖于子组件状态的内部结构.</li> 
+        <li><code>onRemove</code> 这个方法在一个新的组件删除后调用.这个方法传递已经删除的组件.这个方法可能用于更新任意依赖于子组件状态的内部结构.</li> 
+        <li><code>beforeLayout</code> 这个方法在容器布局(如果需要并渲染)完它的子组件前调用.</li> 
+        <li><code>afterLayout</code> 这个方法在容器布局(如果需要并渲染)完它的子组件后调用.</li> 
+       </ul> 
+       <h4 id="Panel">Panel(面板)</h4> 
+       <p>如果需要的UI组件必须有一个头部、底部或者是工具栏,那么 Ext.panel.Panel 是个合适的类来继承.</p> 
+       <p><em>重要</em>: Panel(面板)是一个Container(容器). 务必记住<a href="../6.0.1-classic/#!/api/Ext.layout.container.Container" data-full-load="true">Layout(布局)</a>用于渲染和管理其中的子组件.</p> 
+       <p>继承自 Ext.panel.Panel 的类通常与应用高度相关并且一般来说用于集合在一个配置的布局中的其它UI 组件 (通常是容器Containers,或者是表单字段), 并且提供意味着操作包含在其中的组件和在<a href="../6.0.1-classic/#!/api/Ext.panel.Panel-cfg-tbar" data-full-load="true">tbar</a>和<a href="../6.0.1-classic/#!/api/Ext.panel.Panel-cfg-bbar" data-full-load="true">bbar</a>中的控件.</p> 
+       <p>Panels(面板) 有如下附加的模版方法:</p> 
+       <ul> 
+        <li><code>afterCollapse</code> 这个方法在面板收缩后调用.</li> 
+        <li><code>afterExpand</code> 这个方法在面板展开后调用</li> 
+        <li><code>onDockedAdd</code> 这个方法在一个加入面板的子组件停靠后调用</li> 
+        <li><code>onDockedRemove</code> 这个方法在一个停靠子组组从面板中删除后调用</li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

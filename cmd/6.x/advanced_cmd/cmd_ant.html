@@ -1,0 +1,595 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Ant 集成</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="../cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Prerequisites" title="Prerequisites">Prerequisites</a> 
+       <a class="toc-page-h2" href="#Ant" title="Ant">Ant</a> 
+       <a class="toc-page-h2" href="#x_sencha_init" title="x-sencha-init">x-sencha-init</a> 
+       <a class="toc-page-h2" href="#x_sencha_command" title="x-sencha-command">x-sencha-command</a> 
+       <a class="toc-page-h2" href="#x_extend_classpath" title="x-extend-classpath">x-extend-classpath</a> 
+       <a class="toc-page-h2" href="#x_generate" title="x-generate">x-generate</a> 
+       <a class="toc-page-h3" href="#Templates" title="Templates">Templates</a> 
+       <a class="toc-page-h3" href="#Merge_Files" title="Merge Files">Merge Files</a> 
+       <a class="toc-page-h3" href="#Sacred_Files" title="Sacred Files">Sacred Files</a> 
+       <a class="toc-page-h3" href="#Parameters" title="Parameters">Parameters</a> 
+       <a class="toc-page-h3" href="#x_generate_file_tofile" title="x-generate file tofile">x-generate file tofile</a> 
+       <a class="toc-page-h3" href="#x_generate_file_todir" title="x-generate file todir">x-generate file todir</a> 
+       <a class="toc-page-h3" href="#x_generate_dir_todir" title="x-generate dir todir">x-generate dir todir</a> 
+       <a class="toc-page-h2" href="#x_compress_js" title="x-compress-js">x-compress-js</a> 
+       <a class="toc-page-h2" href="#x_compress_css" title="x-compress-css">x-compress-css</a> 
+       <a class="toc-page-h2" href="#x_strip_js" title="x-strip-js">x-strip-js</a> 
+       <a class="toc-page-h2" href="#x_get_env" title="x-get-env">x-get-env</a> 
+       <a class="toc-page-h2" href="#x_escape" title="x-escape">x-escape</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Ant 集成</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> is a cross-platform command line tool. Under the covers Sencha Cmd uses <a href="../../../../ant.apache.org/default.htm">Apache Ant</a> to provide much of its functionality. This guide describes the most important pieces of this interface in to Sencha Cmd.</p> 
+       <h2 id="Prerequisites">Prerequisites</h2> 
+       <p>The following guides are recommended reading before proceeding further:</p> 
+       <ul> 
+        <li><a href="../intro_to_cmd.html">Sencha Cmd 介绍</a></li> 
+        <li><a href="../extjs/cmd_app.html">Using Sencha Cmd</a></li> 
+       </ul> 
+       <h2 id="Ant">Ant</h2> 
+       <p><a href="../../../../ant.apache.org/default.htm">Apache Ant</a> has long been a pillar of the Java development community, but at its core, Ant is an XML-based, cross-platform scripting platform. It is a “platform” rather than a “language” because Ant can easily incorporate libraries of code in JAR form, or you can use one of the many supported scripting languages as part of your Ant script.</p> 
+       <p>Ant can, of course, call other programs (like Sencha Cmd), passing arguments and processing exit codes, but what Ant is particularly good at is manipulating files. This is because Ant was designed for use in build scripts.</p> 
+       <p>As touched on in the <a href="cmd_advanced.html">Sencha Cmd 进阶</a> guide, Sencha Cmd is delivered as a JAR file and it exposes its core functionality as an Ant Library (or <code>antlib</code>). The command line level of Sencha Cmd, as well as SDK-specific processing are implemented on top of this layer. So anything you can do in one, you can do in the other.</p> 
+       <p><img src="images/sencha-command-diagram.png" /></p> 
+       <p>If you are using Ant, it is better to interface to Sencha Cmd at this level rather than make repeated calls through the command line interface.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;taskdef resource=&quot;com/sencha/ant/antlib.xml&quot; 
+         classpath=&quot;${cmd.dir}/sencha.jar&quot;
+         loaderref=&quot;senchaloader&quot;/&gt;</code></pre> 
+       <p>When an Ant script executes using <code>sencha ant ...</code>, the <code>cmd.dir</code> property defines on entry. Otherwise, the Ant script or the executing party must determine <code>cmd.dir</code> in an appropriate way for the local machine.</p> 
+       <h2 id="x_sencha_init">x-sencha-init</h2> 
+       <p>This task loads the configuration properties from <code>&quot;sencha.cfg&quot;</code> files based on the current directory. This is typically done by Ant scripts that require Sencha Cmd and are specific to builds of Sencha applications.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-sencha-init/&gt;</code></pre> 
+       <p>This will also load any Ant tasks defined by any available Sencha Cmd “extensions” such as <code>x-compass-compile</code>.</p> 
+       <h2 id="x_sencha_command">x-sencha-command</h2> 
+       <p>This command is equivalent to the command line interface. The arguments are placed in the body text of this tag, one argument per line. Spaces are trimmed at both ends, so indent level is not significant. A good use of indentation is to clarify the command structure, like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-sencha-command&gt;
+    compile
+        --classpath=app,sdk/src
+        page
+            --in=app/index.html
+            --out=build/index.html
+&lt;/x-sencha-command&gt;</code></pre> 
+       <p>Because each line is an argument, spaces are not special and should not be escaped or quoted.</p> 
+       <p>Ant properties are expanded, so the following (fairly conventional style) also works:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-sencha-command&gt;
+    compile
+        --classpath=${app.dir},${sdk.dir}/src
+        page
+            --in=${app.dir}/index.html
+            --out=${build.dir}/index.html
+&lt;/x-sencha-command&gt;</code></pre> 
+       <p>Finally, comments are supported so you can document the command or disable parts temporarily without deleting them. Also, blank lines are skipped:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-sencha-command&gt;
+    compile
+        # Include the app folder and the sdk/src folder
+        --classpath=${app.dir},${sdk.dir}/src
+
+        # Turn off debugging (comment next line to leave debug enabled):
+        # --debug=false
+
+        page
+            # The application main page:
+            --in=${app.dir}/index.html
+
+            # The compiled page goes in build folder along with &quot;all-classes.js&quot;:
+            --out=${build.dir}/index.html
+&lt;/x-sencha-command&gt;</code></pre> 
+       <h2 id="x_extend_classpath">x-extend-classpath</h2> 
+       <p>This task extends the classpath of the current ClassLoader. This is sometimes necessary to include <code>&quot;sencha.jar&quot;</code> in the classpath but can be useful in other cases where an Ant script is launched and the classpath must be extended dynamically.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-extend-classpath&gt;
+    &lt;jar path=&quot;${cmd.dir}/sencha.jar/&gt;
+&lt;/x-extend-classpath&gt;</code></pre> 
+       <p>As many JAR’s as needed can be listed.</p> 
+       <h2 id="x_generate">x-generate</h2> 
+       <p>This task generates output from templates in two basic modes: <code>file</code> and <code>dir</code>. That is, the template generator can be given a single source file or a source folder.</p> 
+       <h3 id="Templates">Templates</h3> 
+       <p>The name of the source file determines if it should be processed as a “template”:</p> 
+       <ul> 
+        <li><code>.tpl</code> = <a href="../../extjs/apidocs/#!/api/Ext.XTemplate" data-full-load="true">Ext.XTemplate</a></li> 
+       </ul> 
+       <p>For example, <code>&quot;foo.js.tpl&quot;</code> would be used to generate <code>&quot;foo.js&quot;</code> using the XTemplate engine.</p> 
+       <h3 id="Merge_Files">Merge Files</h3> 
+       <p>In cases where a file may need to be changed from its original generated content (i.e., regenerate the target), the <code>&quot;.merge&quot;</code> suffix is very helpful. The primary use case for this is an application’s <code>&quot;app.js&quot;</code> file.</p> 
+       <p>When processing a <code>&quot;.merge&quot;</code> file, <code>x-generate</code> performs the following steps:</p> 
+       <ol> 
+        <li>Move the target file (for example, <code>&quot;app.js&quot;</code>) to the side (for example, as <code>&quot;app.js.$old&quot;</code>).</li> 
+        <li>Generate the new version of the file in the target location (for example, <code>&quot;app.js&quot;</code>).</li> 
+        <li>Using a data store, regenerate the base version (for example, <code>&quot;app.js.$base&quot;</code>). That is, the version generated the last time.</li> 
+        <li>Perform a 3-way merge on these files and update the target file.</li> 
+        <li>Report any merge conflicts.</li> 
+       </ol> 
+       <p>It is often the case (as with <code>&quot;app.js&quot;</code>) that a <code>&quot;.merge&quot;</code> file is also a <code>&quot;.tpl&quot;</code>. In the case of <code>&quot;app.js&quot;</code>, for example, the source file is <code>&quot;app.js.tpl.merge&quot;</code>.</p> 
+       <p>To enable this mode, <code>x-generate</code> must be given a <code>store</code> attribute which points at the data store (a JSON file).</p> 
+       <h3 id="Sacred_Files">Sacred Files</h3> 
+       <p>When generating code, files fall into two basic categories: machine maintained and user maintained. It is preferable, however, to provide a starter or skeleton file at initial generation even for files that will be ultimately user maintained.</p> 
+       <p>This is called a “sacred” file and is identified by the source file extension of <code>&quot;.default&quot;</code>. That is, the source file is just a default and will not replace an existing file.</p> 
+       <p>For example, one might want to generate a starter <code>&quot;readme.txt&quot;</code> file but preserve whatever the user might have changed during a later regeneration. To do so, the source file would be named <code>readme.txt.default</code>.</p> 
+       <p>There are times when a sacred file is also a template. This is done by adding both extensions, for example, <code>&quot;readme.txt.tpl.default&quot;</code>. This <code>&quot;readme.txt&quot;</code> file is a sacred file that is initially generated from a template.</p> 
+       <h3 id="Parameters">Parameters</h3> 
+       <p>Template generation requires data, or parameters. The simplest form of parameter uses the <code>param</code> attribute:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate ...&gt;
+    &lt;param name=&quot;bar&quot; value=&quot;42&quot; /&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p>Parameters can also be loaded from a file, like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate ...&gt;
+    &lt;load file=&quot;data.properties&quot;/&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p>The following file types are understood automatically:</p> 
+       <ul> 
+        <li><code>&quot;.cfg&quot;</code> or <code>&quot;.properties&quot;</code> = A standard Java Properties file.</li> 
+        <li><code>&quot;.json&quot;</code> = A JSON data file.</li> 
+       </ul> 
+       <p>If the file does not have one of these extensions, but is a properties file or JSON, you can specify the <code>type</code> attribute as <code>json</code> or <code>properties</code>, like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate ...&gt;
+    &lt;load file=&quot;data.props&quot; type=&quot;properties&quot; /&gt;
+    &lt;load file=&quot;data&quot; type=&quot;json&quot; /&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p><strong>Note.</strong> Parameters are applied in the order specified. Duplicate names are replaced if they are encountered.</p> 
+       <h3 id="x_generate_file_tofile">x-generate file tofile</h3> 
+       <p>The simplest form of <code>x-generate</code> is using the <code>file</code> attribute to transform a single template file to a specified output file:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate file=&quot;foo.js.tpl&quot; tofile=&quot;build/foo.js&quot;&gt;
+    &lt;param name=&quot;bar&quot; value=&quot;42&quot; /&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p>The source filename determines how the process proceeds (and which template engine to use and if it is sacred), but that is all.</p> 
+       <h3 id="x_generate_file_todir">x-generate file todir</h3> 
+       <p>In many cases, you can leave off the target filename and just specify the folder, like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate file=&quot;foo.js.tpl&quot; todir=&quot;build&quot;&gt;
+    &lt;param name=&quot;bar&quot; value=&quot;42&quot; /&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p>This generates <code>&quot;foo.js&quot;</code> (using XTemplate) in the <code>&quot;build&quot;</code> folder.</p> 
+       <p>Beyond avoiding redundancy, this form also allows the source filename to be a template, for example:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate file=&quot;{name}.js.tpl&quot; todir=&quot;build&quot;&gt;
+    &lt;param name=&quot;name&quot; value=&quot;foobar&quot; /&gt;
+    &lt;param name=&quot;bar&quot; value=&quot;42&quot; /&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p>The source file exists with the specified name (that is, <code>&quot;{name}.js.tpl&quot;</code>), but this name is transformed using the XTemplate engine and the provided parameters to determine the target filename.</p> 
+       <p>In the above case, <code>&quot;foobar.js&quot;</code> is generated in the <code>build</code> directory.</p> 
+       <h3 id="x_generate_dir_todir">x-generate dir todir</h3> 
+       <p>The final form of <code>x-generate</code> operates on a source folder, and generates content in the target folder, for example:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-generate dir=&quot;templates/foo&quot; todir=&quot;build/foo&quot;&gt;
+    &lt;param name=&quot;bar&quot; value=&quot;42&quot; /&gt;
+    &lt;load file=&quot;data.json&quot;/&gt;
+&lt;/x-generate&gt;</code></pre> 
+       <p>In this form, the generator recursively reads files and sub-folders in <code>&quot;templates/foo&quot;</code> and applies the appropriate template engine. It also preserves sacred files. All file and folder names are processed as XTemplate templates.</p> 
+       <h2 id="x_compress_js">x-compress-js</h2> 
+       <p>Compresses JavaScript source according to the following options (attributes):</p> 
+       <ul> 
+        <li><code>srcfile</code>: The source file to compress.</li> 
+        <li><code>outfile</code>: The output file to generate (defaults to srcfile).</li> 
+        <li><code>charset</code>: The charset of the input/output files.</li> 
+        <li><code>header</code>: Optional text to include in a comment block at the start of the file.</li> 
+        <li><code>linebreak</code>: The column number at which to break lines (default is -1, to not break lines).</li> 
+        <li><code>obfuscate</code>: False to not obfuscate local symbols (default is true).</li> 
+        <li><code>disableoptimizations</code>: True to disable all built-in optimizations.</li> 
+        <li><code>preservesemi</code>: True to preserve all semicolons.</li> 
+        <li><code>verbose</code>: True to enable extra diagnostic messages.</li> 
+       </ul> 
+       <h2 id="x_compress_css">x-compress-css</h2> 
+       <p>Compresses CSS source according to the following options (attributes):</p> 
+       <ul> 
+        <li><code>srcfile</code>: The source file to compress.</li> 
+        <li><code>outfile</code>: The output file to generate (defaults to srcfile).</li> 
+        <li><code>charset</code>: The charset of the input/output files.</li> 
+        <li><code>header</code>: Optional text to include in a comment block at the start of the file.</li> 
+        <li><code>linebreak</code>: The column number at which to break lines.</li> 
+        <li><code>verbose</code>: True to enable extra diagnostic messages.</li> 
+       </ul> 
+       <h2 id="x_strip_js">x-strip-js</h2> 
+       <p>This task removes comments (line and/or block) from a JS file. The following options are supported:</p> 
+       <ul> 
+        <li><code>srcfile</code>: The source file to strip</li> 
+        <li><code>outfile</code>: The output file to generate (defaults to srcfile).</li> 
+        <li><code>header</code>: Optional text to include in a comment block at the start of the file.</li> 
+        <li><code>blockcomments</code>: True (the default) to strip block comments (&quot;/* … */&quot;). </li> 
+        <li><code>linecomments</code>: True (the default) to strip line comments (“//”).</li> 
+        <li><code>keepfirstcomment</code>: True (the default) to keep the first comment in the JS file. This is typically a copyright.</li> 
+        <li><code>whitespace</code>: True to also strip whitespace.</li> 
+       </ul> 
+       <h2 id="x_get_env">x-get-env</h2> 
+       <p>Stores an environment variable value in the specified property. The name of the environment variable is first matched for exact case, but if no exact case match is found, it will pick a match ignoring case if one exists.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-get-env name=&quot;PATH&quot; property=&quot;env.path&quot;/&gt;</code></pre> 
+       <p>This should be preferred over the “properties” task to read environment variables because that reflects the exact case of the variables as Ant properties which are case sensitive but environment variables (like “Path”) are case insensitive at least on Windows.</p> 
+       <h2 id="x_escape">x-escape</h2> 
+       <p>This task escapes a string and stores the escaped string in a specified property.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;x-escape string=&quot;${some.text}&quot; property=&quot;some.text.js&quot; type=&quot;json&quot;/&gt;
+&lt;x-escape string=&quot;${some.text}&quot; property=&quot;some.text.xml&quot; type=&quot;xml&quot;/&gt;</code></pre> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

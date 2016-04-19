@@ -1,0 +1,719 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | 资源管理</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        内容导航 
+       <a class="toc-page-h2" href="#Introduction" title="Introduction">介绍</a> 
+       <a class="toc-page-h2" href="#Setup" title="Setup">安装</a> 
+       <a class="toc-page-h2" href="#Application_Resources" title="Application Resources">应用程序资源(Resources)</a> 
+       <a class="toc-page-h3" href="#app_json" title="app.json">app.json</a> 
+       <a class="toc-page-h3" href="#Themes" title="Themes">主题</a> 
+       <a class="toc-page-h4" href="#Resource_Composition" title="Resource Composition">资源组成</a> 
+       <a class="toc-page-h3" href="#Code_Packages" title="Code Packages">代码包(Code Packages)</a> 
+       <a class="toc-page-h2" href="#Package_Resources" title="Package Resources">包(Package)的资源</a> 
+       <a class="toc-page-h3" href="#package_json" title="package.json">package.json</a> 
+       <a class="toc-page-h3" href="#Package_Builds" title="Package Builds">构建(build) 包</a> 
+       <a class="toc-page-h3" href="#Resource_Paths" title="Resource Paths">资源文件路径</a> 
+       <a class="toc-page-h2" href="#Universal_Applications_and_Build_Profiles" title="Universal Applications and Build Profiles">通用(Universal) 应用程序 和 用于构建的配置文件(Build Profiles)</a> 
+       <a class="toc-page-h3" href="#app_json" title="app.json">app.json</a> 
+       <a class="toc-page-h4" href="#builds" title="builds">builds</a> 
+       <a class="toc-page-h4" href="#output" title="output">output</a> 
+       <a class="toc-page-h4" href="#Resources" title="Resources">Resources</a> 
+       <a class="toc-page-h3" href="#Shared_Resources" title="Shared Resources">共享的资源(Resources)</a> 
+       <a class="toc-page-h4" href="#Shared_Package_Resources" title="Shared Package Resources">共享包的资源</a> 
+       <a class="toc-page-h4" href="#Locating_Shared_Resources" title="Locating Shared Resources">定位共享资源</a> 
+       <a class="toc-page-h3" href="#Packages_and_Build_Profiles" title="Packages and Build Profiles">包(Packages) 和 Build Profiles</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">总结</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>资源管理</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Introduction">介绍</h2> 
+       <p>Web 应用程序通常包含图像和其他非代码文件 (比如视频短片, 数据文件, 等等.) 还有 JavaScript, HTML 和 CSS 内容. Sencha Cmd 将它们归类为 “resources” ，并提供了一些选项来管理它们. 理解这些选项的最好途径就是先以简单使用情景开始慢慢深入.</p> 
+       <h2 id="Setup">安装</h2> 
+       <p>首先, 我们创建一个 workspace，用来包含所有的应用程序和包(packages)(下面我们会说到). 请先执行下面的cmd命令:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/extjs6 generate workspace ./workspace
+
+cd workspace
+
+sencha generate app --ext --classic MyApp ./myapp
+
+sencha generate app --ext UniversalApp ./myuniversalapp
+
+sencha generate package arrow-button</code></pre> 
+       <p>下图是 workspace 的文件结构:</p> 
+       <p><img src="images/workspace_build.png" alt="workspace build" /></p> 
+       <p>Workspaces 并不是此指南必须的. 不过, 当处理多应用程序和/或包(packages)的时候, 推荐使用workspace, 这样可以共享框架, 也方便 build. 更多关于 workspace 的内容, 请查看<a href="workspaces.html">workspace 指南</a>. </p> 
+       <p><strong>注意</strong>: 若在应用程序根目录下创建包(package), 默认会自动给应用程序添加对此包的依赖. 如果你要手动添加包依赖, 只要在<code>app.json's</code>中的 requires 块中添加下面代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;requires&quot;: [
+      &quot;font-awesome&quot;,
+      &quot;arrow-button&quot;
+  ],</code></pre> 
+       <h2 id="Application_Resources">应用程序资源文件(Resources)</h2> 
+       <p>以“myapp” 文件夹下的 classic 工具包的应用程序为例. 单工具包(single-toolkit)应用程序的标准文件目录结构如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>app/
+    view/
+    ...
+resources/   # home for app resources
+sass/
+app.json</code></pre> 
+       <h3 id="app_json">app.json</h3> 
+       <p><code>&quot;app.json&quot;</code>, 应用程序描述文件, 包含了很多配置项. “resources” 这个数组描述了应用程序资源文件的位置:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;resources&quot; [{
+    &quot;path&quot;: &quot;resources&quot;,
+    &quot;output&quot;: &quot;shared&quot;
+...
+}]</code></pre> 
+       <p>单工具包(single-toolkit)应用程序，比如当前这个应用程序, 只有第一项 path (如上图所示) 才真正是资源文件的文件夹. 其它项 (以及“output” 属性) 则会被忽略, 不过在通用应用程序(universal applications)中会有作用(请往下看).</p> 
+       <p><code>&quot;app.json&quot;</code> 中的顶层“output” 对象指定了构建(build) 应用程序的输出目录. 输出目录由 output 的 base 指定:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;output&quot;: {
+    &quot;base&quot;: &quot;${workspace.build.dir}/${build.environment}/${app.name}&quot;,
+    ...
+},</code></pre> 
+       <p>output 的 base 目录是存放 build 后生成的文件的根目录. 上面的例子中, output 的 base 目录是一个表达式，用到了一些配置变量, 这些变量在 Sencha Cmd 加载<code>&quot;app.json&quot;</code> 文件的时候可以被解析. 此处, 这个表达式的最终结果是:</p> 
+       <pre mode="javascript" theme="chrome"><code>./workspace/build/production/MyApp</code></pre> 
+       <p>默认情况, 资源文件会被拷贝到 base 目录的“resources” 子目录下. 这样做的目的，是使开发状态下资源文件的相对路径 和 build 后的资源文件的相对路径 一致.</p> 
+       <h3 id="Themes">主题</h3> 
+       <p>应用程序需要的资源文件有很多是由主题提供的. 你可以在<code>&quot;app.json&quot;</code> 文件中指定主题:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;theme-triton&quot;,</code></pre> 
+       <p>主题通常继承自其他主题, 这样，资源文件可以被继承，也可以被覆写(override). Triton 的基类主题是 Neptune, 所以这两个主题的资源文件都会拷贝到应用程序的“resources” 目录下. </p> 
+       <p>为了说明这个过程, 我们来看看某个特定的图片资源是如何传递的:</p> 
+       <pre mode="javascript" theme="chrome"><code>theme-neptune/
+    resources/
+        images/
+            loadmask/
+               loading.gif</code></pre> 
+       <p>现在, 像这样 build 你的应用程序:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build --production</code></pre> 
+       <p><code>&quot;loading.gif&quot;</code> 从 Neptune 的“resources” 文件夹拷贝到了应用程序的 build 输出目录. 输出目录最终如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/
+    production/
+        MyApp/
+            index.html    # the output page
+            resources/
+                images/
+                    loadmask/
+                       loading.gif  # from theme-neptune</code></pre> 
+       <p>可以看到, build 输出目录里面现在包含了一个图片，此图片来自主题.</p> 
+       <h4 id="Resource_Composition">资源组成</h4> 
+       <p>上面的例子中, <code>&quot;images/loadmask/loading.gif&quot;</code> 资源来自主题 Triton. 如果应用程序在自身的“resources”文件夹的相应子路径下创建了一个 GIF 图片, 这个 GIF 会覆盖掉来自主题内的相应文件.</p> 
+       <p>你可以使用下面的 loading gif 图片，试试结果:</p> 
+       <p><img src="images/loading.gif" alt="loading mask image" /></p> 
+       <p>要覆盖主题提供的资源文件, 只要把你的资源文件放到应用程序自身“resources”内的的相应子路径下(和主题中此文件路径一致). 此处, 我们要覆盖主题自带的加载图“loading.gif” 文件. 所以你要把文件放到这里:</p> 
+       <pre mode="javascript" theme="chrome"><code>app/
+    view/
+    ...
+resources/
+    images/
+        loadmask/
+           loading.gif   # 覆盖主题的图片
+sass/
+app.json</code></pre> 
+       <p>现在, 只要 build 你的应用程序为 production 版本，你就可以看到“loading.gif”在 build 输出目录的 resource 文件夹下.</p> 
+       <p>同理,  Triton 主题已经覆盖了来自 Neptune 的一些文件，不过这个过程对应用程序是透明的. 应用程序要关心只是主题要使用这个图片; 图片是来自应用程序自身，还是来自主题(或者基类主题)，则是灵活变通的.</p> 
+       <h3 id="Code_Packages">代码包(Code Packages)</h3> 
+       <p>和主题一样, 代码包(Code Packages)也可能包含资源文件. 这些资源文件也被拷贝到输出目录的“resources” 文件夹下. 不过，为了防止多个独立的包(Packages)发生冲突, 这些资源文件被放在了一个子文件夹内，子文件夹名字是包名.</p> 
+       <p>例如, 我们看看上面创建的“arrow-button” 包. 这个包的资源文件内有一个图片, 这个图片可以帮助说明资源文件管理的过程.</p> 
+       <p>**注意: **如果你正在参考跟随这篇指南，为了方便，你可以使用下面的几个箭头图片:</p> 
+       <p><img src="images/arrow.png" alt="green arrow" /></p> 
+       <p><img src="images/arrow2.png" alt="red arrow" /></p> 
+       <p>包里的文件结构如下: </p> 
+       <pre mode="javascript" theme="chrome"><code>resources/
+    images/
+        arrow.png   # the arrow image used by this package
+    ...
+sass/
+package.json</code></pre> 
+       <p>像上面一样 build 你的应用程序为 production 版本, 包的资源文件被拷贝到了应用程序的 build 输出目录下:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/
+    production/
+        MyApp/
+            index.html    # the output page
+            resources/
+                arrow-button/   # the package's resource &quot;sandbox&quot;
+                    images/
+                       arrow.png</code></pre> 
+       <p>和主题一样, 应用程序也可以覆盖包里的资源文件:</p> 
+       <pre mode="javascript" theme="chrome"><code>app/
+    view/
+    ...
+resources/
+    arrow-button/
+        images/
+           arrow.png   # override package's image
+sass/
+app.json</code></pre> 
+       <p>形象化的描述，这个过程看起来应该是下面这样:</p> 
+       <p><img src="images/app_override.png" alt="application override resources" /></p> 
+       <h2 id="Package_Resources">包(Package)的资源文件</h2> 
+       <p>像上面提到的, 应用程序可以消化包内的资源文件并集成到自己的 build 中. 这个过程由包的描述文件指导完成(<code>&quot;package.json&quot;</code>) ，这个文件也用于 build 单独的包.</p> 
+       <h3 id="package_json">package.json</h3> 
+       <p>包的描述文件类似于应用程序的描述文件 (<code>&quot;app.json&quot;</code>). 这个文件是包的作者用来配置资源位置和 build 输出位置的. 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;output&quot;: &quot;${package.dir}/build&quot;,</code></pre> 
+       <p>和<code>&quot;app.json&quot;</code>的“output” 一样, 上面的配置决定了 build 包的时候，其中资源文件要拷贝到的地方. “resources” 对象默认不存在于<code>&quot;package.json&quot;</code>内, 不过和写成下面，结果是一样的:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;resources&quot;: [{
+    &quot;path&quot;: &quot;resources&quot;
+}]</code></pre> 
+       <p>这个和<code>&quot;app.json&quot;</code>里使用的对象是一样的.</p> 
+       <h3 id="Package_Builds">构建(build) 包</h3> 
+       <p>为了能让非Sencha Cmd的应用程序也能使用包, 必须在包的目录下，用下面的命令构建(build):</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package build</code></pre> 
+       <p>不像应用程序的 build, 构建(build) 包没有 “production” 或 “testing”这种概念. 包在 build 之后，会生成已压缩优化和未压缩可调试的2份代码.</p> 
+       <pre mode="javascript" theme="chrome"><code>build/
+    arrow-button-debug.js
+    arrow-button.js
+    resources/
+        images/
+            arrow.png   # the arrow image used by this package
+...
+package.json</code></pre> 
+       <p>“build”目录下的文件可以直接用在<code>script</code> 和 <code>link</code> 标签(不使用 Sencha Cmd 的应用程序).</p> 
+       <h3 id="Resource_Paths">资源文件路径</h3> 
+       <p>关于资源文件，build 包 和 build 应用程序不一样的地方是, 应用程序的 build 会为包的资源文件生成一个沙盒目录. 这意味着，资源文件相对于 CSS 文件的路径是不同的(对于这两种 build).</p> 
+       <p>在<code>.scss</code> 和 <code>.js</code> 代码中, 可以用 API 来决定某个文件的正确路径. 比如, 箭头按钮(arrow button)可能有下面的CSS样式:</p> 
+       <pre mode="javascript" theme="chrome"><code>.arrow-button {
+    background-image: url(get-resource-path('images/arrow.png'));
+}</code></pre> 
+       <p>在 build 包的时候, <code>get-resource-path</code> 函数不会把沙盒目录包含进来. 然而当 build 应用程序的时候, <code>get-resource-path</code> 准确包含资源文件的沙盒目录.</p> 
+       <p>在 JavaScript 中, <code>Ext.getResourcePath</code>这个 API 的功能和上面一样.</p> 
+       <pre mode="javascript" theme="chrome"><code>image.setSrc(
+    Ext.getResourcePath('images/arrow.png', null, 'arrow-button')
+);</code></pre> 
+       <p>和 <code>get-resource-path</code> 不一样, JavaScript 相应的 <code>Ext.getResourcePath</code>函数, 并不知道包的名字，所以必须显式提供. 不过这个参数只有在 代码包 中才有用，主题包不需要这个参数，因为主题包的资源并没有被放在沙盒目录中. </p> 
+       <p><strong>注意</strong>: 上面为 <code>null</code> 的第二个参数是 资源池(pool name) 的名字, 此处例子中没有用到.  一般用在通用(universal) 应用程序中.</p> 
+       <h2 id="Universal_Applications_and_Build_Profiles">通用(Universal) 应用程序 和 用于构建的配置文件(Build Profiles)</h2> 
+       <p>直到 Ext JS 5，目前为止讨论的应用程序和包的例子已经很标准了. Ext JS 6 的 通用(Universal) 应用程序 概念的引入，和 Build Profiles 的使用，又带来了一些新的变化.</p> 
+       <p>Build Profiles 在<a href="microloader.html">Microloader 指南</a> 中已经详细讨论过了, 它们可以总结为一种用来指示 Sencha Cmd 构建(build) 多个独立优化的应用程序. 应用程序在页面加载的时候，根据合适的需求决定加载哪一个 build profile.</p> 
+       <p>例如, build profiles 可以用来支持多主题和多语言.  在 Ext JS 6 通用(Universal) 应用程序 中, build profiles 用来指向 modern 还是 classic 工具包(toolkits) (通常会分别build用于移动端和桌面端的).</p> 
+       <p>我们展开上面创建的 通用(Universal) 应用程序，来看看不同点. </p> 
+       <h3 id="app_json">app.json</h3> 
+       <p>首先, 打开“myuniversalapp”根目录下的<code>app.json</code>文件.</p> 
+       <h4 id="builds">builds</h4> 
+       <p>Build profiles 就是<code>&quot;app.json&quot;</code>中的“builds” 对象 . 这个 Ext JS 6 入门例子中的“builds” 对象如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+
+    &quot;classic&quot;: {
+        &quot;toolkit&quot;: &quot;classic&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    },
+
+    &quot;modern&quot;: {
+        &quot;toolkit&quot;: &quot;modern&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    }
+
+},</code></pre> 
+       <p>“classic” 和 “modern” 属性名和各自的“toolkit”项一致, 也可以取其它名字. 为了避免混淆 toolkit 名称 和 build profile 名称, 我们把它改成“foo” 和 “bar”:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+
+    &quot;bar&quot;: {
+        &quot;toolkit&quot;: &quot;classic&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    },
+
+    &quot;foo&quot;: {
+        &quot;toolkit&quot;: &quot;modern&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    }
+
+},</code></pre> 
+       <p>因为 build profiles 调整基本的东西比如“toolkit” 和 “theme” (由此产生不同的 CSS 文件), 其资源必须相互隔离. 也就是说, “foo” 这个 build profile 有自己的 CSS 文件，它必须与“bar” 这个 build profile 的区分开来.</p> 
+       <p>有些文件需要隔离开，但也有些文件是2个 build profiles 需要共享的 (比如一个视频片段文件).</p> 
+       <h4 id="output">output</h4> 
+       <p><code>&quot;app.json&quot;</code> 文件的 “output” 对象可以调整为支持这两种情形. 通用(Universal) 应用程序默认已经支持:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;output&quot;: {
+
+    &quot;base&quot;: &quot;${workspace.build.dir}/${build.environment}/${app.name}&quot;,
+    ...
+    &quot;resources&quot;: {
+        &quot;path&quot;: &quot;${build.id}/resources&quot;,
+        &quot;shared&quot;: &quot;resources&quot;
+    }
+
+},</code></pre> 
+       <p>“resources”对象的属性(“path” 和 “shared”) 叫做“资源池(resource pools)”. Sencha Cmd 6.0.1 以前, 只有一个资源文件输出路径 (“output.resources.path”). 在 Sencha Cmd 6.0.1 中，这个路径是默认的资源池. 然后还有一个新的“shared”资源池, 不过里面可以有任意多个输出路径.</p> 
+       <p>在上面的配置中, resources 会放到和 CSS 文件同一个子目录中. 这基于“build.id” 属性，也就是 build profile 的名字(“foo”或“bar”). 要注意的是，“output”对象中的所有相对路径都是相对于“output.base”的.</p> 
+       <p>继续 build 这个 UniversalApp，然后看看最后的 build 目录. 只要 “cd” 到 “myuniversalapp”目录下，执行下面的命令:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build --production</code></pre> 
+       <p><strong>注意</strong>: 这个命令会构建(build) foo 和 bar 两个 .</p> 
+       <p>看下 构建(build) 之后的 build 目录:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/
+    production/
+        UniversalApp/
+            index.html    # the output page
+            bar/          # the build profile using &quot;classic&quot;
+                resources/
+                    UniversalApp-all.css
+                    images/
+                        loadmask/
+                            loading.gif  # from theme-neptune
+            foo/          # the build profile using &quot;modern&quot;
+                resources/
+                    UniversalApp-all.css
+                    ...</code></pre> 
+       <h4 id="Resources">Resources</h4> 
+       <p>和上述 资源池 相应的是 顶层“resources”数组里每一项的“output” 属性(可选).</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;resources&quot;: [{
+    &quot;path&quot;: &quot;resources&quot;,
+    &quot;output&quot;: &quot;shared&quot;   # targets the &quot;shared&quot; resource pool
+}, {
+    &quot;path&quot;: &quot;${toolkit.name}/resources&quot;   # uses the default pool
+}],</code></pre> 
+       <p>提供了这些 resources 路径之后, 通用(Universal) 应用程序 还是可以覆盖(override)  <code>&quot;loading.gif&quot;</code>图片的，不过要把文件移动到<code>&quot;classic/resources&quot;</code> 目录下.</p> 
+       <pre mode="javascript" theme="chrome"><code>app/
+    view/
+    ...
+resources/
+    ...
+classic/       # from the ${toolkit.name} in the resources array
+    resources/
+        images/
+            loadmask/
+               loading.gif   # override theme image
+sass/
+app.json</code></pre> 
+       <h3 id="Shared_Resources">共享的资源(Resources)</h3> 
+       <p>如果要共享某个资源文件, 应该放到顶层<code>&quot;resources&quot;</code>目录下，而不是<code>&quot;classic/resources&quot;</code>或<code>&quot;modern/resources&quot;</code>. 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>app/
+    view/
+    ...
+resources/
+    video.mp4
+classic/
+    resources/
+sass/
+app.json</code></pre> 
+       <p>这个目录就是 “shared” 资源池, 指向的就是 build 输出根目录下的<code>&quot;resources&quot;</code> 目录:</p> 
+       <pre mode="javascript" theme="chrome"><code>build/
+    production/
+        UniversalApp/
+            index.html    # the output page
+            resources/    # shared resource pool
+                video.mp4
+            foo/          # build profile
+                ...
+            bar/          # build profile
+                ...</code></pre> 
+       <p>默认情况下, 包的资源不被共享, 所以 build 输出目录结果如下图:</p> 
+       <p><img src="images/unshared_package_resources.png" alt="unshared package resources" /></p> 
+       <p>至于主题包，这种隔离是必要的，默认情况下这种逻辑适用于所有的包. 不过，在 Sencha Cmd 6.0.1, 包的资源也可以被共享.</p> 
+       <h4 id="Shared_Package_Resources">共享包的资源</h4> 
+       <p>包, 和应用程序一样，通过给 resource 项的“output”属性指定一个资源池的名字, 也可以为资源指定资源池(resource pools). 例如, “font-awesome” 包内置了大概 800 KB 的字体文件，它们应该被每个 build profile 共享，而不是各自复制一份. 为了支持这种优化, “font-awesome”的<code>&quot;package.json&quot;</code>文件有这么一段:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;resources&quot;: [{
+
+    &quot;path&quot;: &quot;${package.dir}/resources&quot;,
+
+    &quot;output&quot;: &quot;shared&quot;
+
+}]</code></pre> 
+       <p>对于没有定义其它资源池的应用程序来说，这些资源会放到默认的资源池中. 虽然在某些情况下这可能是低效的, 这可以确保这些资产将相互可用. 所以推荐在使用了 build profiles 的应用程序中，总是声明一个“shared” 资源池.</p> 
+       <p>根据“font-awesome”的这个规则，修改“arrow-button”包的 resources，最后 build 输出如下:</p> 
+       <p><img src="images/shared_package_resources.png" alt="shared package resources" /></p> 
+       <h4 id="Locating_Shared_Resources">定位共享资源</h4> 
+       <p>如果要在 <code>.scss</code>中定位某一个资源, 你可以给<code>get-resource-path</code> API 提供资源池的名字:</p> 
+       <pre mode="javascript" theme="chrome"><code>background: url(get-resource-path('images/foo.png', $pool: 'shared'));</code></pre> 
+       <p>在 JavaScript 中则是:</p> 
+       <pre mode="javascript" theme="chrome"><code>image.setSrc(Ext.getResourcePath('images/foo.png', 'shared'));</code></pre> 
+       <p>某些控件的配置项(config)可以接收 URL 资源池标记 (比如Ext.Img的src配置):</p> 
+       <pre mode="javascript" theme="chrome"><code>items: [{
+    xtype: 'img',
+    src: '&lt;shared&gt;images/foo.png'
+}]</code></pre> 
+       <h3 id="Packages_and_Build_Profiles">包(Packages) 和 Build Profiles</h3> 
+       <p>包的构建也提供了对 build profiles 的支持. 和应用程序构建很像，不过包的 build profiles 是用来生成文件给 非 Sencha Cmd 应用程序用的. 所以，包使用 build profiles 来创建多种 builds，可能取决于这些变量是如何影响他们的代码或样式的.</p> 
+       <h2 id="Conclusion">总结</h2> 
+       <p>Sencha Cmd 提供的 资源管理 的选项，让你可以描述资源输入，以及灵活控制 build 输出. 结合 定位资源的 API, 这种灵活性并不会加大代码的复杂度.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../https@s.adroll.com" : "../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

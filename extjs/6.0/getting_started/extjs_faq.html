@@ -1,0 +1,657 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Ext JS - 问答</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        目录 
+       <a class="toc-page-h3" href="#What_browsers_does_Ext_JS_Support_" title="Ext JS 都支持哪些浏览器?">Ext JS 都支持哪些浏览器?</a> 
+       <a class="toc-page-h4" href="#Desktop" title="桌面电脑">桌面电脑</a> 
+       <a class="toc-page-h4" href="#Touch_Screen" title="触屏设备">触屏设备</a> 
+       <a class="toc-page-h3" href="#What_Doctype_should_I_use_" title="我应该使用什么文档类型?">我应该使用什么文档类型?</a> 
+       <a class="toc-page-h3" href="#How_can_I_build_an_application_without_Sencha_Cmd_" title="没有 Sencha Cmd 我该怎么构建应用?">没有 Sencha Cmd 我该怎么构建应用?</a> 
+       <a class="toc-page-h3" href="#What_s_the_difference_between_the_different_framework_files_" title="不同框架文件都有些什么不同?">不同框架文件都有些什么不同?</a> 
+       <a class="toc-page-h3" href="#How_can_I_change_my_application_s_theme_without_using_Sencha_Cmd_" title="不使用 Sencha Cmd 我怎么修改应用的主题?">不使用 Sencha Cmd 我怎么修改应用的主题?</a> 
+       <a class="toc-page-h3" href="#Can_I_write_a_single_application_for_both_Desktop_and_iPad_" title="我能够编写一个同时支持桌面电脑和iPad的简单应用吗?">我能够编写一个同时支持桌面电脑和iPad的简单应用吗?</a> 
+       <a class="toc-page-h3" href="#If_Ext_JS_5_works_with_tablets__why_shouldn_t_I_use_it_for_smart_phones_as_well_" title="如果 Ext JS 5 可以在平板上工作，为什么我不能也在智能手机上使用?">如果 Ext JS 5 可以在平板上工作，为什么我不能也在智能手机上使用?</a> 
+       <a class="toc-page-h3" href="#How_can_we_share_controllers__stores__models_between_ExtJs_5_and_Touch_" title="我们怎么在 ExtJs 5和Touch中共享控制器,数据存取和模型? 版本之间有什么差异?">我们怎么在 ExtJs 5和Touch中共享控制器,数据存取和模型? 版本之间有什么差异?</a> 
+       <a class="toc-page-h3" href="#How_can_I_see_what_changed_between_versions_" title="版本之间有什么差异?">版本之间有什么差异?</a> 
+       <a class="toc-page-h3" href="#Does_Ext_JS_5_render_tables_faster_than_ExtJS_4__Is_the_performance_improved_" title="Ext JS 5 在表格渲染上要比ExtJS 4快吗? 性能上有提高吗?">Ext JS 5 在表格渲染上要比ExtJS 4快吗? 性能上有提高吗?</a> 
+       <a class="toc-page-h3" href="#Is_it_possible_to_use_two_different_versions_of_Ext_JS_at_same_time_" title="有没有可能同时使用不同版本的 Ext JS?">有没有可能同时份不用不同版本的 Ext JS?</a> 
+       <a class="toc-page-h3" href="#How_should_we_utilize_localization_in_Ext_JS_5_" title=" Ext JS 5 怎么使用本地化?"> Ext JS 5 怎么使用本地化?</a> 
+       <a class="toc-page-h3" href="#How_should_I_override_a_method_without_editing_the_source_code_" title="不修改源码的情况下怎么覆写一个方法?">不修改源码的情况下怎么覆写一个方法?</a> 
+       <a class="toc-page-h3" href="#How_do_I_use_the_Draw_classes_in_5_" title="在版本5中怎么使用绘图类?">在版本5中怎么使用绘图类?</a> 
+       <a class="toc-page-h2" href="#Using_Sencha_Charts_and_Draw_without_Sencha_Cmd" title="不用 Sencha Cmd 使用 Sencha Charts 和 Draw">不用 Sencha Cmd 使用 Sencha Charts 和 Draw</a> 
+       <a class="toc-page-h3" href="#Does_the_framework_support_browser_zoom_" title="框架支持 zoom 浏览器吗?">框架支持 zoom 浏览器吗?</a> 
+       <a class="toc-page-h3" href="#What_is_callParent_and_why_how_should_I_use_it_" title="什么是callParent，为什么和怎么使用?">什么是callParent，为什么和怎么使用?</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Ext JS - 问答</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>在下面你将可以找到关于Ext JS 的最常见问题的答复.如果没有找到您所需的答复，请访问 Ext JS 论坛或者提交一个支持申请.</p> 
+       <p>如果你确信你的问题可以对本页有补充，请让我们知道!</p> 
+       <p><strong>注意:</strong> 下面的FAQ如果没有特别说明,适应于 Ext 5和更高版本.</p> 
+       <h3 id="What_browsers_does_Ext_JS_Support_">Ext JS 都支持哪些浏览器?</h3> 
+       <h4 id="Desktop">桌面电脑</h4> 
+       <ul> 
+        <li>IE8+ (只适用于标准模式)</li> 
+        <li>Firefox (个人电脑和苹果电脑)</li> 
+        <li>Safari 6+</li> 
+        <li>Chrome (个人电脑和苹果电脑)</li> 
+        <li>Opera (个人电脑和苹果电脑)</li> 
+       </ul> 
+       <h4 id="Touch_Screen">触屏设备</h4> 
+       <ul> 
+        <li>Safari</li> 
+        <li>IE10及其以上版本</li> 
+        <li>Android上的Chrome</li> 
+       </ul> 
+       <p><strong>注意:</strong> Ext JS 5 现在不支持移动电话</p> 
+       <h3 id="What_Doctype_should_I_use_">我应该使用什么文档类型?</h3> 
+       <p>我们推荐使用 HTML5 文档类型. 为保证 Internet Explorer 不激活的兼容模式(不支持兼容模式),我们也推荐使用 X-UA-Compatible 元数据标签. 示例如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;/head&gt;</code></pre> 
+       <h3 id="How_can_I_build_an_application_without_Sencha_Cmd_">没有 Sencha Cmd 我该怎么构建应用?</h3> 
+       <p>在没有使用 Sencha Cmd 时，你可以通过包含框架，主题CSS和用你选择的主题对应的 JS 覆盖你项目中 <code>index.html</code> 文件的头部来构建应用.</p> 
+       <p>在 Ext JS中，主题的 CSS 及其需要覆盖的文件以包的形式创建.在Ext JS 5 中，主题所在的目录为“{ExtJS-5-SDK}/packages/”. 主题包含:</p> 
+       <ul> 
+        <li>ext-theme-base (由框架使用，不允许直接配置)</li> 
+        <li>ext-theme-neutral (创建定制主题时使用，不允许直接配置)</li> 
+        <li>ext-theme-classic</li> 
+        <li>ext-theme-gray</li> 
+        <li>ext-theme-neptune</li> 
+        <li>ext-theme-neptune-touch (平板优化)</li> 
+        <li>ext-theme-crisp</li> 
+        <li>ext-theme-crisp-touch (平板优化)</li> 
+       </ul> 
+       <p>在 Ext JS 6 中,主题被分成了经典和现代两个工具包.经典的主题位于“{ExtJS-6-SDK}/classic/”目录内，包含:</p> 
+       <ul> 
+        <li>theme-base (由框架使用，不允许直接配置)</li> 
+        <li>theme-neutral (创建定制主题时使用，不允许直接配置)</li> 
+        <li>theme-classic</li> 
+        <li>theme-gray</li> 
+        <li>theme-neptune</li> 
+        <li>theme-neptune-touch (平板优化)</li> 
+        <li>theme-crisp</li> 
+        <li>theme-crisp-touch (平板优化)</li> 
+        <li>theme-triton</li> 
+       </ul> 
+       <p>Ext JS 6 现代版主题位于“{ExtJS-6-SDK}/modern/”目录内，包含:</p> 
+       <ul> 
+        <li>theme-base (由框架使用，不允许直接配置)</li> 
+        <li>theme-blackberry</li> 
+        <li>theme-cupertino</li> 
+        <li>theme-cupertino-classic</li> 
+        <li>theme-mountainview</li> 
+        <li>theme-neptune</li> 
+        <li>theme-windows</li> 
+       </ul> 
+       <p><strong>注意:</strong> 我们强烈建议使用 Sencha Cmd, 因为上面的示例包含了一个包含所有东西的很大文件.当我们使用Sencha Cmd 时,你的应用只取需要的一小部分，这样来保持轻量、易响应和干净.</p> 
+       <p>这个 <a href="getting_started.html">快速入门向导</a> 将完整的指导你使用 Sencha Cmd 生成你的应用.</p> 
+       <h3 id="What_s_the_difference_between_the_different_framework_files_">不同框架文件都有些什么不同?</h3> 
+       <p><strong>ext.js:</strong> 压缩版. 动态加载扩展类的基础框架.</p> 
+       <p><strong>ext-all.js:</strong> 压缩版.  包含全部框架.</p> 
+       <p><strong>ext-all-debug.js:</strong> 未压缩版.  包含全部框架</p> 
+       <p><strong>ext-debug.js:</strong> 未压缩版. 动态加载扩展类的基础框架.</p> 
+       <p><strong>ext-all-rtl-debug.js:</strong> 未压缩版.  包含全部框架和 <a href="../core_concepts/rtl.html">right-to-left 支持</a>.</p> 
+       <p><strong>ext-all-rtl-sandbox-debug.js:</strong> 未压缩版.  包含全部框架和 <a href="../core_concepts/rtl.html">right-to-left 支持</a>. 允许使用其它Ext版本 alongside的增强.</p> 
+       <p><strong>ext-all-rtl-sandbox.js:</strong> 压缩版.  包含全部框架和 <a href="../core_concepts/rtl.html">right-to-left 支持</a>. 允许使用其它Ext版本 alongside的增强.</p> 
+       <p><strong>ext-all-rtl.js:</strong> 压缩版.  包含全部框架和 <a href="../core_concepts/rtl.html">right-to-left 支持</a>.</p> 
+       <p><strong>ext-all-sandbox-debug.js:</strong> 未压缩版.  包含全部框架 允许使用其它Ext版本 alongside的增强.</p> 
+       <p><strong>ext-all-sandbox.js:</strong> 压缩版.  包含全部框架和允许使用其它Ext版本 alongside的增强.</p> 
+       <h3 id="How_can_I_change_my_application_s_theme_without_using_Sencha_Cmd_">不使用 Sencha Cmd 我怎么修改应用的主题?</h3> 
+       <p>你只需要简单的在 <code>index.html's</code> 文件的头部包含主题包中的 CSS 和 JS 就能设置应用的主题. 示例如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;head&gt;
+     &lt;title&gt;Hello World&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;ext/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css&quot;&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;ext/build/ext-all-debug.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;ext/packages/ext-theme-neptune/build/ext-theme-neptune.js&quot;&gt;&lt;/script&gt;
+ &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;/head&gt;</code></pre> 
+       <h3 id="Can_I_write_a_single_application_for_both_Desktop_and_iPad_">我能够编写一个同时支持桌面电脑和iPad的简单应用吗?</h3> 
+       <p>可以, 任意 Ext JS 5 应用都应该在支持浏览器的桌面电脑、平板及触摸设备上正常显示. 值得注意的是支持平板一般不需要额外的步骤.</p> 
+       <p>就是说，在特定情形下需要一些注意的只有两个地方.第一对于只使用Ext JS API事件监听的开发者将不会受到影响. 然而,如果你直接使用监听，或者你正在使用直接使用侦听的第三方 JavaScript 库 ,可能会发生直接使用事件处理器的错误. 为了支持触摸手势，就不得不对事件处理系统做些修改了.</p> 
+       <p>关于事件代理修改,你可以在我们的 <a href="../core_concepts/events.html">事件向导</a> 和 <a href="../core_concepts/tablet_support.html">平板支持向导</a>上找到更多资料.</p> 
+       <p>第二个场景是在处理触屏世界没有明显模拟的鼠标事件上. 例如,没有mouseover, mouseout, mousenter, 或者 mouseleave的触碰动作.</p> 
+       <p>如果在你的应用中这些功能非常关键，那就可能需要提供一些变通的实现.这经常意味着要用适当的触碰动作模拟实现鼠标的事件.</p> 
+       <h3 id="If_Ext_JS_5_works_with_tablets__why_shouldn_t_I_use_it_for_smart_phones_as_well_">如果 Ext JS 5 可以在平板上工作，为什么我不能也在智能手机上使用?</h3> 
+       <p>桌面电脑和平板控件目前不再适合于小屏幕. 为正确显示 Grids, trees, panels, border layouts 需要更多空间. 这个可能可以显示,但是不是精确的适应小屏幕.</p> 
+       <p>采用 Ext JS 6, 你可以开发一个优化过的可运行在桌面电脑、平板和移动电话设备上的简单、通用的应用. 这个应用可以包含通用事件处理逻辑、数据存储和数据模型. 展现部分根据你最终所需要使用的设备类型而分别使用经典版工具套件(旧版 Ext JS_)和现代版工具套件 (旧版Sencha Touch) . 你可以在 <a href="getting_started.html">快速入门向导</a>中阅读更多通用设置资料.</p> 
+       <h3 id="How_can_we_share_controllers__stores__models_between_ExtJs_5_and_Touch_">我们怎么在 ExtJs 5和Touch中共享控制器,数据存取和模型? 版本之间有什么差异?</h3> 
+       <p>Ext JS 5 和 Sencha Touch 没有为共享 controllers, stores 和 models 进行优化.<br />不过, 在 Ext JS 6 中,现代版和经典版工具(Touch和旧版 Ext JS 视图相关)图书馆中可以共用.参考 <a href="getting_started.html">快速入门向导</a> 获得更多信息.</p> 
+       <h3 id="How_can_I_see_what_changed_between_versions_">版本之间有什么差异?</h3> 
+       <p>查看删除、新增、过时等等变化信息，请查看我们的版本间差异向导:</p> 
+       <ul> 
+        <li><a href="../../5.0/whats_new/5.0/diff_changes.html">Ext JS 4.2.3 和 Ext JS 5.0.0</a></li> 
+        <li><a href="../../5.0/whats_new/5.0.1/diff_changes.html">Ext JS 5.0.0 和 Ext JS 5.0.1</a></li> 
+        <li><a href="../../5.1/whats_new/5.1.0/diff_changes.html">Ext JS 5.0.1 和 Ext JS 5.1.0</a></li> 
+        <li><a href="../../5.1/whats_new/5.1.1/diff_changes.html">Ext JS 5.1.0 和 Ext JS 5.1.1</a></li> 
+        <li><a href="../whats_new/6.0.0/classic_diff.html">Ext JS 5.1.1 和 Ext JS 6.0.0 经典工具包</a></li> 
+        <li><a href="../whats_new/6.0.0/modern_diff.html">Touch 2.4.1 和 Ext JS 6.0.0 现代工具包</a></li> 
+       </ul> 
+       <p><strong>注意:</strong> 我们相信,开发人员在升级他们的应用时，通过评估这些差异向导可以获得很大的帮助.可以这么说,这些报告是自动生成的,也许不能总是精确的描述变更.不需要的变更可能在文档更新、格式调整等情况下存在.如果你在这些变更报告中发现不正确的和不好的，请在论坛上报告.</p> 
+       <h3 id="Does_Ext_JS_5_render_tables_faster_than_ExtJS_4__Is_the_performance_improved_">Ext JS 5 在表格渲染上要比ExtJS 4快吗? 性能上有提高吗?</h3> 
+       <p>在有些方面要快些. 在5版本中,使用table-per-row的方式对Grid 标记做了修改,这使得表格的渲染获得了重大的速度提升. </p> 
+       <p>表单字段的JS布局和按钮干掉了 “liquid” CSS 布局. 在生成大型表单时使用 “form layout” 布局可以看到有了性能提高. 这些类型的改时应该有助于性能提升,但仍然有需要进行改进的. 在下一个发布的版本中,有更进一步的性能提升值得你期待.</p> 
+       <h3 id="Is_it_possible_to_use_two_different_versions_of_Ext_JS_at_same_time_">有没有可能同时份不用不同版本的 Ext JS?</h3> 
+       <p>可以, 你可以使用 “sandboxed” 构建, 这个可以修改上层 JS的名字空间,和 CSS 前缀,以避免冲突. 重要的提醒是不建议在生产环境包装两个不同版本,这需要完整的加载两套不同的 Ext JS 框架. </p> 
+       <p>这意味着你要像非装应用一样要加载两次相当多的资源.封装构建通常用于迁移或者在旧的应用中为使用新特性临时的需要.</p> 
+       <h3 id="How_should_we_utilize_localization_in_Ext_JS_5_"> Ext JS 5 怎么使用本地化?</h3> 
+       <p>在你的应用中增加本地化可以通过使用本地化的覆写,这个可以在 Sencha Cmd 生成的 <code>app.json</code> 文件中生成. 请查看 <a href="../core_concepts/localization.html">本地化向导</a> 获得更多资料.</p> 
+       <h3 id="How_should_I_override_a_method_without_editing_the_source_code_">不修改源码的情况下怎么覆写一个方法?</h3> 
+       <p>创建一个覆写优化实现的方法如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.overrides.panel.Panel', {
+    override: 'Ext.panel.Panel',
+    close: function() {
+        console.log('My Change to Close');
+        this.callParent();
+    },
+    helloWorld: function(){
+       console.log('Hello World');
+    }
+});</code></pre> 
+       <p>1) 首先,定义好你的应用目录下要覆写对应的名字空间</p> 
+       <p>2) 添加 “override” 配置,并且给一个你要覆写类相等值,在这个例子中,我们要覆写 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a>.</p> 
+       <p>3) 添加你准备覆写的函数.你需要确认保留了所有相关的代码片段. 在这个例子中,我只是修改了 close 函数,添加的代码是 <code>console.log()</code>. 如果你创建一个 panel 然后调用 <code>panel.close()</code>, 你会收到一个显示 “My Change to Close” 的控制台信息.</p> 
+       <p><strong>注意:</strong> 在你覆写的方法中,你需要执行 <code>this.callParent()</code> 代码来调用目标类中原始的方法. 忽略这个方法和代码忽视父类的实现(就是说避免目标类中方法的bug) 你可以调用 <code>this.callSuper()</code> 来代替.</p> 
+       <p>4) 一起添加一个新函数. 也许你会想像, <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a> 没有包含一个 <code>helloWorld</code> 方法. 然而, 我刚刚通过覆写增加了.现在, 创建一个 panel ，并且输入代码 <code>panel.helloWorld()</code> 就会显示出一条 “Hello World” 的日志.</p> 
+       <h3 id="How_do_I_use_the_Draw_classes_in_5_">在版本5中怎么使用绘图类?</h3> 
+       <p>绘图包现在包含在 sencha-charts 包中. 也就是说,为了使用绘图类，你需要包含 sencha charts (或者 sencha charts). </p> 
+       <p>如果你正在使用 Sencha Cmd, 这就只要简单的在<code>app.json</code> 文件中在 requires数组中增加 “sencha-charts” 就可以了. </p> 
+       <h2 id="Using_Sencha_Charts_and_Draw_without_Sencha_Cmd">不用 Sencha Cmd 使用 Sencha Charts 和 Draw</h2> 
+       <p>  在Ext JS 5中,如果你要使用 charts(图表),但又不想使用Sencha Cmd时, 你可以在你应用的 “index.html” 页面文件中简单地加上以下的包含文件.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script type=&quot;text/javascript&quot; src=&quot;{ExtJS-5-SDK}/build/packages/sencha-charts/build/sencha-charts.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;{ExtJS-5-SDK}/build/packages/sencha-charts/build/classic/resources/sencha-charts-all.css&quot;&gt;</code></pre> 
+       <p>在 Ext JS 6 中使用经典工具包:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script type=&quot;text/javascript&quot; src=&quot;{ExtJS-6-SDK}/build/packages/charts/classic/charts.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;{ExtJS-6-SDK}/build/packages/charts/classic/classic/resources/charts-all.css&quot;&gt;</code></pre> 
+       <p>在 Ext JS 6 中使用现代工具包:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script type=&quot;text/javascript&quot; src=&quot;{ExtJS-6-SDK}/build/packages/charts/modern/charts.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;{ExtJS-6-SDK}/build/packages/charts/modern/modern-neptune/resources/charts-all.css&quot;&gt;</code></pre> 
+       <h3 id="Does_the_framework_support_browser_zoom_">框架支持 zoom 浏览器吗?</h3> 
+       <p>对于浏览器 zoom ,我们没有提供官方支持,但是大多数组件在现代的各种浏览器中都能按预期的工作.</p> 
+       <h3 id="What_is_callParent_and_why_how_should_I_use_it_">什么是callParent，为什么和怎么使用?</h3> 
+       <p><code>callParent</code> 是 <a href="../core_concepts/classes.html">Sencha 类系统</a>提供的一个用于调用你父/祖先类中的方法.这个通常用于你从框架类中继承一个框架类或者覆写一个框架类提供的方法如 <code>onRender</code> 时. 当你调用从一个方法中调用 <code>callParent</code> 时存在参数时，你有二种方式将这些参数传递到祖先类的方法中.最好的实践是只使用特定必需的参数. 在这种情形下,你可以通过数组传递:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.view.MyPanel', {
+    extend: 'Ext.panel.Panel',
+    onRender: function (parentNode, index) {
+        this.callParent([ parentNode, index ]);
+    }
+});</code></pre> 
+       <p>或者, 你可以使用 arguments 关键字的缩写,像这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.view.MyPanel', {
+    extend: 'Ext.panel.Panel',
+    onRender: function (parentNode, index) {
+        this.callParent(arguments);
+    }
+});</code></pre> 
+       <p>看起来差别很小,但当你使用 Sencha Cmd 5 的新的优化功能调用 <code>callParent</code>时, 就能发现性能的提升. 当启用这个优化器时,这二个方法会按如下代码进行优化:</p> 
+       <pre mode="javascript" theme="chrome"><code>onRender: function (parentNode, index) {
+    Ext.panel.Panel.prototype.onRender.apply(this, arguments);
+}</code></pre> 
+       <p>或者:</p> 
+       <pre mode="javascript" theme="chrome"><code>onRender: function (parentNode, index) {
+    Ext.panel.Panel.prototype.onRender.call(this, parentNode, index);
+}</code></pre> 
+       <p>在第二种情况下,优化器可以用 JavaScript函数的call方法而不是apply. We also avoid using arguments.二者都是有名的高性能杀手.原来我们甚至避免创建数组.显然,只是启用优化器就有帮助.但在性能最为关键的代码中,用显式的数组代码参数是值得的.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        最后更新 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (离线文档) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (离线文档) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 向导 </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Java文档 </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 示例程序 </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 向导 </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Java文档 </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 示例程序 </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (离线文档) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (离线文档) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (离线文档) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (离线文档) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

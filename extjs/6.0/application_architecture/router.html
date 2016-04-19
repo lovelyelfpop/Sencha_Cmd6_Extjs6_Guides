@@ -1,0 +1,660 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 使用路由</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#What_Routing_Is_Used_For" title="What Routing Is Used For">What Routing Is Used For</a> 
+       <a class="toc-page-h2" href="#What_Routing_Is_Not_Used_For" title="What Routing Is Not Used For">What Routing Is Not Used For</a> 
+       <a class="toc-page-h2" href="#What_is_the_Hash_" title="What is the Hash?">What is the Hash?</a> 
+       <a class="toc-page-h2" href="#Implement_Routing_in_your_Application" title="Implement Routing in your Application">Implement Routing in your Application</a> 
+       <a class="toc-page-h2" href="#Updating_the_Hash" title="Updating the Hash">Updating the Hash</a> 
+       <a class="toc-page-h2" href="#Default_Token" title="Default Token">Default Token</a> 
+       <a class="toc-page-h2" href="#Hashes_with_Parameters" title="Hashes with Parameters">Hashes with Parameters</a> 
+       <a class="toc-page-h2" href="#Hash_Parameter_Formatting" title="Hash Parameter Formatting">Hash Parameter Formatting</a> 
+       <a class="toc-page-h2" href="#Route_Handling" title="Route Handling">Route Handling</a> 
+       <a class="toc-page-h2" href="#Handling_Unmatched_Routes" title="Handling Unmatched Routes">Handling Unmatched Routes</a> 
+       <a class="toc-page-h2" href="#Using_Multiple_Routes_in_a_Single_Hash" title="Using Multiple Routes in a Single Hash">Using Multiple Routes in a Single Hash</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Controlling an Application with Router</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>On a normal website, a user navigates to and from different pages as they click links or fill out forms. However, in a single page application, a user’s interaction doesn’t load a new page. Instead, it is handled within a single page and components react to that interaction. So how do you still allow users to use the browser’s forward and back buttons? The answer is to digest URI hash changes with Ext JS 5’s new Router.</p> 
+       <h2 id="What_Routing_Is_Used_For">What Routing Is Used For</h2> 
+       <p>Routing can be used to track the application state through the use of the browser history stack. Routing also allows for deep linking into the application which allows a direct link to a specific part of your application.</p> 
+       <h2 id="What_Routing_Is_Not_Used_For">What Routing Is Not Used For</h2> 
+       <p>Routing should not be used to store any data or session, data should be stored in a persistent data source such as a cookie or localstorage. Routing is only a means of tracking the application’s state.</p> 
+       <h2 id="What_is_the_Hash_">What is the Hash?</h2> 
+       <p>Browsers navigate the internet using a URI which consists of many parts. Let’s look at a sample URI:</p> 
+       <pre mode="javascript" theme="chrome"><code>http://www.example.com/apps/users#user/1234</code></pre> 
+       <p>This should look relatively familiar. However, you may not recognize <code>#user=1234</code>. This section of the URI is called the “hash” or fragment identifier. For more information on the hash, please read this resource <a href="../../../../en.wikipedia.org/wiki/Fragment_identifier">http://en.wikipedia.org/wiki/Fragment_identifier</a>. This hash provides a way for an application to control the history stack of the browser without reloading the current page. As the hash changes, the browser adds that whole URI to the history stack, which then allows you to utilize the browser’s forward / back buttons to traverse URIs including the hashes that may have changed. For instance, what happens if you update the hash to:</p> 
+       <pre mode="javascript" theme="chrome"><code>http://www.example.com/apps/users#user/5678</code></pre> 
+       <p>The browser fires a <code>hashchange</code> event that we can then utilize within the application.<br />A user can then click the back button to go back to the <code>#user=1234</code> hash. This notification then allows you to react to the change within your application. It is important to mention that the hash is not sent to the server. The hash is typically digested within the client’s interpretation of the URI. The Ext Router relies on the browser’s hash functionality to allow application state tracking and deep linking.</p> 
+       <h2 id="Implement_Routing_in_your_Application">Implement Routing in your Application</h2> 
+       <p>The Router class is a new addition to Ext JS 5 that was built to make hash change interpretation very simple in an MVC application. We have always had Ext.util.History, which you could use to react to the hash changes. However, this Ext.util.History offers a much more manual process and a proper Router class was needed. The Router provides simple integration into an Ext JS 5 MVC application by defining routes in a view controller. A route is a string that is matched to the hash and allows for deep linking within your Ext application. Here is a basic example controller implementing Router:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend : 'Ext.app.ViewController',
+
+    routes : {
+        'users' : 'onUsers'
+    },
+
+    onUsers : function() {
+        //...
+    }
+});</code></pre> 
+       <p>This route will react to the <code>#users</code> hash and will execute the <code>onUsers</code> method scoped to the controller instance. As you can see, the <code>routes</code> config is placed within the <code>config</code> object instead of on the root level.</p> 
+       <h2 id="Updating_the_Hash">Updating the Hash</h2> 
+       <p>To update the hash, a controller has a redirectTo method.</p> 
+       <pre mode="javascript" theme="chrome"><code>this.redirectTo('user/1234');</code></pre> 
+       <p>This will update the hash to be <code>&quot;#user/1234&quot;</code> and any routes configured to recognize the hash will be executed. There may be times that the current hash is the same as the hash that is trying to be updated to. In this case, <code>redirectTo</code> will return <code>false</code> and the hash will not get updated which will then not execute any configured routes. <code>redirectTo</code> also accepts a second parameter to force the Router to react to this hash by passing <code>true</code></p> 
+       <pre mode="javascript" theme="chrome"><code>this.redirectTo('user/1234', true);</code></pre> 
+       <p>Even if the current hash matches the hash being passed to <code>redirectTo</code>, the Router will still execute any matching routes.</p> 
+       <h2 id="Default_Token">Default Token</h2> 
+       <p>When an application starts, it may be configured to add a default hash if one is not provided. For instance, if the application shows a dashboard when the <code>#home</code> hash is used, you may want to add the <code>#home</code> hash to the URI if no other hash exists. To enable a default hash, you can use the <code>defaultToken</code> config in the <code>/app/view/Application.js</code> file, which can be found within your application:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.Application', {
+    extend : 'Ext.app.Application',
+
+    //...
+
+    defaultToken : 'home'
+});</code></pre> 
+       <p>When the application is started, it will check the current hash of the URI. If there is a hash defined, it will execute the route handlers. If no hash is found, it will add the <code>#home</code> hash and any route handlers will get executed to handle it appropriately.</p> 
+       <h2 id="Hashes_with_Parameters">Hashes with Parameters</h2> 
+       <p>An application can also identify parameters within hashes. A user ID is an example of a parameter you may want to include in a hash. We mentioned using <code>#user/1234</code> as a hash earlier within the guide. In this case, we may want the <code>1234</code> to be an id parameter. You would then set up your controller to react to the <code>#user/1234</code> hash:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend : 'Ext.app.ViewController',
+
+    routes : {
+        'user/:id' : 'onUser'
+    },
+
+    onUser : function(id) {
+        //...
+    }
+});</code></pre> 
+       <p>The route we used was <code>'user/:id'</code> and the colon, <code>:</code>. This signifies that there is a parameter and your application will pass that parameter to the onUser method as an argument. The method will receive the same number of arguments passed to it in the same order as specified in the route, which allows for easy inclusion of multiple parameters.</p> 
+       <h2 id="Hash_Parameter_Formatting">Hash Parameter Formatting</h2> 
+       <p>The application may want to enforce a specific format for the user ID. The ID is numeric In the case we’ve explored so far. You may also use the route to equate to an object by using the <code>conditions</code> config:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend : 'Ext.app.ViewController',
+
+    routes : {
+        'user/:id' : {
+            action     : 'onUser',
+            conditions : {
+                ':id' : '([0-9]+)'
+            }
+        }
+    },
+
+    onUser : function(id) {
+        //...
+    }
+});</code></pre> 
+       <p>Let’s walk through this example. First, the ‘onUser’ method is now moved to the action config. This will work similarly to when we passed the string to the route. We then use the conditions config to provide an object. The key we want to control is the parameter name with the colon and we provide a Regular Expression string (not a Regular Expression object). For the <code>:id</code> condition, we use <code>([0-9]+)</code>, which will allow numbers between 0 and 9 with any length and will remember the match. We use a string because a Regular Expression object is made to match the entire hash, so if there are multiple parameters in the route we need to concatenate the Regular Expression strings together into a single Regular Expression object. If you do not provide a condition for a parameter, it will default to:</p> 
+       <pre mode="javascript" theme="chrome"><code>([%a-zA-Z0-9\\-\\_\\s,]+)</code></pre> 
+       <h2 id="Route_Handling">Route Handling</h2> 
+       <p>There may be times when an application needs to prevent the handling of a route. In this case, we may want to check administrative rights to determine whether or not the current user is allowed to view a portion of the application. The route can be configured to use a before action, which may stop the current route, stop all routes or continue on with the route execution.</p> 
+       <p>This example will continue the route execution:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend : 'Ext.app.ViewController',
+
+    routes : {
+        'user/:id' : {
+            before  : 'onBeforeUser',
+            action  : 'onUser'
+        }
+    },
+
+    onBeforeUser : function(id, action) {
+        Ext.Ajax.request({
+            url     : '/security/user/' + id,
+            success : function() {
+                action.resume();
+            }
+        });
+    },
+
+    onUser : function(id) {
+        //...
+    }
+});</code></pre> 
+       <p>In the <code>onBeforeUser</code> method, the <code>:id</code> parameter is passed as an argument, but the last argument is an <code>action</code>. If you execute the <code>resume</code> method on the <code>action</code>, the route will continue to execute and the <code>onUser</code> method will then be called. Notice that we can wait for an AJAX request to complete before we need to continue the route execution.</p> 
+       <p>We can expand on this example by telling the application to stop current route execution by executing the <code>stop</code> method:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend : 'Ext.app.ViewController',
+
+    routes : {
+        'user/:id' : {
+            before  : 'onBeforeUser',
+            action  : 'onUser'
+        }
+    },
+
+    onBeforeUser : function(id, action) {
+        Ext.Ajax.request({
+            url     : '/security/user/' + id,
+            success : function() {
+                action.resume();
+            },
+            failure : function() {
+                action.stop();
+            }
+        });
+    },
+
+    onUser : function(id) {
+        //...
+    }
+});</code></pre> 
+       <p>Ext JS applications can be complex and there may be many controllers set up to listen to the same route. However, only one controller is set up with a before action so there is only a single ajax request fired. If we pass <code>true</code> to the <code>stop</code> method of the <code>action</code> argument, we can then stop all queued routes from executing, not just the current route handling:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
+    extend : 'Ext.app.ViewController',
+
+    routes : {
+        'user/:id' : {
+            before  : 'onBeforeUser',
+            action  : 'onUser'
+        }
+    },
+
+    onBeforeUser : function(id, action) {
+        Ext.Ajax.request({
+            url     : '/security/user/' + id,
+            success : function() {
+                action.resume();
+            },
+            failure : function() {
+                action.stop(true);
+            }
+        });
+    },
+
+    onUser : function(id) {
+        //...
+    }
+});</code></pre> 
+       <p>Now, when the ajax request fails, we pass <code>true</code> to cancel all handlers for this route across all controllers.</p> 
+       <p><strong>Note:</strong> <em>If you do not execute the <code>resume</code> or <code>stop</code> method, routing is interrupted and will never be completed properly. It’s important to execute either method at some point.</em></p> 
+       <h2 id="Handling_Unmatched_Routes">Handling Unmatched Routes</h2> 
+       <p>If the hash was changed but there is no route that was found to match the hash, the Router will do nothing; the Router will not attempt to change the hash and will leave the unmatched hash alone. The Router will fire the <code>unmatchedroute</code> event on the application instance which is listenable in the <code>Ext.application</code> call:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.application({
+    name : 'MyApp',
+
+    listen : {
+        controller : {
+            '#' : {
+                unmatchedroute : 'onUnmatchedRoute'
+            }
+        }
+    },
+
+    onUnmatchedRoute : function(hash) {
+        //...
+    }
+});</code></pre> 
+       <h2 id="Using_Multiple_Routes_in_a_Single_Hash">Using Multiple Routes in a Single Hash</h2> 
+       <p>Since Ext JS applications can be complex, there may be times where we need to use multiple routes in a single hash. The Router is set up to handle this so there is no extra set up to the routes that are configured in the controllers. Instead, you can delimit the hash with a pipe: <code>|</code>. An example hash could be</p> 
+       <pre mode="javascript" theme="chrome"><code>`#user/1234|messages`</code></pre> 
+       <p>In this case, we want to show user details for the user with an id of <code>1234</code>, but also show messages. Each route will execute in the order dictated by the hash. They are then sandboxed from each other. In simpler terms, if you stop the <code>user/1234</code> route, the <code>messages</code> route will continue execution. It’s important to note that the execution order of the individual routes is the same order as the routes are in the hash. The <code>user/1234</code> route will always execute before the <code>messages</code> route for the above example.</p> 
+       <p>You may modify the delimiter, by changing the <code>Ext.app.route.Router.multipleToken</code> property.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Cordova 和 Phonegap 应用</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Cordova" title="Cordova">Cordova</a> 
+       <a class="toc-page-h2" href="#PhoneGap" title="PhoneGap">PhoneGap</a> 
+       <a class="toc-page-h2" href="#Picking_a_Packager" title="Picking a Packager">Picking a Packager</a> 
+       <a class="toc-page-h2" href="#Using_Sencha_Cmd_with_Cordova_and_PhoneGap" title="Using Sencha Cmd with Cordova and PhoneGap">Using Sencha Cmd with Cordova and PhoneGap</a> 
+       <a class="toc-page-h3" href="#Important_Notes" title="Important Notes">Important Notes</a> 
+       <a class="toc-page-h2" href="#Environment_Setup" title="Environment Setup">Environment Setup</a> 
+       <a class="toc-page-h2" href="#config_xml" title="config.xml">config.xml</a> 
+       <a class="toc-page-h2" href="#Developing_a_Cordova_App" title="Developing a Cordova App">Developing a Cordova App</a> 
+       <a class="toc-page-h3" href="#Build_Name" title="Build Name">Build Name</a> 
+       <a class="toc-page-h3" href="#Platforms" title="Platforms">Platforms</a> 
+       <a class="toc-page-h3" href="#ID" title="ID">ID</a> 
+       <a class="toc-page-h2" href="#Sencha_Cordova_Commands" title="Sencha Cordova Commands">Sencha Cordova Commands</a> 
+       <a class="toc-page-h3" href="#Build" title="Build">Build</a> 
+       <a class="toc-page-h3" href="#Run" title="Run">Run</a> 
+       <a class="toc-page-h3" href="#Emulate" title="Emulate">Emulate</a> 
+       <a class="toc-page-h3" href="#Prepare" title="Prepare">Prepare</a> 
+       <a class="toc-page-h2" href="#Developing_a_PhoneGap_App" title="Developing a PhoneGap App">Developing a PhoneGap App</a> 
+       <a class="toc-page-h2" href="#Sencha_PhoneGap_Commands" title="Sencha PhoneGap Commands">Sencha PhoneGap Commands</a> 
+       <a class="toc-page-h3" href="#Build" title="Build">Build</a> 
+       <a class="toc-page-h3" href="#Run" title="Run">Run</a> 
+       <a class="toc-page-h3" href="#Emulate" title="Emulate">Emulate</a> 
+       <a class="toc-page-h2" href="#Developing_a_Remote_PhoneGap_App" title="Developing a Remote PhoneGap App">Developing a Remote PhoneGap App</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>集成 Cordova 或 Phonegap</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Cordova">Cordova</h2> 
+       <p><a href="../../../cordova.apache.org/default.htm">Apache Cordova</a> provides APIs and packaging tools that create applications for Android, iOS, BlackBerry, and Windows Phone devices. Sencha Cmd 5+ provides a build system that supports multiple build profiles. This is ideal for native packaging. The Cordova Native Packager components have been updated to take full advantage of this feature.</p> 
+       <h2 id="PhoneGap">PhoneGap</h2> 
+       <p>PhoneGap is built on top of Cordova and both have access to the Cordova API. PhoneGap and Cordova differ by how their packaging tools are implemented. PhoneGap provides a remote building interface at <a href="../../../https@build.phonegap.com/default.htm">Adobe PhoneGap Build</a> that lets you package and emulate an application for a single platform in the cloud. The PhoneGap Native Packager components have been updated to take full advantage of this feature.</p> 
+       <h2 id="Picking_a_Packager">Picking a Packager</h2> 
+       <p>When choosing between Cordova and PhoneGap, it’s important to note a few things:</p> 
+       <ul> 
+        <li>Cordova packaging tools let you build simultaneously for multiple platforms on your machine.</li> 
+        <li>Cordova is constantly updated by the open source community, whereas PhoneGap updates are coordinated by Adobe.</li> 
+        <li>PhoneGap provides a remote building application that eliminates the need for local building.</li> 
+       </ul> 
+       <h2 id="Using_Sencha_Cmd_with_Cordova_and_PhoneGap">Using Sencha Cmd with Cordova and PhoneGap</h2> 
+       <p>Every app generated with Sencha Cmd has the ability to switch on native building through these services. Sencha Cmd will take care of all the repetitive tasks, such as building your app, getting it in the proper place for Cordova or PhoneGap, and running the proper commands to build, emulate, or run your application.</p> 
+       <p>For more information on getting started with native development, please see the <a href="../../../cordova.apache.org/docs/en/3.0.0/guide_platforms_index.md.html#Platform%20Guides">Apache Cordova Platform Guides</a>. These guides provide getting started information and prerequisites needed to get your system up and running. </p> 
+       <h3 id="Important_Notes">Important Notes</h3> 
+       <ol> 
+        <li><p><code>packager.json</code> has been fully removed. If your project still contains this file, you may safely remove it. This file was only used by Sencha’s legacy Native Packager.</p></li> 
+        <li><p>For Cordova and PhoneGap, Sencha Cmd can only create DEBUG versions of applications, not a Release (for an app store) version. To create release versions, you must use a packager, such as Eclipse or IntelliJ for Android, and Xcode for iOS.</p></li> 
+        <li><p>You must have <a href="../../../www.oracle.com/technetwork/java/javase/downloads/java-se-jre-7-download-432155.html">Java JRE 1.7</a> for the Sencha Cmd Cordova commands to work properly. While Sencha Cmd 6 on Windows and Mac OS X ship a current JRE in their default installers, the Cordova tools will not find and utilize Sencha Cmd’s internal JRE.</p></li> 
+       </ol> 
+       <h2 id="Environment_Setup">Environment Setup</h2> 
+       <p>Before developing a Cordova or PhoneGap application, you will need to get your environment set up with the following software:</p> 
+       <ol> 
+        <li><p><a href="../../../www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html">Install Java JRE</a></p></li> 
+        <li><p><a href="../../../nodejs.org/download/default.htm">Install Node.js</a></p></li> 
+        <li><p>If you want to package and emulate with Cordova, install it with the following command:</p> <pre mode="javascript" theme="chrome"><code>npm install -g cordova</code></pre><p>If you’re on a Mac, you may need to include “sudo” in order to complete the installation.<br />The command would then be:</p> <pre mode="javascript" theme="chrome"><code>sudo npm install -g cordova</code></pre><p><strong>Note:</strong> Whether or not you install Cordova to package and emulate your app, the Cordova API is available to your application. Cordova packaging and emulation does not affect the use of the Cordova APIs in a Cordova or PhoneGap app.</p></li> 
+        <li><p>If you want to package and emulate with PhoneGap, install it with the following command:</p> <pre mode="javascript" theme="chrome"><code>npm install -g phonegap</code></pre><p>If you’re on a Mac, you may need to include “sudo” in order to complete the installation.<br />The command would then be:</p> <pre mode="javascript" theme="chrome"><code>sudo npm install -g phonegap</code></pre><p><strong>Note:</strong> You must register with the free <a href="../../../https@build.phonegap.com/default.htm">Adobe PhoneGap Build</a> site and obtain a username and password to access the PhoneGap remote building site.</p></li> 
+        <li><p>Download and install <a href="../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a>.<br />For more information about this process, please check out the <a href="intro_to_cmd.html">Cmd Intro Guide</a>.</p></li> 
+        <li><p>Check and satisfy target device platform-specific requirements:</p><p><strong>Android</strong>: Download and install the <a href="../../../developer.android.com/sdk/index.html">Android SDK Manager</a>.</p><p><strong>Blackberry</strong>: Review the <a href="../../../developer.blackberry.com/native/default.htm">BlackBerry Native SDK</a> and register to sign your apps with the <a href="../../../https@www.blackberry.com/SignedKeys/codesigning.html">BlackBerry Keys Order Form</a>.</p><p><strong>iOS</strong>: Complete all of the steps for iOS provisioning on the <a href="../../../https@developer.apple.com/account/ios/profile/profileLanding.action">Apple iOS provisioning profiles portal</a> (requires an Apple ID, password, and a purchased developer license). Use this site to obtain a certificate, identify devices, and get an AppID. </p><p>In addition, download and install the free <a href="../../../https@itunes.apple.com/us/app/xcode/id497799835">Xcode</a> software. You can use the Xcode simulator to debug your iOS app before installing it on a device. Xcode only works on a Mac with Lion, Mountain Lion, or Mavericks OS X.</p></li> 
+       </ol> 
+       <h2 id="config_xml">config.xml</h2> 
+       <p>When you create a PhoneGap or Cordova app, they will both will create a <code>config.xml</code> file for your project.</p> 
+       <p>Cordova stores <code>config.xml</code> in your “app_root/cordova” folder, while PhoneGap stores the <code>config.xml</code> file in your “app_root/cordova/www” folder. This is a problem because the <code>www</code> folder is the destination for the compiled build. It is very likely that this <code>www</code> folder will get deleted and wipe out the <code>config.xml</code> file. </p> 
+       <p>To remedy this in Sencha Cmd, we copy the <code>config.xml</code> file to the root of the PhoneGap project when a PhoneGap application is created. Every time you do a build, we then copy it back into the <code>www</code> folder along with the compiled application. This means that users can expect the <code>config.xml</code> file to be in the root of the Cordova or PhoneGap folder regardless of which framework you use.</p> 
+       <p>For more information about configuring PhoneGap and Cordova, please review the following resources:</p> 
+       <ul> 
+        <li><a href="../../../https@github.com/phonegap/phonegap-start/blob/master/www/config.xml">PhoneGap example config.xml file</a></li> 
+        <li><a href="../../../docs.phonegap.com/en/3.0.0/config_ref_index.md.html#Configuration%20Reference">Configuration Reference</a></li> 
+       </ul> 
+       <h2 id="Developing_a_Cordova_App">Developing a Cordova App</h2> 
+       <p>Create your application using the Cmd generate command as follows:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/Framework generate app MyApp /path/to/MyApp</code></pre> 
+       <p>When developing an Ext 6+ universal application the generated application will already contain a <strong>builds</strong> block in <code>app.json</code>. When your application already contains a <strong>builds</strong> block the <code>sencha phonegap/cordova init</code> command will not be able to add modify your <code>app.json</code>. To add Cordova support please modify your applications <code>app.json</code> <strong>builds</strong> block as follows:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;classic&quot;: {
+        &quot;toolkit&quot;: &quot;classic&quot;,
+        &quot;theme&quot;: &quot;theme-triton&quot;
+    },
+
+    &quot;modern&quot;: {
+        &quot;toolkit&quot;: &quot;modern&quot;,
+        &quot;theme&quot;: &quot;theme-cupertino&quot;,
+        &quot;packager&quot;: &quot;cordova&quot;,
+        &quot;cordova&quot;: {
+            &quot;config&quot;: {
+               &quot;platforms&quot;: &quot;ios&quot;,
+               &quot;id&quot;: &quot;com.mydomain.MyApp&quot;
+            }
+        }
+    }
+}</code></pre> 
+       <p>Navigate to your newly generated project folder and run one of the following commands (APP_ID and APP_NAME arguments optional).</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha phonegap init com.mycompany.MyApp MyApp</code></pre> 
+       <p>or</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha cordova init com.mycompany.MyApp MyApp</code></pre> 
+       <p>You should now see a phonegap or cordova directory in the project folder after the above command completes.</p> 
+       <p>You should also see a block for PhoneGap or Cordova in your project’s <code>app.json</code> file. <code>app.json</code> is located at the root of your project. This is where you can set the platform for which you are building.</p> 
+       <p>A build object similar to the following should now be present in your <code>app.json</code> file.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;native&quot;: {
+        &quot;packager&quot;: &quot;cordova&quot;,
+        &quot;cordova&quot; : {
+            &quot;config&quot;: {
+                &quot;platforms&quot;: &quot;ios&quot;
+                &quot;id&quot;: &quot;com.mydomain.MyApp&quot;
+            }
+        }
+    }
+}</code></pre> 
+       <p>Let’s talk a bit about the above code snippet.</p> 
+       <h3 id="Build_Name">Build Name</h3> 
+       <p>It is worth noting that the word “native” is simply your build’s name and can be anything you like. Build names must be a single string, containing only alphanumeric characters with no spaces. For example you could have a build name like “ios”, “android”, “iphone”, “ipad”, etc..</p> 
+       <p><strong>Note:</strong> While you may choose anything for a build name, the names “production”, “testing” and “development” are reserved by Sencha Cmd and should not be used in this context.</p> 
+       <h3 id="Platforms">Platforms</h3> 
+       <p>You can then set the platforms object to be any platform, or combination of platforms. For Cordova, you can specify a space delimited list, for example “ios android”.</p> 
+       <h3 id="ID">ID</h3> 
+       <p>The “id” property will be used when the Cordova application is first generated. This will be the identifier for your application. That said, you will want to make sure you have picked this correctly. If you need to change it, you will want to delete the Cordova folder from your project and let Cmd regenerate it after you have changed the ID property. This is especially important for iOS application as this must match your Bundle Identifier.</p> 
+       <p>From the terminal or command line run the following command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build {build-name}</code></pre> 
+       <p>Where {build-name} is one of the names defined in the build object of your <code>app.json</code> file. For example if you called your build “android” the command would be:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build android</code></pre> 
+       <p>That’s it! Sencha Cmd will now create a Cordova application and build the platform you specified via the platforms property in <code>app.json</code>.</p> 
+       <h2 id="Sencha_Cordova_Commands">Sencha Cordova Commands</h2> 
+       <p>There are 4 commands you are able to use with Cordova and this new build object. </p> 
+       <h3 id="Build">Build</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build {build-name}</code></pre> 
+       <p>“build” will build your Sencha application and then build a native application.</p> 
+       <h3 id="Run">Run</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app run {build-name}</code></pre> 
+       <p>“run” will build your Sencha application and your native application. It will then attempt to run it on a connected device.</p> 
+       <h3 id="Emulate">Emulate</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app emulate {build-name}</code></pre> 
+       <p>“emulate” will build your Sencha application and your native application. It will then attempt to run it in a emulator.</p> 
+       <h3 id="Prepare">Prepare</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app prepare {build-name}</code></pre> 
+       <p>“prepare” will build your Sencha application, then prepare the built application into the native app. However, it will not build the native portion. This is good if you need to inject things into your application after sencha compile and before the native build.</p> 
+       <h2 id="Developing_a_PhoneGap_App">Developing a PhoneGap App</h2> 
+       <p>PhoneGap is very similar to Cordova. In fact, the process is almost identical if you are not building via the PhoneGap cloud services.</p> 
+       <p>Here is a snippet for <code>app.json</code> that would give you a PhoneGap project identical to the Cordova project above.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;native&quot;: {
+        &quot;packager&quot;: &quot;phonegap&quot;,
+        &quot;phonegap&quot; : {
+            &quot;config&quot;: {
+                &quot;platform&quot;: &quot;ios&quot;,
+                &quot;id&quot;: &quot;com.mydomain.MyApp&quot;
+            }
+        }
+    }
+}</code></pre> 
+       <p>There are only a few minor, but important, differences.</p> 
+       <ul> 
+        <li><p>The name changes from “cordova” to “phonegap”.</p></li> 
+        <li><p>“platform” is singular not “platforms”. PhoneGap only allows you to build one local platform at a time, whereas Cordova allows for multiple simultaneously.</p></li> 
+       </ul> 
+       <p>Once you recognize these small differences, it’s the same commands as above. You can simply run <code>sencha app build native</code> or <code>sencha app run native</code> and you will be on the same path as Cordova.</p> 
+       <h2 id="Sencha_PhoneGap_Commands">Sencha PhoneGap Commands</h2> 
+       <p>There are 3 commands you may use with PhoneGap and this new build object. PhoneGap does not support the <code>prepare</code> command found in Cordova. <code>sencha app prepare native</code> will throw an error if you are using PhoneGap. The other three are the same as the Cordova commands above. </p> 
+       <h3 id="Build">Build</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build {build-name}</code></pre> 
+       <p>“build” will build your sencha application and then build a native application.</p> 
+       <h3 id="Run">Run</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app run {build-name}</code></pre> 
+       <p>“run” will build your sencha application and your native application. It will then attempt to run it on a connected device.</p> 
+       <h3 id="Emulate">Emulate</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app emulate {build-name}</code></pre> 
+       <p>“emulate” will build your sencha application and your native application. It will then attempt to run it in a emulator.</p> 
+       <h2 id="Developing_a_Remote_PhoneGap_App">Developing a Remote PhoneGap App</h2> 
+       <p>Building your PhoneGap application in the cloud has numerous advantages. You do not need to go through the normal hassle of downloading all the SDKs and tools for your machine. You can simply send your web app to the PhoneGap servers and Adobe will generate a native application for you. </p> 
+       <p>Before you get started with Sencha Cmd and remote building, you will want to visit <a href="../../../build.phonegap.com/default.htm">http://build.phonegap.com</a> and sign up for a free account. </p> 
+       <p>You can test the build process by simply uploading a zip that contains a <code>index.html</code> file. PhoneGap Remote Build will then package it for you. </p> 
+       <p>If you are building for iOS, you will need to follow the instructions on the site to add the proper credentials to build your application.</p> 
+       <p>Once you feel confident that your account is setup and you have all the correct files uploaded to Adobe, you can quickly add remote building to your Sencha workflow. </p> 
+       <p>Let’s take a look at a build object for remote deployment. </p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;native&quot;: {
+        &quot;packager&quot;: &quot;phonegap&quot;,
+        &quot;phonegap&quot; : {
+            &quot;config&quot;: {
+                &quot;platform&quot;: &quot;ios&quot;,
+                &quot;remote&quot;: true,
+                &quot;id&quot;: &quot;com.mydomain.MyApp&quot;
+            }
+        }
+    }
+}</code></pre> 
+       <p>As you can see, it is very simple to switch from local to remote building. All you need to do is add the remote flag to your <code>app.json</code> builds block. </p> 
+       <p>The next step is to provide your username and password so that Sencha Cmd can automatically log you in to the PhoneGap remote servers and upload your project. </p> 
+       <p>To do this, we recommend adding a <code>local.properties</code> file to your application’s root. For security purposes, this properties file should be ignored by all forms of version control.</p> 
+       <p>Add the following lines to that file:</p> 
+       <pre mode="javascript" theme="chrome"><code>phonegap.remote.username=myname@domain.com
+phonegap.remote.password=s3nch@isgr3@t</code></pre> 
+       <p>Once you have configured your username and password, sending off a build is simple. Just run <code>sencha app build native</code> and your application will be compiled and shipped up to the cloud for Adobe to generate your native application.</p> 
+       <p>After the build is complete, you may access the final package file through the PhoneGap portal for testing on devices, or for uploading to applicable app stores.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../https@s.adroll.com" : "../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,977 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Trees</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#The_Node_Interface" title="The Node Interface">The Node Interface</a> 
+       <a class="toc-page-h2" href="#Visually_changing_your_tree" title="Visually changing your tree">Visually changing your tree</a> 
+       <a class="toc-page-h2" href="#Multiple_columns" title="Multiple columns">Multiple columns</a> 
+       <a class="toc-page-h2" href="#Adding_nodes_to_the_tree" title="Adding nodes to the tree">Adding nodes to the tree</a> 
+       <a class="toc-page-h2" href="#Loading_and_Saving_Tree_Data_using_a_Proxy" title="Loading and Saving Tree Data using a Proxy">Loading and Saving Tree Data using a Proxy</a> 
+       <a class="toc-page-h3" href="#NodeInterface_Fields" title="NodeInterface Fields">NodeInterface Fields</a> 
+       <a class="toc-page-h4" href="#NodeInterface_Fields_are_Reserved_Names" title="NodeInterface Fields are Reserved Names">NodeInterface Fields are Reserved Names</a> 
+       <a class="toc-page-h4" href="#Persistent_Fields_vs_Non_persistent_Fields_and_Overriding_the_Persistence_of_Fields" title="Persistent Fields vs Non-persistent Fields and Overriding the Persistence of Fields">Persistent Fields vs Non-persistent Fields and Overriding the Persistence of Fields</a> 
+       <a class="toc-page-h3" href="#Loading_Data" title="Loading Data">Loading Data</a> 
+       <a class="toc-page-h4" href="#Loading_the_Entire_Tree" title="Loading the Entire Tree">Loading the Entire Tree</a> 
+       <a class="toc-page-h4" href="#Dynamically_Loading_Children_When_a_Node_is_Expanded" title="Dynamically Loading Children When a Node is Expanded">Dynamically Loading Children When a Node is Expanded</a> 
+       <a class="toc-page-h3" href="#Saving_Data" title="Saving Data">Saving Data</a> 
+       <a class="toc-page-h4" href="#Creating_a_New_Node" title="Creating a New Node">Creating a New Node</a> 
+       <a class="toc-page-h4" href="#Updating_an_Existing_Node" title="Updating an Existing Node">Updating an Existing Node</a> 
+       <a class="toc-page-h4" href="#Removing_a_Node" title="Removing a Node">Removing a Node</a> 
+       <a class="toc-page-h4" href="#Bulk_Operations" title="Bulk Operations">Bulk Operations</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Trees</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.tree.Panel" data-full-load="true">Tree Panel</a> Component is one of the most versatile Components in Ext JS and is an excellent tool for displaying hierarchical data in an <a href="../6.0.1-classic/#!/api/Ext-method-application" data-full-load="true">application</a>. Tree Panel extends from the same class as <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Grid Panel</a>, so, most all of the benefits of Grid Panels - features, extensions, and plugins can also be used on Tree Panels. Things like columns, column resizing, dragging and dropping, renderers, sorting and filtering can be expected to work similarly for both components. </p> 
+       <p>Let’s start by creating a very simple Tree.</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">Editor</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">Preview</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">Open in Fiddle</a>
+	<div class="code-editor"><pre><code>Ext.create('Ext.tree.Panel', {
+    renderTo: document.body,
+    title: 'Simple Tree',
+    width: 300,
+    height: 250,
+    root: {
+        text: 'Root',
+        expanded: true,
+        children: [
+            {
+                text: 'Child 1',
+                leaf: true
+            },
+            {
+                text: 'Child 2',
+                leaf: true
+            },
+            {
+                text: 'Child 3',
+                expanded: true,
+                children: [
+                    {
+                        text: 'Grandchild',
+                        leaf: true
+                    }
+                ]
+            }
+        ]
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>This Tree Panel renders itself to the document body. We defined a root <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface" data-full-load="true">node</a> that is expanded by default. The root node has three children, the first two of which are leaf nodes which means they cannot have any children. The third node is not a leaf node and has has one child leaf node. The <code>text</code> property is used as the node’s text label. </p> 
+       <p>Internally, a Tree Panel stores its data in a <a href="../6.0.1-classic/#!/api/Ext.data.TreeStore" data-full-load="true">TreeStore</a>. The above example uses the <a href="../6.0.1-classic/#!/api/Ext.tree.Panel-cfg-root" data-full-load="true">root</a> config as a shortcut for configuring a Store. If we were to configure the Store separately, the code would look something like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>var store = Ext.create('Ext.data.TreeStore', {
+    root: {
+        text: 'Root',
+        expanded: true,
+        children: [
+            {
+                text: 'Child 1',
+                leaf: true
+            },
+            {
+                text: 'Child 2',
+                leaf: true
+            },
+            ...
+        ]
+    }
+});
+
+Ext.create('Ext.tree.Panel', {
+    title: 'Simple Tree',
+    store: store,
+    ...
+});</code></pre> 
+       <h2 id="The_Node_Interface">The Node Interface</h2> 
+       <p>In the above examples, we set a couple of different properties on Tree nodes. But what are nodes exactly? As mentioned before, the Tree Panel is bound to a <a href="../6.0.1-classic/#!/api/Ext.data.TreeStore" data-full-load="true">TreeStore</a>. A Store in Ext JS manages a collection of <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Model</a> instances. Tree nodes are simply Model instances that are decorated with a <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface" data-full-load="true">NodeInterface</a>. Decorating a Model with a NodeInterface gives the Model the fields, methods, and properties that are required for it to be used in a Tree. The following is a screenshot that shows the structure of a node in the developer tools.</p> 
+       <p><img src="images/nodeinterface.png" alt="A model instance decorated with the
+NodeInterface" /></p> 
+       <p>In order to see the full set of fields, methods, and properties available on nodes, see the API documentation for the <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface" data-full-load="true">NodeInterface</a> class.</p> 
+       <h2 id="Visually_changing_your_tree">Visually changing your tree</h2> 
+       <p>Let’s try something simple. When you set the <a href="../6.0.1-classic/#!/api/Ext.tree.Panel-cfg-useArrows" data-full-load="true">useArrows</a> configuration to true, the Tree Panel hides the lines and uses arrows as expand and collapse icons.</p> 
+       <p><img src="images/arrows.png" alt="Arrows" /></p> 
+       <p>Setting the <a href="../6.0.1-classic/#!/api/Ext.tree.Panel-cfg-rootVisible" data-full-load="true">rootVisible</a> property to <strong>false</strong> visually removes the root node. By doing this, the root node will automatically be expanded. The following image shows the same tree with <code>rootVisible</code> set to <strong>false</strong> and <a href="../6.0.1-classic/#!/api/Ext.tree.Panel-cfg-lines" data-full-load="true">lines</a> set to false.</p> 
+       <p><img src="images/root-lines.png" alt="Root not visible and no lines" /></p> 
+       <h2 id="Multiple_columns">Multiple columns</h2> 
+       <p>Since <a href="../6.0.1-classic/#!/api/Ext.tree.Panel" data-full-load="true">Tree Panel</a> extends from the same base class as <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Grid Panel</a> adding more columns is very easy to do.</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">Editor</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">Preview</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">Open in Fiddle</a>
+	<div class="code-editor"><pre><code>var tree = Ext.create('Ext.tree.Panel', {
+    renderTo: document.body,
+    title: 'TreeGrid',
+    width: 300,
+    height: 150,
+    fields: ['name', 'description'],
+    columns: [{
+        xtype: 'treecolumn',
+        text: 'Name',
+        dataIndex: 'name',
+        width: 150,
+        sortable: true
+    }, {
+        text: 'Description',
+        dataIndex: 'description',
+        flex: 1,
+        sortable: true
+    }],
+    root: {
+        name: 'Root',
+        description: 'Root description',
+        expanded: true,
+        children: [{
+            name: 'Child 1',
+            description: 'Description 1',
+            leaf: true
+        }, {
+            name: 'Child 2',
+            description: 'Description 2',
+            leaf: true
+        }]
+    }
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.tree.Panel-cfg-columns" data-full-load="true">columns</a> configuration expects an array of <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">Ext.grid.column.Column</a> configurations just like a <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Grid Panel</a> would have. The only difference is that a Tree Panel requires at least one Column with an <code>xtype</code> of ‘treecolumn’. This type of column has tree-specific visual effects like depth, lines, and expand and collapse icons. A typical Tree Panel would have only one ‘treecolumn’.</p> 
+       <p>The <code>fields</code> configuration is passed on to the <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a> that the internally created Store uses. Notice how the <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-dataIndex" data-full-load="true">dataIndex</a> configurations on the columns map to the fields we specified - <strong>name</strong> and <strong>description</strong>.</p> 
+       <p>It is also worth noting that when columns are not defined, the Tree will automatically create one single <code>treecolumn</code> with a <code>dataIndex</code> set to <strong>‘text’</strong>. It also hides the headers on the Tree. To show this header when using only a single column set the <code>hideHeaders</code> configuration to <strong>false</strong>.</p> 
+       <h2 id="Adding_nodes_to_the_tree">Adding nodes to the tree</h2> 
+       <p>The root node for the Tree Panel does not have to be specified in the initial configuration. We can always add it later:</p> 
+       <pre mode="javascript" theme="chrome"><code>var tree = Ext.create('Ext.tree.Panel');
+tree.setRootNode({
+    text: 'Root',
+    expanded: true,
+    children: [{
+        text: 'Child 1',
+        leaf: true
+    }, {
+        text: 'Child 2',
+        leaf: true
+    }]
+});</code></pre> 
+       <p>Although this is useful for very small Trees with only a few static nodes, most Tree Panels will contain many more nodes. So let’s take a look at how we can programmatically add new nodes to the Tree.</p> 
+       <pre mode="javascript" theme="chrome"><code>var root = tree.getRootNode();
+
+var parent = root.appendChild({
+    text: 'Parent 1'
+});
+
+parent.appendChild({
+    text: 'Child 3',
+    leaf: true
+});
+
+parent.expand();</code></pre> 
+       <p>Every node that is not a leaf node has an <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-appendChild" data-full-load="true">appendChild</a> method which accepts a Node, or a config object for a Node, as its first parameter and returns the Node that was appended. The above example also calls the <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-expand" data-full-load="true">expand</a> method to expand the newly created parent.</p> 
+       <p><img src="images/append-children.png" alt="Appending to the tree" /></p> 
+       <p>Also useful is the ability to define children inline when creating the new parent nodes. The following code gives us the same result.</p> 
+       <pre mode="javascript" theme="chrome"><code>var parent = root.appendChild({
+    text: 'Parent 1',
+    expanded: true,
+    children: [{
+        text: 'Child 3',
+        leaf: true
+    }]
+});</code></pre> 
+       <p>Sometimes we want to insert a node into a specific location in the Tree instead of appending it. Besides the <code>appendChild</code> method, <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface" data-full-load="true">Ext.data.NodeInterface</a> also provides <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-insertBefore" data-full-load="true">insertBefore</a> and <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-insertChild" data-full-load="true">insertChild</a> methods.</p> 
+       <pre mode="javascript" theme="chrome"><code>var child = parent.insertChild(0, {
+    text: 'Child 2.5',
+    leaf: true
+});
+
+parent.insertBefore({
+    text: 'Child 2.75',
+    leaf: true
+}, child.nextSibling);</code></pre> 
+       <p>The <code>insertChild</code> method expects an index at which the child will be inserted. The <code>insertBefore</code> method expects a reference node. The new node will be inserted before the reference node.</p> 
+       <p><img src="images/insert-children.png" alt="Inserting children into the tree" /></p> 
+       <p>NodeInterface also provides several more properties on nodes that can be used to reference other nodes.</p> 
+       <ul> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-nextSibling" data-full-load="true">nextSibling</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-previousSibling" data-full-load="true">previousSibling</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-parentNode" data-full-load="true">parentNode</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-lastChild" data-full-load="true">lastChild</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-firstChild" data-full-load="true">firstChild</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-childNodes" data-full-load="true">childNodes</a></li> 
+       </ul> 
+       <h2 id="Loading_and_Saving_Tree_Data_using_a_Proxy">Loading and Saving Tree Data using a Proxy</h2> 
+       <p>Loading and saving Tree data is somewhat more complex than dealing with flat data because of all the fields that are required to represent the hierarchical structure of the Tree. This section will explain the intricacies of working with Tree data.</p> 
+       <h3 id="NodeInterface_Fields">NodeInterface Fields</h3> 
+       <p>The first and most important thing to understand when working with Tree data is how the <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface" data-full-load="true">NodeInterface</a> class’ fields work. Every node in a Tree is simply a <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Model</a> instance decorated with the NodeInterface’s fields and methods. Assume for a moment that an application has a Model called <strong>“Person”</strong>. A Person only has two fields - <strong>“id”</strong> and <strong>“name”</strong>:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Person', {
+    extend: 'Ext.data.Model',
+    fields: ['id', {
+        name: 'name',
+        type: 'string'
+    }]
+});</code></pre> 
+       <p>At this point, <strong>“Person”</strong> is just a plain vanilla Model. If an instance is created, it can easily be verified that it only has two fields by looking at its <code>fields</code> array:</p> 
+       <pre mode="javascript" theme="chrome"><code>var rec = Ext.create('Person');
+
+console.log(rec.getFields().length); // outputs '2'</code></pre> 
+       <p>When the Person model is used in a TreeStore, something interesting happens. Notice the field count now:</p> 
+       <pre mode="javascript" theme="chrome"><code>var store = Ext.create('Ext.data.TreeStore', {
+    model: 'Person',
+    root: {
+        name: 'Phil'
+    }
+});
+
+console.log(store.getRoot().getFields().length); // outputs '27'</code></pre> 
+       <p>The Person model’s prototype got 25 extra fields added to it just by using it in a TreeStore. All of these extra fields are defined on the <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface" data-full-load="true">NodeInterface</a> class and are added to the Model’s prototype the first time an instance of that Model is used in a TreeStore (_by setting it as the root node_).</p> 
+       <p>So what exactly are these 25 extra fields, and what do they do? A quick look at the NodeInterface source code reveals that it decorates the Model with the following fields. These fields are used internally to store information relating to the tree’s structure and state:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    name: 'parentId',
+    type: idType,
+    defaultValue: null,
+    useNull: idField.useNull
+}, {
+    name: 'index',
+    type: 'int',
+    defaultValue: -1,
+    persist: false,
+    convert: null
+}, {
+    name: 'depth',
+    type: 'int',
+    defaultValue: 0,
+    persist: false,
+    convert: null
+}, {
+    name: 'expanded',
+    type: 'bool',
+    defaultValue: false,
+    persist: false,
+    convert: null
+}, {
+    name: 'expandable',
+    type: 'bool',
+    defaultValue: true,
+    persist: false,
+    convert: null
+}, {
+    name: 'checked',
+    type: 'auto',
+    defaultValue: null,
+    persist: false,
+    convert: null
+}, {
+    name: 'leaf',
+    type: 'bool',
+    defaultValue: false
+}, {
+    name: 'cls',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'iconCls',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'icon',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'root',
+    type: 'boolean',
+    defaultValue: false,
+    persist: false,
+    convert: null
+}, {
+    name: 'isLast',
+    type: 'boolean',
+    defaultValue: false,
+    persist: false,
+    convert: null
+}, {
+    name: 'isFirst',
+    type: 'boolean',
+    defaultValue: false,
+    persist: false,
+    convert: null
+}, {
+    name: 'allowDrop',
+    type: 'boolean',
+    defaultValue: true,
+    persist: false,
+    convert: null
+}, {
+    name: 'allowDrag',
+    type: 'boolean',
+    defaultValue: true,
+    persist: false,
+    convert: null
+}, {
+    name: 'loaded',
+    type: 'boolean',
+    defaultValue: false,
+    persist: false,
+    convert: null
+}, {
+    name: 'loading',
+    type: 'boolean',
+    defaultValue: false,
+    persist: false,
+    convert: null
+}, {
+    name: 'href',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'hrefTarget',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'qtip',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'qtitle',
+    type: 'string',
+    defaultValue: '',
+    persist: false,
+    convert: null
+}, {
+    name: 'qshowDelay',
+    type: 'int',
+    defaultValue: 0,
+    persist: false,
+    convert: null
+}, {
+    name: 'children',
+    type: 'auto',
+    defaultValue: null,
+    persist: false,
+    convert: null
+}, {
+    name: 'visible',
+    type: 'boolean',
+    defaultValue: true,
+    persist: false,
+}, {
+    name: 'text',
+    type: 'string',
+    persist: 'false
+}</code></pre> 
+       <h4 id="NodeInterface_Fields_are_Reserved_Names">NodeInterface Fields are Reserved Names</h4> 
+       <p>It is important to note that all of the above field names should be treated as “reserved” names. For example, it is not allowed to have a field called “parentId” in a Model if that Model is intended to be used in a Tree, since the Model’s field will override the NodeInterface field. The exception to this rule is when there is a legitimate need to override the persistence of a field.</p> 
+       <h4 id="Persistent_Fields_vs_Non_persistent_Fields_and_Overriding_the_Persistence_of_Fields">Persistent Fields vs Non-persistent Fields and Overriding the Persistence of Fields</h4> 
+       <p>Most of NodeInterface’s fields default to <code>persist: false</code>. This means they are non-persistent fields by default. Non-persistent fields will not be saved via the Proxy when calling the TreeStore’s <code>sync</code> method or calling <code>save()</code> on the Model. In most cases, the majority of these fields can be left at their default persistence setting, but there are cases where it is necessary to override the persistence of some fields.<br />The following example demonstrates how to override the <code>persistence</code> of a NodeInterface field. When overriding a NodeInterface field it is important to only change the <code>persist</code> property. The <code>name</code>, <code>type</code>, and <code>defaultValue</code> properties should never be changed.</p> 
+       <pre mode="javascript" theme="chrome"><code>// overriding the persistence of NodeInterface fields in a Model definition
+    Ext.define('Person', {
+        extend: 'Ext.data.Model',
+        fields: [
+            // Person fields
+            { name: 'id', type: 'int' },
+            { name: 'name', type: 'string' }
+
+            // override a non-persistent NodeInterface field to make it persistent
+            { name: 'iconCls', type: 'string',  defaultValue: null, persist: true },
+
+            // Make the index persistent, so that when reordering nodes, syncing to the server
+            // passes the new index as well as the parentId.
+            // (Note that if moved to the same index in a different parent, the index will
+still be sent in order to fully describe the operation)
+            { name: 'index', type: 'int', defaultValue: -1, persist: true}
+        ]
+    });</code></pre> 
+       <p>Let’s take a more in-depth look at each NodeInterface field and the scenarios in which it might be necessary to override its <code>persist</code> property. In each example below, it is assumed that a <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Server" data-full-load="true">Server Proxy</a> is being used unless otherwise noted.</p> 
+       <p>Persistent by default:</p> 
+       <ul> 
+        <li><code>parentId</code> - used to store the id of a node’s parent node. This field should always be persistent and should not be overridden.</li> 
+        <li><code>leaf</code> - used to indicate that the node is a leaf node and therefore cannot have children appended to it. This field should not normally need to be overridden.</li> 
+       </ul> 
+       <p>Non-persistent by default:</p> 
+       <ul> 
+        <li><p><code>index</code> - used to store the order of nodes within their parent. When a node is <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-insertBefore" data-full-load="true">inserted</a> or <a href="../6.0.1-classic/#!/api/Ext.data.NodeInterface-method-removeChild" data-full-load="true">removed</a>, all of its sibling nodes after the insertion or removal point will have their indexes updated. If desired, the application can use this field to persist the ordering of nodes.</p><p>However, if the server uses a different method of storing order, it may be more appropriate to leave the index field as non-persistent. When using a <a href="../6.0.1-classic/#!/api/Ext.data.proxy.WebStorage" data-full-load="true">WebStorage Proxy</a> if storing order is required, this field must be overridden to be persistent.</p><p>Also if client-side <a href="../6.0.1-classic/#!/api/Ext.data.TreeStore-method-sort" data-full-load="true">sorting</a> is being used it is recommended for the <code>index</code> field to be left as non-persistent, since sorting updates the indexes of all the sorted nodes, which would cause them to be persisted on next sync or save if the <code>persist</code> property is <strong>true</strong>.</p></li> 
+        <li><p><code>depth</code> - used to store the depth of a node in the Tree hierarchy. Override this field to turn on persistence if the server needs to store the depth field. When using a <a href="../6.0.1-classic/#!/api/Ext.data.proxy.WebStorage" data-full-load="true">WebStorage Proxy</a> it is recommended to not override the persistence of the <code>depth</code> field since it is not needed to properly store the Tree structure and will just take up extra space.</p></li> 
+        <li><code>checked</code> - this field should be overridden to be persistent if the Tree is using the <a href="../../../../dev.sencha.com/extjs/5.1.0/examples/kitchensink/#check-tree">checkbox feature</a></li> 
+        <li><code>expanded</code> - used to store the expanded/collapsed state of a node. This field should not normally need to be overridden.</li> 
+        <li><code>expandable</code> - used internally to indicate that this node is expandable. Do not override the persistence of this field.</li> 
+        <li><code>cls</code> - used to apply a CSS class to the node when it is rendered in a TreePanel. Override this field to be persistent if desired.</li> 
+        <li><code>iconCls</code> - used to apply a css class to the node’s icon when it is rendered in a TreePanel. Override this field to be persistent if desired.</li> 
+        <li><code>icon</code> - used to apply a custom icon to the node node when it is rendered in a TreePanel. Override this field to be persistent if desired.</li> 
+        <li><code>root</code> - used to indicate that this node is the root node. This field should not be overridden.</li> 
+        <li><code>isLast</code> - used to indicate that this node is the last of its siblings. This field should not normally need to be overridden.</li> 
+        <li><code>isFirst</code> - used to indicate that this node is the first of its siblings. This field should not normally need to be overridden.</li> 
+        <li><code>allowDrop</code> - used internally to deny dropping on the node. Do not override the persistence of this field.</li> 
+        <li><code>allowDrag</code> - used internally to deny dragging the node. Do not override the persistence of this field.</li> 
+        <li><code>loaded</code> - used internally to indicate that the node’s children have been loaded.<br />Do not override the persistence of this field.</li> 
+        <li><code>loading</code> - used internally to indicate that the proxy is in the process of loading the node’s children. Do not override the persistence of this field.</li> 
+        <li><code>href</code> - used to specify a url that the node should be a link to. Override to be persistent if desired.</li> 
+        <li><code>hrefTarget</code> - used to specify the target for the <code>href</code>. Override to be persistent if desired.</li> 
+        <li><code>qtip</code> - used to add a <a href="../6.0.1-classic/#!/api/Ext.tip.QuickTip" data-full-load="true">tooltip</a> text to the node. Override to be persistent if desired.</li> 
+        <li><code>qtitle</code> - used to specify the title for the <code>tooltip</code>. Override to be persistent if desired.</li> 
+        <li><code>children</code> - used internally when loading a node and its children all in one request. Do not override the persistence of this field.</li> 
+       </ul> 
+       <h3 id="Loading_Data">Loading Data</h3> 
+       <p>There are two ways to load Tree data. The first is to for the proxy to fetch the entire Tree all at once. For larger Trees where loading everything at once is not ideal, it may be preferable to use the second method - dynamically loading the children for each node when it is expanded.</p> 
+       <h4 id="Loading_the_Entire_Tree">Loading the Entire Tree</h4> 
+       <p>Internally, the Tree only loads data in response to a node being expanded. However the entire hierarchy can be loaded if the proxy retrieves a nested object containing the whole Tree structure. To accomplish this, initialize the TreeStore’s root node to <code>expanded</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Person', {
+    extend: 'Ext.data.Model',
+    fields: [
+        { name: 'id', type: 'int' },
+        { name: 'name', type: 'string' }
+    ],
+    proxy: {
+        type: 'ajax',
+        api: {
+            create: 'createPersons',
+            read: 'readPersons',
+            update: 'updatePersons',
+            destroy: 'destroyPersons'
+        }
+    }
+
+});
+
+var store = Ext.create('Ext.data.TreeStore', {
+    model: 'Person',
+    root: {
+        name: 'People',
+        expanded: true
+    }
+});
+
+Ext.create('Ext.tree.Panel', {
+    renderTo: document.body,
+    width: 300,
+    height: 200,
+    title: 'People',
+    store: store,
+    columns: [{
+        xtype: 'treecolumn', 
+        header: 'Name', 
+        dataIndex: 'name', 
+        flex: 1
+    }]
+});</code></pre> 
+       <p>Assume that the <code>readPersons</code> url returns the following json object</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;success&quot;: true,
+    &quot;children&quot;: [
+        { &quot;id&quot;: 1, &quot;name&quot;: &quot;Phil&quot;, &quot;leaf&quot;: true },
+        { &quot;id&quot;: 2, &quot;name&quot;: &quot;Nico&quot;, &quot;expanded&quot;: true, &quot;children&quot;: [
+            { &quot;id&quot;: 3, &quot;name&quot;: &quot;Mitchell&quot;, &quot;leaf&quot;: true }
+        ]},
+        { &quot;id&quot;: 4, &quot;name&quot;: &quot;Sue&quot;, &quot;loaded&quot;: true }
+    ]
+}</code></pre> 
+       <p>That’s all that’s needed to load the entire tree.</p> 
+       <p><img src="images/tree-bulk-load.png" alt="Tree with Bulk Loaded Data" /></p> 
+       <p>Important items to note:</p> 
+       <ul> 
+        <li>For all non-leaf nodes that do not have children (for example, Person with name Sue above), the server response MUST set the <code>loaded</code> property to <code>true</code>. Otherwise the proxy will attempt to load children for these nodes when they are expanded.</li> 
+        <li>The question then arises - if the server is allowed to set the <code>loaded</code> property on a node in the JSON response can it set any of the other non-persistent fields? The answer is yes - sometimes. In the example above, the node with name “Nico” has its <code>expanded</code> field set to <code>true</code> so that it will be initially displayed as expanded in the Tree Panel. Caution should be exercised as there are cases where this is not appropriate and could cause serious problems, like setting the <code>root</code> property on a node that is not the root node for example. In general, <code>loaded</code> and <code>expanded</code> are the only cases where it is recommended for the server to set a non-persistent field in the JSON response.</li> 
+       </ul> 
+       <h4 id="Dynamically_Loading_Children_When_a_Node_is_Expanded">Dynamically Loading Children When a Node is Expanded</h4> 
+       <p>For larger Trees it may be desirable to only load parts of the tree by loading child nodes only when their parent node is expanded. Suppose in the above example, that the node with name “Sue” does not have its <code>loaded</code> field set to <code>true</code> by the server response. The Tree would display an expander icon next to the node. When the node is expanded, the proxy will make another request to the <code>readPersons</code> url that looks something like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>/readPersons?node=4</code></pre> 
+       <p>This tells the server to retrieve the child nodes for the node with an <code>id</code> of 4. The data should be returned in the same format as the data that was used to load the root node:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;success&quot;: true,
+    &quot;children&quot;: [
+        { &quot;id&quot;: 5, &quot;name&quot;: &quot;Evan&quot;, &quot;leaf&quot;: true }
+    ]
+}</code></pre> 
+       <p>Now the Tree looks something like this:</p> 
+       <p><img src="images/tree-dynamic-load.png" alt="Tree with Dynamically Loaded Node" /></p> 
+       <h3 id="Saving_Data">Saving Data</h3> 
+       <p>Creating, updating, and deleting nodes is handled automatically and seamlessly by the Proxy.</p> 
+       <h4 id="Creating_a_New_Node">Creating a New Node</h4> 
+       <pre mode="javascript" theme="chrome"><code>// Create a new node and append it to the tree:
+var newPerson = Ext.create('Person', { name: 'Nige', leaf: true });
+store.getNodeById(2).appendChild(newPerson);</code></pre> 
+       <p>Since the proxy is defined directly on the Model, the Model’s <a href="../6.0.1-classic/#!/api/Ext.data.Model-method-save" data-full-load="true">save()</a> method can be used to persist the data:</p> 
+       <pre mode="javascript" theme="chrome"><code>newPerson.save();</code></pre> 
+       <h4 id="Updating_an_Existing_Node">Updating an Existing Node</h4> 
+       <pre mode="javascript" theme="chrome"><code>store.getNodeById(1).set('name', 'Philip');</code></pre> 
+       <h4 id="Removing_a_Node">Removing a Node</h4> 
+       <pre mode="javascript" theme="chrome"><code>store.getRootNode().lastChild.remove();</code></pre> 
+       <h4 id="Bulk_Operations">Bulk Operations</h4> 
+       <p>After creating, updating, and removing several nodes, they can all be persisted in one operation by calling the TreeStore’s <a href="../6.0.1-classic/#!/api/Ext.data.TreeStore-method-sync" data-full-load="true">sync()</a> method:</p> 
+       <pre mode="javascript" theme="chrome"><code>store.sync();</code></pre> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 图表Charts介绍</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Installing_Sencha_Charts" title="Installing Sencha Charts">Installing Sencha Charts</a> 
+       <a class="toc-page-h2" href="#Using_Sencha_Charts_without_Sencha_Cmd" title="Using Sencha Charts without Sencha Cmd">Using Sencha Charts without Sencha Cmd</a> 
+       <a class="toc-page-h2" href="#The_Chart_Component_Class" title="The Chart Component Class">The Chart Component Class</a> 
+       <a class="toc-page-h3" href="#Chart_Component_Management" title="Chart Component Management">Chart Component Management</a> 
+       <a class="toc-page-h3" href="#Axes" title="Axes">Axes</a> 
+       <a class="toc-page-h3" href="#Series" title="Series">Series</a> 
+       <a class="toc-page-h4" href="#Area" title="Area">Area</a> 
+       <a class="toc-page-h4" href="#Bar" title="Bar">Bar</a> 
+       <a class="toc-page-h4" href="#Line" title="Line">Line</a> 
+       <a class="toc-page-h4" href="#Pie" title="Pie">Pie</a> 
+       <a class="toc-page-h4" href="#Radar" title="Radar">Radar</a> 
+       <a class="toc-page-h4" href="#Scatter" title="Scatter">Scatter</a> 
+       <a class="toc-page-h4" href="#Gauge" title="Gauge">Gauge</a> 
+       <a class="toc-page-h3" href="#Interactions" title="Interactions">Interactions</a> 
+       <a class="toc-page-h4" href="#Adding_Interactions" title="Adding Interactions">Adding Interactions</a> 
+       <a class="toc-page-h4" href="#Item_Highlighting" title="Item Highlighting">Item Highlighting</a> 
+       <a class="toc-page-h4" href="#Rotate" title="Rotate">Rotate</a> 
+       <a class="toc-page-h3" href="#Legend_Store" title="Legend Store">Legend Store</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>图表Charts介绍</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>图表包包含一个类的层次结构提供数据的可视化功能，包括系列、轴、相互作用和机制实现标记和说明。本教程提供一个这些类相互作用的概述和每个类的功能的概述。下面的章节涵盖了特定的轴,系列,和交互.</p> 
+       <h2 id="Installing_Sencha_Charts">安装 Sencha 图标</h2> 
+       <p>Ext JS类库默认没有包含图表. 为了使用图表，简单添加 <strong>“charts”</strong> (**“sencha-charts”** 如果工作在 Ext JS 5.x) 到requires模块在Sencha Cmd生成的程序的 <code>{appRoot}/app.json</code> 文件. 添加一个包名到requires数组运行Cmd使包在你的程序可用.</p> 
+       <p>然后，确保程序已经重建，程序可以用下面的命令重建:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build</code></pre> 
+       <p>也可以激活 “app watch”:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app watch</code></pre> 
+       <p>Sencha app watch监控程序的资源和重建在检测到变化时.</p> 
+       <p><strong>备注:</strong> 关于更多使用Sencha Cmd构建apps请看<a href="../../../cmd/5.x/intro_to_cmd.html">Intro to Cmd 引导</a>.</p> 
+       <h2 id="Using_Sencha_Charts_without_Sencha_Cmd">不通过Sencha Cmd使用图表</h2> 
+       <p>如果你想使用图表，但不想用Sencha Cmd，可以简单添加以下代码到程序的index.html页.</p> 
+       <pre mode="javascript" theme="chrome"><code>// in Ext JS 5.x
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;{SDKLocation}/build/packages/sencha-charts/build/sencha-charts.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;{SDKLocation}/build/packages/sencha-charts/build/{themeName}/resources/sencha-charts-all.css&quot;&gt;
+
+
+// in Ext JS 6.x
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;{SDKLocation}/build/packages/charts/{toolkitName}/charts.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;{SDKLocation}/build/packages/charts/{toolkitName}/{themeName}/resources/charts-all.css&quot;&gt;</code></pre> 
+       <h2 id="The_Chart_Component_Class">图表组件类</h2> 
+       <p>所有图表组件类都扩展自AbstractChart类, 且这个类扩展自 <a href="../6.0.1-classic/#!/api/Ext.draw.Container" data-full-load="true">Ext.draw.Container</a>. 图表组件是一个管理系列和轴的容器. 它负责布局系列和轴在每次尺寸改变时. 注意这个抽象类的performLayout <code>performLayout</code> 方法必须要重写. 例如, 一个图表需要回应到轴的厚度改变和重新计算系列区域.</p> 
+       <p> 这是三种类型的图表:</p> 
+       <ul> 
+        <li><strong>cartesian/chart</strong> - 创建一个图表系列实现标绘值使用笛卡尔坐标。 这样的例子包括柱、区、分散、和线图表.</li> 
+        <li><strong>polar</strong> - 创建一个图表系列实现使用极坐标图值。这样的例子包括圆和径向图表.</li> 
+        <li><strong>spacefilling</strong> - 创建一个表,填满整个区域的图表.</li> 
+       </ul> 
+       <p>The <strong>“ext-charts”</strong> package (_the legacy charts package from 4.x - available in 5.x and retired with 6.x_) tried to automatically determine the Chart type by evaluating the series type. This allowed users to simply set the <a href="../6.0.1-classic/#!/api/Ext.Class-cfg-xtype" data-full-load="true">xtype</a> to <strong>‘chart’</strong>. However, <strong>“sencha-charts”</strong> (_**“charts”**_ being the package name in 6.x) needs a designated <code>xtype</code> in some circumstances. Cartesian Charts are the most commonly used and are mapped to the xtype of <strong>‘chart’</strong>. Setting an <code>xtype</code> of <strong>‘chart’</strong> makes the assumption that you want a <strong>Bar</strong>, <strong>Line</strong>, <strong>Scatter</strong>, or <strong>Area</strong> Chart. Other types of Charts will require an <code>xtype</code> designation of <strong>‘polar’</strong> or <strong>‘spacefilling’</strong>.</p> 
+       <h3 id="Chart_Component_Management">Chart Component Management</h3> 
+       <p>A Chart component manages the following items:</p> 
+       <ul> 
+        <li><strong>Axes</strong> - These are accessed through <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis" data-full-load="true">Ext.chart.axis.Axis</a> and represent all the axes being defined and drawn for this visualization. This is a mixed collection.</li> 
+        <li><strong>Series</strong> - These are accessed through <a href="../6.0.1-classic/#!/api/Ext.chart.series.Series" data-full-load="true">Ext.chart.series.Series</a> and represent all the series being drawn for the chart. This could be line, bar, scatter, and so on. This is also a mixed collection.</li> 
+        <li><strong>Interactions</strong> - These are controllers that directly manipulate the series and axes when certain events are recognized.</li> 
+        <li><strong>Legend Store</strong> - This represents the legend information collected from the series. Normally you can attach a data list to this store and get automatically updated on the legend information changes.</li> 
+       </ul> 
+       <h3 id="Axes">Axes</h3> 
+       <p>We provide <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis" data-full-load="true">Ext.chart.axis.Axis</a> to represent all kinds of axes. The axis object works differently according to the its docking position. </p> 
+       <ul> 
+        <li><strong>left/right</strong> - The axis is vertical.</li> 
+        <li><strong>top/bottom</strong> - The axis is horizontal.</li> 
+       </ul> 
+       <p>Axes help series to map data values into coordinates. They are bound to the type of data that needs to be represented. </p> 
+       <ul> 
+        <li><strong>numeric</strong> - the data attached to this axis is numeric and continuous.</li> 
+        <li><strong>time</strong> - the data attached to this axis is (or gets converted into) a date/time value; it is continuous.</li> 
+        <li><strong>category</strong> - the data attached to this axis belongs to a finite set. The data points are evenly placed along the axis.</li> 
+       </ul> 
+       <p>The behavior of an axis can be easily changed by setting different types of axis <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis-cfg-layout" data-full-load="true">layout</a> and axis <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis-cfg-segmenter" data-full-load="true">segmenter</a> to the axis.</p> 
+       <h3 id="Series">Series</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Series" data-full-load="true">Series</a> is an abstract class extended by concrete visualizations, such as Line Series, Bar Series, or Scatter Series.</p> 
+       <p>The Series class itself contains code that is common to all of these series, such as event handling, highlighting, markers, labels, and so on.</p> 
+       <p>The following sections describe available series types. It also shows a complete series configuration example, including the Chart, Axis, and Series options. For more specific information, see the Series documentation.</p> 
+       <h4 id="Area">Area</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Area" data-full-load="true">Area</a> series creates a stacked area Chart, which is typically used to display multiple aggregated layers of information. Similar to other series, the Area series must be added into the <a href="../6.0.1-classic/#!/api/Ext.chart.AbstractChart-cfg-series" data-full-load="true">series</a> config of the Chart.</p> 
+       <p>You can specify multiple <strong>y</strong> fields on a stacked series such as Area series and Bar series. A typical configuration object for the Area series looks as in the following code sample:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 300,
+    store: {
+        fields: ['name', 'g1', 'g2'],
+        data: [
+            {&quot;name&quot;: &quot;Item-0&quot;, &quot;g1&quot;: 18.34,&quot;g2&quot;: 0.04},
+            {&quot;name&quot;: &quot;Item-1&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 14.87},
+            {&quot;name&quot;: &quot;Item-2&quot;, &quot;g1&quot;: 1.90, &quot;g2&quot;: 5.72},
+            {&quot;name&quot;: &quot;Item-3&quot;, &quot;g1&quot;: 21.37,&quot;g2&quot;: 2.13},
+            {&quot;name&quot;: &quot;Item-4&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 8.53},
+            {&quot;name&quot;: &quot;Item-5&quot;, &quot;g1&quot;: 18.22,&quot;g2&quot;: 4.62},
+            {&quot;name&quot;: &quot;Item-6&quot;, &quot;g1&quot;: 28.51, &quot;g2&quot;: 12.43},
+            {&quot;name&quot;: &quot;Item-7&quot;, &quot;g1&quot;: 34.43, &quot;g2&quot;: 4.40},
+            {&quot;name&quot;: &quot;Item-8&quot;, &quot;g1&quot;: 21.65, &quot;g2&quot;: 13.87},
+            {&quot;name&quot;: &quot;Item-9&quot;, &quot;g1&quot;: 12.98, &quot;g2&quot;: 35.44},
+            {&quot;name&quot;: &quot;Item-10&quot;, &quot;g1&quot;: 22.96, &quot;g2&quot;: 38.70},
+            {&quot;name&quot;: &quot;Item-11&quot;, &quot;g1&quot;: 0.49, &quot;g2&quot;: 51.90},
+            {&quot;name&quot;: &quot;Item-12&quot;, &quot;g1&quot;: 20.87, &quot;g2&quot;: 62.07},
+            {&quot;name&quot;: &quot;Item-13&quot;, &quot;g1&quot;: 25.10, &quot;g2&quot;: 78.46},
+            {&quot;name&quot;: &quot;Item-14&quot;, &quot;g1&quot;: 16.87, &quot;g2&quot;: 56.80}
+        ]
+    },
+
+    interactions: {
+        type: 'panzoom'
+    },
+
+    legend: {
+        docked: 'right'
+    },
+
+    axes: [{
+        type: 'numeric',
+        position: 'left',
+        grid: true
+    }, {
+        type: 'category',
+        position: 'bottom',
+        visibleRange: [0, 0.4]
+    }],
+
+    series: [{
+        type: 'area',
+        xField: 'name',
+        yField: ['g1', 'g2'],
+        title: ['G1', 'G2'],
+        style: {
+            stroke: '#666666',
+            fillOpacity: 0.8
+        }
+    }]
+});</code></pre> 
+       <h4 id="Bar">Bar</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Bar" data-full-load="true">Bar</a> series creates a stackable or group-able bar Chart, which is typically used to display categorized numeric data that shows progression or regression. Note that opposed to the old chart package, a Bar series refers to a vertical bar series, or a column series. You can obtain the horizontal configuration by setting <a href="../6.0.1-classic/#!/api/Ext.chart.CartesianChart-cfg-flipXY" data-full-load="true">flipXY</a> to <strong>true</strong> the Chart.</p> 
+       <p>A Bar series can either be stacked or grouped. You can set the <a href="../6.0.1-classic/#!/api/Ext.chart.series.Bar-cfg-stacked" data-full-load="true">stacked</a> config on the series to <strong>false</strong> in order to switch the series to the grouped mode.</p> 
+       <p>A sample Bar chart is shown in the following example:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 500,
+    flipXY: true,
+    store: {
+        fields: ['name', 'g1', 'g2'],
+        data: [
+            {&quot;name&quot;: &quot;Item-0&quot;, &quot;g1&quot;: 18.34,&quot;g2&quot;: 0.04},
+            {&quot;name&quot;: &quot;Item-1&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 14.87},
+            {&quot;name&quot;: &quot;Item-2&quot;, &quot;g1&quot;: 1.90, &quot;g2&quot;: 5.72},
+            {&quot;name&quot;: &quot;Item-3&quot;, &quot;g1&quot;: 21.37,&quot;g2&quot;: 2.13},
+            {&quot;name&quot;: &quot;Item-4&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 8.53},
+            {&quot;name&quot;: &quot;Item-5&quot;, &quot;g1&quot;: 18.22,&quot;g2&quot;: 4.62},
+            {&quot;name&quot;: &quot;Item-6&quot;, &quot;g1&quot;: 28.51, &quot;g2&quot;: 12.43},
+            {&quot;name&quot;: &quot;Item-7&quot;, &quot;g1&quot;: 34.43, &quot;g2&quot;: 4.40},
+            {&quot;name&quot;: &quot;Item-8&quot;, &quot;g1&quot;: 21.65, &quot;g2&quot;: 13.87},
+            {&quot;name&quot;: &quot;Item-9&quot;, &quot;g1&quot;: 12.98, &quot;g2&quot;: 35.44},
+            {&quot;name&quot;: &quot;Item-10&quot;, &quot;g1&quot;: 22.96, &quot;g2&quot;: 38.70},
+            {&quot;name&quot;: &quot;Item-11&quot;, &quot;g1&quot;: 0.49, &quot;g2&quot;: 51.90},
+            {&quot;name&quot;: &quot;Item-12&quot;, &quot;g1&quot;: 20.87, &quot;g2&quot;: 62.07},
+            {&quot;name&quot;: &quot;Item-13&quot;, &quot;g1&quot;: 25.10, &quot;g2&quot;: 78.46},
+            {&quot;name&quot;: &quot;Item-14&quot;, &quot;g1&quot;: 16.87, &quot;g2&quot;: 56.80}
+        ]
+    },  
+
+    //set legend configuration
+    legend: {
+        docked: 'right'
+    },
+
+    //define the x and y-axis configuration.
+    axes: [{
+        type: 'numeric',
+        position: 'bottom',
+        grid: true,
+        minimum: 0
+    }, {
+        type: 'category',
+        position: 'left'
+    }],
+
+    //define the actual bar series.
+    series: [{
+        type: 'bar',
+        xField: 'name',
+        yField: ['g1', 'g2'],
+        axis: 'bottom',
+        // Cycles the green and blue fill mode over 2008 and 2009
+        // subStyle parameters also override style parameters
+        subStyle: {
+            fill: [&quot;#115fa6&quot;, &quot;#94ae0a&quot;]
+        }
+    }]
+});</code></pre> 
+       <h4 id="Line">Line</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Line" data-full-load="true">Line</a> series creates a line Chart, an alternative to a bar Chart, for showing categorized numeric data that shows progression or regression. The following example shows a typical configuration object for the Line series:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 500,
+    store: {
+        fields: ['name', 'g1', 'g2'],
+        data: [
+            {&quot;name&quot;: &quot;Item-0&quot;, &quot;g1&quot;: 18.34,&quot;g2&quot;: 0.04},
+            {&quot;name&quot;: &quot;Item-1&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 14.87},
+            {&quot;name&quot;: &quot;Item-2&quot;, &quot;g1&quot;: 1.90, &quot;g2&quot;: 5.72},
+            {&quot;name&quot;: &quot;Item-3&quot;, &quot;g1&quot;: 21.37,&quot;g2&quot;: 2.13},
+            {&quot;name&quot;: &quot;Item-4&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 8.53},
+            {&quot;name&quot;: &quot;Item-5&quot;, &quot;g1&quot;: 18.22,&quot;g2&quot;: 4.62},
+            {&quot;name&quot;: &quot;Item-6&quot;, &quot;g1&quot;: 28.51, &quot;g2&quot;: 12.43},
+            {&quot;name&quot;: &quot;Item-7&quot;, &quot;g1&quot;: 34.43, &quot;g2&quot;: 4.40},
+            {&quot;name&quot;: &quot;Item-8&quot;, &quot;g1&quot;: 21.65, &quot;g2&quot;: 13.87},
+            {&quot;name&quot;: &quot;Item-9&quot;, &quot;g1&quot;: 12.98, &quot;g2&quot;: 35.44},
+            {&quot;name&quot;: &quot;Item-10&quot;, &quot;g1&quot;: 22.96, &quot;g2&quot;: 38.70},
+            {&quot;name&quot;: &quot;Item-11&quot;, &quot;g1&quot;: 0.49, &quot;g2&quot;: 51.90},
+            {&quot;name&quot;: &quot;Item-12&quot;, &quot;g1&quot;: 20.87, &quot;g2&quot;: 62.07},
+            {&quot;name&quot;: &quot;Item-13&quot;, &quot;g1&quot;: 25.10, &quot;g2&quot;: 78.46},
+            {&quot;name&quot;: &quot;Item-14&quot;, &quot;g1&quot;: 16.87, &quot;g2&quot;: 56.80}
+        ]
+    },
+    interactions: ['panzoom'],
+
+    legend: {
+        docked: 'bottom'
+    },
+
+    //define x and y axis.
+    axes: [{
+        type: 'numeric',
+        position: 'left'
+    }, {
+        type: 'category',
+        visibleRange: [0, 1],
+        position: 'bottom'
+    }],
+
+    //define the actual series
+    series: [{
+        type: 'line',
+        xField: 'name',
+        yField: 'g1',
+        title: 'Normal',
+        style: {
+            fill: &quot;#115fa6&quot;,
+            stroke: &quot;#115fa6&quot;,
+            fillOpacity: 0.6,
+            miterLimit: 3,
+            lineCap: 'miter',
+            lineWidth: 2
+        }
+    }, {
+        type: 'line',
+        xField: 'name',
+        yField: 'g2',
+        title: 'Smooth',
+        style: {
+            smooth: true,
+            stroke: &quot;#94ae0a&quot;,
+            fillOpacity: 0.6,
+            miterLimit: 3,
+            lineCap: 'miter',
+            lineWidth: 2
+        }
+    }]
+});</code></pre> 
+       <h4 id="Pie">Pie</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Pie" data-full-load="true">Pie</a> series creates a pie Chart, a great way to display quantitative information for a number of categories that also have a meaning as a whole, for example, all 12 months of a given year.</p> 
+       <p>A Pie chart example is given in the following code sample:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.PolarChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 500,
+    store: {
+        fields: ['name', 'g1', 'g2'],
+        data: [
+            {&quot;name&quot;: &quot;Item-0&quot;, &quot;g1&quot;: 18.34,&quot;g2&quot;: 0.04},
+            {&quot;name&quot;: &quot;Item-1&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 14.87},
+            {&quot;name&quot;: &quot;Item-2&quot;, &quot;g1&quot;: 1.90, &quot;g2&quot;: 5.72},
+            {&quot;name&quot;: &quot;Item-3&quot;, &quot;g1&quot;: 21.37,&quot;g2&quot;: 2.13},
+            {&quot;name&quot;: &quot;Item-4&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 8.53},
+            {&quot;name&quot;: &quot;Item-5&quot;, &quot;g1&quot;: 18.22,&quot;g2&quot;: 4.62}
+        ]
+    },
+
+    interactions: ['rotate'],
+
+    //configure the legend.
+    legend: {
+        docked: 'bottom'
+    },
+
+    //describe the actual pie series.
+    series: [{
+        type: 'pie',
+        xField: 'g1',
+        label: {
+            field: 'name',
+            display: 'rotate'
+        },
+        donut: 25,
+        style: {
+            miterLimit: 10,
+            lineCap: 'miter',
+            lineWidth: 2
+        }
+    }]
+});</code></pre> 
+       <h4 id="Radar">Radar</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Radar" data-full-load="true">Radar</a> series creates a radar Chart, a great way to display a comparison of different quantitative values for a constrained number of categories. A Radar series example is illustrated by the following code:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.PolarChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 500,
+    store: {
+        fields: ['name', 'g1', 'g2'],
+        data: [
+            {&quot;name&quot;: &quot;0&quot;, &quot;g1&quot;: 18.34},
+            {&quot;name&quot;: &quot;1&quot;, &quot;g1&quot;: 2.67},
+            {&quot;name&quot;: &quot;2&quot;, &quot;g1&quot;: 1.90},
+            {&quot;name&quot;: &quot;3&quot;, &quot;g1&quot;: 21.37},
+            {&quot;name&quot;: &quot;4&quot;, &quot;g1&quot;: 2.67},
+            {&quot;name&quot;: &quot;5&quot;, &quot;g1&quot;: 18.22},
+            {&quot;name&quot;: &quot;6&quot;, &quot;g1&quot;: 28.51},
+            {&quot;name&quot;: &quot;7&quot;, &quot;g1&quot;: 34.43},
+            {&quot;name&quot;: &quot;8&quot;, &quot;g1&quot;: 21.65},
+            {&quot;name&quot;: &quot;9&quot;, &quot;g1&quot;: 12.98},
+            {&quot;name&quot;: &quot;10&quot;, &quot;g1&quot;: 22.96},
+            {&quot;name&quot;: &quot;11&quot;, &quot;g1&quot;: 0.49},
+            {&quot;name&quot;: &quot;12&quot;, &quot;g1&quot;: 20.87},
+            {&quot;name&quot;: &quot;13&quot;, &quot;g1&quot;: 25.10},
+            {&quot;name&quot;: &quot;14&quot;, &quot;g1&quot;: 16.87}
+        ]
+    },
+
+    // Set rotation
+    interactions: ['rotate'],
+
+    // Define radial and angular axis for the radar chart.
+    axes: [{
+        type: 'numeric',
+        position: 'radial',
+        fields: 'g1',
+        grid: true,
+        label: {
+            fill: 'black',
+            y: -8
+        }
+    }, {
+        type: 'category',
+        position: 'angular',
+        fields: 'name',
+        grid: true,
+        label: {
+            fill: 'black'
+        }
+    }],
+
+    series: [{
+        type: 'radar',
+        xField: 'name',
+        yField: 'g1'
+    }]
+});</code></pre> 
+       <h4 id="Scatter">Scatter</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Scatter" data-full-load="true">Scatter</a> series creates a scatter Chart, which enables an application to display more than two variables in the same visualization. These variables can be mapped onto <strong>x</strong>, <strong>y</strong> coordinates and also to an element’s properties, such as radius, size, color, and so on.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 500,
+    store: {
+        fields: ['name', 'g1', 'g2'],
+        data: [
+            {&quot;name&quot;: &quot;Item-0&quot;, &quot;g1&quot;: 18.34,&quot;g2&quot;: 0.04},
+            {&quot;name&quot;: &quot;Item-1&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 14.87},
+            {&quot;name&quot;: &quot;Item-2&quot;, &quot;g1&quot;: 1.90, &quot;g2&quot;: 5.72},
+            {&quot;name&quot;: &quot;Item-3&quot;, &quot;g1&quot;: 21.37,&quot;g2&quot;: 2.13},
+            {&quot;name&quot;: &quot;Item-4&quot;, &quot;g1&quot;: 2.67, &quot;g2&quot;: 8.53},
+            {&quot;name&quot;: &quot;Item-5&quot;, &quot;g1&quot;: 18.22,&quot;g2&quot;: 4.62},
+            {&quot;name&quot;: &quot;Item-6&quot;, &quot;g1&quot;: 28.51, &quot;g2&quot;: 12.43},
+            {&quot;name&quot;: &quot;Item-7&quot;, &quot;g1&quot;: 34.43, &quot;g2&quot;: 4.40},
+            {&quot;name&quot;: &quot;Item-8&quot;, &quot;g1&quot;: 21.65, &quot;g2&quot;: 13.87},
+            {&quot;name&quot;: &quot;Item-9&quot;, &quot;g1&quot;: 12.98, &quot;g2&quot;: 35.44},
+            {&quot;name&quot;: &quot;Item-10&quot;, &quot;g1&quot;: 22.96, &quot;g2&quot;: 38.70},
+            {&quot;name&quot;: &quot;Item-11&quot;, &quot;g1&quot;: 0.49, &quot;g2&quot;: 51.90},
+            {&quot;name&quot;: &quot;Item-12&quot;, &quot;g1&quot;: 20.87, &quot;g2&quot;: 62.07},
+            {&quot;name&quot;: &quot;Item-13&quot;, &quot;g1&quot;: 25.10, &quot;g2&quot;: 78.46},
+            {&quot;name&quot;: &quot;Item-14&quot;, &quot;g1&quot;: 16.87, &quot;g2&quot;: 56.80}
+        ]
+    },
+
+    axes: [{
+        type: 'numeric',
+        position: 'bottom'
+    }, {
+        type: 'numeric',
+        position: 'left'
+    }],
+    series: [{
+        type: 'scatter',
+        xField: 'g1',
+        yField: 'g2',
+        marker: {
+            radius: 4
+        },
+        highlight: {
+            fillStyle: 'yellow',
+            radius: 7,
+            lineWidth: 2
+        },
+    }]
+});</code></pre> 
+       <h4 id="Gauge">Gauge</h4> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Gauge" data-full-load="true">Gauge</a> series creates a gauge Chart, typically used to show progress in a certain variable. In addition to using <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">stores</a>, you can also set a <a href="../6.0.1-classic/#!/api/Ext.chart.series.Gauge-cfg-value" data-full-load="true">value</a> of the gauge series to show the value.</p> 
+       <p>An example is given in the following code sample:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.PolarChart', {
+    renderTo: document.body,
+    width: 500,
+    height: 500,
+    series: [{
+        type: 'gauge',
+        minimum: 100,
+        maximum: 800,
+        value: 400,
+        donut: 30,
+        colors: [&quot;#115fa6&quot;, &quot;lightgrey&quot;]
+    }]
+});</code></pre> 
+       <h3 id="Interactions">Interactions</h3> 
+       <p>This section introduces the interaction features in the Sencha Charts package. By taking advantage of these features, you can create highly interactive Charts that enable users to visualize and navigate complex data sets.</p> 
+       <h4 id="Adding_Interactions">Adding Interactions</h4> 
+       <p>To add interactions to a Chart, set the <a href="../6.0.1-classic/#!/api/Ext.chart.AbstractChart-cfg-interactions" data-full-load="true">interactions</a> config of the Chart to an array of interaction config objects. Each object must be a string or must contain a type property matching one of the interaction types described in the subsequent sections. Each object may also contain additional config options that are appropriate for a particular interaction.</p> 
+       <p>You can define your own interaction by extending the <a href="../6.0.1-classic/#!/api/Ext.chart.interactions.Abstract" data-full-load="true">Ext.chart.interactions.Abstract</a> class and registering the name using an alias with the <strong>“interaction”</strong> prefix. For example, if you want to create an interaction called <strong>“remove”</strong>, create an alias of the class named <strong>“interaction.remove”</strong>, then set the <code>type: 'remove'</code> in the interaction config.</p> 
+       <p>Here are a couple of examples of basic interactions.</p> 
+       <h4 id="Item_Highlighting">Item Highlighting</h4> 
+       <p>The <strong>“itemhighlight”</strong> interaction enables you to highlight individual data point items on the chart.</p> 
+       <p>This interaction is implemented by the <a href="../6.0.1-classic/#!/api/Ext.chart.interactions.ItemHighlight" data-full-load="true">Ext.chart.interactions.ItemHighlight</a> class. See the class documentation for detailed configuration options.</p> 
+       <h4 id="Rotate">Rotate</h4> 
+       <p>The <strong>“rotate”</strong> interaction enables users to rotate a pie or a radar Chart, by default the rotation being performed using a drag gesture. The following code snippet is an example of how simple it is to add the <strong>rotate</strong> interaction to your pie or radar Charts:</p> 
+       <pre mode="javascript" theme="chrome"><code>interactions: ['rotate']</code></pre> 
+       <p>This interaction is implemented by the <a href="../6.0.1-classic/#!/api/Ext.chart.interactions.Rotate" data-full-load="true">Ext.chart.interactions.Rotate</a> class. See the class documentation for detailed configuration options.</p> 
+       <h3 id="Legend_Store">Legend Store</h3> 
+       <p>The Chart exposes a store to represent legend information collected from series. Technically, you can do anything with this store. Again, this architecture can help you decouple the legend information from the legend component, so you can use any technology and customization for showing the legend at any desired place.</p> 
+       <p>For you convenience, we also provide a default <a href="../6.0.1-classic/#!/api/Ext.chart.Legend" data-full-load="true">Legend</a> component that already implements some common and basic functionality for displaying legends. The Chart configuration object accepts a <code>legend</code> section to enable the default Legend component and dock it in the Chart. The default Legend component contains a <a href="../6.0.1-classic/#!/api/Ext.chart.Legend-cfg-dock" data-full-load="true">dock</a> config and it is docked on that side.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

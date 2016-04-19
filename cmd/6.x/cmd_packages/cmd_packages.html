@@ -1,0 +1,530 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Sencha Cmd 包(Packages)</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="../advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#The__code__quot_packages_quot___code__Folder" title="The &lt;code&gt;&quot;packages&quot;&lt;/code&gt; Folder">The <code>&quot;packages&quot;</code> Folder</a> 
+       <a class="toc-page-h2" href="#Requiring_Packages_in_Applications" title="应用中要求使用的包">应用中要求使用的包</a> 
+       <a class="toc-page-h2" href="#Local_Packages" title="本地包">本地包</a> 
+       <a class="toc-page-h2" href="#Remote_Packages" title="远程包">远程包</a> 
+       <a class="toc-page-h3" href="#Local_Repository" title="本地库">本地库</a> 
+       <a class="toc-page-h4" href="#Location_of_the_Local_Repository" title="本地库的位置">本地库的位置</a> 
+       <a class="toc-page-h3" href="#Remote_Repositories" title="远程库">远程库</a> 
+       <a class="toc-page-h2" href="#The_Package_Catalog" title="包目录">包目录</a> 
+       <a class="toc-page-h3" href="#Name_Assignment" title="命名赋值">命名赋值</a> 
+       <a class="toc-page-h2" href="#Version_Management" title="版本管理">版本管理</a> 
+       <a class="toc-page-h3" href="#Package_Versions" title="包的版本">包的版本</a> 
+       <a class="toc-page-h3" href="#Version_Restrictions" title="版本约束">版本约束</a> 
+       <a class="toc-page-h3" href="#Resolving_Versions" title="解决版本">解决版本</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Sencha Cmd 包(Packages)</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> 包含了 Sencha 包管理器. 包设计用于解决二个基本问题: 使用和发布. 本向导聚焦于这些主题. 同时请查看 <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a> 来获得关于创建和共享包的资料.</p> 
+       <h2 id="The__code__quot_packages_quot___code__Folder"> <code>&quot;packages&quot;</code> 文件夹</h2> 
+       <p>所有由 Sencha Cmd 生成的工作区的根目录下都有一个 <code>&quot;packages&quot;</code> 文件夹. 这个文件夹的位置可以进行配置,但没什么实际意义, <code>&quot;packages&quot;</code>文件夹的角色是服务于工作区中的应用(或者其它包)使用到的所有包的存储.</p> 
+       <pre mode="javascript" theme="chrome"><code>packages/       # Container folder for shared Cmd packages
+    local/      # Folder for packages generated in this workspace
+    remote/     # Folder for packages downloaded into the workspace</code></pre> 
+       <p>根据应用需要下载下来的包将会被添加到 <code>&quot;packages/remote&quot;</code> 文件夹. 而当一个包生成后(使用 <code>sencha generate package</code>), 将会生成在 <code>&quot;packages/local&quot;</code> 文件夹.</p> 
+       <h2 id="Requiring_Packages_in_Applications">应用中要求使用的包</h2> 
+       <p>一个包的来源没有关系 (不管是本地生成的还是从远程库下载的 - 参见下面), 假设一个相同的包: 你在 <code>&quot;app.json&quot;</code> 中加入了一个 <code>requires</code> 配置 . 为演示的目的,我们增加了一个简单包用于练习:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;MyApp&quot;,
+    &quot;requires&quot;: [
+        &quot;cool-stuff&quot;
+    ]
+}</code></pre> 
+       <p>按照上面给出的要求, <code>sencha app build</code> 和 <code>sencha app refresh</code> 命令都将执行用于集成这个包到你的应用中的步骤. 典型的处理是在修改了包的要求后,你需要运行 <code>sencha app refresh</code> 以便这些需要元素来支持 “dev mode” 获得更新.</p> 
+       <p>不管你使用哪个命令, Sencha Cmd 都将会下载和解开这个包到你的 <code>&quot;packages/remote&quot;</code> 文件夹. 完成这个操作后你会在你工作区下的这个目录下看到这个 <code>&quot;packages/remote/cool-stuff&quot;</code> 包.</p> 
+       <h2 id="Local_Packages">本地包</h2> 
+       <p>One use of packages is simply to hold code or themes that are available for multiple applications in the workspace. These packages need never be distributed (beyond source control) to provide value to your development.</p> 
+       <p>To add a package to your workspace, you just generate the package:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate package common</code></pre> 
+       <p>This generates a new package to the <code>&quot;packages/local/common&quot;</code> folder. This package is also marked as <code>local: true</code> in its <code>&quot;package.json&quot;</code>. This flag prevents Sencha Cmd from ever overwriting the package with a version from a remote repository (see below). This would become important if the packages folders were combined (as they were in previous releases) by editing <code>&quot;workspace.json&quot;</code>.</p> 
+       <p>Then add “common” as a requirement to your application’s <code>&quot;app.json&quot;</code> as described above:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;MyApp&quot;,
+    &quot;requires&quot;: [
+        &quot;common&quot;
+    ]
+}</code></pre> 
+       <p>For more details, especially regarding how to distribute packages to others, see <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <h2 id="Remote_Packages">远程包</h2> 
+       <p>While 本地包 can be very valuable in large applications, one of the most useful aspects of packages is the ability to distribute packages for others to consume.</p> 
+       <p>Packages are shared and distributed using package repositories. Sencha Cmd automatically creates a “本地库” for caching packages as well as for publishing packages. The role of the 本地库 for package authoring is not discussed in this guide. For details on that topic see <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <h3 id="Local_Repository">本地库</h3> 
+       <p>Many operations implicitly use the 本地库. Sencha Cmd follows these basic steps when it encounters the <code>requires</code> statement in <code>&quot;app.json&quot;</code>:</p> 
+       <ul> 
+        <li>Look in the workspace to see if the package is already present.</li> 
+        <li>Check the 本地库 to see if there is a version already downloaded.</li> 
+        <li>Look at the set of 远程库 defined to see if any has the package.</li> 
+        <li>Download the package from the remote repository and add to the local repository.</li> 
+       </ul> 
+       <p>Once the package has been downloaded, subsequent requirements for this package will not require downloading; the package will be found in the 本地库.</p> 
+       <h4 id="Location_of_the_Local_Repository">本地库的位置</h4> 
+       <p>The 本地库 is created in a folder “beside” the various versions to facilitate caching. For example, the default install directory of Sencha Cmd on Windows for user Foo might be something like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>C:\Users\Foo\bin\Sencha\Cmd\n.n.n.n</code></pre> 
+       <p>Given that install directory, the 本地库 would be located at:</p> 
+       <pre mode="javascript" theme="chrome"><code>C:\Users\Foo\bin\Sencha\Cmd\repo</code></pre> 
+       <p>This can be changed by editing the <code>&quot;sencha.cfg&quot;</code> in the Sencha Cmd install folder.</p> 
+       <p>The contents of the 本地库 are discussed further in <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <h3 id="Remote_Repositories">远程库</h3> 
+       <p>In order to download packages to the 本地库, Sencha Cmd must know about 远程库. By default, Sencha Cmd automatically adds the Sencha Package Repository as a remote repository named “sencha”.</p> 
+       <p>To see the list of 远程库, run the <code>sencha repository list</code> command:</p> 
+       <pre mode="javascript" theme="chrome"><code>&gt; sencha repository list
+...
+[INF] Remote repository connections (1):
+[INF]
+[INF]     sencha - http://cdn.sencha.com/cmd/packages/</code></pre> 
+       <p>You can add and remove repositories from this list using <code>sencha repository add</code> and <code>sencha repository remove</code> commands. Your 本地库 is in fact a valid remote repository for others if you chose to host it. For details on this, see <a href="cmd_creating_packages.html">Creating Sencha Cmd 包(Packages)</a>.</p> 
+       <h2 id="The_Package_Catalog">包目录</h2> 
+       <p>The set of packages available to use is listed in the “catalog”. You can display the contents of the global catalog using this command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package list</code></pre> 
+       <p>When you list packages you will notice that the listing includes names and versions.</p> 
+       <h3 id="Name_Assignment">命名赋值</h3> 
+       <p>Because Sencha Cmd’s repository management is distributed and you can add or remove 远程库 as you see fit, there is no Universal namespace of packages. If you retain the default “sencha” connection to the Sencha Package Repository, then you can view the content of that repository as a naming standard.</p> 
+       <p>Packages published by Sencha (not included inside a Sencha Framework) will use names of the following forms:</p> 
+       <ul> 
+        <li>sencha-*</li> 
+        <li>ext-*</li> 
+        <li>touch-*</li> 
+        <li>cmd-*</li> 
+       </ul> 
+       <p>All package names beginning with the above prefixes are reserved by Sencha with respect to the Sencha Package Repository. It is recommended that you avoid conflicting with these names even if you disconnect from the Sencha Package Repository.</p> 
+       <h2 id="Version_Management">版本管理</h2> 
+       <p>To connect packages and their consumers (that is, applications or other packages), it is important to consider the versions involved. To help manage this, all packages have version numbers which are used by the <code>requires</code> statement to handle 版本约束.</p> 
+       <h3 id="Package_Versions">包的版本</h3> 
+       <p>All packages are described by the combination of their name and their version. For each version of a package, however, there is another version number that describes its level of backwards compatibility. This version is a statement made by the package creator that they believe the particular version of their package to be backwards compatible to some specific previous version level.</p> 
+       <p>In the <code>&quot;package.json&quot;</code> descriptor there are two important properties: <code>version</code> and <code>compatVersion</code>. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    ...
+    &quot;version&quot;: &quot;n.n.n&quot;,
+    &quot;compatVersion&quot;: &quot;2.4.2&quot;,
+    ...
+}</code></pre> 
+       <p>This number must be of this format:</p> 
+       <pre mode="javascript" theme="chrome"><code>\d+(\.\d+)*</code></pre> 
+       <h3 id="Version_Restrictions">版本约束</h3> 
+       <p>When using the <code>requires</code> property above we only specified the package name to keep the example as simple as possible. What that means precisely is “the latest version”. In some cases this is acceptable, but it can be a risky requirement should that package’s next release be a complete redesign and offer no level of backwards compatibility.</p> 
+       <p>To protect your application from this, we can change the <code>require</code> statement to be very restrictive and lock down the version number we want:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;MyApp&quot;,
+    &quot;requires&quot;: [
+        &quot;ext-easy-button@1.0&quot;
+    ]
+}</code></pre> 
+       <p>This approach has its place, but it prevents even maintenance releases of the package from being picked up. In final stages of a project, this may be exactly what is desired, but during development perhaps we want to be a little less restrictive and accept any compatible version.</p> 
+       <p>The following change will do that:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;MyApp&quot;,
+    &quot;requires&quot;: [
+        &quot;ext-easy-button@1.0?&quot;
+    ]
+}</code></pre> 
+       <p>The above requests the latest available version of <code>&quot;ext-easy-button&quot;</code> that has described itself as backwards compatible with version 1.0.</p> 
+       <p>Other ways to restrict version matching are:</p> 
+       <ul> 
+        <li>-1.2 (no lower limit - up to version 1.2)</li> 
+        <li>1.0- (no upper limit - version 1.0 or higher)</li> 
+        <li>1.0+ (same as above - version 1.0 or higher)</li> 
+        <li>1.0-1.2 (versions 1.0 up to 1.2 inclusive)</li> 
+        <li>1.0-1.2? (compatible with versions 1.0 up to 1.2 inclusive)</li> 
+       </ul> 
+       <h3 id="Resolving_Versions">解决版本</h3> 
+       <p>Given all of the desired and available versions, Sencha Cmd will determine the best set of matching packages and ensure that these are in your workspace.</p> 
+       <p>If there are mutually exclusive requirements this process may fail. In this case, you will see an error message explaining what requirements could not be satisfied.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

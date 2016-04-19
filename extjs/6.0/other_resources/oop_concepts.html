@@ -1,0 +1,1100 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | OOP基础</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Classes_and_Instances" title="类和实例">类和实例</a> 
+       <a class="toc-page-h3" href="#Constructors" title="构造器">构造器</a> 
+       <a class="toc-page-h3" href="#Apply" title="应用">应用</a> 
+       <a class="toc-page-h3" href="#Defining_more_classes" title="定义多个类">定义多个类</a> 
+       <a class="toc-page-h2" href="#Inheritance" title="继承">继承</a> 
+       <a class="toc-page-h3" href="#Parent_and_child_classes" title="父类和子类">父类和子类</a> 
+       <a class="toc-page-h2" href="#Encapsulation" title="封装">封装</a> 
+       <a class="toc-page-h2" href="#Config_Block" title="配置块">配置块</a> 
+       <a class="toc-page-h2" href="#Ext_Base_class" title="Ext.Base 类">Ext.Base 类</a> 
+       <a class="toc-page-h3" href="#Real_property_encapsulation" title="实际属性封装">实际属性封装</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="结论">结论</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>基础 OOP / Class-Based 编程概念</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>JavaScript是一个无类的, <a href="../../../../en.wikipedia.org/wiki/Prototype-based_programming">面向原型语言</a> 并且它最强大的特性是灵活性. 这就是说, <a href="../../../../en.wikipedia.org/wiki/Class-based_programming">基于类的编程</a>是有争议的最流行的面向对象编程的模型(OOP). 这种方式通常强调强类型,封装和标准编码规范.</p> 
+       <p>JavaScript 的灵活性伴随而来的是不稳定性的代码.没有一个统一的结构 JavaScript 代码难于理解，维护和重用.在另一方面,基于类的编程是更稳定，易于扩展和随着时间的推移可升级的.</p> 
+       <p>幸运地是, Ext JS’ 类体系提供给了你最好的二个世界.你获得了灵活,可扩展的并且易于升级的用 JavaScript的灵活性的基于类的编编程的一种实现.</p> 
+       <p>本手册面对那些有意学习和复习 Ext JS面向对象和基于类的编程的任意开发人员.我们将包含如下主题:</p> 
+       <ul> 
+        <li><p>类和实例</p></li> 
+        <li><p>继承 (多态)</p></li> 
+        <li><p>封装</p></li> 
+       </ul> 
+       <h2 id="Classes_and_Instances">类和实例</h2> 
+       <p>能清晰的区分类和实例很重要.简单来说,一个类是一个概念的蓝图,而实例是这个蓝图的实现.我们看一些例子:</p> 
+       <ul> 
+        <li><p>“Building(建筑)” 是一个类, 而帝国大厦是“Building(建筑)”的一个实例.</p></li> 
+        <li><p>“Dog(狗)” 是一个类, 而莱莤是“Dog(狗)”的实例.</p></li> 
+        <li><p>“Computer(计算机)” 是一个类, 而你正在使用的计算机是“Computer(计算机)” 的一个实例.</p></li> 
+       </ul> 
+       <p><img src="images/classes_instances.png" alt="image alt text" /></p> 
+       <p>一个类定义了基础结构,属性和它实例的行为.例如使用上面描述的相同的类:</p> 
+       <ul> 
+        <li>
+          <p>所有 “Building(建筑物)” 的实例都有给定数的楼层 (结构), 一个地址, 和开放时间 (属性). 同时, 假定是 “智能建筑”, 它们能根据需要关闭和锁好大门 (行为).</p></li> 
+        <li><p>所有 “Dog(狗)” 的实例都有 4 条腿和 1 条尾巴 (结构). 它们也有一个名字(属性)并且会叫(行为).</p></li> 
+        <li><p>所有 “Computer(计算机)” 都有一颗CPU和一些内存(结构), 一个型号名称(属性), 能开机和关机(行为).</p></li> 
+       </ul> 
+       <p>我们定义一个类用来研究基于类的编程的基础.我们从 "Square(正方形)"类开始,它代表一个有着简单方法用于计算它的面积的正方形.</p> 
+       <p>你可以按下面的语法来定义这个正方形类:</p> 
+       <pre mode="javascript" theme="chrome"><code>// Define a new class named: 'Square'
+ Ext.define('Square', {
+     // The side property represents the length of the side 
+     // It has a default value of 0
+     side: 0,
+
+     // It also has a method to calculate its area
+     getArea: function() {
+         // We access the 'side' property to calculate area
+         return this.side * this.side;
+     }
+ });
+
+ // We use Ext.create to create an instance of our Square class
+ var sq = Ext.create('Square');
+
+ // The value of the 'side' property
+ // This is not the best way to do this, which we'll discuss below
+ sq.side = 4;
+
+ // Display a message and show the result of this calculation
+ Ext.Msg.alert('Message', 'The area is: ' + sq.getArea());</code></pre> 
+       <p>这是一个使用 Ext JS 实现一个类的骨架.虽然它完全满足我们代表一个正方形并且提供了一个计算面积的方法的目标,但仍不是一个理想的或者说好的实践. </p> 
+       <h3 id="Constructors">构造器</h3> 
+       <p>让我们使用一个构造器来提升这个例子. 一个构造器是当一个类实例化时被调用的特殊函数.首先,让我们修改我们设置正方形边长值的方式.通过使用构造器,我们能删除上面例子中&quot;难看&quot;的行.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Square', {
+     side: 0,
+
+     // This is a special function that gets called 
+     // when the object is instantiated
+     constructor: function (side) {
+         // It receives the side as a parameter
+         // If defined, it is set as the square's side value
+         if (side) {
+             this.side = side;
+         }
+     },
+
+     getArea: function () {
+         return this.side * this.side;
+     }
+ });
+
+ // Thanks to the constructor, we can pass 'side's' value 
+ // as an argument of Ext.create 
+ // This is a slightly more elegant approach.
+ var sq = Ext.create('Square', 4);
+
+ // The passed value is assigned to the square's side property
+ // Display a message to make sure everything is working
+ Ext.Msg.alert('Message', 'The area is: ' + sq.getArea());</code></pre> 
+       <p>如果你要传递2个或以上的属性值给构造器,你可以象如下一样使用对象:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Square', {
+     side: 0,
+     // We have added two more configs
+     color: 'red',
+     border: true,
+
+     // Pass a config object, which contains 'side's' value
+     constructor: function(config) {
+         // Once again, this is not yet the best syntax
+         // We'll get to that in the next example
+         if (config.side) {
+             this.side = config.side;
+         }
+         if (config.color) {
+             this.color = config.color;
+         }
+         // border is a boolean so we can skip the if block
+         this.border = config.border;
+     },
+
+     getArea: function() {
+         return this.side * this.side;
+     }
+ });
+
+ // We pass an object containing properties/values
+ var sq = Ext.create('Square', {
+     side: 4,
+     border: false
+ });
+
+ // Now display a message that uses the other two properties  
+ // Note that we're accessing them directly (i.e.: sq.color) 
+ // This will change in the next section
+ Ext.Msg.alert('Message', 
+      ['The area of the',sq.color,'square',
+      (sq.border?'with a border':''),'is:',
+      sq.getArea()].join(' ')
+ );</code></pre> 
+       <h3 id="Apply">应用</h3> 
+       <p>我们能通过使用<code>Ext.apply</code>进一步整理构造器. Ext.apply 拷贝config 的所有属性到这个特定的对象. </p> 
+       <p><strong>注意</strong>: 构造器将会在继承段再次修改. </p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Square', {
+     side: 0,
+     color: 'red',
+     border: true,
+
+     constructor: function(config) {
+         // Use Ext.apply to not set each property manually 
+         // We'll change this again in the &quot;Inheritance&quot; section
+         Ext.apply(this,config);
+     },
+
+     getArea: function() {
+         return this.side * this.side;
+     }
+ });
+
+ var sq = Ext.create('Square', {
+     side: 4,
+     border: false
+ });
+
+ Ext.Msg.alert('Message', 
+      ['The area of the',sq.color,'square',
+      (sq.border?'with a border':''),'is:',
+      sq.getArea()].join(' ')
+ );</code></pre> 
+       <h3 id="Defining_more_classes">定义多个类</h3> 
+       <p>让我们创建一个圆和矩形类来说明一些小的差异. </p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Square', {
+     side: 0,
+     color: 'red',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         return this.side * this.side;
+     }
+ });
+
+ Ext.define('Rectangle', {
+     //Instead of side, a rectangle cares about base and height
+     base: 0,
+     height: 0,
+     color: 'green',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         // The formula is different
+         return this.base * this.height;
+     }
+ });
+
+ Ext.define('Circle', {
+     // A circle has no sides, but radius
+     radius: 0,
+     color: 'blue',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         // Just for this example, fix the precision of PI to 2
+         return Math.PI.toFixed(2) * Math.pow(this.radius, 2);
+     }
+ });
+
+ var square = Ext.create('Square', {
+             side: 4,
+             border: false
+         }),
+     rectangle = Ext.create('Rectangle', {
+             base: 4,
+             height: 3
+         }),
+     circle = Ext.create('Circle', {
+             radius: 3
+         });
+
+ // This message will now show a line for each object
+ Ext.Msg.alert('Message', [
+     ['The area of the', square.color, 'square', 
+      (square.border ? 'with a border' : ''), 'is:', 
+      square.getArea()].join(' '),
+
+     ['The area of the', rectangle.color, 'rectangle', 
+     (rectangle.border ? 'with a border' : ''), 'is:', 
+     rectangle.getArea()].join(' '),
+
+     ['The area of the', circle.color, 'circle', 
+     (circle.border ? 'with a border' : ''), 'is:', 
+     circle.getArea()].join(' ')
+ ].join('&lt;br /&gt;'));</code></pre> 
+       <h2 id="Inheritance">继承</h2> 
+       <p>在一头扎进继承这个概念前, 我们回顾一下下面的例子. 你可以在下面看到,我们已经给正方形类增加了一个特别的方法然后修改产生测试消息的方式:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Square', {
+     side: 0,
+     color: 'red',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         return this.side * this.side;
+     },
+
+     // This function will return the name of this shape
+     getShapeName: function () {
+         return 'square';
+     }
+ });
+
+ //This function generates a sentence to display in the test dialog
+ function generateTestSentence(shape) {
+     return ['The area of the', shape.color, shape.getShapeName(), 
+             (shape.border ? 'with a border' : ''), 
+             'is:', shape.getArea()].join(' ');
+ }
+
+ var square = Ext.create('Square', {
+     side: 4,
+     border: false
+ });
+
+ Ext.Msg.alert('Message', generateTestSentence(square));</code></pre> 
+       <p>下一个例子中,我们也对长方形和圆形类执行同样的修改:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Square', {
+     side: 0,
+     color: 'red',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         return this.side * this.side;
+     },
+
+     getShapeName: function () {
+         return 'square';
+     }
+ });
+
+ Ext.define('Rectangle', {
+     base: 0,
+     height: 0,
+     color: 'green',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         return this.base * this.height;
+     },
+
+     getShapeName: function () {
+         return 'rectangle';
+     }
+ });
+
+ Ext.define('Circle', {
+     radius: 0,
+     color: 'blue',
+     border: true,
+
+     constructor: function(config) {
+         Ext.apply(this, config);
+     },
+
+     getArea: function() {
+         return Math.PI.toFixed(2) * Math.pow(this.radius, 2);
+     },
+
+     getShapeName: function () {
+         return 'circle';
+     }
+ });
+
+ // Generates a sentence that will be displayed in the test dialog
+ function generateTestSentence(shape) {
+     return ['The area of the', shape.color, shape.getShapeName(), 
+     (shape.border ? 'with a border' : ''), 'is:', 
+     shape.getArea()].join(' ');
+ }
+
+ var square = Ext.create('Square', {
+             side: 4,
+             border: false
+         }),
+     rectangle = Ext.create('Rectangle', {
+             base: 4,
+             height: 3
+         }),
+     circle = Ext.create('Circle', {
+             radius: 3
+         });
+
+ Ext.Msg.alert('Message', [
+     generateTestSentence(square),
+     generateTestSentence(rectangle),
+     generateTestSentence(circle)
+ ].join('&lt;br /&gt;'));</code></pre> 
+       <p>如果你仔细查看上面的例子,你可能会注意到很多重复代码.这让你的代码验证以维护和导致错误.继承的概念帮助我们合并重复代码和让它更易理解和维护.</p> 
+       <h3 id="Parent_and_child_classes">父类和子类</h3> 
+       <p>为应用继承概念,我们通过给一个父类的子类们属性来简单化和减少重复代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>// The shape class contains common code to each shape class
+ // This allows the passing of properties on child classes
+ Ext.define('Shape', {
+     // Let's define common properties here and set default values
+     color: 'gray',
+     border: true,
+
+     // Let's add a shapeName property and a method to return it
+     // This replaces unique getShapeName methods on each class
+     shapeName: 'shape',
+
+     constructor: function (config) {
+         Ext.apply(this, config);
+     },
+
+     getShapeName: function () {
+         return this.shapeName;
+     }
+ });
+
+ Ext.define('Square', {
+     // Square extends from Shape so it gains properties 
+     // defined on itself and its parent class
+     extend: 'Shape',
+
+     // These properties will 'override' parent class properties
+     side: 0,
+     color: 'red',
+     shapeName: 'square',
+
+     getArea: function() {
+         return this.side * this.side;
+     }
+ });
+
+ //This function generates a sentence to display in the test dialog
+ function generateTestSentence(shape) {
+     return ['The area of the', shape.color, shape.getShapeName(), 
+             (shape.border ? 'with a border' : ''), 
+             'is:', shape.getArea()].join(' ');
+ }
+
+ var square = Ext.create('Square', {
+     side: 4
+ });
+
+ // Since Square extends from Shape, this example will work since 
+ // all other properties are still defined, but now by 'Shape'
+ Ext.Msg.alert('Message', 
+      [ generateTestSentence(square) ].join('&lt;br /&gt;'));</code></pre> 
+       <p>我们甚至可以将 <code>generateTestSentence()</code> 方法移到形形状类中:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Shape', {
+     color: 'gray',
+     border: true,
+     shapeName: 'shape',
+
+     constructor: function (config) {
+         Ext.apply(this, config);
+     },
+
+     getShapeName: function () {
+         return this.shapeName;
+     },
+
+     // This function will generate the test sentence for this shape, 
+     // so no need to pass it as an argument
+     getTestSentence: function () {
+         return ['The area of the', this.color, this.getShapeName(), 
+                 (this.border ? 'with a border' : ''), 
+                 'is:', this.getArea()].join(' ');
+     }
+ });
+
+ Ext.define('Square', {
+     extend: 'Shape',
+
+     side: 0,
+     color: 'red',
+     shapeName: 'square',
+
+     getArea: function() {
+         return this.side * this.side;
+     }
+ });
+
+ var square = Ext.create('Square', {
+     side: 4
+ });
+
+ // The generateTestSentence function doesn't exist anymore
+ // so use the one that comes with the shape
+ Ext.Msg.alert('Message', 
+               [ square.getTestSentence() ].join('&lt;br /&gt;'));</code></pre> 
+       <p>你可以看到,如果父类和子类中设置了相同的属性则子类中的属性会覆写中的属性.例如,形状中的 <code>shapeName</code> 是 “shape”. 而在正方形类中 <code>shapeName</code> 也做了设置,它覆盖了父类的值.如果子类没有设置属性值,就会继承父类中的值.</p> 
+       <h2 id="Encapsulation">封装</h2> 
+       <p>在上一个例子中,你可能注意到我们通过直接调用来访问实例的属性. 例如,通过访问“square.color”获取正方形的颜色. 你也能直接设置属性的值:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Shape', {
+     color: 'gray',
+     border: true,
+     shapeName: 'shape',
+
+     constructor: function (config) {
+         Ext.apply(this, config);
+     },
+
+     getShapeName: function () {
+         return this.shapeName;
+     },
+
+     getTestSentence: function () {
+         return ['The area of the', this.color, this.getShapeName(), 
+                 (this.border ? 'with a border' : ''), 
+                 'is:', this.getArea()].join(' ');
+     }
+ });
+
+ Ext.define('Square', {
+     extend: 'Shape',
+
+     side: 0,
+     color: 'red',
+     shapeName: 'square',
+
+     getArea: function() {
+         return this.side * this.side;
+     }
+ });
+
+ var square = Ext.create('Square', {
+     side: 4
+ });
+
+ // Set the value of 'side' to 5 instead of the initial 4 
+ // While not bad, this is something that should be avoided
+ square.side = 5;
+
+ // Set the value of 'side' to a string instead of a number
+ // String is not a valid value. This is an example of why 
+ // direct access to the properties should be avoided.  
+ // Open access is prone to error.
+ square.side = 'five';
+
+ // The area will be reported as NaN
+ Ext.Msg.alert('Message', 
+               [ square.getTestSentence() ].join('&lt;br /&gt;'));</code></pre> 
+       <h2 id="Config_Block">配置块</h2> 
+       <p>为了避免直接对一个对象的属性进行读/写,我们将使用 Ext JS的 config 块. 这个将自动限制访问对象的属性,这样它们只能通过访问方法来设置和获取.</p> 
+       <p>访问方法自动为一个类中的配置块生成getter和setter.例如,如果你在配置块中有一个  <code>shapeName</code> 你可以默认使用  <code>setShapeName()</code> 和 <code>getShapeName()</code>.</p> 
+       <p><strong>Note</strong>: The config block should only include new configs unique to its class. You should not include configs already defined in a parent class’s config block.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Shape', {
+     // All properties inside the config block have 
+     // their accessor methods automatically generated
+     config: {
+         color: 'gray',     // creates getColor|setColor
+         border: true,      // creates getBorder|setBorder
+         shapeName: 'shape' // creates getShapeName|setShapeName
+     },
+
+     constructor: function (config) {
+         Ext.apply(this, config);
+         // Initialize the config block for this class
+         // This auto-generates the accessor methods 
+         // More information on this in the next section
+         this.initConfig(config);
+     },
+
+     // We have removed the getShapeName method 
+     // It's auto-generated since shapeName is in the config block
+
+     // Now we can use the accessor methods instead 
+     // of accessing the properties directly
+     getTestSentence: function () {
+         return ['The area of the', this.getColor(), 
+                 this.getShapeName(), 
+                 (this.getBorder() ? 'with a border' : ''), 'is:', 
+                 this.getArea()].join(' ');
+     }
+ });
+
+ Ext.define('Square', {
+     extend: 'Shape',
+
+     // In a child class, the config block should only 
+     // contain new configs particular for this class
+     config: {
+         side: 0 //  getSide and setSide are now available
+     },
+
+     // Parent class properties are defined outside the config block
+     color: 'red',
+     shapeName: 'square',
+
+     getArea: function() {
+         // We're using the accessor methods of the 'side' config
+         return this.getSide() * this.getSide();
+     }
+ });
+
+ var square = Ext.create('Square', {
+     side: 4
+ });
+
+ // The following line won't modify the value of 'side' anymore
+ square.side = 'five';
+
+ // To modify it instead, we'll use the setSide method:
+ square.setSide(5);
+
+ // The area will be reported as 25
+ Ext.Msg.alert('Message', 
+                [ square.getTestSentence() ].join('&lt;br /&gt;'));</code></pre> 
+       <h2 id="Ext_Base_class">Ext.Base 类</h2> 
+       <p>在 Ext JS中, 除非显示地指定所有类都一个一个共同基础类的子类.这个基础类是 <code>Ext.Base</code>.</p> 
+       <p>就象我们的正方形类继承自形状,形状类自动继承自 Ext.Base.<br />
+         基于这一逻辑,下面的代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Shape', {
+     // Properties and methods here
+ });</code></pre> 
+       <p>完全等同于这个:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Shape', {
+     extend: 'Ext.Base'
+     // Properties and methods here
+ });</code></pre> 
+       <p>这就是为什么我们可以在形状的构造器中使用 this.initConfig(config); . <code>initConfig()</code>是 Ext.Base 的一个方法并且被所有继承自它的子类继承. <code>initConfig()</code> 为它所在的类初始化config 块并且自动生成访问方法. </p> 
+       <h3 id="Real_property_encapsulation">实际属性封装</h3> 
+       <p>封闭的主要目的是保护对象不被不必要或无效的属性修改.这些修改可能必然的导致错误.</p> 
+       <p>例如,当使用 <code>config</code> 块来避免直接属性修改, 现在没有办法可以防止给访问方法传递无效的值.就是说没有方法防止我们square.setSide(‘five’)这样的调用,这个会导致错误,因为边长要求是一个数字.</p> 
+       <p>让我们使用apply方法来避免.apply 是一个允许你在修改前测试赋值的模版方法.这个方法复制这个特定对象 config 中的所有属性.</p> 
+       <p>因为 ‘side’ 是通过 ‘config’ 块定义的一个属性,我们能使用这个模版方法来在真正修改前动作,如检查这个 ‘side’ 是不是一个数字.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Shape', {
+     config: {
+         color: 'gray', 
+         border: true,
+         shapeName: 'shape'
+     },
+
+     constructor: function (config) {
+         Ext.apply(this, config);
+         this.initConfig(config);
+     },
+
+     getTestSentence: function () {
+         return ['The area of the', this.getColor(), 
+                 this.getShapeName(), 
+                 (this.getBorder() ? 'with a border' : ''), 
+                 'is:', this.getArea()].join(' ');
+     }
+ });
+
+ Ext.define('Square', {
+     extend: 'Shape',
+     config: {
+         side: 0
+     },
+
+     color: 'red',
+     shapeName: 'square',
+
+     getArea: function() {
+         return this.getSide() * this.getSide();
+     },
+
+     // 'side' is a property defined through the 'config' block, 
+     // We can use this method before the value is modified
+     // For instance, checking that 'side' is a number
+     applySide: function (newValue, oldValue) {
+         return (Ext.isNumber(newValue)? newValue : oldValue);
+     }
+ });
+
+ var square = Ext.create('Square', {
+     side: 4
+ });
+
+ // The following line won't modify the value of 'side'
+ square.setSide('five');
+
+ // The area will be reported as 16
+ Ext.Msg.alert('Message', 
+               [ square.getTestSentence() ].join('&lt;br /&gt;'));</code></pre> 
+       <h2 id="Conclusion">结论</h2> 
+       <p>我们希望这个向导阐述清楚了在Ext JS中的面象对象OOP和基于类的编程的基本概念.在开发你自己应用时,确定再看看 <a href="../core_concepts/classes.html">类系统 向导</a> 来获得更多关于如何厘清 Ext JS的类系统的知识.一如既往的, 如果你对向导中的内容有任何疑问,请在 <a href="../../../../https@www.sencha.com/forum/default.htm">community forums(社区论坛)</a> 中提问或者通过在 <a href="../../../../https@support.sencha.com/default.htm">Support Portal(支持平台)</a> 上提交支持单(只有<a href="../../../../www.sencha.com/support/default.htm">Sencha 支持客户</a> 可以访问).</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

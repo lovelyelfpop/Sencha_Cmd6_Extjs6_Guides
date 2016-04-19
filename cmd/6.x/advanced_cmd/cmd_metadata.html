@@ -1,0 +1,545 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Sencha Cmd Metadata</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="../cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Prerequisites" title="Prerequisites">Prerequisites</a> 
+       <a class="toc-page-h2" href="#Generating_Output_with__code_meta__code_" title="Generating Output with &lt;code&gt;meta&lt;/code&gt;">Generating Output with <code>meta</code></a> 
+       <a class="toc-page-h2" href="#Generating_a_Custom_Bootstrap" title="Generating a Custom Bootstrap">Generating a Custom Bootstrap</a> 
+       <a class="toc-page-h3" href="#Enabling_Wildcard_Support_in__code_requires__code_" title="Enabling Wildcard Support in &lt;code&gt;requires&lt;/code&gt;">Enabling Wildcard Support in <code>requires</code></a> 
+       <a class="toc-page-h3" href="#Exporting_Loader_Paths" title="Exporting Loader Paths">Exporting Loader Paths</a> 
+       <a class="toc-page-h3" href="#Resolving_Relative_Paths_with__code__base_path__code_" title="Resolving Relative Paths with &lt;code&gt;-base-path&lt;/code&gt;">Resolving Relative Paths with <code>-base-path</code></a> 
+       <a class="toc-page-h2" href="#Changing_the_Format" title="Changing the Format">Changing the Format</a> 
+       <a class="toc-page-h2" href="#Exporting_Filenames" title="Exporting Filenames">Exporting Filenames</a> 
+       <a class="toc-page-h2" href="#Exporting_Definitions" title="Exporting Definitions">Exporting Definitions</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Generating Metadata</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>The metadata tracked by the <a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> compiler has a variety of uses, some of which we will examine in this guide. To support these uses, the compiler can export and format this metadata in several different ways, which we will cover here as well.</p> 
+       <h2 id="Prerequisites">Prerequisites</h2> 
+       <p>The following guides are recommended reading before proceeding further:</p> 
+       <ul> 
+        <li><a href="cmd_compiler_reference.html">Sencha 编译器 参考</a></li> 
+       </ul> 
+       <h2 id="Generating_Output_with__code_meta__code_">Generating Output with <code>meta</code></h2> 
+       <p>One of the major new dimensions provided by the compiler is its ability to export metadata in various formats. This feature is used to produce the <code>ext.js</code> “bootstrap” file that contains various classes and a block of metadata about all of the files in the framework.</p> 
+       <p>There are several forms of metadata that the compiler can export using the <code>meta</code> command:</p> 
+       <ul> 
+        <li>Class aliases</li> 
+        <li>Alternate class names</li> 
+        <li>Loader paths</li> 
+        <li>Filenames</li> 
+        <li>Definitions</li> 
+       </ul> 
+       <h2 id="Generating_a_Custom_Bootstrap">Generating a Custom Bootstrap</h2> 
+       <p><strong>Note.</strong> This process is handled automatically for applications generated by Sencha Cmd. If you are not using Sencha Cmd generated application, this section describes how to achieve the same results manually.</p> 
+       <p>The primary use for the <code>meta</code> command is to create your own “bootstrap” file. This file gives the framework the same level of awareness of your application code that it has of the framework code itself.</p> 
+       <p>The simplest way to manage your bootstrap file is to store it alongside your markup file. If that won’t work for you, read on to see how to manage relative paths. If you have your markup file in a source folder in your classpath, you need to tell the compiler to ignore the bootstrap file. Do this using the <code>-ignore</code> switch:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=sdk/src,app -ignore bootstrap.js \
+    ...</code></pre> 
+       <h3 id="Enabling_Wildcard_Support_in__code_requires__code_">Enabling Wildcard Support in <code>requires</code></h3> 
+       <p>The end of <code>&quot;ext-debug.js&quot;</code> contains these two function calls:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.ClassManager.addNameAlternateMappings({
+    &quot;Ext.draw.engine.ImageExporter&quot;: [],
+    &quot;Ext.layout.component.Auto&quot;: [],
+    ...
+});
+
+Ext.ClassManager.addNameAliasMappings({
+    &quot;Ext.draw.engine.ImageExporter&quot;: [],
+    &quot;Ext.layout.component.Auto&quot;: [
+        &quot;layout.autocomponent&quot;
+    ],
+    ...
+});</code></pre> 
+       <p>It is the presence of these two pieces of metadata that allow wildcards to be used in <code>requires</code> statements. That is:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.App', {
+    requires: [
+        'Ext.grid.*'
+    ],
+    ...
+});</code></pre> 
+       <p>All that is required to use wildcards in your own code is to provide the same bootstrap data for your app.</p> 
+       <p>This command will produce a file that does just that:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=app \
+    meta -alias -out bootstrap.js and \
+    meta -alt -append -out bootstrap.js</code></pre> 
+       <p>The above command line tells the compiler to read in the source in the <code>app</code> folder and generate two pieces of metadata. The second piece of metadata is written to the same output file as the first, but using the <code>-append</code> option to append to the file and not replace it.</p> 
+       <p>Once you have the <code>&quot;bootstrap.js&quot;</code> file, change your page like so to add it to the <code>x-bootstrap</code> section:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- &lt;x-compile&gt; --&gt;
+            &lt;!-- &lt;x-bootstrap&gt; --&gt;
+                &lt;script src=&quot;../sdk/ext-dev.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+                &lt;script src=&quot;bootstrap.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+            &lt;!-- &lt;/x-bootstrap&gt; --&gt;
+
+            &lt;script src=&quot;app/app.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;!-- &lt;/x-compile&gt; --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+       <p>The <code>&quot;bootstrap.js&quot;</code> file needs to be regenerated if you do any of the following:</p> 
+       <ul> 
+        <li>Add a class</li> 
+        <li>Remove a class</li> 
+        <li>Change class aliases</li> 
+        <li>Change class alternate names</li> 
+       </ul> 
+       <p>This rebuild of the bootstrap data can be handled in a variety of ways, but the fundamental question is whether to keep these files in source control or require developers to generate them locally. Both approaches work and can be automated to some degree.</p> 
+       <p><strong>Note.</strong> For applications generated by Sencha Cmd, this is handled as part of the build process of <code>sencha app build</code>. Alternatively, refreshing just the bootstrap instead of performing a full build is accomplished by the <code>sencha app refresh</code> command.</p> 
+       <h3 id="Exporting_Loader_Paths">Exporting Loader Paths</h3> 
+       <p>In large applications it can be helpful to organize your namespace using multiple source trees. In fact, Ext JS itself uses three source trees. This approach, however, has always presented problems for the dynamic loader requiring loader paths to be configured by hand to work around the issue. The compiler, however, has complete knowledge of class-to-file relationships given all of the source in the classpath. And the <code>meta</code> command can export that data for use in your application.</p> 
+       <p>If you are already sold on the above to create a <code>&quot;bootstrap.js&quot;</code>, this data can be added by adding one more <code>meta</code> command (of course, the classpath will contain multiple folders in this case):</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -alias -out bootstrap.js and \
+    meta -alt -append -out bootstrap.js and \
+    meta -loader -append -out bootstrap.js</code></pre> 
+       <p>Now the <code>&quot;bootstrap.js&quot;</code> file solves both problems. With this approach, the following things will also require you to rebuild <code>&quot;bootstrap.js&quot;</code>:</p> 
+       <ul> 
+        <li>Rename a file or folder</li> 
+        <li>Reorganize the classpath</li> 
+        <li>Reorganize the content of any of the source trees</li> 
+       </ul> 
+       <p><strong>Note.</strong> This part is also handled automatically for applications generated by Sencha Cmd.</p> 
+       <h3 id="Resolving_Relative_Paths_with__code__base_path__code_">Resolving Relative Paths with <code>-base-path</code></h3> 
+       <p>For many good reasons, paths need to be relative. Whenever you deal with relative paths, however, you need to solve the problem of where those relative paths are based. In the above examples we cheated a bit and placed the <code>&quot;bootstrap.js&quot;</code> file next to the markup file. This leverages the fact that the <code>meta</code> command defaults the base folder to the location of the output file.</p> 
+       <p>When this is not the case, you need to tell the <code>meta</code> command the base for determining relative paths. Let’s say we want to move the <code>&quot;bootstrap.js&quot;</code> file in to the <code>&quot;build&quot;</code> folder (perhaps because we are not keeping it in source control). Since our page is in the current folder and our source is in the <code>&quot;app&quot;</code> folder, this will generate the proper relative paths:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -alias -out build/bootstrap.js and \
+    meta -alt -append -out build/bootstrap.js and \
+    meta -loader -append -base-path . -out build/bootstrap.js</code></pre> 
+       <p>Since the <code>-alias</code> and <code>-alt</code> modes do not deal in paths, the <code>-base-path</code> option is only needed on the <code>-loader</code> use of the <code>meta</code> command.</p> 
+       <h2 id="Changing_the_Format">Changing the Format</h2> 
+       <p>By default, the <code>meta</code> command exports metadata in JSONP format using a function call wrapper appropriate for the type of metadata requested. If a different function call is desired or you want the data in JSON format, you can request this in the <code>meta</code> command.</p> 
+       <p>In the example below, the <code>aliases.json</code> file will contain the alias data in JSON format. You cannot use <code>-append</code> in this case because JSON format requires a single, top-level object or array.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -alias -json -out aliases.json</code></pre> 
+       <p>In this next example, we customize the JSONP wrapping by supplying the function to call:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -alias -jsonp Foo.bar.doAliases -out aliases.js</code></pre> 
+       <p>This form can work with <code>-append</code> because it produces JavaScript code. The output of the above looks roughly like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>Foo.bar.doAliases(
+    // ... the JSON data ...
+);</code></pre> 
+       <h2 id="Exporting_Filenames">Exporting Filenames</h2> 
+       <p>An occasionally useful form of metadata supported by the <code>meta</code> command is filename data. That is, the list of a files in the proper, dependency order. In many ways this is the same as the other meta data forms in that this data can be exported in JSON or JSONP format, and can be combined using <code>-append</code>.</p> 
+       <p>The first difference with <code>-filenames</code> is that the default format is text. To produce JSON or JSONP, you must specify one of the <code>-json</code> or <code>-jsonp</code> options.</p> 
+       <p>In the default mode of text, the filenames are written as lines of text, one filename per line. The following command will create <code>&quot;filenames.txt&quot;</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -filenames -out filenames.txt</code></pre> 
+       <p>Each line of the file can be decorated using the <code>-tpl</code> option. Because of the special characters needed for this example, we use a response file to hold the template. We put this in <code>&quot;template.txt&quot;</code>, like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script src=&quot;{0}&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre> 
+       <p>Then run the following command.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -filenames -tpl @template.txt -out filenames.txt</code></pre> 
+       <p>We now have a chunk of markup that will “script-tag in” all of the files in their correct order.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script src=&quot;ext/src/ShadowPool.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;ext/src/Shadow.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre> 
+       <h2 id="Exporting_Definitions">Exporting Definitions</h2> 
+       <p>The compiler normally reads metadata such as classes, namespaces and dependencies by parsing source code. In situations where this is hidden, for example, when obfuscating a library, the compiler will be unaware of any defined classes or their dependencies.</p> 
+       <p>This form of metadata export can be used to provide the “symbols” for such libraries so that users can still compile their application using Sencha Cmd.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile -classpath=src1,src2,src3 \
+    meta -definitions -out symbols.js</code></pre> 
+       <p>The above creates a file that contains directives like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>// @define Foo.bar.Thing
+// @require Ext.panel.Panel
+// @uses Ext.layout.container.HBox</code></pre> 
+       <p>These directives are recognized by the compiler and introduce the symbolic names needed for user code to compile. These symbols should be added to the obfuscated library file to ensure that the library code is concatenated in the right order.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

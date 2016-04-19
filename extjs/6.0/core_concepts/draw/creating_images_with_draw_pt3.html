@@ -1,0 +1,768 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Creating Images with Draw - Part 3</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Sprite_Transformations" title="Sprite Transformations">Sprite Transformations</a> 
+       <a class="toc-page-h3" href="#Scaling" title="Scaling">Scaling</a> 
+       <a class="toc-page-h3" href="#Rotation" title="Rotation">Rotation</a> 
+       <a class="toc-page-h3" href="#Translation" title="Translation">Translation</a> 
+       <a class="toc-page-h2" href="#Combining_Transformations" title="Combining Transformations">Combining Transformations</a> 
+       <a class="toc-page-h2" href="#Transformations_on_an_Existing_Sprite" title="Transformations on an Existing Sprite">Transformations on an Existing Sprite</a> 
+       <a class="toc-page-h2" href="#Transformation_Matrix_Detail" title="Transformation Matrix Detail">Transformation Matrix Detail</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">Conclusion</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Creating Beautiful Drawings Using Ext JS - Part 3</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Sprite_Transformations">Sprite Transformations</h2> 
+       <p>In the <a href="creating_images_with_draw_pt1.html">previous article</a>, we learned how to animate sprites by using animation modifiers. In this section, we’ll talk about sprite transformations. There are three standard types of transformations that can be applied to sprites:</p> 
+       <ul> 
+        <li><p>Scaling.</p></li> 
+        <li><p>Rotation.</p></li> 
+        <li><p>Translation.</p></li> 
+       </ul> 
+       <p><strong>Note:</strong> Standard transformations are <em>always</em> applied in that order.</p> 
+       <p>Let’s take a look at these three transformations.</p> 
+       <h3 id="Scaling">Scaling</h3> 
+       <p>First, let’s examine the scaling transformation. There are four sprite attributes to control it:</p> 
+       <ul> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-scalingX" data-full-load="true">scaling</a> - the factor of the horizontal scaling of the sprite</p></li> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-scalingY" data-full-load="true">scalingY</a> - the factor of the vertical scaling of the sprite</p></li> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-scalingCenterX" data-full-load="true">scalingCenterX</a> - the x-coordinate of the center of transformation</p></li> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-scalingCenterY" data-full-load="true">scalingCenterY</a> - the y-coordinate of the center of transformation</p></li> 
+       </ul> 
+       <p>Each of the three transformation configs have an alias for the transformation that can be used in configuring the initial transformation. For scaling the config shorthand pseudo config, or <em>alias</em>, is called <code>scaling</code>.</p> 
+       <p><strong>Note:</strong> When sprite attributes are set, they normally go through a process of normalization, where known aliases for a particular sprite type expand into actual attributes. Be mindful of that when looking for sprite attributes inside the <code>sprite.attr</code> object. You won’t find aliases there. This also means that pseudo attributes cannot be used with the <a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-method-setAttributes" data-full-load="true">setAttributes</a> method of the sprite, if its <code>bypassNormalization</code> parameter is <code>true</code>. Finally, aliases are nice for clarity - for example, when declaring sprites in views - but in performance critical code it is best to use original attributes.</p> 
+       <pre mode="javascript" theme="chrome"><code>scaling: {    
+    x: {Number},    
+    y: {Number},    
+    centerX: {Number},    
+    centerY: {Number}    
+}</code></pre> 
+       <p>And as with the rotation transformation, the center of scaling is the center of the sprite’s bounding box by default.</p> 
+       <p>Let’s say we want to scale our <code>'rect'</code> sprite so that it looks like a rectangle rather than a square. To do this, we can simply use different scale factors for horizontal and vertical scaling like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>scaling: {    
+    x: 2,    
+    y: 1.25    
+}</code></pre> 
+       <p><img src="images/image_0.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbv">Open in a fiddle</a></p> 
+       <p>If we wanted uniform scaling we could just say:</p> 
+       <pre mode="javascript" theme="chrome"><code>scaling: 2</code></pre> 
+       <p><img src="images/image_1.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbu">Open in a fiddle</a></p> 
+       <p>Let’s say we want to change the center of the scaling to the top-left corner of the sprite while maintaining the previous scaling factors.</p> 
+       <pre mode="javascript" theme="chrome"><code>{    
+    type: 'rect',    
+    x: 50,    
+    y: 50,    
+
+    //...
+
+    scaling: {    
+        x: 2,    
+        y: 1.25,    
+        centerX: 100,    
+        centerY: 100    
+    }    
+}</code></pre> 
+       <p>This is the result of the above code:</p> 
+       <p><img src="images/image_2.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rc2">Open in a fiddle</a></p> 
+       <p>The sprite just grew to the bottom/right instead of uniformly in both directions.</p> 
+       <h3 id="Rotation">Rotation</h3> 
+       <p>The second transformation we’ll look at is rotation. There are three sprite attributes that allow us to control it:</p> 
+       <ul> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-rotationRads" data-full-load="true">rotationRads</a> - the angle of rotation of the sprite in radians, where a positive value means clockwise rotation</p></li> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-rotationCenterX" data-full-load="true">Ext.draw.sprite.Sprite-cfg-rotationCenterX</a> - the x-coordinate of the center of rotation</p></li> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-rotationCenterY" data-full-load="true">Ext.draw.sprite.Sprite-cfg-rotationCenterY</a> - the y-coordinate of the center of rotation</p></li> 
+       </ul> 
+       <p>Let’s rotate our sprite by 45 degrees clockwise, which is \(\frac{\pi}{4}\) radians. You can always use the <a href="../../6.0.1-classic/#!/api/Ext.draw.Draw-method-rad" data-full-load="true">Ext.draw.Draw.rad</a> method to convert degrees to radians, e.g.: <code>Ext.draw.Draw.rad(45)</code>.</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    type: 'rect',
+
+    //...
+
+    rotationRads: Math.PI / 4
+}</code></pre> 
+       <p>By default, the center of rotation is the center of the sprite’s bounding box. On the image below it is indicated with a black dot.</p> 
+       <p><img src="images/image_3.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbm">Open in a fiddle</a></p> 
+       <p>Let’s say we want to rotate our sprite around the top left corner. For this, we can simply move the center of rotation to the top-left corner of the sprite using <code>rotationCenterX</code> and <code>rotationCenterY</code> attributes:</p> 
+       <pre mode="javascript" theme="chrome"><code>{    
+    type: 'rect',    
+    x: 100,    
+    y: 100,    
+
+    //...    
+
+    rotationRads: Math.PI / 4,    
+    rotationCenterX: 100,    
+    rotationCenterY: 100    
+}</code></pre> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbn">Open in a fiddle</a></p> 
+       <p>There is also a special pseudo attribute called <code>rotation</code>. It can be either a number or an object. If it’s a number, it specifies the angle of rotation of the sprite in degrees, instead of radians. If it’s an object, it should be in the following form (where all properties are optional):</p> 
+       <pre mode="javascript" theme="chrome"><code>rotation: {    
+    rads | degrees: {Number},    
+    centerX: {Number},    
+    centerY: {Number}    
+}</code></pre> 
+       <p>We can rewrite the previous example like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>{    
+    type: 'rect',    
+    x: 100,    
+    y: 100,    
+
+    //...    
+
+    rotation: {    
+        degrees: 45,    
+        centerX: 100,    
+        centerY: 100    
+    }    
+}</code></pre> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbr">Open in a fiddle</a></p> 
+       <h3 id="Translation">Translation</h3> 
+       <p>There are two attributes every sprite has to control translation:</p> 
+       <ul> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-translationX" data-full-load="true">translationX</a> - the horizontal distance to move the sprite</p></li> 
+        <li><p><a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-cfg-translationY" data-full-load="true">translationX</a> - the vertical distance to move the sprite</p></li> 
+       </ul> 
+       <p>We’ll continue to use the <code>rect</code> sprite from the <a href="creating_images_with_draw_pt1.html">Part 1</a> of this series and apply all transformations to it.</p> 
+       <pre mode="javascript" theme="chrome"><code>{    
+    type: 'rect',    
+    x: 100,    
+    y: 100,    
+    width: 100,    
+    height: 100,    
+
+    //...    
+
+    translationX: -50,    
+    translationY: -50    
+}</code></pre> 
+       <p>The translated sprite will look like the following image, where the dashed line indicates the original untranslated position.</p> 
+       <p><img src="images/image_4.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbk">Open in a fiddle</a></p> 
+       <p>Alternatively, you could specify the same transformation using the following syntax:</p> 
+       <pre mode="javascript" theme="chrome"><code>translation: {    
+    x: 100,    
+    y: -50    
+}</code></pre> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rbl">Open in a fiddle</a></p> 
+       <p>As with the previous transformations, <code>translation</code> is a pseudo attribute or an alias [^alias].</p> 
+       <h2 id="Combining_Transformations">Combining Transformations</h2> 
+       <p>Now that we have looked at each transformation separately, let’s combine them by scaling and rotating the sprite simultaneously.</p> 
+       <pre mode="javascript" theme="chrome"><code>type: 'rect',    
+x: 100,    
+y: 100,    
+width: 100,    
+height: 100,    
+
+//... 
+
+rotation: {    
+    degrees: 45,    
+    centerX: 100,    
+    centerY: 100    
+},
+
+scaling: {    
+    x: 2,    
+    y: 1.25,    
+    centerX: 100,    
+    centerY: 100    
+}</code></pre> 
+       <p><img src="images/image_5.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rc3">Open in a fiddle</a></p> 
+       <p>In this example the center of transformation is the same for both scaling and rotation. The transformed sprite looks as if the original sprite was first scaled, then rotated.</p> 
+       <p>Finally, let’s add the translation transformation to the mix:</p> 
+       <pre mode="javascript" theme="chrome"><code>translation: {    
+    x: 50,    
+    y: -50    
+},
+
+rotation: {    
+    degrees: 45,    
+    centerX: 100,    
+    centerY: 100    
+},
+
+scaling: {    
+    x: 2,    
+    y: 1.25,    
+    centerX: 100,    
+    centerY: 100    
+}</code></pre> 
+       <p><img src="images/image_6.png" alt="image alt text" /></p> 
+       <p><a href="../../../../../https@fiddle.sencha.com/#fiddle/rce">Open in a fiddle</a></p> 
+       <p>Notice how translation is applied after scaling and rotation. This order is always the same: </p> 
+       <pre mode="javascript" theme="chrome"><code>scale -&gt; rotate -&gt; translate</code></pre> 
+       <p><strong>Note:</strong> the default order of transformations has changed in Ext JS 6.0.1+ from <code>rotate-&gt;scale-&gt;translate</code> to <code>scale-&gt;rotate-&gt;translate</code>. This has been done to be more compatible with other libraries and to prevent shearing when transformations are applied. This change won’t affect charts, but it may affect your custom drawing code. Please keep this in mind when upgrading to Ext JS 6.0.1+. You can also use <a href="../../../../../https@fiddle.sencha.com/#fiddle/sbh">an override</a>, if you’d rather keep the previous order of transformations.</p> 
+       <h2 id="Transformations_on_an_Existing_Sprite">Transformations on an Existing Sprite</h2> 
+       <p>We just covered all of the standard transformations that are always applied in the same order. But what if we wanted to change this order, apply more than three transformations at once, or maybe use another type of transformation entirely, like shearing? That’s where transformation matrices come in handy.</p> 
+       <p>Every sprite has a transformation matrix set by default with no transformations applied. This matrix communicates to the coordinate system of the surface how the sprite should be deformed and / or located within the coordinate plane. The coordinate plane of the draw surface starts with 0,0 as the top-left corner by default. The <a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-method-setTransform" data-full-load="true">setTransform</a> method will override the current transformation matrix of a sprite with the given matrix. Alternatively, you can use the <a href="../../6.0.1-classic/#!/api/Ext.draw.sprite.Sprite-method-transform" data-full-load="true">transform</a> method of a sprite, which will multiply the given matrix with current transformation matrix. In other words, it will add to the current transformation instead of replacing it.</p> 
+       <p>Since multiplying matrices manually can be rather tedious, the <a href="../../6.0.1-classic/#!/api/Ext.draw.Matrix" data-full-load="true">Ext.draw.Matrix</a> class is meant to help us alleviate the task. For example, this is how we can create an <a href="../../../../../https@en.wikipedia.org/wiki/Identity_matrix">identity matrix</a> and then multiply it, first with a rotation matrix, and then with a translation matrix:</p> 
+       <p>var m = new Ext.draw.Matrix().scale(sx, sy).translate(tx, ty);</p> 
+       <p>The matrix <strong>m</strong> represents a composite transformation that we can pass to the <code>transform</code> and <code>setTransform</code> methods of a sprite instead of an array of matrix elements.</p> 
+       <p>Let’s examine a concrete example of how transformation matrices can be used. Let’s say we have a “rect” sprite like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>{    
+    type: 'rect',    
+    x: 0,    
+    y: 0,    
+    width: 100,    
+    height: 100    
+}</code></pre> 
+       <p>And we want to rotate it around the bottom-right corner counter-clockwise by 180 degrees:</p> 
+       <p><img src="images/image_7.png" alt="image alt text" /></p> 
+       <p>Since we want to rotate the sprite around the bottom-right corner, we can’t just apply the rotation transformation:</p> 
+       <pre mode="javascript" theme="chrome"><code>rectSprite.transform(new Ext.draw.Matrix().rotate(Math.PI));</code></pre> 
+       <p>This will rotate our sprite around the origin in such a way that it will go off-screen:</p> 
+       <p><img src="images/image_8.png" alt="image alt text" /></p> 
+       <p>So first we need to translate the origin to the bottom right corner of the sprite or (100, 100) coordinate:</p> 
+       <p><img src="images/image_9.png" alt="image alt text" /></p> 
+       <p>Then rotate the coordinate space by 180&deg;:</p> 
+       <p><img src="images/image_10.png" alt="image alt text" /></p> 
+       <p>Then we have to translate the origin back by (-100, -100). But now that we rotated the coordinate grid meaning the back (negative coordinates) is forward:</p> 
+       <p><img src="images/image_11.png" alt="image alt text" /></p> 
+       <p>And now our sprite is rendered with (0, 0) as the top-left coordinate and (100, 100) as the bottom-right coordinate (its normal coordinates) in the transformed coordinate space.</p> 
+       <p><img src="images/image_12.png" alt="image alt text" /></p> 
+       <p>This is exactly the type of transformation we wanted. The code for it will look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>var M = new Ext.draw.Matrix().translate(100,100).rotate(Math.PI).translate(-100, -100);                             
+
+rectSprite.setTransform(M);</code></pre> 
+       <p>We only performed the above transformation this way to give an example of how you can combine multiple simple transformations to create a composite transformation with predictable results. You can actually rotate a sprite around a certain point, by passing two extra parameters to the <a href="../../6.0.1-classic/#!/api/Ext.draw.Matrix-method-rotate" data-full-load="true">rotate</a> method - the coordinates of the center of rotation:</p> 
+       <pre mode="javascript" theme="chrome"><code>var M = new Ext.draw.Matrix().rotate(Math.PI, 100, 100);               
+
+rectSprite.setTransform(M);</code></pre> 
+       <h2 id="Transformation_Matrix_Detail">Transformation Matrix Detail</h2> 
+       <p>There may be times when the transformation you need to apply cannot be easily accomplished using the sprite’s convenience transform methods. Or, you may want to pass a matrix directly to the sprite in order to set a transformation. The <code>setTransform</code> method allows for this sort of advanced usage as well. The following tables show each transformation matrix used when applying transformations to a sprite.</p> 
+       <pre mode="javascript" theme="chrome"><code>\\(Translate = \begin{bmatrix}
+
+1 &amp; 0 &amp; t_x \\
+
+0 &amp; 1 &amp; t_y \\
+
+0 &amp; 0 &amp; 1 \\
+
+\end{bmatrix}\quad\\)
+
+\\(Rotate = \begin{bmatrix}
+
+\cos \theta &amp; -\sin \theta &amp; 0 \\
+
+\sin \theta &amp; \cos \theta &amp; 0 \\
+
+0 &amp; 0 &amp; 1 \\
+
+\end{bmatrix}\quad\\)
+
+\\(Scale = \begin{bmatrix}
+
+s_x &amp; 0 &amp; 0 \\
+
+0 &amp; s_y &amp; 0 \\
+
+0 &amp; 0 &amp; 1 \\
+
+\end{bmatrix}\\)
+
+\\(Shear_x = \begin{bmatrix}
+
+1 &amp; \lambda_x &amp; 0 \\
+
+0 &amp; 1 &amp; 0 \\
+
+0 &amp; 0 &amp; 1 \\
+
+\end{bmatrix}\quad\\)
+
+\\(Shear_y = \begin{bmatrix}
+
+1 &amp; 0 &amp; 0 \\
+
+\lambda_y &amp; 1 &amp; 0 \\
+
+0 &amp; 0 &amp; 1 \\
+
+\end{bmatrix}\\)</code></pre> 
+       <p>By multiplying matrices for translation, rotation, scaling, and shearing any number of times in the desired order, you will get a single matrix for a composite transformation as a result. This matrix can then be used as a value for the <code>setTransform</code> method of a sprite like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>mySprite.setTransform([a, b, c, d, e, f]);</code></pre> 
+       <p>In this case, <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, <code>f</code> are numeric values that correspond to the following transformation matrix components:</p> 
+       <pre mode="javascript" theme="chrome"><code>\\[
+
+M = \begin{bmatrix}
+
+a &amp; c &amp; e \\
+
+b &amp; d &amp; f \\
+
+0 &amp; 0 &amp; 1 \\
+
+\end{bmatrix}
+
+\\]</code></pre> 
+       <h2 id="Conclusion">Conclusion</h2> 
+       <p>The Draw package enables you to create simple transform methods when needed and gets out of your way when you want to take the wheel. The Draw API simplifies the job of transforming the shape of sprites with its convenient transform methods. It will additionally yield control to the power user needing to articulate a sprite using pre-defined transformation matrices. </p> 
+       <p>Have fun creating your own custom drawings for your apps and as always, reach out to us on the <a href="../../../../../https@www.sencha.com/forum/default.htm">forums</a> if you have questions!</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../../https@s.adroll.com" : "../../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

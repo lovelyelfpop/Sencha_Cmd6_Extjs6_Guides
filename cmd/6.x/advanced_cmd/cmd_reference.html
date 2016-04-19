@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | Sencha Cmd 参考</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="../cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#sencha_ant" title="sencha ant">sencha ant</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_app" title="sencha app">sencha app</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_app_build" title="sencha app build">sencha app build</a> 
+       <a class="toc-page-h4" href="#Using_Ant" title="Using Ant">Using Ant</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_clean" title="sencha app clean">sencha app clean</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_emulate" title="sencha app emulate">sencha app emulate</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_explain" title="sencha app explain">sencha app explain</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_prepare" title="sencha app prepare">sencha app prepare</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_publish" title="sencha app publish">sencha app publish</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_refresh" title="sencha app refresh">sencha app refresh</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_run" title="sencha app run">sencha app run</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_upgrade" title="sencha app upgrade">sencha app upgrade</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_app_watch" title="sencha app watch">sencha app watch</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_audit" title="sencha audit">sencha audit</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_build" title="sencha build">sencha build</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile" title="sencha compile">sencha compile</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_compile_concatenate" title="sencha compile concatenate">sencha compile concatenate</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_exclude" title="sencha compile exclude">sencha compile exclude</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_explain" title="sencha compile explain">sencha compile explain</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_include" title="sencha compile include">sencha compile include</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_intersect" title="sencha compile intersect">sencha compile intersect</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_metadata" title="sencha compile metadata">sencha compile metadata</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h4" href="#Data_Type" title="Data Type">Data Type</a> 
+       <a class="toc-page-h4" href="#Format" title="Format">Format</a> 
+       <a class="toc-page-h4" href="#Misc" title="Misc">Misc</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_page" title="sencha compile page">sencha compile page</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_pop" title="sencha compile pop">sencha compile pop</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_push" title="sencha compile push">sencha compile push</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_require" title="sencha compile require">sencha compile require</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_restore" title="sencha compile restore">sencha compile restore</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_save" title="sencha compile save">sencha compile save</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_show_ignored" title="sencha compile show-ignored">sencha compile show-ignored</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_compile_union" title="sencha compile union">sencha compile union</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_config" title="sencha config">sencha config</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_cordova" title="sencha cordova">sencha cordova</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_cordova_init" title="sencha cordova init">sencha cordova init</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_diag" title="sencha diag">sencha diag</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_diag_export" title="sencha diag export">sencha diag export</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_diag_show_props" title="sencha diag show-props">sencha diag show-props</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_framework" title="sencha framework">sencha framework</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_framework_add" title="sencha framework add">sencha framework add</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_framework_list" title="sencha framework list">sencha framework list</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_framework_remove" title="sencha framework remove">sencha framework remove</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_framework_upgrade" title="sencha framework upgrade">sencha framework upgrade</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_fs" title="sencha fs">sencha fs</a> 
+       <a class="toc-page-h3" href="#Categories" title="Categories">Categories</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_fs_concatenate" title="sencha fs concatenate">sencha fs concatenate</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_fs_difference" title="sencha fs difference">sencha fs difference</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_fs_minify" title="sencha fs minify">sencha fs minify</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_fs_mirror" title="sencha fs mirror">sencha fs mirror</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_fs_mirror_all" title="sencha fs mirror all">sencha fs mirror all</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_fs_mirror_image" title="sencha fs mirror image">sencha fs mirror image</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_fs_mirror_sprite" title="sencha fs mirror sprite">sencha fs mirror sprite</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_fs_slice" title="sencha fs slice">sencha fs slice</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate" title="sencha generate">sencha generate</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_generate_app" title="sencha generate app">sencha generate app</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_controller" title="sencha generate controller">sencha generate controller</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_form" title="sencha generate form">sencha generate form</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_model" title="sencha generate model">sencha generate model</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_package" title="sencha generate package">sencha generate package</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_profile" title="sencha generate profile">sencha generate profile</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_theme" title="sencha generate theme">sencha generate theme</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_view" title="sencha generate view">sencha generate view</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_generate_workspace" title="sencha generate workspace">sencha generate workspace</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_help" title="sencha help">sencha help</a> 
+       <a class="toc-page-h3" href="#Example" title="Example">Example</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_js" title="sencha js">sencha js</a> 
+       <a class="toc-page-h4" href="#Files" title="Files">Files</a> 
+       <a class="toc-page-h4" href="#Context" title="Context">Context</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_manager" title="sencha manager">sencha manager</a> 
+       <a class="toc-page-h3" href="#Categories" title="Categories">Categories</a> 
+       <a class="toc-page-h2" href="#sencha_manager_version" title="sencha manager version">sencha manager version</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_manager_version_create" title="sencha manager version create">sencha manager version create</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_manifest" title="sencha manifest">sencha manifest</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_manifest_create" title="sencha manifest create">sencha manifest create</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_package" title="sencha package">sencha package</a> 
+       <a class="toc-page-h4" href="#Using_Packages" title="Using Packages">Using Packages</a> 
+       <a class="toc-page-h4" href="#Authoring_Packages" title="Authoring Packages">Authoring Packages</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_package_add" title="sencha package add">sencha package add</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_package_build" title="sencha package build">sencha package build</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_package_extract" title="sencha package extract">sencha package extract</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_package_get" title="sencha package get">sencha package get</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_package_install" title="sencha package install">sencha package install</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_package_list" title="sencha package list">sencha package list</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_package_remove" title="sencha package remove">sencha package remove</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_package_upgrade" title="sencha package upgrade">sencha package upgrade</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_phonegap" title="sencha phonegap">sencha phonegap</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_phonegap_init" title="sencha phonegap init">sencha phonegap init</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_repository" title="sencha repository">sencha repository</a> 
+       <a class="toc-page-h4" href="#Remote_Repositories" title="Remote Repositories">Remote Repositories</a> 
+       <a class="toc-page-h4" href="#Authoring_Packages" title="Authoring Packages">Authoring Packages</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_repository_add" title="sencha repository add">sencha repository add</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_repository_init" title="sencha repository init">sencha repository init</a> 
+       <a class="toc-page-h4" href="#Private_Key" title="Private Key">Private Key</a> 
+       <a class="toc-page-h4" href="#Remote_Access" title="Remote Access">Remote Access</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_repository_list" title="sencha repository list">sencha repository list</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_repository_remove" title="sencha repository remove">sencha repository remove</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_repository_show" title="sencha repository show">sencha repository show</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h3" href="#Where_" title="Where:">Where:</a> 
+       <a class="toc-page-h2" href="#sencha_repository_sync" title="sencha repository sync">sencha repository sync</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_switch" title="sencha switch">sencha switch</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_template" title="sencha template">sencha template</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_template_apply" title="sencha template apply">sencha template apply</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_template_info" title="sencha template info">sencha template info</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_template_list" title="sencha template list">sencha template list</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_template_read" title="sencha template read">sencha template read</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_theme" title="sencha theme">sencha theme</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_theme_build" title="sencha theme build">sencha theme build</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_theme_capture" title="sencha theme capture">sencha theme capture</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_theme_slice" title="sencha theme slice">sencha theme slice</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_upgrade" title="sencha upgrade">sencha upgrade</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_web" title="sencha web">sencha web</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_web_start" title="sencha web start">sencha web start</a> 
+       <a class="toc-page-h4" href="#The_Web_Root" title="The Web Root">The Web Root</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_web_stop" title="sencha web stop">sencha web stop</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_which" title="sencha which">sencha which</a> 
+       <a class="toc-page-h3" href="#Options" title="Options">Options</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+       <a class="toc-page-h2" href="#sencha_workspace" title="sencha workspace">sencha workspace</a> 
+       <a class="toc-page-h3" href="#Commands" title="Commands">Commands</a> 
+       <a class="toc-page-h2" href="#sencha_workspace_upgrade" title="sencha workspace upgrade">sencha workspace upgrade</a> 
+       <a class="toc-page-h3" href="#Syntax" title="Syntax">Syntax</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>sencha</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="sencha_ant">sencha ant</h2> 
+       <p>Invokes the embedded version of Apache Ant providing the <code>cmd.dir</code> property to access Sencha Cmd using the following <code>taskdef</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;taskdef resource=&quot;com/sencha/ant/antlib.xml&quot;
+         classpath=&quot;${cmd.dir}/sencha.jar&quot;
+         loaderref=&quot;senchaloader&quot;/&gt;</code></pre> 
+       <p>This command recognizes the <code>-Dproperty=value</code> syntax for properties used by Ant, even though this does not conform to normal Sencha Cmd parameter syntax. Similar to directly invoking Ant, this command defaults to <code>&quot;build.xml&quot;</code> for the script file basing its search on the current directory or the value of the <code>-cwd</code> switch passed to <code>sencha</code>.</p> 
+       <p>For example, the following command uses <code>&quot;../build.xml&quot;</code> as the script and passes in the <code>foo</code> property as “42” when executing the default target (since no target was specified).</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -cwd=.. ant -Dfoo=42</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--debug</code>, <code>-d</code> - Enables Ant debug level messages</li> 
+        <li><code>--file</code>, <code>-f</code> - The Ant file to execute (default is build.xml)</li> 
+        <li><code>--props</code>, <code>-p</code> - One or more properties for the Ant script (name=value,…)</li> 
+        <li><code>--target</code>, <code>-t</code> - The target(s) to execute from the Ant script (comma separated)</li> 
+        <li><code>--verbose</code>, <code>-v</code> - Enables Ant verbose level messages</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha ant [options] targets...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>targets</code> - The Ant script targets to execute</li> 
+       </ul> 
+       <h2 id="sencha_app">sencha app</h2> 
+       <p>This category contains various commands for application management.</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>build</code> - Executes the build process for an application</li> 
+        <li><code>clean</code> - Cleans the application for a build</li> 
+        <li><code>emulate</code> - Builds the application via a Packager then executes in the simulator/emulator</li> 
+        <li><code>explain</code> - Resolves a reference path from the application’s entry file to the specified symbol</li> 
+        <li><code>prepare</code> - Builds the application then the Packager prepares the app for native build (cordova only)</li> 
+        <li><code>publish</code> - Publishes an application version to Sencha Web Application Manager.</li> 
+        <li><code>refresh</code> - Updates the application metadata (aka “bootstrap”) file</li> 
+        <li><code>run</code> - Builds the application via a Packager then executes the on a device</li> 
+        <li><code>upgrade</code> - Upgrade the current application to the specified SDK</li> 
+        <li><code>watch</code> - Watches an application for file system changes and rebuilds.</li> 
+       </ul> 
+       <h2 id="sencha_app_build">sencha app build</h2> 
+       <p>This command builds the current application.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build [production|testing|native|package]</code></pre> 
+       <p>This will build your application in its current configuration and generate the build output in the <code>&quot;build/&lt;environment&gt;&quot;</code> folder. This location and many other properties can be configured in your application’s configuration file <code>&quot;.sencha/app/sencha.cfg&quot;</code> or the provided build script <code>&quot;build.xml&quot;</code>.</p> 
+       <p>For locally overriding build properties, the build script loads an optional properties file called <code>&quot;local.properties&quot;</code> if present in your app folder. The purpose of this file is to define build properties that are in some way special to the local environment (that is, the local machine). As such, this file is not intended to be tracked in source control.</p> 
+       <h4 id="Using_Ant">Using Ant</h4> 
+       <p>This command is equivalent to running the provided Ant script directly using the following command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha ant [production|testing|native|package] build</code></pre> 
+       <p>To tune the process, start by looking at the generated <code>&quot;build.xml&quot;</code> in your app folder. The actual build logic is located in <code>&quot;.sencha/app/build-impl.xml&quot;</code>.</p> 
+       <p>The <code>&quot;build.xml&quot;</code> script can be used by many Continuous Integration (CI) systems if they understand Apache Ant (most do). If not, the Sencha Cmd command line can be used as you would during development. If the CI system understands Ant, however, it is often more convenient to use that integration rather than using a command line invocation.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--archive</code>, <code>-a</code> - The directory path where all previous builds were stored.</li> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--clean</code>, <code>-c</code> - Remove previous build output prior to executing build</li> 
+        <li><code>--destination</code>, <code>-des</code> - The directory to which the build output is written</li> 
+        <li><code>--development</code>, <code>-dev</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--run</code>, <code>-r</code> - Enables automatically running builds with the native packager</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build [options] [theme|locale|build]... [environment]</code></pre> 
+       <h2 id="sencha_app_clean">sencha app clean</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app clean [theme|locale|build]...</code></pre> 
+       <h2 id="sencha_app_emulate">sencha app emulate</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--archive</code>, <code>-a</code> - The directory path where all previous builds were stored.</li> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--clean</code>, <code>-c</code> - Remove previous build output prior to executing build</li> 
+        <li><code>--destination</code>, <code>-des</code> - The directory to which the build output is written</li> 
+        <li><code>--development</code>, <code>-dev</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--run</code>, <code>-r</code> - Enables automatically running builds with the native packager</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app emulate [options] [theme|locale|build]... [environment]</code></pre> 
+       <h2 id="sencha_app_explain">sencha app explain</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--development</code>, <code>-d</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--target-name</code>, <code>-ta</code> - The target symbol name to use when resolving the reference path</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app explain [options] [theme|locale|build]... [targetName]</code></pre> 
+       <h2 id="sencha_app_prepare">sencha app prepare</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--archive</code>, <code>-a</code> - The directory path where all previous builds were stored.</li> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--clean</code>, <code>-c</code> - Remove previous build output prior to executing build</li> 
+        <li><code>--destination</code>, <code>-des</code> - The directory to which the build output is written</li> 
+        <li><code>--development</code>, <code>-dev</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--run</code>, <code>-r</code> - Enables automatically running builds with the native packager</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app prepare [options] [theme|locale|build]... [environment]</code></pre> 
+       <h2 id="sencha_app_publish">sencha app publish</h2> 
+       <p>This command will publish the contents of the application’s build directory as a new version of a Sencha Web Application Manager application using <code>sencha manager version create</code>.</p> 
+       <p>Configuration for this command should be provided by the <code>manager</code> key in <code>app.json</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;manager&quot;: {
+    &quot;id&quot;: 12345,
+    &quot;host&quot;: &quot;https://api.space.sencha.com/json.rpc&quot;,
+    &quot;file&quot;: &quot;${app.output.base}&quot;,
+
+    &quot;apiKey&quot;: &quot;...&quot;,
+    &quot;secret&quot;: &quot;...&quot;
+}</code></pre> 
+       <p>It is <strong>not recommended</strong> to store the <code>apiKey</code> or <code>secret</code> in <code>app.json</code> but instead to store them in a file local to this machine (such as ~/.sencha/cmd/sencha.cfg). For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>app.manager.apiKey=...
+app.manager.secret=...</code></pre> 
+       <p>This will avoid placing credentials in a shared source repository.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--archive</code>, <code>-a</code> - The directory path where all previous builds were stored.</li> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--clean</code>, <code>-c</code> - Remove previous build output prior to executing build</li> 
+        <li><code>--destination</code>, <code>-des</code> - The directory to which the build output is written</li> 
+        <li><code>--development</code>, <code>-dev</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--run</code>, <code>-r</code> - Enables automatically running builds with the native packager</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app publish [options] [theme|locale|build]... [environment]</code></pre> 
+       <h2 id="sencha_app_refresh">sencha app refresh</h2> 
+       <p>This command regenerates the metadata file containing “bootstrap” data for the dynamic loader and class system.</p> 
+       <p>This must be done any time a class is added, renamed or removed.</p> 
+       <p>This command can also update any required packages if you have added package requirements to your application. To refresh required packages (which may download those packages from remote repositories), do this:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app refresh --packages</code></pre> 
+       <p>The additional parameters are seldom used.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--base-path</code>, <code>-ba</code> - The base path to use to calculate relative path information. Defaults to index.html directory</li> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--development</code>, <code>-d</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--metadata-file</code>, <code>-m</code> - The output filename for the js file containing the manifest metadata</li> 
+        <li><code>--packages</code>, <code>-pac</code> - Update required packages from remote repositories</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app refresh [options] [theme|locale|build]... [metadata-file]</code></pre> 
+       <h2 id="sencha_app_run">sencha app run</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--archive</code>, <code>-a</code> - The directory path where all previous builds were stored.</li> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ app.json set to use for the build</li> 
+        <li><code>--clean</code>, <code>-c</code> - Remove previous build output prior to executing build</li> 
+        <li><code>--destination</code>, <code>-des</code> - The directory to which the build output is written</li> 
+        <li><code>--development</code>, <code>-dev</code> - Sets the build environment to: development</li> 
+        <li><code>--environment</code>, <code>-e</code> - The build environment, either ‘development’, ‘testing’ or ‘production’</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the app.locale setting to use for the build</li> 
+        <li><code>--production</code>, <code>-pr</code> - Sets the build environment to: production</li> 
+        <li><code>--run</code>, <code>-r</code> - Enables automatically running builds with the native packager</li> 
+        <li><code>--testing</code>, <code>-te</code> - Sets the build environment to: testing</li> 
+        <li><code>--theme</code>, <code>-th</code> - Selects the app.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app run [options] [theme|locale|build]... [environment]</code></pre> 
+       <h2 id="sencha_app_upgrade">sencha app upgrade</h2> 
+       <p>This command upgrades the current application (based on current directory) to a specified new framework.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade /path/to/sdk</code></pre> 
+       <p>To download and extract an appropriate framework from the Sencha package repository, the framework may also be specified by name:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade -ext</code></pre> 
+       <p>or by name and version, separated by an ‘@’ character:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade -ext@5.0.0.647</code></pre> 
+       <p>NOTE: This will upgrade the framework used by the current application in the current workspace. This will effect any other applications in this workspace using the same framework (i.e., “ext” or “touch”).</p> 
+       <p>To upgrade just the generate scaffolding of your application to a new version of Sencha Cmd and not the framework in use, either omit the path to the framework:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade</code></pre> 
+       <p>or use the –noframework option:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade --noframework</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--backup</code>, <code>-b</code> - Make a backup of application before upgrade</li> 
+        <li><code>--noappjs</code>, <code>-noa</code> - Disable upgrade of app.js</li> 
+        <li><code>--noframework</code>, <code>-nof</code> - Upgrade only the Sencha Cmd scaffolding and not the SDK</li> 
+        <li><code>--path</code>, <code>-pa</code> - The path to the framework to which to upgrade</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app upgrade [options] [path]</code></pre> 
+       <h2 id="sencha_app_watch">sencha app watch</h2> 
+       <p>This command watches the current application’s source code for changes and and rebuild the necessary outputs to support “dev mode”.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app watch</code></pre> 
+       <p>This will run an initial pass over the ant targets specified by the build.trigger.targets ant property. During this pass, the compiler will be instrumented to capture the files used as inputs for the build (JavaScript, Sass and page resources).</p> 
+       <p>A subset of Ant build targets will be re-triggered each time a file in one if the directories being monitored is created, deleted, or modified. </p> 
+       <p>A web server is automatically started and hosts the application at the default port of 1841.</p> 
+       <p>The high-level logic of the watch process is implemented in Ant. For details, see <code>&quot;.sencha/app/watch-impl.xml.&quot;</code>.</p> 
+       <p>For information regarding the set of available Ant properties that control the the watch process, see <code>&quot;.sencha/app/defaults.properties&quot;</code>.</p> 
+       <p>Integration with Sencha Inspector can be enabled by using the -i or –inspector switch:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app watch --inspector</code></pre> 
+       <p>This will add the necessary code to the application in order to connect with Sencha Inspector using the default address (<a href="../../../../localhost_3A1839/)">http://localhost:1839/)</a>.</p> 
+       <p>The default address can be configured via the inspector.address property on ${cmd.dir}/sencha.cfg, the current user configuration file (~/.sencha/cmd/sencha.cfg) or using the config command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha config --prop inspector.address=http://server:port/ \
+    then \
+    app watch --inspector</code></pre> 
+       <p>For information about the integration process with Sencha Inspector see: <a href="../../../tools/sencha_inspector/default.htm">http://docs.sencha.com/tools/sencha_inspector/</a></p> 
+       <p>If a web.xml file is present on the application root, this command can try to use it to establish the context of a J2EE application by using the -j, –j2ee switch.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app watch --j2ee</code></pre> 
+       <p>It is important to note that this command will only work if all dependencies of the J2EE application are already in the classpath as Sencha Cmd does not include them during the install process. (e.g. servlet-api.jar).</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--fashion</code>, <code>-f</code> - Enable Fashion during the watch session</li> 
+        <li><code>--inspector</code>, <code>-i</code> - Enable Sencha Inspector during the watch session</li> 
+        <li><code>--j2ee</code>, <code>-j</code> - Use a web.xml file in the server root as context of a J2EE app.</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha app watch [options] [theme|locale|build]...</code></pre> 
+       <h2 id="sencha_audit">sencha audit</h2> 
+       <p>This command scans the local file system starting at the current directory and reports on the instances of Ext JS and their license.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha audit</code></pre> 
+       <p>This searches for folders containing “ext-all.js” and the license shipped with the product. Versions prior to 4.0.2 did not contain the license text in this file but did ship with a separate “license.txt” file. If these files have not been preserved then this report may be incomplete.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha audit</code></pre> 
+       <h2 id="sencha_build">sencha build</h2> 
+       <p>This command is used to execute a legacy JSB-based build.</p> 
+       <p><strong>NOTE</strong> - Sencha Cmd applications use <code>sencha app build</code> instead of this command.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--deploy-dir</code>, <code>-d</code> - The directory into which the all-classes.js file will be generated</li> 
+        <li><code>--nocompress</code>, <code>-n</code> - Disable compression for this build</li> 
+        <li><code>--project-file</code>, <code>-p</code> - The jsb that contains all your project files</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha build [options]</code></pre> 
+       <h2 id="sencha_compile">sencha compile</h2> 
+       <p>This command category provides JavaScript compilation commands. The <code>compile</code> category maintains compilation state across its sub-commands so using <code>and</code> to connect sub-commands can provide significant time savings compared to making repeated calls.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--classpath</code>, <code>-cl</code> - Add one or more folders to the classpath</li> 
+        <li><code>--debug</code>, <code>-d</code> - Enable the debug option for the js directive parser</li> 
+        <li><code>--ignore</code>, <code>-ig</code> - Ignore files in the classpath with names containing substrings (comma separated)</li> 
+        <li><code>--options</code>, <code>-o</code> - Sets options for the js directive parser (name:value,…)</li> 
+        <li><code>--prefix</code>, <code>-p</code> - The file with header or license prefix to remove from source files</li> 
+        <li><code>--temp-directory</code>, <code>-t</code> - controls the temp directory root location used by page and app commands</li> 
+       </ul> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>concatenate</code> - Produce output file by concatenating the files in the current set</li> 
+        <li><code>exclude</code> - Exclude files from the current set matching given criteria</li> 
+        <li><code>explain</code> - Resolves a reference chain (if available) between two source files</li> 
+        <li><code>include</code> - Add files to the current set matching given criteria</li> 
+        <li><code>intersect</code> - Intersect specified saved sets to produce a new set</li> 
+        <li><code>metadata</code> - Generates information about the classes and files in the classpath</li> 
+        <li><code>page</code> - Compiles the content of a page of markup (html, jsp, php, etc)</li> 
+        <li><code>pop</code> - Pops the current set back to the most recently pushed set from the stack</li> 
+        <li><code>push</code> - Pushes the current set on to a stack for later pop to restore the current set</li> 
+        <li><code>require</code> - Adds external file to file reference information to the js compile context</li> 
+        <li><code>restore</code> - Restores the enabled set of files from a previously saved set</li> 
+        <li><code>save</code> - Stores the currently enabled set of files by a given name</li> 
+        <li><code>show-ignored</code> - Shows any files being ignored in the classpath</li> 
+        <li><code>union</code> - Similar to include but selects only the files that match the given criteria</li> 
+       </ul> 
+       <h2 id="sencha_compile_concatenate">sencha compile concatenate</h2> 
+       <p>This command writes the current set to the specified output file.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--append</code>, <code>-a</code> - Appends output to output file instead of overwriting output file</li> 
+        <li><code>--beautify</code>, <code>-b</code> - enables / disables beautification of sources after compilation</li> 
+        <li><code>--closure</code>, <code>-cl</code> - Compress generate file using Closure Compiler</li> 
+        <li><code>--compress</code>, <code>-co</code> - Compress generated file using default compressor (YUI)</li> 
+        <li><code>--output-file</code>, <code>-ou</code> - The output file name (or $ for stdout)</li> 
+        <li><code>--remove-text-references</code>, <code>-remove-t</code> - enables / disables reference optimization by converting string classnames to static references</li> 
+        <li><code>--strip-comments</code>, <code>-st</code> - Strip comments from the generated file</li> 
+        <li><code>--yui</code>, <code>-y</code> - Compress generated file using YUI Compressor</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile concatenate [options] output-file</code></pre> 
+       <h2 id="sencha_compile_exclude">sencha compile exclude</h2> 
+       <p>This command removes from the current set any files matching the criteria.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--all</code>, <code>-a</code> - Select all files in global cache (ignores other options)</li> 
+        <li><code>--class</code>, <code>-c</code> - Selects files according to the specified class names</li> 
+        <li><code>--file</code>, <code>-f</code> - Selects the specified file names (supports glob patterns)</li> 
+        <li><code>--include-uses</code>, <code>-i</code> - Enables / disables inclusion of ‘uses’ dependencies in transitive scan (-recursive)</li> 
+        <li><code>--namespace</code>, <code>-na</code> - Selects all files with class definitions in the given namespace(s)</li> 
+        <li><code>--not</code>, <code>-no</code> - Inverts the matching criteria</li> 
+        <li><code>--recursive</code>, <code>-r</code> - Enable traversal of dependency relationships when selecting files</li> 
+        <li><code>--set</code>, <code>-s</code> - Selects files from on a previously saved set (ignores other options)</li> 
+        <li><code>--tag</code>, <code>-t</code> - Selects all files with the specified ‘//@tag’ values</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile exclude [options]</code></pre> 
+       <h2 id="sencha_compile_explain">sencha compile explain</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--start-name</code>, <code>-s</code> - Sets the name of the symbol to use as the starting point of the reference path.</li> 
+        <li><code>--target-name</code>, <code>-t</code> - Sets the name of the symbol to use as the end point of the reference path.</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile explain [options] startName \
+                                 targetName</code></pre> 
+       <h2 id="sencha_compile_include">sencha compile include</h2> 
+       <p>This command adds the files matching the criteria to the current set.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--all</code>, <code>-a</code> - Select all files in global cache (ignores other options)</li> 
+        <li><code>--class</code>, <code>-c</code> - Selects files according to the specified class names</li> 
+        <li><code>--file</code>, <code>-f</code> - Selects the specified file names (supports glob patterns)</li> 
+        <li><code>--include-uses</code>, <code>-i</code> - Enables / disables inclusion of ‘uses’ dependencies in transitive scan (-recursive)</li> 
+        <li><code>--namespace</code>, <code>-na</code> - Selects all files with class definitions in the given namespace(s)</li> 
+        <li><code>--not</code>, <code>-no</code> - Inverts the matching criteria</li> 
+        <li><code>--recursive</code>, <code>-r</code> - Enable traversal of dependency relationships when selecting files</li> 
+        <li><code>--set</code>, <code>-s</code> - Selects files from on a previously saved set (ignores other options)</li> 
+        <li><code>--tag</code>, <code>-t</code> - Selects all files with the specified ‘//@tag’ values</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile include [options]</code></pre> 
+       <h2 id="sencha_compile_intersect">sencha compile intersect</h2> 
+       <p>This command produces as in the current set the files that are contained in all of the specified input sets. Alternatively, this command can include files that are present in a certain minimum number of sets.</p> 
+       <p>This command only operates on saved sets (unlike most other set operations).</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--min-match</code>, <code>-m</code> - The minimum number of sets containing a file to cause a match (-1 = all)</li> 
+        <li><code>--name</code>, <code>-n</code> - The name by which to save the intersection as a set</li> 
+        <li><code>--sets</code>, <code>-s</code> - The sets to include in the intersection</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile intersect [options]</code></pre> 
+       <h2 id="sencha_compile_metadata">sencha compile metadata</h2> 
+       <p>This command generates various forms of metadata extracted from the current set of files. This data can be exported in various formats (e.g., JSON or JSONP).</p> 
+       <h3 id="Options">Options</h3> 
+       <h4 id="Data_Type">Data Type</h4> 
+       <p>Choose one of the following options</p> 
+       <ul> 
+        <li><code>--alias</code>, <code>-ali</code> - Generate class name to alias information</li> 
+        <li><code>--alternates</code>, <code>-alt</code> - Generate class alternate name information</li> 
+        <li><code>--definitions</code>, <code>-d</code> - Generate symbol information</li> 
+        <li><code>--filenames</code>, <code>-f</code> - Generate source file name information</li> 
+        <li><code>--loader-paths</code>, <code>-l</code> - Generate dynamic loader path information</li> 
+        <li><code>--manifest</code>, <code>-m</code> - Generate a class definition manifest file</li> 
+        <li><code>--packages</code>, <code>-p</code> - Generate the list of required packages</li> 
+       </ul> 
+       <h4 id="Format">Format</h4> 
+       <p>Choose one of the following options</p> 
+       <ul> 
+        <li><code>--json</code>, <code>-json</code> - Generate data in JSON format</li> 
+        <li><code>--jsonp</code>, <code>-jsonp</code> - Generate data in JSONP format using the given function</li> 
+        <li><code>--tpl</code>, <code>-t</code> - The line template for generating filenames as text (e.g. <script src="{0}"></script>)</li> 
+       </ul> 
+       <h4 id="Misc">Misc</h4> 
+       <ul> 
+        <li><code>--append</code>, <code>-ap</code> - Appends output to output file instead of overwriting output file</li> 
+        <li><code>--base-path</code>, <code>-ba</code> - Set the base path for relative path references</li> 
+        <li><code>--boot-relative</code>, <code>-bo</code> - Indicates paths are relative to the bootstrap file</li> 
+        <li><code>--exclude-disabled</code>, <code>-e</code> - Indicates only enabled js source files should be processed</li> 
+        <li><code>--info-type</code>, <code>-i</code> - Selects the info type to operate on for this metadata command. Supported Values: 
+         <ul> 
+          <li>Alias : Class name to alias information</li> 
+          <li>Alternates : Alternate class name information</li> 
+          <li>Filenames : File name information for currently selected source files</li> 
+          <li>LoaderPaths : Path configurations for the dynamic loader (Ext.Loader)</li> 
+          <li>Manifest : Class definition manifest information</li> 
+          <li>Definitions : Symbol information</li> 
+          <li>Packages : Required packages and produces package name / version info</li> 
+          <li>LoadOrder : Load order metadata for the class Loader</li> 
+          <li>PackageManifest : Manifest of all package requirements</li> 
+          <li>AppManifest : App manifest to be consumed by the v5 microloader</li> 
+          <li>Dependencies : File to file dependency data</li> 
+         </ul></li> 
+        <li><p><code>--output-file</code>, <code>-o</code> - The output file name (or $ for stdout)</p></li> 
+        <li><code>--separator</code>, <code>-s</code> - The delimiter character used to separate multiple templates</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile metadata [options]</code></pre> 
+       <h2 id="sencha_compile_page">sencha compile page</h2> 
+       <p>This command processes a markup file as input and generates an output file with certain sections rewritten.</p> 
+       <p>If the <code>-name</code> option is specified, the dependency graph of all required files is saved as a file set with that name (see also the <code>save</code> command).</p> 
+       <p>If the <code>-name</code> option is not specified, all required files are instead written to the “all-classes.js” file.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--append</code>, <code>-ap</code> - Appends output to output file instead of overwriting output file</li> 
+        <li><code>--beautify</code>, <code>-b</code> - enables / disables beautification of sources after compilation</li> 
+        <li><code>--classes-file</code>, <code>-cla</code> - the name of the js file containing the concatenated output</li> 
+        <li><code>--closure</code>, <code>-clo</code> - Compress generate file using Closure Compiler</li> 
+        <li><code>--compress</code>, <code>-co</code> - Compress generated file using default compressor (YUI)</li> 
+        <li><code>--input-file</code>, <code>-i</code> - the html page to process</li> 
+        <li><code>--name</code>, <code>-n</code> - sets a reference name for the page</li> 
+        <li><code>--output-page</code>, <code>-ou</code> - the output html page</li> 
+        <li><code>--remove-text-references</code>, <code>-remove-t</code> - enables / disables reference optimization by converting string classnames to static references</li> 
+        <li><code>--scripts</code>, <code>-sc</code> - inject the given script path into the generated markup ahead of the all classes file</li> 
+        <li><code>--strip-comments</code>, <code>-str</code> - Strip comments from the generated file</li> 
+        <li><code>--yui</code>, <code>-y</code> - Compress generated file using YUI Compressor</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile page [options] output-page</code></pre> 
+       <h2 id="sencha_compile_pop">sencha compile pop</h2> 
+       <p>This command restores the current set of files from the “stack”. This state was previously put on the “stack” using the <code>push</code> command.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile ... \
+            and push \
+            and ... \
+            and pop
+            and ...</code></pre> 
+       <p>Between the <code>push</code> and <code>pop</code> commands the current file set can be adjusted as needed and then restored for subsequent commands.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile pop</code></pre> 
+       <h2 id="sencha_compile_push">sencha compile push</h2> 
+       <p>This command saves the current set of files on a “stack” to easily save and restore state.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile ... \
+            and push \
+            and ... \
+            and pop
+            and ...</code></pre> 
+       <p>Between the <code>push</code> and <code>pop</code> commands the current file set can be adjusted as needed and then restored for subsequent commands.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile push</code></pre> 
+       <h2 id="sencha_compile_require">sencha compile require</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--allow-unmet-dependencies</code>, <code>-a</code> - Allows this requirement to produce no resulting file-to-file dependencies</li> 
+        <li><code>--file-name</code>, <code>-f</code> - Indicates that the name specified by the -source argument is a single file path.</li> 
+        <li><code>--requires</code>, <code>-r</code> - The name being required by the files denoted by the -source argument.</li> 
+        <li><code>--source-name</code>, <code>-so</code> - The set of files (class, @tag, or file) on which to add the requirement.</li> 
+        <li><code>--uses</code>, <code>-u</code> - Indicates that this reference is a ‘uses’ level reference.</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile require [options]</code></pre> 
+       <h2 id="sencha_compile_restore">sencha compile restore</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile restore String</code></pre> 
+       <h2 id="sencha_compile_save">sencha compile save</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile save String</code></pre> 
+       <h2 id="sencha_compile_show_ignored">sencha compile show-ignored</h2> 
+       <p>Displays a list of all files found in the <code>classpath</code> but matching an <code>-ignore</code> criteria.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile show-ignored</code></pre> 
+       <h2 id="sencha_compile_union">sencha compile union</h2> 
+       <p>This command adds files matching the criteria to the current set. This is similar to the <code>include</code> command except that this command first removes all files from the current set. In other words, this command makes the current set equal to only those files that match the criteria.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--all</code>, <code>-a</code> - Select all files in global cache (ignores other options)</li> 
+        <li><code>--class</code>, <code>-c</code> - Selects files according to the specified class names</li> 
+        <li><code>--file</code>, <code>-f</code> - Selects the specified file names (supports glob patterns)</li> 
+        <li><code>--include-uses</code>, <code>-i</code> - Enables / disables inclusion of ‘uses’ dependencies in transitive scan (-recursive)</li> 
+        <li><code>--namespace</code>, <code>-na</code> - Selects all files with class definitions in the given namespace(s)</li> 
+        <li><code>--not</code>, <code>-no</code> - Inverts the matching criteria</li> 
+        <li><code>--recursive</code>, <code>-r</code> - Enable traversal of dependency relationships when selecting files</li> 
+        <li><code>--set</code>, <code>-s</code> - Selects files from on a previously saved set (ignores other options)</li> 
+        <li><code>--tag</code>, <code>-t</code> - Selects all files with the specified ‘//@tag’ values</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha compile union [options]</code></pre> 
+       <h2 id="sencha_config">sencha config</h2> 
+       <p>This command can be used to either set configuration options singly or load a configuration file to set multiple options.</p> 
+       <p>Because these configuration options are only held for the current execution of Sencha Cmd, you will almost always use <code>then</code> to chain commands that will now be executed with the modified configuration.</p> 
+       <p>For example, to change the theme of an Ext JS application for a build:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha config -prop app.theme=ext-theme-neptune then app build</code></pre> 
+       <p>Multiple properties can be loaded from a properties file:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha config -file neptune.properties then app build</code></pre> 
+       <p>The content of <code>&quot;neptune.properties&quot;</code> might be something like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>app.theme=ext-theme-neptune
+app.build.dir=${app.dir}/build/neptune</code></pre> 
+       <p>In this case, an alternative would be to set <code>app.dir</code> in the applications’s <code>&quot;sencha.cfg&quot;</code> file like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>app.build.dir=${app.dir}/build/${app.theme}</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--file</code>, <code>-f</code> - The properties file to load</li> 
+        <li><code>--prop</code>, <code>-p</code> - One or more property names and values to set</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha config [options]</code></pre> 
+       <h2 id="sencha_cordova">sencha cordova</h2> 
+       <p>This command will be deprecated in a future version of CMD. Please see information on setting up a multi-build via app.json instead of running these commands.</p> 
+       <p>Sencha Cmd works together with the Cordova CLI to package your application for native platforms.</p> 
+       <pre mode="javascript" theme="chrome"><code>// Initialize Cordova Support 
+sencha cordova init {APP_ID} {APP_NAME}
+
+// Build the application and attempt to run it on a Device or in the Emulator
+sencha app build -run native</code></pre> 
+       <p>For more information on using Sencha Cmd with Cordova, consult the guides found here:</p> 
+       <p><a href="../../../touch/2.3.0/#!/guide/cordova">http://docs.sencha.com/touch/2.3.0/#!/guide/cordova</a></p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>init</code> - Adds Cordova support to your application</li> 
+       </ul> 
+       <h2 id="sencha_cordova_init">sencha cordova init</h2> 
+       <p>This will add Cordova CLI support to your application. Cordova CLI support will allow for native application building locally for multiple platforms. </p> 
+       <pre mode="javascript" theme="chrome"><code>sencha cordova init {APP_ID} {APP_NAME}</code></pre> 
+       <p>{APP_ID} is optional and contains the Application ID used in the native app. This will default to foo.bar.{APP_NAME}</p> 
+       <p>{APP_NAME} is optional and contains the Application Name used in the native app. This will default to the name of your sencha touch application.</p> 
+       <p>For more information on using Sencha Cmd with Cordova, consult the guides found here:</p> 
+       <p><a href="../../../touch/2.3.0/#!/guide/cordova">http://docs.sencha.com/touch/2.3.0/#!/guide/cordova</a></p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha cordova init Object[]...</code></pre> 
+       <h2 id="sencha_diag">sencha diag</h2> 
+       <p>This command category allows you to perform diagnostic operations with Sencha Cmd, useful to debug problems during the execution of other commands.</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>export</code> - Generates a zip file that contains metadata about the build environment for diagnostic purposes</li> 
+        <li><code>show-props</code> - Show configuration and environment properties</li> 
+       </ul> 
+       <h2 id="sencha_diag_export">sencha diag export</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha diag export</code></pre> 
+       <h2 id="sencha_diag_show_props">sencha diag show-props</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha diag show-props</code></pre> 
+       <h2 id="sencha_framework">sencha framework</h2> 
+       <p>This command category allows you to manage frameworks in the current workspace.</p> 
+       <p>Framework entries are defined on workspace.json in the “frameworks” property:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;frameworks&quot;: {
+    &quot;ext&quot;: &quot;ext&quot;,
+    &quot;ext5&quot;: {
+        &quot;package&quot;: &quot;ext@5&quot;,
+        &quot;path&quot;: &quot;ext5&quot;
+    },
+    &quot;ext6&quot;: {
+        &quot;source&quot;: &quot;../frameworks/ext-6.0.0&quot;,
+        &quot;path&quot;: &quot;ext-6&quot;
+    },
+    &quot;touch242&quot;: &quot;../touch-2.4.2&quot;
+}</code></pre> 
+       <p>Frameworks entries can be strings (e.g.: “/path/to/ext” or “<a href="mailto:ext@n.n.n&quot;">ext@n.n.n&quot;</a>) or configuration objects that declare either ”package“ or ”source“ and optionally ”path“. If no ”path“ is defined, the framework key (e.g.: ”ext“, ”ext6&quot; will be used as path).</p> 
+       <p>Framework entry keys must start with “ext” or “touch”. </p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>add</code> - Add a framework to the current workspace</li> 
+        <li><code>list</code> - List frameworks available in the current workspace</li> 
+        <li><code>remove</code> - Remove a framework from the current workspace</li> 
+        <li><code>upgrade</code> - Upgrades a framework defined on workspace.json and upgrades the applications that use it</li> 
+       </ul> 
+       <h2 id="sencha_framework_add">sencha framework add</h2> 
+       <p>This command allows the addition of a framework entry to the current workspace.</p> 
+       <p>A path can be passed as argument:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework add /path/to/ext</code></pre> 
+       <p>Sencha Cmd will determine the framework’s name and version and use them to generate a key (e.g: “ext6” or “ext501”), by default this key will also be used as the name of a directory inside the workspace where the framework will be copied to.</p> 
+       <p>A package name can be passed as argument:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework add ext@n[.n[.n[.n]]]</code></pre> 
+       <p>if the package does not already exist in the workspace repository, it will be downloaded and extracted to the workspace packages directory.</p> 
+       <p>Since package names can sometimes be ambiguous (for example when a directory named “ext” exists a call to <code>sencha framework add ext</code> is made) the –package switch can be used to force the first argument to be treated as a package name:</p> 
+       <pre mode="javascript" theme="chrome"><code># If a directory called &quot;ext&quot; exists it will be added as a framework entry
+sencha framework add ext
+
+# It will treat &quot;ext&quot; as package name and act accordingly 
+sencha framework add --package ext</code></pre> 
+       <p>Optionally, the path to which the framework will be copied can be passed as second argument:</p> 
+       <pre mode="javascript" theme="chrome"><code># Will copy the framework to ${workspace.dir}/ext
+sencha framework add /path/to/ext ext
+
+# Will copy the framework to ${workspace.dir}/ext5
+sencha framework add /path/to/ext-5 ext5</code></pre> 
+       <p>A third argument can be used to specify the framework key:</p> 
+       <pre mode="javascript" theme="chrome"><code># Will add a framework entry with &quot;ext-custom&quot; as key
+sencha framework add /path/to/ext my_ext ext-custom</code></pre> 
+       <p>The framework key must begin with “ext” or “touch”.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--package</code>, <code>-p</code> - Treat the source|package argument as a package name even if a directory with the same name exists</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework add [options] [source|package] [path] [key]</code></pre> 
+       <h2 id="sencha_framework_list">sencha framework list</h2> 
+       <p>This commands lists all frameworks declared in the current namespace.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework list</code></pre> 
+       <h2 id="sencha_framework_remove">sencha framework remove</h2> 
+       <p>This command allows you to remove a framework entry from the current workspace.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework remove ext6</code></pre> 
+       <p>Sencha Cmd will determine if the framework can be removed (based on whether it is used by apps declared in the workspace or not).</p> 
+       <p>If the framework sources are located outside the workspace, the files will not be removed, only the entry in workspace.json.</p> 
+       <p>If you want to remove a framework entry regardless of its usage you can use the –force switch:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework remove --force ext6</code></pre> 
+       <p>If you want to just remove the framework entry and keep its files (if inside the current workspace) use the –soft switch:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework remove --soft ext6</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--force</code>, <code>-f</code> - Force remove framework entry</li> 
+        <li><code>--soft</code>, <code>-so</code> - Don’t remove the framework from the filesystem (only for frameworks stored inside the workspace)</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework remove [options] [key]</code></pre> 
+       <h2 id="sencha_framework_upgrade">sencha framework upgrade</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha framework upgrade [key] [source|package] [path]</code></pre> 
+       <h2 id="sencha_fs">sencha fs</h2> 
+       <p>This category provides commands for manipulating files.</p> 
+       <h3 id="Categories">Categories</h3> 
+       <ul> 
+        <li><code>mirror</code> - Commands for making mirror images for RTL languages</li> 
+       </ul> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>concatenate</code> - Concatenate multiple files into one</li> 
+        <li><code>difference</code> - Generates deltas between two files in JSON format</li> 
+        <li><code>minify</code> - Minify a JavaScript file</li> 
+        <li><code>slice</code> - Generates image slices from a given image directed by a JSON manifest</li> 
+       </ul> 
+       <h2 id="sencha_fs_concatenate">sencha fs concatenate</h2> 
+       <p>This command combines multiple input files into a single output file.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs concat -to=output.js input1.js input2.js input3.js</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--from</code>, <code>-f</code> - List of files to concatenate, comma-separated</li> 
+        <li><code>--to</code>, <code>-t</code> - The destination file to write concatenated content</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs concatenate [options] files...</code></pre> 
+       <h2 id="sencha_fs_difference">sencha fs difference</h2> 
+       <p>This command produces a delta (or “patch”) file between input files.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs diff -from=base.js -to=modified.js -delta=patch</code></pre> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs difference</code></pre> 
+       <h2 id="sencha_fs_minify">sencha fs minify</h2> 
+       <p>This command produced minified files using various back-end compressors.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs minify -yui -from=in.js -to=out.js
+
+sencha fs minify -closure -from=in.js -to=out.js</code></pre> 
+       <p>The legacy syntax is also supported:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs minify -compressor=yuicompressor -from=in.js -to=out.js
+
+sencha fs minify -compressor=closurecompiler -from=in.js -to=out.js</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--closure</code>, <code>-cl</code> - Enable the Google Closure Compiler</li> 
+        <li><code>--from</code>, <code>-f</code> - The input js file to minify</li> 
+        <li><code>--generate-source-map</code>, <code>-g</code> - Enable SourceMap generation (only when used in conjunction with the closure compiler)</li> 
+        <li><code>--to</code>, <code>-t</code> - The destination filename for minified output.</li> 
+        <li><code>--yui</code>, <code>-y</code> - Enable the YUI Compressor</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs minify [options]</code></pre> 
+       <h2 id="sencha_fs_mirror">sencha fs mirror</h2> 
+       <p>Commands for create horizontal mirror of images and sprites for RTL locales.</p> 
+       <p>This family of commands is intended for automated production of “derivative” images based on hand maintained and designed image assets authored in the more familiar, left-to-right (LTR) form.</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>all</code> - Horizontally flip a folder of images and sprites based on naming convention</li> 
+        <li><code>image</code> - Horizontally flip an image</li> 
+        <li><code>sprite</code> - Horizontally flip a “sprite” (multi-cell image)</li> 
+       </ul> 
+       <h2 id="sencha_fs_mirror_all">sencha fs mirror all</h2> 
+       <p>This command creates horizontal mirror images of a folder of images and/or sprites. This command requires some name consistency in order to differentiate output files from input files and the geometry of sprites.</p> 
+       <p>Sprites must have a name segment that looks like “4x3” to define its geometry. This is understood as “columns” x “rows” or, in this example, 4 columns and 3 rows.</p> 
+       <p>The following examples all fit this pattern:</p> 
+       <ul> 
+        <li>tools-2x12.png</li> 
+        <li>sprite_12x3.gif</li> 
+        <li>some-3x5-sprite.png</li> 
+       </ul> 
+       <p>The input files and output files are separated by a suffix that must be given. The output files will be produced from the input files applying the suffix. By default, the output files are written to the same folder as the input files. This can be changed by specifying “-out”.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror all -r -suffix=-rtl /path/to/images</code></pre> 
+       <p>The above command performs the following:</p> 
+       <ul> 
+        <li>Scans <code>&quot;/path/to/images&quot;</code> (and all sub folders due to <code>-r</code>) for images.</li> 
+        <li>Any image not ending in <code>&quot;-rtl&quot;</code> is considered an input file.</li> 
+        <li>Any input image with sprite geometry in its name has its cells flipped.</li> 
+        <li>Other input images are entirely flipped.</li> 
+        <li>The input files are written using their original name plus the suffix.</li> 
+        <li>Up-to-date checks are made but can be skipped by passing <code>-overwrite</code>.</li> 
+        <li>Files are written to <code>&quot;/path/to/images&quot;</code>.</li> 
+       </ul> 
+       <p>By passing the <code>-format</code> switch, the format of the output images can be set to be other than the same format as the original file. For example, one could convert PNG files to GIF by passing <code>-format=gif</code>. This does only basic image conversion and no advanced image processing. Simple color quantization can be enabled using <code>-quantize</code>.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror all all -format=gif -ext=png -quantize -out=/out/dir \
+     -suffix=-rtl /some/pngs</code></pre> 
+       <p>The above command will process all <code>&quot;png&quot;</code> images and will write out their <code>&quot;gif&quot;</code> versions (using color quantization) to a different folder.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--dry-run</code>, <code>-d</code> - When set no images will be saved but all normal work is still done</li> 
+        <li><code>--extensions</code>, <code>-e</code> - Comma-separated list of image extensions (default is “gif,png”)</li> 
+        <li><code>--format</code>, <code>-f</code> - The image format to write all output files (e.g., “-f=png”)</li> 
+        <li><code>--output-dir</code>, <code>-ou</code> - The output folder for generated images (defaults to input folder)</li> 
+        <li><code>--overwrite</code>, <code>-ov</code> - Disable up-to-date check and always generate output file</li> 
+        <li><code>--quantize</code>, <code>-q</code> - Enable basic color quantization (useful with -format=gif)</li> 
+        <li><code>--recurse</code>, <code>-r</code> - Process the input folder recursively (i.e., include sub-folders)</li> 
+        <li><code>--suffix</code>, <code>-s</code> - The suffix of output files (e.g., “-rtl”)</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror all [options] File</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>File</code> - The input folder to process</li> 
+       </ul> 
+       <h2 id="sencha_fs_mirror_image">sencha fs mirror image</h2> 
+       <p>This command create a horizontal mirror image of a given input file.</p> 
+       <p>For example</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror image foo.png foo-rtl.png</code></pre> 
+       <p>The above command creates <code>&quot;foo-rtl.png&quot;</code> from <code>&quot;foo.png&quot;</code>.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror image File \
+                       File</code></pre> 
+       <h2 id="sencha_fs_mirror_sprite">sencha fs mirror sprite</h2> 
+       <p>This command create a horizontal mirror image of the cells in a given sprite.</p> 
+       <p>For example</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror sprite -rows=2 -cols=4 sprite.png sprite-rtl.png</code></pre> 
+       <p>The above command horizontally flips each cell in the 2x4 sprite <code>&quot;sprite.png&quot;</code> and produces <code>&quot;sprite-rtl.png&quot;</code>.</p> 
+       <p><code>NOTE</code>: The number of rows and columns are required.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--columns</code>, <code>-c</code> - The number of columns in the sprite.</li> 
+        <li><code>--rows</code>, <code>-r</code> - The number of rows in the sprite.</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs mirror sprite [options] File \
+                                  File</code></pre> 
+       <h2 id="sencha_fs_slice">sencha fs slice</h2> 
+       <p>This command performs image slicing and manipulation driven by the contents of a JSON manifest file. The manifest file contains an array of image area definitions that further contain a set of “slices” to make.</p> 
+       <p>This file and the corresponding image are typically produced for a Theme as part of the theme package build. For details on this process, consult this guide:</p> 
+       <p><a href="../../../ext-js/4-2/#!/guide/command_slice">http://docs.sencha.com/ext-js/4-2/#!/guide/command_slice</a></p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--format</code>, <code>-f</code> - The image format to save - either “png” or “gif” (the default)</li> 
+        <li><code>--image</code>, <code>-i</code> - The image to slice</li> 
+        <li><code>--manifest</code>, <code>-m</code> - The slicer manifest (JSON) file</li> 
+        <li><code>--out-dir</code>, <code>-o</code> - The root folder to which sliced images are written</li> 
+        <li><code>--quantized</code>, <code>-q</code> - Enables image quantization (default is true)</li> 
+        <li><code>--tolerate-conflicts</code>, <code>-t</code> - Tolerate conflicts in slice manifest</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha fs slice [options]</code></pre> 
+       <h2 id="sencha_generate">sencha generate</h2> 
+       <p>This category contains code generators used to generate applications as well as add new classes to the application.</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>app</code> - Generates a starter application</li> 
+        <li><code>controller</code> - Generates a Controller for the current application</li> 
+        <li><code>form</code> - Generates a Form for the current application (Sencha Touch Specific)</li> 
+        <li><code>model</code> - Generates a Model for the current application</li> 
+        <li><code>package</code> - Generates a starter package</li> 
+        <li><code>profile</code> - Generates a Profile for the current application (Sencha Touch Specific)</li> 
+        <li><code>theme</code> - Generates a theme page for slice operations (Ext JS Specific)</li> 
+        <li><code>view</code> - Generates a View for the current application (Ext JS Specific)</li> 
+        <li><code>workspace</code> - Initializes a multi-app workspace</li> 
+       </ul> 
+       <h2 id="sencha_generate_app">sencha generate app</h2> 
+       <p>This command generates an empty application given a name and target folder.</p> 
+       <p>The application can be extended using other <code>sencha generate</code> commands (e.g., <code>sencha generate model</code>).</p> 
+       <p>Other application actions are provided in the <code>sencha app</code> category (e.g., <code>sencha app build</code>).</p> 
+       <p>Sencha Cmd can also automatically download and extract a framework by specifying the name of the framework as an argument:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate app -ext MyAppName ./MyAppPath</code></pre> 
+       <p>This will generate an application using the newest version available for the specified framework.</p> 
+       <p>For Ext JS 6, by default, this application will be a Universal Application. To override this and select a particular toolkit, you can use either of these variations:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate app -ext -classic MyAppName ./MyAppPath
+sencha generate app -ext -modern MyAppName ./MyAppPath</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--controller-name</code>, <code>-c</code> - The name of the default Controller</li> 
+        <li><code>--library</code>, <code>-l</code> - the pre-built library to use (core or all). Default: core</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the application to generate</li> 
+        <li><code>--path</code>, <code>-p</code> - The path for the generated application</li> 
+        <li><code>--refresh</code>, <code>-r</code> - Set to false to skip the “app refresh” of the generated app</li> 
+        <li><code>--starter</code>, <code>-s</code> - Overrides the default Starter App template directory</li> 
+        <li><code>--template</code>, <code>-te</code> - The name of the template to use</li> 
+        <li><code>--theme-name</code>, <code>-th</code> - The name of the default Theme</li> 
+        <li><code>--view-name</code>, <code>-v</code> - The name of the default View</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate app [options] name \
+                              path</code></pre> 
+       <h2 id="sencha_generate_controller">sencha generate controller</h2> 
+       <p>This command generates a new Controller and adds it to the current application.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--name</code>, <code>-n</code> - The name of the Controller to generate</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate controller [options] name</code></pre> 
+       <h2 id="sencha_generate_form">sencha generate form</h2> 
+       <p>This command generates a new form and adds it to the current application.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--fields</code>, <code>-f</code> - Comma separated list of “name:type” field pairs</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the Form to generate</li> 
+        <li><code>--xtype</code>, <code>-x</code> - The xtype for the form. Defaults to the lowercase form of the name.</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate form [options] name \
+                               fields \
+                               [xtype]</code></pre> 
+       <h2 id="sencha_generate_model">sencha generate model</h2> 
+       <p>This command generates a new Model class and adds it to the current application.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--base</code>, <code>-b</code> - The base class of the Model (default: Ext.data.Model)</li> 
+        <li><code>--fields</code>, <code>-f</code> - Comma separated list of “name:type” field pairs</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the Model</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate model [options] name \
+                                fields</code></pre> 
+       <h2 id="sencha_generate_package">sencha generate package</h2> 
+       <p>This command generates a new Sencha Cmd Package. A package is in many ways like an application in that it contains any of the following pieces:</p> 
+       <ul> 
+        <li>JavaScript source</li> 
+        <li>SASS styles</li> 
+        <li>Arbitrary resources</li> 
+       </ul> 
+       <p>All of these are integrated by a build process using <code>sencha package build</code>.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate package foo</code></pre> 
+       <p>If this command is run from an application directory, the package will be added automatically to the requires array in the <code>&quot;app.json&quot;</code> file. To avoid this use the <code>-require</code> switch:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate package -require foo</code></pre> 
+       <p>To use this package in other applications (or packages), you just add the name of the package to the requires array in the <code>&quot;app.json&quot;</code> or <code>&quot;package.json&quot;</code> file:</p> 
+       <pre mode="javascript" theme="chrome"><code>requires: [
+    'foo'
+]</code></pre> 
+       <p>All packages reside in the <code>&quot;./packages&quot;</code> folder of the workspace (which is often the same folder as your application).</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--extend</code>, <code>-e</code> - The theme (package) to extend from (For theme type packages on Ext JS 4.2+ only)</li> 
+        <li><code>--framework</code>, <code>-f</code> - The framework this package will use (i.e., “ext” or “touch”)</li> 
+        <li><code>--name</code>, <code>-name</code> - The name of the package to generate</li> 
+        <li><code>--namespace</code>, <code>-names</code> - The namespace of the package to generate</li> 
+        <li><code>--require</code>, <code>-r</code> - Whether to automatically add the generated package to the current app (for non-theme packages only)</li> 
+        <li><code>--theme</code>, <code>-th</code> - The theme (package) this package will use (i.e., “ext-theme-classic”, “ext-theme-crisp”, “ext-theme-neptune”, etc.)</li> 
+        <li><code>--toolkit</code>, <code>-to</code> - The toolkit this theme will use (For theme type packages on Ext JS 6.x+ only)</li> 
+        <li><code>--type</code>, <code>-ty</code> - The type of the package to generate (i.e., “code” or “theme”) Supported Values: 
+         <ul> 
+          <li>CODE : A library of code</li> 
+          <li>EXTENSION : An extension to Sencha Cmd</li> 
+          <li>FRAMEWORK : A framework</li> 
+          <li>THEME : A user interface theme or skin</li> 
+          <li>TEMPLATE : A library of one or more templates</li> 
+          <li>TOOLKIT : A library of components / widgets</li> 
+          <li>LOCALE : 本地化 overrides / styling</li> 
+          <li>OTHER : Unspecified type</li> 
+         </ul></li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate package [options] name</code></pre> 
+       <h2 id="sencha_generate_profile">sencha generate profile</h2> 
+       <p>This command generates a new Profile and adds it to the current application.</p> 
+       <p>NOTE: Sencha Touch only.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--name</code>, <code>-n</code> - The name of the Profile to generate</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate profile [options] name</code></pre> 
+       <h2 id="sencha_generate_theme">sencha generate theme</h2> 
+       <p>This command generates a new Theme. For Ext JS 4.1, themes are “owned” by an application. In Ext JS 4.2 and beyond, themes are Packages.</p> 
+       <p>In Ext JS 4.2, theme packages can extend other themes. By default, generated themes extend “ext-theme-classic”. This can be overridden using <code>--extend</code>.</p> 
+       <p>To generate a stand-alone Theme in Ext JS 4.2, follow these steps. Generate a workspace (with <code>&quot;ext&quot;</code> folder) using Ext JS 4.2 SDK unzipped on your system:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/ext-4.2.0 generate workspace MyWorkspace
+cd MyWorkspace</code></pre> 
+       <p>From inside the workspace, use the <code>&quot;ext&quot;</code> folder to generate the theme package:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha -sdk ext generate theme --extend ext-theme-neptune MyTheme</code></pre> 
+       <p>The above could equivalently have used the SDK used to create the workspace.</p> 
+       <p>The <code>-sdk</code> switch is used here to indicate the framework on which the theme is based. This is not needed if the command is run from an Ext JS application folder.</p> 
+       <p><code>NOTE:</code> Does not apply to Sencha Touch.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--extend</code>, <code>-e</code> - The name of the theme package to extend (Ext JS 4.2+ only)</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the Theme to generate</li> 
+        <li><code>--toolkit</code>, <code>-t</code> - The name of the toolkit this theme applies to (Ext JS 6.x+ only)</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate theme [options] name</code></pre> 
+       <h2 id="sencha_generate_view">sencha generate view</h2> 
+       <p>This command generates a new View class and adds it to the current application.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--base-class</code>, <code>-b</code> - Specifies the base class for the view (default: ‘Ext.panel.Panel’)</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the View to generate</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate view [options] name</code></pre> 
+       <h2 id="sencha_generate_workspace">sencha generate workspace</h2> 
+       <p>This command generates a workspace for managing shared code across pages or applications.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--force</code>, <code>-fo</code> - Forces re-extraction of framework into workspace.</li> 
+        <li><code>--path</code>, <code>-pa</code> - Sets the target path for the workspace</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate workspace [options] [path]</code></pre> 
+       <h2 id="sencha_help">sencha help</h2> 
+       <p>This command displays help for other commands.</p> 
+       <h3 id="Example">Example</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha help generate app</code></pre> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha help command...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>command</code> - The command path for which to display help (e.g., “generate app”)</li> 
+       </ul> 
+       <h2 id="sencha_js">sencha js</h2> 
+       <p>This command loads and executes the specified JavaScript source file or files.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha js file.js[,file2.js,...] [arg1 [arg2 ...] ]</code></pre> 
+       <h4 id="Files">Files</h4> 
+       <p>The first argument to this command is the file or files to execute. If there are multiple files, separate them with commas. In addition to the command line technique of specifying files, this command also recognizes the following directive:</p> 
+       <pre mode="javascript" theme="chrome"><code>//@require ../path/to/source.js</code></pre> 
+       <p>This form of <code>require</code> directive uses a relative path based on the file that contains the directive. Any given file will only be executed once, in much the same manner as the compiler.</p> 
+       <h4 id="Context">Context</h4> 
+       <p>A primitive <code>console</code> object with the following methods is provided to the JavaScript execution context:</p> 
+       <ul> 
+        <li><code>log</code></li> 
+        <li><code>debug</code></li> 
+        <li><code>info</code></li> 
+        <li><code>warn</code></li> 
+        <li><code>error</code></li> 
+        <li><code>dir</code></li> 
+        <li><code>trace</code></li> 
+        <li><code>time</code> / <code>timeEnd</code></li> 
+       </ul> 
+       <p>Arguments beyond the first can be accessed in JavaScript with the global <code>$args</code> array. The current directory can be accessed with <code>$curdir</code>.</p> 
+       <p>The Sencha Cmd object can be accessed with <code>sencha</code>. This object has a <code>version</code> property and a <code>dispatch</code> method.</p> 
+       <pre mode="javascript" theme="chrome"><code>if (sencha.version.compareTo('3.0.0.210') &lt; 0) {
+    console.warn('Some message');
+} else {
+    // dispatch any command provided by Cmd:
+    sencha.dispatch([ 'app', 'build', $args[1] ]);
+}</code></pre> 
+       <p>Beyond the above, the executing JavaScript has full access to the JRE using the <code>importPackage</code> and <code>importClass</code> methods.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>importPackage(java.io);
+
+var f = new File('somefile.txt');  // create a java.io.File object</code></pre> 
+       <p>For further details on the JavaScript engine provided by Java, consult the Java Scripting guide:</p> 
+       <p><a href="../../../../docs.oracle.com/javase/6/docs/technotes/guides/scripting/programmer_guide/index.html">http://docs.oracle.com/javase/6/docs/technotes/guides/scripting/programmer_guide/index.html</a></p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha js String \
+          String[]...</code></pre> 
+       <h2 id="sencha_manager">sencha manager</h2> 
+       <p>This category provides commands for interacting with Sencha Web Application Manager</p> 
+       <h3 id="Categories">Categories</h3> 
+       <ul> 
+        <li><code>version</code> - Commands for managing application versions.</li> 
+       </ul> 
+       <h2 id="sencha_manager_version">sencha manager version</h2> 
+       <p>This category provides commands to manage application versions</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>create</code> - Create a new application version in Sencha Web Application Manager.</li> 
+       </ul> 
+       <h2 id="sencha_manager_version_create">sencha manager version create</h2> 
+       <p>Provisions a new version of a specified application in Sencha Web Application Manager.</p> 
+       <p>This command accepts a path to either a zip file or a directory, and will publish the content to Sencha Web Application Manager as a new application version.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--api-key</code>, <code>-a</code> - The API key used to communicate with the Sencha Web Application Manager server.</li> 
+        <li><code>--file</code>, <code>-f</code> - Path to a zip file or folder to publish as a new application version.</li> 
+        <li><code>--host</code>, <code>-h</code> - The host URL for the Sencha Web Application Manager server.</li> 
+        <li><code>--id</code>, <code>-i</code> - The id of the Sencha Web Application Manager application.</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the version to create.</li> 
+        <li><code>--secret</code>, <code>-s</code> - The shared secred used to encrypt traffic to the Sencha Web Application Manager server.</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha manager version create [options]</code></pre> 
+       <h2 id="sencha_manifest">sencha manifest</h2> 
+       <p>This category provides commands to manage application manifests.</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>create</code> - Generate a list of metadata for all classes found in the given directories</li> 
+       </ul> 
+       <h2 id="sencha_manifest_create">sencha manifest create</h2> 
+       <p>This command generates a list of metadata for all classes.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--output-path</code>, <code>-o</code> - The file path to write the results to in JSON format.</li> 
+        <li><code>--path</code>, <code>-p</code> - The directory path(s) that contains all classes</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha manifest create [options] output-path</code></pre> 
+       <h2 id="sencha_package">sencha package</h2> 
+       <p>These commands manage packages in the local repository.</p> 
+       <p>These commands are not typically used directly because application requirements are automatically used by <code>sencha app build</code> and <code>sencha app refresh --packages</code> to handle these details.</p> 
+       <h4 id="Using_Packages">Using Packages</h4> 
+       <p>The most common commands needed to use packages are those that connect your local package repository to remote repositories. By default, the local repo has one remote repository defined that points at Sencha’s package repository.</p> 
+       <p>To add, remove or display these connections see:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha help package repo</code></pre> 
+       <h4 id="Authoring_Packages">Authoring Packages</h4> 
+       <p>When authoring packages for others to use in their applications, however, these commands are involved. In particular, you must first initialize your local package repository. This is because the local repository is automatically initialized “anonymously”. In this state, the local repository can only be used to retrieve and cache other packages. To create and publish packages, the local repository must be initialized with a name and an optional email address.</p> 
+       <p>This name is not required to be globally unique, but it is a good idea to use a name that is unique and meaningful as a package author.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository init -name &quot;My Company, Inc.&quot;
+
+sencha repository init -name mySenchaForumId</code></pre> 
+       <p>For details see:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha help repository init</code></pre> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>add</code> - Adds a package file (.pkg) to the local repository</li> 
+        <li><code>build</code> - Builds the current package</li> 
+        <li><code>extract</code> - Extracts the contents of a package to an output folder</li> 
+        <li><code>get</code> - Get a package from a remote repository</li> 
+        <li><code>install</code> - Installs a Sencha Cmd extension package</li> 
+        <li><code>list</code> - Lists packages in the repository</li> 
+        <li><code>remove</code> - Removes a package from the local repository</li> 
+        <li><code>upgrade</code> - Upgrades the current package</li> 
+       </ul> 
+       <h2 id="sencha_package_add">sencha package add</h2> 
+       <p>Adds a new package file (<code>&quot;*.pkg&quot;</code>) to the local repository. These packages will be signed automatically if their <code>creator</code> property matches the <code>name</code> associated with the local repository.</p> 
+       <p>Once a package is added to the local repository, any repository that points to this repository as a remote repository will be able to download the package.</p> 
+       <p>The <code>sencha package build</code> process generates an appropriate <code>&quot;.pkg&quot;</code> file in the <code>workspace.build.dir</code>.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package add pkgFile</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>pkgFile</code> - The path to the package file (e.g., path/file.pkg)</li> 
+       </ul> 
+       <h2 id="sencha_package_build">sencha package build</h2> 
+       <p>This command invokes the build process for the current package. Similar to an application and <code>sencha app build</code>, this command builds the current package (as defined by the current folder).</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package build</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--build</code>, <code>-build</code> - Selects the name of the build specified in the ‘builds’ package.json set to use for the build</li> 
+        <li><code>--clean</code>, <code>-c</code> - Remove previous build output prior to executing build</li> 
+        <li><code>--locale</code>, <code>-l</code> - Selects the package.locale setting to use for the build</li> 
+        <li><code>--theme</code>, <code>-t</code> - Selects the package.theme setting to use for the build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package build [options] [theme|locale|build]...</code></pre> 
+       <h2 id="sencha_package_extract">sencha package extract</h2> 
+       <p>This command extracts a package or packages from the repository. If necessary the packages will be downloaded from remote repositories and cached locally for future use.</p> 
+       <p><code>NOTE:</code> This is <code>not</code> typically executed manually but is handle automatically as part of the build process based on the “requires” found in <code>&quot;app.json&quot;</code> and/or <code>&quot;package.json&quot;</code>.</p> 
+       <p>To extract a package named “foo” at version “1.2” to a specified location:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package extract -todir=/some/path foo@1.2</code></pre> 
+       <p>This will create <code>&quot;/some/path/foo&quot;</code>. To recursively extract packages required by “foo”, you would do this:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package extract -recurse -todir=/some/path foo@1.2</code></pre> 
+       <p>When complete, “foo” and all of its required packages will reside in the folder specified.</p> 
+       <p><code>NOTE:</code> It is recommended to use <code>-todir</code> and allow the package name to be used as the immediate subdirectory of that folder. The <code>-outdir</code> option allows you to strip off this directory but prevents recursive extraction as a result.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--clean</code>, <code>-c</code> - Delete any files in the output folder before extracting</li> 
+        <li><code>--force</code>, <code>-f</code> - Ignore local copy and fetch from remote repository</li> 
+        <li><code>--outdir</code>, <code>-o</code> - The output folder for the extracted package contents</li> 
+        <li><code>--recurse</code>, <code>-r</code> - Also get all required packages recursively</li> 
+        <li><code>--todir</code>, <code>-t</code> - The output folder for the extracted package folder</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package extract [options] packages...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>packages</code> - The names/versions of the packages to extract</li> 
+       </ul> 
+       <h2 id="sencha_package_get">sencha package get</h2> 
+       <p>This command ensures that a specified package is locally available. This does <code>not</code> extract the package to a particular location, but rather, enables apps or other packages to get the package from the local repository (that is, without downloading it).</p> 
+       <p>For example, to ensure that <code>&quot;foo&quot;</code> and <code>&quot;bar&quot;</code> are available locally:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package get foo bar</code></pre> 
+       <p>To get all packages required by those specified packages:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package get -recursive foo bar</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--force</code>, <code>-f</code> - Ignore local copy and (re)fetch from remote repository</li> 
+        <li><code>--recurse</code>, <code>-r</code> - Also get all required packages recursively</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package get [options] packages...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>packages</code> - One or more packages/versions to fetch locally</li> 
+       </ul> 
+       <h2 id="sencha_package_install">sencha package install</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--clean</code>, <code>-c</code> - Delete any files in the output folder before extracting</li> 
+        <li><code>--force</code>, <code>-f</code> - Ignore local copy and fetch from remote repository</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package install [options] String[]...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>String[]</code> - The names/versions of the packages to install</li> 
+       </ul> 
+       <h2 id="sencha_package_list">sencha package list</h2> 
+       <p>This command lists packages in the repository. To list available packages simply execute:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package list</code></pre> 
+       <p>To list locally available packages (no download required), do this:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package list .</code></pre> 
+       <p>Otherwise, you can specify the names of package repositories to list:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package list sencha</code></pre> 
+       <p>The above will list the contents of the Sencha Cmd Package Repository.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package list names...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>names</code> - The repos to list (blank for all, or remote names or “.” for local)</li> 
+       </ul> 
+       <h2 id="sencha_package_remove">sencha package remove</h2> 
+       <p>Removes one or more packages from the local repository.</p> 
+       <p>Removes version 1.2 of the package “foo”:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package remove foo@1.2</code></pre> 
+       <p>Remove all versions of “foo”</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha package remove foo@...</code></pre> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package remove packageNames...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>packageNames</code> - One or more packages/versions to remove</li> 
+       </ul> 
+       <h2 id="sencha_package_upgrade">sencha package upgrade</h2> 
+       <p>Upgrades the current package to a newer SDK or Sencha Cmd version.</p> 
+       <p>This command must be run from the desired package’s folder.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha package upgrade</code></pre> 
+       <h2 id="sencha_phonegap">sencha phonegap</h2> 
+       <p>This command will be deprecated in a future version of CMD. Please see information on setting up a multi-build via app.json instead of running these commands.</p> 
+       <p>Sencha Cmd works together with the PhoneGap CLI to package your application for native platforms. PhoneGap CLI allows native application building locally and remotely via PhoneGap Build. You can find more information on PhoneGap Build here</p> 
+       <pre mode="javascript" theme="chrome"><code>https://build.phonegap.com/</code></pre> 
+       <p>To add PhoneGap support to your application simply run the following command within your application directory</p> 
+       <pre mode="javascript" theme="chrome"><code>// Initialize PhoneGap Support 
+sencha phonegap init {APP_ID} {APP_NAME}
+
+// Build the application and attempt to run it on a Device or in the Emulator
+sencha app build -run native</code></pre> 
+       <p>For more information on using Sencha Cmd with PhoneGap, consult the guides found here:</p> 
+       <p><a href="../../../touch/2.3.0/#!/guide/cordova">http://docs.sencha.com/touch/2.3.0/#!/guide/cordova</a></p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>init</code> - Adds PhoneGap support to your application</li> 
+       </ul> 
+       <h2 id="sencha_phonegap_init">sencha phonegap init</h2> 
+       <p>This will add PhoneGap CLI support to your application. PhoneGap CLI support will allow for native application building locally and remotely for multiple platforms. </p> 
+       <pre mode="javascript" theme="chrome"><code>sencha phonegap init {APP_ID} {APP_NAME}</code></pre> 
+       <p>{APP_ID} is optional and contains the Application ID used in the native app. This will default to foo.bar.{APP_NAME}</p> 
+       <p>{APP_NAME} is optional and contains the Application Name used in the native app. This will default to the name of your sencha touch application.</p> 
+       <p>For more information on using Sencha Cmd with PhoneGap, consult the guides found here:</p> 
+       <p><a href="../../../touch/2.3.0/#!/guide/cordova">http://docs.sencha.com/touch/2.3.0/#!/guide/cordova</a></p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha phonegap init Object[]...</code></pre> 
+       <h2 id="sencha_repository">sencha repository</h2> 
+       <p>These commands manage the local repository and its connections to remote repositories.</p> 
+       <h4 id="Remote_Repositories">Remote Repositories</h4> 
+       <p>The primary role of the local repository is as a cache of packages that it downloads from one or more specified remote repositories. By default, Sencha Cmd adds the Sencha package repository as a remote repository. Using these commands you can manage these connections.</p> 
+       <p>This command adds a remote repository connection named <code>&quot;foo&quot;</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo add foo http://coolstuff.foo/packages</code></pre> 
+       <p>Following this command, any packages contained in this repository will be available. Typically these packages are used by adding their name (and possibly version) to your application’s <code>&quot;app.json&quot;</code> in its <code>requires</code> array.</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    requires: [
+        'cool-package@2.1'
+    ]
+}</code></pre> 
+       <p>Then:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha app build</code></pre> 
+       <p>The above addition will require version 2.1 of <code>&quot;cool-package&quot;</code>. The remote repository added above will be checked for this package, and if found, it is downloaded to the local repository and cached there as well as extracted to your app’s<code>&quot;packages/cool-package&quot;</code> folder and automatically integrated in to your build.</p> 
+       <h4 id="Authoring_Packages">Authoring Packages</h4> 
+       <p>To author packages for others to use in their applications, you will need to initialize your local repository with your name:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo init -name &quot;My Company, Inc.&quot;</code></pre> 
+       <p>See these for more details:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha help package
+sencha help repo init</code></pre> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>add</code> - Add a remote repository connection</li> 
+        <li><code>init</code> - Initializes the local package repository</li> 
+        <li><code>list</code> - List remote repository connections</li> 
+        <li><code>remove</code> - Remove a remote repository connection</li> 
+        <li><code>show</code> - Show details for a repository</li> 
+        <li><code>sync</code> - Clears caches to force refetching for a remote repository</li> 
+       </ul> 
+       <h2 id="sencha_repository_add">sencha repository add</h2> 
+       <p>Adds a remote repository connection. Once added, packages from that repository will be available to applications for use.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo add foo http://foo.bar/pkgs</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--address</code>, <code>-a</code> - The address (or URL) for the remote repository</li> 
+        <li><code>--beta</code>, <code>-b</code> - Indicates that this new repository contains beta packages</li> 
+        <li><code>--name</code>, <code>-n</code> - The name for the remote connection</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository add [options] name \
+                                address</code></pre> 
+       <h2 id="sencha_repository_init">sencha repository init</h2> 
+       <p>Initializes the local repository. The local repository is used to cache local copies of packages (potentially for multiple versions).</p> 
+       <p><code>NOTE:</code> This step is not typically necessary because the local repository is automatically initialized in “anonymous” mode. This command is needed only if you want to publish packages for others to use in their application. To publish packages you must initial the local repository and provide a name:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository init -name &quot;My Company, Inc.&quot; -email me@foo.com</code></pre> 
+       <p>Beyond initializing the repository file structures, this command also generates a public/private key pair and stores these in the local repository. The private key is used to sign packages added to this local repository.</p> 
+       <p>For details on adding packages:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha help package add</code></pre> 
+       <h4 id="Private_Key">Private Key</h4> 
+       <p>Packages added to the local repository with a <code>creator</code> property equal to the name given to <code>sencha repository init</code> will be signed using the private key stored in the local repository.</p> 
+       <p>In this release of Sencha Cmd, these signatures are only used to test package integrity. You can backup this key if desired, but a new key can be regenerated by running <code>sencha repo init</code> at any time. In future versions it may be more important to backup your private key.</p> 
+       <h4 id="Remote_Access">Remote Access</h4> 
+       <p>Making the local package repository available as a remote repository for others to access requires some knowledge of the disk structure of the repository. By default, Sencha Cmd creates the local repository adjacent to its installation folder. For example, given the following location of Sencha Cmd:</p> 
+       <pre mode="javascript" theme="chrome"><code>/Users/myself/bin/Sencha/Cmd/3.1.0.200/</code></pre> 
+       <p>The local respository is located at:</p> 
+       <pre mode="javascript" theme="chrome"><code>/Users/myself/bin/Sencha/Cmd/repo</code></pre> 
+       <p>This is to allow your local repository to be used by newer versions of Sencha Cmd. The folder to publish to others as an HTTP URL is:</p> 
+       <pre mode="javascript" theme="chrome"><code>/Users/myself/bin/Sencha/Cmd/repo/pkgs</code></pre> 
+       <p><code>IMPORTANT:</code> Do <code>NOT</code> expose the parent folder of <code>&quot;pkgs&quot;</code> - that folder holds private information (such as your private key). Further, Sencha Cmd will not recognize the structure as a valid remote repository.</p> 
+       <p>If you want to host the repository on a public server, simply copy the <code>&quot;pkgs&quot;</code> folder to a web server and share the HTTP address.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--email</code>, <code>-em</code> - The email address for the owner of the local repository</li> 
+        <li><code>--expiration</code>, <code>-ex</code> - The number of years before the key pair becomes invalid</li> 
+        <li><code>--keybits</code>, <code>-k</code> - The number of bits for the public/private key pair</li> 
+        <li><code>--name</code>, <code>-n</code> - The name for the owner of the local repository</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository init [options]</code></pre> 
+       <h2 id="sencha_repository_list">sencha repository list</h2> 
+       <p>Lists all remote repository connections.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository list</code></pre> 
+       <h2 id="sencha_repository_remove">sencha repository remove</h2> 
+       <p>Remove a remote repository from the local repository’s list of remote repositories. For example, if a remote was previously added:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo add foo http://foo.bar/pkgs</code></pre> 
+       <p>This command will remove it:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo remove foo</code></pre> 
+       <p><code>NOTE:</code> This command does not remove packages that you may have downloaded from this remote as they are now cached in the local repository.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--name</code>, <code>-n</code> - The name for the remote connection</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository remove [options] name</code></pre> 
+       <h2 id="sencha_repository_show">sencha repository show</h2> 
+       <p>Shows information about a remote repository.</p> 
+       <p>To show information about the local repository:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo show .</code></pre> 
+       <p>To show information about a specific remote repository:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo show some-remote</code></pre> 
+       <p>The name given should match the name previously given to:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo add some-remote ...</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--all</code>, <code>-a</code> - Include all details about the repository</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository show [options] names...</code></pre> 
+       <h3 id="Where_">Where:</h3> 
+       <ul> 
+        <li><code>names</code> - The name(s) of remote repositories (or “.” for local)</li> 
+       </ul> 
+       <h2 id="sencha_repository_sync">sencha repository sync</h2> 
+       <p>Forces (re)synchronization with a remote repository catalog. Normally this is done periodically and does not need to be manually synchronized. This command may be needed if there something known to have been added to a remote repo but has not yet shown up in the catalog on this machine.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo sync someremote</code></pre> 
+       <p>To resynchronize with all remote repositories:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha repo sync</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--name</code>, <code>-n</code> - The name for the remote connection (blank for all)</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha repository sync [options] [name]</code></pre> 
+       <h2 id="sencha_switch">sencha switch</h2> 
+       <p>This command allows you to switch between Sencha Cmd versions present in the parent directory of the last installed Sencha Cmd.</p> 
+       <p>To see a list of locally available versions use the “list” switch, this command will also show the path where versions are expected to be present:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha switch --list</code></pre> 
+       <p>To switch to the latest locally available version, run the command with no arguments:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha switch</code></pre> 
+       <p>To switch to a specific version, pass it as an argument:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha switch {version}</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--list</code>, <code>-l</code> - List the available versions</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha switch [options] [version=&quot;&quot;]</code></pre> 
+       <h2 id="sencha_template">sencha template</h2> 
+       <p>This category provides commands to work with templates</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>apply</code> - Apply a template to produce its output</li> 
+        <li><code>info</code> - This command displays all available information about a template</li> 
+        <li><code>list</code> - This command lists all existing templates in the current workspace</li> 
+        <li><code>read</code> - Read a JSON file to supply data for a template</li> 
+       </ul> 
+       <h2 id="sencha_template_apply">sencha template apply</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--data</code>, <code>-d</code> - Set a name/value pair (can also use -Dname=value)</li> 
+        <li><code>--name</code>, <code>-n</code> - The name of the template</li> 
+        <li><code>--output</code>, <code>-o</code> - The output directory</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha template apply [options] name</code></pre> 
+       <h2 id="sencha_template_info">sencha template info</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--name</code>, <code>-n</code> - The name of the template</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha template info [options] name</code></pre> 
+       <h2 id="sencha_template_list">sencha template list</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha template list</code></pre> 
+       <h2 id="sencha_template_read">sencha template read</h2> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--name</code>, <code>-n</code> - The name of the JSON file to load</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha template read [options] [name]</code></pre> 
+       <h2 id="sencha_theme">sencha theme</h2> 
+       <p>This category contains low-level commands for managing themes. Typically these operations are handled by <code>sencha app build</code> and/or <code>sencha package build</code>.</p> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>build</code> - Builds a custom theme from a given page</li> 
+        <li><code>capture</code> - Capture an image and slicer manfiest for a theme</li> 
+        <li><code>slice</code> - Generates image slices from a given image directed by a JSON manifest</li> 
+       </ul> 
+       <h2 id="sencha_theme_build">sencha theme build</h2> 
+       <p>This command will build the specified theme’s image sprites.</p> 
+       <p><code>IMPORTANT</code>: This command should only be used for Ext JS 4.1 applications. For Ext JS 4.2 applications, themes are now <code>packages</code> and should be managed using the <code>sencha package build</code> process.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--environment</code>, <code>-en</code> - The build environment (e.g., production or testing)</li> 
+        <li><code>--output-path</code>, <code>-o</code> - The destination path for the sliced images</li> 
+        <li><code>--page</code>, <code>-p</code> - The page to slice</li> 
+        <li><code>--theme-name</code>, <code>-t</code> - The name of the theme to build</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha theme build [options] [theme-name] \
+                             [environment]</code></pre> 
+       <h2 id="sencha_theme_capture">sencha theme capture</h2> 
+       <p>This command will capture an image and slice manifest for a specified page.</p> 
+       <p>It is rarely necessary to call this command directly as it is part of the theme build process. In Ext JS 4.2 applications or theme packages, this command is called by the build script’s <code>slice</code> step. In Ext JS 4.1 applications this is called for each application theme or directly by the ’sencha theme build` command.</p> 
+       <p>For example, this is roughly the command performed by the <code>slice</code> step for a theme package:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha theme capture -page sass/example/theme.html \
+                     -image build/theme-capture.png \
+                     -manifest build/theme-capture.json</code></pre> 
+       <p>Once the image and slicer manifest are produced, the <code>sencha fs slice</code> command extracts the background images and sprites required for Internet Explorer.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--image-file</code>, <code>-i</code> - The output image (e.g. “theme-capture.png”)</li> 
+        <li><code>--manifest</code>, <code>-m</code> - The output slice manifest (e.g. “theme-capture.json”)</li> 
+        <li><code>--page</code>, <code>-p</code> - The page to load for capturing theme contents</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha theme capture [options]</code></pre> 
+       <h2 id="sencha_theme_slice">sencha theme slice</h2> 
+       <p>This command performs image slicing and manipulation driven by the contents of a JSON manifest file. The manifest file contains an array of image area definitions that further contain a set of “slices” to make.</p> 
+       <p>This file and the corresponding image are typically produced for a Theme as part of the theme package build. For details on this process, consult this guide:</p> 
+       <p><a href="../../../ext-js/4-2/#!/guide/command_slice">http://docs.sencha.com/ext-js/4-2/#!/guide/command_slice</a></p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--format</code>, <code>-f</code> - The image format to save - either “png” or “gif” (the default)</li> 
+        <li><code>--image</code>, <code>-i</code> - The image to slice</li> 
+        <li><code>--manifest</code>, <code>-m</code> - The slicer manifest (JSON) file</li> 
+        <li><code>--out-dir</code>, <code>-o</code> - The root folder to which sliced images are written</li> 
+        <li><code>--quantized</code>, <code>-q</code> - Enables image quantization (default is true)</li> 
+        <li><code>--tolerate-conflicts</code>, <code>-t</code> - Tolerate conflicts in slice manifest</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha theme slice [options]</code></pre> 
+       <h2 id="sencha_upgrade">sencha upgrade</h2> 
+       <p>This command downloads and installs the current version of Sencha Cmd. Or you can specify the version you want to install as part of the command.</p> 
+       <p>The following command downloads and installs the current version of Sencha Cmd:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha upgrade</code></pre> 
+       <p>This command downloads a particular version:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha upgrade 3.0.2.288</code></pre> 
+       <p>If the version requested is the already installed then this command will, by default, do nothing. This can be forced using <code>--force</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha upgrade --force</code></pre> 
+       <p>If the version requested is the version in the <code>PATH</code>, the command will exit with a message saying that the current version cannot be upgraded. In this case the <code>--force</code> option is ignored.</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--all</code>, <code>-a</code> - Install all optional components</li> 
+        <li><code>--beta</code>, <code>-b</code> - Check for the latest beta or RC version (vs stable release)</li> 
+        <li><code>--check</code>, <code>-c</code> - Only check for an upgrade but do not install it</li> 
+        <li><code>--force</code>, <code>-f</code> - Force a (re)install even if the version is already installed</li> 
+        <li><code>--nojre</code>, <code>-n</code> - Windows and Mac only: Use the installer without a bundled JRE (keeps the current JRE in use)</li> 
+        <li><code>--unattended</code>, <code>-u</code> - Runs installer in silent / unattended mode</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha upgrade [options] [version=&quot;&quot;]</code></pre> 
+       <h2 id="sencha_web">sencha web</h2> 
+       <p>This category provides commands to manage a simple HTTP file server based on <code>Jetty</code> (see <a href="../../../../www.eclipse.org/jetty/)">http://www.eclipse.org/jetty/)</a>.</p> 
+       <p>The following command is the simplest form:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web start</code></pre> 
+       <p>This starts the web server on the default port and “mounts” the current directory as the web root. This command will block the terminal so you can use CTRL+C to end the process.</p> 
+       <p>If this is started as a background process, you can use this command to stop the server from another terminal:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web stop</code></pre> 
+       <p>The port used can be specified on the command line or using the configuration property <code>cmd.web.port</code>. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web -port 8080 start</code></pre> 
+       <p>And to stop the above:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web -port 8080 stop</code></pre> 
+       <p>For details on the web root, console help on <code>sencha web start</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha help web start</code></pre> 
+       <p><strong>NOTE:</strong> These are low-level commands that do not relate to the current application. For applications, consider the <code>web-start</code> target using <code>sencha ant web-start</code> and <code>sencha ant web-stop</code>.</p> 
+       <p>When using the <code>sencha app watch</code> command, a web server will be started automatically, so neither the <code>sencha web start</code> or <code>sench ant web-start</code> commands are necessary</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--port</code>, <code>-p</code> - Set the port for the web server</li> 
+       </ul> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>start</code> - Starts a static file Web Server on a port</li> 
+        <li><code>stop</code> - Stops the local web server on the specific port</li> 
+       </ul> 
+       <h2 id="sencha_web_start">sencha web start</h2> 
+       <p>This command starts the Web server and routes requests to the specified files. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web start</code></pre> 
+       <p>This will “mount” the current directory as the web root at the default port. The port can be specified if needed:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web -port 8000 start</code></pre> 
+       <p>To stop the server, press CTRL+C or you can use these commands (from another terminal), respectively:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web stop
+
+sencha web -port 8000 stop</code></pre> 
+       <h4 id="The_Web_Root">The Web Root</h4> 
+       <p>By default, <code>sencha web start</code> mounts the current directory so that all files and folders are available at the root of the web server’s URL. Sometimes you may need to connect various folders into a common web root. To do this, use the <code>-map</code> switch like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web start -map foo=/path/to/foo,bar=/another/path</code></pre> 
+       <p>Given the above, the following URL entered in a browser will display the files in <code>&quot;/path/to/foo&quot;</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>http://localhost:8000/foo</code></pre> 
+       <p>And this URL will display the files in <code>&quot;/another/path&quot;</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>http://localhost:8000/bar</code></pre> 
+       <p>For more details regarding the <code>Sencha Cmd</code> web server, run this command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha help web</code></pre> 
+       <p><em>NOTE:</em> These are low-level commands that do not relate to the current application. For applications, consider the <code>web-start</code> target using <code>sencha ant web-start</code> and <code>sencha ant web-stop</code>.</p> 
+       <p>If a web.xml file is present on the application root, this command can try to use it to establish the context of a J2EE application by using the -j, –j2ee switch.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web start --j2ee</code></pre> 
+       <p>It is important to note that this command will only work if all dependencies of the J2EE application are already in the classpath as Sencha Cmd does not include them during the install process. (e.g. servlet-api.jar).</p> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--cmd-mount</code>, <code>-c</code> - Enables mapping the cmd install dir as /~cmd.</li> 
+        <li><code>--j2ee</code>, <code>-j</code> - Use a web.xml file in the server root as context of a J2EE app.</li> 
+        <li><code>--mappings</code>, <code>-m</code> - List of local folders (ex: [sub=]/path/to/folder)</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha web start [options]</code></pre> 
+       <h2 id="sencha_web_stop">sencha web stop</h2> 
+       <p>This command stops the Web server previously started by <code>sencha web start</code>.</p> 
+       <p>If the server was started with this command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web start</code></pre> 
+       <p>This command will stop that server:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web stop</code></pre> 
+       <p>If you are using a custom port, these must match. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web -port 8000 start</code></pre> 
+       <p>From another terminal or console, this will stop the server:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha web -port 8000 stop</code></pre> 
+       <p><em>NOTE:</em> These are low-level commands that do not relate to the current application. For applications, consider the <code>web-start</code> target using <code>sencha ant web-start</code> and <code>sencha ant web-stop</code>.</p> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha web stop</code></pre> 
+       <h2 id="sencha_which">sencha which</h2> 
+       <p>This command display the location of Sencha Cmd.</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha which
+C:\Users\Me\bin\Sencha\Cmd\3.1.0.220</code></pre> 
+       <h3 id="Options">Options</h3> 
+       <ul> 
+        <li><code>--output</code>, <code>-o</code> - Name of an output property file to write the location as a property</li> 
+        <li><code>--property</code>, <code>-p</code> - Name of the property to write to the output property file for the location</li> 
+       </ul> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha which [options]</code></pre> 
+       <h2 id="sencha_workspace">sencha workspace</h2> 
+       <h3 id="Commands">Commands</h3> 
+       <ul> 
+        <li><code>upgrade</code> - Upgrade the workspace metadata to the latest version</li> 
+       </ul> 
+       <h2 id="sencha_workspace_upgrade">sencha workspace upgrade</h2> 
+       <h3 id="Syntax">Syntax</h3> 
+       <pre mode="javascript" theme="chrome"><code>sencha workspace upgrade</code></pre> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

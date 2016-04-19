@@ -1,0 +1,946 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | What's New in Ext JS 5.0.0</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Tablet_Support__amp__New_Themes" title="平板设备支持 &amp; New Themes">平板设备支持 &amp; New Themes</a> 
+       <a class="toc-page-h2" href="#New_Application_架构s___Welcome_MVVM" title="New Application 架构s - Welcome MVVM">New Application 架构s - Welcome MVVM</a> 
+       <a class="toc-page-h3" href="#Data_Binding" title="Data Binding">Data Binding</a> 
+       <a class="toc-page-h3" href="#View_Controllers" title="视图控制器View Controllers">视图控制器View Controllers</a> 
+       <a class="toc-page-h4" href="#References_and_Listeners" title="References and Listeners">References and Listeners</a> 
+       <a class="toc-page-h3" href="#ViewModels" title="ViewModels">ViewModels</a> 
+       <a class="toc-page-h4" href="#Formulas" title="Formulas">Formulas</a> 
+       <a class="toc-page-h4" href="#Stores" title="Stores">Stores</a> 
+       <a class="toc-page-h4" href="#Example" title="Example">Example</a> 
+       <a class="toc-page-h3" href="#Bringing_It_Together" title="Bringing It Together">Bringing It Together</a> 
+       <a class="toc-page-h2" href="#Routing" title="Routing">Routing</a> 
+       <a class="toc-page-h2" href="#Responsive_Configs" title="Responsive Configs">Responsive Configs</a> 
+       <a class="toc-page-h2" href="#Data_Package_Improvements" title="数据封装 Improvements">数据封装 Improvements</a> 
+       <a class="toc-page-h3" href="#Common_Data" title="Common Data">Common Data</a> 
+       <a class="toc-page-h3" href="#Models" title="Models">Models</a> 
+       <a class="toc-page-h3" href="#Associations" title="Associations">Associations</a> 
+       <a class="toc-page-h4" href="#Simplified_Annotation" title="Simplified Annotation">Simplified Annotation</a> 
+       <a class="toc-page-h4" href="#Many_to_Many_Associations" title="Many to Many Associations">Many to Many Associations</a> 
+       <a class="toc-page-h3" href="#Chained_Stores" title="Chained Stores">Chained Stores</a> 
+       <a class="toc-page-h3" href="#Data_Sessions" title="Data Sessions">Data Sessions</a> 
+       <a class="toc-page-h3" href="#Heterogeneous_Stores_and_TreeStores" title="Heterogeneous Stores and TreeStores">Heterogeneous Stores and TreeStores</a> 
+       <a class="toc-page-h3" href="#Custom_Field_Types" title="Custom Field Types">Custom Field Types</a> 
+       <a class="toc-page-h3" href="#Model_Validation_Binding" title="Model Validation Binding">Model Validation Binding</a> 
+       <a class="toc-page-h2" href="#Event_System" title="Event System">Event System</a> 
+       <a class="toc-page-h3" href="#Gestures" title="Gestures">Gestures</a> 
+       <a class="toc-page-h2" href="#Sencha_Charts" title="Sencha Charts">Sencha Charts</a> 
+       <a class="toc-page-h2" href="#Tab_Panels" title="Tab Panels">Tab Panels</a> 
+       <a class="toc-page-h2" href="#Grids" title="Grids">Grids</a> 
+       <a class="toc-page-h3" href="#Components_in_Cells" title="Components in Cells">Components in Cells</a> 
+       <a class="toc-page-h3" href="#Buffered_Updates" title="Buffered Updates">Buffered Updates</a> 
+       <a class="toc-page-h3" href="#Cell_Updaters" title="Cell Updaters">Cell Updaters</a> 
+       <a class="toc-page-h3" href="#Grid_Filters" title="Grid Filters">Grid Filters</a> 
+       <a class="toc-page-h3" href="#Rendering_Optimizations" title="Rendering Optimizations">Rendering Optimizations</a> 
+       <a class="toc-page-h2" href="#Widgets" title="Widgets">Widgets</a> 
+       <a class="toc-page-h2" href="#Breadcrumb_Bars" title="Breadcrumb Bars">Breadcrumb Bars</a> 
+       <a class="toc-page-h2" href="#Form_Package_Improvements" title="Form Package Improvements">Form Package Improvements</a> 
+       <a class="toc-page-h3" href="#Tagfield" title="Tagfield">Tagfield</a> 
+       <a class="toc-page-h3" href="#Segmented_Buttons" title="Segmented Buttons">Segmented Buttons</a> 
+       <a class="toc-page-h3" href="#TextField_Triggers" title="TextField Triggers">TextField Triggers</a> 
+       <a class="toc-page-h3" href="#Field_Layouts" title="Field Layouts">Field Layouts</a> 
+       <a class="toc-page-h3" href="#Layout_free_Containers" title="Layout-free Containers">Layout-free Containers</a> 
+       <a class="toc-page-h4" href="#Form_Layout" title="Form Layout">Form Layout</a> 
+       <a class="toc-page-h2" href="#Dashboards" title="Dashboards">Dashboards</a> 
+       <a class="toc-page-h2" href="#New_SASS_Mixins" title="New SASS Mixins">New SASS Mixins</a> 
+       <a class="toc-page-h2" href="#Multi_select_Grid" title="Multi-select Grid">Multi-select Grid</a> 
+       <a class="toc-page-h2" href="#Ext_mixin_Mashup" title="Ext.mixin.Mashup">Ext.mixin.Mashup</a> 
+       <a class="toc-page-h2" href="#The_Sencha_Core_Package" title="The Sencha Core Package">The Sencha Core Package</a> 
+       <a class="toc-page-h3" href="#Config_System" title="Config System">Config System</a> 
+       <a class="toc-page-h2" href="#Compatibility_And_Upgrading" title="Compatibility And Upgrading">Compatibility And Upgrading</a> 
+       <a class="toc-page-h3" href="#Compatibility_Layer" title="Compatibility Layer">Compatibility Layer</a> 
+       <a class="toc-page-h3" href="#Private_Methods" title="Private Methods">Private Methods</a> 
+       <a class="toc-page-h2" href="#Getting_Started" title="快速入门">快速入门</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>What’s New in Ext JS 5</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>We are excited that Ext JS 5 is now available! Ext JS 5 introduces many new and exciting improvements to the Sencha Framework. These changes bring about new functionality, usability and style. While adding all of the new features you’re about to see, we’ve tried to minimize changes that would make your upgrade to Ext JS 5 difficult. When breaking changes were made, we also added diagnostic messages, when possible, to explain what changed and what you should do to update your application. For details on these changes, see the <a href="extjs_upgrade_guide.html">Ext JS 5 - 升级向导</a>.</p> 
+       <p>Visit the <a href="../../../../dev.sencha.com/ext/5.0.0/examples/index.html">Ext JS 5 examples page</a> and the <a href="../../apidocs">Ext JS 5 Documentation page</a> for a deeper look.</p> 
+       <p>Ext JS 5 introduces support for the MVVM architecture as well as improvements on the (C) in MVC. While we encourage you to investigate and take advantage of these improvements, it is important to note that we have made every effort to ensure existing Ext JS 4 MVC applications continue to function unmodified.</p> 
+       <p>Now, let’s take a look at some of these new additions!</p> 
+       <h2 id="Tablet_Support__amp__New_Themes">平板设备支持 &amp; New Themes</h2> 
+       <p>One of the most exciting additions to the Ext JS 5 feature set is support for devices with touch-screen input, including tablets and touch-screen laptops. This feature will allow you to get your Ext JS applications up and running on touch-screen devices with minimal modification. That means that you can spend less time thinking about compatibility issues and more time implementing great functionality.</p> 
+       <p>Ext JS 5 welcomes the addition of two new themes: Neptune Touch and Crisp. </p> 
+       <p>The Neptune Touch theme takes the modern and minimalistic look and feel of Neptune and adapts it for use in touch-centric context. This is achieved by increasing the size of some tappable elements to make the theme more touch-friendly. </p> 
+       <p>The Crisp theme takes Neptune Touch and modifies the default colors, icons, etc, while keeping the same touch-friendly dimensions. Both Crisp and Neptune Touch give you an excellent starting point for creating your own custom themes. When building from these themes, you can easily customize sizing and spacing, colors, fonts, icons, borders, etc.</p> 
+       <p><img src="images/themes.jpeg" /></p> 
+       <h2 id="New_Application_架构s___Welcome_MVVM">New Application 架构s - Welcome MVVM</h2> 
+       <p>Ext JS 4 introduced support for the MVC architectural pattern. With Ext JS 5, we are adding support for a popular alternative to MVC: MVVM (standing for Model-View-ViewModel). One of the big attractions to MVVM is data binding. With data binding, you no longer have to write all of the “glue” code to connect the model layer to the view and update the model when the view is modified.</p> 
+       <h3 id="Data_Binding">Data Binding</h3> 
+       <p>Components have a new “bind” config that allows them to connect any of their other configs (as long as they have a setter method) to data from <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">Ext.app.ViewModel</a> (<a href="#ViewModels">see below</a>). Using bind, you can be sure that the appropriate component config will have its setter method called whenever the bound value changes. No custom event handlers needed.</p> 
+       <p>The bind config also allows for two-way data binding, which translates to live synchronization of data between the view and the model. Any data change made in the view is automatically written back, automatically updating any other components that may be bound to that same data.</p> 
+       <h3 id="View_Controllers">视图控制器View Controllers</h3> 
+       <p>In Ext JS 4, controllers provided a global solution allowing you to apply logic application-wide. Ext JS 5 offers you a view-specific controller that can be associated directly with a view instance. From instantiation to destruction, <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">Ext.app.ViewController</a> is tied to the component that referenced it. A second instance of the same view class would get its own ViewController instance.</p> 
+       <p>While global controllers created with the Ext JS 4 MVC architecture operate as usual, creating ViewControllers is often a better fit. In particular, they simplify the wiring up of events and component references, so you worry less about details like state management and preventing memory leaks and can focus on your application.</p> 
+       <h4 id="References_and_Listeners">References and Listeners</h4> 
+       <p>One of the biggest advantages of a ViewController is its ability to help large applications connect components and events even when those components might be separated by several layers of containers. For example, a view may have many items nested in various containers like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>...
+items: [{
+    xtype: 'textfield',
+    reference: 'someField' // this is new
+}],
+...
+items: [{
+    xtype: 'button',
+    text: 'Delete,
+    listeners: {
+        click: 'onClickDelete' // also new (no &quot;scope&quot; here)
+    }
+}]</code></pre> 
+       <p>With a ViewController, handling the click event while accessing the text field couldn’t be simpler:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.view.foo.FooController', {
+    extend: 'Ext.app.ViewController',
+
+    onClickDelete: function (deleteButton) {
+        var someField = this.lookupReference('someField');
+
+        Ext.Msg.confirm('Confirm Delete',
+            'Are you sure you want to delete ' + someField.getValue(),
+            'onConfirm', this);
+    },
+
+    onConfirm: function (choice) {
+        // process 'yes' or 'no' answer
+    }
+});</code></pre> 
+       <p>Compared to the Component Query style of listeners and refs from Ext JS 4, the streamlined form in the new <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">Ext.app.ViewController</a> makes the connections more obvious. It also makes them safer because these linkages are encapsulated in the ViewController. That is to say, when nesting a view inside another view, the listeners and references on the two views are isolated from each other and only connect to their respective ViewControllers.</p> 
+       <h3 id="ViewModels">ViewModels</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">Ext.app.ViewModel</a> is a class that manages a data object and allows those interested in this data to bind to it and be notified whenever it changes. The ViewModel, like ViewController is owned by the view that references it. Because ViewModels are associated with a view, they are also able to link to a parent ViewModel owned by ancestor components in the component hierarchy. This allows child views to inherit the data of their parent ViewModel.</p> 
+       <p>Being a class, ViewModel is often extended. Because the primary role of the ViewModel is to provide data for its view, there are two features provided in a derived ViewModel that can greatly simplify this task: “formulas” and “stores”. Derived classes can also add other useful methods to encapsulate operations in their data, but formulas and stores are unique to ViewModels.</p> 
+       <h4 id="Formulas">Formulas</h4> 
+       <p>In addition to holding data and providing binding, <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">Ext.app.ViewModel</a> also offer a convenient way to calculate data from other data called “formulas”. <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel-cfg-formulas" data-full-load="true">Ext.app.ViewModel-cfg-formulas</a> allow you to encapsulate data dependencies in the ViewModel and keep your views free to focus on declaring their structure. This is similar to how the convert configuration works for fields of a traditional data model.</p> 
+       <h4 id="Stores">Stores</h4> 
+       <p>A ViewModel can also define stores which are then presented to their view as a named object to which they can bind. As with formulas, this allows views to remain free to declare their structure and not become cluttered with complex store definitions and at the same time ensure that they have their own store instances.</p> 
+       <h4 id="Example">Example</h4> 
+       <p>A view might have this:</p> 
+       <pre mode="javascript" theme="chrome"><code>xtype: 'grid',
+bind: {
+    title: 'Summary for {fullName}',
+    store: '{summary}'
+}</code></pre> 
+       <p>A simple ViewModel behind that view might look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.view.summary.SummaryModel', {
+    extend: 'Ext.app.ViewModel',
+
+    formulas: {
+        fullName: function (get) {
+            return get('firstName') + ' ' + get('lastName');
+        }
+    },
+
+    stores: {
+        summary: {
+            source: 'allSummaries', // chains to a global store
+            filters: [{
+                property: 'fullName',
+                value: '{fullName}'
+            }]
+        }
+    }
+});</code></pre> 
+       <p>The above example also shows how stores can be “chained” to other stores and apply their own filters (also sorters). Read on for more details on chained stores, but as you can see there is more going on here. This is because the ViewModel goes one extra step and processes the store configs as bindings which means they react to dynamic values like the filter above.</p> 
+       <h3 id="Bringing_It_Together">Bringing It Together</h3> 
+       <p>With Ext JS 5, you can improve an existing MVC architecture using ViewControllers to simplify the connection with your Views.</p> 
+       <p><img src="images/mvclayout1.jpeg" /></p> 
+       <p>You can also use ViewModels to automate the connection between your Views and your data as well as provide methods to manipulate that data (sometimes called “commands” in MVVM).</p> 
+       <p><img src="images/mvclayout2.jpeg" /></p> 
+       <p>Finally, because Ext JS 5 supports both paradigms, you can use them together.</p> 
+       <p><img src="images/mvclayout3.jpeg" /></p> 
+       <p>This can be very helpful in maintaining a clear separation of concerns, especially in cases where events trigger new views to be created, routing actions to occur or other activity that would make either the View or the ViewModel concerned with things they would rather ignore.</p> 
+       <p>For more information about these topics, please check out the following guides:</p> 
+       <ul> 
+        <li><a href="../../application_architecture/application_architecture.html">应用程序架构介绍</a></li> 
+        <li><a href="../../application_architecture/view_controllers.html">ViewControllers</a></li> 
+        <li><a href="../../application_architecture/view_models_data_binding.html">ViewModels and Data Binding</a></li> 
+        <li><a href="../../application_architecture/view_model_internals.html">ViewModel Internals</a></li> 
+       </ul> 
+       <h2 id="Routing">Routing</h2> 
+       <p>We have also implemented routing for Ext JS 5, which allows you to implement “deep linking” within your application. This is achieved by translating your application’s URL into controller actions and methods.</p> 
+       <p>For those unfamiliar with routing in Sencha Touch, it allows you to link to a particular state of your application. Ext JS applications, however, can be more complex, so the Ext JS router supports multiple routes in a single URI. Each route’s handling is sandboxed from others, allowing for much more flexible application control.</p> 
+       <p>Route execution can be controlled using a “before” function. This function will fire before the actual routing takes place, so the appropriate validation may occur before an action. This allows you to stop the current route, other queued routes, or continue the route execution after some action, such as an Ajax request returning.</p> 
+       <p>For more information about Routing, please view our <a href="../../application_architecture/router.html">Routing Guide</a>.</p> 
+       <h2 id="Responsive_Configs">Responsive Configs</h2> 
+       <p>Many visual aspects of Ext JS applications come from component configs. The new data binding system is based on configs and you can also manage configs using a new mechanism called “responsiveConfig”. The responsiveConfig is a set of rules and corresponding config values to apply when the rules are true. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create({
+        xtype: 'viewport',
+        layout: 'border',
+        items: [{
+            title: 'Tools',
+            region: 'north',
+
+            plugins: 'responsive',
+            responsiveConfig: {
+                tall: {
+                    region: 'north'
+                },
+                wide: {
+                    region: 'west'
+                }
+            }
+        }, {
+            title: 'Center',
+            region: 'center'
+        }]
+    });</code></pre> 
+       <p>There are many dynamic variables available to evaluate in responsive rules such as “tall” (if the viewport is taller than it is wide), but also “portrait” and “landscape” as well as “width” and “height” of the viewport. The rules can be arbitrary expressions using these values:</p> 
+       <pre mode="javascript" theme="chrome"><code>responsiveConfig: {
+    'width &lt; 600': {
+        region: 'north'
+    },
+    'width &gt;= 600': {
+        region: 'west'
+    }
+}</code></pre> 
+       <p>Since not all components need to respond to dynamic conditions, responsiveConfig is implemented as a mixin as well as a plugin to allow you to add this functionality to the classes or instances that need it.</p> 
+       <h2 id="Data_Package_Improvements">数据封装 Improvements</h2> 
+       <h3 id="Common_Data">Common Data</h3> 
+       <p>One of the most common requests from users who build applications for desktops and mobile is for Ext JS and Sencha Touch to merge their respective data packages. We have done just that with Ext JS 5 by moving <a href="../6.0.1-classic/#!/api/Ext.data" data-full-load="true">Ext.data</a> to the new Sencha Core package (<a href="#The_Sencha_Core_Package">see below</a>). In this merge, we have also added some exciting improvements to give you the best of both worlds.</p> 
+       <h3 id="Models">Models</h3> 
+       <p>Typical applications have many types of models and may easily need to create many thousands of records. In Ext JS 5, we have streamlined the mechanics of record creation and identifier generation to make sure that creating a record from a raw data object is as inexpensive as possible.</p> 
+       <p>The Model constructor no longer extracts fields from the data object it is given but rather adopts it and upgrades it based on the converters and default values from your defined fields. This means that you no longer need to define every field you want to keep on your record. As long as the server sends the data in the desired format, those properties will remain on the record’s data object. These undeclared fields are assumed to be persistent, so changes will be tracked and included in saves back to the server.</p> 
+       <h3 id="Associations">Associations</h3> 
+       <h4 id="Simplified_Annotation">Simplified Annotation</h4> 
+       <p>Ext JS 5 simplifies the process of declaring associations by adding a “reference” config to the field definition. The reference config makes it trivial to declare one-to-many and one-to-one associations.</p> 
+       <p>For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.model.Comment', {
+    fields: [
+        { name: 'userId', reference: 'User' }
+    ]
+});</code></pre> 
+       <p>All of the various options for associations can now be given as options on the reference config. By using a reference on the field that holds the linking value, however, you no longer have to specify this connection separately. Further, you no longer need to declare the two “sides” of this association, as was required with “belongsTo” and “hasMany”.</p> 
+       <h4 id="Many_to_Many_Associations">Many to Many Associations</h4> 
+       <p>Ext JS 5 also adds support for <a href="../6.0.1-classic/#!/api/Ext.data.schema.ManyToMany" data-full-load="true">Ext.data.schema.ManyToMany</a>. A classic many-to-many scenario would be a forum with Users and Groups. A User may belong to many Groups. And Groups have many Users. Declaring a many-to-many association can be done on either or both of the classes:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.model.User', {
+    extend: 'Ext.data.Model',
+
+    fields: [{
+        ...
+    }],
+
+    manyToMany: 'Group'
+});</code></pre> 
+       <p>As with other associations, this is represented by a Store. What makes many-to-many special is that Ext JS maintains the symmetry. For example, when you add the record for Group G to User A’s “groups” store, the record for User A is added to Group G’s “users” store (and the reverse for removal).</p> 
+       <h3 id="Chained_Stores">Chained Stores</h3> 
+       <p>In Ext JS, stores serve two very important and sometimes conflicting purposes. The first is in the data layer where they act as the client’s “system of record” for information received from the server. The second is in the presentation of that information by components such as Grids and DataViews. The challenge in previous versions was how exactly to manage a store that was needed by multiple components, because each of these components might want to apply sorting or filtering to the data it is presenting which would then impact all components sharing that store.</p> 
+       <p>With chained stores in Ext JS 5, you can now automate this synchronization. A chained store is a store with a “source” store that defines the set of records. The chained store can then apply its filters, sorters or grouper to define its own ordering of the records from the source store. As records are added, removed or modified in the source store, the chained store and associated view react accordingly.</p> 
+       <p>Creation of chained stores is further automated by ViewModel, but they can be easily created directly. Because the chained store reuses the records of the source store, you are saving memory as well as server calls.</p> 
+       <h3 id="Data_Sessions">Data Sessions</h3> 
+       <p>When saving records to the server in Ext JS 4 you had to pay careful attention to the order in which you asked these objects to save themselves. You also had to be sure to call save on all of the records and stores you had modified. All of this bookkeeping created many opportunities for failure when trying to reconcile your data.</p> 
+       <p>With Ext JS 5 there is now a class to manage all of these activities: <a href="../6.0.1-classic/#!/api/Ext.data.Session" data-full-load="true">Ext.data.Session</a>. A session tracks records that need to be updated, created or destroyed on the server. It can also order these operations to ensure that newly created records properly reference other newly created records by their new, server-assigned id.</p> 
+       <p>The session does this by ensuring that all references to a particular id for a Model class map to the same record. All association stores that relate to that Model/id share the same record instance. This ensures that edits made to that record are in one place. Unlike the ModelCache in Sencha Touch, however, Ext.data.Session is a class that you can create. This means you can, for example, create a new session for a modal window to isolate it from the rest of the page.</p> 
+       <p>Using sessions, it is now simple to edit records and their associations, then gather all of these updates and commit them to your server. Because the session tracks all of your edits, you can also get all of the changes at once and send them to your server in customized ways.</p> 
+       <h3 id="Heterogeneous_Stores_and_TreeStores">Heterogeneous Stores and TreeStores</h3> 
+       <p>Trees in Ext JS have always been popular, and Ext JS 5 pushes trees to new heights by giving you ways to load trees that have nodes of multiple types. The first and most flexible option is the <a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader-cfg-typeProperty" data-full-load="true">Ext.data.reader.Reader-cfg-typeProperty</a> config. This property is used to extract the name for the model type from incoming data to create for that node. Because this is a config on the reader it allows any store to mix record types.</p> 
+       <p>Trees have another way to help resolve the record type: the <a href="../6.0.1-classic/#!/api/Ext.data.TreeModel-cfg-childType" data-full-load="true">Ext.data.TreeModel-cfg-childType</a> property. This property is on any node of the tree and specifies the type of child nodes to create.</p> 
+       <p>This means that the Model classes at each level of the tree or node-by-node can be of different types, allowing the use of associated, but different data types in your trees.</p> 
+       <h3 id="Custom_Field_Types">Custom Field Types</h3> 
+       <p>A common challenge with a data model is field validation. Very often this validation is field-specific (for example, an email address). In Ext JS 5 you can now define custom field classes that can validate their values so you won’t have to repeat those rules on all your model classes. For example:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.fields.Email', {
+    extend: 'Ext.data.field.String', // inherit converters
+
+    alias: 'data.field.email',  // now usable as a Field type
+
+    validators: 'email'
+});
+
+Ext.define('App.model.User', {
+    extend: 'Ext.data.Model',
+
+    fields: [{
+        name: 'emailAddress', type: 'email'
+    }]
+});</code></pre> 
+       <p>This technique can be used to apply any number of field options as a class and then use that class in your Models.</p> 
+       <h3 id="Model_Validation_Binding">Model Validation Binding</h3> 
+       <p>Now that Models as well as fields can perform validation, what is needed is an easy way to use a ViewModel to connect these results to the forms where the values are displayed. To do so we simply add one config to our form:</p> 
+       <pre mode="javascript" theme="chrome"><code>modelValidation: true,
+items: [{
+    xtype: 'textfield',
+    bind: '{user.name}'
+},{
+    xtype: 'textfield',
+    bind: '{user.emailAddress}'
+},
+...</code></pre> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.Component-cfg-modelValidation" data-full-load="true">Ext.Component-cfg-modelValidation</a> config is an inherited property that applies to all child items below that point in the component hierarchy. Input fields respect this option and request an additional binding from their value binding using the new “validation” association. In other words, we could have written the above more directly (and verbosely) without the “modelValidation” option as:</p> 
+       <pre mode="javascript" theme="chrome"><code>items: [{
+    xtype: 'textfield',
+    bind: {
+        value: '{user.name}',
+        validation: '{user.validation.name}'
+    }
+},{
+    xtype: 'textfield',
+    bind: {
+        value: '{user.emailAddress}',
+        validation: '{user.validation.emailAddress}'
+    }
+},
+...</code></pre> 
+       <h2 id="Event_System">Event System</h2> 
+       <p>The Ext JS 5 event system makes a significant paradigm shift from previous releases by moving away from directly attached DOM listeners to the “delegated” event model first implemented by Sencha Touch. This means that for each type of event (“mousedown”, “touchstart”, etc.) a single listener is attached at the very top of the DOM hierarchy. When a DOM element fires an event, it bubbles all the way to the top before it is handled. The framework then steps in and simulates the expected delivery sequence to those listeners you have added using the framework’s Element API.</p> 
+       <p>While this approach does bring with it some complexity, it bestows a few important advantages. For starters this reduces the number of interactions with the DOM that can, especially on older browsers, be quite expensive. More importantly it enables Gestures.</p> 
+       <h3 id="Gestures">Gestures</h3> 
+       <p>Sencha Touch first introduced the gesture system to provide applications with high-level “events” that are not natively generated by the browser. Things like “tap”, “rotate” and “swipe” for example. In order to provide a proper touch experience for your Ext JS application this support is critical.</p> 
+       <p>With Ext JS and its focus on desktop applications, we have had to take it to another level to enable mouse inputs to be identified as gestures. This mapping means you won’t have to visit all “click” listeners in your application and conditionalize them to respond to “tap” or a “mousedown” to a “touchstart”. In fact in Ext JS 5 this mapping layer extends to events like these and provides the closest possible mapping to what is supplied by the device.</p> 
+       <h2 id="Sencha_Charts">Sencha Charts</h2> 
+       <p>With Sencha Touch 2.1 we introduced a new, high performance, touch-optimized charts package. With Ext JS 5 we have enhanced this charts package to work on both Ext JS and Sencha Touch. This brings lots of new capabilities as well as great performance on tablet devices.</p> 
+       <p><img src="images/charts.jpeg" /></p> 
+       <p>The legacy Ext JS 4 charts have been converted into a separate package so you can still use them when upgrading to Ext JS 5 to minimize your conversion effort. The process of updating to the new charts package simply requires switching out the ext-charts package for the new sencha-charts package. Most of the API’s are the same and the few that are not are covered in the 升级向导.</p> 
+       <p>This new charts package brings many new features to Ext JS 5, including:</p> 
+       <ul> 
+        <li>Candlestick and OHLC series</li> 
+        <li>Pan, zoom and crosshair interactions</li> 
+        <li>Floating axes</li> 
+        <li>Multiple axes</li> 
+        <li>SVG and HTML Canvas support</li> 
+        <li>Better performance</li> 
+        <li>Greater customization</li> 
+       </ul> 
+       <p>Our current Ext JS charts will remain in the framework for legacy support at least until Ext JS 5.1. However, they will not gain any of the new features or functionality included with Sencha Charts. </p> 
+       <h2 id="Tab_Panels">Tab Panels</h2> 
+       <p>With Ext JS 4.2 we introduced the ability to put the tab bar on the left or right of your tab panels. With Ext JS 5 you can now control many other aspects of tab panels such as icon alignment and text rotation. You can even configure the tab bar to join the panel header to save space. Combine all that with flexible new Sass mixins that give you easy control over various presentation options and you can create some amazing results:</p> 
+       <p><img src="images/navigation-tabs.png" /></p> 
+       <p><img src="images/side-navigation-tabs.png" /></p> 
+       <p>Combine these with “responsiveConfig” controls and you can quickly put together an application like our new Executive Dashboard example.</p> 
+       <h2 id="Grids">Grids</h2> 
+       <h3 id="Components_in_Cells">Components in Cells</h3> 
+       <p>One of the more requested bits of functionality in Ext JS has always been to easily add components to a grid. And now you can with Ext JS 5: say hello to the Widget Column! You can now add a component or widget (<a href="#Widgets">see below</a>) config to the new <a href="../6.0.1-classic/#!/api/Ext.grid.column.Widget" data-full-load="true">Ext.grid.column.Widget</a> and that item will be treated as a “template” to create one instance for each visible cell in the column. Combine that with the bufferedrenderer plugin and even large grids can render components and widgets without issue.</p> 
+       <h3 id="Buffered_Updates">Buffered Updates</h3> 
+       <p>There are some cases in which data updates arrive so quickly that the DOM can be flooded making your app unresponsive. The new support for buffered updates allows you to configure the rate at which updates are reflected in the DOM. These updates will utilize fewer cycles, resulting in a more responsive experience.</p> 
+       <h3 id="Cell_Updaters">Cell Updaters</h3> 
+       <p>Renderers are an easy way to create custom markup for a cell. But because renderers can also manipulate many other aspects of the cell such as class names and the like they lead to a lot of inefficiency when it comes to updating those cells.</p> 
+       <p>The new cell updater is an optional method you can provide for a column. This updater operates on the entire cell and is called when the value has changed to make updates to the DOM. This allows you to use your knowledge of the actions taken by the renderer and more efficiently update to the DOM in the cell.</p> 
+       <h3 id="Grid_Filters">Grid Filters</h3> 
+       <p>The very popular “ux” (user extension) that adds filters to your grid’s column menu has been reworked for Ext JS 5 and integrated into the framework as <a href="../6.0.1-classic/#!/api/Ext.grid.filters.Filters" data-full-load="true">Ext.grid.filters.Filters</a>. The new “gridfilters” plugin uses all the new <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> filtering support so its filters are able to be remoted and saved in component state in the same way as all other filters.</p> 
+       <h3 id="Rendering_Optimizations">Rendering Optimizations</h3> 
+       <p>Since grids can never be fast enough, we profiled our newly optimized (for Ext JS 4.2) grid to see where we might make things even faster. What we found was that browser reflow cost could be significantly reduced by separating each grid row into its own, separate table.</p> 
+       <p>This helps buffered rendering more efficiently remove rows from the trailing edge of the scroll. Similarly, adding new rows no longer requires existing rows to reflow. Unless you have extended the rendering pipeline for a grid or heavily styled grid rows, this change will likely go undetected.</p> 
+       <h2 id="Widgets">Widgets</h2> 
+       <p>As a middle ground between full components and renderers/updaters you can chose to encapsulate a cell’s presentation in a Widget. A Widget is a lightweight component that can be easily created at minimal cost. This is because Widgets don’t come with the full lifecycle of a traditional Ext.Component.</p> 
+       <p>The only thing Ext.Widget provides is the necessary machinery to create DOM from an object template and wire events to itself and those elements it creates. All of this is built on the config system exactly like all of the Sencha Touch components. By implementing your custom cell presentation in a Widget, you can not only easily reuse the code in other grids you can also then respond to events like mouse over.</p> 
+       <p>Ext JS 5 ships with several new widgets, two of which (Progress Bar and Slider) are simply lighter weight versions of existing components. The most exciting new widgets however are the sparklines. A sparkline is an ultra-compact chart designed to represent a series of values with minimum real estate which means they can make a grid really come to life!</p> 
+       <p><img src="images/widgets.jpeg" /></p> 
+       <p>Of course, creating your own widgets is actually quite simple, so the sky’s the limit!</p> 
+       <h2 id="Breadcrumb_Bars">Breadcrumb Bars</h2> 
+       <p>When pixels are at a premium, there is now a way to display the contents of a (<a href="../6.0.1-classic/#!/api/Ext.data.TreeStore" data-full-load="true">Ext.data.TreeStore</a>) in a toolbar form factor! The new (<a href="../6.0.1-classic/#!/api/Ext.toolbar.Breadcrumb" data-full-load="true">Ext.toolbar.Breadcrumb</a>) is demonstrated in the Kitchen Sink:</p> 
+       <p><img src="images/breadcrumb.png" /></p> 
+       <p>Compared to the alternative (<a href="../6.0.1-classic/#!/api/Ext.tree.Panel" data-full-load="true">Ext.tree.Panel</a>), the Breadcrumb can be a real space saver for tablets.</p> 
+       <h2 id="Form_Package_Improvements">Form Package Improvements</h2> 
+       <h3 id="Tagfield">Tagfield</h3> 
+       <p>The new “tagfield” (<a href="../6.0.1-classic/#!/api/Ext.form.field.Tag" data-full-load="true">Ext.form.field.Tag</a>) removes the hassle of dealing with long and unruly select options. Instead of maintaining their selected state within the picker itself, the selected list is visually maintained in the value display area. From there, selected “tags” can be easily removed, searched for or added.</p> 
+       <p><img src="images/tagfield.png" /></p> 
+       <h3 id="Segmented_Buttons">Segmented Buttons</h3> 
+       <p>A very common presentation for multiple selection on mobile, now provided by the new (<a href="../6.0.1-classic/#!/api/Ext.button.Segmented" data-full-load="true">Ext.button.Segmented</a>). Segmented buttons can be horizontal:</p> 
+       <p><img src="images/segmented-buttons.png" /></p> 
+       <p>Or vertical:</p> 
+       <p><img src="images/vertical-segmented-buttons.png" /></p> 
+       <p>These are full featured (<a href="../6.0.1-classic/#!/api/Ext.button.Button" data-full-load="true">Ext.button.Button</a>) instances so you can use icons, glyphs or even menus - whatever fits your application.</p> 
+       <h3 id="TextField_Triggers">TextField Triggers</h3> 
+       <p>Any text field can now be configured with triggers, and those triggers can easily be shown and hidden as needed. Unlike Ext JS 4 where only TriggerField derived classes could have triggers, and those triggers were configured in a very rigid manner, with Ext JS 5 you can add additional triggers to any TextField as simply as this:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.form.field.Text', {
+    renderTo: Ext.getBody(),
+    fieldLabel: 'My Custom Field',
+    triggers: {
+        foo: {
+            cls: 'my-foo-trigger',
+            weight: 1, // controls display order
+            handler: function() {
+                console.log('foo trigger clicked');
+            }
+        },
+        bar: {
+            cls: 'my-bar-trigger',
+            handler: function() {
+                console.log('bar trigger clicked');
+            }
+        }
+    }
+});</code></pre> 
+       <p>The triggers config accepts an object where the keys are simply unique names for your triggers, and the values are configuration objects for the new Ext.form.trigger.Trigger class. This means each trigger conforms to the same API so you can take actions such as show/hide on individual triggers like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>myField.getTrigger('foo').hide();</code></pre> 
+       <p>Further, because <a href="../6.0.1-classic/#!/api/Ext.form.trigger.Trigger" data-full-load="true">Ext.form.trigger.Trigger</a> is a class it can be extended to create even more advanced triggers, such as <a href="../6.0.1-classic/#!/api/Ext.form.trigger.Spinner" data-full-load="true">Ext.form.trigger.Spinner</a>.</p> 
+       <h3 id="Field_Layouts">Field Layouts</h3> 
+       <p>Form fields sport a wide variety of layout options. The demands of IE6 and IE quirks mode made it impossible for form fields to achieve all of their desired layout results using only HTML and CSS. So in Ext JS 4.1 we switched from the more elegant div-based form fields to tables to get as much help from the browser as possible. In the end, however, this still left JavaScript with the need to be deeply involved in the layout of fields, and as a result layout performance suffered.</p> 
+       <p>With Ext JS 5’s minimum supported browser being IE8 in strict mode, we can now realize the dream of div-based form fields purely managed by HTML and CSS! As a result we have refactored the form field rendering and layout process, eliminating all need for JavaScript intervention in the sizing and positioning of a field’s internal elements..</p> 
+       <h3 id="Layout_free_Containers">Layout-free Containers</h3> 
+       <p>When we combine the new form fields and their “liquid layout” behavior with certain container layouts that do not need to interact with their child items (namely “auto” and “form”), we see some great benefits. This is because the Ext JS 5 layout engine can now completely skip over these components!</p> 
+       <h4 id="Form_Layout">Form Layout</h4> 
+       <p>The auto container layout has been with Ext JS pretty much forever, but the history of the form layout is an interesting one. In Ext JS 3, form layout was required if you wanted labels. In Ext JS 4.0, form layout was obsoleted by form fields taking ownership of their labels. In Ext JS 4.1 we introduced a new form layout to solve two keys problems while still relying on the fields to manage their own labels:</p> 
+       <ul> 
+        <li>Labels should all be the same widths.</li> 
+        <li>Form fields should be stretched to fit the width of the form (as with “anchor” layout).</li> 
+       </ul> 
+       <p>At that time, the form layout transformed the form fields’ markup into individual rows and cells in a larger HTML table. Because of these trade-offs we didn’t give much fanfare to the form layout at that time.</p> 
+       <p>With Ext JS 5, however, there is now no need for a table and we can even solve one of the most highly requested use cases in the forms package: automatic label sizing! This means that instead of having to specify a width for the labels, the form layout will simply size the labels to the width of the longest label.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.layout.container.Form" data-full-load="true">Ext.layout.container.Form</a> will be most appreciated in localized or otherwise dynamic applications where the width of the label’s text is not known in advance. To specify the labelWidth for all items in a form, you configure it on the form layout:</p> 
+       <pre mode="javascript" theme="chrome"><code>layout: {
+    type: 'form',
+    labelWidth: 90
+},
+items: [{
+...</code></pre> 
+       <p>When upgrading from previous versions of the form layout, be aware that this is a change in behavior. The labelWidth on items of a form layout is ignored.</p> 
+       <h2 id="Dashboards">Dashboards</h2> 
+       <p>In previous releases our Portal example has been a commonly mimicked user experience. Being an example, however, it lacked many of the nuts and bolts you would want for creating real world applications.</p> 
+       <p>The revised Portal is based on the new <a href="../6.0.1-classic/#!/api/Ext.dashboard.Dashboard" data-full-load="true">Ext.dashboard.Dashboard</a> component. This component and its helper classes give you a much better starting point for these style applications. Things like resizable columns, empty column cleanup, column creation via drag/drop and item persistence.</p> 
+       <p><img src="images/dashboard.jpeg" /></p> 
+       <p>Even if your application is not a dashboard or portal, there is one feature demonstrated above that is likely to be useful in plenty of other contexts: Mashup.</p> 
+       <h2 id="New_SASS_Mixins">New SASS Mixins</h2> 
+       <p>Ext JS 5 adds new SASS “UI” mixins for styling several components that did not have UI mixins in version 4. In past releases these components were only stylable using their global variables (one visual treatment per theme or app). These new mixins enable their components to be styled in multiple ways in a single theme or app.</p> 
+       <ul> 
+        <li>Ext.menu.Menu - <code>extjs-menu-ui()</code></li> 
+        <li>Ext.form.Labelable - <code>extjs-label-ui()</code></li> 
+        <li>Ext.form.FieldSet - <code>extjs-fieldset-ui()</code></li> 
+        <li>Ext.form.CheckboxGroup - <code>extjs-checkboxgroup-ui()</code></li> 
+        <li>Ext.form.field.Text - <code>extjs-text-field-ui()</code></li> 
+        <li>Ext.form.field.Spinner - <code>extjs-spinner-trigger-ui()</code></li> 
+        <li>Ext.form.field.Display - <code>extjs-display-field-ui()</code></li> 
+        <li>Ext.form.field.Checkbox - <code>extjs-checkbox-ui()</code></li> 
+       </ul> 
+       <h2 id="Multi_select_Grid">Multi-select Grid</h2> 
+       <p><img src="images/multiselect.jpeg" /></p> 
+       <p>We have also added a new component that is a twist on the old “Multi-Item Selector” example. This new component enables you to easily manage large lists of selected items as well as efficiently search through even larger lists of potential items.</p> 
+       <h2 id="Ext_mixin_Mashup">Ext.mixin.Mashup</h2> 
+       <p>This mixin adds to its target class a new config property: <a href="../6.0.1-classic/#!/api/Ext.ux.google.Api-property-requiredScripts" data-full-load="true">Ext.ux.google.Api-property-requiredScripts</a>. This property specifies an array of URL’s that Mashup will load for you. Mashup then handles interaction with the class system and loader to ensure that your requiredScripts are loaded prior to your class’s creation callback and application launch.</p> 
+       <p>Portal uses Mashup indirectly via a pair of helper classes. Here are the relevant snippets to give you some ideas of what you could do:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Ext.ux.google.Api', {
+    mixins: [
+        'Ext.mixin.Mashup'
+    ],
+
+    requiredScripts: [
+        'http://www.google.com/jsapi'
+    ],
+    ...
+});</code></pre> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.ux.google.Api" data-full-load="true">Ext.ux.google.Api</a> class uses Mashup to provide its own, higher-level property for its derived classes: <a href="../6.0.1-classic/#!/api/Ext.ux.google.Feeds-property-requiresGoogle" data-full-load="true">Ext.ux.google.Feeds-property-requiresGoogle</a>.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Ext.ux.google.Feeds', {
+    extend: 'Ext.ux.google.Api',
+
+    requiresGoogle: { api:'feeds', nocss : true }
+});</code></pre> 
+       <p>Internally the Google loader is used to process these requests so the <a href="../6.0.1-classic/#!/api/Ext.ux.google.Feeds" data-full-load="true">Ext.ux.google.Feeds</a> class simply lists the “feeds” module and now the “google.feeds” API is available to all classes that require “Ext.ux.google.Feeds”.</p> 
+       <h2 id="The_Sencha_Core_Package">The Sencha Core Package</h2> 
+       <p>This package contains the core code that is shared between Ext JS 5 and the next major release of Sencha Touch. This package includes the following pieces:</p> 
+       <ul> 
+        <li>类系统</li> 
+        <li>Data</li> 
+        <li>Events</li> 
+        <li>Element</li> 
+        <li>Utilities</li> 
+        <li>Feature/Environment Detection</li> 
+       </ul> 
+       <p>These shared classes allow you to create applications that can share many resources regardless of framework.</p> 
+       <h3 id="Config_System">Config System</h3> 
+       <p>A commonly asked question regarding Ext JS 5 is if it would be switching over to the config system for its classes as did Sencha Touch. The short answer to that question is “somewhat”. The question behind this question, however, is typically: “how do I write cross-framework code when the config system forces divergent syntax?”.</p> 
+       <p>In Ext JS 5, Component uses the config system for some configs and calls initConfig in its constructor to set things in motion. This will have implications for custom components that previously called initConfig themselves.</p> 
+       <p>To address the more important questions we have tuned the config system to allow us to incrementally use it without introducing breaking API changes as we do. Without descending into too much detail, the most significant benefit of this is when writing derived classes:</p> 
+       <p>Setting config properties defined by a base class no longer requires those configs to be wrapped in a “config” object.</p> 
+       <p>You still need to use “config: {}” to declare new config properties, but derived classes can now set these directly on their class body. This approach allows derived classes to remain compatible with their base even if the base class switches a config over to use the config system.</p> 
+       <p>The bottom line - classes written for Ext JS 4 where the config system was not used remain compatible with Ext JS 5 even where the config system is now being used.</p> 
+       <h2 id="Compatibility_And_Upgrading">Compatibility And Upgrading</h2> 
+       <p>With Ext JS 5 we have tried to strike a balance between maintaining compatibility (while adding new features and enhancements to existing components and classes) that favors backwards compatibility as much as possible.</p> 
+       <p>To assist with upgrading we have added two class system level mechanisms. Both of these get stripped out of a build by Sencha Cmd (and so are not present in ext-all.js if you are using the pre-built framework).</p> 
+       <h3 id="Compatibility_Layer">Compatibility Layer</h3> 
+       <p>For those places where changes could break applications we have added a compatibility layer that is integrated right into the framework. By setting one option you can enable the compatibility layer without having to tinker with adding or removing additional scripts.</p> 
+       <p>Turning on the compatibility layer instruments the framework so that it acts more like the previous version while generating diagnostic messages to inform you of calls to deprecated methods or use of deprecated properties (on browsers that can support this). </p> 
+       <h3 id="Private_Methods">Private Methods</h3> 
+       <p>One of the most common mistakes made when using a robust framework like Ext JS is the accidental hiding of private framework methods. Because in JavaScript all object properties are public, there is no built-in, run-time protection to tell you of these mistakes. Further, even if you have done a 100% perfect job of avoiding collision with private methods, each new release (especially a major release) has the potential to create new collisions with your class methods.</p> 
+       <p>To help make these collisions obvious we have added “privates” to the class system. It is used like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Ext.Component', {
+    ...
+    privates: {
+        foo: function () {
+        }
+    }
+});</code></pre> 
+       <p>If a derived class overrides this method like so you will receive an error in the console:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyComponent', {
+    extend: 'Ext.Component'
+    ...
+
+    foo: function () {
+    }
+});</code></pre> 
+       <p>If this is intentional, you simple wrap the function in “privates” like Ext.Component.</p> 
+       <h2 id="Getting_Started">快速入门</h2> 
+       <p>You can download Sencha Cmd 5 or check out the release notes for known issues below:</p> 
+       <p><a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Download Cmd 5</a></p> 
+       <p>Be sure to check out the new <a href="cmd_upgrade_guide.html">Cmd 快速入门 guide</a> for the details.</p> 
+       <p>If you are already using Sencha Cmd 5, you can get the latest beta from our downloads page or run:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha upgrade</code></pre> 
+       <p>Install Sencha Cmd and restart your terminal. </p> 
+       <p>Additionally, you can generate an Ext JS 5 application by allowing Cmd to automatically download the SDK like so:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha generate app -ext MyApp ./app
+cd app
+sencha app watch</code></pre> 
+       <p>Or for an existing application:</p> 
+       <pre mode="javascript" theme="chrome"><code>cd /path/to/app
+sencha app upgrade -ext
+sencha app build</code></pre> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

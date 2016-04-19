@@ -1,0 +1,547 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | 欢迎使用 Fashion</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        目录 
+       <a class="toc-page-h2" href="#Introduction" title="Introduction">前言</a> 
+       <a class="toc-page-h2" href="#What_is_Fashion_" title="What is Fashion?">什么是 Fashion?</a> 
+       <a class="toc-page-h3" href="#JavaScript_Extensions" title="JavaScript Extensions">JavaScript 扩展</a> 
+       <a class="toc-page-h3" href="#Compatibility" title="Compatibility">兼容性</a> 
+       <a class="toc-page-h2" href="#Using_Live_Updates" title="Using Live Updates">实时更新</a> 
+       <a class="toc-page-h2" href="#Language_Extensions" title="Language Extensions">语言扩展</a> 
+       <a class="toc-page-h3" href="#Dynamic_Variables" title="Dynamic Variables">动态变量</a> 
+       <a class="toc-page-h4" href="#Assignment" title="Assignment">赋值</a> 
+       <a class="toc-page-h4" href="#Evaluation" title="Evaluation">计算</a> 
+       <a class="toc-page-h4" href="#Hoisting" title="Hoisting">提升</a> 
+       <a class="toc-page-h4" href="#Elevation" title="Elevation">Elevation</a> 
+       <a class="toc-page-h3" href="#Extensions___Requiring_JavaScript" title="Extensions - Requiring JavaScript">扩展 - 需要 JavaScript</a> 
+       <a class="toc-page-h2" href="#Upgrading" title="Upgrading">升级</a> 
+       <a class="toc-page-h3" href="#Dynamic_Variables" title="Dynamic Variables">动态变量</a> 
+       <a class="toc-page-h3" href="#Compass_Extensions" title="Compass Extensions">Compass 扩展</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">结语</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Fashion</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Introduction">前言</h2> 
+       <p>在Sencha Cmd 6.0,我们很高兴的介绍了一种新颖快速开发Ext JS 6.0样式的工具，它名叫“Fashion”.结合 Fashion 和 <code>sencha app watch</code> 创建一种新的样式开发模式，我们称之为“实时更新”.</p> 
+       <p>“实时更新”使用Fashion编译注入最新的CSS到您正在运行的页面里.这意味着，您不必重新加载CSS文件去看样式更改，而是近乎实时的就可以直接在浏览器里看到样式的更改效果.</p>
+       <p>当为Ext JS 6的应用编译样式的时候，Sencha Cmd 6也使用了Fashion。由于Fashion是在JavaScript里实现的，所以不在需要Ruby.</p> 
+       <h2 id="What_is_Fashion_">什么是Fashion?</h2> 
+       <p>Fashion 是一个 <code>.scss</code> 的编译器，用于产生CSS. Fashion也会添加一些不适用于Sass的新特性，以致于允许工具像Snecha检查器一样直观的检查和编辑定义在样式里的变量(或者您程序里的变量).</p> 
+       <h3 id="JavaScript_Extensions">JavaScript 扩展</h3> 
+       <p>通过编写JavaScript模块，用户可以扩展Fashion的功能. 一般来讲, Ext JS 用户都比较熟悉JavaScript, 所以扩展行为应该比扩展Compass简单。下面我们将介绍更多关于扩展Fashion.</p> 
+       <p>现在言归正传, 让我们来一起聊聊Fashion!</p> 
+       <h3 id="Compatibility">兼容性</h3> 
+       <p> Fashion 兼容CSS3语法以及大多数的 <a href="../../../https@github.com/sass/sass-spec">sass-spec</a> 验证套件. 因为 Fashion 理解大多数的Sass代码, 获取存在的 <code>.scss</code>代码,用Fashion去编译应该不是什么难事。</p> 
+       <p>由于一些额外的特性，稍后会讨论到，不管怎么样,说Fashion是Sass的一种实现或者Fashion编译的语言是Sass是不正确的。有许多地方，Sass经常被用于配置选项名或者磁盘目录。考虑到兼容性, 这些配置选项仍旧命名为Sass,即使下面的语言不是严格意义上的Sass.</p> 
+       <h2 id="Using_Live_Updates">使用实时更新</h2> 
+       <p>您可以在主流浏览器里打开一个应用，你会发现加载的是Sass文件而不是CSS。Fashion 可以监控文件改动并重新编译Sass文件，更新CSS而不需要重新加载页面。</p> 
+       <p>有两种方式让Fashion应用于<code>sencha app watch</code>.</p> 
+       <p>你可以通过编辑<code>app.json</code>中的“development”对象</p> 
+       <pre mode="javascript" theme="chrome"><code>...
+&quot;development&quot;: {
+    &quot;tags&quot;: [
+        &quot;fashion&quot;
+    ]
+},
+...</code></pre> 
+       <p>另外一种, 您可以在您加载的页面URL中添加 “?platformTags=fashion:1”</p> 
+       <p>现在我们准备运行:</p> 
+       <ul> 
+        <li>在您的项目根路径执行 “sencha app watch” .</li> 
+        <li>浏览器导航到您的应用程序 (for example, <a href="../../../localhost_3A1841/app)">http://localhost:1841/app)</a>.</li> 
+       </ul> 
+       <p>现在你可以更改主题样式变量，应该几乎马上就能看到更改后的效果了。</p> 
+       <p><strong>备注</strong>:当从Cmd WEB服务器上查看页面时，才会实时更新。在Ext Js Classic工具包里, 一些Sass更改需要一次布局或者刷新整个页面才生效。在Modern工具包里，这将不至于成为一个问题，因为它更大力度的基于CSS3和自适应一些未知的变化.</p> 
+       <h2 id="Language_Extensions">语言扩展</h2> 
+       <h3 id="Dynamic_Variables">动态变量</h3> 
+       <p>动态变量扮演着很重要的一部分在Fashion里.动态变量跟普通的变量非常相似，但动态变量的值被隐蔽在“dynamic()”里.他们的不同之处正是变量之间如何相互影响. Consider</p> 
+       <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
+
+$foo: dynamic($bar);  // 注意 $foo 依赖 $bar
+
+$bar: dynamic(red);
+
+@debug $foo;  // red</code></pre> 
+       <p>注意看 <code>$foo</code> 从 <code>$bar</code>中计算得来.这种依赖被Fashion特殊处理， <code>$foo</code> 的计算过程延迟到<code>$bar</code> 的最终结果被知晓之后.</p> 
+       <p>换而言之,动态变量有两次处理过程：赋值 和 计算.</p> 
+       <h4 id="Assignment">赋值</h4> 
+       <p>动态变量, 跟普通变量一样, 都是通过普通的“cascade”规则<em>赋值</em>(unlike !default):</p> 
+       <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
+
+$bar: dynamic(red);
+
+@debug $bar;  // red</code></pre> 
+       <p>这使得工具附加自定义的值到任何代码片段控制它们的动态变量.</p> 
+       <p>给动态变量赋值只会发生在文件范围内，任何控制结构范围之外。举例, 这是非法的:</p> 
+       <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
+
+@if something {
+    $bar: dynamic(red); // 非法
+}</code></pre> 
+       <p>替换上面的写法, 应该这样写:</p> 
+       <pre mode="javascript" theme="chrome"><code>$bar: dynamic(if(something, red, blue));</code></pre> 
+       <p>为确保下面即将讨论到的赋值和提升行为，这种书写要求是必要的。 </p> 
+       <p>动态变量可以在它们使用或者不使用<code>dynamic()</code> 声明之后赋值.</p> 
+       <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
+
+$bar: red;  // 重新给 $bar 赋值 red
+
+$bar: green !default;  // 重新给 $bar 赋值 green
+
+@debug $bar;  // green</code></pre> 
+       <p>没有“default dynamic”这种东西.</p> 
+       <h4 id="Evaluation">计算</h4> 
+       <p>动态变量何时<em>计算</em>依赖于顺序, 但不是变量声明顺序. 变量声明顺序仅仅应用于层级个人变量赋值. 看上面的例子即可明白. 这种顺序同时意味着，即使我们移除第一个 <code>$bar</code>的设置，其最终也是相同结果。</p> 
+       <p>考虑更复杂的例子:</p> 
+       <pre mode="javascript" theme="chrome"><code>$bar: dynamic(mix($colorA, $colorB, 20%));
+
+$bar: dynamic(lighten($colorC, 20%));</code></pre> 
+       <p><code>$bar</code> 原始的表达式使用<code>$colorA</code> 和 <code>$colorB</code>. 那是 <code>$bar</code>唯一的赋值, 然后<code>$bar</code>会依赖这两个变量重新计算赋值。故而<code>$bar</code> 被重新计算赋值，紧接着使用<code>$colorC</code>, 总之, <code>$bar</code> 仅仅依赖 <code>$colorC</code>. <code>$bar</code> 原始的赋值可能永远不会发生。</p> 
+       <h4 id="Hoisting">提升</h4> 
+       <p>为了完成这一切, 在任何其它Sass代码执行之前，Fashion会收集所有动态变量并且计算他们的值. 换而言之, 类似于JavaScript 变量, 动态变量提升到顶层.</p> 
+       <h4 id="Elevation">Elevation</h4> 
+       <p>当用动态变量给变量赋值时, 这些变量就已经被<em>上升</em>到动态变量.</p> 
+       <pre mode="javascript" theme="chrome"><code>$foo: blue;
+
+$bar: dynamic($foo);</code></pre> 
+       <p>即使 <code>$foo</code>被声明成普通变量, 但由于 <code>$bar</code> 使用了 <code>$foo</code>, Fashion 将 <code>$foo</code> 上升到动态变量.</p> 
+       <p><strong>备注:</strong> 这也同时表明 <code>$foo</code> 必须服从动态变量的规则.</p> 
+       <p>最大化从上版本移植的Sencha Cmd支持这种行为. 当普通变量被提升至动态变量,会产生警告. 在接下来的发布, 这个警告会变成一个错误. 我们推荐尽可能的用<code>dynamic()</code>声明变量.</p> 
+       <h3 id="Extensions___Requiring_JavaScript">扩展 - 要求 JavaScript</h3> 
+       <p>您可以通过编写JavaScript代码扩展Fashion. 引用这些来自Sass的代码需要使用<code>require()</code>. 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>require(&quot;my-module&quot;);
+
+// or
+
+require(&quot;../path/file.js&quot;); // relative to scss file</code></pre> 
+       <p>在内部, Fashion 使用 <a href="../../../wiki.ecmascript.org/doku.php@id=harmony_3Aspecification_drafts#august_24_2014_draft_rev_27">ECMAScript 6</a> (ES6) <code>System.import</code> API (or its <a href="../../../https@github.com/ModuleLoader/es6-module-loader">polyfill</a> via <a href="../../../https@github.com/systemjs/systemjs">SystemJS</a>) 去支持加载标准的JavaScript 模块.</p> 
+       <p>用pre-ES6语法写一个模块可以这样写:</p> 
+       <pre mode="javascript" theme="chrome"><code>exports.init = function(runtime) {
+    runtime.register({
+        magic: function (first, second) {
+            // ...
+        }
+    });
+};</code></pre> 
+       <p>使用 SystemJS, 您可以在任何浏览器中编写ES6代码启用“transpilers” . 在ES6中写法如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>module foo {
+    export function init (runtime) {
+        runtime.register({
+            magic: function (first, second) {
+                // ...
+            }
+        });
+    }
+}</code></pre> 
+       <h2 id="Upgrading">升级</h2> 
+       <h3 id="Dynamic_Variables">动态变量</h3> 
+       <p>当升级到Ext JS 6, 内部使用动态变量会影响这些变量如何在应用程序或者自定义主题里赋值. 尽管不是必要的, 我们推荐您使用!dynamic改变变量赋值. 多数情况下可以不加思索的用!dynamic替换!default(早前发布版本的方法):</p> 
+       <pre mode="javascript" theme="chrome"><code>// before:
+
+$base-color: green !default;
+
+// after:
+
+$base-color: dynamic(green);</code></pre> 
+       <p>动态变量赋值更严格，如果有错误也会更加容易发现.</p> 
+       <h3 id="Compass_Extensions">Compass 扩展</h3> 
+       <p>Compass依赖Ruby代码的功能将不再支持，因为已经不用Ruby了. 同样的功能已经用JavaScript代替了. 在许多情形下，在JavaScript中使用 <code>require()</code> 实现这些缺失的功能. 不管怎样，部分来自Compass的Sass代码，已经包含在Fashion里，所以并不是所有的Compass功能会被影响. 一般来讲, 如果您没有使用任何自定义或者基于Ruby的Compass功能，您将可能不需要作任何变动.</p> 
+       <h2 id="Conclusion">结语</h2> 
+       <p>我们对Fashion很是兴奋，希望你们也是如此! 快速为您的应用构建主题从未如此简单过, 并且现在可以在同一套框架语言下完成扩展Sass. 请务必通过<a href="../../../https@www.sencha.com/forum/forumdisplay.php@8-Sencha-Cmd">论坛</a>给我们留下反馈.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        最新更新 
+
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../www.sencha.com/products">产品</a> | 
+    <a href="../../../www.sencha.com/services">服务</a> | 
+    <a href="../../../www.sencha.com/support">支持</a> | 
+    <a href="../../../www.sencha.com/training">训练</a> | 
+    <a href="../../../www.sencha.com/partners">合作伙伴</a> | 
+    <a href="../../../www.sencha.com/blog">社区</a> | 
+    <a href="../../../www.sencha.com/company">企业</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha 测试 </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE 插件 </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha 检查器 </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web 应用管理器 </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha 架构 </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../https@s.adroll.com" : "../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script src='../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script>
+  <script>Munchkin.init('374-WES-121');</script>  
+ 
+</body></html>

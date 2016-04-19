@@ -1,0 +1,653 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | 拖放</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Defining_drag_and_drop" title="定义拖放">定义拖放</a> 
+       <a class="toc-page-h2" href="#Organizing_the_drag_and_drop_classes" title="组织拖放类">组织拖放类</a> 
+       <a class="toc-page-h2" href="#The_task_at_hand" title="The task at hand">The task at hand</a> 
+       <a class="toc-page-h2" href="#Step_1__Starting_with_drag" title="第一步:开始拖">第一步:开始拖</a> 
+       <a class="toc-page-h2" href="#Peeking_at_how_drag_nodes_are_affected" title="抢先看看如何有效拖动节点">抢先看看如何有效拖动节点</a> 
+       <a class="toc-page-h2" href="#Step_2__Repairing_an_invalid_drop" title="第二步:修复一个无效的拖放">第二步:修复一个无效的拖放</a> 
+       <a class="toc-page-h2" href="#Step_3__Configuring_the_drop_targets" title="第三步:配置拖放的目标">第三步:配置拖放的目标</a> 
+       <a class="toc-page-h2" href="#Step_4__Completing_the_drop" title="第四步:完成拖放">第四步:完成拖放</a> 
+       <a class="toc-page-h2" href="#Step_5__Adding_drop_invitation" title="第五步:增加拖放邀请">第五步:增加拖放邀请</a> 
+       <a class="toc-page-h2" href="#It_doesn_t_stop_here" title="还未完成,继续">还未完成,继续</a> 
+       <a class="toc-page-h2" href="#总结" title="Summary">总结</a> 
+       <a class="toc-page-h2" href="#Author" title="作者">作者</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>拖放</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>对开发者来说,最强大的交互设计模式就是“拖放.” 我们真的没有经过太多的思考就使用拖放 - 尤其是在正确的使用时.  这里是5个简单的步骤来简洁的实现拖放.</p> 
+       <h2 id="Defining_drag_and_drop">定义拖放</h2> 
+       <p>拖的操作,本质上是,一个在一个用户界面元素上鼠标按钮按住不动而鼠标移动的按下手势.放就是在拖的动作后松开鼠标按钮. 从高一级别来看,拖放决定可以由下面的流程图来总结.</p> 
+       <p><img src="images/dnd_drag_logic.jpg" alt="Ext 拖放" /></p> 
+       <p>为加快我们的开发速度, Ext JS 为我们提供了这个 Ext.dd 类来管理这些基本的决定. 在这个向导中,我们将用代码演示放的出现和取消,无效放的修复和一个成功的拖放完成会发生什么.</p> 
+       <h2 id="Organizing_the_drag_and_drop_classes">组织拖放类</h2> 
+       <p>第一眼看 Ext.dd 文档中的类可能会有些恐怖.但是如果我们花一点时间还看这些类,我们会看到它们都有一个来自DragDrop(拖放)类的词根并且大多数可以归类为拖或放组. 再多花点时间和深入挖掘,我们看到这些类可进一步归类到单节点和多节点拖放操作.</p> 
+       <p><img src="images/diagram.jpg" alt="Ext 拖放" /></p> 
+       <p>为学习拖放的基础我们要聚焦在运用一个简单的对DOM节点拖和放操作上.为实现这个,我们使用 DD 和 DDTarget类,这些类提供它们拖放操作的实现.然页,我们需要讨论在我们开始实现拖放前我们的目的是什么.</p> 
+       <h2 id="The_task_at_hand">身边的任务</h2> 
+       <p>假定我们被要求开发一个提供一个汽车租赁公司提供一个可以放置他们的轿车、货车在三种状态之一:有效、已出租或者正在修理状态的应用.轿车和货车只允许放在它自己对应的"有效的"容器中.       </p>
+       <p>一开始, 我们必须让这些轿车和货车处于“dragable”可拖动状态. 为完成这个,我们使用  DD. 我们要将已出租、修理和车辆容器设为 “drop targets”放置的目标.为完成这个我们将使用 DDTarget. 最后,我们使用不同的拖放组来帮助执行这个需求,那就是轿车和货车只能放在它们相应的 “available(有效的)” 容器中. 现在我们可以通过添加拖操作给这些轿车和货车的代码了.</p> 
+       <h2 id="Step_1__Starting_with_drag">第一步:开始拖</h2> 
+       <p>为配置车辆的 DIV 元素为可拖动的,我们需要获得一个列表然后循环将它们实例化为一个DD的新实例.下面就是我们如何来做到的.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.onReady(function() {
+        // Create an object that we'll use to implement and override drag behaviors a little later
+
+        var overrides = {};
+
+        // Configure the cars to be draggable
+        var carElements = Ext.get('cars').select('div');
+        Ext.each(carElements.elements, function(el) {
+            var dd = Ext.create('Ext.dd.DD', el, 'carsDDGroup', {
+                isTarget  : false
+            });
+            //Apply the overrides object to the newly created instance of DD
+            Ext.apply(dd, overrides);
+        });
+
+        var truckElements = Ext.get('trucks').select('div');
+        Ext.each(truckElements.elements, function(el) {
+            var dd = Ext.create('Ext.dd.DD', el, 'trucksDDGroup', {
+                isTarget  : false
+            });
+            Ext.apply(dd, overrides);
+        });
+    });</code></pre> 
+       <p>所有的拖放类都设计成借助于覆写它们的方法来实现.这就是为什么上面的代码片段, 我们创建了一个叫做 overrides 的空对象,这个对象后面会覆写我们需要的动作的特定代码. 通过使用 DomQuery选择方法来查询轿车容器内所有的子div元素的列表.为使这些轿车和货车元素可以拖动,我们创建一个DD的新实例,传递这台轿车或货车元素等待拖动和将要参与的拖放组.注意车辆类型有它们自己相关的拖放组.后面当我们设置已出租和处理修理容器作为放下目标时这是非常重要的要记住的一点.同时注意我们通过使用Ext.apply 来应用这个 overrides 对象为一个新创建的 DD 实例,这样便于增加属性和方法给一个已经存在的对象.在我们继续我们的实现前,我们需要花一点时间来分析当我们在屏幕上拖动一个元素时会发生什么.有了这个理解, 余下的实现就迎刃而解.</p> 
+       <h2 id="Peeking_at_how_drag_nodes_are_affected">抢先看看如何有效拖动节点</h2> 
+       <p>首先要注意的是当我们拖动轿车或货车元素时可能会在要放下的地方阻塞.我们才刚刚开始实现，现在问题不大.最重要的是理解如何影响拖动节点. 这个有助于我们在编写代码时当它们放下到任意一个不是一个有效的落下目标,这就是我们熟知的&quot;无效落下&quot;,返回的原始位置.下面的示例使用 FireBug 的html检查面板并且高亮显示了在Camaro元素上的一个拖动操作时的变化.</p> 
+       <p><img src="images/dnd_inspection.jpg" alt="Ext 拖放" /></p> 
+       <p>在一个拖动操作过程中我们观察拖动元素时,我们看到这个元素上添加了一个包含三个 CSS值的样式属性:position,top和left.更一步观察发现当节点被拖动时这个位置属性的值会设为 relative并且top和left的属性被更新.拖动动作完成后,这个样式属性还原为里面包含的样式原样. 这就是当我们编写一个代码修复一个无效的落下时,我们不得不清理的.直到我们设置了正确的落下目标,所有落下操作都会认为无效.</p> 
+       <h2 id="Step_2__Repairing_an_invalid_drop">第二步:修复一个无效的拖放</h2> 
+       <p>修复一个无效的落下最快的途径就是重设在拖动操作中的样式属性. 这意味着拖动元素会在鼠标下显示,并且显示在它的原始位置,这个很令人相当烦. 为使得更为顺畅我们将使用 Ext.Fx来将这一动作动化化.记住拖放类设计有可覆写的方法. 为实施这一修复,我们需要覆写 b4StartDrag, onInvalidDrop 和 endDrag 方法. 让我们添加下面的方法给我们上面的 overrides对象然后我们来讨论这是什么和可以做什么.</p> 
+       <pre mode="javascript" theme="chrome"><code>var overrides = {
+        // Called the instance the element is dragged
+        b4StartDrag : function() {
+            // Cache the drag element
+            if (!this.el) {
+                this.el = Ext.get(this.getEl());
+            }
+
+            //Cache the original XY Coordinates of the element, we'll use this later.
+            this.originalXY = this.el.getXY();
+        },
+        // Called when element is dropped in a spot without a dropzone, or in a dropzone without matching a ddgroup.
+        onInvalidDrop : function() {
+            // Set a flag to invoke the animated repair
+            this.invalidDrop = true;
+        },
+        // Called when the drag operation completes
+        endDrag : function() {
+            // Invoke the animation if the invalidDrop flag is set to true
+            if (this.invalidDrop === true) {
+                // Remove the drop invitation
+                this.el.removeCls('dropOK');
+
+                // Create the animation configuration object
+                var animCfgObj = {
+                    easing   : 'elasticOut',
+                    duration : 1,
+                    scope    : this,
+                    callback : function() {
+                        // Remove the position attribute
+                        this.el.dom.style.position = '';
+                    }
+                };
+
+                // Apply the repair animation
+                this.el.setXY(this.originalXY[0], this.originalXY[1], animCfgObj);
+                delete this.invalidDrop;
+            }
+        },</code></pre> 
+       <p>在上面的代码中,我们开始覆写 b4StartDrag 方未予, 这个是拖动元素开始在屏幕上拖动时的瞬间被调用然后将它放到一个理想的位置来缓存这个拖动元素和原始的 XY 坐标 - 在这个过程中我们后面会用到. 然后,我们覆写 onInvalidDrop, 这个在一个拖动节点落下到任意一个不是参与同一个拖放组的任意落下目标小时被调用.这个覆写简单的设置一个本地的 invalidDrop 属性为 true, 这个在下一个方法中会被用到. 最后一个方法我们履写 endDrag 方法, 这个在拖动元素不再在屏幕上拖动并且拖动元素不再由鼠标移动控制时调用. 这个覆写函数以动画的形式将移动拖回元素到它原始座标 X和Y位置.在动画的后面我们通过使用 elasticOut 简单的提供一个很酷和有趣的跳跃动画.</p> 
+       <p><img src="images/dnd_camaro_repair.jpg" alt="Ext 拖放" /></p> 
+       <p>好了,现在我们修复了的操作完成.为了在落下申请和有效落下操作工作, 我们需要设置落下目标.</p> 
+       <h2 id="Step_3__Configuring_the_drop_targets">第三步:配置拖放的目标</h2> 
+       <p>我们的需求命令是我们允许轿车和货车能够落下到已出租和正在修理容器中也包含它们相应的原始容器.为完成这个,我们需要实例化  DDTarget 类. 这里就是我们怎么完成的.</p> 
+       <pre mode="javascript" theme="chrome"><code>// Instantiate instances of Ext.dd.DDTarget for the cars and trucks container
+var carsDDTarget = Ext.create('Ext.dd.DDTarget', 'cars','carsDDGroup');
+var trucksDDTarget = Ext.create('Ext.dd.DDTarget', 'trucks', 'trucksDDGroup');
+
+// Instantiate instances of DDTarget for the rented and repair drop target elements
+var rentedDDTarget = Ext.create('Ext.dd.DDTarget', 'rented', 'carsDDGroup');
+var repairDDTarget = Ext.create('Ext.dd.DDTarget', 'repair', 'carsDDGroup');
+
+// Ensure that the rented and repair DDTargets will participate in the trucksDDGroup
+rentedDDTarget.addToGroup('trucksDDGroup');
+repairDDTarget.addToGroup('trucksDDGroup');</code></pre> 
+       <p>在上面的代码片段中,我们为轿车、货车和已出租和正在维修元素设置了落下目标.注意 轿车容器元素只参与 “carsDDGroup” 组,而货车容器元素参与 “trucksDDGroup”组. 这个帮助执行轿车和货车只能落下到它们原始的容器中的需求.然后,我们为已出租、正在修理元素实例化 DDTarget 实例.开始, 它们配置成只参与 “carsDDGroup” 组. 为了允许它们也能参与 “trucksDDGroup” 组, 我们必须使用借助 addToGroup 来增加. 好了,现在我们配置好了我们的落下目标.我们来看看当我们落下轿车或货车在一个有效的落下元素上会发生什么.</p> 
+       <p><img src="images/dnd_drops_no_onDragDrop.jpg" alt="Ext 拖放" /></p> 
+       <p>在练习落下目标里,我们看到拖动元素刚好呆在了它落下的地方.这就是,图片能够落在一个落下目标的任意处并在呆在那.这意味着我们落下的实现还没完成.为完成这个,我们需要  “complete drop” 操作的实际代码,意味着为我们以前创建的DD实例进行另一次覆写.</p> 
+       <h2 id="Step_4__Completing_the_drop">第四步:完成拖放</h2> 
+       <p>为完成落下,我们需要使用 DOM 工具真正的拖动一个在它父元素中的元素到落下的目标元素中.这个由覆写 DD   onDragDrop 方法来实现. 添加下面的方法到这个覆写对象.</p> 
+       <pre mode="javascript" theme="chrome"><code>var overrides = {
+    ...
+    // Called upon successful drop of an element on a DDTarget with the same
+    onDragDrop : function(evtObj, targetElId) {
+        // Wrap the drop target element with Ext.Element
+        var dropEl = Ext.get(targetElId);
+
+        // Perform the node move only if the drag element's
+        // parent is not the same as the drop target
+        if (this.el.dom.parentNode.id != targetElId) {
+
+            // Move the element
+            dropEl.appendChild(this.el);
+
+            // Remove the drag invitation
+            this.onDragOut(evtObj, targetElId);
+
+            // Clear the styles
+            this.el.dom.style.position ='';
+            this.el.dom.style.top = '';
+            this.el.dom.style.left = '';
+        }
+        else {
+            // This was an invalid drop, initiate a repair
+            this.onInvalidDrop();
+        }
+    },</code></pre> 
+       <p>在上面的覆写中,拖动元素被 移动到落下元素中,但只是不在拖动元素自己所在的父节点中.拖动元素移动后,样式被从拖动元素中清除掉了.如果拖动元素和拖动元素的父节点相同,我们确信一个关于修复的操作会通过调用 this.onInvalidDrop 发生.</p> 
+       <p><img src="images/drag_and_drop_working_without_invitation.jpg" alt="Ext 拖放" /></p> 
+       <p>一个成功的落下,一个拖动元素会从它们的父元素中移动落下目标元素中.那用户怎么知道他们是悬在一个有效的落下目标上列?我们通过配置落下申请给以用户一些可视化的反馈.</p> 
+       <h2 id="Step_5__Adding_drop_invitation">第五步:增加拖放邀请</h2> 
+       <p>为了使拖放更加有用,我们需要在用户在落下操作是否能够成功完成时提供一些反馈.这意味着我们将必须覆写 onDragEnter 和 onDragOut 方法,在覆写的对象中添加最后这二个方法.</p> 
+       <pre mode="javascript" theme="chrome"><code>var overrides = {
+        ...
+        // Only called when the drag element is dragged over the a drop target with the
+same ddgroup
+        onDragEnter : function(evtObj, targetElId) {
+            // Colorize the drag target if the drag node's parent is not the same as the
+drop target
+            if (targetElId != this.el.dom.parentNode.id) {
+                this.el.addCls('dropOK');
+            }
+            else {
+                // Remove the invitation
+                this.onDragOut();
+            }
+        },
+        // Only called when element is dragged out of a dropzone with the same ddgroup
+        onDragOut : function(evtObj, targetElId) {
+            this.el.removeCls('dropOK');
+        }
+    };</code></pre> 
+       <p>在上面的代码中,我们覆写了 onDragEnter 和 onDragOut 方法, 两者都只当拖动的元素与同一个拖放组中参与的目标元素交互时有用.当一个拖动元素在拖动模式时, onDragEnter 方法只在鼠标光标第一次停在落下目标的边界中时被调用. 同样地, 在拖动模式中,onDragOut 只有当鼠标光标第一次拖开落下目标边界时才被调用.</p> 
+       <p><img src="images/drag_and_drop_working_with_invitation.jpg" alt="Ext 拖放" /></p> 
+       <p>通过添加 onDragEnter 和 onDragOut 方法的覆写,当鼠标光标第一次进入一个有效落下目标上时拖动元素将会变绿,而当它离开落下目标或者落下时将不再有绿色背景. 这样就通过 DOM 元素完成了拖放的实现.</p> 
+       <h2 id="It_doesn_t_stop_here">还未完成,继续</h2> 
+       <p>拖放能被应用到在 Ext JS 框架中一切组件中.这里是一些你可以学习到如何为各种各样控件实现拖放的一些例子.:</p> 
+       <ul> 
+        <li><a href="../../../../dev.sencha.com/ext/5.0.0/examples/kitchensink/#dd-grid-to-grid">GridPanel 到 GridPanel</a></li> 
+        <li><a href="../../../../dev.sencha.com/ext/5.0.0/examples/kitchensink/#dd-grid-to-form">Grid 到 FormPanel</a></li> 
+        <li><a href="../../../../dev.sencha.com/ext/5.0.0/examples/kitchensink/#dd-field-to-grid">Ext.form.Field 到 GridPanel cell</a></li> 
+        <li><a href="../../../../dev.sencha.com/ext/5.0.0/examples/dd/dragdropzones.html">使用 DragZone 和 DropZone</a></li> 
+       </ul> 
+       <h2 id="总结">总结</h2> 
+       <p>今天,我们学习了通过一级拖放实现类如何实现端到端的 DOM 节点拖放实现. 从高级类来看,我们定义和讨论了什么是拖放和如何考虑框架的条款. 我们也学到了拖放类能够按拖放的行为和它们是否支持单个或多个拖放操作来分组. 当实现这些动作时,我们说明了 dd 类来帮助决定一些行为,并且我们负责为这些最终行为编写代码.我们希望你喜欢这些对 DOM 节点拖放操作的基本功能的演示.我们期待着在未来在这个主题上带给你更多的文章.</p> 
+       <h2 id="Author">作者</h2> 
+       <p><em>Written by Jay Garcia</em></p> 
+       <p>Mr. Garcia is the 作者 of Ext JS in Action and Sencha Touch in Action. He has been an evangelist of Sencha-based JavaScript frameworks since 2006. Jay is also Co-Founder and CTO of Modus Create, a digital agency focused on leveraging top talent to develop high quality Sencha-based applications. Modus Create is a Sencha Premier partner.</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

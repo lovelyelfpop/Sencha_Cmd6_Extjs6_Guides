@@ -1,0 +1,745 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | 加载器(Microloader)</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="microloader.html" title="加载器(Microloader)">加载器(Microloader)</a></li> 
+      <li class="file"><a href="resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#The_Manifest" title="The Manifest">清单文件(Manifest)</a> 
+       <a class="toc-page-h3" href="#app_json" title="app.json">app.json</a> 
+       <a class="toc-page-h4" href="#Ext_manifest" title="Ext.manifest">Ext.manifest</a> 
+       <a class="toc-page-h4" href="#The_script_Tag" title="The script Tag">script 标签</a> 
+       <a class="toc-page-h2" href="#Defaults_and_Customization" title="Defaults and Customization">默认设置和自定义设置</a> 
+       <a class="toc-page-h3" href="#indexHtmlPath" title="indexHtmlPath">indexHtmlPath</a> 
+       <a class="toc-page-h3" href="#framework" title="framework">framework</a> 
+       <a class="toc-page-h3" href="#theme" title="theme">theme</a> 
+       <a class="toc-page-h3" href="#toolkit" title="toolkit">toolkit</a> 
+       <a class="toc-page-h3" href="#js" title="js">js</a> 
+       <a class="toc-page-h3" href="#css" title="css">css</a> 
+       <a class="toc-page-h3" href="#requires" title="requires">requires</a> 
+       <a class="toc-page-h3" href="#output" title="output">output</a> 
+       <a class="toc-page-h3" href="#Application_Cache" title="Application Cache">应用程序缓存(Application Cache)</a> 
+       <a class="toc-page-h3" href="#Local_Storage_Cache" title="Local Storage Cache">本地缓存(Local Storage Cache)</a> 
+       <a class="toc-page-h3" href="#More" title="More">更多</a> 
+       <a class="toc-page-h3" href="#Build_Profiles" title="Build Profiles">用于构建的配置文件(Build Profiles)</a> 
+       <a class="toc-page-h2" href="#Generating_The_Manifest" title="Generating The Manifest">生成清单(Manifest)</a> 
+       <a class="toc-page-h2" href="#Packages" title="Packages">包(Packages)</a> 
+       <a class="toc-page-h3" href="#Load_Order" title="Load Order">加载顺序</a> 
+       <a class="toc-page-h2" href="#Loading_The_Manifest" title="Loading The Manifest">加载清单(Manifest)</a> 
+       <a class="toc-page-h3" href="#Embedded_Manifest" title="Embedded Manifest">嵌入式清单(Embedded Manifest)</a> 
+       <a class="toc-page-h3" href="#Named_Manifest" title="Named Manifest">命名的清单(Named Manifest)</a> 
+       <a class="toc-page-h3" href="#Dynamic_Manifest" title="Dynamic Manifest">动态的清单(Dynamic Manifest)</a> 
+       <a class="toc-page-h4" href="#Platform_Detection___Responsiveness" title="Platform Detection / Responsiveness">平台检测(Platform Detection) / 响应式(Responsiveness)</a> 
+       <a class="toc-page-h4" href="#Tags_specified_by_the_manifest" title="Tags specified by the manifest">清单内指定的标记(Tags)</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>加载器(Microloader)</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>“加载器(Microloader)” 是 Sencha 的数据驱动(data-driven), 用来动态加载 JavaScript 和 CSS. 加载器(Microloader) 是 Sencha Cmd 生成的应用程序的一部分. 本指南会让你对 Microloader 的作用有个深刻的理解，以及如何对它进行调整优化以便适应你特定的需求.</p> 
+       <p>需要澄清的一点是，Ext 6 用的 Microloader 不同于 Ext JS 5 或 Sencha Touch 的 Microloader. Ext JS 6 的 Microloader 不仅提供了和 Sencha Touch 的 microloader 一样的全部功能, 而且还有一些改进，以及在<code>&quot;app.json&quot;</code>文件中增加了新的配置, 我们稍后讨论. 所有的 microloader 实现由 Sencha Cmd 提供,  microloader 的升级则通过“sencha app upgrade” 这个过程.</p> 
+       <h2 id="The_Manifest">清单文件(Manifest)</h2> 
+       <h3 id="app_json">app.json</h3> 
+       <p>这个文件是为你的应用程序指定详细配置的地方. 这个配置文件是 Sencha Cmd 在构建过程要用到的. Sencha Cmd 解析 <code>&quot;app.json&quot;</code> 里的内容，并把清单结果传递给 Microloader 使用. 最后, Ext JS 自身也在运行时参照这个清单文件的配置.</p> 
+       <h4 id="Ext_manifest">Ext.manifest</h4> 
+       <p>当你启动你的应用程序, 你会发现 <code>&quot;app.json&quot;</code> 处理过的内容被加载到了“Ext.manifest”. Ext JS 6 使用 Ext.manifest 中你指定的属性，去做一些比如启用兼容层的事情. Microloader 支持各种选项，这个我们稍后讨论.</p> 
+       <h4 id="The_script_Tag">script 标签</h4> 
+       <p>要使用 Microloader, 你的页面需要包含下面的 script 标签:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script id=&quot;microloader&quot; data-app=&quot;12345&quot; type=&quot;text/javascript&quot; src=&quot;bootstrap.js&quot;&gt;&lt;/script&gt;</code></pre> 
+       <p>默认情况下, 这个 script 标签只在开发时使用，然后会在 build 过程中被替换掉. <em>data-app</em> 属性已经帮你自动生成. 它是一个唯一 ID编号，用来在本地数据存储的时候防止冲突.</p> 
+       <h2 id="Defaults_and_Customization">默认设置和自定义设置</h2> 
+       <p>Sencha Cmd 生成的<code>&quot;app.json&quot;</code> 文件包含了很多属性，你可能需要调整它们. 这些属性上面有注释文档，解释了它们各自的作用.</p> 
+       <p>假如你要升级一个项目, 你的 <code>&quot;app.json&quot;</code> 也许不包含所有的属性配置. 升级之后, 如果丢失了某些属性配置，可以在“.sencha/app/app.defaults.json”找到它们的默认值.</p> 
+       <p>以下属性用得比较多.</p> 
+       <h3 id="indexHtmlPath">indexHtmlPath</h3> 
+       <p>这是应用程序的 HTML 文档的路径 (相对于 <code>&quot;app.json&quot;</code> 的路径). 默认值是 “index.html”. 如果你的服务器用的是 PHP, ASP, JSP或其它技术, 你可以修改它指向合适的文件，像这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;indexHtmlPath&quot;: &quot;../page.jsp&quot;</code></pre> 
+       <p>如果你修改了这个设置, 你可能还需要修改“output” 选项 (往下看).</p> 
+       <h3 id="framework">framework</h3> 
+       <p>框架的名字; 可能的值是 “ext”或 “touch”. 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;framework&quot;: &quot;ext&quot;</code></pre> 
+       <h3 id="theme">theme</h3> 
+       <p>对于 Ext JS 应用程序, 这是主题包的名称. 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;ext-theme-crisp&quot;</code></pre> 
+       <h3 id="toolkit">toolkit</h3> 
+       <p>对于 Ext JS 6 应用程序, 这是工具包的名称(toolkit package). 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;toolkit&quot;: &quot;classic&quot;</code></pre> 
+       <h3 id="js">js</h3> 
+       <p>一个数组，描述了需要加载的 JavaScript 文件. 默认地, Ext JS 6 应用程序中内容如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;js&quot;: [{
+    &quot;path&quot;: &quot;app.js&quot;,
+    &quot;bundle&quot;: true
+}]</code></pre> 
+       <p>这些项目指定了你应用程序的入口. “bundle” 标识表示的是，当你执行“sencha app build”之后, 这一项会被最后合并输出的 js 文件所替换. 你可以在这个数组中增加其他文件:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;js&quot;: [{
+    &quot;path&quot;: &quot;library.js&quot;,
+    &quot;includeInBundle&quot;: true
+},{
+    &quot;path&quot;: &quot;app.js&quot;,
+    &quot;bundle&quot;: true
+}]</code></pre> 
+       <p>当你增加了其它文件, 有一些可选属性表示构建(build)过程中，如何处理这些文件. 例如, 上面的例子, “library.js” 会被包含到最后合并的文件中，并从运行时的 清单(Ext.manifest) 中移除.</p> 
+       <p>如果你删除了 “includeInBundle”, 那么 “library.js” 会留在应用程序文件夹内，并拷贝到 build 后的输出目录下. 这一项会一直留在清单(manifest) 中，单独被 Microloader 加载</p> 
+       <p>如果需要 Microloader 跳过加载这一项(并且不拷贝文件到 build 后的输出目录), 可以像下面这样添加“remote” 属性:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;js&quot;: [{
+    &quot;path&quot;: &quot;library.js&quot;,
+    &quot;remote&quot;: true
+},{
+    &quot;path&quot;: &quot;app.js&quot;,
+    &quot;bundle&quot;: true
+}]</code></pre> 
+       <p>虽然你可以在这个数组中添加, 但是大部分的 依赖文件都应该在代码中或者<code>&quot;app.json&quot;</code>中 (引入包的时候)用 “requires” 关键字来引入.</p> 
+       <p><strong>注意</strong>: 对于 Sencha Touch, 一边要在“js”数组中写“sencha-touch-debug.js”. 对于 Ext JS 6 则不需要这一项，因为“framework” 这个设置就足够了.</p> 
+       <h3 id="css">css</h3> 
+       <p>你的 CSS 资源文件 和 JavaScript 文件的处理稍有不同. 因为在 Sencha Cmd 应用程序中, CSS 由 <code>.scss</code> 代码编译而来.  “css” 属性的初始值可能如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;css&quot;: [{
+    &quot;path&quot;: &quot;boostrap.css&quot;,
+    &quot;bootstrap&quot;: true
+}],</code></pre> 
+       <p>这个 CSS 文件只是一个简单的占位，用来引入<code>&quot;sass&quot;</code> 文件夹最后编译出来的内容. “bootstrap” 标识表示的是，当你执行“sencha app build”之后, 这一项会被最后合并输出的 CSS 文件所替换. For a build, 编译过后的 CSS 文件会追加至清单(manifest) 的“css”数组中.</p> 
+       <p>起初, “bootstrap.css”引入框架中的主题，这个文件内容如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>@import &quot;..../ext-theme-neptune/build/ext-theme-neptune-all.css&quot;;</code></pre> 
+       <p>当你 build 了你的应用程序之后, 此文件会被改为指向最新变异的 CSS 文件. 例如，你运行了“sencha app build”, 产生的 CSS 文件会被“bootstrap.css”引入，像这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>@import &quot;..../build/..../app-all.css&quot;;</code></pre> 
+       <p>“css” 里的这些项目也支持“remote” 属性. 如果不设置 remote，那么和上面的“js” 那些项目一样，文件会拷贝到 build 后的输出目录.</p> 
+       <h3 id="requires">requires</h3> 
+       <p>这个数组存放了 引入的包(package) 的名称. 当 Sencha Cmd 处理到这些列表项的时候, 如果遇到 workspace 中不存在的包，它会自动下载包并解压 . 在包(Packages) 的 <code>&quot;package.json&quot;</code>文件中同样可以有 <code>requires</code>块 . 也一样会自动按需下载并解压.</p> 
+       <p>这些包的名字也可以包含一个版本号. 更多关于指定包版本的内容, 请看 <a href="cmd_packages/cmd_packages.html">Sencha Cmd 包(Packages)</a>.</p> 
+       <h3 id="output">output</h3> 
+       <p>“output”对象让你可以控制输出文件生成到哪里以及如何生成. 这个对象可以控制 build 输出的很多方面. 上面的 <code>indexHtmlPath</code>, 我们告诉 Sencha Cmd 页面路径是 <code>&quot;../page.jsp&quot;</code>. 为了继续下去, 我们通过 <code>output</code> 来告诉 Sencha Cmd 构建后的页面存放在什么位置(相对于编译后的 JavaScript 和 CSS 文件). 为了保持和原来一样的相对位置, 我们应当在<code>&quot;app.json&quot;</code>中添加下面的代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;output&quot;: {
+    &quot;page&quot;: {
+        &quot;path&quot;: &quot;../page.jsp&quot;,
+        &quot;enable&quot;: false
+    },
+    appCache: {
+        &quot;enable&quot;: false
+    },
+    &quot;manifest&quot;: {
+        &quot;name&quot;: &quot;bootstrap.js&quot;
+    }
+}</code></pre> 
+       <p>这里, 我们添加了一个“enable”属性并设置为了 false. 这是为了告诉 Sencha Cmd 这个文件就是最终页面，而且不会通过拷贝代码的形式生成它 (也就是 “indexHtmlPage”中指定的文件).</p> 
+       <p>因为我们不生成这个页面文件, Microloader script 标签的 src 仍然写的是“bootstrap.js”. 上面的“manifest” 选项指示 Sencha Cmd 也以此名字生成编译后的 Microloader 文件. 这种用法在服务端模板语言环境中是很常见的，比如 JSP 或 ASP, 等等.</p> 
+       <h3 id="Application_Cache">应用程序缓存(Application Cache)</h3> 
+       <p>应用程序缓存 是一个清单，表示那些文件需要被浏览器缓存，以供离线使用. 要启用这个功能，只要把 “output”块中<code>appCache</code> 的 <code>enable</code> 标识设为 true. 例如:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;output&quot;: {
+    &quot;page&quot;: &quot;index.html&quot;,
+    &quot;appCache&quot;: {
+        &quot;enable&quot;: true
+    }
+}</code></pre> 
+       <p><code>appCache</code> 属性是用于生成 HTML5 应用程序缓存清单文件的. 如果设为 true，那么则会根据 app.json 中的顶层<code>appCache</code> 配置项指定的内容来生成清单文件. 这个配置项的内容如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;appCache&quot;: {
+    &quot;cache&quot;: [
+        &quot;index.html&quot;
+    ],
+    &quot;network&quot;: [
+        &quot;*&quot;
+    ],
+    &quot;fallback&quot;: []
+}</code></pre> 
+       <h3 id="Local_Storage_Cache">本地缓存(Local Storage Cache)</h3> 
+       <p>本地缓存系统是浏览器内置的一个独立的离线缓存系统. 资源通过键值对存放在本地存储中，启动过程中，这些资源文件会先被请求，然后再请求其它远程资源. 这样，应用程序可以快速加载，而不需要网络连接. 这也可以实现增量更新，意思就是只有发生过改动的资源文件、css 或 js 才会远程重新加载. 然后这些文件会重新进入本地缓存，以展现给用户. </p> 
+       <p>可以通过设置各个资源文件的<code>update</code> 属性来配置是否缓存. 它的值可以是 <code>&quot;full&quot;</code> 或<code>&quot;delta&quot;</code>. 下面的例子同时启用了 JS 和 CSS 资源文件的本地缓存. </p> 
+       <pre mode="javascript" theme="chrome"><code>// app.js 增量更新
+&quot;js&quot;: [
+    {
+        &quot;path&quot;: &quot;app.js&quot;,
+        &quot;bundle&quot;: true,
+        &quot;update&quot;: &quot;delta&quot;
+    }
+],
+
+// app.css 会重新下载
+&quot;css&quot;: [
+    {
+        &quot;path&quot;: &quot;app.css&quot;,
+        &quot;update&quot;: &quot;full&quot;
+    }
+]</code></pre> 
+       <p>一旦某个文件启用了本地缓存，就必须启用 <code>&quot;app.json&quot;</code>中的全局<code>cache</code>配置. 通常，构建开发(development)版本的应用程序的时候设为 false，构建 production 版本的时候则设为 true.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;cache&quot;: {
+    &quot;enable&quot;: false
+}</code></pre> 
+       <p>也可以设置增量更新的文件的生成和输出路径. 如果 <code>deltas</code> 属性设为 true，所有的启用了本地缓存的资源都会在<code>&quot;deltas&quot;</code>目录下生成增量更新文件 . 如果 <code>deltas</code> 设置为了一个字符串，则会被当成是增量文件输出目录的名字. 如果<code>enable</code>是 false，那么 delta 开关不起作用.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;cache&quot;: {
+    &quot;enable&quot;: true,
+    &quot;deltas&quot;: true
+}</code></pre> 
+       <p>应用程序缓存(Application Cache) 和 本地缓存(Local Storage Cache) 都会立即加载文件以便离线访问. 因为这些更新的文件并不会影响用户使用当前的应用程序. 一旦 Microloader 检测到并加载了新的缓存文件，应用程序会触发一个全局事件，让你可以提示用户，是否重新加载已更新的应用程序. 你可以如下监听这个事件:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.application({
+name: 'MyApp',
+mainView: 'MyMainView',
+onAppUpdate: function () {
+    Ext.Msg.confirm('应用程序更新', '应用程序已经更新, 是否重新加载?',
+        function (choice) {
+            if (choice === 'yes') {
+                window.location.reload();
+            }
+        }
+    );
+}</code></pre> 
+       <h3 id="More">更多</h3> 
+       <p>我们看到的很多属性，都是作为 build 过程中的指令, 另外一些则被 Microloader 使用. 如上所述, Ext JS 也可利用清单，来配置自己一些功能. 更多关于这些属性的细节, 请查看 <code>&quot;app.json&quot;</code>中的注释.</p> 
+       <h3 id="Build_Profiles">用于构建的配置文件(Build Profiles) </h3> 
+       <p>当应用程序有多个变种, 我们可以在<code>&quot;app.json&quot;</code>增加一个“builds” 对象，来描述不同的构建方案，像这样(取自 Kitchen Sink):</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;builds&quot;: {
+    &quot;classic&quot;: {
+        &quot;theme&quot;: &quot;ext-theme-classic&quot;
+    },
+    &quot;gray&quot;: {
+        &quot;theme&quot;: &quot;ext-theme-gray&quot;
+    },
+    &quot;access&quot;: {
+        &quot;theme&quot;: &quot;ext-theme-access&quot;
+    },
+    &quot;crisp&quot;: {
+        &quot;theme&quot;: &quot;ext-theme-crisp&quot;
+    },
+    &quot;neptune&quot;: {
+        &quot;theme&quot;: &quot;ext-theme-neptune&quot;
+    },
+    &quot;neptune-touch&quot;: {
+        &quot;theme&quot;: &quot;ext-theme-neptune-touch&quot;
+    }
+}</code></pre> 
+       <p>“builds”中的每一个键(key)叫做“用于构建的配置文件(build profile)”. 它的值是一些属性的集合，用来覆盖<code>&quot;app.json&quot;</code>的基本内容，以产生不同的清单文件(下面会说到). 这个例子中, “theme” 属性会运用到每个 build profile 中.</p> 
+       <p>另外, 还有两个可选属性可以用于构建: “locales” 和 “themes”. 它们用来自动化生成最终的 build profile. 例如, Kitchen Sink 这个例子用了 “locales”:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;locales&quot;: [
+    &quot;en&quot;,
+    &quot;he&quot;
+],</code></pre> 
+       <p>当指定了 “locales” 或者 “themes”, 它们的值会合并到“builds”中，用来生成最终的清单. 此处“neptune-en”, “neptune-he”, “crisp-en”等就是最终 build profile 的名字.</p> 
+       <h2 id="Generating_The_Manifest">生成清单(Manifest)</h2> 
+       <p>像以前提到的, <code>&quot;app.json&quot;</code>在 build 过程中经历了一次转换，以作为运行时的“Ext.manifest”. 这个过程有点像<a href="../extjs/apidocs/#!/api/Ext-method-merge" data-full-load="true">Ext.merge</a> ，不过有点不同: 两个数组会以 连接(concat) 的方式合并.</p> 
+       <p>这个转变的过程的第一步，是合并 build “环境”设置 (例如, “production” 或 “testing”). 然后, 如果用到了 build profile, 它们的内容会合并. 不管顶层还是 build profile 指定了 “toolkit” (“classic” 或 “modern”), 它们的属性也会合并. 最后, 如果配置了 packager (“cordova” 或 “phonegap”), 它们的属性也会合并.</p> 
+       <p>用伪代码来表达，应该像这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>var manifest = load('app.json');
+
+// 下面的值来自 &quot;sencha app build&quot; 命令:
+var environment = 'production';
+var buildProfile = 'native';
+
+mergeConcat(manifest, manifest[environment]);
+if (buildProfile) {
+    mergeConcat(manifest, manifest.builds[buildProfile]);
+}
+if (manifest.toolkit) {
+    mergeConcat(manifest, manifest[manifest.toolkit]);
+}    
+if (manifest.packager) {
+    mergeConcat(manifest, manifest[manifest.packager]);
+}</code></pre> 
+       <h2 id="Packages">包(Packages)</h2> 
+       <p>生成 清单(manifest) 的最后一步是加入 所有用到的 包(packages).</p> 
+       <p>如果一个包的 package.json 文件指定了“js” 或 “css”项目, 它们会以 连接(concat) 的方式合并到之前的数组中. 这样包就可以单独管理自己的依赖.</p> 
+       <p>此外, “js” 和 “css” 项目,  每个包的 package.json 文件的内容都会被清理掉，并把每个包名加到 清单(manifest) 中的“packages”对象里. 假如 <code>&quot;app.json&quot;</code> 已经有了 “packages” 对象, 则会和 package.json 文件的相应内容合并. <code>&quot;app.json&quot;</code>优先级比较高，以允许其属性以作为配置选项传递到包 (见下文).</p> 
+       <p>用伪代码来表达, <code>&quot;app.json&quot;</code> 和 package.json 内容的合并过程如下:</p> 
+       <pre mode="javascript" theme="chrome"><code>var manifest;  // from above
+
+manifest.packages = manifest.packages || {};
+
+var js = [], css = [];
+
+// 展开已 required 的包，并按依赖顺序排序
+expandAndSort(manifest.requires).forEach(function (name) {
+    var pkg = load('packages/' + name + '/package.json');
+
+    js = js.concat(pkg.js);
+    css = css.concat(pkg.css);
+    manifest.packages[name] = merge(pkg, manifest.packages[name]);
+});
+
+manifest.css.splice(0, 0, css);
+
+var k = isExtJS ? 0 : manifest.js.indexOf('sencha-touch??.js');
+manifest.js.splice(k, 0, js);</code></pre> 
+       <p>结果生成的 Ext.manifest 类似这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;name&quot;: &quot;MyApp&quot;,
+    &quot;packages&quot;: {
+        &quot;ext&quot;: {
+            &quot;type&quot;: &quot;framework&quot;,
+            &quot;version&quot;: &quot;5.0.1.1255&quot;
+        },
+        &quot;ext-theme-neptune&quot;: {
+            &quot;type&quot;: &quot;theme&quot;,
+            &quot;version&quot;: &quot;5.0.1.1255&quot;
+        },
+        ...
+    },
+    &quot;theme&quot;: &quot;ext-theme-neptune&quot;,
+    &quot;js&quot;: [{
+        &quot;path&quot;: &quot;app.js&quot;
+    }],
+    &quot;css&quot;: [{
+        &quot;path&quot;: &quot;app.css&quot;
+    }],
+}</code></pre> 
+       <p>合并的结果意味着，如果包的 package.json 中的 “foo”选项提供了某些全局配置 (例如, “bar”) 并设有默认值. 任何使用了这个包的应用程序都可以在<code>&quot;app.json&quot;</code>配置这个选项 :</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;packages&quot;: {
+    &quot;foo&quot;: {
+        &quot;bar&quot;: 42
+    }
+}</code></pre> 
+       <p>包 像这样获取值:</p> 
+       <pre mode="javascript" theme="chrome"><code>console.log('bar: ' + Ext.manifest.packages.foo.bar);</code></pre> 
+       <h3 id="Load_Order">加载顺序</h3> 
+       <p>加载一个开发状态的应用程序，和加载一个 build 过的，它们有个显著的不同就是 文件在浏览器中的加载顺序. 在以前的版本中, app.js 文件几乎是第一个被浏览器加载的文件. 只有它先加载完了, 才可以加载更多其它必须的文件.</p> 
+       <p>然而，在 build 过程中, 这个顺序是反的. app.js 基本是最后一个输出的. 这很容易导致一种情况 - 有的代码在开发下是正常的，发布之后就不好了 - 这显然不是我们希望的.</p> 
+       <p>在 Ext JS 5 中, build 过程要用到的加载顺序 会加到清单(manifest)中, 加载文件也是这个顺序. 虽然这会导致清单文件非常大, 不过只在开发状态下用到.</p> 
+       <h2 id="Loading_The_Manifest">加载清单(Manifest)</h2> 
+       <p>加载器(Microloader) 会根据<code>&quot;app.json&quot;</code>中的描述来加载应用程序，并把其内容传到 Ext.manifest. 为了做到这一点, Microloader 必须先加载 manifest. 有三种基本方法.</p> 
+       <h3 id="Embedded_Manifest">嵌入式清单(Embedded Manifest)</h3> 
+       <p>通常一个应用程序只有一个主题，一种本地化语言，一个框架，结果就是只有一个清单. 此清单可以放到输出的 HTML 文件中以优化下载时间.</p> 
+       <p>要启用这个选项, 在<code>&quot;app.json&quot;</code>中加入下面代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;output&quot;: {
+    &quot;manifest&quot;: {
+        &quot;embed&quot;: true
+    }
+}</code></pre> 
+       <p>这些设置会把 清单 和 Microloader 嵌入到 HTML 文件中.</p> 
+       <h3 id="Named_Manifest">命名的清单(Named Manifest)</h3> 
+       <p>如果你用了 build profiles, 嵌入式清单并不合适. Microloader 应该可以在加载的时候根据名字请求清单. 默认情况下, 生成的<code>&quot;app.json&quot;</code>文件和 HTML文件在同一个文件夹下，也是清单默认的名字. 你也可以指定其它的名字:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var Ext = Ext || {};
+    Ext.manifest = 'foo';  // loads &quot;./foo.json&quot; relative to your page
+&lt;/script&gt;</code></pre> 
+       <p>这种方法很有用，可以在服务器端动态生成一个名字来管理 build profiles，而不是在代码里写死.</p> 
+       <h3 id="Dynamic_Manifest">动态的清单(Dynamic Manifest)</h3> 
+       <p>有时候你可能会想在客户端选择一个 build profile. 为了简化这种情况, Microloader 定义了一个钩子函数 “Ext.beforeLoad”. 如果你像下面这样定义这个函数, 你就可以在 Microloader 处理之前，控制“Ext.manifest”的名字和内容，同时可以检测运行平台.</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var Ext = Ext || {};
+    Ext.beforeLoad = function (tags) {
+        var theme = location.href.match(/theme=([\w-]+)/),
+            locale = location.href.match(/locale=([\w-]+)/);
+
+        theme  = (theme &amp;&amp; theme[1]) || 'crisp';
+        locale = (locale &amp;&amp; locale[1]) || 'en';
+
+        Ext.manifest = theme + &quot;-&quot; + locale;
+    };
+&lt;/script&gt;</code></pre> 
+       <p>上面的代码取自 Ext JS 5 的 Kitchen Sink 例子. 这个例子构建了 几个主题 和 2种语言 (英语 “en” 和 希伯来语 “he”). 通过这个函数，build profile 的名称就成了类似“crisp-en”这种样子，通知 Microloader 去加载名为“crisp-en.json” 的清单，而不是<code>&quot;app.json&quot;</code>.</p> 
+       <p>根据你应用程序的需要，这种选择 build profile 的过程可以是任何形式. 可以在页面渲染的时候，让服务端做这个工作. 可能基于 cookies, 或其它用户数据. 上面这个例子则是基于 URL.</p> 
+       <h4 id="Platform_Detection___Responsiveness">平台检测(Platform Detection) / 响应式(Responsiveness)</h4> 
+       <p>通常会把设备或浏览器用来作为选择清单的依据, 所以 Microloader 会传递一个名为“tags”的对象到 beforeLoad 函数中. 这个对象里面包含了 Microloader 检测到的各种平台标记(tags). 标记(tags)的可能有以下取值:</p> 
+       <ul> 
+        <li>phone</li> 
+        <li>tablet</li> 
+        <li>desktop</li> 
+        <li>touch</li> 
+        <li>ios</li> 
+        <li>android</li> 
+        <li>blackberry</li> 
+        <li>safari</li> 
+        <li>chrome</li> 
+        <li>ie10</li> 
+        <li>windows</li> 
+        <li>tizen</li> 
+        <li>firefox</li> 
+       </ul> 
+       <p>beforeLoad 函数里面可以用到这些标记(tags)，甚至可以修改它们. 这个对象随后用来控制资源文件的过滤器(清单里面描述的 js 或 css 项目)，也可以在运行时使用<a href="http://docs.sencha.com/extjs/6.0/6.0.2-classic/#!/api/Ext.Class-cfg-platformConfig" data-full-load="true">platformConfig</a>来控制某些配置(config)的值. 这个钩子代码(hook)允许你控制这些过滤器可以匹配什么. 而修改这些标记(tags)的值，主要用于添加新的标记(对你的应用程序有意义的标记). 自定义标记应当以“ux-”为前缀. Sencha 提供的标记没有这个前缀.</p> 
+       <h4 id="Tags_specified_by_the_manifest">清单内指定的标记(Tags)</h4> 
+       <p>清单(manifest)也提供了一个“tags” 属性，用来设置可用标记(tags). 这个属性的值可以是一个字符串数组</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;tags&quot;: [&quot;ios&quot;, &quot;phone&quot;, &quot;fashion&quot;]</code></pre> 
+       <p>也可以是一个对象, 以标记(tag)的名字为键, 以 true 或 false 为值.</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;tags&quot;: {
+    &quot;ios&quot;: true,
+    &quot;phone&quot;: true,
+    &quot;desktop&quot;: false,
+    &quot;fashion&quot;: true
+}</code></pre> 
+       <p>当提供了这个属性, 这些 tags 优先级别高于自动检测到的 tags. 因为这些 tags 的值是清单提供的, 所以在“beforeLoad” 函数内不可用这些值, 如果在这个函数里修改了 tags, 这些修改也是会被清单提供的 tags 给覆盖掉的(当 tag 的名字有冲突的时候).</p> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../https@s.adroll.com" : "../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

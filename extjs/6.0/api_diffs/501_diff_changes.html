@@ -1,0 +1,2533 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Between 5.0.0 &amp; 5.0.1</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Added" title="Added">Added</a> 
+       <a class="toc-page-h3" href="#Ext_util_Focusable" title="Ext.util.Focusable">Ext.util.Focusable</a> 
+       <a class="toc-page-h3" href="#Ext_util_FocusableContainer" title="Ext.util.FocusableContainer">Ext.util.FocusableContainer</a> 
+       <a class="toc-page-h2" href="#Modified" title="Modified">Modified</a> 
+       <a class="toc-page-h3" href="#Ext" title="Ext">Ext</a> 
+       <a class="toc-page-h3" href="#Ext_Component" title="Ext.Component">Ext.Component</a> 
+       <a class="toc-page-h3" href="#Ext_ComponentLoader" title="Ext.ComponentLoader">Ext.ComponentLoader</a> 
+       <a class="toc-page-h3" href="#Ext_Function" title="Ext.Function">Ext.Function</a> 
+       <a class="toc-page-h3" href="#Ext_GlobalEvents" title="Ext.GlobalEvents">Ext.GlobalEvents</a> 
+       <a class="toc-page-h3" href="#Ext_app_ViewController" title="Ext.app.ViewController">Ext.app.ViewController</a> 
+       <a class="toc-page-h3" href="#Ext_button_Button" title="Ext.button.Button">Ext.button.Button</a> 
+       <a class="toc-page-h3" href="#Ext_container_Container" title="Ext.container.Container">Ext.container.Container</a> 
+       <a class="toc-page-h3" href="#Ext_container_Viewport" title="Ext.container.Viewport">Ext.container.Viewport</a> 
+       <a class="toc-page-h3" href="#Ext_dashboard_Dashboard" title="Ext.dashboard.Dashboard">Ext.dashboard.Dashboard</a> 
+       <a class="toc-page-h3" href="#Ext_data_AbstractStore" title="Ext.data.AbstractStore">Ext.data.AbstractStore</a> 
+       <a class="toc-page-h3" href="#Ext_data_ChainedStore" title="Ext.data.ChainedStore">Ext.data.ChainedStore</a> 
+       <a class="toc-page-h3" href="#Ext_data_Model" title="Ext.data.Model">Ext.data.Model</a> 
+       <a class="toc-page-h3" href="#Ext_data_Session" title="Ext.data.Session">Ext.data.Session</a> 
+       <a class="toc-page-h3" href="#Ext_data_Store" title="Ext.data.Store">Ext.data.Store</a> 
+       <a class="toc-page-h3" href="#Ext_data_TreeStore" title="Ext.data.TreeStore">Ext.data.TreeStore</a> 
+       <a class="toc-page-h3" href="#Ext_data_operation_Operation" title="Ext.data.operation.Operation">Ext.data.operation.Operation</a> 
+       <a class="toc-page-h3" href="#Ext_data_schema_Schema" title="Ext.data.schema.Schema">Ext.data.schema.Schema</a> 
+       <a class="toc-page-h3" href="#Ext_data_validator_Length" title="Ext.data.validator.Length">Ext.data.validator.Length</a> 
+       <a class="toc-page-h3" href="#Ext_data_validator_Presence" title="Ext.data.validator.Presence">Ext.data.validator.Presence</a> 
+       <a class="toc-page-h3" href="#Ext_data_validator_Range" title="Ext.data.validator.Range">Ext.data.validator.Range</a> 
+       <a class="toc-page-h3" href="#Ext_dom_Element" title="Ext.dom.Element">Ext.dom.Element</a> 
+       <a class="toc-page-h3" href="#Ext_enums_Feature" title="Ext.enums.Feature">Ext.enums.Feature</a> 
+       <a class="toc-page-h3" href="#Ext_enums_Plugin" title="Ext.enums.Plugin">Ext.enums.Plugin</a> 
+       <a class="toc-page-h3" href="#Ext_enums_Widget" title="Ext.enums.Widget">Ext.enums.Widget</a> 
+       <a class="toc-page-h3" href="#Ext_form_Labelable" title="Ext.form.Labelable">Ext.form.Labelable</a> 
+       <a class="toc-page-h3" href="#Ext_form_Panel" title="Ext.form.Panel">Ext.form.Panel</a> 
+       <a class="toc-page-h3" href="#Ext_form_RadioGroup" title="Ext.form.RadioGroup">Ext.form.RadioGroup</a> 
+       <a class="toc-page-h3" href="#Ext_form_field_Base" title="Ext.form.field.Base">Ext.form.field.Base</a> 
+       <a class="toc-page-h3" href="#Ext_form_field_ComboBox" title="Ext.form.field.ComboBox">Ext.form.field.ComboBox</a> 
+       <a class="toc-page-h3" href="#Ext_form_field_Date" title="Ext.form.field.Date">Ext.form.field.Date</a> 
+       <a class="toc-page-h3" href="#Ext_form_field_Field" title="Ext.form.field.Field">Ext.form.field.Field</a> 
+       <a class="toc-page-h3" href="#Ext_form_field_Spinner" title="Ext.form.field.Spinner">Ext.form.field.Spinner</a> 
+       <a class="toc-page-h3" href="#Ext_form_field_Time" title="Ext.form.field.Time">Ext.form.field.Time</a> 
+       <a class="toc-page-h3" href="#Ext_form_trigger_Spinner" title="Ext.form.trigger.Spinner">Ext.form.trigger.Spinner</a> 
+       <a class="toc-page-h3" href="#Ext_form_trigger_Trigger" title="Ext.form.trigger.Trigger">Ext.form.trigger.Trigger</a> 
+       <a class="toc-page-h3" href="#Ext_grid_column_Column" title="Ext.grid.column.Column">Ext.grid.column.Column</a> 
+       <a class="toc-page-h3" href="#Ext_grid_feature_RowBody" title="Ext.grid.feature.RowBody">Ext.grid.feature.RowBody</a> 
+       <a class="toc-page-h3" href="#Ext_grid_header_Container" title="Ext.grid.header.Container">Ext.grid.header.Container</a> 
+       <a class="toc-page-h3" href="#Ext_grid_plugin_CellEditing" title="Ext.grid.plugin.CellEditing">Ext.grid.plugin.CellEditing</a> 
+       <a class="toc-page-h3" href="#Ext_grid_plugin_RowExpander" title="Ext.grid.plugin.RowExpander">Ext.grid.plugin.RowExpander</a> 
+       <a class="toc-page-h3" href="#Ext_layout_container_Accordion" title="Ext.layout.container.Accordion">Ext.layout.container.Accordion</a> 
+       <a class="toc-page-h3" href="#Ext_layout_container_ColumnSplitter" title="Ext.layout.container.ColumnSplitter">Ext.layout.container.ColumnSplitter</a> 
+       <a class="toc-page-h3" href="#Ext_menu_DatePicker" title="Ext.menu.DatePicker">Ext.menu.DatePicker</a> 
+       <a class="toc-page-h3" href="#Ext_menu_Item" title="Ext.menu.Item">Ext.menu.Item</a> 
+       <a class="toc-page-h3" href="#Ext_menu_Manager" title="Ext.menu.Manager">Ext.menu.Manager</a> 
+       <a class="toc-page-h3" href="#Ext_mixin_Responsive" title="Ext.mixin.Responsive">Ext.mixin.Responsive</a> 
+       <a class="toc-page-h3" href="#Ext_panel_Panel" title="Ext.panel.Panel">Ext.panel.Panel</a> 
+       <a class="toc-page-h3" href="#Ext_panel_Table" title="Ext.panel.Table">Ext.panel.Table</a> 
+       <a class="toc-page-h3" href="#Ext_panel_Title" title="Ext.panel.Title">Ext.panel.Title</a> 
+       <a class="toc-page-h3" href="#Ext_picker_Date" title="Ext.picker.Date">Ext.picker.Date</a> 
+       <a class="toc-page-h3" href="#Ext_selection_CellModel" title="Ext.selection.CellModel">Ext.selection.CellModel</a> 
+       <a class="toc-page-h3" href="#Ext_selection_Model" title="Ext.selection.Model">Ext.selection.Model</a> 
+       <a class="toc-page-h3" href="#Ext_selection_RowModel" title="Ext.selection.RowModel">Ext.selection.RowModel</a> 
+       <a class="toc-page-h3" href="#Ext_slider_Multi" title="Ext.slider.Multi">Ext.slider.Multi</a> 
+       <a class="toc-page-h3" href="#Ext_slider_Widget" title="Ext.slider.Widget">Ext.slider.Widget</a> 
+       <a class="toc-page-h3" href="#Ext_supports" title="Ext.supports">Ext.supports</a> 
+       <a class="toc-page-h3" href="#Ext_tab_Bar" title="Ext.tab.Bar">Ext.tab.Bar</a> 
+       <a class="toc-page-h3" href="#Ext_tab_Tab" title="Ext.tab.Tab">Ext.tab.Tab</a> 
+       <a class="toc-page-h3" href="#Ext_toolbar_Breadcrumb" title="Ext.toolbar.Breadcrumb">Ext.toolbar.Breadcrumb</a> 
+       <a class="toc-page-h3" href="#Ext_toolbar_Toolbar" title="Ext.toolbar.Toolbar">Ext.toolbar.Toolbar</a> 
+       <a class="toc-page-h3" href="#Ext_util_Filter" title="Ext.util.Filter">Ext.util.Filter</a> 
+       <a class="toc-page-h3" href="#Ext_util_Floating" title="Ext.util.Floating">Ext.util.Floating</a> 
+       <a class="toc-page-h3" href="#Ext_util_KeyMap" title="Ext.util.KeyMap">Ext.util.KeyMap</a> 
+       <a class="toc-page-h3" href="#Ext_util_KeyNav" title="Ext.util.KeyNav">Ext.util.KeyNav</a> 
+       <a class="toc-page-h3" href="#Ext_util_Sorter" title="Ext.util.Sorter">Ext.util.Sorter</a> 
+       <a class="toc-page-h3" href="#Ext_util_TaskRunner" title="Ext.util.TaskRunner">Ext.util.TaskRunner</a> 
+       <a class="toc-page-h3" href="#Ext_ux_IFrame" title="Ext.ux.IFrame">Ext.ux.IFrame</a> 
+       <a class="toc-page-h3" href="#Ext_ux_desktop_StartMenu" title="Ext.ux.desktop.StartMenu">Ext.ux.desktop.StartMenu</a> 
+       <a class="toc-page-h3" href="#Ext_ux_form_MultiSelect" title="Ext.ux.form.MultiSelect">Ext.ux.form.MultiSelect</a> 
+       <a class="toc-page-h3" href="#Ext_view_BoundListKeyNav" title="Ext.view.BoundListKeyNav">Ext.view.BoundListKeyNav</a> 
+       <a class="toc-page-h3" href="#Ext_view_MultiSelector" title="Ext.view.MultiSelector">Ext.view.MultiSelector</a> 
+       <a class="toc-page-h3" href="#Ext_view_Table" title="Ext.view.Table">Ext.view.Table</a> 
+       <a class="toc-page-h3" href="#Ext_window_MessageBox" title="Ext.window.MessageBox">Ext.window.MessageBox</a> 
+       <a class="toc-page-h3" href="#Global_CSS" title="Global_CSS">Global_CSS</a> 
+       <a class="toc-page-h3" href="#global" title="global">global</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name">
+       <h1>Differences Between Ext JS 5.0.0 and Ext JS 5.0.1</h1>
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <style>
+.toc-page{
+     display:none !important;
+}
+</style>  
+       <ul class="d0"> 
+        <li> <h2 id="Added"> Added </h2> 
+         <ul class="d1"> 
+          <li> <h3 id="Ext_util_Focusable"> Ext.util.Focusable </h3> </li> 
+          <li> <h3 id="Ext_util_FocusableContainer"> Ext.util.FocusableContainer </h3> </li> 
+         </ul> </li> 
+        <li> <h2 id="Modified"> Modified </h2> 
+         <ul class="d1"> 
+          <li> <h3 id="Ext"> Ext </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> interval </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_Component"> Ext.Component </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [Ext.mixin.Inheritable, Ext.util.Positionable, Ext.util.Observable, Ext.mixin.Bindable, Ext.util.Animate, Ext.util.ElementContainer, Ext.util.Renderable, Ext.state.Stateful, Ext.util.Floating] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.mixin.Inheritable, Ext.util.Positionable, Ext.util.Observable, Ext.mixin.Bindable, Ext.util.Animate, Ext.util.ElementContainer, Ext.util.Renderable, Ext.state.Stateful, Ext.util.Floating, Ext.util.Focusable] </li> 
+             </ul> </li> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getMaxHeight </li> 
+                <li> getMaxWidth </li> 
+                <li> getMinHeight </li> 
+                <li> getMinWidth </li> 
+                <li> isMasked </li> 
+                <li> setMaxHeight </li> 
+                <li> setMaxWidth </li> 
+                <li> setMinHeight </li> 
+                <li> setMinWidth </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> height 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Number </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Number|String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> width 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Number </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Number|String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> destroy 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> setStyle 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.Component </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_ComponentLoader"> Ext.ComponentLoader </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> loadOnRender </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_Function"> Ext.Function </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> interval </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_GlobalEvents"> Ext.GlobalEvents </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> event 
+               <ul class="d4"> 
+                <li> beforeresponsiveupdate </li> 
+                <li> beginresponsiveupdate </li> 
+                <li> responsiveupdate </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_app_ViewController"> Ext.app.ViewController </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getSession 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> return type is Ext.data.Session </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> getStore 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> return type is Ext.data.Store </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> getViewModel 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> return type is Ext.app.ViewModel </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_button_Button"> Ext.button.Button </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> cssMixin 
+               <ul class="d4"> 
+                <li> extjs-button-large-ui </li> 
+                <li> extjs-button-medium-ui </li> 
+                <li> extjs-button-small-ui </li> 
+                <li> extjs-button-toolbar-large-ui </li> 
+                <li> extjs-button-toolbar-medium-ui </li> 
+                <li> extjs-button-toolbar-small-ui </li> 
+                <li> extjs-button-ui </li> 
+               </ul> </li> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $button-default-background-color-focus-over </li> 
+                <li> $button-default-background-color-focus-pressed </li> 
+                <li> $button-default-background-gradient-focus-over </li> 
+                <li> $button-default-background-gradient-focus-pressed </li> 
+                <li> $button-default-base-color-focus-over </li> 
+                <li> $button-default-base-color-focus-pressed </li> 
+                <li> $button-default-body-outline-color-focus </li> 
+                <li> $button-default-body-outline-style-focus </li> 
+                <li> $button-default-body-outline-width-focus </li> 
+                <li> $button-default-border-color-focus-over </li> 
+                <li> $button-default-border-color-focus-pressed </li> 
+                <li> $button-default-color-focus-over </li> 
+                <li> $button-default-color-focus-pressed </li> 
+                <li> $button-default-inner-border-color </li> 
+                <li> $button-default-inner-border-color-disabled </li> 
+                <li> $button-default-inner-border-color-focus </li> 
+                <li> $button-default-inner-border-color-focus-over </li> 
+                <li> $button-default-inner-border-color-focus-pressed </li> 
+                <li> $button-default-inner-border-color-over </li> 
+                <li> $button-default-inner-border-color-pressed </li> 
+                <li> $button-default-inner-border-width </li> 
+                <li> $button-default-inner-border-width-disabled </li> 
+                <li> $button-default-inner-border-width-focus </li> 
+                <li> $button-default-inner-border-width-focus-over </li> 
+                <li> $button-default-inner-border-width-focus-pressed </li> 
+                <li> $button-default-inner-border-width-over </li> 
+                <li> $button-default-inner-border-width-pressed </li> 
+                <li> $button-grid-cell-arrow-height </li> 
+                <li> $button-grid-cell-arrow-width </li> 
+                <li> $button-grid-cell-background-color </li> 
+                <li> $button-grid-cell-background-color-disabled </li> 
+                <li> $button-grid-cell-background-color-focus </li> 
+                <li> $button-grid-cell-background-color-focus-over </li> 
+                <li> $button-grid-cell-background-color-focus-pressed </li> 
+                <li> $button-grid-cell-background-color-over </li> 
+                <li> $button-grid-cell-background-color-pressed </li> 
+                <li> $button-grid-cell-background-gradient </li> 
+                <li> $button-grid-cell-background-gradient-disabled </li> 
+                <li> $button-grid-cell-background-gradient-focus </li> 
+                <li> $button-grid-cell-background-gradient-focus-over </li> 
+                <li> $button-grid-cell-background-gradient-focus-pressed </li> 
+                <li> $button-grid-cell-background-gradient-over </li> 
+                <li> $button-grid-cell-background-gradient-pressed </li> 
+                <li> $button-grid-cell-body-outline-color-focus </li> 
+                <li> $button-grid-cell-body-outline-style-focus </li> 
+                <li> $button-grid-cell-body-outline-width-focus </li> 
+                <li> $button-grid-cell-border-color </li> 
+                <li> $button-grid-cell-border-color-disabled </li> 
+                <li> $button-grid-cell-border-color-focus </li> 
+                <li> $button-grid-cell-border-color-focus-over </li> 
+                <li> $button-grid-cell-border-color-focus-pressed </li> 
+                <li> $button-grid-cell-border-color-over </li> 
+                <li> $button-grid-cell-border-color-pressed </li> 
+                <li> $button-grid-cell-border-radius </li> 
+                <li> $button-grid-cell-border-width </li> 
+                <li> $button-grid-cell-color </li> 
+                <li> $button-grid-cell-color-disabled </li> 
+                <li> $button-grid-cell-color-focus </li> 
+                <li> $button-grid-cell-color-focus-over </li> 
+                <li> $button-grid-cell-color-focus-pressed </li> 
+                <li> $button-grid-cell-color-over </li> 
+                <li> $button-grid-cell-color-pressed </li> 
+                <li> $button-grid-cell-font-family </li> 
+                <li> $button-grid-cell-font-family-disabled </li> 
+                <li> $button-grid-cell-font-family-focus </li> 
+                <li> $button-grid-cell-font-family-focus-over </li> 
+                <li> $button-grid-cell-font-family-focus-pressed </li> 
+                <li> $button-grid-cell-font-family-over </li> 
+                <li> $button-grid-cell-font-family-pressed </li> 
+                <li> $button-grid-cell-font-size </li> 
+                <li> $button-grid-cell-font-size-disabled </li> 
+                <li> $button-grid-cell-font-size-focus </li> 
+                <li> $button-grid-cell-font-size-focus-over </li> 
+                <li> $button-grid-cell-font-size-focus-pressed </li> 
+                <li> $button-grid-cell-font-size-over </li> 
+                <li> $button-grid-cell-font-size-pressed </li> 
+                <li> $button-grid-cell-font-weight </li> 
+                <li> $button-grid-cell-font-weight-disabled </li> 
+                <li> $button-grid-cell-font-weight-focus </li> 
+                <li> $button-grid-cell-font-weight-focus-over </li> 
+                <li> $button-grid-cell-font-weight-focus-pressed </li> 
+                <li> $button-grid-cell-font-weight-over </li> 
+                <li> $button-grid-cell-font-weight-pressed </li> 
+                <li> $button-grid-cell-glyph-color </li> 
+                <li> $button-grid-cell-glyph-opacity </li> 
+                <li> $button-grid-cell-icon-size </li> 
+                <li> $button-grid-cell-icon-spacing </li> 
+                <li> $button-grid-cell-inner-border-color </li> 
+                <li> $button-grid-cell-inner-border-color-disabled </li> 
+                <li> $button-grid-cell-inner-border-color-focus </li> 
+                <li> $button-grid-cell-inner-border-color-focus-over </li> 
+                <li> $button-grid-cell-inner-border-color-focus-pressed </li> 
+                <li> $button-grid-cell-inner-border-color-over </li> 
+                <li> $button-grid-cell-inner-border-color-pressed </li> 
+                <li> $button-grid-cell-inner-border-width </li> 
+                <li> $button-grid-cell-inner-border-width-disabled </li> 
+                <li> $button-grid-cell-inner-border-width-focus </li> 
+                <li> $button-grid-cell-inner-border-width-focus-over </li> 
+                <li> $button-grid-cell-inner-border-width-focus-pressed </li> 
+                <li> $button-grid-cell-inner-border-width-over </li> 
+                <li> $button-grid-cell-inner-border-width-pressed </li> 
+                <li> $button-grid-cell-line-height </li> 
+                <li> $button-grid-cell-padding </li> 
+                <li> $button-grid-cell-split-height </li> 
+                <li> $button-grid-cell-split-width </li> 
+                <li> $button-grid-cell-text-padding </li> 
+                <li> $button-large-font-family-focus-over </li> 
+                <li> $button-large-font-family-focus-pressed </li> 
+                <li> $button-large-font-size-focus-over </li> 
+                <li> $button-large-font-size-focus-pressed </li> 
+                <li> $button-large-font-weight-focus-over </li> 
+                <li> $button-large-font-weight-focus-pressed </li> 
+                <li> $button-medium-font-family-focus-over </li> 
+                <li> $button-medium-font-family-focus-pressed </li> 
+                <li> $button-medium-font-size-focus-over </li> 
+                <li> $button-medium-font-size-focus-pressed </li> 
+                <li> $button-medium-font-weight-focus-over </li> 
+                <li> $button-medium-font-weight-focus-pressed </li> 
+                <li> $button-small-font-family-focus-over </li> 
+                <li> $button-small-font-family-focus-pressed </li> 
+                <li> $button-small-font-size-focus-over </li> 
+                <li> $button-small-font-size-focus-pressed </li> 
+                <li> $button-small-font-weight-focus-over </li> 
+                <li> $button-small-font-weight-focus-pressed </li> 
+                <li> $button-toolbar-background-color-focus-over </li> 
+                <li> $button-toolbar-background-color-focus-pressed </li> 
+                <li> $button-toolbar-background-gradient-focus-over </li> 
+                <li> $button-toolbar-background-gradient-focus-pressed </li> 
+                <li> $button-toolbar-body-outline-color-focus </li> 
+                <li> $button-toolbar-body-outline-style-focus </li> 
+                <li> $button-toolbar-body-outline-width-focus </li> 
+                <li> $button-toolbar-border-color-focus-over </li> 
+                <li> $button-toolbar-border-color-focus-pressed </li> 
+                <li> $button-toolbar-color-focus-over </li> 
+                <li> $button-toolbar-color-focus-pressed </li> 
+                <li> $button-toolbar-inner-border-color </li> 
+                <li> $button-toolbar-inner-border-color-disabled </li> 
+                <li> $button-toolbar-inner-border-color-focus </li> 
+                <li> $button-toolbar-inner-border-color-focus-over </li> 
+                <li> $button-toolbar-inner-border-color-focus-pressed </li> 
+                <li> $button-toolbar-inner-border-color-over </li> 
+                <li> $button-toolbar-inner-border-color-pressed </li> 
+                <li> $button-toolbar-inner-border-width </li> 
+                <li> $button-toolbar-inner-border-width-disabled </li> 
+                <li> $button-toolbar-inner-border-width-focus </li> 
+                <li> $button-toolbar-inner-border-width-focus-over </li> 
+                <li> $button-toolbar-inner-border-width-focus-pressed </li> 
+                <li> $button-toolbar-inner-border-width-over </li> 
+                <li> $button-toolbar-inner-border-width-pressed </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> renderTpl 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is '&lt;span id=&quot;{id}-btnWrap&quot; data-ref=&quot;btnWrap&quot; role=&quot;presentation&quot; unselectable=&quot;on&quot; style=&quot;{btnWrapStyle}&quot; ' + 'class=&quot;{btnWrapCls} {btnWrapCls}-{ui} {splitCls}{childElCls}&quot;&gt;' + '&lt;span id=&quot;{id}-btnEl&quot; data-ref=&quot;btnEl&quot; role=&quot;presentation&quot; unselectable=&quot;on&quot; style=&quot;{btnElStyle}&quot; ' + 'class=&quot;{btnCls} {btnCls}-{ui} {textCls} {noTextCls} {hasIconCls} ' + '{iconAlignCls} {textAlignCls} {btnElAutoHeightCls}{childElCls}&quot;&gt;' + '&lt;tpl if=&quot;iconBeforeText&quot;&gt;{[values.$comp.renderIcon(values)]}&lt;/tpl&gt;' + '&lt;span id=&quot;{id}-btnInnerEl&quot; data-ref=&quot;btnInnerEl&quot; role=&quot;presentation&quot; unselectable=&quot;on&quot; ' + 'class=&quot;{innerCls} {innerCls}-{ui}{childElCls}&quot;&gt;{text}&lt;/span&gt;' + '&lt;tpl if=&quot;!iconBeforeText&quot;&gt;{[values.$comp.renderIcon(values)]}&lt;/tpl&gt;' + '&lt;/span&gt;' + '&lt;/span&gt;' + '{[values.$comp.getAfterMarkup ? values.$comp.getAfterMarkup(values) : &quot;&quot;]}' + '&lt;tpl if=&quot;closable&quot;&gt;' + '&lt;span id=&quot;{id}-closeEl&quot; data-ref=&quot;closeEl&quot; role=&quot;presentation&quot;' + ' class=&quot;{baseCls}-close-btn&quot;' + '&lt;tpl if=&quot;closeText&quot;&gt;' + ' title=&quot;{closeText}&quot; aria-label=&quot;{closeText}&quot;' + '&lt;/tpl&gt;' + '&gt;' + '&lt;/span&gt;' + '&lt;/tpl&gt;' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is '&lt;span id=&quot;{id}-btnWrap&quot; data-ref=&quot;btnWrap&quot; role=&quot;presentation&quot; unselectable=&quot;on&quot; style=&quot;{btnWrapStyle}&quot; ' + 'class=&quot;{btnWrapCls} {btnWrapCls}-{ui} {splitCls}{childElCls}&quot;&gt;' + '&lt;span id=&quot;{id}-btnEl&quot; data-ref=&quot;btnEl&quot; role=&quot;presentation&quot; unselectable=&quot;on&quot; style=&quot;{btnElStyle}&quot; ' + 'class=&quot;{btnCls} {btnCls}-{ui} {textCls} {noTextCls} {hasIconCls} ' + '{iconAlignCls} {textAlignCls} {btnElAutoHeightCls}{childElCls}&quot;&gt;' + '&lt;tpl if=&quot;iconBeforeText&quot;&gt;{[values.$comp.renderIcon(values)]}&lt;/tpl&gt;' + '&lt;span id=&quot;{id}-btnInnerEl&quot; data-ref=&quot;btnInnerEl&quot; unselectable=&quot;on&quot; ' + 'class=&quot;{innerCls} {innerCls}-{ui}{childElCls}&quot;&gt;{text}&lt;/span&gt;' + '&lt;tpl if=&quot;!iconBeforeText&quot;&gt;{[values.$comp.renderIcon(values)]}&lt;/tpl&gt;' + '&lt;/span&gt;' + '&lt;/span&gt;' + '{[values.$comp.getAfterMarkup ? values.$comp.getAfterMarkup(values) : &quot;&quot;]}' + '&lt;tpl if=&quot;closable&quot;&gt;' + '&lt;span id=&quot;{id}-closeEl&quot; data-ref=&quot;closeEl&quot; class=&quot;{baseCls}-close-btn&quot;&gt;' + '&lt;tpl if=&quot;closeText&quot;&gt;' + ' {closeText}' + '&lt;/tpl&gt;' + '&lt;/span&gt;' + '&lt;/tpl&gt;' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $button-inner-opacity-disabled 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 1 </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is null </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> $button-opacity-disabled 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 0.5 </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is null </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $line-height </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_container_Container"> Ext.container.Container </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> moveAfter 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.Component </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> moveBefore 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.Component </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_container_Viewport"> Ext.container.Viewport </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.mixin.Responsive] </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_dashboard_Dashboard"> Ext.dashboard.Dashboard </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> stateful 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_AbstractStore"> Ext.data.AbstractStore </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> event 
+               <ul class="d4"> 
+                <li> beforesort </li> 
+                <li> sort </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getAutoFilter </li> 
+                <li> getAutoSort </li> 
+                <li> setAutoFilter </li> 
+                <li> setAutoSort </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> autoDestroy 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is false </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is null </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_ChainedStore"> Ext.data.ChainedStore </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> source 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Ext.data.Store </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Ext.data.Store/String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getSource 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is Ext.data.Store </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.data.Store/String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_Model"> Ext.data.Model </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> toUrl </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_Session"> Ext.data.Session </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> autoDestroy </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getAutoDestroy </li> 
+                <li> setAutoDestroy </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_Store"> Ext.data.Store </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> session 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getSession 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> removeAll 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.data.Model[] </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> setRole 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> setSession 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_TreeStore"> Ext.data.TreeStore </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> parentIdProperty </li> 
+               </ul> </li> 
+              <li> event 
+               <ul class="d4"> 
+                <li> nodeappend </li> 
+                <li> nodebeforeappend </li> 
+                <li> nodebeforecollapse </li> 
+                <li> nodebeforeexpand </li> 
+                <li> nodebeforeinsert </li> 
+                <li> nodebeforemove </li> 
+                <li> nodebeforeremove </li> 
+                <li> nodecollapse </li> 
+                <li> nodeexpand </li> 
+                <li> nodeinsert </li> 
+                <li> nodemove </li> 
+                <li> noderemove </li> 
+                <li> nodesort </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getParentIdProperty </li> 
+                <li> setParentIdProperty </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> removeAll 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.data.Model[] </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> event 
+               <ul class="d4"> 
+                <li> append </li> 
+                <li> beforeappend </li> 
+                <li> beforecollapse </li> 
+                <li> beforeexpand </li> 
+                <li> beforeinsert </li> 
+                <li> beforemove </li> 
+                <li> beforeremove </li> 
+                <li> collapse </li> 
+                <li> expand </li> 
+                <li> insert </li> 
+                <li> move </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_operation_Operation"> Ext.data.operation.Operation </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> url </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getUrl </li> 
+                <li> setUrl </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_schema_Schema"> Ext.data.schema.Schema </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> proxy 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is {type: 'ajax', url: '{prefix}/{entityName}', reader: {type: 'json'}} </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is {type: 'ajax', url: '{prefix}/{entityName}'} </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_validator_Length"> Ext.data.validator.Length </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> maxOnlyMessage 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'Length must be less than {0}' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'Length must be no more than {0}' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> minOnlyMessage 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'Length must be greater than {0}' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'Length must be at least {0}' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_validator_Presence"> Ext.data.validator.Presence </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> allowEmpty </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getAllowEmpty </li> 
+                <li> setAllowEmpty </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_data_validator_Range"> Ext.data.validator.Range </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> nanMessage </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getNanMessage </li> 
+                <li> setNanMessage </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> maxOnlyMessage 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'Must be less than {0}' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'Must be no more than than {0}' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> minOnlyMessage 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'Must be greater than {0}' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'Must be must be at least {0}' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_dom_Element"> Ext.dom.Element </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> enableDisplayMode </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_enums_Feature"> Ext.enums.Feature </h3> 
+           <ul class="d2"> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> filters </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_enums_Plugin"> Ext.enums.Plugin </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> gridfilters </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_enums_Widget"> Ext.enums.Widget </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> sparklinebar </li> 
+                <li> sparklinebox </li> 
+                <li> sparklinebullet </li> 
+                <li> sparklinediscrete </li> 
+                <li> sparklineline </li> 
+                <li> sparklinepie </li> 
+                <li> sparklinetristate </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_Labelable"> Ext.form.Labelable </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> destroyTip </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_Panel"> Ext.form.Panel </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> beforeDestroy 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> protected is false </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> protected is true </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_RadioGroup"> Ext.form.RadioGroup </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.util.FocusableContainer] </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_field_Base"> Ext.form.field.Base </h3> 
+           <ul class="d2"> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> destroyTip </li> 
+                <li> initTip </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_field_ComboBox"> Ext.form.field.ComboBox </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> setSelection </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_field_Date"> Ext.form.field.Date </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> valuePublishEvent </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_field_Field"> Ext.form.field.Field </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> valuePublishEvent </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_field_Spinner"> Ext.form.field.Spinner </h3> 
+           <ul class="d2"> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> cssMixin 
+               <ul class="d4"> 
+                <li> extjs-spinner-trigger-ui </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_field_Time"> Ext.form.field.Time </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> valuePublishEvent </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_trigger_Spinner"> Ext.form.trigger.Spinner </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> cssMixin 
+               <ul class="d4"> 
+                <li> extjs-spinner-trigger-ui </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> focusFieldOnClick </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_form_trigger_Trigger"> Ext.form.trigger.Trigger </h3> 
+           <ul class="d2"> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> focusFieldOnClick </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_grid_column_Column"> Ext.grid.column.Column </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> enableFocusableContainer </li> 
+                <li> tabIndex </li> 
+                <li> variableRowHeight </li> 
+               </ul> </li> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $grid-column-header-focus-background-color </li> 
+                <li> $grid-column-header-focus-border-color </li> 
+                <li> $grid-column-header-focus-border-inset </li> 
+                <li> $grid-column-header-focus-border-style </li> 
+                <li> $grid-column-header-focus-border-width </li> 
+                <li> $grid-column-header-focus-color </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> renderTpl 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is ['&lt;div id=&quot;{id}-titleEl&quot; data-ref=&quot;titleEl&quot; role=&quot;presentation&quot; {tipMarkup}class=&quot;', Ext.baseCSSPrefix, 'column-header-inner', '&lt;tpl if=&quot;empty&quot;&gt; ', Ext.baseCSSPrefix, 'column-header-inner-empty&lt;/tpl&gt;&quot;&gt;', '&lt;span id=&quot;{id}-textEl&quot; data-ref=&quot;textEl&quot; class=&quot;', Ext.baseCSSPrefix, 'column-header-text', '{childElCls}&quot;&gt;', '{text}', '&lt;/span&gt;', '&lt;tpl if=&quot;!menuDisabled&quot;&gt;', '&lt;div id=&quot;{id}-triggerEl&quot; data-ref=&quot;triggerEl&quot; role=&quot;presentation&quot; class=&quot;', Ext.baseCSSPrefix, 'column-header-trigger', '{childElCls}&quot; style=&quot;{triggerStyle}&quot;&gt;&lt;/div&gt;', '&lt;/tpl&gt;', '&lt;/div&gt;', '{%this.renderContainer(out,values)%}'] </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is ['&lt;div id=&quot;{id}-titleEl&quot; data-ref=&quot;titleEl&quot; {tipMarkup}class=&quot;', Ext.baseCSSPrefix, 'column-header-inner', '&lt;tpl if=&quot;empty&quot;&gt; ', Ext.baseCSSPrefix, 'column-header-inner-empty&lt;/tpl&gt;&quot;&gt;', '&lt;span id=&quot;{id}-textEl&quot; data-ref=&quot;textEl&quot; class=&quot;', Ext.baseCSSPrefix, 'column-header-text', '{childElCls}&quot;&gt;', '{text}', '&lt;/span&gt;', '&lt;tpl if=&quot;!menuDisabled&quot;&gt;', '&lt;div id=&quot;{id}-triggerEl&quot; data-ref=&quot;triggerEl&quot; role=&quot;presentation&quot; class=&quot;', Ext.baseCSSPrefix, 'column-header-trigger', '{childElCls}&quot; style=&quot;{triggerStyle}&quot;&gt;&lt;/div&gt;', '&lt;/tpl&gt;', '&lt;/div&gt;', '{%this.renderContainer(out,values)%}'] </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_grid_feature_RowBody"> Ext.grid.feature.RowBody </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> bodyBefore </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_grid_header_Container"> Ext.grid.header.Container </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.util.FocusableContainer] </li> 
+             </ul> </li> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> enableFocusableContainer </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_grid_plugin_CellEditing"> Ext.grid.plugin.CellEditing </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> onSpecialKey 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_grid_plugin_RowExpander"> Ext.grid.plugin.RowExpander </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> bodyBefore </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_layout_container_Accordion"> Ext.layout.container.Accordion </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $accordion-body-border-width 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is string </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is number </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_layout_container_ColumnSplitter"> Ext.layout.container.ColumnSplitter </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> cls 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'x-splitter-vertical' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is Ext.baseCSSPrefix + 'splitter-vertical' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> height 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Number </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Number|String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> width 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Number </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Number|String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_menu_DatePicker"> Ext.menu.DatePicker </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> ariaLabel </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_menu_Item"> Ext.menu.Item </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> renderTpl 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is '&lt;tpl if=&quot;plain&quot;&gt;' + '{text}' + '&lt;tpl else&gt;' + '&lt;a id=&quot;{id}-itemEl&quot; data-ref=&quot;itemEl&quot;' + ' class=&quot;{linkCls}&lt;tpl if=&quot;hasHref&quot;&gt; {linkHrefCls}&lt;/tpl&gt;{childElCls}&quot;' + ' href=&quot;{href}&quot; role=&quot;menuitem&quot; ' + '&lt;tpl if=&quot;hrefTarget&quot;&gt; target=&quot;{hrefTarget}&quot;&lt;/tpl&gt;' + ' hidefocus=&quot;true&quot;' + ' unselectable=&quot;on&quot;' + '&lt;tpl if=&quot;tabIndex&quot;&gt;' + ' tabIndex=&quot;{tabIndex}&quot;' + '&lt;/tpl&gt;' + '&gt;' + '&lt;span id=&quot;{id}-textEl&quot; data-ref=&quot;textEl&quot; class=&quot;{textCls} {textCls}-{ui} {indentCls}{childElCls}&quot; unselectable=&quot;on&quot;&gt;{text}&lt;/span&gt;' + '&lt;tpl if=&quot;hasIcon&quot;&gt;' + '&lt;div role=&quot;presentation&quot; id=&quot;{id}-iconEl&quot; data-ref=&quot;iconEl&quot; class=&quot;{baseIconCls}-{ui} {baseIconCls}' + '{[values.rightIcon ? &quot;-right&quot; : &quot;&quot;]} {iconCls}' + '{childElCls} {glyphCls}&quot; style=&quot;&lt;tpl if=&quot;icon&quot;&gt;background-image:url({icon});&lt;/tpl&gt;' + '&lt;tpl if=&quot;glyph &amp;&amp; glyphFontFamily&quot;&gt;font-family:{glyphFontFamily};&lt;/tpl&gt;&quot;&gt;' + '&lt;tpl if=&quot;glyph&quot;&gt;&amp;#{glyph};&lt;/tpl&gt;' + '&lt;/div&gt;' + '&lt;/tpl&gt;' + '&lt;tpl if=&quot;showCheckbox&quot;&gt;' + '&lt;div role=&quot;presentation&quot; id=&quot;{id}-checkEl&quot; data-ref=&quot;checkEl&quot; class=&quot;{baseIconCls}-{ui} {baseIconCls}' + '{[(values.hasIcon &amp;&amp; !values.rightIcon) ? &quot;-right&quot; : &quot;&quot;]} ' + '{groupCls} {checkboxCls}{childElCls}&quot;&gt;' + '&lt;/div&gt;' + '&lt;/tpl&gt;' + '&lt;tpl if=&quot;hasMenu&quot;&gt;' + '&lt;div role=&quot;presentation&quot; id=&quot;{id}-arrowEl&quot; data-ref=&quot;arrowEl&quot; class=&quot;{arrowCls} {arrowCls}-{ui}{childElCls}&quot;&gt;&lt;/div&gt;' + '&lt;/tpl&gt;' + '&lt;/a&gt;' + '&lt;/tpl&gt;' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is '&lt;tpl if=&quot;plain&quot;&gt;' + '{text}' + '&lt;tpl else&gt;' + '&lt;a id=&quot;{id}-itemEl&quot; data-ref=&quot;itemEl&quot;' + ' class=&quot;{linkCls}&lt;tpl if=&quot;hasHref&quot;&gt; {linkHrefCls}&lt;/tpl&gt;{childElCls}&quot;' + ' href=&quot;{href}&quot; role=&quot;menuitem&quot; ' + '&lt;tpl if=&quot;hrefTarget&quot;&gt; target=&quot;{hrefTarget}&quot;&lt;/tpl&gt;' + ' hidefocus=&quot;true&quot;' + ' unselectable=&quot;on&quot;' + '&lt;tpl if=&quot;tabIndex != null&quot;&gt;' + ' tabindex=&quot;{tabIndex}&quot;' + '&lt;/tpl&gt;' + '&gt;' + '&lt;span id=&quot;{id}-textEl&quot; data-ref=&quot;textEl&quot; class=&quot;{textCls} {textCls}-{ui} {indentCls}{childElCls}&quot; unselectable=&quot;on&quot;&gt;{text}&lt;/span&gt;' + '&lt;tpl if=&quot;hasIcon&quot;&gt;' + '&lt;div role=&quot;presentation&quot; id=&quot;{id}-iconEl&quot; data-ref=&quot;iconEl&quot; class=&quot;{baseIconCls}-{ui} {baseIconCls}' + '{[values.rightIcon ? &quot;-right&quot; : &quot;&quot;]} {iconCls}' + '{childElCls} {glyphCls}&quot; style=&quot;&lt;tpl if=&quot;icon&quot;&gt;background-image:url({icon});&lt;/tpl&gt;' + '&lt;tpl if=&quot;glyph &amp;&amp; glyphFontFamily&quot;&gt;font-family:{glyphFontFamily};&lt;/tpl&gt;&quot;&gt;' + '&lt;tpl if=&quot;glyph&quot;&gt;&amp;#{glyph};&lt;/tpl&gt;' + '&lt;/div&gt;' + '&lt;/tpl&gt;' + '&lt;tpl if=&quot;showCheckbox&quot;&gt;' + '&lt;div role=&quot;presentation&quot; id=&quot;{id}-checkEl&quot; data-ref=&quot;checkEl&quot; class=&quot;{baseIconCls}-{ui} {baseIconCls}' + '{[(values.hasIcon &amp;&amp; !values.rightIcon) ? &quot;-right&quot; : &quot;&quot;]} ' + '{groupCls} {checkboxCls}{childElCls}&quot;&gt;' + '&lt;/div&gt;' + '&lt;/tpl&gt;' + '&lt;tpl if=&quot;hasMenu&quot;&gt;' + '&lt;div role=&quot;presentation&quot; id=&quot;{id}-arrowEl&quot; data-ref=&quot;arrowEl&quot; class=&quot;{arrowCls} {arrowCls}-{ui}{childElCls}&quot;&gt;&lt;/div&gt;' + '&lt;/tpl&gt;' + '&lt;/a&gt;' + '&lt;/tpl&gt;' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_menu_Manager"> Ext.menu.Manager </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> constructor </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_mixin_Responsive"> Ext.mixin.Responsive </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> responsiveFormulas </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_panel_Panel"> Ext.panel.Panel </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> setCollapsed </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> updateIconCls </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_panel_Table"> Ext.panel.Table </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [Ext.grid.locking.Lockable] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> bufferedRenderer </li> 
+                <li> tabIndex </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> initFocusableEvents </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> autoLoad 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Ext.ComponentLoader/Object/String/Boolean </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Boolean </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> deferRowRender 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is null </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> layout 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Object </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Ext.enums.Layout/Object </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> reconfigure 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_panel_Title"> Ext.panel.Title </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> renderTpl 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is '&lt;tpl if=&quot;iconMarkup &amp;&amp; iconBeforeTitle&quot;&gt;{iconMarkup}&lt;/tpl&gt;' + '&lt;div id=&quot;{id}-textEl&quot; data-ref=&quot;textEl&quot; class=&quot;{textCls} {textCls}-{ui} {itemCls}&quot; unselectable=&quot;on&quot;' + '&lt;tpl if=&quot;headerRole&quot;&gt;' + ' role=&quot;{headerRole}&quot;' + '&lt;/tpl&gt;' + '&gt;{text}&lt;/div&gt;' + '&lt;tpl if=&quot;iconMarkup &amp;&amp; !iconBeforeTitle&quot;&gt;{iconMarkup}&lt;/tpl&gt;' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is '&lt;tpl if=&quot;iconMarkup &amp;&amp; iconBeforeTitle&quot;&gt;{iconMarkup}&lt;/tpl&gt;' + '&lt;div id=&quot;{id}-textEl&quot; data-ref=&quot;textEl&quot; class=&quot;{textCls} {textCls}-{ui} {itemCls}{childElCls}&quot; unselectable=&quot;on&quot;' + '&lt;tpl if=&quot;headerRole&quot;&gt;' + ' role=&quot;{headerRole}&quot;' + '&lt;/tpl&gt;' + '&gt;{text}&lt;/div&gt;' + '&lt;tpl if=&quot;iconMarkup &amp;&amp; !iconBeforeTitle&quot;&gt;{iconMarkup}&lt;/tpl&gt;' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_picker_Date"> Ext.picker.Date </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> ariaTitleDateFormat 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'F d, Y' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'F d' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> focusOnShow </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_selection_CellModel"> Ext.selection.CellModel </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> superclass is Ext.selection.Model </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> superclass is Ext.selection.DataViewModel </li> 
+             </ul> </li> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getPosition </li> 
+                <li> setPosition </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_selection_Model"> Ext.selection.Model </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> ignoreRightMouseSelection </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> isFocused </li> 
+                <li> setLastFocused </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_selection_RowModel"> Ext.selection.RowModel </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> superclass is Ext.selection.Model </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> superclass is Ext.selection.DataViewModel </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> constructor </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_slider_Multi"> Ext.slider.Multi </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $horizontal-slider-start-cap-width </li> 
+                <li> $vertical-slider-start-cap-height </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> focusCls 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'x-form-focus' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'slider-focus' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $horizontal-slider-end-cap-width 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 7px </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is ceil ( $horizontal-slider-thumb-width / 2 ) </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> $vertical-slider-end-cap-height 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 7px </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is ceil ( $vertical-slider-thumb-height / 2 ) </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_slider_Widget"> Ext.slider.Widget </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> twoWayBindable 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> type is String/String[]/Object </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> type is Object </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getTwoWayBindable 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> return type is String/String[]/Object </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> return type is Object </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> setTwoWayBindable 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> twoWayBindProperties </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_supports"> Ext.supports </h3> 
+           <ul class="d2"> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> TimeoutActualLateness </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_tab_Bar"> Ext.tab.Bar </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.util.FocusableContainer] </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_tab_Tab"> Ext.tab.Tab </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $tab-background-gradient-focus </li> 
+                <li> $tab-background-gradient-focus-active </li> 
+                <li> $tab-background-gradient-focus-over </li> 
+                <li> $tab-base-color-focus </li> 
+                <li> $tab-base-color-focus-active </li> 
+                <li> $tab-base-color-focus-over </li> 
+                <li> $tab-body-outline-color-focus </li> 
+                <li> $tab-body-outline-style-focus </li> 
+                <li> $tab-body-outline-width-focus </li> 
+                <li> $tab-border-color-focus </li> 
+                <li> $tab-border-color-focus-active </li> 
+                <li> $tab-border-color-focus-over </li> 
+                <li> $tab-border-width-active </li> 
+                <li> $tab-border-width-disabled </li> 
+                <li> $tab-border-width-focus </li> 
+                <li> $tab-border-width-focus-active </li> 
+                <li> $tab-border-width-focus-over </li> 
+                <li> $tab-border-width-over </li> 
+                <li> $tab-color-focus </li> 
+                <li> $tab-color-focus-active </li> 
+                <li> $tab-color-focus-over </li> 
+                <li> $tab-font-family-focus </li> 
+                <li> $tab-font-family-focus-active </li> 
+                <li> $tab-font-family-focus-over </li> 
+                <li> $tab-font-size-focus </li> 
+                <li> $tab-font-size-focus-active </li> 
+                <li> $tab-font-size-focus-over </li> 
+                <li> $tab-font-weight-focus </li> 
+                <li> $tab-font-weight-focus-active </li> 
+                <li> $tab-font-weight-focus-over </li> 
+                <li> $tab-glyph-color-focus </li> 
+                <li> $tab-glyph-color-focus-active </li> 
+                <li> $tab-glyph-color-focus-over </li> 
+                <li> $tab-inner-border-collapse </li> 
+                <li> $tab-inner-border-collapse-active </li> 
+                <li> $tab-inner-border-collapse-disabled </li> 
+                <li> $tab-inner-border-collapse-focus </li> 
+                <li> $tab-inner-border-collapse-focus-active </li> 
+                <li> $tab-inner-border-collapse-focus-over </li> 
+                <li> $tab-inner-border-collapse-over </li> 
+                <li> $tab-inner-border-color-active </li> 
+                <li> $tab-inner-border-color-disabled </li> 
+                <li> $tab-inner-border-color-focus </li> 
+                <li> $tab-inner-border-color-focus-active </li> 
+                <li> $tab-inner-border-color-focus-over </li> 
+                <li> $tab-inner-border-color-over </li> 
+                <li> $tab-inner-border-width-active </li> 
+                <li> $tab-inner-border-width-disabled </li> 
+                <li> $tab-inner-border-width-focus </li> 
+                <li> $tab-inner-border-width-focus-active </li> 
+                <li> $tab-inner-border-width-focus-over </li> 
+                <li> $tab-inner-border-width-over </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $tab-inner-border-color 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is #fff </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'none' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> $tab-inner-border-width 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 1px 1px 0 </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'none' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_toolbar_Breadcrumb"> Ext.toolbar.Breadcrumb </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.util.FocusableContainer] </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_toolbar_Toolbar"> Ext.toolbar.Toolbar </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> mixins is [] </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> mixins is [Ext.util.FocusableContainer] </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_util_Filter"> Ext.util.Filter </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> serialize </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getState 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> return type is Object </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_util_Floating"> Ext.util.Floating </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> alwaysOnTop </li> 
+               </ul> </li> 
+              <li> method 
+               <ul class="d4"> 
+                <li> constructor </li> 
+                <li> getAlwaysOnTop </li> 
+                <li> setAlwaysOnTop </li> 
+               </ul> </li> 
+              <li> property 
+               <ul class="d4"> 
+                <li> zIndexManager </li> 
+                <li> zIndexParent </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> setActive 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_util_KeyMap"> Ext.util.KeyMap </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> lastKeyEvent </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_util_KeyNav"> Ext.util.KeyNav </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> lastKeyEvent </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_util_Sorter"> Ext.util.Sorter </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> serialize </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> getState 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> private is true </li> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> private is false </li> 
+                    <li> return type is Object </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_util_TaskRunner"> Ext.util.TaskRunner </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> newTask 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> return type is void </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> return type is Ext.util.TaskRunner.Task </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_ux_IFrame"> Ext.ux.IFrame </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> childEls 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is {frameTable: {frame: true}, frameTL: {frame: 'tl'}, frameTC: {frame: 'tc'}, frameTR: {frame: 'tr'}, frameML: {frame: 'ml'}, frameBody: {frame: 'mc'}, frameMR: {frame: 'mr'}, frameBL: {frame: 'bl'}, frameBC: {frame: 'bc'}, frameBR: {frame: 'br'}} </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is ['iframeEl'] </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+                <li> renderTpl 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is ['&lt;iframe src=&quot;{src}&quot; name=&quot;{frameName}&quot; width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;'] </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is ['&lt;iframe src=&quot;{src}&quot; id=&quot;{id}-iframeEl&quot; data-ref=&quot;iframeEl&quot; name=&quot;{frameName}&quot; width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;'] </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_ux_desktop_StartMenu"> Ext.ux.desktop.StartMenu </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> width 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> type is Number </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> type is Number|String </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_ux_form_MultiSelect"> Ext.ux.form.MultiSelect </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> dragText </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> String </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_view_BoundListKeyNav"> Ext.view.BoundListKeyNav </h3> 
+           <ul class="d2"> 
+            <li> 5.0.0 
+             <ul class="d3"> 
+              <li> aliases is {} </li> 
+              <li> superclass is Ext.util.KeyNav </li> 
+             </ul> </li> 
+            <li> 5.0.1 
+             <ul class="d3"> 
+              <li> aliases is {view=[navigation.boundlist]} </li> 
+              <li> superclass is Ext.view.NavigationModel </li> 
+             </ul> </li> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> focusItem </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Removed 
+             <ul class="d3"> 
+              <li> method 
+               <ul class="d4"> 
+                <li> highlightAt </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_view_MultiSelector"> Ext.view.MultiSelector </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $multiselector-remove-padding </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> removeRowText 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is '&amp;#10006' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is '\u2716' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_view_Table"> Ext.view.Table </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $grid-row-cell-focus-border-inset </li> 
+                <li> $grid-row-cell-focus-border-width </li> 
+               </ul> </li> 
+             </ul> </li> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> itemCls 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is Ext.baseCSSPrefix + 'dataview-item' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is Ext.baseCSSPrefix + 'grid-item' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $grid-row-cell-focus-background-color 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is $grid-row-cell-background-color </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'none' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Ext_window_MessageBox"> Ext.window.MessageBox </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> config 
+               <ul class="d4"> 
+                <li> autoScroll 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is false </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is true </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="Global_CSS"> Global_CSS </h3> 
+           <ul class="d2"> 
+            <li> Modified 
+             <ul class="d3"> 
+              <li> cssVar 
+               <ul class="d4"> 
+                <li> $slicer-image-extension 
+                 <ul class="d5"> 
+                  <li> 5.0.0 
+                   <ul class="d6"> 
+                    <li> default value is 'png' </li> 
+                   </ul> </li> 
+                  <li> 5.0.1 
+                   <ul class="d6"> 
+                    <li> default value is 'gif' </li> 
+                   </ul> </li> 
+                 </ul> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li> <h3 id="global"> global </h3> 
+           <ul class="d2"> 
+            <li> Added 
+             <ul class="d3"> 
+              <li> property 
+               <ul class="d4"> 
+                <li> </li> 
+               </ul> </li> 
+             </ul> </li> 
+           </ul> </li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+        April 1, 2016
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | 对编译器友好的代码规范</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="http://www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码规范</a></li> 
+      <li class="file"><a href="cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="advanced_cmd/cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="advanced_cmd/cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Prerequisites" title="Prerequisites">前提</a> 
+       <a class="toc-page-h2" href="#What_The_Compiler_Is_Not" title="What The Compiler Is Not">编译器不是什么？</a> 
+       <a class="toc-page-h2" href="#Framework_Awareness" title="Framework Awareness">框架感知(Framework Awareness)</a> 
+       <a class="toc-page-h2" href="#Code_Organization" title="Code Organization">代码结构</a> 
+       <a class="toc-page-h2" href="#Class_Declaration" title="Class Declaration">类声明</a> 
+       <a class="toc-page-h3" href="#Standard_Form" title="Standard Form">标准形式</a> 
+       <a class="toc-page-h3" href="#Wrapped_Function_Forms" title="Wrapped Function Forms">包裹函数的形式</a> 
+       <a class="toc-page-h4" href="#Function_Form" title="Function Form">函数的形式(Function Form)</a> 
+       <a class="toc-page-h4" href="#Called_Function_Form" title="Called Function Form">调用函数的形式(Called Function Form)</a> 
+       <a class="toc-page-h4" href="#Called_Parenthesized_Function_Form" title="Called-Parenthesized Function Form">调用 加了括弧的函数 的形式(Called-Parenthesized Function Form)</a> 
+       <a class="toc-page-h4" href="#Parenthesized_Called_Function_Form" title="Parenthesized-Called Function Form">加了括弧的函数调用 的形式(Parenthesized-Called Function Form)</a> 
+       <a class="toc-page-h3" href="#Keywords" title="Keywords">关键词</a> 
+       <a class="toc-page-h4" href="#Keywords_using_String" title="Keywords using String">接收字符串的关键词</a> 
+       <a class="toc-page-h4" href="#Keywords_using_String_or_String__" title="Keywords using String or String[]">接收字符串或字符串数组的关键词</a> 
+       <a class="toc-page-h4" href="#Forms_of__code_mixins__code_" title="Forms of &lt;code&gt;mixins&lt;/code&gt;"><code>混入(mixins)</code>的形式</a> 
+       <a class="toc-page-h4" href="#The__code_statics__code__Keyword" title="The &lt;code&gt;statics&lt;/code&gt; Keyword"><code>statics(静态)</code> 关键词</a> 
+       <a class="toc-page-h4" href="#The__code_singleton__code__Keyword" title="The &lt;code&gt;singleton&lt;/code&gt; Keyword"><code>singleton(单例)</code> 关键词</a> 
+       <a class="toc-page-h2" href="#Overrides" title="Overrides">覆写(Overrides)</a> 
+       <a class="toc-page-h3" href="#Standard_Override_Form" title="Standard Override Form">标准的Override形式</a> 
+       <a class="toc-page-h3" href="#Use_Cases" title="Use Cases">使用案例</a> 
+       <a class="toc-page-h4" href="#Overrides_as_Patches" title="Overrides as Patches">Overrides用来修补代码</a> 
+       <a class="toc-page-h5" href="#Naming_Recommendation_" title="Naming Recommendation:">命名建议:</a> 
+       <a class="toc-page-h4" href="#Overrides_as_Partial_Classes" title="Overrides as Partial Classes">把 Overrides 看做 部分类(Overrides as Partial Classes)</a> 
+       <a class="toc-page-h4" href="#Overrides_as_Aspects" title="Overrides as Aspects">把 Overrides 看做 特征方面(Overrides as Aspects)</a> 
+       <a class="toc-page-h3" href="#Using__code_requires__code__and__code_uses__code__in_an_Override" title="Using &lt;code&gt;requires&lt;/code&gt; and &lt;code&gt;uses&lt;/code&gt; in an Override">在 Override 中使用 <code>requires</code> 和 <code>uses</code></a> 
+       <a class="toc-page-h3" href="#Using__code_callParent__code__and__code_callSuper__code_" title="Using &lt;code&gt;callParent&lt;/code&gt; and &lt;code&gt;callSuper&lt;/code&gt;">使用 <code>callParent</code> 和 <code>callSuper</code></a> 
+       <a class="toc-page-h3" href="#Override_Compatibility" title="Override Compatibility">Override 兼容性</a> 
+       <a class="toc-page-h2" href="#Conclusion" title="Conclusion">总结</a> 
+       <a class="toc-page-h2" href="#Next_Steps" title="Next Steps">下一步</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>对编译器友好的代码规范</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p><a href="http://www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a>里一个重要的东西是它的编译器. 本指南描述如何编写代码才能最有效利用编译器，并为以后的 框架感知(framework-aware) 优化做准备.</p> 
+       <h2 id="Prerequisites">前提</h2> 
+       <p>继续之前推荐先阅读下面的指南:</p> 
+       <ul> 
+        <li><a href="intro_to_cmd.html">Sencha Cmd 介绍</a></li> 
+        <li><a href="extjs/cmd_app.html">使用 Sencha Cmd</a></li> 
+       </ul> 
+       <h2 id="What_The_Compiler_Is_Not">编译器不是什么？</h2> 
+       <p>Sencha Cmd 编译器 <strong>不是</strong> 对下面工具的替代:</p> 
+       <ul> 
+        <li><a href="http://yui.github.io/yuicompressor/default.htm">YUI Compressor</a></li> 
+        <li><a href="http://developers.google.com/closure/compiler/default.htm">Google Closure Compiler</a></li> 
+        <li><a href="http://github.com/mishoo/UglifyJS/default.htm">UglifyJS</a></li> 
+       </ul> 
+       <p>这些工具为 JavaScript 开发者解决不同的问题,  是非常好用的 JavaScript 工具, 但是却不能理解 Sencha 框架的功能，比如<code>Ext.define</code>这中声明类的方式.</p> 
+       <h2 id="Framework_Awareness">框架感知(Framework Awareness)</h2> 
+       <p>Sencha Cmd 编译器的功能是提供 框架感知(framework-aware) 优化 和 诊断. 当代码流经 Sencha Cmd 编译器之后, 它才可以被更通用的工具所处理.</p> 
+       <p>这种优化，在对浏览器“消化”JavaScript 代码的时间效率方面有显著的提升, 特别是对传统浏览器.</p> 
+       <p>然而，为了编译器能提供了这些好处, 现在来看看编译器可以“理解”的编码约定，这是很重要的，然后才能帮你优化. 下面的编码约定，以保证你的代码在现在和以后都可以最大限度的利用 Sencha Cmd.</p> 
+       <h2 id="Code_Organization">代码结构</h2> 
+       <p>动态加载程序和之前的 JSBuilder 在关于类是如何组织的这方面，都做了某些假设, 但他们并没有受到不遵循这些原则的影响. 这些原则和 Java 很像.</p> 
+       <p>总的来说，这些原则是</p> 
+       <ul> 
+        <li>，每一个 JavaScript 源文件都要在全局作用域下包含一个 <code>Ext.define</code> 声明.</li> 
+        <li>源文件名必须和类名最后一段一样，比如有这段代码的 <code>Ext.define(&quot;MyApp.foo.bar.Thing&quot;, ...</code> 文件的名字是“Thing.js”.</li> 
+        <li>所有源文件都放在基于特定类型命名空间的目录结构下. 比如, <code>Ext.define(&quot;MyApp.foo.bar.Thing&quot;, ...</code>, 这个源文件位于“/foo/bar”这个目录下.</li> 
+       </ul> 
+       <p>在内部, 编译器将源文件和类视为基本同义. 这使得编译器不需要取分割源文件，然后移除不需要的类. 包含在输出中的都是一整个文件. 意思就是说如果某个源文件中的某个类被 引入(require) 了, 这个源文件里面的所有类都会包含在输出中.</p> 
+       <p>为了让编译器可以再 类级 来自由选择代码, 一个文件中只放一个类还是很有必要的.</p> 
+       <h2 id="Class_Declaration">类声明</h2> 
+       <p>Sencha 类系统 提供了<code>Ext.define</code> 函数来支持高级别，面向对象的编程. 编译器把<code>Ext.define</code>视为“声明式”编程的一种真正的形式，并相应地处理这个 “类声明” .</p> 
+       <p>显然如果<code>Ext.define</code>理解为一个声明,类主体的内容不能在代码中动态地构造. 虽然这种做法是罕见的，但它是有效的 JavaScript. 但是, 正如我们看到的下面代码形式, 这与编译器能够理解代码的能力是对立的. 动态类声明通常用来做那些能被编译器其它功能更好地处理的事情. 想了解更多关于此功能, 请看 <a href="advanced_cmd/cmd_compiler_reference.html">Sencha 编译器参考</a>.</p> 
+       <p>编译器理解这些 “关键词”:</p> 
+       <ul> 
+        <li><code>requires</code></li> 
+        <li><code>uses</code></li> 
+        <li><code>extend</code></li> 
+        <li><code>mixins</code></li> 
+        <li><code>statics</code></li> 
+        <li><code>alias</code></li> 
+        <li><code>singleton</code></li> 
+        <li><code>override</code></li> 
+        <li><code>alternateClassName</code></li> 
+        <li><code>xtype</code></li> 
+       </ul> 
+       <p>为了让编译器能够组织你的类声明, 你应该遵守下面几种形式.</p> 
+       <h3 id="Standard_Form">标准形式</h3> 
+       <p>大部分类使用下面的简单声明:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.Thing', {
+    // keywords go here ... such as:
+
+    extend: '...',
+
+    // ...
+});</code></pre> 
+       <p>第二个参数是类主体，类主体作为类声明的内容，被编译器所处理.</p> 
+       <p><strong>注意:</strong> <em>所有的形式, 都在全局作用域下调用 <code>Ext.define</code>.</em> </p> 
+       <h3 id="Wrapped_Function_Forms">包裹函数的形式</h3> 
+       <p>在有些情况下，类声明主体被包裹在一个函数中，以创建一个闭包作用域. 这个函数需要用 <code>return</code> 声明符结尾，以一个对象的方式返回类的主体，这对编译器至关重要. 其他方式都不能被编译器识别.</p> 
+       <h4 id="Function_Form">函数的形式(Function Form)</h4> 
+       <p>为了简化下面要说的那种旧的形式, 如果第二个参数传递的是一个函数，<code>Ext.define</code>也可以识别出来, 它会调用这个函数来产生类主体. 而且它还把当前类的引用作为唯一的参数传递进了这个函数，这样函数内就可以在这个闭包作用域中利用该类的静态成员. 框架内部来说, 这也是为什么要使用闭包作用域的一个普遍原因.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.Thing', function (Thing) {
+
+    return {
+        // keywords go here ... such as:
+
+        extend: '...',
+
+        // ...
+    };
+});</code></pre> 
+       <p><strong>注意:</strong> <em>这种形式只在 Ext JS 4.1.2 及以后， 还有Sencha Touch 2.1 及以后的版本支持.</em></p> 
+       <h4 id="Called_Function_Form">调用函数的形式(Called Function Form)</h4> 
+       <p>在旧的版本中, 不支持“函数的形式(Function Form)”, 所以这个函数直接被调用了:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.Thing', function () {
+
+    return {
+        // keywords go here ... such as:
+
+        extend: '...',
+
+        // ...
+    };
+}());</code></pre> 
+       <h4 id="Called_Parenthesized_Function_Form">调用 加了括弧的函数 的形式(Called-Parenthesized Function Form)</h4> 
+       <p>这种形式，还有下面的那种，通常为了适配像 JSHint (或 JSLint)这样的工具.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.Thing', (function () {
+
+    return {
+        // keywords go here ... such as:
+
+        extend: '...',
+
+        // ...
+    };
+})());</code></pre> 
+       <h4 id="Parenthesized_Called_Function_Form">加了括弧的函数调用 的形式(Parenthesized-Called Function Form)</h4> 
+       <p>另一种直接调用 “函数的形式”，同样是为了适配 JSHint/JSLint.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.Thing', (function () {
+
+    return {
+        // keywords go here ... such as:
+
+        extend: '...',
+
+        // ...
+    };
+}()));</code></pre> 
+       <h3 id="Keywords">关键词</h3> 
+       <p>各种形式的类声明都包含“关键词”. 每个关键字有它自己的语义, 但它们还是有共性的.</p> 
+       <h4 id="Keywords_using_String">接收字符串的关键词</h4> 
+       <p><code>extend</code> 和 <code>override</code> 关键词只接收字符串字面量.</p> 
+       <p>这2个关键词互斥，一个函数声明只能用其中一个.</p> 
+       <h4 id="Keywords_using_String_or_String__">接收字符串或字符串数组的关键词</h4> 
+       <p>下面的关键词都是这样:</p> 
+       <ul> 
+        <li><code>requires</code></li> 
+        <li><code>uses</code></li> 
+        <li><code>alias</code></li> 
+        <li><code>alternateClassName</code></li> 
+        <li><code>xtype</code></li> 
+       </ul> 
+       <p>它们接收的值类型可以是下面的类型.</p> 
+       <p>仅字符串:</p> 
+       <pre mode="javascript" theme="chrome"><code>requires: 'Foo.thing.Bar',
+//...</code></pre> 
+       <p>字符串数组:</p> 
+       <pre mode="javascript" theme="chrome"><code>requires: [ 'Foo.thing.Bar', 'Foo.other.Thing' ],
+//...</code></pre> 
+       <h4 id="Forms_of__code_mixins__code_"><code>混入(mixins)</code>的形式</h4> 
+       <p>使用一个对象, 对象的key可以加引号，也可以不加:</p> 
+       <pre mode="javascript" theme="chrome"><code>mixins: {
+    name: 'Foo.bar.Mixin',
+    'other': 'Foo.other.Mixin'
+},
+//...</code></pre> 
+       <p>混入(Mixins) 也可以是一个字符串数组:</p> 
+       <pre mode="javascript" theme="chrome"><code>mixins: [
+    'Foo.bar.Mixin',
+    'Foo.other.Mixin'
+],
+//...</code></pre> 
+       <p>这种方法需要依赖混入(mixin) 类的<code>mixinId</code>，但是它可以让 接收混入的类(也就是类声明) 可以控制 混入(mixin) 的顺序. 特别是当 混入(mixins)类 有重复函数或属性的时候，这点尤为重要，以便让 接收混入的类 可以控制到底使用哪一个 混入(mixin)类 提供的函数或属性.</p> 
+       <h4 id="The__code_statics__code__Keyword"><code>statics</code> (静态)关键词</h4> 
+       <p>放在这个关键词里面的，属于类的成员属性和函数, 与实例的成员属性和函数 相对. 必须是一个对象.</p> 
+       <pre mode="javascript" theme="chrome"><code>statics: {
+    // 成员写这里
+},
+// ...</code></pre> 
+       <h4 id="The__code_singleton__code__Keyword"><code>singleton</code> (单例)关键词</h4> 
+       <p>这个关键词一直都只接收“true” 值:</p> 
+       <pre mode="javascript" theme="chrome"><code>singleton: true,</code></pre> 
+       <p>下面这种 (没有意义) 用法也支持:</p> 
+       <pre mode="javascript" theme="chrome"><code>singleton: false,</code></pre> 
+       <h2 id="Overrides">覆写(Overrides)</h2> 
+       <p>在 Ext JS 4.1.0 和 Sencha Touch 2.0 中, <code>Ext.define</code> 新增加了一种可以管理 覆写(overrides) 的能力. 一直以来, 覆写(overrides) 被用来给代码打补丁，以便解决一些bug，或者添加增强功能. 在引入了动态加载之后，这种用法比较复杂，因为执行<code>Ext.override</code>函数需要特定的时机. 而且, 在含有大量 overrides 的大型应用程序中, 并不是任何页面都需要所有的 overrides (比如, 没有用到某个组件类，就可以不包含这个类的 overrides).</p> 
+       <p>当类系统和加载器理解了 overrides 之后，这一切都发生了改变. This trend only continues with Sencha Cmd. 编译器理解了 overrides 和 它们的依赖的影响，还有加载顺序问题.</p> 
+       <p>未来, 编译器会变的更加智能，以便消除 override 不存在的函数 的那种无用代码. 使用下述可被管理的 overrides 写法，一旦 Sencha Cmd 实现了这个功能，你的代码就可以支持这种优化了.</p> 
+       <h3 id="Standard_Override_Form">标准的Override形式</h3> 
+       <p>下面是标准的覆写(Override)形式. 命名空间有点随意, 不过可以遵循下面的建议.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.patches.grid.Panel', {
+    override: 'Ext.grid.Panel',
+
+    ...
+});</code></pre> 
+       <h3 id="Use_Cases">使用案例</h3> 
+       <p>随着使用 <code>Ext.define</code> 来管理 overrides, 新的风格已经来袭，并被积极利用. 比如，在<a href="http://www.sencha.com/products/architect/default.htm">Sencha Architect</a> 的代码生成器和框架内, 把大的类比如 <code>Ext.Element</code>分解成了更易于管理的小的部分.</p> 
+       <h4 id="Overrides_as_Patches">Overrides用来修补代码</h4> 
+       <p>Overrides 用来修补代码是一直以来的用法，也是最常见的做法.</p> 
+       <p><strong>警告:</strong> 修补代码时要小心. 虽然支持使用 override, 但是使用 override 覆盖框架方法的结果是未知的. 无论何时升级到新版本框架, 所有的 overrides 代码都应该重新审查.</p> 
+       <p>也就是说, 有时候必须覆盖框架方法. 最常见的原因是用来修复bug. 标准的覆写(Override)形式是最理想的方式. 实际上, Sencha 技术支持有时候会以这种形式提供补丁给客户. 审查程序代码的时候，如果不再需要这个补丁，那么就应该删除它们.</p> 
+       <h5 id="Naming_Recommendation_">命名建议:</h5> 
+       <ul> 
+        <li><p>补丁的命名空间 要替换掉 被 override 的类的顶层命名空间. 例如, “MyApp.patches” 替换 “Ext” 命名空间. 假如涉及到的是第三方代码，那么顶层命名空间可能就是其它的层级或命名空间. 这样, 用一个合适的顶层命名空间 加上原本的 子命名空间作为 override 的名称. 之前的例子则是:</p><p><code>Ext -&gt; MyApp.patches).grid.Panel</code></p></li> 
+       </ul> 
+       <h4 id="Overrides_as_Partial_Classes">把 Overrides 看做 部分类(Overrides as Partial Classes)</h4> 
+       <p>当和 代码生成(如 Sencha Architect) 打交道的时候, 通常把类看做2部分: 一部分是机器生成的代码，另一部分是用户修改的代码. 在有些语言中, 有一个“部分类”的概念或者叫class-in-two-parts.</p> 
+       <p>使用 override, 你可以很清晰地管理:</p> 
+       <p>在 <code>./foo/bar/Thing.js</code> 里:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.Thing', {
+    // NOTE: This class is generated - DO NOT EDIT...
+
+    requires: [
+        'Foo.bar.custom.Thing'
+    ],
+
+    method: function () {
+        // some generated method
+    },
+
+    ...
+});</code></pre> 
+       <p>在 <code>./foo/bar/custom/Thing.js</code> 里:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.bar.custom.Thing', {
+    override: 'Foo.bar.Thing',
+
+    method: function () {
+        this.callParent(); // calls generated method
+        ...
+    },
+
+    ...
+});</code></pre> 
+       <p>命名建议:</p> 
+       <ul> 
+        <li>用 命名空间 来区分管理 生成的代码 vs. 手写的代码.</li> 
+        <li>假如不用命名空间, 可以考虑用后缀来区分, 比如 <code>Foo.bar.ThingOverride</code> 和 <code>Foo.bar.ThingGenerated</code>，这样，类的2个部分可以并排列在一起.</li> 
+       </ul> 
+       <h4 id="Overrides_as_Aspects">把 Overrides 看做 特征方面(Overrides as Aspects)</h4> 
+       <p>面向对象设计中普遍会担心的一个问题是“臃肿的基类”. 这是因为所有类都有某些行为特性. 然而, 假如它们是一些很大的基类，当某些行为 (或者 特征features)不再需要了, 它们并不是很容易就能移除的.</p> 
+       <p>使用 overrides, 这些特征(features)可以在它们自己的层次结构内被收集, 然后按需<code>requires</code>.</p> 
+       <p>在<code>./foo/feature/Component.js</code>中:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.feature.Component', {
+    override: 'Ext.Component',
+
+    ...
+});</code></pre> 
+       <p>在<code>./foo/feature/grid/Panel.js</code>中:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('Foo.feature.grid.Panel', {
+    override: 'Ext.grid.Panel',
+
+    requires: [
+        'Foo.feature.Component' // since overrides do not "extend" each other
+    ],
+
+    ...
+});</code></pre> 
+       <p>可以 require 它，以使用这个 特征:</p> 
+       <pre mode="javascript" theme="chrome"><code>...
+requires: [
+    'Foo.feature.grid.Panel'
+]</code></pre> 
+       <p>或者使用合适的 “引导”文件 (请看<a href="workspaces.html">Sencha Cmd 的 Workspace</a></p> 
+       <pre mode="javascript" theme="chrome"><code>...
+requires: [
+    'Foo.feature.*'
+]</code></pre> 
+       <p>命名建议:</p> 
+       <ul> 
+        <li>用 命名空间 来区分管理 生成的代码 vs. 手写的代码. 这样可以支持使用通配符来引入 特征的所有方面.</li> 
+       </ul> 
+       <h3 id="Using__code_requires__code__and__code_uses__code__in_an_Override">在 Override 中使用 <code>requires</code> 和 <code>uses</code></h3> 
+       <p>overrides 支持这几个关键词. <code>requires</code> 可能会限制编译器重排序代码的能力.</p> 
+       <h3 id="Using__code_callParent__code__and__code_callSuper__code_">使用 <code>callParent</code> 和 <code>callSuper</code></h3> 
+       <p>为了支持所有这些新的用法, 在 Ext JS 4.0 和 Sencha Touch 2.0 中增强了<code>callParent</code>的“调用下一个函数”的能力. “下一个函数” 可能是被覆写的函数，或者继承来的函数. 只要存在“下一个函数”, <code>callParent</code> 就会调用它.</p> 
+       <p><code>callParent</code> 对所有形式的<code>Ext.define</code>都一样使用, 不管是定义类还是定义 overrides.</p> 
+       <p>虽然这对某些方面有帮助, 不幸的是, 绕过原来的函数(补丁或漏洞修补代码)则变得更加困难. Ext JS 4.1 及以后 和 Sencha Touch 2.1 及以后的版本中提供了一个<code>callSuper</code>函数, 可以绕过被 覆写(overridden) 的函数.</p> 
+       <p>在未来的版本中,  编译器会根据语义的不同来消除被 overridden 函数的无用代码.</p> 
+       <h3 id="Override_Compatibility">Override 兼容性</h3> 
+       <p>从 4.2.2 版本开始, overrides 可以基于框架版本或者其他包的版本，来声明<code>compatibility</code>. 这对选择性地应用补丁很有帮助，可以安全地忽略与当前版本不兼容的补丁代码.</p> 
+       <p>测试框架版本兼容性的示例:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.overrides.grid.Panel', {
+    override: 'Ext.grid.Panel',
+
+    compatibility: '4.2.2', // only if framework version is 4.2.2
+
+    //...
+});</code></pre> 
+       <p>如果传递的是一个数组，则数组里各个条件是“或者(OR)”的关系, 只要任意一个满足, 这个 override 就被认为是兼容的.</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.overrides.some.Thing', {
+    override: 'Foo.some.Thing',
+
+    compatibility: [
+        '4.2.2',
+        'foo@1.0.1-1.0.2'
+    ],
+
+    //...
+});</code></pre> 
+       <p>如果想要“并且(AND)”的关系, 可以传入一个对象:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.overrides.some.Thing', {
+    override: 'Foo.some.Thing',
+
+    compatibility: {
+        and: [
+            '4.2.2',
+            'foo@1.0.1-1.0.2'
+        ]
+    },
+
+    //...
+});</code></pre> 
+       <p>因为对象这种形式只是一个递归的检查，所以可以嵌套使用:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('App.overrides.some.Thing', {
+    override: 'Foo.some.Thing',
+
+    compatibility: {
+        and: [
+            '4.2.2',  // exactly version 4.2.2 of the framework *AND*
+            {
+                // either (or both) of these package specs:
+                or: [
+                    'foo@1.0.1-1.0.2',
+                    'bar@3.0+'
+                ]
+            }
+        ]
+    },
+
+    //...
+});</code></pre> 
+       <p>关于版本语法的详细内容, 请看 <code>Ext.Version</code>的<code>checkVersion</code> 函数.</p> 
+       <h2 id="Conclusion">总结</h2> 
+       <p>随着Sencha Cmd继续发展, 它不断推陈出新, 以帮助指出偏离这些指导方针的行为，并给出诊断信息.</p> 
+       <p>上面的信息如何影响你自身内部代码风格的规范和实践，会成为一个良好的开端.</p> 
+       <h2 id="Next_Steps">下一步</h2> 
+       <ul> 
+        <li><a href="advanced_cmd/cmd_compiler_reference.html">Sencha 编译器 参考</a></li> 
+        <li><a href="advanced_cmd/cmd_advanced.html">Sencha Cmd 进阶</a></li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="http://www.sencha.com/products">Products</a> | 
+    <a href="http://www.sencha.com/services">Services</a> | 
+    <a href="http://www.sencha.com/support">Support</a> | 
+    <a href="http://www.sencha.com/training">Training</a> | 
+    <a href="http://www.sencha.com/partners">Partners</a> | 
+    <a href="http://www.sencha.com/blog">Community</a> | 
+    <a href="http://www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="http://cdn.sencha.com/downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="http://cdn.sencha.com/downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="http://cdn.sencha.com/downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="http://cdn.sencha.com/downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="http://cdn.sencha.com/downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="http://cdn.sencha.com/downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="http://www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="http://cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="http://cdn.sencha.com/downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="http://cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='http://munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

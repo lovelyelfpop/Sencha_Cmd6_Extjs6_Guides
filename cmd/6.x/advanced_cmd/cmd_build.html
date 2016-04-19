@@ -1,0 +1,554 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Cmd 向导 | App Build 过程内部机制</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+        menu.style.display = 'none';
+      }else{
+        menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Cmd 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" data-full-load="true" title="Cmd Home">Sencha Cmd 向导</a></li> 
+      <li class="file"><a href="../whats_new_cmd.html" title="">Cmd 6 新特性</a></li> 
+      <li class="file"><a href="../fashion.html" title="">欢迎使用 Fashion</a></li> 
+      <li class="file"><a href="../cmd_upgrade_guide.html" title="Sencha Cmd 6 - 升级向导">Sencha Cmd 6 - 升级向导</a></li> 
+      <li class="file"><a href="../intro_to_cmd.html" title="Sencha Cmd 介绍">Sencha Cmd 介绍</a></li> 
+      <li class="file"><a href="../cmd_upgrade.html" title="理解 App 升级">理解 App 升级</a></li> 
+      <li class="file"><a href="../cmd_compiler.html" title="对编译器友好的代码原则">对编译器友好的代码原则</a></li> 
+      <li class="file"><a href="../cordova_phonegap.html" title="Cordova 和 Phonegap 应用">Cordova 和 Phonegap 应用</a></li> 
+      <li class="file"><a href="../workspaces.html" title="Sencha Cmd 的 Workspace">Sencha Cmd 的 Workspace</a></li> 
+      <li class="file"><a href="../microloader.html" title="加载器 Microloader">加载器 Microloader</a></li> 
+      <li class="file"><a href="../resource_management.html" title="资源管理">资源管理</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="file"><a href="../compatibility_matrix.html" title="Sencha Cmd 兼容性列表">Sencha Cmd 兼容性列表</a><span class="tpl-toc-img-new">★</span></li> 
+      <li class="folder"><a href="#">Sencha Cmd 包(Packages)</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../cmd_packages/cmd_packages.html" title="Sencha Cmd 包(Packages)">Sencha Cmd 包(Packages)</a></li> 
+        <li class="file"><a href="../cmd_packages/cmd_creating_packages.html" title="创建包(Packages)">创建包(Packages)</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Cmd 进阶</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="cmd_advanced.html" title="Sencha Cmd 进阶">Sencha Cmd 进阶</a></li> 
+        <li class="file"><a href="cmd_build.html" title="App Build 过程内部机制">App Build 过程内部机制</a></li> 
+        <li class="file"><a href="cmd_compiler_reference.html" title="Sencha 编译器 参考">Sencha 编译器 参考</a></li> 
+        <li class="file"><a href="cmd_ant.html" title="Ant 集成">Ant 集成</a></li> 
+        <li class="file"><a href="cmd_metadata.html" title="Sencha Cmd Metadata">Sencha Cmd Metadata</a></li> 
+        <li class="file"><a href="cmd_reference.html" title="Sencha Cmd 参考">Sencha Cmd 参考</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../extjs/cmd_app.html" title="">Sencha Cmd 结合 Ext JS</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Sencha Touch</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../touch/cmd_app.html" title="">Sencha Cmd 结合 Sencha Touch</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../sencha_blog.html" title="Sencha 博客">Sencha 博客</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Prerequisites" title="Prerequisites">Prerequisites</a> 
+       <a class="toc-page-h2" href="#Introduction" title="Introduction">Introduction</a> 
+       <a class="toc-page-h2" href="#Build_Targets" title="Build Targets">Build Targets</a> 
+       <a class="toc-page-h2" href="#Configuration" title="Configuration">Configuration</a> 
+       <a class="toc-page-h3" href="#Configuration_Properties" title="Configuration Properties">Configuration Properties</a> 
+       <a class="toc-page-h3" href="#Build_Properties" title="Build Properties">Build Properties</a> 
+       <a class="toc-page-h4" href="#Setting_Build_Properties" title="Setting Build Properties">Setting Build Properties</a> 
+       <a class="toc-page-h2" href="#Customization" title="Customization">Customization</a> 
+       <a class="toc-page-h2" href="#Next_Steps" title="Next Steps">Next Steps</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Inside The App Build Process</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p>The build script provided by <a href="../../../../www.sencha.com/products/sencha-cmd/default.htm">Sencha Cmd</a> is the component that ties together and automates the many low-level features of Sencha Cmd (such as the Compiler). There is rarely a one-size-fits-all solution for builds so the build script provides many options to configure and customize its behavior. This guide will explain the principles behind the build script and where you might look should you need to tailor the build process to suit your needs.</p> 
+       <h2 id="Prerequisites">Prerequisites</h2> 
+       <p>The following guides are recommended reading before proceeding further:</p> 
+       <ul> 
+        <li><a href="../intro_to_cmd.html">Sencha Cmd 介绍</a></li> 
+        <li><a href="../extjs/cmd_app.html">Using Sencha Cmd</a></li> 
+       </ul> 
+       <h2 id="Introduction">Introduction</h2> 
+       <p>Internally, the <code>sencha app build</code> command does basic validation and calls in to the <a href="../../../../ant.apache.org/default.htm">Apache Ant</a> build script found in <code>&quot;build.xml&quot;</code> at the root of the application. Specifically, it calls the <code>&quot;build&quot;</code> target of this script. This means the entire build process can be examined, extended and (if necessary) even modified.</p> 
+       <p>Because <code>sencha app build</code> simply invokes the <code>&quot;build&quot;</code> target of the Ant <code>&quot;build.xml&quot;</code> file, you can equivalently invoke a build directly from Ant. This can be useful in IDE’s like Eclipse and NetBeans for invoking your builds but also in a Continuous Integration server that understands Ant (which is just about all of them).</p> 
+       <p>The generated <code>build.xml</code> is a minimal Ant script that uses an Ant <code>import</code> task to import <code>.sencha/app/build-impl.xml</code> as well as several other files. While <code>build.xml</code> is intended to be edited after it is generated, the <code>.sencha/app/*-impl.xml</code> files are not. These files will be replaced by <code>sencha app upgrade</code> and should NOT be edited. These files are excellent for reference, but should not be modified unless absolutely necessary.</p> 
+       <h2 id="Build_Targets">Build Targets</h2> 
+       <p>The targets below define the application build process from start to finish. With the exception of <code>init</code> each target has a property that can be set to 1 to disable that step.</p> 
+       <ul> 
+        <li>init</li> 
+        <li>refresh</li> 
+        <li>resolve (defaults to 1; set skip.resolve=0 to enable)</li> 
+        <li>js</li> 
+        <li>resources</li> 
+        <li>sass</li> 
+        <li>slice</li> 
+        <li>page</li> 
+        <li>native-package</li> 
+       </ul> 
+       <p>With the exception of <code>init</code> each of these targets can be dropped out of the default build by use of a build property (see below) with the target name prefixed by <code>&quot;skip.&quot;</code>. For example, to disable the <code>slice</code> target:</p> 
+       <pre mode="javascript" theme="chrome"><code>skip.slice=1</code></pre> 
+       <p>These steps can also be run individually if only that piece is desired. This is often the useful for rebuilding only the Sass:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha ant sass</code></pre> 
+       <p><em>Note:</em> Using <code>sencha ant</code> is equivalent to using your own version of Ant if you have Ant 1.8 or higher installed.</p> 
+       <h2 id="Configuration">Configuration</h2> 
+       <p>Most aspects of the build script behind <code>sencha app build</code> are controlled by properties as is typical of Ant. In this case there are two kinds of properties: configuration properties and build properties.</p> 
+       <h3 id="Configuration_Properties">Configuration Properties</h3> 
+       <p>Sencha Cmd configuration properties are available to the build script but also drive many other features of Sencha Cmd (like the compiler). To see the current set of configuration properties, run this command:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha diag show</code></pre> 
+       <p>In most cases you can tell where each property comes from by its prefix:</p> 
+       <ul> 
+        <li><code>app.</code> – See <code>&quot;app.json&quot;</code> and <code>&quot;.sencha/app/sencha.cfg&quot;</code>.</li> 
+        <li><code>workspace.</code> – See <code>&quot;workspace.json&quot;</code> and <code>&quot;.sencha/workspace/sencha.cfg&quot;</code>.</li> 
+        <li><code>framework.</code> – See <code>&quot;cmd/sencha.cfg&quot;</code> in the Ext JS or Sencha Touch SDK.</li> 
+        <li><code>cmd.</code> – See <code>&quot;sencha.cfg&quot;</code> in the Sencha Cmd install folder.</li> 
+       </ul> 
+       <p>The use of configuration properties is much broader than the build process and is discussed in some detail in <a href="cmd_advanced.html">Sencha Cmd 进阶</a>.</p> 
+       <h3 id="Build_Properties">Build Properties</h3> 
+       <p>The build script defines many other properties that are specific to builds. These build properties are typically prefixed by <code>&quot;build.&quot;</code>.</p> 
+       <p>To see the current values of these you can run this command from your app folder:</p> 
+       <pre mode="javascript" theme="chrome"><code>sencha ant .props</code></pre> 
+       <h4 id="Setting_Build_Properties">Setting Build Properties</h4> 
+       <p>There are many ways to configure build properties. The simplest way is to edit one of the build properties files. To decide which file to edit it is helpful to know the priority of each of these files and under what conditions they are loaded.</p> 
+       <ul> 
+        <li><code>&quot;local.properties&quot;</code> – If present, this file is loaded first. This file is intended to be applied only locally (to the local machine). It should not be committed to source control to be used by others. These settings take priority over any properties defined in other properties files as well as the current configuration properties.</li> 
+        <li><em>Sencha Cmd configuration properties</em></li> 
+        <li><code>&quot;.sencha/app/${build.environment}.properties&quot;</code> – Based on the value of the <code>build.environment</code> properties, exactly one of the following will be loaded. Setting properties in these files allow you to have different values for properties based on the type of build being run. 
+         <ul> 
+          <li><code>&quot;.sencha/app/native.properties&quot;</code></li> 
+          <li><code>&quot;.sencha/app/package.properties&quot;</code></li> 
+          <li><code>&quot;.sencha/app/production.properties&quot;</code></li> 
+          <li><code>&quot;.sencha/app/testing.properties&quot;</code></li> 
+         </ul></li> 
+        <li><code>&quot;.sencha/app/build.properties&quot;</code> – These properties are loaded next and have lower priority over the build-environment-specific properties. These are properties that are used by all (or most) environments. This file is intended for customization.</li> 
+        <li><code>&quot;.sencha/app/defaults.properties&quot;</code> – These properties are the last (default) values to load. This file is “owned” by Sencha Cmd and will be updated each release as new properties are added. This file serves as a reference for the defined set of build properties but should not be edited; edit any of the other files instead.</li> 
+       </ul> 
+       <p>The only properties that have higher priority than <code>&quot;local.properties&quot;</code> are those passed in via the command line.</p> 
+       <h2 id="Customization">Customization</h2> 
+       <p>Many common needs are accounted for via build properties, but it is impossible to account for all use cases in this way. When configuration options cannot accomplish the task, the next level of customization is to extend the generated <code>&quot;build.xml&quot;</code> Ant script.</p> 
+       <p>In addition to the <code>import</code> task, <code>&quot;build.xml&quot;</code> contains a comment block describing many of the available extension points. These are in the form of optional Ant targets and are named after their build process step but with prefixes of <code>&quot;-before-&quot;</code> and <code>&quot;-after-&quot;</code>. The most common extensions point then are these:</p> 
+       <ul> 
+        <li>init 
+         <ul> 
+          <li>-before-init</li> 
+          <li>-after-init</li> 
+         </ul></li> 
+        <li>refresh 
+         <ul> 
+          <li>-before-refresh</li> 
+          <li>-after-refresh</li> 
+         </ul></li> 
+        <li>resolve 
+         <ul> 
+          <li>-before-resolve</li> 
+          <li>-after-resolve</li> 
+         </ul></li> 
+        <li>js 
+         <ul> 
+          <li>-before-js</li> 
+          <li>-after-js</li> 
+         </ul></li> 
+        <li>resources 
+         <ul> 
+          <li>-before-resources</li> 
+          <li>-after-resources</li> 
+         </ul></li> 
+        <li>sass 
+         <ul> 
+          <li>-before-sass</li> 
+          <li>-after-sass</li> 
+         </ul></li> 
+        <li>slice 
+         <ul> 
+          <li>-before-slice</li> 
+          <li>-after-slice</li> 
+         </ul></li> 
+        <li>page 
+         <ul> 
+          <li>-before-page</li> 
+          <li>-after-page</li> 
+         </ul></li> 
+        <li>native-package 
+         <ul> 
+          <li>-before-native-package</li> 
+          <li>-after-native-package</li> 
+         </ul></li> 
+       </ul> 
+       <p>To perform additional processing before or after any build step, add an appropriately named target to <code>&quot;build.xml&quot;</code>. These targets will be invoked by <code>sencha app build</code>. These will also be invoked if you use Ant to directly invoke a particular target.</p> 
+       <p>One common use of these extensions points is to post-process the build output in the <code>&quot;all-classes.js&quot;</code> file. Using a few predefined Ant tasks we can, for example, put a copyright header on the generated file after it is generated:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;target name=&quot;-after-page&quot;&gt;
+    &lt;tstamp&gt;
+        &lt;format property=&quot;THISYEAR&quot; pattern=&quot;yyyy&quot;/&gt;
+    &lt;/tstamp&gt;
+
+    &lt;!--
+    The build.classes.file property holds the full path to the &quot;all-classes.js&quot;
+    file so we use that variable rather than hard-code the name.
+    --&gt;
+    &lt;move file=&quot;${build.classes.file}&quot; tofile=&quot;${build.classes.file}.tmp&quot;/&gt;
+
+    &lt;concat destfile=&quot;${build.classes.file}&quot;&gt;
+        &lt;header filtering=&quot;no&quot; trimleading=&quot;yes&quot;&gt;
+/*
+ * Copyright (C) ${THISYEAR}. All Rights Reserved.
+ * My Company Name
+ */
+        &lt;/header&gt;
+        &lt;fileset file=&quot;${build.classes.file}.tmp&quot;/&gt;
+    &lt;/concat&gt;
+
+    &lt;delete file=&quot;${build.classes.file}.tmp&quot; /&gt;
+&lt;/target&gt;</code></pre> 
+       <h2 id="Next_Steps">Next Steps</h2> 
+       <ul> 
+        <li><a href="cmd_compiler_reference.html">Sencha 编译器 参考</a></li> 
+        <li><a href="cmd_advanced.html">Sencha Cmd 进阶</a></li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T13:04Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../5.x"> 5.x </a> 
+     </div> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../extjs/6.0/default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../extjs/4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../extjs/4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../extjs/4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../extjs/4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../extjs/4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../extjs/4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

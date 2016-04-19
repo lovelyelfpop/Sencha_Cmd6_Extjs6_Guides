@@ -1,0 +1,780 @@
+<!DOCTYPE html><html><head> 
+  <link href="../../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Ext Direct 说明</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Overview" title="Overview">Overview</a> 
+       <a class="toc-page-h2" href="#Conventions" title="Conventions">Conventions</a> 
+       <a class="toc-page-h2" href="#API_discovery" title="API discovery">API discovery</a> 
+       <a class="toc-page-h3" href="#API_declaration" title="API declaration">API declaration</a> 
+       <a class="toc-page-h3" href="#API_declaration_properties" title="API declaration properties">API declaration properties</a> 
+       <a class="toc-page-h3" href="#Action_and_Method_declarations" title="Action and Method declarations">Action and Method declarations</a> 
+       <a class="toc-page-h4" href="#Method_calling_conventions" title="Method calling conventions">Method calling conventions</a> 
+       <a class="toc-page-h4" href="#Call_metadata" title="Call metadata">Call metadata</a> 
+       <a class="toc-page-h3" href="#Polling_API_declaration" title="Polling API declaration">Polling API declaration</a> 
+       <a class="toc-page-h2" href="#Remoting_function_calls" title="Remoting function calls">Remoting function calls</a> 
+       <a class="toc-page-h3" href="#Remoting_function_call_requests" title="Remoting function call requests">Remoting function call requests</a> 
+       <a class="toc-page-h3" href="#Remoting_responses" title="Remoting responses">Remoting responses</a> 
+       <a class="toc-page-h4" href="#Remoting_call_Result" title="Remoting call Result">Remoting call Result</a> 
+       <a class="toc-page-h4" href="#Remoting_call_Exception" title="Remoting call Exception">Remoting call Exception</a> 
+       <a class="toc-page-h3" href="#Remoting_form_submission" title="Remoting form submission">Remoting form submission</a> 
+       <a class="toc-page-h4" href="#Remoting_form_requests" title="Remoting form requests">Remoting form requests</a> 
+       <a class="toc-page-h4" href="#Remoting_form_responses" title="Remoting form responses">Remoting form responses</a> 
+       <a class="toc-page-h4" href="#Remoting_file_upload_responses" title="Remoting file upload responses">Remoting file upload responses</a> 
+       <a class="toc-page-h2" href="#Event_polling" title="Event polling">Event polling</a> 
+       <a class="toc-page-h3" href="#Event_poll_request" title="Event poll request">Event poll request</a> 
+       <a class="toc-page-h4" href="#Event_poll_response" title="Event poll response">Event poll response</a> 
+       <a class="toc-page-h4" href="#Event_object" title="Event object">Event object</a> 
+       <a class="toc-page-h2" href="#Terminology" title="Terminology">Terminology</a> 
+       <a class="toc-page-h2" href="#References" title="References">References</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>Ext Direct 说明</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <h2 id="Overview">Overview</h2> 
+       <p>Ext Direct is a platform and language agnostic remote procedure call (RPC) protocol. Ext Direct allows for seamless communication between the client side of an Ext JS application and any server platform that conforms to the specification. Ext Direct is stateless and lightweight, supporting features like API discovery, call batching, and server to client events.</p> 
+       <h2 id="Conventions">Conventions</h2> 
+       <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="../../../../../https@www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p> 
+       <p>Ext Direct is partially based on JSON (see <a href="../../../../../www.json.org/default.htm">http://www.json.org</a> or <a href="../../../../../https@www.ietf.org/rfc/rfc4627.txt">RFC 4627</a> ), and utilizes HTML Form-based File Uploads ( <a href="../../../../../https@www.ietf.org/rfc/rfc1867.txt">RFC 1867</a>, <a href="../../../../../https@www.ietf.org/rfc/rfc2388.txt">RFC 2388</a> ).</p> 
+       <h2 id="API_discovery">API discovery</h2> 
+       <p>Server MAY support publishing its API to Clients via API discovery mechanism. If API discovery is supported the Server MUST respond to HTTP GET requests at preconfigured URI, returning a document with a correct content type for the browser to interpret this document as JavaScript code.</p> 
+       <h3 id="API_declaration">API declaration</h3> 
+       <p>The Server API declaration MUST be valid JavaScript code that results in creation of a set of nested Objects assigned to a variable that can later be passed to Ext Direct initialization code in the Client application. It is RECOMMENDED that the code also conforms to stricter rules of JSON object syntax, for the benefit of non-JavaScript implementations that might try to parse the API declarations as JSON.</p> 
+       <p>An example of API declaration code:</p> 
+       <pre mode="javascript" theme="chrome"><code>var Ext = Ext || {};
+Ext.REMOTING_API = {
+    &quot;id&quot;: &quot;provider1&quot;,
+    &quot;url&quot;: &quot;ext/direct/router&quot;,
+    &quot;type&quot;: &quot;remoting&quot;,
+    &quot;actions&quot;: {
+        &quot;Album&quot;: [{
+            &quot;name&quot;: &quot;getAll&quot;,
+            &quot;len&quot;: 0
+        }, {
+            &quot;name&quot;: &quot;add&quot;,
+            &quot;params&quot;: [&quot;name&quot;, &quot;artist&quot;],
+            &quot;strict&quot;: false
+        }, {
+            &quot;name&quot;: &quot;delete&quot;,
+            &quot;len&quot;: 1
+        }]
+    }
+};</code></pre> 
+       <h3 id="API_declaration_properties">API declaration properties</h3> 
+       <p>The JavaScript Object of the API declaration MUST contain the following mandatory properties:</p> 
+       <ul> 
+        <li><strong><code>url</code></strong> - The Service URI for this API.</li> 
+        <li><strong><code>type</code></strong> - MUST be either <code>remoting</code> for Remoting API, or <code>polling</code> for Polling API.</li> 
+        <li><strong><code>actions</code></strong> - A JavaScript Object listing all Actions and Methods available for a given Remoting API. MUST be omitted in Polling API declarations.</li> 
+       </ul> 
+       <p>The API declaration MAY also contain the following OPTIONAL properties:</p> 
+       <ul> 
+        <li><strong><code>id</code></strong> - The identifier for the Remoting API Provider. This is useful when there are more than one API in use.</li> 
+        <li><strong><code>namespace</code></strong> - The Namespace for the given Remoting API.</li> 
+        <li><strong><code>timeout</code></strong> - The number of milliseconds to use as the timeout for every Method invocation in this Remoting API.</li> 
+       </ul> 
+       <p>Any other properties are OPTIONAL.</p> 
+       <h3 id="Action_and_Method_declarations">Action and Method declarations</h3> 
+       <p>Each Action within the <code>actions</code> property of the API declaration is an Array of Objects that represent Methods. Actions do not have properties in themselves. Action names MAY be nested, i.e. an Action may contain other Actions as well as Methods.</p> 
+       <p>Method declaration MUST have the following properties:</p> 
+       <ul> 
+        <li><strong><code>name</code></strong> - The name of this Method. MUST be unique within its Action.</li> 
+       </ul> 
+       <p>Each Method is fully qualified by Action and Method names concatenated with dot character (.), prefixed by optional Namespace:</p> 
+       <pre mode="javascript" theme="chrome"><code>[Namespace.]Foo.Bar.baz</code></pre> 
+       <p>Where <code>Foo</code> is outer Action name, <code>Bar</code> is inner Action name, and <code>baz</code> is the Method name.</p> 
+       <h4 id="Method_calling_conventions">Method calling conventions</h4> 
+       <p>Method declaration MUST have <strong>one</strong> of the following mutually exclusive properties that describe the Method’s calling convention:</p> 
+       <ul> 
+        <li><strong><code>len</code></strong> - The number of arguments required for Ordered Methods. This number MAY be 0 for Methods that do not accept arguments.</li> 
+        <li><strong><code>params</code></strong> - An array of parameters supported by a Named Method. This array MAY be empty.</li> 
+        <li><strong><code>formHandler</code></strong> - A JavaScript Boolean value of <code>true</code> indicates that this Method accepts Form submits.</li> 
+       </ul> 
+       <p>Ordered Methods MUST always conform to their calling convention. When Remoting Method proxy function is called for an Ordered Method, it MUST be supplied with exactly the number of arguments required, in exactly the same order as required by the Method. If less than required number of arguments is passed, the Router MAY choose to return an Exception without invoking the actual Method.</p> 
+       <p>Named Methods MAY use <strong><code>strict</code></strong> property to control how the arguments will be checked and passed to the Server when a Method is called:</p> 
+       <ul> 
+        <li>When <code>strict</code> is set to <code>true</code>, only arguments with names listed in the <code>params</code> array are sent to the Server; any other arguments are discarded. This is the default behavior.</li> 
+        <li>When <code>strict</code> is set to <code>false</code>, all arguments are passed to the Server. The Router SHOULD pass all arguments to the actual Method.</li> 
+       </ul> 
+       <p>The Router MAY choose to return an Exception if some of the listed parameters are missing, and omit invoking the actual Method. If the <code>params</code> Array is empty and <code>strict</code> property is set to <code>false</code>, the Router MUST NOT perform any argument checks and MUST pass all arguments to the invoked Method.</p> 
+       <p>An example of a Named Method with all optional parameters:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;actions&quot;: {
+    &quot;TestAction&quot;: [{
+        &quot;name&quot;: &quot;named_no_strict&quot;,
+        &quot;params&quot;: [],
+        &quot;strict&quot;: false
+    }]
+}</code></pre> 
+       <h4 id="Call_metadata">Call metadata</h4> 
+       <p>Method declaration MAY contain the optional <strong><code>metadata</code></strong> property that defines the type of Call Metadata accepted by the Method. If the <code>metadata</code> property is not present in Method declaration, the Client MUST NOT send call metadata to the Server for any invocation of that Method.</p> 
+       <p>The <code>metadata</code> property, if present, MUST be a JavaScript object with the following properties:</p> 
+       <ul> 
+        <li><strong><code>len</code></strong> - The number of arguments required for by-position Call Metadata. This number MUST be greater than 0.</li> 
+        <li><strong><code>params</code></strong> - The Array of names of the supported for by-name Call Metadata. This Array MAY be empty.</li> 
+        <li><strong><code>strict</code></strong> - JavaScript Boolean value that controls how Call Metadata arguments are checked.</li> 
+       </ul> 
+       <p>When present, Call Metadata arguments MUST conform to their calling convention. Call Metadata calling convention MAY be different from the main Method arguments calling convention, e.g. an Ordered Method MAY accept by-name Call Metadata, or Named Method MAY accept by-position Call Metadata.</p> 
+       <p>The argument checks are performed the same way as with main Method arguments.</p> 
+       <p>Some examples of Method declarations accepting Call Metadata:</p> 
+       <pre mode="javascript" theme="chrome"><code>&quot;actions&quot;: {
+    &quot;TestAction&quot;: [{
+        &quot;name&quot;: &quot;meta1&quot;,
+        &quot;len&quot;: 0,
+        &quot;metadata&quot;: {
+            &quot;len&quot;: 1
+        }
+    }, {
+        &quot;name&quot;: &quot;meta2&quot;,
+        &quot;len&quot;: 1,
+        &quot;metadata&quot;: {
+            &quot;params&quot;: [&quot;foo&quot;, &quot;bar&quot;],
+            &quot;strict&quot;: false
+        }
+    }, {
+        &quot;name&quot;: &quot;meta3&quot;,
+        &quot;params&quot;: [],
+        &quot;strict&quot;: false,
+        &quot;metadata&quot;: {
+            &quot;len&quot;: 3
+        }
+    }, {
+        &quot;name&quot;: &quot;meta4&quot;,
+        &quot;params&quot;: [&quot;foo&quot;, &quot;bar&quot;],
+        &quot;metadata&quot;: {
+            &quot;params&quot;: [&quot;baz&quot;, &quot;qux&quot;]
+        }
+    }]
+}</code></pre> 
+       <h3 id="Polling_API_declaration">Polling API declaration</h3> 
+       <p>Declaring Polling API is OPTIONAL. If the Server implements more than one Event Provider, it is RECOMMENDED to include Polling API declarations along with Remoting API declaration in the same JavaScript document.</p> 
+       <p>An example of API declaration with one Remoting API and one Polling API:</p> 
+       <pre mode="javascript" theme="chrome"><code>var Ext = Ext || {};
+Ext.REMOTING_API = {
+    &quot;id&quot;: &quot;provider1&quot;,
+    &quot;type&quot;: &quot;remoting&quot;,
+    &quot;url&quot;: &quot;ext/direct/router&quot;,
+    &quot;actions&quot;: {
+        &quot;User&quot;: [{
+            &quot;name&quot;: &quot;read&quot;,
+            &quot;len&quot;: 1
+        }, {
+            &quot;name&quot;: &quot;create&quot;,
+            &quot;params&quot;: [&quot;id&quot;, &quot;username&quot;]
+        }]
+    }
+};
+Ext.POLLING_API = {
+    &quot;id&quot;: &quot;provider2&quot;,
+    &quot;type&quot;: &quot;polling&quot;,
+    &quot;url&quot;: &quot;ext/direct/events&quot;
+};</code></pre> 
+       <h2 id="Remoting_function_calls">Remoting function calls</h2> 
+       <p>A remoting call is represented by sending a Request object, or multiple Request objects, to a Server. Request(s) are encoded in JSON and are sent as raw payload in a HTTP POST request to the Service URI advertised as the <code>url</code> in API Declaration. There MUST not be any other data present in the HTTP POST, except valid JSON document containing one or more Requests. Among HTTP headers for the POST request, there MUST be the Content-Type header with the value of “application/json”. The Client MUST use UTF-8 character encoding for the Request document.</p> 
+       <h3 id="Remoting_function_call_requests">Remoting function call requests</h3> 
+       <p>A Request is an Object with the following members:</p> 
+       <ul> 
+        <li><strong><code>type</code></strong> – MUST be a string “rpc”.</li> 
+        <li><strong><code>tid</code></strong> – The transaction id for this Request. MUST be an integer number unique among the Requests in one batch.</li> 
+        <li><strong><code>action</code></strong> – The Action that the invoked Method belongs to. MUST be specified.</li> 
+        <li><strong><code>method</code></strong> – The Remoting Method that is to be invoked. MUST be specified.</li> 
+        <li><strong><code>data</code></strong> – A set of arguments to be passed to the called Remoting Method. MUST be either <code>null</code> for Methods that accept 0 (zero) parameters, an Array for Ordered methods, or an Object for Named methods.</li> 
+        <li><strong><code>metadata</code></strong> - OPTIONAL set of meta-arguments to be made available to the called Remoting Method, if provided by the Client. If no metadata is associated with the call, this member MUST NOT be present in the Request.</li> 
+       </ul> 
+       <p>A typical JSON encoded Request Object for an Ordered Method may look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>{&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:1,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;bar&quot;,&quot;data&quot;:[42,&quot;baz&quot;]}</code></pre> 
+       <p>A typical JSON encoded Request object for a Named Method may look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>{&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:2,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;qux&quot;,&quot;data&quot;:{&quot;foo&quot;:&quot;bar&quot;}}</code></pre> 
+       <p>A typical JSON encoded Request object for an Ordered Method with by-name Call Metadata may look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>{&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:3,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;fred&quot;,&quot;data&quot;:[0],
+ &quot;metadata&quot;:{&quot;borgle&quot;:&quot;throbbe&quot;}}</code></pre> 
+       <p>Remoting Requests MAY be batched, in which case the Requests MUST be sent as an Array of Request Objects with unique <code>tid</code> members:</p> 
+       <pre mode="javascript" theme="chrome"><code>[
+    {&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:3,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;frob&quot;,&quot;data&quot;:[&quot;foo&quot;]},
+    {&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:4,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;blerg&quot;,&quot;data&quot;:[&quot;qux&quot;]}
+]</code></pre> 
+       <p>The Server MUST support Request batching, and SHOULD attempt to return call invocation Results or Exceptions in the same order.</p> 
+       <h3 id="Remoting_responses">Remoting responses</h3> 
+       <p>A response to a Remoting call MUST contain either a Result, or an Exception for each Request. Responses are encoded in JSON and returned to the Client as raw HTTP response payload, with Content-Type header of “application/json” and character encoding of UTF-8.</p> 
+       <p>If Requests were sent as a batch the Server MUST return the corresponding Responses only after all Requests were processed by the Router, and the Responses SHOULD follow the same order as the original Requests. For each Response, the corresponding <code>tid</code> member of the original Request MUST be passed back unchanged by the Server.</p> 
+       <h4 id="Remoting_call_Result">Remoting call Result</h4> 
+       <p>A Result is an Object with the following members:</p> 
+       <ul> 
+        <li><strong><code>type</code></strong> — MUST be a string “rpc”.</li> 
+        <li><strong><code>tid</code></strong> — The transaction id for this Response. MUST be the same as in the original Request.</li> 
+        <li><strong><code>action</code></strong> — The Action to which the invoked Method belongs to. MUST be the same as in the original Request.</li> 
+        <li><strong><code>method</code></strong> — The name of the invoked Remoting Method. MUST be the same as in the original Request.</li> 
+        <li><strong><code>result</code></strong> — The data returned by the Method. MUST be present in the Response object, but MAY be <code>null</code> for Methods that do not return any data.</li> 
+       </ul> 
+       <p>A typical JSON encoded Array of Response objects may look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>[
+    {&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:1,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;bar&quot;,&quot;result&quot;:0},
+    {&quot;type&quot;:&quot;rpc&quot;,&quot;tid&quot;:2,&quot;action&quot;:&quot;Foo&quot;,&quot;method&quot;:&quot;baz&quot;,&quot;result&quot;:null}
+]</code></pre> 
+       <h4 id="Remoting_call_Exception">Remoting call Exception</h4> 
+       <p>An Exception is an Object with the following members:</p> 
+       <ul> 
+        <li><strong><code>type</code></strong> — MUST be a string “exception”.</li> 
+        <li><strong><code>tid</code></strong> — The transaction id for this Response. MUST be the same as in the original Request.</li> 
+        <li><strong><code>action</code></strong> — The Action to which the invoked Method belongs to. MUST be the same as in the original Request.</li> 
+        <li><strong><code>method</code></strong> — The name of the invoked Remoting Method. MUST be the same as in the original Request.</li> 
+        <li><strong><code>message</code></strong> — The error message. MUST be present.</li> 
+        <li><strong><code>where</code></strong> — OPTIONAL description of where exactly the exception was raised. MAY contain stack trace, or additional information.</li> 
+       </ul> 
+       <p>A typical JSON encoded Exception may look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;type&quot;: &quot;exception&quot;,
+    &quot;tid&quot;: 3,
+    &quot;action&quot;: &quot;Foo&quot;,
+    &quot;method&quot;: &quot;frob&quot;,
+    &quot;message&quot;: &quot;Division by zero&quot;,
+    &quot;where&quot;: &quot;... stack trace here ...&quot;
+}</code></pre> 
+       <h3 id="Remoting_form_submission">Remoting form submission</h3> 
+       <p>A remoting form invocation is represented by submitting an HTML form with HTTP POST request. The form content MUST conform to (HTML 4.01 specification)[5]. The Server MUST support both “application/x-www-form-urlencoded” and “multipart/form-data” content types for backwards compatibility. The Client MAY choose to implement only “multipart/form-data” encoding.</p> 
+       <p>There MUST be only one Method invocation per submitted form. The Client MUST use form submission for each Method with Form Handler calling convention declared in Remoting API.</p> 
+       <h4 id="Remoting_form_requests">Remoting form requests</h4> 
+       <p>The form SHALL contain the following fields:</p> 
+       <ul> 
+        <li><strong><code>extType</code></strong> - MUST be a string “rpc”.</li> 
+        <li><strong><code>extTID</code></strong> - The transaction id for this Request. MUST be an integer number unique among the Requests in one batch.</li> 
+        <li><strong><code>extAction</code></strong> - The Action that the invoked Method belongs to. MUST be specified.</li> 
+        <li><strong><code>extMethod</code></strong> - The Remoting Method that is to be invoked. MUST be specified.</li> 
+        <li><strong><code>extUpload</code></strong> - Stringified Boolean value (<code>&quot;true&quot;</code> or <code>&quot;false&quot;</code>) indicating that file uploads are attached to this form submission.</li> 
+       </ul> 
+       <p>The form MAY contain the <code>metadata</code> field if there is Call Metadata associated with the given form submission.</p> 
+       <p>The form MAY contain other fields in addition to the mandatory ones listed above. These additional fields MUST be passed to the invoked Method as Named arguments.</p> 
+       <p>When the form is used to upload files, encoding type MUST be “multipart/form-data”.</p> 
+       <h4 id="Remoting_form_responses">Remoting form responses</h4> 
+       <p>The Server MUST respond to the form submission with a JSON document containing a valid Response or Exception object as described in sections 4.2.1 and 4.2.2. The document MUST have content type of “application/json” and UTF-8 character encoding.</p> 
+       <h4 id="Remoting_file_upload_responses">Remoting file upload responses</h4> 
+       <p>When the form request contained one or more file uploads, the Server MUST return a valid HTML document with correct content type for the browser to interpret this document as HTML. The document MUST have UTF-8 character encoding.</p> 
+       <p>The HTML document MUST contain a valid JSON encoded Response or Exception as described in sections 4.2.1 and 4.2.2, enclosed in HTML <code>&lt;textarea&gt;</code> tags.</p> 
+       <p>An example of a file upload response may look like this:</p> 
+       <pre mode="javascript" theme="chrome"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;File upload response&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;textarea&gt;{JSON RESPONSE HERE}&lt;/textarea&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre> 
+       <h2 id="Event_polling">Event polling</h2> 
+       <p>The Server MAY implement OPTIONAL event polling mechanism. Event polling is performed by periodically making HTTP GET requests to the Server. There MAY be more than one Event Provider per Server; in that case each Event Provider MUST have a separate Service URI.</p> 
+       <h3 id="Event_poll_request">Event poll request</h3> 
+       <p>An event poll request in its basic form is an HTTP GET request to the Service URI of the polled Event Provider. The Server MUST maintain a list of active Poll Handler methods for every Event Provider, and invoke each Poll Handler method every time a poll request is made. The Server MAY support passing arguments to Poll Handler methods via HTTP GET request URI but it is not required.</p> 
+       <h4 id="Event_poll_response">Event poll response</h4> 
+       <p>An event poll response MUST be a valid JSON document with a correct content type for the browser to interpret this document as JSON. The document MUST use UTF-8 character encoding.</p> 
+       <p>The event poll response should contain an array of Event objects. This array MAY be empty if no Events are pending for the given request. The Server MUST NOT include Exception objects in the response array.</p> 
+       <h4 id="Event_object">Event object</h4> 
+       <p>An event object MUST contain the following properties:</p> 
+       <ul> 
+        <li><strong><code>type</code></strong> - MUST be a string “event”.</li> 
+        <li><strong><code>name</code></strong> - Event name, MUST be a string.</li> 
+        <li><strong><code>data</code></strong> - Event data, SHOULD be any valid JSON data.</li> 
+       </ul> 
+       <p>An example of a typical Event object:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    &quot;type&quot;: &quot;event&quot;,
+    &quot;name&quot;: &quot;progressupdate&quot;,
+    &quot;data&quot;: {
+        &quot;processId&quot;: 42,
+        &quot;progress&quot;: 100
+    }
+}</code></pre> 
+       <h2 id="Terminology">Terminology</h2> 
+       <p>Ext Direct makes use of the following terms:</p> 
+       <ul> 
+        <li><strong>Server</strong> — A computing system that provides functions to be executed remotely by a Client.</li> 
+        <li><strong>Client</strong> — A computing system that remotely calls Server functions and receives Results and/or Exceptions.</li> 
+        <li><strong>Server API</strong> — Description of Server functions exposed to the Client.</li> 
+        <li><strong>API Declaration</strong> — JavaScript chunk that encodes Server API. API declaration is usually generated dynamically by the Server and retrieved by the Client once upon startup; API declaration can also be embedded in the Client application code.</li> 
+        <li><strong>Remoting API</strong> — The main part of the API Declaration, it enumerates Server Actions and Methods available to the Client, as well as their calling conventions, and other parameters.</li> 
+        <li><strong>Polling API</strong> — Optional part of the API Declaration, may be used to declare the existence of Server Event Providers and their credentials.</li> 
+        <li><strong>API Discovery URI</strong> — A preconfigured URI on the Server that the Client should dispatch HTTP GET requests to in order to retrieve the API declaration. This URI is OPTIONAL and MAY be omitted if dynamic API discovery is not used in a particular application.</li> 
+        <li><strong>Service URI</strong> — A preconfigured URI on the Server that the Client will use to dispatch remoting requests to a Router, or polling requests to an Event Provider. Each Router or Event Provider MUST publish a Service URI that is unique to that Router or Event Provider.</li> 
+        <li><strong>Namespace</strong> — The global object in which the nested Action objects with corresponding Remoting Method stubs will be created. OPTIONAL; if not defined in the API declaration then the default <code>window</code> object will be used.</li> 
+        <li><strong>Action</strong> — Namespace unit; a collection of Methods. Actions MAY be nested, and MAY be placed in a global Namespace. An Action can be thought of as a class exposing Methods.</li> 
+        <li><strong>Remoting Method</strong> — A Server function that can be called remotely by the Client. A Method always belongs to an Action, and is fully qualified by combining Namespace, Action, and Method names: <code>[Namespace.]Action.Method</code>.</li> 
+        <li><strong>Remoting Method proxy</strong> — A stub JavaScript function created by the Ext Direct Client side stack <em>in lieu</em> of the actual Method that only exists on the Server. A separate proxy function will be created for each Method, with the parameter signature conforming to Method’s API declaration.</li> 
+        <li><strong>Ordered Method</strong> — A Remoting Method that accepts zero or more parameters in ordered fashion, or by position (as in a list).</li> 
+        <li><strong>Named Method</strong> — A Remoting Method that accepts parameters by name, as in associative array (hash, Object, map).</li> 
+        <li><strong>Form Handler Method</strong> — A Remoting Method that accepts form submits. This is a legacy mechanism that can be used to upload files in browsers not conformant with XMLHttpRequest Level 2 specification.<br />Implementing support for Form Handlers is OPTIONAL for a Server; if such support is not provided, the Server SHALL NOT advertise Methods as using Form Handler calling convention.</li> 
+        <li><strong>Poll Handler</strong> — A Server function that is called by an Event Provider to return the list of Events to be passed on to the Client as the result of a periodic event poll.</li> 
+        <li><strong>Call Metadata</strong> - An OPTIONAL extra set of arguments that could be passed to the Method. Metadata is related to the main arguments but is not the same and is handled separately. A common use case is passing database information such as table name for CRUD operations.</li> 
+        <li><strong>Router</strong> — Server component that receives remoting function call requests at its Service URI, runs the actual functions, and collects Results or Exceptions to be returned to the Client.</li> 
+        <li><strong>Event Provider</strong> — Server component that receives periodic polling requests at its Service URI, runs Poll Handler functions registered with this Event Provider, collects Events returned by the Poll Handlers, and returns the list of Events to the Client.</li> 
+        <li><strong>Request</strong> — A Remoting Method invocation requested by the Client, passing the arguments conformant to the Method’s calling convention.</li> 
+        <li><strong>Response</strong> — Information about the Request completion. MUST be either a Result, or an Exception.</li> 
+        <li><strong>Result</strong> — Any data returned by a Remoting Method upon successful or unsuccessful call completion. A Result is OPTIONAL and may be omitted if the Method is not supposed to return any data.</li> 
+        <li><strong>Exception</strong> — A fatal error, application logic error, or other unrecoverable event in the application code.</li> 
+        <li><strong>Event</strong> — A notification that can be generated by a Poll Handler and passed to the Client. Events are useful for application status updates, progress indicators, and other predictable conditions and events.</li> 
+        <li><strong>Batching</strong> - Combining several Requests into one packet sent to the Server, instead of sending each Request separately.</li> 
+       </ul> 
+       <h2 id="References">References</h2> 
+       <ul> 
+        <li><a href="../../../../../https@www.ietf.org/rfc/rfc2119.txt">RFC 2119</a></li> 
+        <li><a href="../../../../../https@www.ietf.org/rfc/rfc4627.txt">RFC 4627</a></li> 
+        <li><a href="../../../../../https@www.ietf.org/rfc/rfc1867.txt">RFC 1867</a></li> 
+        <li><a href="../../../../../https@www.ietf.org/rfc/rfc2388.txt">RFC 2388</a></li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../../https@s.adroll.com" : "../../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

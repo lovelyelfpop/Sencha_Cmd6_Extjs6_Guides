@@ -1,0 +1,727 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Forms</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../api_diffs/602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="../api_diffs/600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="../api_diffs/600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 图标字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Basic_Form_Panel" title="Basic Form Panel">基本表单容器</a> 
+       <a class="toc-page-h2" href="#Fields" title="Fields">字段</a> 
+       <a class="toc-page-h3" href="#Field_Types" title="Field Types">字段类型</a> 
+       <a class="toc-page-h3" href="#Validation" title="Validation">验证</a> 
+       <a class="toc-page-h4" href="#1__Built_in_Validations" title="1. Built-in Validations">1. 内置验证</a> 
+       <a class="toc-page-h4" href="#2__Custom_Validations" title="2. Custom Validations">2. 自定义验证</a> 
+       <a class="toc-page-h2" href="#Handling_Data" title="Handling Data">数据处理</a> 
+       <a class="toc-page-h3" href="#Submitting_a_Form" title="Submitting a Form">表单提交</a> 
+       <a class="toc-page-h3" href="#Binding_a_Form_to_a_Model" title="Binding a Form to a Model">表单绑定模型</a> 
+       <a class="toc-page-h2" href="#Layouts" title="Layouts">布局</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name"> 
+       <h1>表单</h1> 
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.form.Panel" data-full-load="true">表单面板</a> 不过是一个基本的添加表单的 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">面板</a>. 只要有从用户那里收集数据的Ext <a href="../6.0.1-classic/#!/api/Ext-method-application" data-full-load="true">应用程序</a> 就有表单面板的使用.</p> 
+       <p>除此之外, 表单面板可以使用任何 <a href="../6.0.1-classic/#!/api/Ext.layout.container.Container" data-full-load="true">容器布局</a>, 提供一种灵活便捷的方式处理字段显示的位置. 表单面板还可以被绑定到 <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">模型</a>, 使得很容易从服务器加载或提交数据.</p> 
+       <p>Form Panel之下封装着一个处理所有的输入, 验证, 提交, 和从服务器加载数据的<a href="../6.0.1-classic/#!/api/Ext.form.Basic" data-full-load="true">Basic Form</a> . 这意味着许多Basic Form的配置选项可以直接应用于Form Panel上.</p> 
+       <h2 id="Basic_Form_Panel">Basic Form</h2> 
+       <p>开始之前,看一个如何创建一个简单收集用户数据的表单例子:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在Fiddle打开</a>
+	<div class="code-editor"><pre><code>Ext.create('Ext.form.Panel', {
+    renderTo: document.body,
+    title: 'User Form',
+    height: 150,
+    width: 300,
+    bodyPadding: 10,
+    defaultType: 'textfield',
+    items: [
+        {
+            fieldLabel: 'First Name',
+            name: 'firstName'
+        },
+        {
+            fieldLabel: 'Last Name',
+            name: 'lastName'
+        },
+        {
+            xtype: 'datefield',
+            fieldLabel: 'Date of Birth',
+            name: 'birthDate'
+        }
+    ]
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+       <p>这个表单呈现有三个<a href="../6.0.1-classic/#!/api/Ext.form.field.Field" data-full-load="true">字段</a> - “First Name”, “Last Name”, 和 “Date of Birth”. 使用<a href="../6.0.1-classic/#!/api/Ext.form.Panel-cfg-items" data-full-load="true">items</a> 配置项把字段都添加到表单面板里.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.form.Labelable-cfg-fieldLabel" data-full-load="true">fieldLabel</a> 配置项定义了字段旁边的标签显示文本, 以及<a href="../6.0.1-classic/#!/api/Ext.form.field.Base-cfg-name" data-full-load="true">name</a> 配置项变成了基本的HTML字段的<code>name</code> 属性.</p> 
+       <p>请注意Form Panel有一个<a href="../6.0.1-classic/#!/api/Ext.form.Panel-cfg-defaultType" data-full-load="true">defaultType(缺省类型)</a><strong>‘textfield’</strong>.这意味着任何没有指定<a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">xtype</a>(例子中的 “First Name” 和 “Last Name” 字段)的项, 都是 <a href="../6.0.1-classic/#!/api/Ext.form.field.Text" data-full-load="true">Text Field(文本输入控件)</a>.</p> 
+       <p>反之,“Date of Birth” 字段,<code>xtype</code>明确的被配置成<strong>‘datefield’</strong>, 使得它是一个<a href="../6.0.1-classic/#!/api/Ext.form.field.Date" data-full-load="true">Date Field(日期字段)</a>. 日期字段(Date Fields)期望只包含有效的日期数据和选择日期的<a href="../6.0.1-classic/#!/api/Ext.menu.DatePicker" data-full-load="true">DatePicker(日期选择器)</a>.</p> 
+       <h2 id="Fields">Fields(字段)</h2> 
+       <h3 id="Field_Types">Field Types(字段类型)</h3> 
+       <p>Ext JS 提供了一组标准的字段类型. 任何在<code>Ext.form.field</code> 命名空间下的字段都可以在Form Panel(表单面板)中使用. 更多信息请看每一种Field(字段)类型的API文档:</p> 
+       <ul> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Checkbox" data-full-load="true">Ext.form.field.Checkbox</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.ComboBox" data-full-load="true">Ext.form.field.ComboBox</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Date" data-full-load="true">Ext.form.field.Date</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Display" data-full-load="true">Ext.form.field.Display</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.File" data-full-load="true">Ext.form.field.File</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Hidden" data-full-load="true">Ext.form.field.Hidden</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.HtmlEditor" data-full-load="true">Ext.form.field.HtmlEditor</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Number" data-full-load="true">Ext.form.field.Number</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Radio" data-full-load="true">Ext.form.field.Radio</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Text" data-full-load="true">Ext.form.field.Text</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.TextArea" data-full-load="true">Ext.form.field.TextArea</a></li> 
+        <li><a href="../6.0.1-classic/#!/api/Ext.form.field.Time" data-full-load="true">Ext.form.field.Time</a></li> 
+       </ul> 
+       <h3 id="Validation">验证</h3> 
+       <h4 id="1__Built_in_Validations">1. 内置验证</h4> 
+       <p>Ext JS 内置了支持任何类型的Field(字段)的验证,并且有些Fields(字段)内置了验证规则.</p> 
+       <p>例如, 如果在<a href="../6.0.1-classic/#!/api/Ext.form.field.Date" data-full-load="true">Date Field</a>输入了一个不能被转换为<code>Date</code>的值, 这个Field(字段)的HEML元素将会被添加一个<code>x-form-invalid-field</code> CSS样式.</p> 
+       <p>如果有必要, 这个CSS样式可以通过<a href="../6.0.1-classic/#!/api/Ext.form.field.Base-cfg-invalidCls" data-full-load="true">invalidCls</a> 配置项修改.补充的<code>invalidCls</code>给输入(Field)字段添加了一个红色的边框(以及一条红色的无效下划线(“invalid underline”)标识当使用经典主题):</p> 
+       <p><img src="images/invalid_field.png" alt="Invalid Field" /></p> 
+       <p>当一个Field(字段)包含无效的数据时，它将展现一个错误的消息. 默认情况下，错误消息会以提示信息的方式展现:</p> 
+       <p><img src="images/invalid_field_hover.png" alt="Invalid Field Hover" /></p> 
+       <p>通过<a href="../6.0.1-classic/#!/api/Ext.form.Labelable-cfg-msgTarget" data-full-load="true">msgTarget</a> 配置项可以很容易的更改Field’s(字段的)错误信息展现的位置, 以及<a href="../6.0.1-classic/#!/api/Ext.form.field.Base-cfg-invalidText" data-full-load="true">invalidText</a> 配置项可以改变错误消息.</p> 
+       <p>每一个字段(Field)都提供了自己的<code>invalidText</code>实现, 并且许多都支持在错误消息中标识替换(token replacement).</p> 
+       <p>例如, 在Date Field’s(日期输入控件的) <code>invalidText</code>里, 任何出现“{0}”的地方都将被替换成输入框的值, 任何 出现“{1}”的地方都将被替换成要求的日期格式<a href="../6.0.1-classic/#!/api/Ext.form.field.Date-cfg-format" data-full-load="true">format</a>.</p> 
+       <p>下面的代码示范如何直接向错误消息直接放置在Field(控件)下面, 并且自定义错误消息文本:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'datefield',
+    fieldLabel: 'Date of Birth',
+    name: 'birthDate',
+    msgTarget: 'under', // location of the error message
+    invalidText: '&quot;{0}&quot; bad. &quot;{1}&quot; good.' // 自定义错误消息文本
+}</code></pre> 
+       <p><img src="images/custom_error_message.png" alt="Custom Error Message" /></p> 
+       <h4 id="2__Custom_Validations">2. 自定义验证</h4> 
+       <p>有些验证需求,内置的验证无法满足. 最简单的方法就是使用<a href="../6.0.1-classic/#!/api/Ext.form.field.Text" data-full-load="true">Text Field</a>’s(文本输入控件) <a href="../6.0.1-classic/#!/api/Ext.form.field.Text-cfg-regex" data-full-load="true">regex</a>配置项应用验证规则和使用<a href="../6.0.1-classic/#!/api/Ext.form.field.Text-cfg-maskRe" data-full-load="true">maskRe</a> 配置项限制哪些字符可以在控件里输入去实现一种自定义验证. 这里是一个验证时间的文本输入控件的例子.</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    xtype: 'textfield',
+    fieldLabel: 'Last Login Time',
+    name: 'loginTime',
+    regex: /^([1-9]|1[0-9]):([0-5][0-9])(\s[a|p]m)$/i,
+    maskRe: /[\d\s:amp]/i,
+    invalidText: 'Not a valid time.  Must be in the format &quot;12:34 PM&quot;.'
+}</code></pre> 
+       <p>虽然上面的方法适用于验证单个的(输入控件)field,但对于一个有许多共享相同自定义验证的输入控件的应用程序来说,这是不切实际的.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.form.field.VTypes" data-full-load="true">Ext.form.field.VTypes</a>类提供了一个创建可重用的自定义验证的解决方案. 下面展示一个自定义的时间验证器如何被创建:</p> 
+       <pre mode="javascript" theme="chrome"><code>// custom Vtype for vtype:'time'
+var timeTest = /^([1-9]|1[0-9]):([0-5][0-9])(\s[a|p]m)$/i;
+Ext.apply(Ext.form.field.VTypes, {
+    //  vtype validation function
+    time: function(val, field) {
+        return timeTest.test(val);
+    },
+    // vtype Text 属性: 当验证方法返回false的时候显示错误文本信息
+    timeText: 'Not a valid time.  Must be in the format &quot;12:34 PM&quot;.',
+    // vtype Mask 属性: 按键过滤
+    timeMask: /[\d\s:amp]/i
+});</code></pre> 
+       <p>一旦一个自定义的验证器被创建了，就可以应用于所有的文本输入控件通过使用<a href="../6.0.1-classic/#!/api/Ext.form.field.Text-cfg-vtype" data-full-load="true">vtype</a> 配置项:</p> 
+       <pre mode="javascript" theme="chrome"><code>{
+    fieldLabel: 'Last Login Time',
+    name: 'loginTime',
+    vtype: 'time'
+}</code></pre> 
+       <p>请看一个演示的<a href="../../../../dev.sencha.com/extjs/5.1.0/examples/kitchensink/#form-advtypes">验证例子</a>. 更多关于自定义验证的信息, 请查阅<a href="../6.0.1-classic/#!/api/Ext.form.field.VTypes" data-full-load="true">VTypes</a>的API文档.</p> 
+       <h2 id="Handling_Data">数据处理</h2> 
+       <h3 id="Submitting_a_Form">表单提交</h3> 
+       <p>提交数据到服务器最简单的一种方法是使用<a href="../6.0.1-classic/#!/api/Ext.form.Basic" data-full-load="true">Basic Form</a>的<a href="../6.0.1-classic/#!/api/Ext.form.Basic-cfg-url" data-full-load="true">url</a>配置项. 由于<a href="../6.0.1-classic/#!/api/Ext.form.Panel" data-full-load="true">Form Panel</a> 封装了Basic Form,所以我们可以直接在Form Panel上使用任何Basic Form的配置项:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.form.Panel', {
+    ...
+    url: 'add_user',
+    items: [
+        ...
+    ]
+});</code></pre> 
+       <p>Form的<a href="../6.0.1-classic/#!/api/Ext.form.Panel-method-submit" data-full-load="true">submit</a> 方法可被用于提交数据到配置的<code>url</code>:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.form.Panel', {
+    ...
+    url: 'add_user',
+    items: [
+        ...
+    ],
+    buttons: [
+        {
+            text: 'Submit',
+            handler: function() {
+                var form = this.up('form'); // 获取 form
+                if (form.isValid()) { // 提交数据之前确保Form包含有效数据
+                    form.submit({
+                        success: function(form, action) {
+                           Ext.Msg.alert('Success', action.result.msg);
+                        },
+                        failure: function(form, action) {
+                            Ext.Msg.alert('Failed', action.result.msg);
+                        }
+                    });
+                } else { // 如果数据是无效的话显示错误提示
+                    Ext.Msg.alert('Invalid Data', 'Please correct form errors.')
+                }
+            }
+        }
+    ]
+});</code></pre> 
+       <p>上面的例子, 一个button被配置了一个 <a href="../6.0.1-classic/#!/api/Ext.button.Button-cfg-handler" data-full-load="true">handler</a> 处理form提交任务. 这个handler采取如下措施:</p> 
+       <ol> 
+        <li>首先, 必须获得Form Panel的引用.</li> 
+        <li>然后,提交数据之前调用<a href="../6.0.1-classic/#!/api/Ext.form.Panel-method-isValid" data-full-load="true">isValid</a> 方法确认没有输入控件有验证错误.</li> 
+        <li>最后,调用 <code>submit</code> 方法, 传递两个回调- <code>success</code> 和 <code>failure</code>. 在这些回调函数里, <code>action.result</code> 指解析成JSON的回应.</li> 
+       </ol> 
+       <p>上面的例子预期的JSON回应看起来像这样:</p> 
+       <pre mode="javascript" theme="chrome"><code>{ &quot;success&quot;: true, &quot;msg&quot;: &quot;User added successfully&quot; }</code></pre> 
+       <h3 id="Binding_a_Form_to_a_Model">Binding a Form to a Model</h3> 
+       <p>The <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Model</a> 类的使用遍及 Ext JS,描述各种类型的数据以及在服务器上检索和更新数据. 一个描述一个<strong>User</strong> 的模型应该定义一个<strong>User</strong>有的所有<a href="../6.0.1-classic/#!/api/Ext.data.Model-cfg-fields" data-full-load="true">fields(字段)</a>以及加载和保存数据的<a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">proxy</a>:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.model.User', {
+    extend: 'Ext.data.Model',
+    fields: ['firstName', 'lastName', 'birthDate'],
+    proxy: {
+        type: 'ajax',
+        api: {
+            read: 'data/get_user',
+            update: 'data/update_user'
+        },
+        reader: {
+            type: 'json',
+            root: 'users'
+        }
+    }
+});</code></pre> 
+       <p>数据可以直接被加载到一个 <a href="../6.0.1-classic/#!/api/Ext.form.Panel" data-full-load="true">Form Panel</a> 从<a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Model</a>中通过使用<a href="../6.0.1-classic/#!/api/Ext.form.Panel-method-loadRecord" data-full-load="true">loadRecord</a> 方法:</p> 
+       <pre mode="javascript" theme="chrome"><code>MyApp.model.User.load(1, { // load user with ID of &quot;1&quot;
+    success: function(user) {
+        userForm.loadRecord(user); // when user is loaded successfully, load the data into the form
+    }
+});</code></pre> 
+       <p>最后, 替换<a href="../6.0.1-classic/#!/api/Ext.form.Panel-method-submit" data-full-load="true">submit</a> 方法保存数据, Form Panel的<a href="../6.0.1-classic/#!/api/Ext.form.Panel-method-updateRecord" data-full-load="true">updateRecord</a> 方法被用于更新记录与表单数据, 并且 Model的<a href="../6.0.1-classic/#!/api/Ext.data.Model-method-save" data-full-load="true">save</a> 方法被调用保存数据到服务器:</p> 
+       <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.form.Panel', {
+    ...
+    url: 'add_user',
+    items: [
+        ...
+    ],
+    buttons: [
+        {
+            text: 'Submit',
+            handler: function() {
+                var form = this.up('form'), // get the form panel
+                    record = form.getRecord(); // get the underlying model instance
+                if (form.isValid()) { // make sure the form contains valid data before submitting
+                    form.updateRecord(record); // update the record with the form data
+                    record.save({ // save the record to the server
+                        success: function(user) {
+                            Ext.Msg.alert('Success', 'User saved successfully.')
+                        },
+                        failure: function(user) {
+                            Ext.Msg.alert('Failure', 'Failed to save user.')
+                        }
+                    });
+                } else { // display error alert if the data is invalid
+                    Ext.Msg.alert('Invalid Data', 'Please correct form errors.')
+                }
+            }
+        }
+    ]
+});</code></pre> 
+       <p><a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#form-grid">Model 绑定例子</a></p> 
+       <h2 id="Layouts">Layouts</h2> 
+       <p>布局在一个Ext JS应用程序里是用来处理组件的大小和位置的. <a href="../6.0.1-classic/#!/api/Ext.form.Panel" data-full-load="true">Form Panels</a> 可以使用任何 <a href="../6.0.1-classic/#!/api/Ext.layout.container.Container" data-full-load="true">布局容器</a>. 更多关于Layouts的信息请查阅<a href="../core_concepts/layouts.html">布局和容器 指导</a>.</p> 
+       <p>例如, 可以很容易完成在一个表单里水平定位一个控件通过使用<a href="../6.0.1-classic/#!/api/Ext.layout.container.HBox" data-full-load="true">HBox</a> 布局:</p> 
+       <div mode="javascript" theme="chrome"><div class="example" baseurl="./..">
+	<a class="code-tab-editor code-tab-active" onclick="displayTabEditor(this)">编辑</a>
+	<a class="code-tab-preview" onclick="displayTabPreview(this)">预览</a>
+	<a class="code-tab-fiddler" onclick="displayTabFiddler(this)">在Fiddle打开</a>
+	<div class="code-editor"><pre><code>Ext.create('Ext.form.Panel', {
+    renderTo: document.body,
+    title: 'User Form',
+    height: 120,
+    width: 585,
+    defaults: {
+        xtype: 'textfield',
+        labelAlign: 'top',
+        padding: 10
+    },
+    layout: 'hbox',
+    items: [
+        {
+            fieldLabel: 'First Name',
+            name: 'firstName'
+        },
+        {
+            fieldLabel: 'Last Name',
+            name: 'lastName'
+        },
+        {
+            xtype: 'datefield',
+            fieldLabel: 'Date of Birth',
+            name: 'birthDate'
+        }
+    ]
+});</code></pre></div>
+	
+	<div class="code-live-preview-wrapper">
+		<iframe class="code-live-preview" style="display:none" url="./../editor-preview/extjs.html"></iframe>
+	</div>
+</div></div> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+         April 1, 2016 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>

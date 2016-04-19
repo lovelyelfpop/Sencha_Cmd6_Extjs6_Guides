@@ -1,0 +1,2257 @@
+<!DOCTYPE html><html><head> 
+  <link href="../css/main.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../MarkdownWebapp/MarkdownWebapp.nocache.js"></script> 
+  <script type="text/javascript" src="../ace/ace.js"></script> 
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" /> 
+  <script type="text/javascript">window["_GOOG_TRANS_EXT_VER"] = "1";</script> 
+  <title>Ext JS 向导 | Between 5.1.1 &amp; 6.0.0 Classic</title> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script type="text/javascript">
+
+    function showMenu(link_obj){
+      var menu = document.getElementById("tpl-toc");
+
+      link_obj.innerHTML = (link_obj.innerHTML == 'CLOSE MENU') ? 'MENU' : 'CLOSE MENU';
+
+      if(menu.style.display == 'block'){
+         menu.style.display = 'none';
+      }else{
+         menu.style.display = 'block';
+      }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+  <div id="header"> 
+   <a href="../../../../www.sencha.com/default.htm"><img class="sencha-logo" src="../images/logo.png" /></a> 
+   <h1 id="current-product"><a href="#">Ext JS 向导 ▼</a></h1> 
+   <div id="mobile_menu"> 
+    <a id="mobile_menu_link" onclick="showMenu(this);" href="#">MENU</a> 
+   </div> 
+    
+  </div> 
+  <div id="content" itemscope="" itemtype="http://schema.org/Article"> 
+   <div id="tpl-toc"> 
+    <div id="tpl-toc-content"> 
+     <a class="toggle-button" href="#">expand</a> 
+     <ul> 
+      <li class="file"><a href="../../../default.htm" data-full-load="true" title="Home">Sencha 向导</a></li> 
+      <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
+      <li class="folder"><a href="#">快速入门</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../getting_started/getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
+        <li class="file"><a href="../getting_started/extjs_faq.html" title="">Ext JS - 问答</a></li> 
+        <li class="file"><a href="../getting_started/login_app.html" title="">创建一个简单的登录应用</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../6.0.2-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.2-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.2 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.1-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.1 Modern API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-classic/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Classic API 文档</a></li> 
+        <li class="file"><a href="../6.0.0-modern/default.htm" data-full-load="true" title="Api Docs">Ext JS 6.0.0 Modern API 文档</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">API 版本差异</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="602_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Classic</a></li> 
+        <li class="file"><a href="602_modern_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.1 &amp; 6.0.2 Modern</a></li> 
+        <li class="file"><a href="601_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Classic</a></li> 
+        <li class="file"><a href="601_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between 6.0.0 &amp; 6.0.1 Modern</a></li> 
+        <li class="file"><a href="600_classic_diff.html" title="Between 5.1.1 &amp; 6.0.0">Between 5.1.1 &amp; 6.0.0 Classic</a></li> 
+        <li class="file"><a href="600_modern_diff.html" title="Between Touch 2.4.2 &amp; 6.0.0">Between Touch 2.4.2 &amp; 6.0.0 Modern</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">Examples</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.2/examples/default.htm" data-full-load="true" title="">6.0.2 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.1/examples/default.htm" data-full-load="true" title="">6.0.1 Examples</a></li> 
+        <li class="file"><a href="../../../../examples.sencha.com/extjs/6.0.0/examples/default.htm" data-full-load="true" title="">6.0.0 Examples</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">新特性</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../whats_new/release_notes.html" title="">版本发布说明</a></li> 
+        <li class="file"><a href="../whats_new/whats_new.html" title="">Ext JS 6 新特性</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">升级 &amp; 迁移</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../upgrades_migrations/extjs_upgrade_guide.html" title="">Ext JS 5 到 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/modern_upgrade_guide.html" title="">Touch 2.4 to 6 - 升级向导</a></li> 
+        <li class="file"><a href="../upgrades_migrations/pivot_grid_update_guide.html" title="">Ext JS 6 - Pivot Grid 升级向导</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">核心思想</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../core_concepts/classes.html" title="The 类系统">类系统</a></li> 
+        <li class="file"><a href="../core_concepts/layouts.html" title="布局和容器">布局和容器</a></li> 
+        <li class="file"><a href="../core_concepts/components.html" title="Components">Components</a></li> 
+        <li class="file"><a href="../core_concepts/data_package.html" title="数据封装">数据封装</a></li> 
+        <li class="file"><a href="../core_concepts/events.html" title="Events in Ext JS">事件和手势</a></li> 
+        <li class="file"><a href="../core_concepts/drag_drop.html" title="拖放">拖放</a></li> 
+        <li class="file"><a href="../core_concepts/theming.html" title="Theming Ext JS">主题</a></li> 
+        <li class="file"><a href="../core_concepts/memory_management.html" title="">内存管理</a></li> 
+        <li class="file"><a href="../core_concepts/accessibility.html" title="无障碍">无障碍</a></li> 
+        <li class="file"><a href="../core_concepts/localization.html" title="本地化">本地化</a></li> 
+        <li class="file"><a href="../core_concepts/rtl.html" title="Right to Left in Ext JS">Right to Left in Ext JS</a></li> 
+        <li class="file"><a href="../core_concepts/font_ext.html" title="">Sencha 字体包</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../core_concepts/tablet_support.html" title="平板设备支持">平板设备支持</a></li> 
+        <li class="folder"><a href="#">绘图封装</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../core_concepts/draw/drawing.html" title="">绘图封装</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt1.html" title="">Creating Images with Draw - Part 1</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt2.html" title="">Creating Images with Draw - Part 2</a></li> 
+          <li class="file"><a href="../core_concepts/draw/creating_images_with_draw_pt3.html" title="">Creating Images with Draw - Part 3</a></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">架构</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../application_architecture/application_architecture.html" title="应用程序架构介绍">应用程序架构介绍</a></li> 
+        <li class="file"><a href="../application_architecture/developing_for_multiple_screens_and_environments.html" title="应用程序架构介绍">多屏幕开发</a></li> 
+        <li class="file"><a href="../application_architecture/view_controllers.html" title="视图控制器View Controllers">视图控制器View Controllers</a></li> 
+        <li class="file"><a href="../application_architecture/view_models_data_binding.html" title="View Models &amp; 数据绑定">View Models &amp; 数据绑定</a></li> 
+        <li class="file"><a href="../application_architecture/view_model_internals.html" title="View Models Internals">View Model 内部机制</a></li> 
+        <li class="file"><a href="../application_architecture/router.html" title="使用路由">使用路由</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">UI 组件</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../components/forms.html" title="Forms">Forms</a></li> 
+        <li class="file"><a href="../components/introduction_to_charting.html" title="图表Charts介绍">图表Charts介绍</a></li> 
+        <li class="file"><a href="../components/trees.html" title="Trees">Trees</a></li> 
+        <li class="file"><a href="../components/grids.html" title="Grids">Grids</a></li> 
+        <li class="file"><a href="../components/pivot_grid.html" title="Pivot Grid">Pivot Grid</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../components/widgets_widgets_columns.html" title="Widgets and Widget Columns">Widgets and Widget Columns</a></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">后台连接</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../backend_connectors/soap.html" title="SOAP服务">SOAP服务</a></li> 
+        <li class="file"><a href="../backend_connectors/amf.html" title="AMF 数据源">AMF 数据源</a></li> 
+        <li class="folder"><a href="#">Ext Direct</a> 
+         <ul expand="false"> 
+          <li class="file"><a href="../backend_connectors/direct/specification.html" title="Ext Direct 说明">Ext Direct 说明</a><span class="tpl-toc-img-new">★</span></li> 
+          <li class="file"><a href="../backend_connectors/direct/mysql_php.html" title="Ext Direct 结合 MySQL 和 PHP">Ext Direct 结合 MySQL 和 PHP</a><span class="tpl-toc-img-new">★</span></li> 
+         </ul></li> 
+       </ul></li> 
+      <li class="folder"><a href="#">其它</a> 
+       <ul expand="false"> 
+        <li class="file"><a href="../other_resources/oop_concepts.html" title="">OOP基础</a><span class="tpl-toc-img-new">★</span></li> 
+        <li class="file"><a href="../other_resources/ecosystem.html" title="">Ext JS 生态</a></li> 
+        <li class="file"><a href="../other_resources/sencha_blog.html" title="">来自 Sencha 博客</a></li> 
+       </ul></li> 
+      <li class="file"><a href="../supported_browsers.html" title="支持的浏览器">支持的浏览器</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="middle"> 
+    <div id="tpl-content"> 
+     <div> 
+      <div class="toc-page" style="display:block;">
+        Contents 
+       <a class="toc-page-h2" href="#Added" title="Added">Added</a> 
+       <a class="toc-page-h2" href="#Modified" title="Modified">Modified</a> 
+       <a class="toc-page-h2" href="#Removed" title="Removed">Removed</a> 
+      </div> 
+      <div id="tpl-content-name" itemprop="name">
+       <h1>Differences Between Ext JS 5.1.1 and Ext JS 6 Classic Toolkit</h1>
+      </div> 
+      <div id="tpl-content-articleBody" itemprop="articleBody"> 
+       <style>
+.toc-page{
+    display:none !important;
+}
+</style>  
+       <h2 id="Added">Added</h2> 
+       <ul> 
+        <li>Ext.Deferred</li> 
+        <li>Ext.Promise</li> 
+        <li>Ext.chart.interactions.ItemEdit</li> 
+        <li>Ext.chart.series.sprite.Series</li> 
+        <li>Ext.data.request.Ajax</li> 
+        <li>Ext.data.request.Base</li> 
+        <li>Ext.data.request.Form</li> 
+        <li>Ext.draw.Point</li> 
+        <li>Ext.exporter.Base</li> 
+        <li>Ext.exporter.Excel</li> 
+        <li>Ext.exporter.File</li> 
+        <li>Ext.exporter.file.Base</li> 
+        <li>Ext.exporter.file.excel.Cell</li> 
+        <li>Ext.exporter.file.excel.Column</li> 
+        <li>Ext.exporter.file.excel.Row</li> 
+        <li>Ext.exporter.file.excel.Style</li> 
+        <li>Ext.exporter.file.excel.Table</li> 
+        <li>Ext.exporter.file.excel.Workbook</li> 
+        <li>Ext.exporter.file.excel.Worksheet</li> 
+        <li>Ext.grid.plugin.Exporter</li> 
+        <li>Ext.grid.selection.Replicator</li> 
+        <li>Ext.grid.selection.SelectionExtender</li> 
+        <li>Ext.list.AbstractTreeItem</li> 
+        <li>Ext.list.RootTreeItem</li> 
+        <li>Ext.list.Tree</li> 
+        <li>Ext.list.TreeItem</li> 
+        <li>Ext.pivot.Aggregators</li> 
+        <li>Ext.pivot.Grid</li> 
+        <li>Ext.pivot.axis.Base</li> 
+        <li>Ext.pivot.axis.Item</li> 
+        <li>Ext.pivot.axis.Local</li> 
+        <li>Ext.pivot.dimension.Item</li> 
+        <li>Ext.pivot.filter.Base</li> 
+        <li>Ext.pivot.filter.Label</li> 
+        <li>Ext.pivot.filter.Value</li> 
+        <li>Ext.pivot.matrix.Base</li> 
+        <li>Ext.pivot.matrix.Local</li> 
+        <li>Ext.pivot.matrix.Remote</li> 
+        <li>Ext.pivot.plugin.Configurator</li> 
+        <li>Ext.pivot.plugin.DrillDown</li> 
+        <li>Ext.pivot.plugin.Exporter</li> 
+        <li>Ext.pivot.plugin.RangeEditor</li> 
+        <li>Ext.pivot.result.Base</li> 
+        <li>Ext.pivot.result.Collection</li> 
+        <li>Ext.pivot.result.Local</li> 
+        <li>Ext.promise.Promise</li> 
+        <li>Ext.ux.ajax.PivotSimlet</li> 
+        <li>Ext.ux.colorpick.Button</li> 
+        <li>Ext.ux.colorpick.ColorPreview</li> 
+        <li>Ext.ux.colorpick.Field</li> 
+        <li>Ext.ux.colorpick.Selector</li> 
+        <li>Ext.ux.colorpick.SelectorModel</li> 
+        <li>Ext.ux.desktop.Video</li> 
+        <li>Ext.ux.layout.ResponsiveColumn</li> 
+        <li>Ext.ux.rating.Picker</li> 
+       </ul> 
+       <h2 id="Modified">Modified</h2> 
+       <ul> 
+        <li>Ext 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>all</li> 
+            <li>asap</li> 
+            <li>asapCancel</li> 
+            <li>raise</li> 
+           </ul></li> 
+          <li>property 
+           <ul> 
+            <li>enableAria</li> 
+            <li>enableAriaButtons</li> 
+            <li>enableAriaPanels</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.Array 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>reduce</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.Base 
+         <ul> 
+          <li>Added</li> 
+          <li>property 
+           <ul> 
+            <li>destroyed</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.Component 
+         <ul> 
+          <li>Added</li> 
+          <li>event 
+           <ul> 
+            <li>afterlayoutanimation</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.ComponentQuery 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>first</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.Img 
+         <ul> 
+          <li>Modified</li> 
+          <li>property 
+           <ul> 
+            <li>maskOnDisable 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is false</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is true</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.LoadMask 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$loadmask-page-background-color</li> 
+            <li>$loadmask-page-opacity</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.Widget 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>style</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>applyStyle</li> 
+            <li>getStyle</li> 
+            <li>setStyle</li> 
+            <li>toggleCls</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.app.Application 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>onAppUpdate</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.button.Button 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$button-default-arrow-glyph-color</li> 
+            <li>$button-default-split-line-color</li> 
+            <li>$button-grid-cell-arrow-glyph</li> 
+            <li>$button-grid-cell-arrow-glyph-color</li> 
+            <li>$button-grid-cell-glyph-font-size</li> 
+            <li>$button-grid-cell-split-line-color</li> 
+            <li>$button-grid-cell-split-line-width</li> 
+            <li>$button-large-arrow-glyph</li> 
+            <li>$button-large-glyph-font-size</li> 
+            <li>$button-large-split-line-width</li> 
+            <li>$button-medium-arrow-glyph</li> 
+            <li>$button-medium-glyph-font-size</li> 
+            <li>$button-medium-split-line-width</li> 
+            <li>$button-small-arrow-glyph</li> 
+            <li>$button-small-glyph-font-size</li> 
+            <li>$button-small-split-line-width</li> 
+            <li>$button-split-line-width</li> 
+            <li>$button-toolbar-arrow-glyph-color</li> 
+            <li>$button-toolbar-split-line-color</li> 
+           </ul></li> 
+          <li>event 
+           <ul> 
+            <li>beforetoggle</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>click</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.button.Segmented 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>forceSelection</li> 
+           </ul></li> 
+          <li>event 
+           <ul> 
+            <li>change</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getForceSelection</li> 
+            <li>setForceSelection</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.AbstractChart 
+         <ul> 
+          <li>Added</li> 
+          <li>event 
+           <ul> 
+            <li>storechange</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>cancelChartLayout</li> 
+            <li>getInteraction</li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>cancelLayout</li> 
+           </ul></li> 
+          <li>property 
+           <ul> 
+            <li>version</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.CartesianChart 
+         <ul> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>onPlaceWatermark</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.MarkerHolder 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getMarker</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>getBoundMarker 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>return type is void</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>deprecated</li> 
+                <li>private is false</li> 
+                <li>return type is Ext.chart.Markers[]</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.interactions.ItemHighlight 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>sticky</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getSticky</li> 
+            <li>setSticky</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.Gauge 
+         <ul> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>field</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getField</li> 
+            <li>setField</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.Pie 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>radiusField</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getRadiusField</li> 
+            <li>setRadiusField</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>config 
+           <ul> 
+            <li>highlightCfg 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>type is Ext.chart.series.sprite.PieSlice/Object</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getHighlightCfg 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is Object</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Ext.chart.series.sprite.PieSlice/Object</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>field</li> 
+            <li>labelField</li> 
+            <li>lengthField</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getLabelField</li> 
+            <li>getLengthField</li> 
+            <li>setLabelField</li> 
+            <li>setLengthField</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.Pie3D 
+         <ul> 
+          <li>Modified</li> 
+          <li>config 
+           <ul> 
+            <li>hidden 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is false</li> 
+                <li>type is Boolean|Array</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is []</li> 
+                <li>type is Array</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getHidden 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is Boolean|Array</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Array</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>field</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.Polar 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>radiusField</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getRadiusField</li> 
+            <li>setRadiusField</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>getAngleField 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>getXField 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>getYField 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>setAngleField 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>setXField 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>setYField 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>lengthField</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.Series 
+         <ul> 
+          <li>Added</li> 
+          <li>event 
+           <ul> 
+            <li>storechange</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>getItemByIndex 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>labelField</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getLabelField</li> 
+            <li>setLabelField</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.sprite.Bar3D 
+         <ul> 
+          <li>Added</li> 
+          <li>attribute 
+           <ul> 
+            <li>colorSpread</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.sprite.Box 
+         <ul> 
+          <li>Added</li> 
+          <li>attribute 
+           <ul> 
+            <li>colorSpread</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.sprite.Cartesian 
+         <ul> 
+          <li>5.1.1</li> 
+          <li>extends Ext.draw.sprite.Sprite</li> 
+          <li>6.0.0</li> 
+          <li>extends Ext.chart.series.sprite.Series</li> 
+         </ul></li> 
+        <li>Ext.chart.series.sprite.Pie3DPart 
+         <ul> 
+          <li>Added</li> 
+          <li>attribute 
+           <ul> 
+            <li>bevelWidth</li> 
+            <li>colorSpread</li> 
+            <li>label</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.sprite.PieSlice 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getSeries</li> 
+            <li>setSeries</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.chart.series.sprite.Polar 
+         <ul> 
+          <li>5.1.1</li> 
+          <li>extends Ext.draw.sprite.Sprite</li> 
+          <li>6.0.0</li> 
+          <li>extends Ext.chart.series.sprite.Series</li> 
+         </ul></li> 
+        <li>Ext.container.Container 
+         <ul> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>doLayout</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.data.Connection 
+         <ul> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>request 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is Object</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Ext.data.request.Base</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.data.Model 
+         <ul> 
+          <li>Added</li> 
+          <li>property 
+           <ul> 
+            <li>defaultProxy</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.data.TreeStore 
+         <ul> 
+          <li>5.1.1</li> 
+          <li>superclass is Ext.data.NodeStore</li> 
+          <li>6.0.0</li> 
+          <li>superclass is Ext.data.Store</li> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>recursive</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getRecursive</li> 
+            <li>setRecursive</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.data.reader.Reader 
+         <ul> 
+          <li>Modified</li> 
+          <li>config 
+           <ul> 
+            <li>keepRawData 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.dom.Element 
+         <ul> 
+          <li>Added</li> 
+          <li>event 
+           <ul> 
+            <li>focusmove</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>clone</li> 
+           </ul></li> 
+          <li>property 
+           <ul> 
+            <li>CLIP</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.draw.Container 
+         <ul> 
+          <li>Added</li> 
+          <li>event 
+           <ul> 
+            <li>bodyresize</li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>onPlaceWatermark</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.draw.Surface 
+         <ul> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>add 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is void</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Ext.draw.sprite.Sprite/Ext.draw.sprite.Sprite[]</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>remove 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is void</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Ext.draw.sprite.Sprite/null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.draw.engine.Svg 
+         <ul> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>remove 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is void</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Ext.draw.sprite.Sprite/null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.draw.sprite.Sprite 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>remove</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>config 
+           <ul> 
+            <li>parent 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+                <li>type is Object</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+                <li>type is Ext.draw.Surface/Ext.draw.sprite.Instancing/Ext.draw.sprite.Composite</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getParent 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is Object</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is Ext.draw.Surface/Ext.draw.sprite.Instancing/Ext.draw.sprite.Composite</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.event.Event 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getKeyName</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.FieldSet 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>descriptionText</li> 
+            <li>expandText</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$fieldset-tool-collapse-glyph</li> 
+            <li>$fieldset-tool-expand-glyph</li> 
+            <li>$fieldset-tool-glyph-color</li> 
+            <li>$fieldset-tool-glyph-font-size</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Base 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>formatText</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Checkbox 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$form-checkbox-checked-glyph</li> 
+            <li>$form-checkbox-glyph</li> 
+            <li>$form-checkbox-glyph-color</li> 
+            <li>$form-checkbox-glyph-focus-color</li> 
+            <li>$form-radio-checked-glyph</li> 
+            <li>$form-radio-glyph</li> 
+            <li>$form-radio-glyph-color</li> 
+            <li>$form-radio-glyph-focus-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Date 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>ariaDisabledDatesText</li> 
+            <li>ariaDisabledDaysText</li> 
+            <li>ariaFormat</li> 
+            <li>ariaMaxText</li> 
+            <li>ariaMinText</li> 
+            <li>formatText</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$form-date-trigger-glyph</li> 
+            <li>$form-date-trigger-glyph-color</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>property 
+           <ul> 
+            <li>ariaRole 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is ‘textbox’</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is ‘combobox’</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Display 
+         <ul> 
+          <li>Modified</li> 
+          <li>property 
+           <ul> 
+            <li>ariaRole 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is ‘textbox’</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is null</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Hidden 
+         <ul> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>clearInvalid</li> 
+            <li>markInvalid</li> 
+            <li>setHeight</li> 
+            <li>setPagePosition</li> 
+            <li>setPosition</li> 
+            <li>setSize</li> 
+            <li>setWidth</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.HtmlEditor 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$html-editor-aligncenter-glyph</li> 
+            <li>$html-editor-alignleft-glyph</li> 
+            <li>$html-editor-alignright-glyph</li> 
+            <li>$html-editor-backcolor-glyph</li> 
+            <li>$html-editor-bold-glyph</li> 
+            <li>$html-editor-bulletlist-glyph</li> 
+            <li>$html-editor-forecolor-glyph</li> 
+            <li>$html-editor-glyph-color</li> 
+            <li>$html-editor-glyph-font-size</li> 
+            <li>$html-editor-growtext-glyph</li> 
+            <li>$html-editor-hyperlink-glyph</li> 
+            <li>$html-editor-italic-glyph</li> 
+            <li>$html-editor-numberedlist-glyph</li> 
+            <li>$html-editor-shrinktext-glyph</li> 
+            <li>$html-editor-sourceedit-glyph</li> 
+            <li>$html-editor-underline-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Spinner 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$spinner-toolbar-trigger-down-glyph</li> 
+            <li>$spinner-toolbar-trigger-glyph-color</li> 
+            <li>$spinner-toolbar-trigger-up-glyph</li> 
+            <li>$spinner-trigger-down-glyph</li> 
+            <li>$spinner-trigger-glyph-color</li> 
+            <li>$spinner-trigger-up-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Tag 
+         <ul> 
+          <li>Added</li> 
+          <li>cssMixin 
+           <ul> 
+            <li>extjs-tag-field-ui</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$include-tag-field-default-ui</li> 
+            <li>$tag-field-item-background-color</li> 
+            <li>$tag-field-item-border-color</li> 
+            <li>$tag-field-item-border-radius</li> 
+            <li>$tag-field-item-border-style</li> 
+            <li>$tag-field-item-border-width</li> 
+            <li>$tag-field-item-close-icon-glyph</li> 
+            <li>$tag-field-item-close-icon-glyph-color</li> 
+            <li>$tag-field-item-close-icon-opacity</li> 
+            <li>$tag-field-item-close-icon-opacity-over</li> 
+            <li>$tag-field-item-close-icon-opacity-pressed</li> 
+            <li>$tag-field-item-close-icon-right</li> 
+            <li>$tag-field-item-close-icon-size</li> 
+            <li>$tag-field-item-close-icon-spacing</li> 
+            <li>$tag-field-item-close-icon-top</li> 
+            <li>$tag-field-item-color</li> 
+            <li>$tag-field-item-height</li> 
+            <li>$tag-field-item-margin</li> 
+            <li>$tag-field-item-over-background-color</li> 
+            <li>$tag-field-item-over-border-color</li> 
+            <li>$tag-field-item-over-close-icon-glyph-color</li> 
+            <li>$tag-field-item-over-color</li> 
+            <li>$tag-field-item-padding</li> 
+            <li>$tag-field-item-selected-background-color</li> 
+            <li>$tag-field-item-selected-border-color</li> 
+            <li>$tag-field-item-selected-close-icon-glyph-color</li> 
+            <li>$tag-field-item-selected-color</li> 
+            <li>$tag-field-item-selected-over-close-icon-glyph-color</li> 
+            <li>$tag-field-padding</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Text 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$form-clear-trigger-glyph</li> 
+            <li>$form-clear-trigger-glyph-color</li> 
+            <li>$form-search-trigger-glyph</li> 
+            <li>$form-search-trigger-glyph-color</li> 
+            <li>$form-toolbar-trigger-glyph</li> 
+            <li>$form-toolbar-trigger-glyph-color</li> 
+            <li>$form-trigger-glyph</li> 
+            <li>$form-trigger-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.form.field.Time 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>formatText</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.CellContext 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getCell</li> 
+            <li>getNode</li> 
+            <li>getRow</li> 
+           </ul></li> 
+          <li>property 
+           <ul> 
+            <li>colIdx</li> 
+            <li>column</li> 
+            <li>record</li> 
+            <li>rowIdx</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>clone 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+                <li>return type is Ext.grid.CellContext</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>isEqual 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+                <li>return type is Boolean</li> 
+               </ul></li> 
+             </ul></li> 
+            <li>setPosition 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>private is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>private is false</li> 
+                <li>return type is Ext.grid.CellContext</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.column.Action 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-actioncolumn-icon-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.column.Check 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-checkcolumn-checked-glyph</li> 
+            <li>$grid-checkcolumn-glyph</li> 
+            <li>$grid-checkcolumn-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.column.Column 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>ignoreExport</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.column.RowNumberer 
+         <ul> 
+          <li>Added</li> 
+          <li>property 
+           <ul> 
+            <li>isRowNumberer</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.feature.Grouping 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-grouped-menu-group-by-glyph</li> 
+            <li>$grid-grouped-title-collapse-glyph</li> 
+            <li>$grid-grouped-title-expand-glyph</li> 
+            <li>$grid-grouped-title-glyph-color</li> 
+            <li>$grid-grouped-title-glyph-font-size</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.filters.Filters 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-filters-header-menu-equals-glyph</li> 
+            <li>$grid-filters-header-menu-find-glyph</li> 
+            <li>$grid-filters-header-menu-greater-than-glyph</li> 
+            <li>$grid-filters-header-menu-less-than-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.header.Container 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-header-menu-columns-glyph</li> 
+            <li>$grid-header-menu-glyph-color</li> 
+            <li>$grid-header-menu-glyph-font-size</li> 
+            <li>$grid-header-menu-sort-asc-glyph</li> 
+            <li>$grid-header-menu-sort-desc-glyph</li> 
+            <li>$grid-header-sort-asc-glyph</li> 
+            <li>$grid-header-sort-desc-glyph</li> 
+            <li>$grid-header-sort-glyph-color</li> 
+            <li>$grid-header-sort-glyph-font-size</li> 
+            <li>$grid-header-sorted-background-color</li> 
+            <li>$grid-header-sorted-background-gradient</li> 
+            <li>$grid-header-trigger-background-image</li> 
+            <li>$grid-header-trigger-glyph</li> 
+            <li>$grid-header-trigger-glyph-color</li> 
+            <li>$grid-header-trigger-glyph-font-size</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.plugin.CellEditing 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>activateCell</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>method 
+           <ul> 
+            <li>startEdit 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>return type is Boolean</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>return type is void</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>onSpecialKey</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.plugin.Clipboard 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getTarget</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.plugin.Editing 
+         <ul> 
+          <li>Removed</li> 
+          <li>method 
+           <ul> 
+            <li>startEdit</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.plugin.RowEditing 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>activateCell</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.plugin.RowExpander 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$row-expander-collapse-glyph</li> 
+            <li>$row-expander-expand-glyph</li> 
+            <li>$row-expander-glyph-color</li> 
+            <li>$row-expander-glyph-font-size</li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>config 
+           <ul> 
+            <li>expandOnEnter</li> 
+           </ul></li> 
+         </ul></li> 
+        <li><p>Ext.grid.selection.Rows</p> 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getFirstRowIndex</li> 
+            <li>getLastRowIndex</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.grid.selection.SpreadsheetModel 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>extensible</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getExtensible</li> 
+            <li>setExtensible</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.layout.container.Accordion 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>wrapOver</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$accordion-tool-collapse-glyph</li> 
+            <li>$accordion-tool-expand-glyph</li> 
+            <li>$accordion-tool-glyph-color</li> 
+            <li>$accordion-tool-glyph-font-size</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.menu.CheckItem 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>submenuText</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.menu.Menu 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$menu-glyph-font-size</li> 
+            <li>$menu-item-active-arrow-glyph-color</li> 
+            <li>$menu-item-active-checkbox-glyph-color</li> 
+            <li>$menu-item-active-checkbox-group-glyph-color</li> 
+            <li>$menu-item-active-glyph-color</li> 
+            <li>$menu-item-active-text-color</li> 
+            <li>$menu-item-arrow-glyph</li> 
+            <li>$menu-item-arrow-glyph-color</li> 
+            <li>$menu-item-arrow-glyph-font-size</li> 
+            <li>$menu-item-arrow-margin</li> 
+            <li>$menu-item-checkbox-checked-glyph</li> 
+            <li>$menu-item-checkbox-glyph</li> 
+            <li>$menu-item-checkbox-glyph-color</li> 
+            <li>$menu-item-checkbox-glyph-font-size</li> 
+            <li>$menu-item-checkbox-group-checked-glyph</li> 
+            <li>$menu-item-checkbox-group-glyph</li> 
+            <li>$menu-item-checkbox-group-glyph-color</li> 
+            <li>$menu-scroller-bottom-glyph</li> 
+            <li>$menu-scroller-glyph-color</li> 
+            <li>$menu-scroller-glyph-font-size</li> 
+            <li>$menu-scroller-top-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.mixin.Observable 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>fireEventedAction</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.panel.Panel 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>closeToolText</li> 
+            <li>collapseToolText</li> 
+            <li>defaultButton</li> 
+            <li>defaultButtonTarget</li> 
+            <li>expandToolText</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$panel-tool-focus-outline-color</li> 
+            <li>$panel-tool-focus-outline-offset</li> 
+            <li>$panel-tool-focus-outline-style</li> 
+            <li>$panel-tool-focus-outline-width</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.panel.Table 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>headerBorders</li> 
+           </ul></li> 
+          <li>event 
+           <ul> 
+            <li>beforeselectionextend</li> 
+            <li>headermenucreate</li> 
+            <li>selectionextenderdrag</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getHeaderBorders</li> 
+            <li>registerActionable</li> 
+            <li>setHeaderBorders</li> 
+           </ul></li> 
+          <li>property 
+           <ul> 
+            <li>actionables</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.panel.Tool 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$tool-close-glyph</li> 
+            <li>$tool-collapse-bottom-glyph</li> 
+            <li>$tool-collapse-glyph</li> 
+            <li>$tool-collapse-left-glyph</li> 
+            <li>$tool-collapse-right-glyph</li> 
+            <li>$tool-collapse-top-glyph</li> 
+            <li>$tool-down-glyph</li> 
+            <li>$tool-expand-bottom-glyph</li> 
+            <li>$tool-expand-glyph</li> 
+            <li>$tool-expand-left-glyph</li> 
+            <li>$tool-expand-right-glyph</li> 
+            <li>$tool-expand-top-glyph</li> 
+            <li>$tool-gear-glyph</li> 
+            <li>$tool-glyph-color</li> 
+            <li>$tool-glyph-font-size</li> 
+            <li>$tool-help-glyph</li> 
+            <li>$tool-left-glyph</li> 
+            <li>$tool-maximize-glyph</li> 
+            <li>$tool-minimize-glyph</li> 
+            <li>$tool-minus-glyph</li> 
+            <li>$tool-move-glyph</li> 
+            <li>$tool-next-glyph</li> 
+            <li>$tool-pin-glyph</li> 
+            <li>$tool-plus-glyph</li> 
+            <li>$tool-prev-glyph</li> 
+            <li>$tool-print-glyph</li> 
+            <li>$tool-refresh-glyph</li> 
+            <li>$tool-resize-glyph</li> 
+            <li>$tool-restore-glyph</li> 
+            <li>$tool-right-glyph</li> 
+            <li>$tool-save-glyph</li> 
+            <li>$tool-search-glyph</li> 
+            <li>$tool-toggle-down-glyph</li> 
+            <li>$tool-toggle-up-glyph</li> 
+            <li>$tool-unpin-glyph</li> 
+            <li>$tool-up-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.picker.Date 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>ariaDisabledDatesText</li> 
+            <li>ariaDisabledDaysText</li> 
+            <li>ariaMaxText</li> 
+            <li>ariaMinText</li> 
+            <li>footerButtonUI</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$datepicker-arrow-glyph-color</li> 
+            <li>$datepicker-item-hover-background-color</li> 
+            <li>$datepicker-item-selected-background-color</li> 
+            <li>$datepicker-item-selected-border-color</li> 
+            <li>$datepicker-item-selected-color</li> 
+            <li>$datepicker-item-today-background-color</li> 
+            <li>$datepicker-month-button-arrow-glyph</li> 
+            <li>$datepicker-month-button-arrow-glyph-color</li> 
+            <li>$datepicker-month-button-background-color</li> 
+            <li>$datepicker-month-button-font-size</li> 
+            <li>$datepicker-month-button-over-background-color</li> 
+            <li>$datepicker-month-button-padding</li> 
+            <li>$datepicker-month-button-pressed-background-color</li> 
+            <li>$datepicker-monthpicker-arrow-glyph-color</li> 
+            <li>$datepicker-monthpicker-item-selected-color</li> 
+            <li>$datepicker-monthpicker-next-glyph</li> 
+            <li>$datepicker-monthpicker-prev-glyph</li> 
+            <li>$datepicker-next-glyph</li> 
+            <li>$datepicker-prev-glyph</li> 
+           </ul></li> 
+          <li>Removed</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$datepicker-use-transparent-month-button</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.picker.Month 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>footerButtonUI</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.plugin.AbstractClipboard 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>getTarget</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.resizer.Splitter 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$splitter-collapse-tool-background-color</li> 
+            <li>$splitter-collapse-tool-border-color</li> 
+            <li>$splitter-collapse-tool-border-style</li> 
+            <li>$splitter-collapse-tool-border-width</li> 
+            <li>$splitter-collapse-tool-bottom-glyph</li> 
+            <li>$splitter-collapse-tool-bottom-glyph-padding</li> 
+            <li>$splitter-collapse-tool-glyph-color</li> 
+            <li>$splitter-collapse-tool-glyph-font-size</li> 
+            <li>$splitter-collapse-tool-left-glyph</li> 
+            <li>$splitter-collapse-tool-left-glyph-padding</li> 
+            <li>$splitter-collapse-tool-right-glyph</li> 
+            <li>$splitter-collapse-tool-right-glyph-padding</li> 
+            <li>$splitter-collapse-tool-top-glyph</li> 
+            <li>$splitter-collapse-tool-top-glyph-padding</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.scroll.Scroller 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>slotSnapSize</li> 
+           </ul></li> 
+          <li>method 
+           <ul> 
+            <li>getClientSize</li> 
+            <li>getSlotSnapSize</li> 
+            <li>isInView</li> 
+            <li>setSlotSnapSize</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.selection.CheckboxModel 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$checkbox-selection-model-checked-glyph</li> 
+            <li>$checkbox-selection-model-glyph</li> 
+            <li>$checkbox-selection-model-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.slider.Multi 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>pageSize</li> 
+           </ul></li> 
+          <li>cssVar 
+           <ul> 
+            <li>$horizontal-slider-thumb-glyph</li> 
+            <li>$slider-imageless</li> 
+            <li>$slider-thumb-background-color</li> 
+            <li>$slider-thumb-background-color-drag</li> 
+            <li>$slider-thumb-background-color-focus</li> 
+            <li>$slider-thumb-background-color-over</li> 
+            <li>$slider-thumb-border-color</li> 
+            <li>$slider-thumb-border-color-drag</li> 
+            <li>$slider-thumb-border-color-focus</li> 
+            <li>$slider-thumb-border-color-over</li> 
+            <li>$slider-thumb-border-radius</li> 
+            <li>$slider-thumb-border-style</li> 
+            <li>$slider-thumb-border-width</li> 
+            <li>$slider-thumb-glyph-color</li> 
+            <li>$slider-thumb-glyph-color-drag</li> 
+            <li>$slider-thumb-glyph-color-focus</li> 
+            <li>$slider-thumb-glyph-color-over</li> 
+            <li>$slider-thumb-glyph-font-size</li> 
+            <li>$slider-track-background-color</li> 
+            <li>$slider-track-border-color</li> 
+            <li>$slider-track-border-radius</li> 
+            <li>$slider-track-border-style</li> 
+            <li>$slider-track-border-width</li> 
+            <li>$slider-track-size</li> 
+            <li>$vertical-slider-thumb-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.supports 
+         <ul> 
+          <li>Added</li> 
+          <li>property 
+           <ul> 
+            <li>CloneNodeCopiesExpando</li> 
+            <li>HighContrastMode</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.tab.Bar 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$tabbar-plain-padding</li> 
+            <li>$tabbar-plain-scroller-glyph-color</li> 
+            <li>$tabbar-scroller-bottom-glyph</li> 
+            <li>$tabbar-scroller-glyph-color</li> 
+            <li>$tabbar-scroller-glyph-font-size</li> 
+            <li>$tabbar-scroller-left-glyph</li> 
+            <li>$tabbar-scroller-right-glyph</li> 
+            <li>$tabbar-scroller-top-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.tab.Tab 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$tab-background-opacity</li> 
+            <li>$tab-background-opacity-active</li> 
+            <li>$tab-background-opacity-disabled</li> 
+            <li>$tab-background-opacity-focus</li> 
+            <li>$tab-background-opacity-focus-active</li> 
+            <li>$tab-background-opacity-focus-over</li> 
+            <li>$tab-background-opacity-over</li> 
+            <li>$tab-closable-icon-glyph</li> 
+            <li>$tab-closable-icon-glyph-color</li> 
+            <li>$tab-closable-icon-glyph-color-active</li> 
+            <li>$tab-closable-icon-glyph-color-disabled</li> 
+            <li>$tab-closable-icon-glyph-color-focus</li> 
+            <li>$tab-closable-icon-glyph-color-focus-active</li> 
+            <li>$tab-closable-icon-glyph-color-focus-over</li> 
+            <li>$tab-closable-icon-glyph-color-over</li> 
+            <li>$tab-opacity</li> 
+            <li>$tab-opacity-active</li> 
+            <li>$tab-opacity-focus</li> 
+            <li>$tab-opacity-focus-active</li> 
+            <li>$tab-opacity-focus-over</li> 
+            <li>$tab-opacity-over</li> 
+            <li>$tab-outline-color-focus</li> 
+            <li>$tab-outline-offset-focus</li> 
+            <li>$tab-outline-style-focus</li> 
+            <li>$tab-outline-width-focus</li> 
+            <li>$tab-plain-background-color</li> 
+            <li>$tab-plain-background-color-active</li> 
+            <li>$tab-plain-background-color-disabled</li> 
+            <li>$tab-plain-background-color-focus</li> 
+            <li>$tab-plain-background-color-focus-active</li> 
+            <li>$tab-plain-background-color-focus-over</li> 
+            <li>$tab-plain-background-color-over</li> 
+            <li>$tab-plain-border-color</li> 
+            <li>$tab-plain-border-color-active</li> 
+            <li>$tab-plain-border-color-disabled</li> 
+            <li>$tab-plain-border-color-focus</li> 
+            <li>$tab-plain-border-color-focus-active</li> 
+            <li>$tab-plain-border-color-focus-over</li> 
+            <li>$tab-plain-border-color-over</li> 
+            <li>$tab-plain-closable-icon-glyph-color</li> 
+            <li>$tab-plain-closable-icon-glyph-color-active</li> 
+            <li>$tab-plain-closable-icon-glyph-color-disabled</li> 
+            <li>$tab-plain-closable-icon-glyph-color-focus</li> 
+            <li>$tab-plain-closable-icon-glyph-color-focus-active</li> 
+            <li>$tab-plain-closable-icon-glyph-color-focus-over</li> 
+            <li>$tab-plain-closable-icon-glyph-color-over</li> 
+            <li>$tab-plain-color</li> 
+            <li>$tab-plain-color-active</li> 
+            <li>$tab-plain-color-disabled</li> 
+            <li>$tab-plain-color-focus</li> 
+            <li>$tab-plain-color-focus-active</li> 
+            <li>$tab-plain-color-focus-over</li> 
+            <li>$tab-plain-color-over</li> 
+            <li>$tab-plain-glyph-color</li> 
+            <li>$tab-plain-glyph-color-active</li> 
+            <li>$tab-plain-glyph-color-disabled</li> 
+            <li>$tab-plain-glyph-color-focus</li> 
+            <li>$tab-plain-glyph-color-focus-active</li> 
+            <li>$tab-plain-glyph-color-focus-over</li> 
+            <li>$tab-plain-glyph-color-over</li> 
+           </ul></li> 
+          <li>Modified</li> 
+          <li>config 
+           <ul> 
+            <li>tabIndex 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is null</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is 0</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.tip.Tip 
+         <ul> 
+          <li>Modified</li> 
+          <li>property 
+           <ul> 
+            <li>maskOnDisable 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is false</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.toolbar.Breadcrumb 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$breadcrumb-arrow-expanded-glyph</li> 
+            <li>$breadcrumb-arrow-expanded-glyph-color</li> 
+            <li>$breadcrumb-arrow-glyph</li> 
+            <li>$breadcrumb-arrow-glyph-color</li> 
+            <li>$breadcrumb-folder-glyph</li> 
+            <li>$breadcrumb-folder-glyph-color</li> 
+            <li>$breadcrumb-folder-open-glyph</li> 
+            <li>$breadcrumb-folder-open-glyph-color</li> 
+            <li>$breadcrumb-folder-open-icon</li> 
+            <li>$breadcrumb-glyph-color</li> 
+            <li>$breadcrumb-glyph-font-size</li> 
+            <li>$breadcrumb-leaf-glyph</li> 
+            <li>$breadcrumb-leaf-glyph-color</li> 
+           </ul></li> 
+          <li>event 
+           <ul> 
+            <li>change</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.toolbar.Paging 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$grid-paging-toolbar-first-glyph</li> 
+            <li>$grid-paging-toolbar-glyph-color</li> 
+            <li>$grid-paging-toolbar-glyph-font-size</li> 
+            <li>$grid-paging-toolbar-last-glyph</li> 
+            <li>$grid-paging-toolbar-next-glyph</li> 
+            <li>$grid-paging-toolbar-prev-glyph</li> 
+            <li>$grid-paging-toolbar-refresh-glyph</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.toolbar.Toolbar 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$toolbar-menu-overflow-glyph</li> 
+            <li>$toolbar-menu-overflow-glyph-color</li> 
+            <li>$toolbar-scroller-bottom-glyph</li> 
+            <li>$toolbar-scroller-glyph-color</li> 
+            <li>$toolbar-scroller-glyph-font-size</li> 
+            <li>$toolbar-scroller-left-glyph</li> 
+            <li>$toolbar-scroller-right-glyph</li> 
+            <li>$toolbar-scroller-top-glyph</li> 
+            <li>$toolbar-tool-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.tree.View 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$tree-arrow-expanded-glyph</li> 
+            <li>$tree-arrow-expanded-glyph-color</li> 
+            <li>$tree-arrow-glyph</li> 
+            <li>$tree-arrow-glyph-color</li> 
+            <li>$tree-checkbox-checked-glyph</li> 
+            <li>$tree-checkbox-glyph</li> 
+            <li>$tree-checkbox-glyph-color</li> 
+            <li>$tree-collapse-glyph</li> 
+            <li>$tree-collapse-glyph-color</li> 
+            <li>$tree-expand-glyph</li> 
+            <li>$tree-expand-glyph-color</li> 
+            <li>$tree-folder-glyph</li> 
+            <li>$tree-folder-glyph-color</li> 
+            <li>$tree-folder-open-glyph</li> 
+            <li>$tree-folder-open-glyph-color</li> 
+            <li>$tree-glyph-color</li> 
+            <li>$tree-glyph-font-size</li> 
+            <li>$tree-leaf-glyph</li> 
+            <li>$tree-leaf-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.util.HashMap 
+         <ul> 
+          <li>Added</li> 
+          <li>method 
+           <ul> 
+            <li>removeByKey</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.util.KeyMap 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>priority</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.util.KeyNav 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>priority</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.ux.form.MultiSelect 
+         <ul> 
+          <li>Added</li> 
+          <li>config 
+           <ul> 
+            <li>pageSize</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.view.BoundList 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$boundlist-item-over-text-color</li> 
+            <li>$boundlist-item-selected-text-color</li> 
+            <li>$boundlist-item-text-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.view.Table 
+         <ul> 
+          <li>Added</li> 
+          <li>property 
+           <ul> 
+            <li>actionRow</li> 
+            <li>actionableMode</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.window.MessageBox 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$messagebox-error-glyph</li> 
+            <li>$messagebox-error-glyph-color</li> 
+            <li>$messagebox-glyph-font-size</li> 
+            <li>$messagebox-info-glyph</li> 
+            <li>$messagebox-info-glyph-color</li> 
+            <li>$messagebox-question-glyph</li> 
+            <li>$messagebox-question-glyph-color</li> 
+            <li>$messagebox-warning-glyph</li> 
+            <li>$messagebox-warning-glyph-color</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.window.Toast 
+         <ul> 
+          <li>Modified</li> 
+          <li>config 
+           <ul> 
+            <li>closable 
+             <ul> 
+              <li>5.1.1 
+               <ul> 
+                <li>default value is true</li> 
+               </ul></li> 
+              <li>6.0.0 
+               <ul> 
+                <li>default value is false</li> 
+               </ul></li> 
+             </ul></li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Ext.window.Window 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$window-tool-focus-outline-color</li> 
+            <li>$window-tool-focus-outline-offset</li> 
+            <li>$window-tool-focus-outline-style</li> 
+            <li>$window-tool-focus-outline-width</li> 
+           </ul></li> 
+         </ul></li> 
+        <li>Global_CSS 
+         <ul> 
+          <li>Added</li> 
+          <li>cssVar 
+           <ul> 
+            <li>$enable-font-icons</li> 
+           </ul></li> 
+         </ul></li> 
+       </ul> 
+       <h2 id="Removed">Removed</h2> 
+       <ul> 
+        <li>Ext.data.amf.Encoder</li> 
+        <li>Ext.data.amf.Packet</li> 
+        <li>Ext.data.amf.Proxy</li> 
+        <li>Ext.data.amf.Reader</li> 
+        <li>Ext.data.amf.RemotingMessage</li> 
+        <li>Ext.data.amf.XmlDecoder</li> 
+        <li>Ext.data.amf.XmlEncoder</li> 
+        <li>Ext.direct.AmfRemotingProvider</li> 
+       </ul> 
+      </div> 
+      <div class="tpl-content-lastUpdated">
+        Last updated 
+       <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
+        April 1, 2016
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footer-social"> 
+    <div class="g-plusone" data-size="medium" data-annotation="none"></div> 
+   </div> 
+   <div id="footer-content"> 
+    <a href="../../../../www.sencha.com/products">Products</a> | 
+    <a href="../../../../www.sencha.com/services">Services</a> | 
+    <a href="../../../../www.sencha.com/support">Support</a> | 
+    <a href="../../../../www.sencha.com/training">Training</a> | 
+    <a href="../../../../www.sencha.com/partners">Partners</a> | 
+    <a href="../../../../www.sencha.com/blog">Community</a> | 
+    <a href="../../../../www.sencha.com/company">Company</a> 
+   </div> 
+  </div> 
+  <div id="menu-product-container" style="display:none;"> 
+   <div id="menu-dropdown"> 
+    <div class="menu-landing-products"> 
+     <div id="menu-vertical"> 
+      <p class="menu-landing-product" rel="extjs"> <a> Sencha Ext JS </a> </p> 
+      <p class="menu-landing-product" rel="cmd"> <a> Sencha Cmd </a> </p> 
+      <p class="menu-landing-product" rel="sencha_test"> <a> Sencha Test </a> </p> 
+      <p class="menu-landing-product" rel="ide_plugins"> <a> Sencha IDE Plugins </a> </p> 
+      <p class="menu-landing-product" rel="sencha_inspector"> <a> Sencha Inspector </a> </p> 
+      <p class="menu-landing-product" rel="gxt"> <a> Sencha GXT </a> </p> 
+      <p class="menu-landing-product" rel="webappmgr"> <a> Sencha Web Application Manager </a> </p> 
+      <p class="menu-landing-product" rel="architect"> <a> Sencha Architect </a> </p> 
+      <p class="menu-landing-product" rel="touch"> <a> Sencha Touch </a> </p> 
+     </div> 
+    </div> 
+    <div id="menu-product-details"> 
+     <div id="extjs-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Ext JS 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../default.htm"> 6.0.2 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.2-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.2-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.1 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.1-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/extjs-docs-6.0.1-modern.zip"> (modern) </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../default.htm"> 6.0.0 </a> 
+      <a class="menu-landing-zip" style="padding-right:0;" href="../../../downloads/extjs-docs-6.0.0-classic.zip"> (classic) </a> 
+      <a class="menu-landing-zip" style="padding-left:0;" href="../../../downloads/extjs-docs-6.0.0-modern.zip"> (modern) </a> 
+      <div class="menu-landing-doc-heading">
+        5.1.x 
+      </div> 
+      <a href="../../5.1/default.htm"> 5.1.2 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.1 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-5.1.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.1/default.htm"> 5.1.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.1.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.0.x 
+      </div> 
+      <a href="../../5.0/default.htm"> 5.0.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../5.0/default.htm"> 5.0.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/ext-docs-5.0.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.2.x 
+      </div> 
+      <a href="../../4.2.5/default.htm"> 4.2.5 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.5.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.4/default.htm"> 4.2.4 </a> 
+      <a class="menu-landing-zip" href="../../../downloads/extjs-docs-4.2.4.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.3/default.htm"> 4.2.3 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.3.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.2/default.htm"> 4.2.2 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.1/default.htm"> 4.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/extjs-docs-4.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../4.2.0/default.htm"> 4.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.1.x 
+      </div> 
+      <a href="../../4.1.3/default.htm"> 4.1.3 </a> 
+      <br /> 
+      <a href="../../4.1.2/default.htm"> 4.1.2 </a> 
+      <br /> 
+      <a href="../../4.1.1/default.htm"> 4.1.1 </a> 
+      <br /> 
+      <a href="../../4.1.0/default.htm"> 4.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        4.0.x 
+      </div> 
+      <a href="../../4.0.7/default.htm"> 4.0.7 </a> 
+      <br /> 
+      <a href="../../4.0.0/default.htm"> 4.0.0 </a> 
+     </div> 
+     <div id="cmd-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Cmd 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.x 
+      </div> 
+      <a href="../../../cmd/6.x"> 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        5.x 
+      </div> 
+      <a href="../../../cmd/5.x"> 5.x </a> 
+     </div> 
+     <div id="sencha_test-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Test 
+      </div> 
+      <a href="../../../sencha_test/index.html"> Sencha Test </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="ide_plugins-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha IDE Plugins 
+      </div> 
+      <a href="../../../ide_plugins/jetbrains_ide_plugin.html"> JetBrains Plugin 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/eclipse_ide_plugin.html"> Eclipse Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../ide_plugins/visual_studio_ide_plugin.html"> Visual Studio Plugin </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="sencha_inspector-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Inspector 
+      </div> 
+      <a href="../../../sencha_inspector/index.html"> Sencha Inspector 6.x </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="gxt-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha GXT 
+      </div> 
+      <!-- GXT 4.0 --> 
+      <div class="menu-landing-doc-heading">
+        4.0 
+       <span class="tpl-toc-img-new">★</span> 
+      </div> 
+      <a href="../../../../examples.sencha.com/gxt/4.0.1"> 4.0 Explorer Examples </a> 
+      <br /> 
+      <a href="../../../../examples.sencha.com/gxt-edash/4.0.1"> 4.0 Dashboard Example </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/gxt/examples-src/gxt-edash-4.0.1.zip"> (War) </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/default.htm"> 4.0 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/4.x/javadoc/gxt-4.0.0"> 4.0 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.1.x --> 
+      <div class="menu-landing-doc-heading">
+        3.1 
+      </div> 
+      <a href="../../../../www.sencha.com/examples/default.htm"> 3.1.4 Examples </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/default.htm"> 3.1.4 Guides </a> 
+      <br /> 
+      <a href="../../../gxt/3.x/javadoc"> 3.1.4 Javadoc </a> 
+      <br /> 
+      <!-- GXT 3.0.x --> 
+      <!-- GXT 2.x --> 
+      <div class="menu-landing-doc-heading">
+        2.0 
+      </div> 
+      <a href="../../../../https@www.sencha.com/examples-2/default.htm"> 2.3.1 Examples </a> 
+     </div> 
+     <div id="webappmgr-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Web Application Manager 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        6.0.x 
+      </div> 
+      <a href="../../../webappmgr"> 6.0.0 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+     </div> 
+     <div id="architect-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Architect 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        3.x 
+      </div> 
+      <a href="../../../architect/3.5/default.htm"> 3.5 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <br /> 
+      <a href="../../../architect/3/default.htm"> 3.2 </a> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../../cdn.sencha.com/downloads/docs/architect-docs-3.zip"> (offline docs) </a> 
+     </div> 
+     <div id="touch-menu-product" class="menu-specific-product"> 
+      <div class="menu-landing-doc-heading">
+        Sencha Touch 
+      </div> 
+      <div class="menu-landing-doc-heading">
+        2.4.x 
+      </div> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.2 </a> 
+      <span class="tpl-toc-img-new">★</span> 
+      <a class="menu-landing-zip menu-landing-lesspad" href="../../../downloads/touch-docs-2.4.2.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/default.htm"> 2.4.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.4/2.4.0-apidocs"> 2.4.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.4.0.zip"> (offline docs) </a> 
+      <div class="menu-landing-doc-heading">
+        2.3.x 
+      </div> 
+      <a href="../../../touch/2.3.1/default.htm"> 2.3.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.3.0/default.htm"> 2.3.0 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.3.0.zip"> (offline docs) </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.2.x 
+      </div> 
+      <a href="../../../touch/2.2.1/default.htm"> 2.2.1 </a> 
+      <a class="menu-landing-zip" href="../../../../cdn.sencha.com/downloads/docs/touch-docs-2.2.1.zip"> (offline docs) </a> 
+      <br /> 
+      <a href="../../../touch/2.2.0/default.htm"> 2.2.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.1.x 
+      </div> 
+      <a href="../../../touch/2.1.1/default.htm"> 2.1.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.1.0/default.htm"> 2.1.0 </a> 
+      <br /> 
+      <div class="menu-landing-doc-heading">
+        2.0.x 
+      </div> 
+      <a href="../../../touch/2.0.2/default.htm"> 2.0.2 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.1/default.htm"> 2.0.1 </a> 
+      <br /> 
+      <a href="../../../touch/2.0.0/default.htm"> 2.0.0 </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+   
+  <script type="text/javascript">
+    adroll_adv_id = "5RM2BL5IGRFLRG5VDQ7OIE";
+    adroll_pix_id = "LWO7UZXBFVESTOMYFI2LYS";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username_40example.com"; */
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "../../../../https@s.adroll.com" : "../../../../a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+        document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> 
+  <script>
+    var menu = document.getElementById("tpl-toc"),
+        link_obj = document.getElementById("mobile_menu_link"),
+        links = menu.querySelectorAll('a');
+
+    for(i=0; i < links.length; i++) {
+      links[i].onclick = function() {
+        var mq = window.matchMedia('only screen and (max-width: 768px)');
+
+        if(mq.matches) {
+          menu.style.display = 'none';
+          link_obj.innerHTML = 'MENU';
+        }
+      }
+    }
+
+  </script> 
+  <script type="text/javascript">
+    </script>              <script src='../../../../munchkin.marketo.net/munchkin-beta.js' type='text/javascript'></script><script>Munchkin.init('374-WES-121');</script>   
+ 
+</body></html>
