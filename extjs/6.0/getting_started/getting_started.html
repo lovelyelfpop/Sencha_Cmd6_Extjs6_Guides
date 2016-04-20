@@ -42,9 +42,9 @@
       <li class="file"><a href="../index.html" title="Guide Home">Sencha Ext JS 向导</a></li> 
       <li class="folder"><a href="#">快速入门</a> 
        <ul expand="false"> 
-        <li class="file"><a href="getting_started.html" title="Get Started">Setup &amp; 快速入门</a></li> 
+        <li class="file"><a href="getting_started.html" title="Get Started">安装 &amp; 快速入门</a></li> 
         <li class="file"><a href="extjs_faq.html" title="">Ext JS - FAQ</a></li> 
-        <li class="file"><a href="login_app.html" title="">Create a Sample Login App</a></li> 
+        <li class="file"><a href="login_app.html" title="">创建一个简单的登录应用</a></li> 
        </ul></li> 
       <li class="folder"><a href="#">Ext JS 6 API 文档</a> 
        <ul expand="false"> 
@@ -145,21 +145,23 @@
    <div id="middle"> 
     <div id="tpl-content"> 
      <div> 
-      <div class="toc-page" style="display:block;">内容 <a href="#Next_Steps" title="Next Steps">下一个步骤</a><a class="toc-page-h2" href="#Next_Steps" title="Next Steps"></a> 
-       <a class="toc-page-h3" href="#Classic" title="Classic">经典</a> 
-       <a class="toc-page-h4" href="#Tabs" title="Tabs">选项卡</a> 
-       <a class="toc-page-h5" href="#UI_Styling" title="UI Styling">UI样式</a> 
-       <a class="toc-page-h5" href="#Responsive" title="Responsive">响应</a> 
-       <a class="toc-page-h5" href="#View_Models_and_Data_Binding" title="View Models and Data Binding">视图模型和数据绑定</a> 
-       <a class="toc-page-h4" href="#Grids" title="Grids">Grids</a> 
+      <div class="toc-page" style="display:block;">
+      内容导航
+      <a href="#Next_Steps" title="Next Steps">下一步</a><a class="toc-page-h2" href="#Next_Steps" title="Next Steps"></a> 
+       <a class="toc-page-h3" href="#Classic" title="Classic">Classic</a> 
+       <a class="toc-page-h4" href="#Tabs" title="Tabs">标签页(Tabs)</a> 
+       <a class="toc-page-h5" href="#UI_Styling" title="UI Styling">UI 样式设计</a> 
+       <a class="toc-page-h5" href="#Responsive" title="Responsive">响应式(自适应网页设计)</a> 
+       <a class="toc-page-h5" href="#View_Models_and_Data_Binding" title="View Models and Data Binding">视图模型(View Models)和数据绑定</a> 
+       <a class="toc-page-h4" href="#Grids" title="Grids">表格(Grids)</a> 
        <a class="toc-page-h5" href="#Store" title="Store">Store</a> 
-       <a class="toc-page-h5" href="#Listeners" title="Listeners">监听</a> 
+       <a class="toc-page-h5" href="#Listeners" title="Listeners">事件监听(Listeners)</a> 
        <a class="toc-page-h3" href="#Modern" title="Modern">Modern</a> 
-       <a class="toc-page-h4" href="#Tabs" title="Tabs">Tabs</a> 
-       <a class="toc-page-h4" href="#Modern_Grid" title="Modern Grid">现代Grid</a> 
-       <a class="toc-page-h3" href="#Universal" title="Universal">通用</a> 
-       <a class="toc-page-h3" href="#Change_Themes" title="Change Themes">通用</a> 
-       <a class="toc-page-h3" href="#Styling_Your_Application" title="Styling Your Application">样式应用程序</a> 
+       <a class="toc-page-h4" href="#Tabs" title="Tabs">标签页(Tabs)</a> 
+       <a class="toc-page-h4" href="#Modern_Grid" title="Modern Grid">Modern 表格(Grid)</a> 
+       <a class="toc-page-h3" href="#Universal" title="Universal">通用(Universal)</a> 
+       <a class="toc-page-h3" href="#Change_Themes" title="Change Themes">改变主题</a> 
+       <a class="toc-page-h3" href="#Styling_Your_Application" title="Styling Your Application">改变应用程序的样式</a> 
        <a class="toc-page-h2" href="#Wrap_Up" title="Wrap Up">总结</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
@@ -201,21 +203,21 @@ sencha app watch</code></pre></li>
        <p><a href="../6.0.1-classic/#!/api/Ext.tab.Panel" data-full-load="true">TabPanels</a> 同样可用于标准<a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">面板(Panel)</a>布局, 也可以容纳子组件(items). 这些子组件被 <a href="../6.0.1-classic/#!/api/Ext.layout.container.Card" data-full-load="true">卡片(Card)</a> 布局管理, 并呈现为一个个标签页的样式.</p> 
        <p><a href="../6.0.1-classic/#!/api/Ext.tab.Tab" data-full-load="true">Tabs</a> 通常横向配列在顶部. 不过, 在这个应用程序中, 我们聪明地改造了一下.</p> 
        <p>你应该注意到了我们的 tabs 不像一般的 tabs. 这是因为我们创建了一个自定义 UI.</p> 
-       <h5 id="UI_Styling">UI Styling</h5> 
-       <p>Every component in the Ext JS framework has a <code>ui</code> configuration that defaults to <code>default</code>. This property can be changed to allow components in your application to have different styles.</p> 
-       <p>Most Ext JS components have SASS @mixin’s that allow you to quickly generate new UIs. These include: Ext.panel.Panel, Ext.button.Button, Ext.Toolbar, Ext.window.Window, and many more.</p> 
-       <p>Let’s open our tabpanel’s custom UI and take a look at what’s being done. You can find your tabpanel UI definitions here:</p> 
+       <h5 id="UI_Styling">UI 样式设计</h5> 
+       <p>Ext JS 框架中的每个组件都有一个 <code>ui</code> 配置，默认值是 <code>default</code>. 这个属性可以修改，这样组件就都有了自己的与众不同的样式.</p> 
+       <p>大部分 Ext JS 组件都有 SASS 混入函数(@mixin) , 你可以用它来快速生成新的 UI. 这些组件主要包括: Ext.panel.Panel, Ext.button.Button, Ext.Toolbar, Ext.window.Window, 等等.</p> 
+       <p>我们来打开我们这个 tabpanel 的自定义 UI，看看里面有什么. tabpanel 的自定义 UI 的文件在这里:</p> 
        <pre mode="javascript" theme="chrome"><code>`classic/sass/src/view/main/Main.scss`</code></pre> 
-       <p>As you can see, creating UIs is simple. Simply call the associated @mixin for the component for which you want to create a UI.</p> 
+       <p>正如你所看到的, 创建 UI 很简单. 只要调用组件相关的 混入函数(@mixin) 即可创建出 UI.</p> 
        <pre mode="javascript" theme="chrome"><code>@include extjs-tab-panel-ui(
     $ui: 'navigation'
 );</code></pre> 
-       <p>All of the variables within the @mixin can be modified in any way you like. </p> 
-       <p>You then attach the UI to your component like so:</p> 
+       <p>混入函数(@mixin) 里的所有参数，你都可以修改. </p> 
+       <p>然后你可以像这样在组件中使用 UI:</p> 
        <pre mode="javascript" theme="chrome"><code>ui: 'navigation',</code></pre> 
-       <p>We’ll discuss styling your application with SASS in greater detail below. </p> 
-       <h5 id="Responsive">Responsive</h5> 
-       <p>You may have also noticed that we added the <a href="../6.0.1-classic/#!/api/Ext.plugin.Responsive" data-full-load="true">Responsive</a> plugin to the tabPanel and the <code>tabConfig</code>. </p> 
+       <p>下面我们会详细讨论用 SASS 样式化你的应用程序. </p> 
+       <h5 id="Responsive">响应式(自适应网页设计)</h5> 
+       <p>你可能注意到了，我们给 tabPanel 和 <code>tabConfig</code> 增加了 <a href="../6.0.1-classic/#!/api/Ext.plugin.Responsive" data-full-load="true">Responsive</a> 插件. </p> 
        <pre mode="javascript" theme="chrome"><code>// TabPanel 
 responsiveConfig: {
     tall: {
@@ -241,19 +243,19 @@ tabConfig: {
         }
     }
 }</code></pre> 
-       <p>This plugin allows us to set rules that modify the tabpanel and tab text/glyph positions based on the width and height of the viewport. In this case, if you make the browser window less wide than tall, the tabpanel will move to the top of the screen and the tab text and glyphs will reposition.</p> 
-       <p>If the viewport is wider than tall, the tabs will appear on the left and adjust the tab text/glyph positions appropriately.</p> 
-       <p>You can read more about the responsive plugin and building your application for multiple environments <a href="../application_architecture/developing_for_multiple_screens_and_environments.html">here</a>.</p> 
-       <p>You may notice that there’s no hard-coded data in tabs 2, 3, and 4. That’s because we’re binding data from a ViewModel.</p> 
-       <h5 id="View_Models_and_Data_Binding">View Models and Data Binding</h5> 
-       <p>Together, <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">View Models</a> and <a href="../../application_architecture/view_models_data_binding.html">Data Binding</a><br />allow you to do more with less code and write in a much more declarative style.</p> 
-       <p>A <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">View Model</a> is a class that manages a data object. It then allows components interested in this data to bind to it and be notified when it changes. The ViewModel, like <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">ViewController</a>, is owned by the view that references it. </p> 
-       <p>For the most part, any config that may be “set” with a setter method, can be bound to the data in the ViewModel. For this example, we’ll utilize <code>setHtml()</code> and <code>setTitle()</code>.</p> 
-       <p>Let’s take a look at the following lines:</p> 
-       <pre mode="javascript" theme="chrome"><code>// View Model Declaration
+       <p>这个插件，可以允许我们根据 viewport 的宽高来设定一套规则，用来改变 tabpanel 和 tab 按钮的文字和图标. 此时, 如果你调整浏览器窗口大小使得宽度小于高度，那么 tabpanel 的按钮 会移动到界面顶部，tab 按钮的文字和图标也会改变位置.</p> 
+       <p>如果 viewport 宽度大于高度, tab 按钮就会出现在左边，并相应调整按钮的文字和图标.</p> 
+       <p>你可以<a href="../application_architecture/developing_for_multiple_screens_and_environments.html">点击这里</a>，阅读更多有关 responsive 插件类和为多屏幕多环境开发的内容.</p> 
+       <p>你可能注意到了，第2、3、4个标签页的内容并不是写死的. 这是因为我们是从一个 ViewModel 里绑定的数据.</p> 
+       <h5 id="View_Models_and_Data_Binding">视图模型(View Models)和数据绑定</h5> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">视图模型(View Models)</a> 和 <a href="../../application_architecture/view_models_data_binding.html">数据绑定</a><br />允许你用声明的风格，写很少的代码，却做更多的事情.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">视图模型(View Model)</a> 是一个管理数据对象的类. 需要这些数据的组件可以绑定到 View Model, 而且可以在数据发生变化的时候通知组件更新界面. 视图模型(View Model) 和 <a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">视图控制器(ViewController)</a>类似,  只被引用了它的 view 所拥有. </p> 
+       <p>在大多数情况下, 任何具有 setter 访问器的 配置项(config), 都可以绑定到 ViewModel 的数据上. 这个例子中, 我们用的是<code>setHtml()</code> 和 <code>setTitle()</code>.</p> 
+       <p>我们来看看下面的代码:</p> 
+       <pre mode="javascript" theme="chrome"><code>// View Model 声明
 viewModel: 'main',
 
-// Binding to header's title
+// 绑定到标题栏的 title
 header: {
     title: {
         bind: {
@@ -263,7 +265,7 @@ header: {
     }
 },
 
-// Binding to tab's HTML config
+// 绑定到标签页的 HTML 配置上
 {
     title: 'Users',
     iconCls: 'fa-user',
@@ -271,79 +273,79 @@ header: {
         html: '{loremIpsum}'
     }
 }</code></pre> 
-       <p>You can see that data is bound from the universal ViewModel (<code>app/view/main/MainModel.js</code>) to the tabs and app title. The data in the ViewModel is set statically, but in most cases, this would be generated via proxy.</p> 
-       <p>Check out our <a href="../application_architecture/view_models_data_binding.html">ViewModels and Data Binding Guide</a> for more information.</p> 
-       <h4 id="Grids">Grids</h4> 
-       <p>Next, let’s look at the <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> by opening <code>MyApp/classic/src/view/main/List.js</code>.<br />List.js contains the grid that loads within the first tab of your Main tabpanel. With this minimal amount of code, we’ve created a fully functional grid. By default, each <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">column</a> is sortable and will toggle between ASC and DESC sorting when you click on its header. Each column header is also re-orderable by default, and each gains a drop-down menu with options to hide and show columns. </p> 
-       <p>Not only that, but it’s incredibly easy to configure each column independently.</p> 
-       <p>Let’s dissect a couple of the grid configs a little further:</p> 
+       <p>可以看到数据从 ViewModel (<code>app/view/main/MainModel.js</code>) 绑定到了 标签页(tabs) 和 应用程序的标题(title). ViewModel 的数据是今天的, 不过大多数情况下数据是通过 代理(proxy) 生成的.</p> 
+       <p>可以查看<a href="../application_architecture/view_models_data_binding.html">视图模型(View Models) 和数据绑定指南</a>获得更多内容.</p> 
+       <h4 id="Grids">表格(Grids)</h4> 
+       <p>接下来, 我们打开<code>MyApp/classic/src/view/main/List.js</code>看看 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> .<br />List.js 内有一个表格(grid), 位于Main tabpanel 的第一个标签页(tab)内. 用了很少的代码，我们就创建出了一个功能很全的 grid. 默认地, 每一个 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">列(column)</a>都可以通过点击列头来在 升序(ASC) 和 降序(DESC) 之间切换排序. 每个列头默认也是可以重排序的, 并且每一个列都有一个下拉菜单，菜单里有选项可以隐藏或显示表格列. </p> 
+       <p>不仅如此, 独立配置每一列也很简单.</p> 
+       <p>我们稍后仔细分析一些 grid 的 配置:</p> 
        <h5 id="Store">Store</h5> 
-       <p>As you can see, we are setting <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">store</a> to a type of personnel. If you look carefully, you’ll probably notice that there isn’t a store definition anywhere in the classic area. That’s because this store lives in the universal area, <code>app/store/Personnel.js</code>. We have placed the store here so that the Classic grid AND the Modern grid can share the same store and data.</p> 
-       <p>In a real world situation, the above store would have a <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">proxy</a> with a url property allowing the proxy to pull information from a server. We are keeping the data in-line in this example for the sake of visualization. However, most situations would not call for having in-line data.</p> 
-       <h5 id="Listeners">Listeners</h5> 
-       <p>You’ll also notice that the Listeners object contains a <code>select</code> event that calls ‘onItemSelected’. Again, you won’t find a view controller with that logic in the Classic area. You will find <code>MainController.js</code> in the universal section because both Modern and Classic’s grid share the <code>select</code> event and react to it similarly.</p> 
-       <p>If you haven’t already, let’s open <code>app/view/main/MainController.js</code>.</p> 
-       <p>You’ll see some very basic logic:</p> 
+       <p>可以看到, 我们给<a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">store</a> 里添加了一些人的信息. 如果你仔细看, 你会发现在 classic 区域下并没有 store 类的定义. 这是因为这个 store 是定义在通用(universal)区域下的, <code>app/store/Personnel.js</code>. 我们放在这里是可以让 Classic grid 和 Modern grid 可以共享同一个 store 和数据.</p> 
+       <p>在实际开发中, 上面的 store 应该会有一个 <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">proxy</a>, proxy 设有一个 url 属性, 这样就可以从服务端拉取数据. 为了形象化描述, 在这个例子里，我们只在 store 里面写了些内置数据. 不过大多数情况是很少用内置静态数据的.</p> 
+       <h5 id="Listeners">事件监听(Listeners)</h5> 
+       <p>你会发现 Listeners 对象包含了一个调用‘onItemSelected’函数的<code>select</code> 事件. 同样的, 在 classic 区域下你也找不到带有此逻辑的 view controller. 你可以在通用(universal)区域下找到 <code>MainController.js</code>, 因为 Modern 和 Classic 的 grid 共享这个 <code>select</code> 事件的监听函数.</p> 
+       <p>如果你没发现, 那我们打开 <code>app/view/main/MainController.js</code>看看.</p> 
+       <p>你会看到一些很简单的逻辑:</p> 
        <pre mode="javascript" theme="chrome"><code>onItemSelected: function (sender, record) {
     Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
 },</code></pre> 
-       <p>In both our grid and the Modern toolkit’s grid (more in a minute), we are handling the <code>select</code> event. The controller logic handles both components’ <code>select</code> events identically.</p> 
-       <p>We’ll talk more about universal controllers further down the page.</p> 
-       <p>We’ve covered most of the meat and potatoes from the Classic toolkit. Let’s move on to the Modern toolkit.</p> 
+       <p>在 Classic 和 Modern 的 grid (待会介绍)中, 我们监听了 <code>select</code> 事件. 控制器的逻辑一致地处理了这2个组件的 <code>select</code> 事件.</p> 
+       <p>我们下面会讨论更多关于 通用(universal)控制器(controllers) 的内容.</p> 
+       <p>讲到这里, 我们已经涵盖了大部分 Classic 里面的东西. 然后我们来看看 Modern toolkit 里面的东西.</p> 
        <h3 id="Modern">Modern</h3> 
-       <p>As with Classic, let’s begin by reviewing <code>MyApp/modern/src/view/main/Main.js</code>.<br />This is the main entry point to our Modern application. In much the same fashion, you’ll notice Main is a container that houses our tabpanel, and its four tabs. Additionally, you’ll see the first tab includes our Modern Grid.</p> 
-       <h4 id="Tabs">Tabs</h4> 
-       <p>Modern toolkit’s tabpanels are a great way to allow the user to switch between several views that are all fullscreen. Each Component in the TabPanel gets its own Tab, which shows the Component when tapped. Tabs can be positioned at the top or the bottom of the TabPanel.</p> 
-       <p>You’ll see many similarities between this view and the Classic view. For instance:</p> 
+       <p>和 Classic 一样,  我们先看下 <code>MyApp/modern/src/view/main/Main.js</code>.<br />这是 Modern 应用程序的主要入口. 以同样的方式, 你可以发现 Main 是一个容器，容纳了一个 tabPanel 和它的4个标签页. 此外, 第一个标签页包含了一个 Modern 表格(Grid).</p> 
+       <h4 id="Tabs">标签页(Tabs)</h4> 
+       <p>Modern toolkit 的 tabpanel 是用来全屏切换显示多个 view 的一个很好方式. TabPanel 里的每一个子组件都对应一个 Tab 按钮, 点击它就显示相应子组件. Tabs 可以位于 TabPanel 的顶部也可以位于底部.</p> 
+       <p>你可以看到这个 Modern 视图(view) 和 Classic 的 view 有很多相似的地方. 例如:</p> 
        <ul> 
-        <li>Shared ViewController</li> 
-        <li>Shared ViewModel</li> 
-        <li>Bound Configs</li> 
+        <li>共享 ViewController</li> 
+        <li>共享 ViewModel</li> 
+        <li>与绑定有关的配置(Bound Configs)</li> 
        </ul> 
-       <h4 id="Modern_Grid">Modern Grid</h4> 
-       <p>The Modern Toolkit includes a lightweight grid that is optimized for touch devices. The Modern grid makes it easy to fetch, sort, filter, and edit large amounts of data on touch devices. It’s also simple to configure and customize any column using column renderers.</p> 
-       <p>As with the Classic Toolkit’s grid, you can see a shared universal store and a listeners object that is capturing the <code>select</code> event.</p> 
-       <h3 id="Universal">Universal</h3> 
-       <p>We’ve touched on all of the code sitting within the universal section of our application. That said, you’ll need to make sure you’re careful and consistent when utilizing this space. At this time, you should avoid placing application views themselves in the universal section. If you require or make reference to a class that does not exist in one toolkit or the other, you’ll encounter errors when building your application.</p> 
-       <p>This area should generally be reserved for things found in the core of both toolkits.</p> 
+       <h4 id="Modern_Grid">Modern 表格(Grid)</h4> 
+       <p>Modern Toolkit 内置一个轻量级的表格(grid), 它为触摸设备而优化, 可以很方便的在触摸设备上获取, 排序, 过滤, 和编辑大量数据. 它也很容易配置和自定义列的数据展示(渲染).</p> 
+       <p>和 Classic Toolkit 的 grid 类似, 可以看到一个共享的通用(universal) store ，还有一个监听了 <code>select</code> 事件的 listeners 对象.</p> 
+       <h3 id="Universal">通用(Universal)</h3> 
+       <p>我们已经接触了我们应用程序通用区域的所有代码. 也就是说, 你需要很仔细地利用这个区域. 此时, 你应该避免把应用程序视图(Views)放到这里面. 如果你 require 或引用了一个不存在于某个 toolkit 的类, build 应用程序时就会遇到错误.</p> 
+       <p>这个区域应该留给2种 toolkits公共的核心部分.</p> 
        <ul> 
         <li>ViewControllers</li> 
         <li>ViewModels</li> 
         <li>Models</li> 
         <li>Stores</li> 
        </ul> 
-       <p>Going forward, we are working towards component parity so that sharing view terminology will be less of a concern in the future.</p> 
-       <p>Lastly, you’ll want to be sure that any events you’re trying to utilize have the same parameters and are triggered with the same intent across both toolkits.</p> 
-       <h3 id="Change_Themes">Change Themes</h3> 
-       <p>Now let’s focus on the look and feel of the application. The default theme (Triton) is generated with every new application unless told otherwise. That said, it’s incredibly easy to swap themes once your application has been created.</p> 
-       <p>Let’s try out the Ext JS Crisp theme.</p> 
-       <p>All you need to do is open your app.json file in your application root and update the <code>theme</code> property from:</p> 
+       <p>未来, 我们会继续在组件通用方向上努力，以便可以减少对共享 view 的顾虑.</p> 
+       <p>最后, 在这2个 toolkit 中, 你要确保你要用的任何事件都具有相同的参数,  而且是被同样的意图触发的.</p> 
+       <h3 id="Change_Themes">改变主题</h3> 
+       <p>现在我们来关注一下应用程序的外观. 除非指定了主题, 每个新创建的应用程序都用的是默认主题 (Triton). 也就是说, 对于一个以创建的应用程序，更换主题是非常简单的.</p> 
+       <p>我们来试试 Ext JS Crisp 主题.</p> 
+       <p>你要做的就是打开应用程序里的 app.json 文件，修改 <code>theme</code>属性:</p> 
        <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;theme-neptune&quot;</code></pre> 
-       <p>to:</p> 
+       <p>为:</p> 
        <pre mode="javascript" theme="chrome"><code>&quot;theme&quot;: &quot;theme-crisp&quot;</code></pre> 
-       <p>Once watch has completed, refresh the page and you should see that your application has gotten a face-lift.</p> 
-       <h3 id="Styling_Your_Application">Styling Your Application</h3> 
-       <p>On most occasions, you’ll need to customize the look of your application beyond the capacity of a default theme. Your application looks pretty good, but blue just isn’t working. Let’s try and get those active tab colors to be more unique to our application.</p> 
-       <p><em><strong>注意:</strong> The following steps will style the classic views within your application. In the near future, Ext JS 6 will be improved to allow for theming the views of both toolkits within the same application.</em></p> 
-       <p>You can easily and efficiently style your application by creating and modifying SCSS files.</p> 
-       <p>SCSS (Sassy CSS) is a syntax of SASS, which allows you to add nested rules, variables and mixins to your design code. These new additions are then processed and converted to traditional CSS files for your application’s consumption.</p> 
-       <p>To see a list of global SCSS variables, check out this page from our API docs: <a href="../6.0.1-classic/#!/api/Global_CSS" data-full-load="true">Global_CSS</a></p> 
-       <p>Individual components also have specific SCSS variables for you to change. For instance, you can view specific Panel SCSS variables by visiting the Panel API page and scrolling to the “CSS Variables” section: <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a></p> 
-       <p>If you open up your <code>classic/sass/src/view/main/</code> folder, you’ll see a file called <code>Main.scss</code>. These folders and files will need to be added manually as needed. For each class in your application, Sencha Cmd checks for a corresponding SCSS file in <code>sass/var/</code> for variables, and <code>sass/src/</code> for rules.</p> 
-       <p>These files will be picked up by <code>sencha app watch</code> when you add them. </p> 
-       <p>Let’s go ahead and look at our <code>Main.scss</code> file. </p> 
-       <p>As you can see, we have some specific SCSS rules set up for the main view. The top panel is set by the following line:</p> 
+       <p>等 app watch 结束之后, 刷新页面，你应该可以看到你的应用程序样子已经改变了.</p> 
+       <h3 id="Styling_Your_Application">改变应用程序的样式</h3> 
+       <p>在大多数场合, 你需要自定义应用程序的外观. 看起来不错，就是蓝色不太合适. 我们来尝试把 tabpanel 标题栏的颜色修改成更有特点一些.</p> 
+       <p><em><strong>注意:</strong> 下面的操作会改变你应用程序中 classic 视图的样式. 未来, Ext JS 6 会改进以便支持可以改变2种 toolkit 的视图的样式.</em></p> 
+       <p>通过创建和修改 SCSS 文件，你可以很简单、高效的改变应用程序的样式.</p> 
+       <p>SCSS (Sassy CSS) 是 SASS 的语法, 支持嵌套样式规则、支持变量和混入函数(mixins). 然后再处理并转换为传统的 CSS 文件，以便在浏览器使用.</p> 
+       <p>所有全局 SCSS 变量的列表, 可以查看我们的API文档: <a href="../6.0.1-classic/#!/api/Global_CSS" data-full-load="true">Global_CSS</a></p> 
+       <p>各个组件也有一些特定的 SCSS 变量可供使用. 比如, 你可以在 Panel 的 API 文档页的“CSS Variables”部分找到关于 Panel 的 SCSS 变量: <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a></p> 
+       <p>如果你打开<code>classic/sass/src/view/main/</code> 文件夹, 你会看到一个名为<code>Main.scss</code>的文件. 这些文件夹和文件可以根据需要动态手动添加. 对于应用程序中的每一个类, Sencha Cmd 会自动查找对应的 SCSS 文件，从<code>sass/var/</code> 查找变量, 从 <code>sass/src/</code> 查找样式规则.</p> 
+       <p>添加这些文件后会自动被 <code>sencha app watch</code>检测到. </p> 
+       <p>再来看看 <code>Main.scss</code> 文件. </p> 
+       <p>正如你所看到的, 我们为 main 视图定义了一些 SCSS 规则. 顶部的 panel 的样式由下面的代码设置:</p> 
        <pre mode="javascript" theme="chrome"><code>$ui-header-background-color: $base-color,</code></pre> 
-       <p>You have a couple of options here in terms of the scope of your color change. If you<br />only want this one piece to not be blue, you can explicitly set it to a specific color like so:</p> 
+       <p>在你的颜色变化范围内，你有几个选择. 如果你只希望这一块不是蓝色，你可以明确地把它设置为一个特定的颜色，如:</p> 
        <pre mode="javascript" theme="chrome"><code>$ui-header-background-color: #87BD3E,</code></pre> 
-       <p>Once the change is picked up and processed by watch, you can refresh your page and see that your active tab color is now green (#87BD3E). </p> 
-       <p>However, if you want to replace blue for green across the entire application, you can change the value of <code>$base-color</code>. In order to do this, create an SCSS file for your global rules in the following location:</p> 
-       <pre mode="javascript" theme="chrome"><code>classic/sass/etc/all.scss // all.scss may contain any SASS / CSS rules</code></pre> 
-       <p>Once you’ve created your file, you can add a new <code>$base-color</code> declaration that will override the app theme’s <code>$base-color</code> value. In this case, let’s do the same green.</p> 
+       <p>当 <code>sencha app watch</code> 检测到变更并处理完之后, 刷新页面, 可以看到 tabpanel 标题栏的颜色现在是绿色了 (#87BD3E). </p> 
+       <p>不过, 如果你想全局替换整个应用程序的蓝色为绿色, 你可以修改 <code>$base-color</code> 的值. 你需要创建一个 SCSS 文件，用来存放全局规则:</p> 
+       <pre mode="javascript" theme="chrome"><code>classic/sass/etc/all.scss // all.scss 可能包含任意 SASS / CSS 规则</code></pre> 
+       <p>创建了文件之后, 你可以新增一个<code>$base-color</code> 声明，覆盖掉应用程序主题中的 <code>$base-color</code> 值. 此处, 我们用之前的绿色.</p> 
        <pre mode="javascript" theme="chrome"><code>$base-color: #87BD3E !dynamic;</code></pre> 
-       <p>After your application is refreshed, you should now see that many components are that color of green. </p> 
-       <h2 id="Wrap_Up">Wrap Up</h2> 
-       <p>Now you see how easy it is to get an application up and running using Ext JS and Sencha Cmd. Make sure to check out the API docs for all of the Components and classes that we explored throughout this walkthrough. </p> 
+       <p>应用程序刷新之后, 你应该看到很多组件现在都是绿色了. </p> 
+       <h2 id="Wrap_Up">总结</h2> 
+       <p>现在你知道使用  Ext JS 和 Sencha Cmd 来创建并运行一个应用程序是多么简单了吧. 记得一定要查看我们这个例子中用到的所有组件和类的 API 文档. </p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 
