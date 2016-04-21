@@ -168,23 +168,23 @@
        <h1>快速入门</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p>Ext JS 6和Sencha CMD 6的入门再简单不过了。一个命令，将生成一个功能完整的“通用”的用程序，您可以在本地服务器上运行。. </p> 
-       <p>这个&ldquo;通用&rdquo;的应用程序包含一组核心的stores，模型和控制器，过两个工具包：经典(Classic)和现代(Moden)，展示不同的视图</p> 
-       <p>经典工具包包含支持传统的浏览器，平板电脑和触摸屏笔记本电脑的Ext JS代码库。现代工具包包含一个对触摸支持比较好的代码库，支持现代浏览器，平板电脑和手机</p> 
+       <p>Ext JS 6和Sencha CMD 6的入门很简单。一个命令，即可生成一个功能完整的“通用”应用程序，可以运行在本地服务器上. </p> 
+       <p>这个&ldquo;通用&rdquo;的应用程序包含一组核心的stores，模型(models)和控制器(controllers)，过两个工具包：经典(Classic)和现代(Moden)，展示不同的视图</p> 
+       <p>经典(classic)工具包(toolkit)包含支持传统的浏览器，平板电脑和触摸屏笔记本电脑的 Ext JS 源码库。现代(modern)工具包(toolkit)包含一个对触摸支持比较好的源码库，支持现代浏览器，平板电脑和手机</p> 
        <p>让我们开始吧！</p> 
        <ol> 
         <li><p><a href="http://www.sencha.com/products/sencha-cmd/default.htm">下载并安装Sencha Cmd 6</a></p></li> 
         <li><p><a href="http://www.sencha.com/products/extjs/evaluate/default.htm">下载并解压缩Ext JS SDK</a></p></li> 
-        <li><p>打开你的终端或控制台窗口并发出这些命令：</p> 
+        <li><p>打开你的终端或控制台窗口并执行这些命令：</p> 
           <pre mode="javascript" theme="chrome"><code>sencha -sdk /path/to/extjs/framework generate app AppName path/to/app
 cd /path/to/app
 sencha app watch</code></pre></li> 
        </ol> 
-       <p><strong>注意：</strong>出于此演练的目的，App名称将定为MyApp，path/to/app则是./MyApp.
+       <p><strong>注意：</strong>在这个例子中，我们把App名称定为MyApp，path/to/app则是./MyApp.
 </p> 
-       <p>就是这样.您已经创建并部署了一个应用程序服务器，现在转到<a href="http://localhost:1841">http://localhost:1841</a>或者你的本地主机.你现在可以查看新生成的Ext JS 6应用程序. 它应该是这样的：</p> 
-       <p>Sencha Cmd现在正在监控你应用程序的改动。你会看到 <em>&ldquo;Waiting for changes…&rdquo;</em>，这表明，您的应用程序是最新的.当你修改并保存文件，您将看到打印了其他消息，但是这些很快就会出现另一个 <em>&ldquo;Waiting for changes…&rdquo;</em>.这个周期通常需要几秒钟的时间，所以一定要在保存文件之后预留足够的时间，然后再刷新浏览器.</p>
-       <p><strong>注意:</strong> <em>如果<code>sencha app watch</code> 因为某些原因导致没能监控到变更, 你只要简单地停止 (CTRL + c) 并重新启动 app watch.</em></p> 
+       <p>就是这样. 您已经创建并部署了一个应用程序服务器，现在访问<a href="http://localhost:1841">http://localhost:1841</a>.你现在可以查看这个新生成的 Ext JS 6 应用程序了. 它应该是这样的：</p> 
+       <p>Sencha Cmd 现在正在监控你应用程序的改动。你会看到 <em>&ldquo;Waiting for changes…&rdquo;</em>，这表明，你的应用程序是最新的. 当你修改并保存文件，你将看到打印了其他消息，但是这些很快就会出现另一个 <em>&ldquo;Waiting for changes…&rdquo;</em>. 这个周期通常需要几秒钟的时间，所以一定要在保存文件之后预留足够的时间，然后再刷新浏览器.</p>
+       <p><strong>注意:</strong> <em>如果<code>sencha app watch</code> 因为某些原因导致没能监控到变更, 你只要简单地按下 CTRL + c 停止, 并重新启动 app watch.</em></p> 
        <p><strong>注意:</strong> <em>如果你想了解上面的步骤具体包含什么内容, 请看<a href="../../../cmd/6.x/intro_to_cmd.html">Sencha Cmd 介绍</a>.</em></p> 
        <h2 id="Next_Steps">下一步</h2> 
        <p>像上面提到的, 通用(Universal)应用程序有三部分构成:</p> 
