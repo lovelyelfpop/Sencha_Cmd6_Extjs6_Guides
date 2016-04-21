@@ -171,7 +171,7 @@
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
        <p>图表包包含一个类的层次结构提供数据的可视化功能，包括系列、轴、相互作用和机制实现标记和说明。本教程提供一个这些类相互作用的概述和每个类的功能的概述。下面的章节涵盖了特定的轴,系列,和交互.</p> 
-       <h2 id="Installing_Sencha_Charts">安装 Sencha 图标</h2> 
+       <h2 id="Installing_Sencha_Charts">安装 Sencha 图表</h2> 
        <p>Ext JS类库默认没有包含图表. 为了使用图表，简单添加 <strong>“charts”</strong> (**“sencha-charts”** 如果工作在 Ext JS 5.x) 到requires模块在Sencha Cmd生成的程序的 <code>{appRoot}/app.json</code> 文件. 添加一个包名到requires数组运行Cmd使包在你的程序可用.</p> 
        <p>然后，确保程序已经重建，程序可以用下面的命令重建:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha app build</code></pre> 
@@ -199,35 +199,35 @@
         <li><strong>polar</strong> - 创建一个图表系列实现使用极坐标图值。这样的例子包括圆和径向图表.</li> 
         <li><strong>spacefilling</strong> - 创建一个表,填满整个区域的图表.</li> 
        </ul> 
-       <p>The <strong>“ext-charts”</strong> package (_the legacy charts package from 4.x - available in 5.x and retired with 6.x_) tried to automatically determine the Chart type by evaluating the series type. This allowed users to simply set the <a href="../6.0.1-classic/#!/api/Ext.Class-cfg-xtype" data-full-load="true">xtype</a> to <strong>‘chart’</strong>. However, <strong>“sencha-charts”</strong> (_**“charts”**_ being the package name in 6.x) needs a designated <code>xtype</code> in some circumstances. Cartesian Charts are the most commonly used and are mapped to the xtype of <strong>‘chart’</strong>. Setting an <code>xtype</code> of <strong>‘chart’</strong> makes the assumption that you want a <strong>Bar</strong>, <strong>Line</strong>, <strong>Scatter</strong>, or <strong>Area</strong> Chart. Other types of Charts will require an <code>xtype</code> designation of <strong>‘polar’</strong> or <strong>‘spacefilling’</strong>.</p> 
-       <h3 id="Chart_Component_Management">Chart Component Management</h3> 
-       <p>A Chart component manages the following items:</p> 
+       <p><strong>“ext-charts”</strong> 包 (从4.x传承下来的图表包 - 在 5.x里可用但在6.x里就淘汰掉了)试图通过评估系列类型自动判定图表类型. 这允许用户简单的设置<a href="../6.0.1-classic/#!/api/Ext.Class-cfg-xtype" data-full-load="true">xtype</a>为<strong>‘chart’</strong>. 虽然, <strong>“sencha-charts”</strong> (_**“charts”**_ 是6.x开始使用的包名) 在一些情形下需要指定的<code>xtype</code>. Cartesian Charts(笛卡尔图表)是比较通用的图表，并且xtype被映射到<strong>‘chart’</strong>的xtype. 设置一个<strong>‘chart’</strong>的 <code>xtype</code> 使得假设你想要的一个<strong>Bar</strong>, <strong>Line</strong>, <strong>Scatter</strong>, 或者 <strong>Area</strong> 图表. 其他图表的类型将需要指定一个<code>xtype</code> 为<strong>‘polar’</strong> 或者<strong>‘spacefilling’</strong>.</p> 
+       <h3 id="Chart_Component_Management">图表组件管理</h3> 
+       <p>一个图表组件管理如下项:</p> 
        <ul> 
-        <li><strong>Axes</strong> - These are accessed through <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis" data-full-load="true">Ext.chart.axis.Axis</a> and represent all the axes being defined and drawn for this visualization. This is a mixed collection.</li> 
-        <li><strong>Series</strong> - These are accessed through <a href="../6.0.1-classic/#!/api/Ext.chart.series.Series" data-full-load="true">Ext.chart.series.Series</a> and represent all the series being drawn for the chart. This could be line, bar, scatter, and so on. This is also a mixed collection.</li> 
-        <li><strong>Interactions</strong> - These are controllers that directly manipulate the series and axes when certain events are recognized.</li> 
-        <li><strong>Legend Store</strong> - This represents the legend information collected from the series. Normally you can attach a data list to this store and get automatically updated on the legend information changes.</li> 
+        <li><strong>Axes</strong> - 通过<a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis" data-full-load="true">Ext.chart.axis.Axis</a>访问并且展现所有被定义和可视化绘制的轴. 这是一个混合的集合.</li> 
+        <li><strong>Series</strong> - 通过 <a href="../6.0.1-classic/#!/api/Ext.chart.series.Series" data-full-load="true">Ext.chart.series.Series</a>访问并展现所有一系列正在绘制的图表. 可以是line, bar, scatter等等. 这同样是一个混合的集合.</li> 
+        <li><strong>Interactions</strong> - 它们是直接控制series 和 axes的控制器,当某些特定的事件被识出.</li> 
+        <li><strong>Legend Store</strong> - 展现从series收集到的图例信息. 通常你可以附件一个数据列表到这个store 并且自动更新图例信息的变化.</li> 
        </ul> 
-       <h3 id="Axes">Axes</h3> 
-       <p>We provide <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis" data-full-load="true">Ext.chart.axis.Axis</a> to represent all kinds of axes. The axis object works differently according to the its docking position. </p> 
+       <h3 id="Axes">Axes(坐标轴)</h3> 
+       <p>我们提供了 <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis" data-full-load="true">Ext.chart.axis.Axis</a> 去展现所有类型的坐标轴. 这些轴对象根据停靠的位置展现不同的效果. </p> 
        <ul> 
-        <li><strong>left/right</strong> - The axis is vertical.</li> 
-        <li><strong>top/bottom</strong> - The axis is horizontal.</li> 
+        <li><strong>left/right</strong> - 垂直轴.</li> 
+        <li><strong>top/bottom</strong> - 水平轴.</li> 
        </ul> 
-       <p>Axes help series to map data values into coordinates. They are bound to the type of data that needs to be represented. </p> 
+       <p>坐标轴帮助 series映射数据值到坐标系. 它们被绑定到需要展示的数据类型. </p> 
        <ul> 
-        <li><strong>numeric</strong> - the data attached to this axis is numeric and continuous.</li> 
-        <li><strong>time</strong> - the data attached to this axis is (or gets converted into) a date/time value; it is continuous.</li> 
-        <li><strong>category</strong> - the data attached to this axis belongs to a finite set. The data points are evenly placed along the axis.</li> 
+        <li><strong>numeric</strong> - 这类附加到坐标轴的数据是数值型的,并且连续的.</li> 
+        <li><strong>time</strong> - 这类附加到坐标轴的数据是(或者被转换为) 一个日期/时间值型的; 它是连续的.</li> 
+        <li><strong>category</strong> - 这类附加到轴的数据属于一个有限集. 这些数据沿轴均匀放置.</li> 
        </ul> 
-       <p>The behavior of an axis can be easily changed by setting different types of axis <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis-cfg-layout" data-full-load="true">layout</a> and axis <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis-cfg-segmenter" data-full-load="true">segmenter</a> to the axis.</p> 
+       <p>轴的行为很容易被改变通过设置不同类型的轴<a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis-cfg-layout" data-full-load="true">layout</a> 和轴 <a href="../6.0.1-classic/#!/api/Ext.chart.axis.Axis-cfg-segmenter" data-full-load="true">segmenter</a>.</p> 
        <h3 id="Series">Series</h3> 
-       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Series" data-full-load="true">Series</a> is an abstract class extended by concrete visualizations, such as Line Series, Bar Series, or Scatter Series.</p> 
-       <p>The Series class itself contains code that is common to all of these series, such as event handling, highlighting, markers, labels, and so on.</p> 
-       <p>The following sections describe available series types. It also shows a complete series configuration example, including the Chart, Axis, and Series options. For more specific information, see the Series documentation.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Series" data-full-load="true">Series</a>是具体的可视化扩展的一个抽象类, 例如Line Series, Bar Series, 或者Scatter Series.</p> 
+       <p>Series类本身包含的代码对于这些series是通用的, 例如event handling, highlighting, markers, labels, 等等.</p> 
+       <p>下面的部分描述了有效的series类型. 它同时也展示了一个完整的series配置示例, 包含Chart, Axis, 和 Series 选项. 更多的细节信息, 请看Series文档.</p> 
        <h4 id="Area">Area</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Area" data-full-load="true">Area</a> series creates a stacked area Chart, which is typically used to display multiple aggregated layers of information. Similar to other series, the Area series must be added into the <a href="../6.0.1-classic/#!/api/Ext.chart.AbstractChart-cfg-series" data-full-load="true">series</a> config of the Chart.</p> 
-       <p>You can specify multiple <strong>y</strong> fields on a stacked series such as Area series and Bar series. A typical configuration object for the Area series looks as in the following code sample:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Area" data-full-load="true">Area</a> series 创建一个堆叠式的图表, 通常显示多个聚合信息的图层.跟其它series类似, Area series 必须被添加到图表的 <a href="../6.0.1-classic/#!/api/Ext.chart.AbstractChart-cfg-series" data-full-load="true">series</a> 配置中去.</p> 
+       <p>你可以在stacked series上指定多个<strong>y</strong> 字段，例如Area series 和 Bar series.典型的Area series配置对象看起像下面的示例代码:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
     renderTo: document.body,
     width: 500,
@@ -283,9 +283,9 @@
     }]
 });</code></pre> 
        <h4 id="Bar">Bar</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Bar" data-full-load="true">Bar</a> series creates a stackable or group-able bar Chart, which is typically used to display categorized numeric data that shows progression or regression. Note that opposed to the old chart package, a Bar series refers to a vertical bar series, or a column series. You can obtain the horizontal configuration by setting <a href="../6.0.1-classic/#!/api/Ext.chart.CartesianChart-cfg-flipXY" data-full-load="true">flipXY</a> to <strong>true</strong> the Chart.</p> 
-       <p>A Bar series can either be stacked or grouped. You can set the <a href="../6.0.1-classic/#!/api/Ext.chart.series.Bar-cfg-stacked" data-full-load="true">stacked</a> config on the series to <strong>false</strong> in order to switch the series to the grouped mode.</p> 
-       <p>A sample Bar chart is shown in the following example:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Bar" data-full-load="true">Bar</a> series 创建一个堆叠或者可分组的条形图, 经常用来显示数值型分类数据表明进步或者后退. 注意与旧版的图表包截然不同, 一个Bar series指一个纵向的bar series, 或者一个column series. 您可以通过设置 <a href="../6.0.1-classic/#!/api/Ext.chart.CartesianChart-cfg-flipXY" data-full-load="true">flipXY</a> 为<strong>true</strong> 获得一个水平方向的图表.</p> 
+       <p>Bar series 可堆叠,可分组. 您可以设置<a href="../6.0.1-classic/#!/api/Ext.chart.series.Bar-cfg-stacked" data-full-load="true">stacked</a> 为 <strong>false</strong> 切换到分组模式.</p> 
+       <p>下面的例子演示一个简单的Bar chart:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
     renderTo: document.body,
     width: 500,
@@ -342,7 +342,7 @@
     }]
 });</code></pre> 
        <h4 id="Line">Line</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Line" data-full-load="true">Line</a> series creates a line Chart, an alternative to a bar Chart, for showing categorized numeric data that shows progression or regression. The following example shows a typical configuration object for the Line series:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Line" data-full-load="true">Line</a> series 创建线状图表, 相对于bar Chart, 它是另外一个选择用来展示数值型分类数据表明进步或者后退. 下面的例子演示一个典型的线状图的配置对象:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
     renderTo: document.body,
     width: 500,
@@ -413,8 +413,8 @@
     }]
 });</code></pre> 
        <h4 id="Pie">Pie</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Pie" data-full-load="true">Pie</a> series creates a pie Chart, a great way to display quantitative information for a number of categories that also have a meaning as a whole, for example, all 12 months of a given year.</p> 
-       <p>A Pie chart example is given in the following code sample:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Pie" data-full-load="true">Pie</a> series 创建一个饼图, 一个伟大的方式来显示定量信息为若干类, 例如, 一年中的12个月.</p> 
+       <p>下面的示例代码中,将给出一个饼图例子:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.PolarChart', {
     renderTo: document.body,
     width: 500,
@@ -455,7 +455,7 @@
     }]
 });</code></pre> 
        <h4 id="Radar">Radar</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Radar" data-full-load="true">Radar</a> series creates a radar Chart, a great way to display a comparison of different quantitative values for a constrained number of categories. A Radar series example is illustrated by the following code:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Radar" data-full-load="true">Radar</a> series创建一个雷达图, 个伟大的方式来显示不同的量化约束数值分类的比较. 一个雷达图如下面示例:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.PolarChart', {
     renderTo: document.body,
     width: 500,
@@ -511,7 +511,7 @@
     }]
 });</code></pre> 
        <h4 id="Scatter">Scatter</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Scatter" data-full-load="true">Scatter</a> series creates a scatter Chart, which enables an application to display more than two variables in the same visualization. These variables can be mapped onto <strong>x</strong>, <strong>y</strong> coordinates and also to an element’s properties, such as radius, size, color, and so on.</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Scatter" data-full-load="true">Scatter</a> series 创建散射图, 使得一个程序可以在同一个可视化界面显示超过两个变量. 这些变量可以被映射到 <strong>x</strong>, <strong>y</strong> 坐标轴和元素的属性, 例如半径, 大小, 颜色等等.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.CartesianChart', {
     renderTo: document.body,
     width: 500,
@@ -559,8 +559,8 @@
     }]
 });</code></pre> 
        <h4 id="Gauge">Gauge</h4> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.chart.series.Gauge" data-full-load="true">Gauge</a> series creates a gauge Chart, typically used to show progress in a certain variable. In addition to using <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">stores</a>, you can also set a <a href="../6.0.1-classic/#!/api/Ext.chart.series.Gauge-cfg-value" data-full-load="true">value</a> of the gauge series to show the value.</p> 
-       <p>An example is given in the following code sample:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.chart.series.Gauge" data-full-load="true">Gauge</a> series 创建衡量图表, 通常用于在某些变量中显示进度. 除了使用 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">stores</a>, 可还可以设置衡量图表的<a href="../6.0.1-classic/#!/api/Ext.chart.series.Gauge-cfg-value" data-full-load="true">value</a>.</p> 
+       <p>示例如下:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.chart.PolarChart', {
     renderTo: document.body,
     width: 500,
@@ -575,9 +575,9 @@
     }]
 });</code></pre> 
        <h3 id="Interactions">Interactions</h3> 
-       <p>This section introduces the interaction features in the Sencha Charts package. By taking advantage of these features, you can create highly interactive Charts that enable users to visualize and navigate complex data sets.</p> 
+       <p>这个章节介绍Sencha Charts包中的交互特性. 通过利用这些特性,您可以创建友好交互的图表 使得用户可以更好的查看和导航复杂的数据集.</p> 
        <h4 id="Adding_Interactions">Adding Interactions</h4> 
-       <p>To add interactions to a Chart, set the <a href="../6.0.1-classic/#!/api/Ext.chart.AbstractChart-cfg-interactions" data-full-load="true">interactions</a> config of the Chart to an array of interaction config objects. Each object must be a string or must contain a type property matching one of the interaction types described in the subsequent sections. Each object may also contain additional config options that are appropriate for a particular interaction.</p> 
+       <p>给图表添加交互, 给图表的<a href="../6.0.1-classic/#!/api/Ext.chart.AbstractChart-cfg-interactions" data-full-load="true">interactions</a> 配置项设置一个交互配置对象数组. 每个对象必须是一个字符串或者必须包含随后章节会描述到的交互类型. 每个对象还可以包含适用的特定交互配置选项.</p> 
        <p>You can define your own interaction by extending the <a href="../6.0.1-classic/#!/api/Ext.chart.interactions.Abstract" data-full-load="true">Ext.chart.interactions.Abstract</a> class and registering the name using an alias with the <strong>“interaction”</strong> prefix. For example, if you want to create an interaction called <strong>“remove”</strong>, create an alias of the class named <strong>“interaction.remove”</strong>, then set the <code>type: 'remove'</code> in the interaction config.</p> 
        <p>Here are a couple of examples of basic interactions.</p> 
        <h4 id="Item_Highlighting">Item Highlighting</h4> 
