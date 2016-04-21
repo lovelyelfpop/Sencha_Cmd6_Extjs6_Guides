@@ -146,38 +146,38 @@
     <div id="tpl-content"> 
      <div> 
       <div class="toc-page" style="display:block;">
-        Contents 
-       <a class="toc-page-h2" href="#Component_Binding" title="Component Binding">Component Binding</a> 
-       <a class="toc-page-h3" href="#Binding_and_Configs" title="Binding and Configs">Binding and Configs</a> 
-       <a class="toc-page-h3" href="#Binding_Boolean_Configs" title="Binding Boolean Configs">Binding Boolean Configs</a> 
-       <a class="toc-page-h3" href="#Binding_and_Priority" title="Binding and Priority">Binding and Priority</a> 
-       <a class="toc-page-h3" href="#Binding_and_Child_Components" title="Binding and Child Components">Binding and Child Components</a> 
-       <a class="toc-page-h3" href="#Two_Way_Binding" title="Two Way Binding">Two Way Binding</a> 
-       <a class="toc-page-h3" href="#Binding_and_Component_State" title="Binding and Component State">Binding and Component State</a> 
-       <a class="toc-page-h3" href="#Bind_Descriptors" title="Bind Descriptors">Bind Descriptors</a> 
-       <a class="toc-page-h4" href="#Multi_Bind" title="Multi-Bind">Multi-Bind</a> 
-       <a class="toc-page-h4" href="#Record_Bind" title="Record Bind">Record Bind</a> 
-       <a class="toc-page-h4" href="#Association_Bind" title="Association Bind">Association Bind</a> 
-       <a class="toc-page-h4" href="#Bind_Options" title="Bind Options">Bind Options</a> 
-       <a class="toc-page-h2" href="#Creating_ViewModels" title="Creating ViewModels">Creating ViewModels</a> 
-       <a class="toc-page-h3" href="#Formulas" title="Formulas">Formulas</a> 
-       <a class="toc-page-h4" href="#Formulas_With_Explicit_Binding" title="Formulas With Explicit Binding">Formulas With Explicit Binding</a> 
-       <a class="toc-page-h4" href="#Two_Way_Formulas" title="Two-Way Formulas">Two-Way Formulas</a> 
-       <a class="toc-page-h3" href="#Recommendations" title="Recommendations">Recommendations</a> 
+        内容导航 
+       <a class="toc-page-h2" href="#Component_Binding" title="Component Binding">组件绑定</a> 
+       <a class="toc-page-h3" href="#Binding_and_Configs" title="Binding and Configs">绑定 和 配置项(configs)</a> 
+       <a class="toc-page-h3" href="#Binding_Boolean_Configs" title="Binding Boolean Configs">绑定 布尔类型(Boolean) 配置项</a> 
+       <a class="toc-page-h3" href="#Binding_and_Priority" title="Binding and Priority">绑定和优先级</a> 
+       <a class="toc-page-h3" href="#Binding_and_Child_Components" title="Binding and Child Components">绑定和子组件</a> 
+       <a class="toc-page-h3" href="#Two_Way_Binding" title="Two Way Binding">双向绑定</a> 
+       <a class="toc-page-h3" href="#Binding_and_Component_State" title="Binding and Component State">绑定和控件状态</a> 
+       <a class="toc-page-h3" href="#Bind_Descriptors" title="Bind Descriptors">绑定描述符(Bind Descriptors)</a> 
+       <a class="toc-page-h4" href="#Multi_Bind" title="Multi-Bind">多值绑定(Multi-Bind)</a> 
+       <a class="toc-page-h4" href="#Record_Bind" title="Record Bind">Record 绑定</a> 
+       <a class="toc-page-h4" href="#Association_Bind" title="Association Bind">关联(Association) 绑定</a> 
+       <a class="toc-page-h4" href="#Bind_Options" title="Bind Options">与绑定相关的选项(Bind Options)</a> 
+       <a class="toc-page-h2" href="#Creating_ViewModels" title="Creating ViewModels">创建视图模型(ViewModels)</a> 
+       <a class="toc-page-h3" href="#Formulas" title="Formulas">方程式(Formulas)</a> 
+       <a class="toc-page-h4" href="#Formulas_With_Explicit_Binding" title="Formulas With Explicit Binding">显式绑定 Formulas</a> 
+       <a class="toc-page-h4" href="#Two_Way_Formulas" title="Two-Way Formulas">双向 Formulas</a> 
+       <a class="toc-page-h3" href="#Recommendations" title="Recommendations">建议</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
-       <h1>View Models and Data Binding</h1> 
+       <h1>视图模型(View Models)和数据绑定</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p>Data binding and the ViewModel that powers it are powerful additions to Ext JS.<br />Together they enable you to do more with less code and write in a much more declarative style while helping you maintain a clean separation of concerns.</p> 
-       <p>A ViewModel is a class that manages a data object. It then allows those interested in this data to bind to it and be notified when it changes. The ViewModel, like ViewController, is owned by the view that references it. Because ViewModels are associated with a view, they are also able to link to a parent ViewModel owned by ancestor components in the component hierarchy. This allows child views to simply “inherit” the data of their parent ViewModel.</p> 
-       <p>Components have a <code>bind</code> config that allows them to associate many of their configs to data from the ViewModel. Using bind, you can be sure that the appropriate component config will have its setter method called whenever the bound value changes - no custom event handlers needed.</p> 
-       <p>In this guide, we will walk through some examples that show the power of ViewModels and Data Binding.</p> 
-       <h2 id="Component_Binding">Component Binding</h2> 
-       <p>Probably the best way to understand binding and ViewModels is to look at the various ways you can use bindings on components. This is because components are the primary consumers of data binding and components are something familiar to Ext JS developers. In order for binding to work, however, we do need a ViewModel so we will reference one for now and define it later.</p> 
-       <h3 id="Binding_and_Configs">Binding and Configs</h3> 
-       <p>Binding for components is the process of connecting data from a <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">Ext.app.ViewModel</a> to a component’s config properties. Any configuration a component possesses may be bound to, so long as it has a setter method. For instance, since there’s a <code>setTitle()</code> method on <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a>, you can bind to the <code>title</code> configuration.</p> 
-       <p>In this example, we will set the <code>width</code> of a panel based on the results of our ViewModel’s <code>data</code>. We can bind our data to <code>width</code> since <code>setWidth()</code> is a method that <code>Ext.panel.Panel</code> may use.</p> 
+       <p>数据绑定和 视图模型(ViewModel) 是对 Ext JS 的强有力的补充.<br />以声明式的书写方式, 它们使您能够用很少的代码做更多的事情, 以便让你集中精力关注其它更重要的逻辑.</p> 
+       <p>视图模型(View Model) 是一个管理数据对象的类. 需要这些数据的组件可以绑定到 View Model, 而且可以在数据发生变化的时候通知组件更新界面. 视图模型(View Model) 和 视图控制器(ViewController)类似, 只被引用了它的 view 所拥有. 因为 ViewModels 和 view 关联, 视图模型可以链接到父视图模型(view的父容器的视图模型). 这样，子视图就可以用从父视图模型“继承”过来的数据.</p> 
+       <p>组件有一个 <code>bind</code> 配置, 此配置允许它们把自身的一些配置项与 ViewModel 的数据关联起来. 使用 bind, 如果数据发生变化, 组件相应的配置项会触发调用 setter 方法 - 而不需要用自定义事件监听函数来处理.</p> 
+       <p>在这篇指南中, 我们会通过一些例子来展示视图模型(View Models)和数据绑定的强大之处.</p> 
+       <h2 id="Component_Binding">组件绑定</h2> 
+       <p>理解绑定和 ViewModels 的最好的途径应该是看看各种绑定组件的方式. 因为组件是数据绑定的主要"消费者", 在这一点上组件和 Ext JS 开发者有相似之处. 为了实现绑定，我们需要一个 ViewModel, 我们现在先引用它, 待会再定义 ViewModel 类.</p> 
+       <h3 id="Binding_and_Configs">绑定 和 配置项(configs)</h3> 
+       <p>绑定组件, 其实是把 <a href="../6.0.1-classic/#!/api/Ext.app.ViewModel" data-full-load="true">Ext.app.ViewModel</a> 的数据 和组件的配置项(config) 联系起来的过程. 一个组件的任何配置都可以绑定，只要它有一个 setter 方法. 比如, 因为 <a href="../6.0.1-classic/#!/api/Ext.panel.Panel" data-full-load="true">Ext.panel.Panel</a> 有个 <code>setTitle()</code> 方法 , 所以你可以绑定<code>title</code> 配置项.</p> 
+       <p>在这个例子中, 我们会根据 ViewModel 的<code>data</code>来设置 panel 的<code>width</code>. 我们把数据绑定到 <code>width</code> 上，因为 <code>Ext.panel.Panel</code> 有 <code>setWidth()</code> 方法.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.panel.Panel', {
     title: 'Simple Form',
 
@@ -190,10 +190,10 @@
         width: '{someWidth}'
     }
 });</code></pre> 
-       <p>The syntax used for bind values is very similar to <a href="../6.0.1-classic/#!/api/Ext.Template" data-full-load="true">Ext.Template</a>. You can put text around tokens inside braces. You can use formatters as well, as with <code>Ext.Template</code>. Unlike <code>Ext.Template</code>, however, when a template is a single token (like ‘{someWidth}’) then its value is passed unmodified. That is, it is not converted to a string.</p> 
-       <p>We will see later how the data for <code>name</code> and <code>someWidth</code> are defined. The above example simply shows how the data is consumed by a component.</p> 
-       <h3 id="Binding_Boolean_Configs">Binding Boolean Configs</h3> 
-       <p>Many configs you will want to bind are boolean values, such as visible (or <code>hidden</code>), <code>disabled</code>, <code>checked</code>, and <code>pressed</code>. Bind templates support boolean negation “inline” in the template. Other forms of algebra are relegated to formulas (see below), but boolean inversion is common enough there is special provision for it. For example:</p> 
+       <p>绑定值的语法和 <a href="../6.0.1-classic/#!/api/Ext.Template" data-full-load="true">Ext.Template</a>非常像. 绑定的字段放在大括号内. 你也可以用 formatters 格式化值, 类似<code>Ext.Template</code>. 不过，和 <code>Ext.Template</code>不同的是, 如果绑定模板是单个的标记(比如‘{someWidth}’), 那么绑定的值是原样传递的, 不会转换为字符串</p> 
+       <p>稍后我们会看到 <code>name</code> 和 <code>someWidth</code>的数据是如何定义的. 上面的例子只是简单演示组件如果使用数据.</p> 
+       <h3 id="Binding_Boolean_Configs">绑定 布尔类型(Boolean) 配置项</h3> 
+       <p>有很多配置项的值是布尔类型(Boolean), 比如 visible (或 <code>hidden</code>), <code>disabled</code>, <code>checked</code>, 和 <code>pressed</code>. 只有绑定模板支持布尔否定形式的“内联”表达式. 其它的形式则应该归为 方程(formulas) (见下文), 只不过布尔反转很常见, 所以对它有特殊的规定. 例如:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.panel.Panel', {
     title: 'Simple Form',
 
@@ -204,13 +204,13 @@
     items: [{
         xtype: 'button',
         bind: {
-            hidden: '{!name}'  // negated
+            hidden: '{!name}'  // 否定
         }
     }]
 });</code></pre> 
-       <p>This also highlights how values in single token templates are not converted to strings. In the above, while “name” is a string value, it is negated using “!” and becomes a boolean value and that is passed to the <code>setHidden</code> method on the button.</p> 
-       <h3 id="Binding_and_Priority">Binding and Priority</h3> 
-       <p>Bound config properties will always overwrite configurations set statically on the component as soon as the bound result is available. In other words, bound data will always take priority over static configuration values but may be delayed in order to fetch that data.</p> 
+       <p>此处再次强调了单个标记模板中的值, 是不会转换为字符串的. 上面的例子中, 因为 “name”是个字符串值, 使用 “!”否定反转，变成了 boolean 值，然后传递给了 button 的 <code>setHidden</code> 方法.</p> 
+       <h3 id="Binding_and_Priority">绑定和优先级</h3> 
+       <p>绑定配置项总是会覆盖掉静态写的配置项值. 也就是说, 绑定数据的优先级比静态配置值要高, 但是为了获取数据可能会延迟绑定。</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.panel.Panel', {
     title: 'Simple Form',
 
@@ -222,10 +222,10 @@
         title: 'Hello {name}'
     }
 });</code></pre> 
-       <p>Once the binding for “name” is delivered, the “Simple Form” title will be replaced.</p> 
-       <h3 id="Binding_and_Child_Components">Binding and Child Components</h3> 
-       <p>One of the most helpful parts of binding is that all of the children of the component with a viewModel also have access to their container’s data.</p> 
-       <p>In this example, you can see the children items of a form may be bound to their container’s viewModel.</p> 
+       <p>只要传递了值给绑定的“name”, “Simple Form” 的 title 就会被替换.</p> 
+       <h3 id="Binding_and_Child_Components">绑定和子组件</h3> 
+       <p>绑定的一个很有用的部分就是, 拥有 viewModel 的容器中, 它的所有子组件也可以访问该容器的数据.</p> 
+       <p>这个例子中, 你可以看到 form 的子 items 绑定到了父容器的 viewModel.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.panel.Panel', {
     title: 'Simple Form',
 
@@ -238,19 +238,19 @@
 
     items: [{
         fieldLabel: 'First Name',
-        bind: '{firstName}' // uses &quot;test&quot; ViewModel from parent
+        bind: '{firstName}' // 使用父容器的 &quot;test&quot; ViewModel
     },{
         fieldLabel: 'Last Name',
         bind: '{lastName}'
     }]
 });</code></pre> 
-       <h3 id="Two_Way_Binding">Two Way Binding</h3> 
-       <p>The bind config also allows for two-way data binding, which translates to live synchronization of data between the view and the model. Any data change made in the view is automatically written back to the model. This automatically updates any other components that may be bound to that same data. <strong>Note:</strong> Not all configs will publish their value to the ViewModel when changed.<br />Configs defined within the <code>publish</code> and <code>twoWayBindable</code> array will publish changes back up to the ViewModel. Values may also be published in Component / application logic using the <code>publishState</code> method.</p> 
-       <p>In the above example, because the “firstName” and “lastName” properties were bound to text fields, changes in the input would be written back to the ViewModel. To see how all this connects, it is time to complete the example and define the ViewModel.</p> 
+       <h3 id="Two_Way_Binding">双向绑定</h3> 
+       <p>bind 配置项支持双向绑定, 也就是 view 和 viewModel 之间数据是实时同步的. View 里面的数据变更都会自动写回 viewModel. 而且也会自动更新绑定了此数据的其它组件. <strong>注意:</strong> 并不是所有的配置项都会在发生变更时把它们的值 反映(publish) 给 ViewModel.<br />只有定义在 <code>publish</code> 和 <code>twoWayBindable</code> 数组中的 配置项才会把变更 反映(publish) 给 ViewModel. 也可以用 <code>publishState</code> 函数把值的变更反映给 ViewModel.</p> 
+       <p>上面的例子中, 因为“firstName”和 “lastName” 属性绑定到了 文本框(text fields), 文本框中内容的改变会写回 ViewModel. 为了了解它们是如果工作的, 我们来完善这个例子并定义这个 ViewModel.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.TestViewModel', {
     extend: 'Ext.app.ViewModel',
 
-    alias: 'viewmodel.test', // connects to viewModel/type below
+    alias: 'viewmodel.test', // 下面会关联到这个 viewModel/type
 
     data: {
         firstName: 'John',
@@ -258,7 +258,7 @@
     },
 
     formulas: {
-        // We'll explain formulas in more detail soon.
+        // 我们很快会解释关于 formulas 的详细内容
         name: function (get) {
             var fn = get('firstName'), ln = get('lastName');
             return (fn &amp;&amp; ln) ? (fn + ' ' + ln) : (fn || ln || '');
@@ -274,7 +274,7 @@ Ext.define('MyApp.view.TestView', {
     // allows the creator of the component to pass data without
     // erasing the ViewModel type that we want.
     viewModel: {
-        type: 'test'  // references alias &quot;viewmodel.test&quot;
+        type: 'test'  // 引用别名 &quot;viewmodel.test&quot;
     },
 
     bind: {
@@ -303,10 +303,10 @@ Ext.onReady(function () {
         width: 400
     });
 });</code></pre> 
-       <p>When the above panel is displayed we can see that changes in the text fields are reflected in the panel <code>title</code> as well as the <code>hidden</code> state of the “Submit” button.</p> 
-       <h3 id="Binding_and_Component_State">Binding and Component State</h3> 
-       <p>Sometimes a component’s state, e.g. the <code>checked</code> state of a checkbox or the selected record of a grid, is interesting to other components. When a component is assigned a <code>reference</code> to identify it, that component will publish some of its key properties in the ViewModel.</p> 
-       <p>In this example, we have the “Admin Key” textfield’s disabled config bound to the the checked state of the checkbox. This results in the textfield being disabled until the checkbox is checked. This sort of behavior is well suited for dynamic forms like this:</p> 
+       <p>当上面的 panel 显示出来之后, 我们可以看到 输入框 改变内容会反映到 panel 的 <code>标题(title)</code>上, 也会影响“Submit” 按钮的<code>隐藏/显示(hidden)</code> 状态.</p> 
+       <h3 id="Binding_and_Component_State">绑定和控件状态</h3> 
+       <p>有时候组件的状态, 比如, checkbox 的<code>勾选(checked)</code> 状态, 或者 表格(grid) 选择行, 需要关联到其它的组件. 如果给一个组件赋予了一个 <code>reference</code> 来标识它, 这个组件就会把它自身的某些属性 反映(publish) 给 ViewModel.</p> 
+       <p>下面的例子里, 有一个 label 是“Admin Key”的 文本框(textfield), 它的 disabled 配置项绑定到了 checkbox 的 勾选(checked) 状态上. 结果就是 checkbox 勾选之后, 文本框才变成可输入. 这种行为是非常适合动态表单:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.panel.Panel', {
     title: 'Sign Up Form',
 
@@ -326,16 +326,16 @@ Ext.onReady(function () {
         }
     }]
 });</code></pre> 
-       <h3 id="Bind_Descriptors">Bind Descriptors</h3> 
-       <p>So far we’ve seen three basic forms of bind descriptors:</p> 
+       <h3 id="Bind_Descriptors">绑定描述符(Bind Descriptors)</h3> 
+       <p>目前为止我们见过绑定描述符的3种基本形式:</p> 
        <ul> 
-        <li><p><code>{firstName}</code> - A “direct bind” to some value in the ViewModel. This value is passed through unmodified and so may arrive as any type of data.</p></li> 
-        <li><p><code>Hello {name}</code> - A “bind template” always produces a string by inserting the textual value of the various bind expressions. Bind templates can also use formatters as with a normal <code>Ext.Template</code>, for example: ‘Hello {name:capitalize}’.</p></li> 
-        <li><p><code>{!isAdmin.checked}</code> - The negated form of a direct bind, useful for binding to boolean config properties.</p></li> 
+        <li><p><code>{firstName}</code> - “直接绑定”到 ViewModel 的某个值. 值原样传递, 类型不变.</p></li> 
+        <li><p><code>Hello {name}</code> - “绑定模板” 总是通过插入各种绑定表达式的文本值来产生一个字符串. 绑定模板也可以用 formatters, 类似<code>Ext.Template</code>, 比如: ‘Hello {name:capitalize}’(作用是首字母大写).</p></li> 
+        <li><p><code>{!isAdmin.checked}</code> - 直接绑定的否定形式, 用于绑定布尔(boolean)值.</p></li> 
        </ul> 
-       <p>Beyond these basic forms, there are a few specialized forms of bind descriptors that you can use.</p> 
-       <h4 id="Multi_Bind">Multi-Bind</h4> 
-       <p>If an object or array is given as a bind descriptor, the ViewModel will produce an object or array of the same shape but with the various properties replaced by their bind result. For example:</p> 
+       <p>除了这些基本的形式之外，还有一些专门的绑定描述符的形式，可供使用.</p> 
+       <h4 id="Multi_Bind">多值绑定(Multi-Bind)</h4> 
+       <p>如果给绑定描述符的是一个对象或者数组,  ViewModel 会生成一个同样结构的对象或数组, 里面的属性值都替换成了绑定结果. 比如:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.Component', {
     bind: {
         data: {
@@ -344,9 +344,9 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <p>This sets the “data” config for the component to be an object with two properties whose values are set from the ViewModel.</p> 
-       <h4 id="Record_Bind">Record Bind</h4> 
-       <p>When a particular record is desired, say “User” with <code>id</code> of 42, the bind descriptor is an object but with a “reference” property. For example:</p> 
+       <p>这段代码, 给组件的 “data” 配置绑定了一个对象, 对象中两个属性值来自 ViewModel.</p> 
+       <h4 id="Record_Bind">Record 绑定</h4> 
+       <p>但需要绑定一个特定的 record, 比如 <code>id</code>是42的 “User”记录, 绑定描述符需要是一个对象, 对象中有一个“reference” 属性. 例如:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.Component', {
     bind: {
         data: {
@@ -355,9 +355,9 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <p>In this case, the component’s <code>tpl</code> will receive the User record once it is loaded. This currently requires the use of an <code>Ext.data.Session</code>.</p> 
-       <h4 id="Association_Bind">Association Bind</h4> 
-       <p>Similar to a record bind, one can also bind to an association, say the User’s Address record:</p> 
+       <p>在这种情况下, 组件的 <code>tpl</code> 会接收到 User 这条记录(record). 需要 requires <code>Ext.data.Session</code>.</p> 
+       <h4 id="Association_Bind">关联(Association) 绑定</h4> 
+       <p>和 Record 绑定 类似, 也可以绑定到 record 的 关联(关系/外键)(association) 上, 比如和 User 关联的 Address 记录:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.Component', {
     bind: {
         data: {
@@ -367,9 +367,9 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <p>In this case, the component’s <code>tpl</code> will receive the User’s “address” record once it is loaded. This also currently requires the use of an <code>Ext.data.Session</code>.</p> 
-       <h4 id="Bind_Options">Bind Options</h4> 
-       <p>The final form of bind descriptor is used when you need to describe binding options. The following example shows how to receive only one value for a binding and then disconnect automatically.</p> 
+       <p>在这种情况下, 组件的 <code>tpl</code> 会接收到 User 这条 record 关联的“address”record. 同样需要 requires <code>Ext.data.Session</code>.</p> 
+       <h4 id="Bind_Options">与绑定相关的选项(Bind Options)</h4> 
+       <p>当你需要描述绑定设置的时候, 需要用到绑定描述符的最后一种形式. 下面的例子演示了 如何对一个值只绑定一次，之后就自动断开绑定关系.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.Component', {
     bind: {
         data: {
@@ -378,8 +378,8 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <p>The <code>bindTo</code> property is the second reserved name in a bind descriptor object (the first being <code>reference</code>). When present, it signifies that the value of <code>bindTo</code> is the actual bind descriptor and the other properties are configuration options for the binding.</p> 
-       <p>The other bind option currently supported is <code>deep</code>. This option is used when binding to an object so that the binding will be notified when any property of that object changes, not just the reference itself. This would be most useful when binding to the <code>data</code> config of a component since these often receive objects.</p> 
+       <p><code>bindTo</code> 属性是绑定描述符对象中的第二个保留关键字(第一个保留关键字是 <code>reference</code>). 如果对象中有 <code>bindTo</code> 属性,  意味着 <code>bindTo</code>的值是真正的描述符, 而其它属性是用来配置绑定设置的.</p> 
+       <p>另一个可用的绑定选项是 <code>deep</code>. 这个选项表示, 当绑定到一个对象的时候, 对象中任意属性发生变化都会通知绑定, 而并不只是在对象的引用发生变化的时候. 这个通常对绑定 <code>data</code> 配置项比较有用, 因为这个配置项经常接收对象.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.Component', {
     bind: {
         data: {
@@ -388,14 +388,14 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <h2 id="Creating_ViewModels">Creating ViewModels</h2> 
-       <p>Now that we’ve gotten a taste for how components use ViewModels and gotten a glimpse of what ViewModels look like, it is time to learn more about ViewModels and what they offer.</p> 
-       <p>As stated previously, a ViewModel is a manager for an underlying <code>data</code> object. It is the content of that object that is being consumed by bind statements. The inheritance of data from a parent ViewModel to its child ViewModels leverages the JavaScript prototype chain. This is covered in more detail in the <a href="view_model_internals.html">View Model 内部机制</a> guide, but in a nutshell a child ViewModel’s <code>data</code> object has the <code>data</code> object of its parent ViewModel as its prototype.</p> 
-       <h3 id="Formulas">Formulas</h3> 
-       <p>In addition to holding data and providing binding, ViewModels also offer a convenient way to calculate data from other data called <code>formulas</code>. Formulas allow you to encapsulate data dependencies in the ViewModel and keep your views free to focus on declaring their structure. </p> 
-       <p>In other words, the data is not changed in the ViewModel’s data, but can be displayed differently by transforming it using formulas. This is similar to how the <code>convert</code> configuration works for fields of a traditional data model.</p> 
-       <p>We saw a simple “name” formula in the previous example. In that case, the “name” formula was simply a function that combined two other values from the ViewModel: “firstName” and “lastName”.</p> 
-       <p>Formulas can also use the results of other formulas as if the result were just another data property. For example:</p> 
+       <h2 id="Creating_ViewModels">创建视图模型(ViewModels)</h2> 
+       <p>现在我们已经尝试过了组件如何使用 ViewModels, 也看到过了 ViewModels 的样子, 是时候学习更多关于 ViewModels 的内容了.</p> 
+       <p>如前所述, ViewModel 用来管理底层 <code>data</code> 对象. 它是被绑定语句所使用的对象的内容. 利用 JavaScript 原型链继承, 子 ViewModels 会从父 ViewModels那里继承数据. <a href="view_model_internals.html">View Model 内部机制</a> 里面有详细介绍, 但总而言之, 子ViewModel 的 <code>data</code> 对象把父 ViewModel 的 <code>data</code> 对象作为它自身的 原型(prototype).</p> 
+       <h3 id="Formulas">方程式(Formulas)</h3> 
+       <p>除了保持(hold)数据和提供绑定, ViewModels 还提供了一种方便的方法, 叫做 <code>formulas</code>, 来从其他数据计算得到某些数据. Formulas 让你可以在 ViewModel 中封装数据依赖, 让你的焦点关注在 view 的类结构上. </p> 
+       <p>换句话说,  ViewModel 里的 data 并没有变化, 但是可以使用 formulas 进行转换，从而显示成不同的结果. 这个和 model 中 field 的 <code>convert</code> 配置很像.</p> 
+       <p>在之前的例子中我们看到了一个简单的“name”这个 formula. 这里的“name” formula 只是一个简单的函数，用于拼接 ViewModel 里“firstName” 和 “lastName”的值.</p> 
+       <p>Formulas 也可以使用其它 formulas 的结果，就像 formulas 的结果就是 data 的一个属性一样. 例如:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.TestViewModel2', {
     extend: 'Ext.app.ViewModel',
 
@@ -411,9 +411,9 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <p>The “x2” formulas uses an “x” property to define “x2” as “x * 2”. The “x2y” formulas uses both “x2” and “y”. This definition means that if “x” changes, “x2” is recalculated and then “x2y”. But if “y” changes, only “x2y” needs to be recalculated.</p> 
-       <h4 id="Formulas_With_Explicit_Binding">Formulas With Explicit Binding</h4> 
-       <p>In the above examples, the dependencies for the formula were found via inspecting the function, however this isn’t always the best solution. An explicit bind statement can be used, which will return a simple object when all the values in the bind have presented.</p> 
+       <p>“x2” 这个 formulas 使用了 “x” 属性乘以2得到 “x2”. “x2y”这个 formulas 使用“x2” 和“y”. 这个定义意味着, 如果“x” 发生改变, “x2”会重新计算, 然后“x2y”也会重新计算. 但是如果“y” 变了, 只有 “x2y”会被重新计算.</p> 
+       <h4 id="Formulas_With_Explicit_Binding">显式绑定 Formulas</h4> 
+       <p>在上面的例子中, formula 所依赖的东西是由函数来检查的, 但这并不总是最好的解决方案. 可以用显式的绑定声明, 将所有的值用一个简单对象返回.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.TestViewModel2', {
     extend: 'Ext.app.ViewModel',
 
@@ -432,9 +432,9 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <h4 id="Two_Way_Formulas">Two-Way Formulas</h4> 
-       <p>When a formula is invertible we can also define a <code>set</code> method to be called when the value is set (say via two-way binding). Since the “this” pointer is the ViewModel, the <code>set</code> method can call <code>this.set()</code> to set the appropriate properties in the ViewModel.</p> 
-       <p>A revised version of the TestViewModel below shows how “name” can be defined as a two-way formula.</p> 
+       <h4 id="Two_Way_Formulas">双向 Formulas</h4> 
+       <p>如果一个 formula 是可逆的, 当我们可以定义一个 <code>set</code> 函数，当值发生改变的时候, 调用<code>set</code> 函数(即双向绑定). 因为“this” 指向的是 ViewModel, 可以调用<code>this.set()</code> 来给 ViewModel 相应的属性赋值.</p> 
+       <p>下面 TestViewModel 修改后的版本展示了如何定义“name” 为双向 formula.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.TestViewModel', {
     extend: 'Ext.app.ViewModel',
 
@@ -459,25 +459,25 @@ Ext.onReady(function () {
         }
     }
 });</code></pre> 
-       <h3 id="Recommendations">Recommendations</h3> 
-       <p>With all the power of ViewModels, formulas, and data binding, it can be easy to overuse or abuse these mechanisms and create an application that is hard to understand or debug, or is slow to update or leaks memory. To help avoid these issues and still get the most out of ViewModels here are some recommended techniques:</p> 
+       <h3 id="Recommendations">建议</h3> 
+       <p>强大的 ViewModels, formulas, 和数据绑定, 很容易导致滥用这些机制，导致创建出来一个很难理解很难调试的应用程序, 或者更新慢、内存泄漏. 为了避免这些问题, 却又能充分利用 ViewModels,  这里有一些推荐的技术:</p> 
        <ul> 
-        <li><p><strong>Always use the following form when configuring your viewModel.</strong> This is important because of the way the Config System merges config values. With this form, the “type” property is preserved during the merge.</p> <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.TestView', {
+        <li><p><strong>尽可能使用下面的形式来配置 viewModel.</strong> 主要原因是因为 配置系统(Config System) 合并 config 值的方式. 使用这种形式, “type” 属性在合并过程中会被保留.</p> <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.TestView', {
     //...
     viewModel: {
         type: 'test'
     },
 });</code></pre></li> 
-        <li><p><strong>Make names obvious</strong>, especially in high level ViewModels. In JavaScript we rely on textual searching so pick names that make finding usages possible. The more code that might use a property the more important it is to pick meaningful or even unique names.</p></li> 
-        <li><p><strong>Don’t nest data in objects more deeply than necessary.</strong> Multiple top-level objects stored in the ViewModel will require less bookkeeping compared to one object with lots of nested sub-objects. Further, this will help make dependencies on this information more obvious than if many components depend on some large containing object. There are reasons to share objects, but remember the ViewModel is just a managed object so you can use its properties too.</p></li> 
-        <li><p><strong>Use child ViewModels to allow data to be cleaned up</strong> with the components that needed it. If you put all data in high-level ViewModels, that data will likely never be removed even when the child views that needed it have been destroyed. Instead, create ViewModels for the child view and pass data into its ViewModel.</p></li> 
-        <li><p><strong>Don’t create child ViewModels unless they are actually needed.</strong> Each ViewModel instance takes time to create and memory to manage. If a child view does not need data unique to itself, it can simply use the ViewModel it inherits from its container. See the previous recommendation though, because it is better to create child ViewModels when they are needed than pollute a parent ViewModel and effectively leak memory.</p></li> 
-        <li><p><strong>Use formulas instead of repeating binds.</strong> If you followed how formulas are ways to combine the results of several bound values you can probably see how using a formula would help reduce the number of dependencies compared to directly using those same values in many places. For example, one formula with 3 dependencies and 4 users make <code>3 + 4 = 7</code> dependencies to track in the ViewModel. Compared to 4 users with those 3 dependencies on themselves we would have <code>3 * 4 = 12</code> dependencies. Fewer dependencies to track means less memory used and time to process them.</p></li> 
-        <li><p><strong>Don’t chain formulas too deeply.</strong> This is not so much a run-time cost issue as a code clarity issue. Chained formulas can mask the connections between data and components making it hard to understand what is happening.</p></li> 
-        <li><p><strong>Two-way formulas must be stable.</strong> Say formula “foo” is a calculation of value “bar”. When “foo” is set it will set “bar” by inverting the formula from its get method. The result is stable if the get method will produce the exact same value for “foo” that is now being set. If it does not, the process will cycle until it reaches a stable point or it will continue indefinitely. Neither result is likely desirable.</p></li> 
+        <li><p><strong>定好名字</strong>, 特别是级别高的 ViewModels. 在 JavaScript 我们会依靠文本搜索，所以取可以见名知义的名字. 代码里某个属性用得越多, 取个有意义甚至独一无二的名字就越重要.</p></li> 
+        <li><p><strong>除非很必要, 对象中的数据不要嵌套太深.</strong> ViewModel 存储多个顶级(top-level)对象，比存储嵌套层次太深的对象，比对(检测数据变化)的次数要少. 此外, 相比较于 许多组件依赖大对象 来说, 这种方式可以使数据绑定的依赖性更明显. 有时候是会共享对象, 但是记住 ViewModel 只是一个管理数据的对象, 你也可以使用它的属性.</p></li> 
+        <li><p><strong>使用子 ViewModels, 以便在组件销毁时可以清理数据</strong> . 如果你把所有数据都放在了顶层 ViewModels, 数据可能永远不会被清除, 即使子视图已被销毁. 相反, 应该创建子视图的 ViewModels,  然后把数据存在子视图的 ViewModel 中.</p></li> 
+        <li><p><strong>只在必要的时候创建子 ViewModels.</strong> 每一个 ViewModel 实例的创建都会耗时、占内存. 如果子视图不需要特有的数据, 它可以简单地使用父容器的 ViewModel. 不过还是要看看上一条建议, 因为创建子 ViewModels, 比把什么都塞进父 ViewModel 要好, 也不容易出现内存泄漏问题.</p></li> 
+        <li><p><strong>使用 formulas 代替重复绑定.</strong>如果你了解了 formulas 是如何结合多个绑定值的, 你可能会发现使用 formula 可以减少很多重复的绑定. 例如, 有一个 formula 里有3个依赖, 有4个用户使用, 这导致 ViewModel 需要跟踪 <code>3 + 4 = 7</code> 个依赖. 相比较于 4 个用户 分别使用 3 个依赖, 那么最后就产生了 <code>3 * 4 = 12</code> 个依赖. 需要跟踪的依赖少了, 意味着内存占用少了, 耗时也少了.</p></li> 
+        <li><p><strong>formulas 链不要太深.</strong> 这与其说是一个运行时间成本问题, 还不如看作是代码可读性问题. formulas 链会掩盖数据和组件之间的联系, 使得难以理解正在发生的事情.</p></li> 
+        <li><p><strong>双向 formulas 必须稳定.</strong> 假设 formula “foo” 通过 “bar”的值计算而来. 当“foo”被 set 赋值了, formula 会反转 get 函数 给“bar”赋值. 如果“foo”的 get 函数得到的值和刚刚被 set 的值是一模一样的, 那么这个结果就是稳定的. 如果不稳定, 这个过程会持续循环下去, 直到达到稳定状态, 或者无限期继续下去. 这两种情形都不是令人满意的.</p></li> 
        </ul> 
-       <h1>Further Reading</h1> 
-       <p>For more information about the viewModels, please take a few minutes to check out our <a href="view_model_internals.html">ViewModel Internals guide</a>.</p> 
+       <h1>延伸阅读</h1> 
+       <p>更多关于 viewModels 的内容, 请看<a href="view_model_internals.html">ViewModel 内部机制</a>.</p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 
