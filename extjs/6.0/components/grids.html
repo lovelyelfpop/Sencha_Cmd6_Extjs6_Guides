@@ -7,7 +7,7 @@
   <title>Ext JS 向导 | Grids</title> 
   <meta charset="UTF-8" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
   <script type="text/javascript">
 
     function showMenu(link_obj){
@@ -147,37 +147,37 @@
      <div> 
       <div class="toc-page" style="display:block;">
         Contents 
-       <a class="toc-page-h2" href="#Basic_Grid_Panel" title="Basic Grid Panel">Basic Grid Panel</a> 
-       <a class="toc-page-h3" href="#Model_and_Store" title="Model and Store">Model and Store</a> 
-       <a class="toc-page-h3" href="#Grid_Panel" title="Grid Panel">Grid Panel</a> 
-       <a class="toc-page-h2" href="#Renderers" title="Renderers">Renderers</a> 
-       <a class="toc-page-h2" href="#Grouping" title="Grouping">Grouping</a> 
-       <a class="toc-page-h2" href="#Selection_Models" title="Selection Models">Selection Models</a> 
-       <a class="toc-page-h2" href="#Editing" title="Editing">Editing</a> 
-       <a class="toc-page-h3" href="#Cell_Editing" title="Cell Editing">Cell Editing</a> 
-       <a class="toc-page-h3" href="#Row_Editing" title="Row Editing">Row Editing</a> 
-       <a class="toc-page-h2" href="#Paging" title="Paging">Paging</a> 
-       <a class="toc-page-h3" href="#Store_Setup" title="Store Setup">Store Setup</a> 
-       <a class="toc-page-h3" href="#Paging_Toolbar" title="Paging Toolbar">Paging Toolbar</a> 
-       <a class="toc-page-h3" href="#Buffered_Rendering" title="Buffered Rendering">Buffered Rendering</a> 
+       <a class="toc-page-h2" href="#Basic_Grid_Panel" title="基础表格面板">基础表格面板</a> 
+       <a class="toc-page-h3" href="#Model_and_Store" title="Model 和 Store">Model 和 Store</a> 
+       <a class="toc-page-h3" href="#Grid_Panel" title="表格面板">表格面板</a> 
+       <a class="toc-page-h2" href="#Renderers" title="表格渲染">表格渲染</a> 
+       <a class="toc-page-h2" href="#Grouping" title="表格分组">表格分组</a> 
+       <a class="toc-page-h2" href="#Selection_Models" title="选择模型">选择模型</a> 
+       <a class="toc-page-h2" href="#Editing" title="编辑表格">编辑表格</a> 
+       <a class="toc-page-h3" href="#Cell_Editing" title="单元格编辑">单元格编辑</a> 
+       <a class="toc-page-h3" href="#Row_Editing" title="行编辑">行编辑</a> 
+       <a class="toc-page-h2" href="#Paging" title="表格分页">表格分页</a> 
+       <a class="toc-page-h3" href="#Store_Setup" title="Store设置">Store设置</a> 
+       <a class="toc-page-h3" href="#Paging_Toolbar" title="分页工具栏">分页工具栏</a> 
+       <a class="toc-page-h3" href="#Buffered_Rendering" title="缓冲渲染">缓冲渲染</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
        <h1>Grids</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p><a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> is one of the centerpieces of Ext JS. It’s an incredibly versatile component that provides an easy way to display, sort, group, and edit data.</p> 
-       <h2 id="Basic_Grid_Panel">Basic Grid Panel</h2> 
-       <p><img src="images/simple_grid.png" alt="Basic Grid Panel" /></p> 
-       <p>Let’s get started by creating a basic <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>. Here’s all you need to know to get a simple grid up and running:</p> 
-       <h3 id="Model_and_Store">Model and Store</h3> 
-       <p><a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> is simply a component that displays data contained in a <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a>. <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> can be thought of as a collection of records, or <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a> instances.</p> 
-       <p>The benefit of this setup is separating our concerns. <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> is only concerned with displaying the data, while <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> takes care of fetching and saving the data using <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">Ext.data.proxy.Proxy</a>.</p> 
-       <p>First, we need to define a <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a>. A model is just a collection of <a href="../6.0.1-classic/#!/api/Ext.data.field.Field" data-full-load="true">fields</a> that represents a type of data. Let’s define a model that represents a <strong>“User”</strong>:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 是 Ext JS 中的一个核心组件. 表格是一个提供一个简单方式来显示、排序、分组和编辑数据的迷人组件.</p> 
+       <h2 id="Basic_Grid_Panel">基础表格面板</h2> 
+       <p><img src="images/simple_grid.png" alt="基础表格面板" /></p> 
+       <p>我们从添加一个基础的 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 表格面板来开始. 这是你所有的的需要知道的如何来建立一个简单的表格和运行它:</p> 
+       <h3 id="Model_and_Store">Model 和 Store</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 是一个用来显示包含在 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 里的数据的简单组件. <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 能被认为是一些记录的集合,或者一些 <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a> 的实例.</p> 
+       <p>这种设置的好处是分离开我们的关注点. <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 只关心数据的展示,而 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 使用  <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">Ext.data.proxy.Proxy</a> 来关注数据的查询和存储.</p>  
+       <p>首先, 我们需要定义一个 <a href="../6.0.1-classic/#!/api/Ext.data.Model" data-full-load="true">Ext.data.Model</a> 数据模型. 一个数据模型只是一系列用来表示数据类型的 <a href="../6.0.1-classic/#!/api/Ext.data.field.Field" data-full-load="true">fields(字段)</a>. 我们来定义一个表示 a <strong>“User”</strong>的数据模型:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('User', {
     extend: 'Ext.data.Model',
     fields: [ 'name', 'email', 'phone' ]
 });</code></pre> 
-       <p>Next let’s create a <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> that contains several <strong>“User”</strong> instances.</p> 
+       <p>然后我们来创建一个包含几个 <strong>“User”</strong> 实例的 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store(数据存储)</a> .</p> 
        <pre mode="javascript" theme="chrome"><code>var userStore = Ext.create('Ext.data.Store', {
     model: 'User',
     data: [
@@ -187,13 +187,13 @@
         { name: 'Marge', email: 'marge@simpsons.com', phone: '555-222-1254' }
     ]
 });</code></pre> 
-       <p>For sake of ease, we configured <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> to load its data inline. In a real world application, you would most likely configure the <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> to use an <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">Ext.data.proxy.Proxy</a> to load data from the server.</p> 
-       <h3 id="Grid_Panel">Grid Panel</h3> 
-       <p>Now, we have a model, which defines our data structure. We have also loaded several model instances into an <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a>. Now we’re ready to display the data using <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>.</p> 
-       <p>In this example, we configured the Grid with <a href="../6.0.1-classic/#!/api/Ext.AbstractComponent-method-renderTo" data-full-load="true">renderTo</a> to immediately render the Grid into the HTML document. </p> 
-       <p>In many situations, the grid will be a descendant of <a href="../6.0.1-classic/#!/api/Ext.container.Viewport" data-full-load="true">Ext.container.Viewport</a>, which means rendering is already handled.</p> 
+       <p>为了简化操作,我们配置 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 来加载内置数据. 在真正的应用程序中, 你极可能要配置 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 来使用一个 <a href="../6.0.1-classic/#!/api/Ext.data.proxy.Proxy" data-full-load="true">Ext.data.proxy.Proxy</a> 来从服务器加载数据.</p> 
+       <h3 id="Grid_Panel">表格面板</h3> 
+       <p>现在,我们有了一个model,定义了我们的数据结构. 我们也加载了几条 model 实例数据到了一个 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 中了.我们准备好了使用  <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 来展现数据了.</p> 
+       <p>在这个例子中,我们配置这个表格的 <a href="../6.0.1-classic/#!/api/Ext.AbstractComponent-method-renderTo" data-full-load="true">renderTo</a> 方法来立即渲染这个表格到  HTML 文档中. </p> 
+       <p>在很多情况下,表格是由 <a href="../6.0.1-classic/#!/api/Ext.container.Viewport" data-full-load="true">Ext.container.Viewport</a> 派生出来的,这意味着渲染已经可以处理.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
-    renderTo: document.body,
+    renderTo: document.body, 
     store: userStore,
     width: 400,
     height: 200,
@@ -219,13 +219,13 @@
         }
     ]
 });</code></pre> 
-       <p>And that’s all there is to it. </p> 
-       <p>We just created an <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> that renders itself to the body element. We also told the Grid panel to get its data from the <code>userStore</code> that we previously created. </p> 
-       <p>Finally, we defined the Grid panel’s columns and gave them a <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-dataIndex" data-full-load="true">dataIndex</a> property. This <code>dataIndex</code> associates a field from our model to a column.</p> 
-       <p>The <strong>“Name”</strong> column has a fixed <code>width</code> of <strong>“100px”</strong> and has <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-sortable" data-full-load="true">sorting</a> and <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-hideable" data-full-load="true">hiding</a> disabled. The <strong>“Email Address”</strong> column is hidden by default (it can be shown again by using the menu on any other column header). Finally, the <strong>“Phone Number”</strong> column <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-flex" data-full-load="true">flexes</a> to fit the remainder of the Grid panel’s total width.</p> 
-       <p>For a larger example, see the <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#array-grid">Array Grid Example</a>.</p> 
-       <h2 id="Renderers">Renderers</h2> 
-       <p>You can use the <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-renderer" data-full-load="true">renderer</a> property of the column config to change the way in which data is displayed. A <code>renderer</code> is a function that modifies the underlying value and returns a new value for display. Some of the most common renderers are included in <a href="../6.0.1-classic/#!/api/Ext.util.Format" data-full-load="true">Ext.util.Format</a>, but you can write your own as well:</p> 
+       <p>这就是所有的一切. </p> 
+       <p>我们创建了一个来将它自己渲染到body元素中的 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>. 我们也告诉了这个表格面板从我们前面创建的 <code>userStore</code> 中来获取数据. </p> 
+       <p>最后, 我们定义了表格面板的列并且指定了一个 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-dataIndex" data-full-load="true">dataIndex</a> 属性. 这个 <code>dataIndex</code> 和我们model 中的一个字段相关联.</p> 
+       <p>这个 <strong>“Name”</strong> 列有一个固定为 <strong>“100px” </strong> 的宽度并且禁止 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-sortable" data-full-load="true">sorting(排序)</a> 和 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-hideable" data-full-load="true">hiding(隐藏)</a> . 这个 <strong>“Email Address”</strong> 列默认是隐藏的 (可以通过使用在其它列头上的菜单来再次显示). 最后, 这个 <strong>“Phone Number”</strong>列 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-flex" data-full-load="true">flexes(伸缩)</a> 来填充表格面板总宽度的余下部分.</p> 
+       <p>查看一个更为复杂的例子, 参见 <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#array-grid">Array Grid Example</a>.</p> 
+       <h2 id="Renderers">表格渲染</h2> 
+       <p>你能使用列配置中的 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-cfg-renderer" data-full-load="true">renderer</a> 属性来修改你要显示的数据的展现方式.  <code>renderer</code> 是一个用来修改原始值的函数并返回一个新的值来显示.一些最常用的渲染方式包含在 <a href="../6.0.1-classic/#!/api/Ext.util.Format" data-full-load="true">Ext.util.Format</a>中, 但你也能开发自己的格式:</p> 
        <pre mode="javascript" theme="chrome"><code>columns: [
     {
         text: 'Birth Date',
@@ -242,33 +242,33 @@
         }
     }
 ]</code></pre> 
-       <p>See the Kitchen Sink’s <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#array-grid">Array Grid</a> for a live demo that uses custom renderers.</p> 
-       <h2 id="Grouping">Grouping</h2> 
+       <p>查看 Kitchen Sink的 <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#array-grid">Array Grid</a> 可以看一个使用了定制渲染的动态示例.</p> 
+       <h2 id="Grouping">表格分组</h2> 
        <p><img src="images/grouping.png" /></p> 
-       <p>Organizing the rows into groups is easy. First we specify a <a href="../6.0.1-classic/#!/api/Ext.data.Store-method-groupField" data-full-load="true">groupField</a> property on our store:</p> 
+       <p>将数据行分组来组织是很简单的.首先在我们的 store 中定义一个 <a href="../6.0.1-classic/#!/api/Ext.data.Store-method-groupField" data-full-load="true">groupField</a> 属性:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.data.Store', {
     model: 'Employee',
     data: ...,
     groupField: 'department'
 });</code></pre> 
-       <p>Next, we configure a Grid with <a href="../6.0.1-classic/#!/api/Ext.grid.feature.Grouping" data-full-load="true">Ext.grid.feature.Grouping</a> that will handle displaying the rows in groups:</p> 
+       <p>然后, 我们在一个表格中配置可以处理分组显示数据的 <a href="../6.0.1-classic/#!/api/Ext.grid.feature.Grouping" data-full-load="true">Ext.grid.feature.Grouping</a>特性:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     ...
     features: [{ ftype: 'grouping' }]
 });</code></pre> 
-       <p>See the Kitchen Sink’s <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#grouped-grid">Grouping Grid Panel</a> for a live example.</p> 
-       <h2 id="Selection_Models">Selection Models</h2> 
-       <p>Grid panels can be used to simply display data. However, it is often necessary to interact with the Grid’s data. All Grid panels have an <a href="../6.0.1-classic/#!/api/Ext.selection.Model" data-full-load="true">Ext.selection.Model</a>, which determines how data is selected. The two main types of Selection Model are <a href="../6.0.1-classic/#!/api/Ext.selection.RowModel" data-full-load="true">Ext.selection.RowModel</a>, where entire rows are selected, and <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a>, where individual cells are selected.</p> 
-       <p>Grid panels use <a href="../6.0.1-classic/#!/api/Ext.selection.RowModel" data-full-load="true">Ext.selection.RowModel</a> by default, but it’s easy to switch to an <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a>:</p> 
+       <p>查看 Kitchen Sink 的<a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#grouped-grid">表格分组 表格面板</a> 来看一个动态的示例.</p> 
+       <h2 id="Selection_Models">选择模型</h2> 
+       <p>表格面板能简单的用于展示数据.然而通常需要与表格的数据进行交互.所有表格面板都有一个 <a href="../6.0.1-classic/#!/api/Ext.selection.Model" data-full-load="true">Ext.selection.Model</a>, 这个决定了将要选择使用哪个数据.选择数据模型有二种主要类型 <a href="../6.0.1-classic/#!/api/Ext.selection.RowModel" data-full-load="true">Ext.selection.RowModel</a>, 选择全部数据, 和 <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a>, 选择独立的多个单元格.</p> 
+       <p>表格面板默认使用 <a href="../6.0.1-classic/#!/api/Ext.selection.RowModel" data-full-load="true">Ext.selection.RowModel</a> , 但也很容易切换为使用 <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a>:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     selType: 'cellmodel',
     store: ...
 });</code></pre> 
-       <p>Using <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a> changes a couple of things. Firstly, clicking on a cell now selects just that cell as opposed to the entire row. Secondly, the keyboard navigation will walk from cell to cell instead of row to row. Cell-based selection models are usually used in conjunction with editing.</p> 
-       <h2 id="Editing">Editing</h2> 
-       <p>Grid panel has built-in support for editing. Let’s look at the two main editing modes - row editing and cell editing.</p> 
-       <h3 id="Cell_Editing">Cell Editing</h3> 
-       <p><a href="../6.0.1-classic/#!/api/Ext.grid.plugin.CellEditing" data-full-load="true">Cell editing</a> allows you to edit the data in a Grid panel one cell at a time. The first step in implementing cell editing is to configure an editor for each <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">Ext.grid.column.Column</a> in your Grid Panel that should be editable. This is done using the <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-method-editor" data-full-load="true">Ext.grid.column.Column#editor</a> config. The simplest way is to specify just the <strong>xtype</strong> of the field you want to use as an editor:</p> 
+       <p>使用<a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a> 时有很多变化. 首先,点击一个单元格现在只选择相应的单元格而不是整行.第二,键盘导航是从一个单元格到另一单元格而不是一行到另一行.基于单元格的选择model 通常与编辑结合使用.</p> 
+       <h2 id="Editing">编辑表格</h2> 
+       <p>表格面板内置支持编辑. 让我们看一下这两种主要编辑模式 - 行编辑和单元格编辑.</p> 
+       <h3 id="Cell_Editing">单元格编辑</h3> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.grid.plugin.CellEditing" data-full-load="true">Cell editing</a> 允许你逐一编辑一个表格面板中的一个单元格的数据. 实现单元格编辑的第一个步骤是对可编辑的表格面板的每一个 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">Ext.grid.column.Column</a> 进行配置.这个是通过使用<a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-method-editor" data-full-load="true">Ext.grid.column.Column#editor</a> 配置项来完成. 最简单的方法是指定你要使用一个编辑器的字段一个 <strong>xtype</strong>:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     ...
     columns: [
@@ -279,7 +279,7 @@
        }
     ]
 });</code></pre> 
-       <p>If you need more control over how the editor field behaves, the <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-method-editor" data-full-load="true">Ext.grid.column.Column#editor</a> config can also take a config object for a Field. For example, if we are using a <a href="../6.0.1-classic/#!/api/Ext.form.field.Text" data-full-load="true">Ext.form.field.Text</a> and we want to require a value:</p> 
+       <p>如果需要控制更多编辑器的行为, <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-method-editor" data-full-load="true">Ext.grid.column.Column#editor</a> 配置也可以对一个 Field 使用一个配置对象. 例如,如果我们用的是 <a href="../6.0.1-classic/#!/api/Ext.form.field.Text" data-full-load="true">Ext.form.field.Text</a> 并且我们要必填:</p> 
        <pre mode="javascript" theme="chrome"><code>columns: [
     text: 'Name',
     dataIndex: 'name',
@@ -288,7 +288,7 @@
         allowBlank: false
     }
 [</code></pre> 
-       <p>You can use any class in the <strong>“Ext.form.field.*”</strong> package as an editor field. Lets suppose we want to edit a column that contains dates. We can use a <a href="../6.0.1-classic/#!/api/Ext.form.field.Date" data-full-load="true">Ext.form.field.Date</a> editor:</p> 
+       <p>你能使用在 <strong>“Ext.form.field.*”</strong> 包中的任意一个类作为一个编辑器的输入控件. 假定我们要编辑一个包含日期的列.我们能使用一个 <a href="../6.0.1-classic/#!/api/Ext.form.field.Date" data-full-load="true">Ext.form.field.Date</a> 编辑器:</p> 
        <pre mode="javascript" theme="chrome"><code>columns: [
     {
         text: 'Birth Date',
@@ -296,13 +296,13 @@
         editor: 'datefield'
     }
 ]</code></pre> 
-       <p>Any <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">Ext.grid.column.Column</a> in a <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> that do not have a <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-method-editor" data-full-load="true">Ext.grid.column.Column#editor</a>] configured will not be editable.</p> 
-       <p>Now that we’ve configured which columns we want to be editable, and the editor fields that will be used to edit the data, the next step is to specify a selection model. Let’s use a <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a> in our <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> config:</p> 
+       <p>在 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 中的任意一个没有包含 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column-method-editor" data-full-load="true">Ext.grid.column.Column#editor</a> 配置的 <a href="../6.0.1-classic/#!/api/Ext.grid.column.Column" data-full-load="true">Ext.grid.column.Column</a> 列将不可编辑.</p> 
+       <p>现在我们配置了那些我们要编辑的列,并且编辑器的控件就会使用这些数据,下一个步骤是定义选择模型.让我们在 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 配置中使用 <a href="../6.0.1-classic/#!/api/Ext.selection.CellModel" data-full-load="true">Ext.selection.CellModel</a>:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     ...
     selType: 'cellmodel'
 });</code></pre> 
-       <p>Finally, to enable editing we need to configure the <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> with a <a href="../6.0.1-classic/#!/api/Ext.grid.plugin.CellEditing" data-full-load="true">Ext.grid.plugin.CellEditing</a>:</p> 
+       <p>最后,为启用编辑我们要用 <a href="../6.0.1-classic/#!/api/Ext.grid.plugin.CellEditing" data-full-load="true">Ext.grid.plugin.CellEditing</a> 来配置 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     ...
     selType: 'cellmodel',
@@ -311,10 +311,10 @@
         clicksToEdit: 1
     }]
 });</code></pre> 
-       <p>And that’s all it takes to create an editable Grid using cell editing. See <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#cell-editing">Cell Editing</a> for a working example.</p> 
+       <p>这就是创建一个使用单元格编辑的可编辑表格要做的全部. 参见 <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#cell-editing">单元格编辑</a> 作为一个正常工作的例子.</p> 
        <p><img src="images/cell_editing.png" /></p> 
-       <h3 id="Row_Editing">Row Editing</h3> 
-       <p>Row editing enables you to edit an entire row at a time, rather than editing cell by cell. Row editing works in exactly the same way as cell editing - all we need to do is change the plugin type to <a href="../6.0.1-classic/#!/api/Ext.grid.plugin.RowEditing" data-full-load="true">Ext.grid.plugin.RowEditing</a> and set the selType to <code>rowmodel</code>.</p> 
+       <h3 id="Row_Editing">行编辑</h3> 
+       <p>Row editing 使用你能一次编辑一个整行,而不是一个单元格一个单元的编辑. 行编辑与单元格编辑的方法几乎一样 - 我们所要做的只是修改插件类型为 <a href="../6.0.1-classic/#!/api/Ext.grid.plugin.RowEditing" data-full-load="true">Ext.grid.plugin.RowEditing</a> 并且设置 selType 为 <code>rowmodel</code>.</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     ...
     selType: 'rowmodel',
@@ -324,11 +324,11 @@
     }]
 });</code></pre> 
        <p><img src="images/row_editing.png" /></p> 
-       <p>See <a href="../../../../dev.sencha.com/ext/5.1.0/examples/grid/row-editing.html">Row Editing</a> for a working example.</p> 
-       <h2 id="Paging">Paging</h2> 
-       <p>Sometimes your data set is too large to display all on one page. <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> supports displaying individual pages from the dataset using a <a href="../6.0.1-classic/#!/api/Ext.toolbar.Paging" data-full-load="true">Ext.toolbar.Paging</a>, which loads pages using previous/next buttons.</p> 
-       <h3 id="Store_Setup">Store Setup</h3> 
-       <p>Before we can set up paging on a <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>, we have to configure the <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> to support paging. In the below example we add <a href="../6.0.1-classic/#!/api/Ext.data.Store-method-pageSize" data-full-load="true">Ext.data.Store#pageSize</a> to the <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a>, and we configure our <a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader" data-full-load="true">Ext.data.reader.Reader</a> with a <a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader-method-totalProperty" data-full-load="true">Ext.data.reader.Reader#totalProperty</a>:</p> 
+       <p>参见 <a href="../../../../dev.sencha.com/ext/5.1.0/examples/grid/row-editing.html">行编辑</a> 查看一个可以运行的例子.</p> 
+       <h2 id="Paging">表格分页</h2> 
+       <p>有时你的数据集太多而不能在一页中显示所有的数据. <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a> 通过使用  <a href="../6.0.1-classic/#!/api/Ext.toolbar.Paging" data-full-load="true">Ext.toolbar.Paging</a> 来从数据集中分页显示,加载的页面将使用前一页/后一页按钮.</p> 
+       <h3 id="Store_Setup">Store设置</h3> 
+       <p>在给一个<a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>设置分页前,我们必须配置 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a>支持分页. 在下面的例子中我们给<a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a>增加了 <a href="../6.0.1-classic/#!/api/Ext.data.Store-method-pageSize" data-full-load="true">Ext.data.Store#pageSize</a> 的设置 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true"></a>, 并且我们可以给 <a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader" data-full-load="true">Ext.data.reader.Reader</a> 配置一个 <a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader-method-totalProperty" data-full-load="true">Ext.data.reader.Reader#totalProperty</a> 属性:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.data.Store', {
     model: 'User',
     autoLoad: true,
@@ -343,7 +343,7 @@
         }
     }
 });</code></pre> 
-       <p>The <a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader-method-totalProperty" data-full-load="true">Ext.data.reader.Reader#totalProperty</a> config tells <a href="../6.0.1-classic/#!/api/Ext.data.reader.Json" data-full-load="true">Ext.data.reader.Json</a> where to get the total number of results in the JSON response. This <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> is configured to consume a JSON response that looks something like this:</p> 
+       <p><a href="../6.0.1-classic/#!/api/Ext.data.reader.Reader-method-totalProperty" data-full-load="true">Ext.data.reader.Reader#totalProperty</a> 配置告诉 <a href="../6.0.1-classic/#!/api/Ext.data.reader.Json" data-full-load="true">Ext.data.reader.Json</a>从JSON响应的哪里来获得结果集的总行数.<a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 配置成使用一个象下面这些数据一样的JSON返回数据:</p> 
        <pre mode="javascript" theme="chrome"><code>{
     &quot;success&quot;: true,
     &quot;total&quot;: 12,
@@ -354,8 +354,8 @@
         { &quot;name&quot;: &quot;Marge&quot;, &quot;email&quot;: &quot;marge@simpsons.com&quot;, &quot;phone&quot;: &quot;555-222-1254&quot; }
     ]
 }</code></pre> 
-       <h3 id="Paging_Toolbar">Paging Toolbar</h3> 
-       <p>Now that we’ve set up our <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> to support paging, all that’s left is to configure a <a href="../6.0.1-classic/#!/api/Ext.toolbar.Paging" data-full-load="true">Ext.toolbar.Paging</a>. You could put the <a href="../6.0.1-classic/#!/api/Ext.toolbar.Paging" data-full-load="true">Ext.toolbar.Paging</a> anywhere in your application layout, but typically it is docked to the <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>:</p> 
+       <h3 id="Paging_Toolbar">分页工具栏</h3> 
+       <p>我们已经设置 <a href="../6.0.1-classic/#!/api/Ext.data.Store" data-full-load="true">Ext.data.Store</a> 支持分页, 剩下要配置的是 <a href="../6.0.1-classic/#!/api/Ext.toolbar.Paging" data-full-load="true">Ext.toolbar.Paging</a>. 你可以在你应用布局的任意位置放置 <a href="../6.0.1-classic/#!/api/Ext.toolbar.Paging" data-full-load="true">Ext.toolbar.Paging</a> ,但通常是停靠在 <a href="../6.0.1-classic/#!/api/Ext.grid.Panel" data-full-load="true">Ext.grid.Panel</a>中:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.create('Ext.grid.Panel', {
     store: userStore,
     columns: ...,
@@ -367,12 +367,12 @@
     }]
 });</code></pre> 
        <p><img src="images/paging_toolbar.png" /></p> 
-       <p>See the <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#paging-grid">Paging Grid</a> for a working example.</p> 
-       <h3 id="Buffered_Rendering">Buffered Rendering</h3> 
-       <p>Grids enable buffered rendering of extremely large datasets as an alternative to using a paging toolbar. Your users can scroll through thousands of records without the performance penalties of renderering all the records on screen at once. The Grid should be bound to a <a href="../6.0.1-classic/#!/api/Ext.data.BufferedStore" data-full-load="true">Ext.data.BufferedStore</a> with a pageSize specified.</p> 
-       <p>Only enough rows are rendered to fill the visible area of the Grid with a little <a href="../6.0.1-classic/#!/api/Ext.grid.Panel-cfg-leadingBufferZone" data-full-load="true">Ext.grid.Panel-cfg-leadingBufferZone</a> overflow either side to allow scrolling. As scrolling proceeds, new rows are rendered in the direction of scroll, and rows are removed from the receding side of the table.</p> 
-       <p>Grids use buffered rendering by default, so you no longer need to add the plugin to your Grid component.</p> 
-       <p>See <a href="../../../../dev.sencha.com/ext/5.1.0/examples/grid/buffer-grid.html">Buffered Renderer</a> for a working example.</p> 
+       <p>查看一个可正常工作的 <a href="../../../../dev.sencha.com/ext/5.1.0/examples/kitchensink/#paging-grid">Paging Grid</a> 示例</p> 
+       <h3 id="Buffered_Rendering">缓冲渲染</h3> 
+       <p>作为使用分页工具栏来处理大数据结果集的一个替代方式是表格也支持缓冲渲染.你的用户可以滚动上千条记录而没有一次性将所有记录渲染到屏幕上的性能问题. 表格必须绑定一个定义好了pageSize的 <a href="../6.0.1-classic/#!/api/Ext.data.BufferedStore" data-full-load="true">Ext.data.BufferedStore</a>组件.</p> 
+       <p>只有足够的行被填充到表格的可见区域中和一个小ext.grid.panel-cfg-leadingbufferzone溢出到任一边用于允许滚动. 当滚动执行时,新的行就会按照滚动的方向渲染出来,而表格中那些相反方向的行就会被清除.</p> 
+       <p>表格默认使用缓冲渲染,因此你不再需要在你的表格组件中增加插件.</p> 
+       <p>查看一个可正常工作的 <a href="../../../../dev.sencha.com/ext/5.1.0/examples/grid/buffer-grid.html">Buffered Renderer</a> 示例.</p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 
