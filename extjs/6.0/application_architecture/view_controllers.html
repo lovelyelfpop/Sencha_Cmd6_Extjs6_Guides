@@ -187,27 +187,27 @@
                     </div>
                     <div id="tpl-content-name" itemprop="name">
                         <!--部分参考http://www.cnblogs.com/hyfeng/articles/4904131.html-->
-                        <h1>Ext JS 中的 ViewControllers</h1>
+                        <h1>Ext JS 中的视图控制器（ViewControllers）</h1>
                     </div>
                     <div id="tpl-content-articleBody" itemprop="articleBody">
-                        <p>Ext JS 提供了一些令人兴奋的改进，您可以在您的应用程序中使用它们。我们增加了的ViewModels和ViewControllers，将原有的架构从MVC升级到了MVVM。最重要的是，这些功能不会相互影响，所以你可以逐步引入它们，直到它们融为一体。</p>
+                        <p>Ext JS 提供了一些令人兴奋的改进，您可以在您的应用程序中使用它们。我们增加了的ViewModels（视图模型）和ViewControllers（视图控制器），将原有的架构从MVC升级到了MVVM。最重要的是，这些功能不会相互影响，所以您可以逐步引入它们，直到它们融为一体。</p>
                         <h2 id="Application_level_Controllers">应用级控制器</h2>
                         <p>一个控制器派生于<a href="../6.0.1-classic/#!/api/Ext.app.Controller" data-full-load="true">Ext.app.Controller</a>。这些控制器使用CSS类选择器（“组件查询”）来匹配组件和它们的事件。 他们还利用“refs”来选择和检索组件实例。</p>
-                        <p>这些控制器在应用程序启动时就创建并且一直存在，直到应用程序关闭。在其生命周期中，控制器可以监听一个或者多个视图的事件，并且管理他们。</p>
+                        <p>这些控制器在应用程序启动时就创建并且一直存在，直到应用程序关闭。在其生命周期中，控制器可以监听一个或者多个视图的事件，并且管理它们。</p>
                         <h3 id="Challenges">不足之处</h3>
                         <p>对于大型应用程序，这些技术有一定的不足之处。</p>
-                        <p>在开发时，视图和控制器可以由多个开发人员撰写，并集成到最终的应用程序中。很难保证控制器能达到开发者的预期效果。另外，开发者通常希望限制在应用程序中控制器的数量。然而一些控制器即使不再被使用，也不能销毁她们。</p>
-                        <h2 id="ViewControllers">ViewControllers</h2>
-                        <p>Ext JS 5+在能够向后兼容传统应用级控制器的同时，它引入了新的控制器来应对这些不足之处：<a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">Ext.app.ViewController</a>。 ViewController 做到了以下几点：</p>
+                        <p>在开发时，视图和控制器可以由多个开发人员撰写，并集成到最终的应用程序中。很难保证控制器能达到开发者的预期效果。另外，开发者通常希望限制在应用程序中控制器的数量。然而一些控制器即使不再被使用，也不能销毁它们。</p>
+                        <h2 id="ViewControllers">视图控制器（ViewControllers）</h2>
+                        <p>Ext JS 5+在能够向后兼容传统应用级控制器的同时，它引入了新的控制器来应对这些不足之处：<a href="../6.0.1-classic/#!/api/Ext.app.ViewController" data-full-load="true">Ext.app.ViewController</a>。 视图控制器做到了以下几点：</p>
                         <ul>
                             <li>在视图中使用了“listeners”和“reference”简化了配置。</li>
-                            <li>充分利用视图的生命周期来自动管理其相关的ViewController。</li>
-                            <li>ViewController与视图的一对一的关系降低了应用的复杂性。</li>
-                            <li>ViewController提供的封装使嵌套视图更加可靠。</li>
+                            <li>充分利用视图的生命周期来自动管理其相关的视图控制器。</li>
+                            <li>视图控制器与视图的一对一的关系降低了应用的复杂性。</li>
+                            <li>视图控制器提供的封装使嵌套视图更加可靠。</li>
                             <li>保留选择组件，并具有在相关的视图下任何级别监听它们的事件的能力。</li>
                         </ul>
-                        <h3 id="Listeners">监听</h3>
-                        <p>那么如何使用ViewControllers呢，我们可以看看下面两个例子。第一个是在视图的子项中使用监听器监听事件的基本用法：</p>
+                        <h3 id="Listeners">监听器（listeners）</h3>
+                        <p>那么如何使用视图控制器呢，我们可以看看下面两个例子。第一个是在视图的子项中使用监听器监听事件的基本用法：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.foo.Foo', {
     extend: 'Ext.panel.Panel',
     xtype: 'foo',
@@ -227,8 +227,8 @@ Ext.define('MyApp.view.foo.FooController', {
         //  通过 'change' 事件触发
     }
 });</code></pre>
-                        <p>上面的例子展示了如何监听事件来触发指定方法(<code>onBarChange</code>)，并且不用指定其作用域(scope)。因为ViewController的内部事件系统已经指定了作用域(scope)。</p>
-                        <p>在之前的版本中，监听器配置被保留，以供组件的创建者使用，那么如何监听一个视图的事件，或者销毁其父类？答案是，我们需要指定一个作用域(scope)：</p>
+                        <p>上面的例子展示了如何监听事件来触发指定方法(<code>onBarChange</code>)，并且不用指定其scope（作用域）。因为视图控制器的内部事件系统已经指定了scope。</p>
+                        <p>在之前的版本中，监听器配置被保留，以供组件的创建者使用，那么如何监听一个视图的事件，或者销毁其父类？答案是，我们需要指定一个scope：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.foo.Foo', {
     extend: 'Ext.panel.Panel',
     xtype: 'foo',
@@ -241,7 +241,7 @@ Ext.define('MyApp.view.foo.FooController', {
         ...
     }]
 });</code></pre>
-                        <p>上面的例子充分利用了Ext JS的两个新功能：作用域(scope)和监听事件(listeners)。 在这里我们重点关注作用域(scope)配置,作用域(scope)的值可以设置为： “this” 和 “controller”。 在编写MVC架构的应用程序时，我们总是使用“controller”来监听视图中的事件<!--（不是视图创建的默认控制器）-->。</p>
+                        <p>上面的例子充分利用了Ext JS的两个新功能：作用域（scope）和监听器。 在这里我们重点关注作用域配置,作用域的值可以设置为： “this” 和 “controller”。 在编写MVC架构的应用程序时，我们总是使用“controller”来监听视图中的事件<!--（不是视图创建的默认控制器）-->。</p>
                         <p>由于视图属于 <a href="../6.0.1-classic/#!/api/Ext.Component" data-full-load="true">Ext.Component</a>类型，在其他视图中我们通过“xtype”创建了一个实例来使用这个视图，同时我们用同样的方式在这个视图中创建了一个文本框。 我们是如何使用的呢，看下面的例子：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.bar.Bar', {
     extend: 'Ext.panel.Panel',
@@ -256,7 +256,7 @@ Ext.define('MyApp.view.foo.FooController', {
 });</code></pre>
                         <p>在这种情况下，bar视图创建一个实例Foo作为其子视图，再进一步，它监听折叠事件就像Foo视图一样。当这个事件在bar视图的视图控制器触发时这个事件也会在Foo视图的视图控制器里触发。</p>
                         <h3 id="Reference">Reference</h3>
-                        <p>控制器最常见的用法是监听组件执行的特定的操作，例如：</p>
+                        <p>ViewControllers最常见的用法是监听组件执行的特定的操作，例如：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.foo.Foo', {
     extend: 'Ext.panel.Panel',
     xtype: 'foo',
@@ -278,7 +278,7 @@ Ext.define('MyApp.view.foo.FooController', {
         // ... 获取表格组件并且添加一条数据 ...
     }
 });</code></pre>
-                        <p>但是应该如何获得表格组件？所有的技术都需要你把一些可识别的唯一标识属性配置在表格中。旧技术用“id”配置（<a href="../6.0.1-classic/#!/api/Ext.getCmp" data-full-load="true">Ext.getCmp</a>获取）或者“itemId”配置（用“refs” 或者其他组件检索方法）。“id”的优势是首先查找，但由于这些标识符在整个应用程序和DOM中都必须是唯一的，这通常是不可取的。使用“itemId”和某种形式的查询更加灵活,但有必要执行搜索才能找到所需的组件。</p>
+                        <p>但是应该如何获得表格组件？所有的技术都需要您把一些可识别的唯一标识属性配置在表格中。旧技术用“id”配置（<a href="../6.0.1-classic/#!/api/Ext.getCmp" data-full-load="true">Ext.getCmp</a>获取）或者“itemId”配置（用“refs” 或者其他组件检索方法）。“id”的优势是首先查找，但由于这些标识符在整个应用程序和DOM中都必须是唯一的，这通常是不可取的。使用“itemId”和某种形式的查询更加灵活,但有必要执行搜索才能找到所需的组件。</p>
                         <p>用<code>reference</code>配置，添加“reference”配置到表格并用<code>lookupReference</code>方法获取表格组件：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.foo.Foo', {
     extend: 'Ext.panel.Panel',
@@ -312,11 +312,11 @@ Ext.define('MyApp.view.foo.FooController', {
     return cache[reference];
 }</code></pre>
                         <p>换句话说，只要不删除或者添加条目，容器是固定的，没必要去搜索。下面我们将看到这种方法的效率之处。</p>
-                        <h3 id="Encapsulation">Encapsulation</h3>
-                        <p>The use of selectors along with the controller <code>refs</code> config was very flexible, but at the same time had certain risks. The fact that these selectors “see” everything at all levels of the component hierarchy is both powerful and prone to mistakes. For example, a controller could be working 100% when it runs in isolation but then fails as soon as other views are introduced because its selectors have undesired matches with the new view.</p>
-                        <p>These problems can be managed by following certain practices, but when using listeners and references with a ViewController these problems are simply not possible. This is because the listeners and reference configs connect only with their owning ViewController. Views are free to chose any reference value that is unique within that view knowing that these names will not be exposed to the view’s creator.</p>
-                        <p>Likewise, listeners are resolved on their owning ViewController and cannot be accidentally dispatched to event handlers in other controllers with errant selectors. While listeners are often preferable to selectors, the two mechanisms play well together for those situations where a selector-based approach is desired.</p>
-                        <p>To complete this model, views need to fire events that can be consumed by their owning view’s ViewController. There is a helper method in ViewController for this purpose: <code>fireViewEvent</code>. For example:</p>
+                        <h3 id="Encapsulation">封装</h3>
+                        <p>在控制器使用<code>refs</code>配置选择器非常灵活，但同时有一定风险。这些选择器能够监听所有层次结构中的组件，这是是强大的也是容易出错的。例如，当控制器隔离工作时100%可用，但当被其他视图引用时会失败，因为它的选择器与新视图不匹配。</p>
+                        <p>这些问题可以通过以下办法来解决，在视图中使用监听器和references然后通过视图控制器监听，这些问题就不会出现了。因为监听器和references仅连接到自己的视图控制器。视图可以自由设置reference的名称，在这个视图范围内它是独一无二的，这些名称不会暴露视图的创造者。</p>
+                        <p>同样，监听器在它们对应的视图控制器中处理，不会被其它的控制器影响。监听器是更可靠的选择器，这两种机制在这些情况下的能够很好地协作，是理想的基本选择器方法。</p>
+                        <p>要触发这个模型、视图需要触发的事件，可以用它们对应视图所属的视图控制器的一个辅助方法：<code>fireViewEvent</code>。例如：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.foo.FooController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.foo',
@@ -327,7 +327,7 @@ Ext.define('MyApp.view.foo.FooController', {
         this.fireViewEvent('addrecord', this, record);
     }
 });</code></pre>
-                        <p>This enables the standard form of listener for the creator of this view:</p>
+                        <p>视图中使用监听器的标准作法：</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.bar.Bar', {
     extend: 'Ext.panel.Panel',
     xtype: 'bar',
@@ -340,14 +340,14 @@ Ext.define('MyApp.view.foo.FooController', {
         }
     }]
 });</code></pre>
-                        <h3 id="Listeners_and_Event_Domains">Listeners and Event Domains</h3>
-                        <p>In Ext JS 4.2, the MVC event dispatcher was generalized with the introduction of event domains. These event domains intercepted events as they were fired and dispatched them to controllers controlled by selector matching. The “component” event domain had full component query selectors while the other domains had more limited selectors.</p>
-                        <p>With Ext JS 5+, each ViewController creates an instance of a new type of event domain called the “view” event domain. This event domain allows ViewControllers to use the standard <code>listen</code> and <code>control</code> methods while limiting their scope implicitly to their view. It also adds a special selector to match the view itself:</p>
+                        <h3 id="Listeners_and_Event_Domains">监听器（Listeners）和事件域</h3>
+                        <p>在 Ext JS 4.2 中, MVC事件调度器是广义的活动领域，这些事件域通过它们的控制器控制选择器匹配监听事件触发，“component”事件域有完整的组件查询选择器，在其他域有更多的选择器。</p>
+                        <p>在Ext JS 5+，每个视图控制器从一个叫“view”事件域创建新的实例，这些事件域允许视图控制器使用标准的<code>listen</code>和<code>control</code>方法，同时限制它们的视图隐式范围。它还增加了一个特殊选择器,以匹配视图本身:</p>
                         <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.foo.FooController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.foo',
     control: {
-        '#': {  // matches the view itself
+        '#': {  // 匹配视图本身
             collapse: 'onCollapse'
         },
         button: {
@@ -355,25 +355,25 @@ Ext.define('MyApp.view.foo.FooController', {
         }
     }
 });</code></pre>
-                        <p>The key difference between listeners and selectors can be seen above. The “button” selector will match any button in this view or any child view, irrespective of depth, even if that button belongs to a great-grandchild view. In other words, selector-based handlers do not respect encapsulation boundaries. This behavior is consistent with previous <a href="../6.0.1-classic/#!/api/Ext.app.Controller" data-full-load="true">Ext.app.Controller</a> behavior and can be a useful technique in limited situations.</p>
-                        <p>Lastly, these event domains respect nesting and effectively “bubble” an event up the view hierarchy. That is to say, when an event fires, it’s first delivered to any standard listeners. Then, it’s delivered to its owning ViewController, followed by its parent ViewController (if any) on up the hierarchy. Eventually, the event is delivered to the standard “component” event domain to be handled by Ext.app.Controller-derived controllers.</p>
-                        <h3 id="Life_cycle">Life cycle</h3>
-                        <p>A common technique with large applications is to dynamically create controllers when they are first needed. This could help reduce the load time of the application and help runtime performance as well by not activating all potential controllers. The limitation to this in previous versions was that, once created, these controllers would remain active in the application. It was not possible to destroy them and release their resources. Likewise, this did not change the reality that a controller could have any number of associated views (including none).</p>
-                        <p>The ViewController, however, is created very early in the component’s lifecycle and is bound to that view for its entire lifetime. When that view is destroyed, the ViewController is likewise destroyed. This means that the ViewController is no longer forced to manage states where there is no view or many views.</p>
-                        <p>This one-to-one relationship means reference tracking is simplified and no longer prone to leaking destroyed components. A ViewController can implement any of these methods to perform tasks at key points in its lifecycle:</p>
+                        <p> 监听器和选择器之间的关键差异请看上面的代码，“button”选择器将匹配这个视图的和子视图的所有按钮，不管深度，即使那个按钮属于一个曾孙视图。换句话说，基本选择器处理程序不管封装边界。这些行为和以前的<a href="../6.0.1-classic/#!/api/Ext.app.Controller" data-full-load="true">Ext.app.Controller</a> 行为一致，在有限的情况下是一个有用的技术。</p>
+                        <p>最后，这些事件域在视图层结构遵循嵌套并且向上有效“bubble”，就是说，当一个事件被触发，它首先提交到标准事件事临听器，然后，提交到自己的视图控制器，再向上通过层次结构提交到父视图控制器（如果有）。最终，事件提交到标准“component”事件域被Ext.app.Controller处理。</p>
+                        <h3 id="Life_cycle">生命周期</h3>
+                        <p>对于大型应用程序动态创建控制器是一种常见技术，这将有助于减少应用程序的加载时间和运行时不激活所有控制器以提高性能。Ext JS在之前的版本是有做不到的，一旦创建，这些控制器将活跃在整个应用程序的生命周期。不能摧毁他们释放资源。同样，一个控制器可以管理任意数量的相关视图(包括没有)。</p>
+                        <p>然而，视图控制器在视图创建的早期就绑定到组件整个生命周期，视图销毁，视图控制器同样销毁。这意味着视图控制器不再管理许多视图或者不存在视图。</p>
+                        <p>这种一对一的关系意味着reference是简化的，摧毁组件不再容易泄漏内存。视图控制器可以在其生命周期帮助您实现这些方法：</p>
                         <ul>
-                            <li>beforeInit - This method can be overridden in order to operate on the view prior to its initComponent method being called. This method is called immediately after the controller is created, which occurs during initConfig called from the Component constructor.</li>
-                            <li>init - Called shortly after initComponent has been called on the view. This is the typical time to perform initialization for the controller now that the view is initialized.</li>
-                            <li>initViewModel - Called when the view’s ViewModel is created (if one is defined).</li>
-                            <li>destroy - Cleanup and return resources (be sure to call <code>callParent</code>).</li>
+                            <li>beforeInit - 为了操作视图可以覆盖这个方法，它在initComponent方法被调用之前调用，在控制器创建后立即调用，在initConfig方法调用组件构造函数后触发。</li>
+                            <li>init - 视图的initComponent方法调用不久后调用，这是执行控制器初始化、视图初始化的典型时间。</li>
+                            <li>initViewModel - 当视图的视图模型创建时调用（如果有）。</li>
+                            <li>destroy - 清理和回收资源（必须调用<code>callParent</code>方法）</li>
                         </ul>
-                        <h2 id="Conclusion">Conclusion</h2>
-                        <p>We think ViewControllers will greatly streamline your MVC applications. They also work very well with ViewModels, so you can combine these approaches and their respective strengths. We’re excited about the upcoming release and seeing these improvements at work in your applications.</p>
+                        <h2 id="Conclusion">结论</h2>
+                        <p>我们认为视图控制器能极大地简化MVC程序，它们结合视图模型能够做的更好，您可以在开发中利用这些方法的优点来进行开发。我们很高兴能在您即将发布的应用程序，看到这些改进。</p>
                     </div>
                     <div class="tpl-content-lastUpdated">
-                        Last updated
+                        最近更新时间 
                         <div id="tpl-content-lastUpdated-date" itemprop="datePublished" datetime="2016-04-01T12:27Z">
-                            April 1, 2016
+                            2016年4月6日
                         </div>
                     </div>
                 </div>
