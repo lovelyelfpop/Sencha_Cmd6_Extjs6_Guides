@@ -91,8 +91,8 @@
        <a class="toc-page-h3" href="#Dynamic_Variables" title="Dynamic Variables">动态变量</a> 
        <a class="toc-page-h4" href="#Assignment" title="Assignment">赋值</a> 
        <a class="toc-page-h4" href="#Evaluation" title="Evaluation">计算</a> 
-       <a class="toc-page-h4" href="#Hoisting" title="Hoisting">提升</a> 
-       <a class="toc-page-h4" href="#Elevation" title="Elevation">Elevation</a> 
+       <a class="toc-page-h4" href="#Hoisting" title="Hoisting">变量提升(Hoisting)</a> 
+       <a class="toc-page-h4" href="#Elevation" title="Elevation">提升(Elevation)</a> 
        <a class="toc-page-h3" href="#Extensions___Requiring_JavaScript" title="Extensions - Requiring JavaScript">扩展 - 需要 JavaScript</a> 
        <a class="toc-page-h2" href="#Upgrading" title="Upgrading">升级</a> 
        <a class="toc-page-h3" href="#Dynamic_Variables" title="Dynamic Variables">动态变量</a> 
@@ -104,21 +104,21 @@
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
        <h2 id="Introduction">前言</h2> 
-       <p>在Sencha Cmd 6.0,我们很高兴的介绍了一种新颖快速开发Ext JS 6.0样式的工具，它名叫“Fashion”.结合 Fashion 和 <code>sencha app watch</code> 创建一种新的样式开发模式，我们称之为“实时更新”.</p> 
-       <p>“实时更新”使用Fashion编译注入最新的CSS到您正在运行的页面里.这意味着，您不必重新加载CSS文件去看样式更改，而是近乎实时的就可以直接在浏览器里看到样式的更改效果.</p>
-       <p>当为Ext JS 6的应用编译样式的时候，Sencha Cmd 6也使用了Fashion。由于Fashion是在JavaScript里实现的，所以不在需要Ruby.</p> 
-       <h2 id="What_is_Fashion_">什么是Fashion?</h2> 
-       <p>Fashion 是一个 <code>.scss</code> 的编译器，用于产生CSS. Fashion也会添加一些不适用于Sass的新特性，以致于允许工具像Snecha检查器一样直观的检查和编辑定义在样式里的变量(或者您程序里的变量).</p> 
+       <p>在Sencha Cmd 6.0, 我们很高兴的向大家介绍一种新颖快速开发 Ext JS 6.0 主题样式的工具，名叫“Fashion”. 结合使用 Fashion 和 <code>sencha app watch</code> 成为了一种新的主题样式开发模式，我们称之为“实时更新”.</p> 
+       <p>“实时更新”使用 Fashion 编译注入最新的 CSS 到你正在运行的页面里. 这意味着，你不必重新加载 CSS 文件去看样式更改，而是近乎实时的就可以直接在浏览器里看到样式的更改效果.</p>
+       <p>当为 Ext JS 6 的应用编译样式的时候，Sencha Cmd 6也使用了 Fashion。由于 Fashion 是在 JavaScript 里实现的，所以不在依赖 Ruby.</p> 
+       <h2 id="What_is_Fashion_">什么是 Fashion?</h2> 
+       <p>Fashion 是一个 <code>.scss</code> 的编译器，用于生成 CSS. Fashion 也加入了一些 Sass 没有的新特性，这些新特性允许像 Sencha 检查器这样的工具可以直观的检查和编辑定义在主题样式里的变量(或者你程序里的变量).</p> 
        <h3 id="JavaScript_Extensions">JavaScript 扩展</h3> 
-       <p>通过编写JavaScript模块，用户可以扩展Fashion的功能. 一般来讲, Ext JS 用户都比较熟悉JavaScript, 所以扩展行为应该比扩展Compass简单。下面我们将介绍更多关于扩展Fashion.</p> 
-       <p>现在言归正传, 让我们来一起聊聊Fashion!</p> 
+       <p>通过编写 JavaScript 模块，用户可以扩展 Fashion 的功能. 一般来讲, Ext JS 用户都比较熟悉 JavaScript, 所以扩展行为应该比扩展 Compass 简单。下面我们将介绍更多关于扩展 Fashion 的内容.</p> 
+       <p>现在言归正传, 让我们来一起聊聊 Fashion!</p> 
        <h3 id="Compatibility">兼容性</h3> 
-       <p> Fashion 兼容CSS3语法以及大多数的 <a href="../../../https@github.com/sass/sass-spec">sass-spec</a> 验证套件. 因为 Fashion 理解大多数的Sass代码, 获取存在的 <code>.scss</code>代码,用Fashion去编译应该不是什么难事。</p> 
-       <p>由于一些额外的特性，稍后会讨论到，不管怎么样,说Fashion是Sass的一种实现或者Fashion编译的语言是Sass是不正确的。有许多地方，Sass经常被用于配置选项名或者磁盘目录。考虑到兼容性, 这些配置选项仍旧命名为Sass,即使下面的语言不是严格意义上的Sass.</p> 
+       <p> Fashion 兼容 CSS3 语法以及大多数的 <a href="https://github.com/sass/sass-spec">sass-spec</a> 验证套件. 因为 Fashion 理解大多数的Sass代码, 获取存在的 <code>.scss</code>代码, 用 Fashion 去编译应该不是什么难事。</p> 
+       <p>不过, 由于一些额外的特性(稍后会讨论到), 说 Fashion “是 Sass 的一种实现”或者 Fashion 编译的语言“是Sass”是不正确的。有许多地方，Sass 这个单词经常被用于配置项名字或者磁盘目录。考虑到兼容性, 这些配置项仍旧命名为 Sass, 尽管下面的语言不是严格意义上的 Sass.</p> 
        <h2 id="Using_Live_Updates">使用实时更新</h2> 
-       <p>您可以在主流浏览器里打开一个应用，你会发现加载的是Sass文件而不是CSS。Fashion 可以监控文件改动并重新编译Sass文件，更新CSS而不需要重新加载页面。</p> 
-       <p>有两种方式让Fashion应用于<code>sencha app watch</code>.</p> 
-       <p>你可以通过编辑<code>app.json</code>中的“development”对象</p> 
+       <p>你可以在主流浏览器里打开应用，你会发现加载的是 Sass 文件而不是 CSS。Fashion 可以监控文件改动并重新编译 Sass 文件，并更新 CSS 而不需要重新加载页面。</p> 
+       <p>有两种方式可以让 <code>sencha app watch</code>启用 Fashion.</p> 
+       <p>你可以编辑<code>app.json</code>中的“development”对象</p> 
        <pre mode="javascript" theme="chrome"><code>...
 &quot;development&quot;: {
     &quot;tags&quot;: [
@@ -126,17 +126,17 @@
     ]
 },
 ...</code></pre> 
-       <p>另外一种, 您可以在您加载的页面URL中添加 “?platformTags=fashion:1”</p> 
+       <p>另外一种, 你可以在加载的页面URL中加上 “?platformTags=fashion:1”</p> 
        <p>现在我们准备运行:</p> 
        <ul> 
-        <li>在您的项目根路径执行 “sencha app watch” .</li> 
-        <li>浏览器导航到您的应用程序 (for example, <a href="../../../localhost_3A1841/app)">http://localhost:1841/app)</a>.</li> 
+        <li>在你的项目根路径执行 “sencha app watch” .</li> 
+        <li>浏览器导航到你的应用程序 (例如, <a href="http://localhost:1841/app)">http://localhost:1841/app)</a>.</li> 
        </ul> 
        <p>现在你可以更改主题样式变量，应该几乎马上就能看到更改后的效果了。</p> 
-       <p><strong>备注</strong>:当从Cmd WEB服务器上查看页面时，才会实时更新。在Ext Js Classic工具包里, 一些Sass更改需要一次布局或者刷新整个页面才生效。在Modern工具包里，这将不至于成为一个问题，因为它更大力度的基于CSS3和自适应一些未知的变化.</p> 
+       <p><strong>备注</strong>: 只有从 Cmd WEB 服务器上查看页面时，才会实时更新。在 Ext Js Classic toolkit 里, 某些 Sass 的更改需要一次重新布局或者刷新整个页面才生效。在 Modern toolkit 里，这不是个问题，因为它更多地基于 CSS3 和自适应一些未知的变化.</p> 
        <h2 id="Language_Extensions">语言扩展</h2> 
        <h3 id="Dynamic_Variables">动态变量</h3> 
-       <p>动态变量扮演着很重要的一部分在Fashion里.动态变量跟普通的变量非常相似，但动态变量的值被隐蔽在“dynamic()”里.他们的不同之处正是变量之间如何相互影响. Consider</p> 
+       <p>在Fashion里, 动态变量扮演着很重要的一部分. 动态变量跟普通的变量非常相似，但动态变量的值被包裹在“dynamic()”里. 动态变量和普通变量的不同之处正是它们之间如何交互. 请看下面代码</p> 
        <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
 
 $foo: dynamic($bar);  // 注意 $foo 依赖 $bar
@@ -144,17 +144,17 @@ $foo: dynamic($bar);  // 注意 $foo 依赖 $bar
 $bar: dynamic(red);
 
 @debug $foo;  // red</code></pre> 
-       <p>注意看 <code>$foo</code> 从 <code>$bar</code>中计算得来.这种依赖被Fashion特殊处理， <code>$foo</code> 的计算过程延迟到<code>$bar</code> 的最终结果被知晓之后.</p> 
-       <p>换而言之,动态变量有两次处理过程：赋值 和 计算.</p> 
+       <p>注意 <code>$foo</code> 从 <code>$bar</code>计算得来. 这种依赖被 Fashion 特殊处理， <code>$foo</code> 的计算会延迟到<code>$bar</code> 的最终结果被确定之后.</p> 
+       <p>换而言之, 动态变量有两次处理过程：赋值 和 计算.</p> 
        <h4 id="Assignment">赋值</h4> 
-       <p>动态变量, 跟普通变量一样, 都是通过普通的“cascade”规则<em>赋值</em>(unlike !default):</p> 
+       <p>动态变量, 跟普通变量一样, 都是通过普通的“瀑布流”的顺序<em>赋值</em>的(不像 !default):</p> 
        <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
 
 $bar: dynamic(red);
 
 @debug $bar;  // red</code></pre> 
-       <p>这使得工具附加自定义的值到任何代码片段控制它们的动态变量.</p> 
-       <p>给动态变量赋值只会发生在文件范围内，任何控制结构范围之外。举例, 这是非法的:</p> 
+       <p>这使得工具可以将自定义值添加到任何代码块, 并控制它们的动态变量.</p> 
+       <p>给动态变量赋值只会在文件范围内有效，并且要放在控制结构语句之外。比如, 这是非法的:</p> 
        <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
 
 @if something {
@@ -162,8 +162,8 @@ $bar: dynamic(red);
 }</code></pre> 
        <p>替换上面的写法, 应该这样写:</p> 
        <pre mode="javascript" theme="chrome"><code>$bar: dynamic(if(something, red, blue));</code></pre> 
-       <p>为确保下面即将讨论到的赋值和提升行为，这种书写要求是必要的。 </p> 
-       <p>动态变量可以在它们使用或者不使用<code>dynamic()</code> 声明之后赋值.</p> 
+       <p>为确保值的计算以及下面即将讨论的变量提升，这种书写要求是必要的。 </p> 
+       <p>动态变量可以在它们声明(不管有没有<code>dynamic()</code>)之后赋值.</p> 
        <pre mode="javascript" theme="chrome"><code>$bar: dynamic(blue);
 
 $bar: red;  // 重新给 $bar 赋值 red
@@ -173,31 +173,31 @@ $bar: green !default;  // 重新给 $bar 赋值 green
 @debug $bar;  // green</code></pre> 
        <p>没有“default dynamic”这种东西.</p> 
        <h4 id="Evaluation">计算</h4> 
-       <p>动态变量何时<em>计算</em>依赖于顺序, 但不是变量声明顺序. 变量声明顺序仅仅应用于层级个人变量赋值. 看上面的例子即可明白. 这种顺序同时意味着，即使我们移除第一个 <code>$bar</code>的设置，其最终也是相同结果。</p> 
+       <p>动态变量根据依赖顺序<em>计算</em>, 而不是变量声明顺序. 声明顺序仅适用于级联的单个变量赋值. 看上面的例子即可明白. 这种顺序同时意味着，即使我们移除第一个 <code>$bar</code>的设置，其最终也是相同结果。</p> 
        <p>考虑更复杂的例子:</p> 
        <pre mode="javascript" theme="chrome"><code>$bar: dynamic(mix($colorA, $colorB, 20%));
 
 $bar: dynamic(lighten($colorC, 20%));</code></pre> 
-       <p><code>$bar</code> 原始的表达式使用<code>$colorA</code> 和 <code>$colorB</code>. 那是 <code>$bar</code>唯一的赋值, 然后<code>$bar</code>会依赖这两个变量重新计算赋值。故而<code>$bar</code> 被重新计算赋值，紧接着使用<code>$colorC</code>, 总之, <code>$bar</code> 仅仅依赖 <code>$colorC</code>. <code>$bar</code> 原始的赋值可能永远不会发生。</p> 
-       <h4 id="Hoisting">提升</h4> 
-       <p>为了完成这一切, 在任何其它Sass代码执行之前，Fashion会收集所有动态变量并且计算他们的值. 换而言之, 类似于JavaScript 变量, 动态变量提升到顶层.</p> 
-       <h4 id="Elevation">Elevation</h4> 
-       <p>当用动态变量给变量赋值时, 这些变量就已经被<em>上升</em>到动态变量.</p> 
+       <p><code>$bar</code> 原表达式使用<code>$colorA</code> 和 <code>$colorB</code>. 如果那是 <code>$bar</code>唯一的一次赋值, 那么<code>$bar</code>会依赖这两个变量计算结果。不过此处<code>$bar</code> 被重新赋值，紧接只用了<code>$colorC</code>, 最终, <code>$bar</code> 仅依赖 <code>$colorC</code>. <code>$bar</code>最初的那次赋值可能永远不会发生。</p> 
+       <h4 id="Hoisting">变量提升(Hoisting)</h4> 
+       <p>为了完成这一切, 在任何其它Sass代码执行之前，Fashion 会收集所有动态变量并且计算他们的值. 换而言之, 类似于 JavaScript 变量, 动态变量会被提升到顶部.</p> 
+       <h4 id="Elevation">提升(Elevation)</h4> 
+       <p>当用某些变量给动态变量赋值时, 这些变量就已经被<em>提升</em>为动态变量.</p> 
        <pre mode="javascript" theme="chrome"><code>$foo: blue;
 
 $bar: dynamic($foo);</code></pre> 
-       <p>即使 <code>$foo</code>被声明成普通变量, 但由于 <code>$bar</code> 使用了 <code>$foo</code>, Fashion 将 <code>$foo</code> 上升到动态变量.</p> 
+       <p>即使 <code>$foo</code>被声明成普通变量, 但由于 <code>$bar</code> 使用了 <code>$foo</code>, Fashion 将 <code>$foo</code> 提升到了动态变量.</p> 
        <p><strong>备注:</strong> 这也同时表明 <code>$foo</code> 必须服从动态变量的规则.</p> 
-       <p>最大化从上版本移植的Sencha Cmd支持这种行为. 当普通变量被提升至动态变量,会产生警告. 在接下来的发布, 这个警告会变成一个错误. 我们推荐尽可能的用<code>dynamic()</code>声明变量.</p> 
-       <h3 id="Extensions___Requiring_JavaScript">扩展 - 要求 JavaScript</h3> 
-       <p>您可以通过编写JavaScript代码扩展Fashion. 引用这些来自Sass的代码需要使用<code>require()</code>. 例如:</p> 
+       <p>当从旧版本 Sencha Cmd 移植, 已经最大限度支持这种行为了. 当普通变量被提升至动态变量, 会产生警告. 在接下来的发布, 这个警告会变成一个错误. 我们推荐尽可能的用<code>dynamic()</code>声明变量.</p> 
+       <h3 id="Extensions___Requiring_JavaScript">扩展 - 需要 JavaScript</h3> 
+       <p>你可以通过编写 JavaScript 代码扩展 Fashion. 引用这些来自Sass的代码需要使用<code>require()</code>. 例如:</p> 
        <pre mode="javascript" theme="chrome"><code>require(&quot;my-module&quot;);
 
 // or
 
 require(&quot;../path/file.js&quot;); // relative to scss file</code></pre> 
-       <p>在内部, Fashion 使用 <a href="../../../wiki.ecmascript.org/doku.php@id=harmony_3Aspecification_drafts#august_24_2014_draft_rev_27">ECMAScript 6</a> (ES6) <code>System.import</code> API (or its <a href="../../../https@github.com/ModuleLoader/es6-module-loader">polyfill</a> via <a href="../../../https@github.com/systemjs/systemjs">SystemJS</a>) 去支持加载标准的JavaScript 模块.</p> 
-       <p>用pre-ES6语法写一个模块可以这样写:</p> 
+       <p>在内部, Fashion 使用 <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#august_24_2014_draft_rev_27">ECMAScript 6</a> (ES6) <code>System.import</code> API (或者<a href="https://github.com/systemjs/systemjs">SystemJS</a>的<a href="https://github.com/ModuleLoader/es6-module-loader">polyfill</a>) 去支持加载标准的 JavaScript 模块.</p> 
+       <p>用 pre-ES6 语法写一个模块可以这样写:</p> 
        <pre mode="javascript" theme="chrome"><code>exports.init = function(runtime) {
     runtime.register({
         magic: function (first, second) {
@@ -205,7 +205,7 @@ require(&quot;../path/file.js&quot;); // relative to scss file</code></pre>
         }
     });
 };</code></pre> 
-       <p>使用 SystemJS, 您可以在任何浏览器中编写ES6代码启用“transpilers” . 在ES6中写法如下:</p> 
+       <p>使用 SystemJS, 你可以启用“transpilers”来在任何浏览器中编写 ES6 代码 . 在 ES6 中写法如下:</p> 
        <pre mode="javascript" theme="chrome"><code>module foo {
     export function init (runtime) {
         runtime.register({
@@ -217,7 +217,7 @@ require(&quot;../path/file.js&quot;); // relative to scss file</code></pre>
 }</code></pre> 
        <h2 id="Upgrading">升级</h2> 
        <h3 id="Dynamic_Variables">动态变量</h3> 
-       <p>当升级到Ext JS 6, 内部使用动态变量会影响这些变量如何在应用程序或者自定义主题里赋值. 尽管不是必要的, 我们推荐您使用!dynamic改变变量赋值. 多数情况下可以不加思索的用!dynamic替换!default(早前发布版本的方法):</p> 
+       <p>当升级到 Ext JS 6, 动态变量的内部用法会影响这些变量如何在应用程序或者自定义主题里赋值. 尽管不是必要的, 我们推荐你使用 !dynamic 改变变量的值. 多数情况下可以不加思索的用 dynamic() 替换 !default (早前发布版本的方法):</p> 
        <pre mode="javascript" theme="chrome"><code>// before:
 
 $base-color: green !default;
@@ -227,9 +227,9 @@ $base-color: green !default;
 $base-color: dynamic(green);</code></pre> 
        <p>动态变量赋值更严格，如果有错误也会更加容易发现.</p> 
        <h3 id="Compass_Extensions">Compass 扩展</h3> 
-       <p>Compass依赖Ruby代码的功能将不再支持，因为已经不用Ruby了. 同样的功能已经用JavaScript代替了. 在许多情形下，在JavaScript中使用 <code>require()</code> 实现这些缺失的功能. 不管怎样，部分来自Compass的Sass代码，已经包含在Fashion里，所以并不是所有的Compass功能会被影响. 一般来讲, 如果您没有使用任何自定义或者基于Ruby的Compass功能，您将可能不需要作任何变动.</p> 
+       <p>Compass 依赖 Ruby 代码的功能将不再支持，因为已经不用 Ruby 了. 同样的功能已经用 JavaScript 代替了. 在许多情形下，在 JavaScript 中使用 <code>require()</code> 实现这些缺失的功能. 不管怎样，部分来自 Compass 的 Sass 代码，已经包含在 Fashion 里，所以并不是所有的 Compass 功能会被影响. 一般来讲, 如果你没有使用任何自定义或者基于 Ruby 的 Compass 功能，你将可能不需要作任何变动.</p> 
        <h2 id="Conclusion">结语</h2> 
-       <p>我们对Fashion很是兴奋，希望你们也是如此! 快速为您的应用构建主题从未如此简单过, 并且现在可以在同一套框架语言下完成扩展Sass. 请务必通过<a href="../../../https@www.sencha.com/forum/forumdisplay.php@8-Sencha-Cmd">论坛</a>给我们留下反馈.</p> 
+       <p>Fashion 令我们非常兴奋，希望你们也一样! 改变你的应用程序的主题样式从未如此简单, 并且现在可以使用和框架一样的语言来扩展 Sass. 请务必在<a href="https://www.sencha.com/forum/forumdisplay.php?8-Sencha-Cmd">论坛</a>给我们留下反馈.</p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         最新更新 
