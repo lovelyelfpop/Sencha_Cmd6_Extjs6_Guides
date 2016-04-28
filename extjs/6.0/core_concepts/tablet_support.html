@@ -7,7 +7,7 @@
   <title>Ext JS 向导 | 平板设备支持</title> 
   <meta charset="UTF-8" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
   <script type="text/javascript">
 
     function showMenu(link_obj){
@@ -146,82 +146,82 @@
     <div id="tpl-content"> 
      <div> 
       <div class="toc-page" style="display:block;">
-        Contents 
-       <a class="toc-page-h2" href="#How_Touch_Screen_Support_is_Implemented" title="How Touch-Screen Support is Implemented">How Touch-Screen Support is Implemented</a> 
-       <a class="toc-page-h3" href="#Event_Normalization" title="Event Normalization">Event Normalization</a> 
-       <a class="toc-page-h3" href="#Gesture_System" title="Gesture System">Gesture System</a> 
-       <a class="toc-page-h3" href="#Touch_Scroller" title="Touch Scroller">Touch Scroller</a> 
-       <a class="toc-page-h2" href="#What_Touch_Screen_Support_Means_for_Applications" title="What Touch-Screen Support Means for Applications">What Touch-Screen Support Means for Applications</a> 
+        目录 
+       <a class="toc-page-h2" href="#How_Touch_Screen_Support_is_Implemented" title="如何实现触摸屏支持">如何实现触摸屏支持</a> 
+       <a class="toc-page-h3" href="#Event_Normalization" title="事件标准化">事件标准化</a> 
+       <a class="toc-page-h3" href="#Gesture_System" title="手势系统">手势系统</a> 
+       <a class="toc-page-h3" href="#Touch_Scroller" title="触摸滚动">触摸滚动</a> 
+       <a class="toc-page-h2" href="#What_Touch_Screen_Support_Means_for_Applications" title="应用程序的触摸屏支持意味着什么">应用程序的触摸屏支持意味着什么</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
-       <h1>Tablet and Touch-Screen Support in Ext JS 5</h1> 
+       <h1>在Ext JS 5中支持平板和触摸屏设备</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p>Ext JS offers support for devices withtouch-screen input, including tablets and touch-screen laptops. The primary goal of this feature is to allow Ext JS applications to run on touch-screen devices with little or no modification. This means that developers can spend less time thinking about compatibility issues, and more time implementing great applications.</p> 
-       <h2 id="How_Touch_Screen_Support_is_Implemented">How Touch-Screen Support is Implemented</h2> 
-       <p>Support for devices with touch-screens can be broken down into three categories.</p> 
-       <h3 id="Event_Normalization">Event Normalization</h3> 
-       <p>Event normalization is the key to allowing Ext JS applications to run on touch-screen devices. This normalization occurs behind the scenes and is a simple translation from standard mouse events to their equivalent touch and pointer events.</p> 
-       <p>Pointer events are a w3c standard for dealing with events that target a specific set of coordinates on the screen, regardless of input device (mouse, touch, stylus, etc.)</p> 
-       <p>When your code requests a listener for a mouse event, the framework attaches a similar touch or pointer event as needed. For example, if the application attempts to attach a mousedown listener:</p> 
+       <p>Ext JS 提供了对触屏输入设备包含平板和触摸屏手提电脑的支持.这个特性的主要目的是使用较小或不用修改就能允许 Ext JS 应用程序运行在触摸屏设. 这意味着开发人员不用花太多时间来思考兼容性问题,从而有更多的时间来实现应用程序功能.</p> 
+       <h2 id="How_Touch_Screen_Support_is_Implemented">如何实现触摸屏支持</h2> 
+       <p>支持触屏设备可以分解为三个方面.</p> 
+       <h3 id="Event_Normalization">事件标准化</h3> 
+       <p>事件标准化是允许 Ext JS应用程序在触屏设备上运行的关键.这个标准化发生在幕后是从标准的鼠标事件转换为等价的触屏和指针事件.</p> 
+       <p>指针事件是 w3c 标准来处理定位屏幕上一个特定坐标的事件,与输入设备无关(鼠标,触屏,触笔等等.</p> 
+       <p>当你的代码要一个鼠标事件的监听器请求时,框架绑定一个相似的按需的触点事件.例如,如果应用程序要绑定一个 mousedown (鼠标按下)监听器:</p> 
        <pre mode="javascript" theme="chrome"><code>myElement.on('mousedown', someFunction);</code></pre> 
-       <p>The event system translates this to touchstart in the case of a device that supports touch events:</p> 
+       <p>在一个支持触点事件的设备上,事件系统转换这个操作为一个touchstart 事件:</p> 
        <pre mode="javascript" theme="chrome"><code>myElement.on('touchstart', someFunction);</code></pre> 
-       <p>Or, pointerdown in the case of a device that supports pointer events:</p> 
+       <p>或者, 在一个支持触笔事件的设备上转换为一个 pointerdown (点下)事件:</p> 
        <pre mode="javascript" theme="chrome"><code>myElement.on('pointerdown', someFunction);</code></pre> 
-       <p>This translation is in place so that you may achieve tablet and touch-screen support without any additional coding.</p> 
-       <p>In most cases the framework can transition seamlessly between mouse, touch, and pointer input. However, there are a few mouse interactions (such as mouseover) that do not translate easily into touch interactions. Such events will need to be handled on an individual basis and are addressed in a following section.</p> 
-       <h3 id="Gesture_System">Gesture System</h3> 
-       <p>In addition to standard DOM events, Elements also fire synthesized “gesture” events. Since the Sencha Touch event system forms the basis for the new event system in Ext JS 5, Sencha Touch users may already be familiar with this concept.</p> 
-       <p>From a browser’s perspective, there are 3 primary types of pointer, touch, and mouse events - start, move, and end:</p> 
+       <p>有了这个转换,你就可以不需要额外的编码来完成平板和触屏设备的支持.</p> 
+       <p>大多数情况下框架能在鼠标、触屏和触笔输入设备间作无缝转换.但是,有 一些鼠标操作(如 mouseover) 不能简单的翻译到触屏动作.这些事件需要一些区别对待,在下节中将会列出来.</p> 
+       <h3 id="Gesture_System">手势系统</h3> 
+       <p>和标准的DOM事件不一样的是,元素也能够触发人工 &quot;手势&quot;事件. 因此在 Ext JS 5中 Sencha Touch 事件系统形成了这些新事件的基础实现,Sencha Touch 用户可能已经熟悉了这个概念.</p> 
+       <p>从浏览器的方面来看,有三种主要类型关于触笔、触屏和鼠标的事件- 开始、移动和结束:</p> 
        <table> 
         <tbody> 
          <tr> 
-          <th>Event</th> 
+          <th>事件</th> 
           <th>Touch</th> 
           <th>Pointer</th> 
           <th>Mouse</th> 
          </tr> 
          <tr> 
-          <th>Start</th> 
+          <th>开始</th> 
           <td>touchstart</td> 
           <td>pointerdown</td> 
           <td>mousedown</td> 
          </tr> 
          <tr> 
-          <th>Move</th> 
+          <th>移动</th> 
           <td>touchmove</td> 
           <td>pointermove</td> 
           <td>mousemove</td> 
          </tr> 
          <tr> 
-          <th>Stop</th> 
+          <th>停止</th> 
           <td>touchend</td> 
           <td>pointerup</td> 
           <td></td> 
          </tr> 
         </tbody> 
        </table> 
-       <p>Upon interpreting the sequence and timing of these events, the framework can synthesize more complex events such as <code>drag</code>, <code>swipe</code>, <code>longpress</code>, <code>pinch</code>, <code>rotate</code>, and <code>tap</code>. Ext JS applications can listen for gesture events just like any other event, for example:</p> 
+       <p>在解释这些事件的时序上,框架能合成更多复杂的事件诸如drag(拖), swipe(滑动), longpress(长按), pinch(捏), rotate(旋转), 和 tap(轻触). Ext JS 应用程序能象其它事件一样监听手势事件,例如:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.get('myElement').on('longpress', handlerFunction);</code></pre> 
-       <p>The original Sencha Touch gesture system was designed primarily with touch events in mind. By adding full support for pointer and mouse events to the Gesture system, Ext JS allows any gesture to respond to any type of input. This means not only that all gestures can be triggered using touch input, but all single-point gestures (tap, swipe, etc.) can be triggered using a mouse as well. This results in a gesture system that works seamlessly across devices regardless of input type.</p> 
-       <h3 id="Touch_Scroller">Touch Scroller</h3> 
-       <p>Native scrolling of elements with overflowing content leaves a lot to be desired in some mobile webkit browsers. The lack of momentum scrolling and scroll position indicators can make scrolling a tedious and unintuitive experience. The ‘touch scroller’, borrowed from Sencha Touch, solves this problem by implementing momentum scrolling with scroll indicators using JavaScript. Application developers typically won’t need to do anything to turn the touch scroller on. It is enabled by default in browsers where native scrolling is less than optimal.</p> 
-       <h2 id="What_Touch_Screen_Support_Means_for_Applications">What Touch-Screen Support Means for Applications</h2> 
-       <p>Normalized events and gesture recognition are active by default in Ext JS 5 applications. This means that, in most cases, no special actions are necessary to enable tablet and touch-screen support. However, there are two particular areas that may need special attention.</p> 
-       <p>The first deals with mouse events that don’t have an obvious analog in the touch world. As of now, Ext JS 5 does not attempt to perform any normalization for the following mouse events:</p> 
+       <p>原始的 Sencha Touch 手势系统原意是为主要处理触屏事件而设计的. 通过增加对点击类和鼠标事件到手势系统, Ext JS 5 允许任意手势来响应任意类型的输入. 这意味着不管是使用触碰所有手势能被触发,而且所有单点手势 (如tap(轻触), swipe(滑动)等.) 也能象鼠标一样被触发.手势处理系统的这一结果可以在输入类型无关的设备间无缝工作.</p> 
+       <h3 id="Touch_Scroller">触摸滚动</h3> 
+       <p>在有些移动webkit浏览器中有溢出内容的元素的原生滚动有许多想要的内容.缺乏滚动惯性和滚动位置指示会使滚动繁琐和有直观的体验.这个 ‘touch scroller’, 从Sencha Touch 中借鉴过来的,通过使用 JavaScript 的滚动指示实现惯性滚动解决了这个问题.应用程序开发人员通常不需要做什么就可以开启 touch scroller.当浏览器的本地化滚动不是最佳时这个功能就默认启用了..</p> 
+       <h2 id="What_Touch_Screen_Support_Means_for_Applications">应用程序的触摸屏支持意味着什么</h2> 
+       <p>标准化事件和手势识别在 Ext JS 5 的应用程序中默认是激活的.这就是说,在大多数情况下,不需要特别的动作来启动平板和触屏设备的支持.但是,有2个特别方面需要额外的注意.</p> 
+       <p>第一个方面是处理在触屏世界里没有明显类似的鼠标事件. 现在, Ext JS 5 不再尝试实现如下鼠标事件的标准化:</p> 
        <ul> 
         <li>mouseover</li> 
         <li>mouseout</li> 
         <li>mousenter</li> 
         <li>mouseleave</li> 
        </ul> 
-       <p>Application functionality that responds to these events on desktop devices may have to be re-implemented separately for touch devices. Developers should keep this in mind when architecting applications. In order to ensure that important application functionality is accessible to touch screens, it may be necessary to provide an alternate implementation for these interactions. This often means substituting the mouse event with an appropriate touch gesture. Ext JS takes this approach internally in several places.</p> 
-       <p>One example is the grid component. On desktop devices, grid column header menus are shown in response to a click on the header’s trigger element. However, the trigger only becomes visible in response to a mouseover of the column header. Since a gesture equivalent to ‘mouseover’ does not exist on touch screens, the trigger never becomes visible and so cannot be touched. To ensure that the column header menu can be accessed, Ext JS displays the menu in response to a ‘longpress’ if it detects that the grid is being used on a touch-screen device.</p> 
-       <p><strong>Note:</strong> <em>Developers of applications and custom components may need to make similar adjustments as needed.</em></p> 
-       <p>The second area that may require attention relates to some internal framework changes. In order to support Touch gestures, Ext JS 5+ switched to a delegated event model. Instead of attaching listeners directly to DOM elements, a single listener for each event type is attached at the top of the DOM (the window or document object). The Ext JS event system then dispatches event handlers based on the target elements of events that bubble up to the window object. Application developers who use only Ext JS APIs to listen for events will not experience any problems with this new approach.</p> 
-       <p>However, if DOM APIs are used to directly attach listeners (addEventListener or attachEvent), or if 3rd party JavaScript libraries are used, issues may occur with the timing of directly attached event handlers relative to the timing of their delegated counterparts.</p> 
-       <p><strong>Note:</strong> <em>Tablet and touch-screen support works with Safari, Chrome and IE10+. The Android browser is not supported.</em></p> 
+       <p>在桌面电脑设备上对这些事件响应的功能在触屏设备上必须要重新实现.开发人员在对应用程序进行架构设计时需要把这个记在心里.为了确保在触屏设备上一些重要的功能能够被访问,需要对这些操作提供一个替代的实现方法.这意味着用一个合适的触碰手势来替代这些事件. Ext JS 在多个地方实现了这一功能.</p> 
+       <p>一个例子是表格组件.在桌面电脑设备中,表格的列头菜单是在头部远素点击时触发时显示出来的.然而这个响应只有在列头的 mouseover 事件触发时才会显示.而在触屏设备上没有一个等同 ‘mouseover’的手势事件,因此不会被触发而菜单也不会可见,也因此不能触发.为确保列头菜单能够被访问, Ext JS 侦测到这个表格是在触屏设备上运行时,在响应  ‘longpress长按’事件时显示这个菜单.</p> 
+       <p><strong>注意:</strong> 应用程序的开发人员和定制化的组件也需要做相应的调整<em>.</em></p> 
+       <p>第二个方面是关于一些内部框架的变化要值得注意.为了支持触屏手势, Ext JS 5以上版本转换为一个代理事件模型.为了直接绑定监听器到DOM元素上,对每一个事件类型的一个简单监听器绑定到了DOM的上层 (window或document对象). Ext JS 事件系统然后对基于窗口对象中的元素的事件分发事件处理器. 使用 Ext JS API来监听事件的应用程序开发人员通过这个新的实施途径不会遇到任何问题.</p> 
+       <p>然而,如果DOM API 用来直接绑定事件处理器 (addEventListener 或者 attachEvent), 或者使用第三方JavaScript 库,在直接的事件处理器和那种代理方式的事件处理的时序上可能会产生问题.</p> 
+       <p><strong>注意:</strong> <em>平板和触屏设支持 Safari, Chrome 和 IE10以上. Android 浏览器不支持.</em></p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 

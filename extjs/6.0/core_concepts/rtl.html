@@ -7,7 +7,7 @@
   <title>Ext JS 向导 | Right to Left in Ext JS</title> 
   <meta charset="UTF-8" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <script async="" type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
+  <script async type="text/javascript" src="../../../../https@use.typekit.com/bqo8qzg.js"></script> 
   <script type="text/javascript">
 
     function showMenu(link_obj){
@@ -147,27 +147,27 @@
      <div> 
       <div class="toc-page" style="display:block;">
         Contents 
-       <a class="toc-page-h2" href="#RTL_with_Sencha_Cmd" title="RTL with Sencha Cmd">RTL with Sencha Cmd</a> 
-       <a class="toc-page-h3" href="#Enabling_RTL" title="Enabling RTL">Enabling RTL</a> 
-       <a class="toc-page-h3" href="#Locales_with_RTL" title="Locales with RTL">Locales with RTL</a> 
-       <a class="toc-page-h4" href="#RTL_Locale_Override" title="RTL Locale Override">RTL Locale Override</a> 
-       <a class="toc-page-h2" href="#RTL_without_Sencha_Cmd" title="RTL without Sencha Cmd">RTL without Sencha Cmd</a> 
+       <a class="toc-page-h2" href="#RTL_with_Sencha_Cmd" title="Sencha Cmd 的从右至左阅读">Sencha Cmd 的从右至左阅读</a> 
+       <a class="toc-page-h3" href="#Enabling_RTL" title="启用从右至左阅读">启用从右至左阅读</a> 
+       <a class="toc-page-h3" href="#Locales_with_RTL" title="从右至左本地化">从右至左本地化</a> 
+       <a class="toc-page-h4" href="#RTL_Locale_Override" title="从右至左阅读本地化覆写">从右至左阅读本地化覆写</a> 
+       <a class="toc-page-h2" href="#RTL_without_Sencha_Cmd" title="没有Sencha Cmd 的从右至左支持">没有Sencha Cmd 的从右至左支持</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
-       <h1>Right-to-Left Support in Ext JS</h1> 
+       <h1>Ext JS 里的从右至左语言习惯支持</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p>Ext JS has an extensive locale library with support for over 40 languages from around the world. Some of these languages are read from right to left. This makes right-to-left (RTL) support a must. Combining Ext JS’s localization package with RTL support gives your application a voice for the entire globe.</p> 
-       <p>In this guide, we will walk through enabling RTL support for your application.</p> 
-       <p><strong>Note:</strong> To enable localization in your application, please check out the Ext JS <a href="localization.html">locale guide</a>.</p> 
-       <h2 id="RTL_with_Sencha_Cmd">RTL with Sencha Cmd</h2> 
-       <p>Let’s start by generating an application using Sencha Cmd. Simply open your terminal and issue the following commands:</p> 
+       <p>Ext JS 有一个支持全世界超过40种语言的扩展本地化库. 有些语言是从右至左的阅读方式.这就必须要支持从右至左(RTL)的阅读习惯.合并 Ext JS 的本地化包来支持从右至左的阅读习惯给你的应用一个全球的声音.</p> 
+       <p>本向导中,我们会过一下在你的应用中来启用RTL支持.</p> 
+       <p><strong>注意:</strong> 在你应用程序中启用本地化,请阅读 Ext JS 的<a href="localization.html">本地化向导</a>.</p> 
+       <h2 id="RTL_with_Sencha_Cmd">Sencha Cmd 的从右至左阅读</h2> 
+       <p>让我们从一个使用 Sencha Cmd 生成的应用开始.简单地打开你的终端并且输入下面的命令:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha generate app -ext MyApp ./app
 cd app
 sencha app watch</code></pre> 
-       <p><strong>Note:</strong> If you are not familiar with what is happening above, please check out our <a href="../getting_started/getting_started.html">快速入门 guide</a>.</p> 
-       <h3 id="Enabling_RTL">Enabling RTL</h3> 
-       <p>It’s incredibly simple to enable RTL in your Cmd generated app. All you need to do is require <code>Ext.rtl.*</code> and set <code>rtl: true</code>. </p> 
+       <p><strong>注意:</strong> 如果你还不熟悉上面会做些什么,请参考我们的 <a href="../getting_started/getting_started.html">快速入门向导</a>.</p> 
+       <h3 id="Enabling_RTL">启用从右至左阅读</h3> 
+       <p>在你用命令行中生成的应用程序启用RTL是令人难以置信的简单.所有你要做的是导入 <code>Ext.rtl.*</code> 并且设置 <code>rtl: true</code>. </p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.Main', {
     extend: 'Ext.container.Container',
     requires: [
@@ -175,21 +175,25 @@ sencha app watch</code></pre>
     ],
     rtl: true,
     ...</code></pre> 
-       <p>In the case of our generated application, you would add the above code to your <code>Main.js</code>. This can be found in your <code>app/view/main</code> folder. This is the designated Viewport in this instance. If you are not using the generated application, you may also add it to your top level container or Viewport. </p> 
-       <p>Upon adding the above code snippet, you can then rebuild your application:</p> 
+       <p>在我们生成的应用程序的这个情况下,你要添加上述代码到你的 <code>Main.js</code> 中. 这个文件可以在你的 <code>app/view/main</code> 文件夹中找到. 在这个实例中,这是设计好的 Viewport.如果你不是使用一个生成的应用程序,你也可以将它添加到你顶层的 contailner 或者是 Viewport 中. </p> 
+       <p>在添加了上述代码片段后,然后你就可以重新构建你的应用程序:</p> 
        <pre mode="javascript" theme="chrome"><code>sencha app build</code></pre> 
-       <p>Once you refresh your application, you should see that your page elements are flipped horizontally and your text is written from right to left.</p> 
-       <p>All children of your top level container with <code>rtl: true</code> will inherit the same functionality. You may indicate <code>rtl:false</code> on a child element to disable RTL for that particular piece of your application.</p> 
-       <h3 id="Locales_with_RTL">Locales with RTL</h3> 
-       <p>Using locales with RTL, such as Hebrew, will flip your application to RTL by default in the near future. However, at this time, that functionality is tied to Viewport and is not activated when using <code>mainView</code> with a container other than <a href="../6.0.1-classic/#!/api/Ext.container.Viewport" data-full-load="true">Ext.container.Viewport</a>. </p> 
-       <p>In this case, you can enable RTL for your application as mentioned above.</p> 
-       <p>However, you may not want to hardcode RTL support into your application if you are incorporating multiple locales. In this case, you would need to add a locale override for the language in your application’s root directory.</p> 
-       <h4 id="RTL_Locale_Override">RTL Locale Override</h4> 
-       <p>In this section, we will discuss adding an override for the Hebrew locale. This same logic will apply for any other locale needing an override for dynamic RTL support. You would simply replace the “he” with your locale’s abbreviation.</p> 
+       <p>当你刷新你的应用程序时,你会看到页面元素水平翻转并且你的文本是从右至左书写的.</p> 
+       <p>你设置了<code>rtl: true</code>的顶层容器的所有子组件都会继承这个相同的功能.你可以在你应用程序中的子组件中对这块特殊的代码片段指明使用 <code>rtl:false</code> 来禁用RTL功能.</p> 
+       <h3 id="Locales_with_RTL">从右至左本地化</h3> 
+       <p>RTL本地化,例如Hebrew希伯来语, 在不久的将来默认会为你的应用使用RTL功能.但是,现在这个功能与 Viewport相结合,当你使用一个不是 <a href="../6.0.1-classic/#!/api/Ext.container.Viewport" data-full-load="true">Ext.container.Viewport</a> 的 <code>mainView</code> 时,这个功能没有激活. </p> 
+       <p>在这种情况下,你可以用上面提到的方式在你的应用程序中启用RTL功能.</p> 
+       <p>但是,如果你要支持多语言,你可能不愿意在你的应用程序中写死RTL的支持.在这种情况下,你要在你应用程序的根目录下对这种语言添加一个本地化的覆写.</p> 
+       <h4 id="RTL_Locale_Override">从右至左阅读本地化覆写</h4> 
+       <p>在这个章节,我们来讨论为希伯来语的本地化添加一个覆写. 相同的逻辑可以应用在任何一种需要一个动态支持RTL覆写的本地化语言上.你要简单地替换 “he” 为你要本地化语言的缩写即可.</p> 
        <ol> 
-        <li><p>Create a folder named “locale” in the root of your application. This would appear at the same level as the app, build, ext, etc.</p></li> 
-        <li><p>Add a folder with your locale’s abbreviation inside of the locale folder. In this case, we will create a folder called “he”.</p></li> 
-        <li><p>Create a file called <code>Viewport.js</code> inside of your “he” folder. The resulting file structure should look similar to this:</p><p><img src="images/locale-override-filesystem.jpg" /></p><p>You can then add the following override to your <code>Viewport.js</code> override file:</p> <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.locale.he.Viewport', {
+        <li>
+          <p>在你应用程序的根目录下面创建一个叫做 “locale” 的文件夹. 这个文件与 app, build, ext, 等等在同一个层级.</p></li> 
+        <li>
+          <p>在locale文件夹下添加一个你要本地化语言缩写的文件夹.在这里,我们会创建一个叫做 &quot;he&quot;的文件夹.</p></li> 
+        <li>
+          <p>在“he”文件夹中创建一个叫做 <code>Viewport.js</code> 的文件. 最后的文件结构应该与下面的相似:</p><p><img src="images/locale-override-filesystem.jpg" /></p>
+          <p>然后,你能在 <code>Viewport.js</code>覆写文件中添加下面的覆写代码:</p> <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.locale.he.Viewport', {
     override: 'Ext.plugin.Viewport',
     requires: 'Ext.rtl.*',
     setCmp: function (cmp) {
@@ -199,19 +203,23 @@ sencha app watch</code></pre>
         cmp.rtl = true;
     }    
 })</code></pre></li> 
-        <li><p>Now that your override is in place you’ll need to alert <code>app.json</code> to its presence so that Cmd recognizes the override and compiles it within your next build. Add the following line to your <code>app.json</code> file:</p> <pre mode="javascript" theme="chrome"><code>&quot;overrides&quot;: &quot;${app.dir}/overrides,${app.dir}/locale/${app.locale},</code></pre></li> 
+        <li>
+          <p>现在你的覆写已经完成,你要修改 <code>app.json</code> 文件以便 Cmd 知道这个覆写并能在你的下次构建中编译它.添加下面这行到你的 <code>app.json</code> 文件中:</p> <pre mode="javascript" theme="chrome"><code>&quot;overrides&quot;: &quot;${app.dir}/overrides,${app.dir}/locale/${app.locale},</code></pre></li> 
        </ol> 
-       <p>This will tell Cmd that it should utilize any file located within your application’s overrides and locale folder.</p> 
-       <p>With this override in place, you should be better equipped to generate an application that supports multiple locales without having to hardcode RTL support into your parent container.</p> 
-       <h2 id="RTL_without_Sencha_Cmd">RTL without Sencha Cmd</h2> 
-       <p>While we encourage users to utilize the powerful tools within Sencha Cmd, we recognize that some folks are not able to use Sencha Cmd. This portion of the guide will walk you through setting up RTL support without using Sencha Cmd.</p> 
+       <p>这个会告诉 Cmd 要使用你应用程序中覆写的在 locale文件夹下的所有文件..</p> 
+       <p>覆写完成后, 你应该更好地生成一个应用程序支持多个地区没有硬编码到你的父容器的RTL支持.</p> 
+       <h2 id="RTL_without_Sencha_Cmd">没有Sencha Cmd 的从右至左支持</h2> 
+       <p>我们鼓励用户使用 Sencha Cmd 这个强大的工具,我们意识到有些人不能使用 Sencha Cmd. 指来的这部分将过一下不使用 Sencha Cmd 来设置RTP 支持.</p> 
        <ol> 
-        <li><p>Update your <code>index.html</code> file to point to your particular flavor of RTL framework file, included with all Ext JS framework downloads after Ext JS 4.2.0. For example:</p> <pre mode="javascript" theme="chrome"><code>build/ext-all-rtl-debug.js
-build/ext-all-rtl.js</code></pre><p>This will modify your application to load the RTL-specific library.</p></li> 
-        <li><p>Update your index.html file to point to your selected theme’s RTL CSS file, included with all Ext JS framework downloads after Ext JS 4.2.0. The default location for these live here:</p> <pre mode="javascript" theme="chrome"><code>build/packages/ext-theme-{themename}/build/resources/ext-theme-{themename}-all-rtl.css</code></pre></li> 
+        <li>
+          <p>修改你的 <code>index.html</code> 文件指出你需要特殊的RTL框架文件,在 Ext JS 4.2.0 后的包含所有Ext JS框架.例如:</p> <pre mode="javascript" theme="chrome"><code>build/ext-all-rtl-debug.js
+build/ext-all-rtl.js</code></pre>
+          <p>这个会修改你的应用程序来加载 RTL特定的库.</p></li> 
+        <li>
+          <p>更新你的 index.html 文件来指出你选择的 RTL CSS 主题文件,在 Ext JS 4.2.0 后的包含所有Ext JS框架.这些文件位在的位置是:</p> <pre mode="javascript" theme="chrome"><code>build/packages/ext-theme-{themename}/build/resources/ext-theme-{themename}-all-rtl.css</code></pre></li> 
         <li><p>Lastly, add <code>rtl: true</code> to your Viewport</p></li> 
        </ol> 
-       <p>This is a sample index.html file using Neptune with RTL support enabled:</p> 
+       <p>这是一个使用 Neptune且支持 RTL 的示例 index.html 文件:</p> 
        <pre mode="javascript" theme="chrome"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -242,7 +250,7 @@ build/ext-all-rtl.js</code></pre><p>This will modify your application to load th
     &lt;body&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre> 
-       <p><strong>Note:</strong> Make sure to include the Theme override JS file as seen above</p> 
+       <p><strong>注意:</strong> 确保在包含了上面覆写的JS文件的主题</p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 
