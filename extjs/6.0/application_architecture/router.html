@@ -149,33 +149,33 @@
         Contents 
        <a class="toc-page-h2" href="#What_Routing_Is_Used_For" title="路由用来做什么">路由用来做什么</a> 
        <a class="toc-page-h2" href="#What_Routing_Is_Not_Used_For" title="路由不能用来做什么">路由不能用来做什么</a> 
-       <a class="toc-page-h2" href="#What_is_the_Hash_" title="哈希是什么?">哈希是什么?</a> 
+       <a class="toc-page-h2" href="#What_is_the_Hash_" title=" Hash 是什么?"> Hash 是什么?</a> 
        <a class="toc-page-h2" href="#Implement_Routing_in_your_Application" title="在应用程序中实现路由">在应用程序中实现路由</a> 
-       <a class="toc-page-h2" href="#Updating_the_Hash" title="更新哈希">更新哈希</a> 
+       <a class="toc-page-h2" href="#Updating_the_Hash" title="更新 Hash ">更新 Hash </a> 
        <a class="toc-page-h2" href="#Default_Token" title="默认令牌">默认令牌</a> 
-       <a class="toc-page-h2" href="#Hashes_with_Parameters" title="带参数的哈希值">带参数的哈希值</a> 
-       <a class="toc-page-h2" href="#Hash_Parameter_Formatting" title="哈希参数格式化">哈希参数格式化</a> 
+       <a class="toc-page-h2" href="#Hashes_with_Parameters" title="带参数的 Hash ">带参数的 Hash </a> 
+       <a class="toc-page-h2" href="#Hash_Parameter_Formatting" title=" Hash 参数格式化"> Hash 参数格式化</a> 
        <a class="toc-page-h2" href="#Route_Handling" title="路由处理">路由处理</a> 
        <a class="toc-page-h2" href="#Handling_Unmatched_Routes" title="处理不匹配的路由">处理不匹配的路由</a> 
-       <a class="toc-page-h2" href="#Using_Multiple_Routes_in_a_Single_Hash" title="在一个单一哈希中使用多条路由">在一个单一哈希中使用多条路由</a> 
+       <a class="toc-page-h2" href="#Using_Multiple_Routes_in_a_Single_Hash" title="在一个单一 Hash 中使用多条路由">在一个单一 Hash 中使用多条路由</a> 
       </div> 
       <div id="tpl-content-name" itemprop="name"> 
        <h1>用Router(路由)来控制应用程序</h1> 
       </div> 
       <div id="tpl-content-articleBody" itemprop="articleBody"> 
-       <p>在一个正常的网站上,用户导航到不同的页面来点击链接或者是真写表单.然而,在一个简单页面的应用程序中,一个用户的交互不会加载一个新的页面.代之的是在一个简单页面和组件来对用互的交互进行响应.那么你还会允许用户使用浏览器的前进和后退按钮吗? 答案是用Ext JS 5的新的路由功能来消化URI的Hash变化.</p> 
+       <p>在一个普通的网站上,用户通过点击链接或者是填写表单来在不同页面间导航. 然而,在一个单页的应用程序中, 用户的交互不会加载一个新的页面. 取而代之的是在一个单页面用组件来对用户的交互进行响应. 那么你如何让用户使用浏览器的前进和后退按钮呢? 答案是用Ext JS 5的新的路由功能来响应 URI 的 Hash 变化.</p> 
        <h2 id="What_Routing_Is_Used_For">路由用来做什么</h2> 
-       <p>路由能够通过使用浏览器的历史堆栈用于跟踪应用程序的状态.路由也允许深入链接到一个链接到应用程序特定部分的应用.</p> 
+       <p>路由能够通过使用浏览器的历史记录堆栈, 来跟踪应用程序的状态. 路由也允许深入链接到应用程序中的特定部分.</p> 
        <h2 id="What_Routing_Is_Not_Used_For">路由不能用来做什么</h2> 
-       <p>路由应该不要用来存储任何数据和会话信息,数据应该存储在一个持久的数据源例如 cookie或者是本地存储.路由仅仅是跟踪应用程序状态的一种手段.</p> 
-       <h2 id="What_is_the_Hash_">哈希是什么?</h2> 
-       <p>浏览器通过使用由很多部件构成的URI来浏览互联网.让我们来看一个简单的URI:</p> 
+       <p>路由应该不要用来存储任何数据和会话信息, 数据应该存储在一个持久的数据源中, 例如 cookies 或者是本地存储. 路由仅仅是跟踪应用程序状态的一种手段.</p> 
+       <h2 id="What_is_the_Hash_">Hash是什么?</h2> 
+       <p>浏览器通过使用由很多部分构成的 URI 来浏览互联网. 让我们来看一个简单的URI:</p> 
        <pre mode="javascript" theme="chrome"><code>http://www.example.com/apps/users#user/1234</code></pre> 
-       <p>这个应该看起来比较熟悉.然而你可能不认识 <code>#user=1234</code>. URI的这个部分叫做 “hash” 或者是片断标识符. 关于 hash 更为详细的信息,请阅读资源 <a href="../../../../en.wikipedia.org/wiki/Fragment_identifier">http://en.wikipedia.org/wiki/Fragment_identifier</a>. 这个 hash 提供了一个应用来不重新加载当前页来控制浏览器的历史堆栈的一个方法. 由于Hash的变化,浏览器增加了整个URI到历史堆栈，然后允许您使用浏览器的前进/后退按钮遍历URI包括可能会改变的哈希值. 例如,将hash值更新为下面这样会发生什么:</p> 
+       <p>这个应该看起来比较熟悉. 然而你可能不认识 <code>#user=1234</code>. URI 的这个部分叫做 “hash” 或者是片断标识符. 关于 hash 更为详细的信息, 请阅读资源 <a href="http://en.wikipedia.org/wiki/Fragment_identifier">http://en.wikipedia.org/wiki/Fragment_identifier</a>. 这个 hash 为应用程序提供了一个不重新加载当前页来控制浏览器的历史堆栈的方法. 由于 Hash 的变化, 浏览器将整个 URI 添加到历史堆栈，然后允许您使用浏览器的前进/后退按钮遍历 URI. 例如,将 hash 值更新为下面这样会发生什么:</p> 
        <pre mode="javascript" theme="chrome"><code>http://www.example.com/apps/users#user/5678</code></pre> 
-       <p>浏览器会触 发一个我们能在应用程序里使用的 <code>hashchange</code> 事件.<br />用户然后能点击返回按钮返回到这个 <code>#user=1234</code> 的hash 值. 此通知将允许您对应用程序中的更改作出反应.特别要提出来的是哈希值并没有发送给服务器. 这个哈希值典型的在对URI的客户端的解析中消化了. Ext Router (路由)依靠浏览器的哈希功能来允许应用程序的状态跟踪和深度链接. </p> 
+       <p>浏览器会触 发一个我们能在应用程序里使用的 <code>hashchange</code> 事件.<br />用户然后能点击返回按钮返回到这个 <code>#user=1234</code> 的 hash 值. 此通知将允许您对应用程序中的更改作出反应. 有一点要注意的是 Hash 并没有发送给服务器. 这个 Hash 在客户端解析 URI 中被消化了. Ext Router (路由)依靠浏览器的 Hash 功能来允许应用程序的状态跟踪和深度链接. </p> 
        <h2 id="Implement_Routing_in_your_Application">在应用程序中实现路由</h2> 
-       <p>路由类是 Ext JS 5建立的在一个MVC应用程序中来对哈希变化进行解释非常简单的新加功能.我们一直有一个 Ext.util.History, 用于对哈希变化作出反应. 然页这个 Ext.util.History 提供了更多手工动作并且也是一个正确路由类也需要的 Router (路由) 通过在一个视图控制器中定义路由在一个 Ext JS 5 的MVC应用程序中提供简单集成.一个路由是匹配哈希值的一个字符串并且允许在你的 Ext 应用程序中进行深度链接. 这里是一个实现了路由功能的简单示例控制器:</p> 
+       <p>路由类是 Ext JS 5 新加功能, 目的是为了在 MVC 应用程序中可以很简单的处理 Hash 的变化. 我们有一个 Ext.util.History, 用于对 Hash 的变化作出反应. 然而这个 Ext.util.History 提供了更多手动的过程, 并且需要一个合适的路由类. Router (路由) 提供了一种简单的方式就可以集成到Ext JS 5 的MVC应用程序中, 只要在视图控制器中定义路由规则即可. 路由是匹配 Hash 的一个字符串, 并且允许在你的 Ext 应用程序中进行深度链接. 这里是一个实现了路由功能的简单示例控制器:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
     extend : 'Ext.app.ViewController',
 
@@ -187,15 +187,15 @@
         //...
     }
 });</code></pre> 
-       <p>这个路由会对 <code>#users</code> 哈希值作出反应然后执行在控制器实例范围中执行 <code>onUsers</code> 方法. 正如你所看到的, routes 配置是放置在配置对象，而不是在根部.</p> 
-       <h2 id="Updating_the_Hash">更新哈希</h2> 
-       <p>为更新哈希值,控制器有一个 redirectTo 方法.</p> 
+       <p>这个路由会对 <code>#users</code>  Hash 作出反应, 然后在控制器实例作用域下执行 <code>onUsers</code> 方法. 正如你所看到的, routes 配置是放置在 <code>config</code> 对象中的，而不是在根部.</p> 
+       <h2 id="Updating_the_Hash">更新 Hash </h2> 
+       <p>为更新 Hash ,控制器有一个 redirectTo 方法.</p> 
        <pre mode="javascript" theme="chrome"><code>this.redirectTo('user/1234');</code></pre> 
-       <p>这将更新哈希值为 <code>&quot;#user/1234&quot;</code> ,然后路由配置了识别这个哈希值和要运行的内容. 有时试着要更新的哈希值可能与当前值相同.在这种情况下, <code>redirectTo 方法会返回 </code><code>false</code> ,然后不会更新哈希值从而不会运行路由配置中的方法.<code>redirectTo</code> 也可以接受第二个参数传递 true 值来强制路由对哈希值来进行反应.</p> 
+       <p>这将更新 Hash 为 <code>&quot;#user/1234&quot;</code> ,然后路由配置了识别这个 Hash 和要运行的内容. 有时要更新的 Hash 可能与当前值相同. 在这种情况下, <code>redirectTo 方法会返回 </code><code>false</code> , 然后不会更新 Hash, 从而不会运行路由配置中的方法.<code>redirectTo</code> 也可以接受第二个参数传递 true 值来强制路由对 Hash 做出反应.</p> 
        <pre mode="javascript" theme="chrome"><code>this.redirectTo('user/1234', true);</code></pre> 
-       <p>尽管当前的哈希值匹配传到 <code>redirectTo的值</code>, 这个路由仍然会执行任何匹配的路线.</p> 
+       <p>尽管当前的 Hash 匹配传到 <code>redirectTo的值</code>, 这个路由仍然会执行任何匹配的路线.</p> 
        <h2 id="Default_Token">默认令牌</h2> 
-       <p>当应用程序启动时如果没有提供哈希值可以在配置中增加一个默认值.例如,当 #home哈希值使用时应用程序显示一个仪表盘,如果没有其它哈希值存在,你就需要增回 #home 哈希值给 URI. 为启用一个默认哈希值,你能在应用程序里找到的 <code>/app/view/Application.js</code> 文件中使用 <code>defaultToken</code> 配置项:</p> 
+       <p>当应用程序启动时如果没有提供 Hash 可以在配置中增加一个默认值.例如,当 #home Hash 使用时应用程序显示一个仪表盘,如果没有其它 Hash 存在,你就需要增回 #home  Hash 给 URI. 为启用一个默认 Hash ,你能在应用程序里找到的 <code>/app/view/Application.js</code> 文件中使用 <code>defaultToken</code> 配置项:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.Application', {
     extend : 'Ext.app.Application',你参在
 
@@ -203,9 +203,9 @@
 
     defaultToken : 'home'
 });</code></pre> 
-       <p>当应用程序启动时,会检查URI的当前哈希值.如果有一个哈希值定义了,就会运行对应的路由处理方法.如果没有哈希值,就会将 <code>#home</code> 哈希值加入然后运行任意路由处理函数来进行适当的处理.</p> 
-       <h2 id="Hashes_with_Parameters">带参数的哈希值</h2> 
-       <p>应用程序也能在哈希值里使用参数.你可能要在哈希值中包含一个用户的 ID做为一个参数的示例. 我们在向导中早前提到过的使用 <code>#user/1234做为一个哈希值</code>. 在这个例子中,我们要让<code>1234做为一个</code> id 参数. 你要设置你的控制器对 <code>#user/1234</code> 哈希值作出响应:</p> 
+       <p>当应用程序启动时, 会检查URI的当前 Hash. 如果有一个 Hash 定义了, 就会运行对应的路由处理方法. 如果没有 Hash, 就会将 <code>#home</code>  Hash 加入, 然后运行相应路由处理函数来进行适当的处理.</p> 
+       <h2 id="Hashes_with_Parameters">带参数的 Hash </h2> 
+       <p>应用程序也能在 Hash 里使用参数. 比如你可能要在 Hash 中包含一个用户的 ID 做为一个参数. 我们在这篇指南中早前提到过使用 <code>#user/1234 做为一个 Hash </code>. 在这个例子中, 我们要让<code>1234</code>做为一个 id 参数. 你要设置你的控制器对 <code>#user/1234</code>  Hash 作出响应:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
     extend : 'Ext.app.ViewController',
 
@@ -217,9 +217,9 @@
         //...
     }
 });</code></pre> 
-       <p>我们使用的这个路由是 <code>'user/:id'</code> 和冒号, <code>:</code>. 这意味着有一个参数而且应用程序会将这个参数作为 onUser 方法一个入参传入.该方法会按照路由中指定的的顺序收到相同数量的参数,这样就允许简单的包含多个参数.</p> 
-       <h2 id="Hash_Parameter_Formatting">哈希参数格式化</h2> 
-       <p>该应用程序可能要给用户ID强制一个特定的格式.在这个例子中象我们目前看到的一样是个数字. 你还可以通过配置 conditions 来使用路由来校验一个对象:</p> 
+       <p>我们使用的这个路由是 <code>'user/:id'</code> 和冒号, <code>:</code>. 这意味着有一个参数而且应用程序会将这个参数作为 onUser 方法一个参数传入. 该方法会按照路由中指定的的顺序收到相同数量的参数, 这样就允许简单的包含多个参数.</p> 
+       <h2 id="Hash_Parameter_Formatting">Hash 参数格式化</h2> 
+       <p>该应用程序可能要给用户 ID 强制一个特定的格式. 在这个例子中, 我们目前看到的是个数字. 你还可以通过配置 conditions 来校验路由:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
     extend : 'Ext.app.ViewController',
 
@@ -236,10 +236,10 @@
         //...
     }
 });</code></pre> 
-       <p>我们来看一下这个例子.首先, ‘onUser’ 方法现在移到了action 的配置项上. 这与我们传递字符串给路由类似.我们然后使用 conditions 配置项来提供一个对象.我们要控制的关键字是参数名称和一个冒号然后跟着一个正则表达式字符串 (不是一个正则表达式对象). 对于 <code>:id</code> 条件, 我们用 <code>([0-9]+)</code>,这个就只允许0-9之间的数字但是可以任意长度,然后记住这个匹配关系.因为正则表达式对象是用于匹配整个哈希值,这里我们用字符串, 因此,如果有在路由中配置有多个参数我们要将正则表达式字符串串成一个正则表达式对象.如果没有对参数提供条件,默认的是:</p> 
+       <p>我们来看一下这个例子.首先, ‘onUser’ 方法现在移到了action 的配置项上. 这与我们传递字符串给路由类似.我们然后使用 conditions 配置项来提供一个对象. 我们要控制的关键字是参数名称和一个冒号然后跟着一个正则表达式字符串 (不是一个正则表达式对象). 对于 <code>:id</code> 条件, 我们用 <code>([0-9]+)</code>, 这个就只允许0-9之间的数字, 但是可以任意长度, 然后记住这个匹配关系. 因为正则表达式对象是用于匹配整个 Hash 的, 所以这里我们用字符串, 否则如果在路由中配置有多个参数, 我们就要将正则表达式字符串串成一个正则表达式对象. 如果没有为参数提供条件, 默认的是:</p> 
        <pre mode="javascript" theme="chrome"><code>([%a-zA-Z0-9\\-\\_\\s,]+)</code></pre> 
        <h2 id="Route_Handling">路由处理</h2> 
-       <p>有时应用程序需要防止路由的运行. 在这种情况下,我们要检查管理权限来确定是否当前用户允许查看应用程序的这部分. 路由可以配置一个 before action,这个会停止当前的路由,停止所有路由或者继续路由的运行.</p> 
+       <p>有时应用程序需要阻止路由的运行. 在这种情况下, 我们要检查管理权限来确定是否允许当前用户查看应用程序的某一部分. 路由可以配置一个 before action, 这个会停止当前的路由, 停止所有路由或者继续路由的运行.</p> 
        <p>这个例子会继续运行路由函数:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
     extend : 'Ext.app.ViewController',
@@ -264,8 +264,8 @@
         //...
     }
 });</code></pre> 
-       <p>在 <code>onBeforeUser</code> 方法中, 这个 <code>:id</code> 参数作为入参传入了,但最后一个入参是 <code>action</code>. 如果你在<code>action</code>上执行 <code>resume</code> 方法,路由就会继续执行,然后就会调用 <code>onUser</code> 方法.注意我们在继续运行路由功能前,我们要等待一个 AJAX 请求完成.</p> 
-       <p>我们可以扩展这个示例,通过运行 <code>stop</code> 方法来告诉应用停止运行当前的路由:</p> 
+       <p>在 <code>onBeforeUser</code> 方法中, 这个 <code>:id</code> 参数作为入参传入了,但最后一个参数是 <code>action</code>. 如果你在<code>action</code>上执行 <code>resume</code> 方法, 路由就会继续执行, 然后就会调用 <code>onUser</code> 方法. 注意我们在继续运行路由功能前, 我们要等待 AJAX 请求完成.</p> 
+       <p>我们可以扩展这个示例, 通过运行 <code>stop</code> 方法来告诉应用停止运行当前的路由:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
     extend : 'Ext.app.ViewController',
 
@@ -292,7 +292,7 @@
         //...
     }
 });</code></pre> 
-       <p>Ext JS 应用程序能相当复杂,并且可能有许多控制器设置成监听同一路由.然而只有一个控制器设置了 before 动作,因此只有一次 ajax 请求会被触发. 如果我们传递一个为  <code>true </code> 的入参给 <code>action</code> 的  <code>stop</code> 方法,我们能够停止运行所有队列中的路由,而不仅仅是当前的路由处理:</p> 
+       <p>Ext JS 应用程序可能相当复杂, 并且可能有许多控制器设置成监听同一路由. 然而只有一个控制器设置了 before 动作,因此只有一次 ajax 请求会被触发. 如果我们传递一个为  <code>true </code> 的参数给 <code>action</code> 的  <code>stop</code> 方法, 我们能够停止运行所有队列中的路由, 而不仅仅是当前的路由处理:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.define('MyApp.view.main.MainController', {
     extend : 'Ext.app.ViewController',
 
@@ -320,9 +320,9 @@
     }
 });</code></pre> 
        <p>现在, 当 ajax 请求失败时,我们传参 <code>true</code> 来取消所有控制器上的路由处理程序.</p> 
-       <p><strong>注意:</strong> 如果你不运行<em><code>resume</code> 或者 <code>stop</code> 方法, 路由会被中断并且永远不会正确地完成.重要的是在某些点上运行这二个方法中的任意一个.</em></p> 
+       <p><strong>注意:</strong> 如果你不运行<em><code>resume</code> 或者 <code>stop</code> 方法, 路由会被中断并且永远不会正确地完成. 重要的是在某个时间点上运行这二个方法中的任意一个.</em></p> 
        <h2 id="Handling_Unmatched_Routes">处理不匹配的路由</h2> 
-       <p>如果这个 hash 发生了变化而没有找到相匹配的路由,路由处理器将不会做任何事; 路由处理程序将不会尝试修改这个hash将会单独保留这个不匹配的hash值.路由处理程序将会在应用程序实例中触发一个 <code>unmatchedroute</code> 事件,这个事件在 <code>Ext.application</code> 中是可监听的:</p> 
+       <p>如果这个 hash 发生了变化而没有找到相匹配的路由, 路由处理器将不会做任何事; 路由处理程序将不会尝试修改这个hash将会单独保留这个不匹配的hash值. 路由处理程序将会在应用程序实例中触发一个 <code>unmatchedroute</code> 事件, 这个事件在 <code>Ext.application</code> 中是可监听的:</p> 
        <pre mode="javascript" theme="chrome"><code>Ext.application({
     name : 'MyApp',
 
@@ -338,11 +338,11 @@
         //...
     }
 });</code></pre> 
-       <h2 id="Using_Multiple_Routes_in_a_Single_Hash">在一个单一哈希中使用多条路由</h2> 
-       <p>因为 Ext JS 应用程序能够做的非常复杂,这就可能有时需要在一个单一hash中要使用多条路由. 路由处理程序建立了处理这个的机制,因此不需要控制处理器中作额外的处理.相反,你能使用管道: <code>|</code>来限制hash . 一个hash例子可能是这样</p> 
+       <h2 id="Using_Multiple_Routes_in_a_Single_Hash">在一个单一 Hash 中使用多个路由</h2> 
+       <p>因为 Ext JS 应用程序能够做的非常复杂, 这就可能有时需要在一个单一 hash 中要使用多个路由. 路由(Router)支持这个功能, 因此不需要控制处理器中作额外的处理. 相反, 你能使用管道符号: <code>|</code>来分隔多个 hash . 一个hash例子可能是这样</p> 
        <pre mode="javascript" theme="chrome"><code>`#user/1234|messages`</code></pre> 
-       <p>在这个情况下,我们要要对一个id为1234的用户显示详细信息, 但也要显示消息. 每个路由会按hash中指定的顺序运行.然后从相互的路由中封装. 简单来说,如果你中止这个 <code>user/1234</code> 路由,这个 <code>messages</code> 路由会继续运行. 重要的是要注意运行单个路由的顺序和路由在 hash 中出现的顺序是一样的. 在上面的例子中,这个<code>user/1234</code> 路由总是会在 <code>messages</code> 路由前执行.</p> 
-       <p>通过改变 <code>Ext.app.route.Router.multipleToken</code> 属性,你可以修改这个分割符.</p> 
+       <p>在这个情况下,我们要要对一个 id 为 1234 的用户显示详细信息, 但也要显示消息. 每个路由会按hash中指定的顺序运行. 它们互不影响. 简单来说, 如果你中止这个 <code>user/1234</code> 路由, <code>messages</code> 路由会继续运行. 重要的是要注意单个路由的运行顺序和路由在 hash 中出现的顺序是一样的. 在上面的例子中,这个<code>user/1234</code> 路由总是会在 <code>messages</code> 路由前执行.</p> 
+       <p>通过改变 <code>Ext.app.route.Router.multipleToken</code> 属性, 你可以修改这个分隔符.</p> 
       </div> 
       <div class="tpl-content-lastUpdated">
         Last updated 
