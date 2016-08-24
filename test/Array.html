@@ -1,0 +1,3113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array | Sencha Test 1.0.3 </title>
+    <!--  Generated on August, 12 2016 at 15:48 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:image" content="home-images/sencha-200.png" />
+    <meta property="og:title" content="Array | Sencha Test 1.0.3 " />
+    <meta property="og:description" content="In JavaScript, the Array property of the global object is a constructor forarray instances.An array is a JavaScript object. Note that you shouldn&amp;#39;t use i..." />
+    <meta property="og:site_name" content="Sencha Documentation" />
+    <meta property="og:url" content="http://docs.sencha.com/sencha_test/Array.html" />
+    <meta name="description" content="In JavaScript, the Array property of the global object is a constructor forarray instances.An array is a JavaScript object. Note that you shouldn&#39;t use i...">
+    <style>
+        /*!
+         *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+         *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+         */
+        /* FONT PATH
+         * -------------------------- */
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('css/fonts/fontawesome-webfont.eot@v=4.5.0');
+            src: url('css/fonts/fontawesome-webfont.eot@#iefix&v=4.5.0') format('embedded-opentype'),
+            url('css/fonts/fontawesome-webfont.woff2@v=4.5.0') format('woff2'),
+            url('css/fonts/fontawesome-webfont.woff@v=4.5.0') format('woff'),
+            url('css/fonts/fontawesome-webfont.ttf@v=4.5.0') format('truetype'),
+            url('css/fonts/fontawesome-webfont.svg@v=4.5.0#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel='canonical' href='default.htm' /><meta name='description' content='Sencha Test API Documentation from Sencha.' />
+</head>
+<body class=" is-api  has-guides   has-api tree-shown">
+    <script type="text/javascript">
+        function getOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return 'ios';
+            } else if(userAgent.match(/Android/i)) {
+                return 'android';
+            }
+        }
+
+        var hash = document.location.hash,
+                rawhash, newhash, prop, member,
+                isIE8 = false;
+
+        if(hash.indexOf('#!') > -1) {
+            hash    = hash.replace('#!/api/','');
+            rawhash = hash.split('-'),
+            prop    = (rawhash[1] == 'static') ? rawhash[2] : rawhash[1],
+            member  = (rawhash[1] == 'static') ? rawhash[3] : rawhash[2],
+            newhash = rawhash[0] + '.html';
+
+            if (prop && member) {
+                newhash += '#' + prop + '-' + member;
+            }
+
+            document.location.href = newhash;
+        }
+
+        document.body.className += ' ' + getOS();
+    </script>
+    <!--[if IE 8]>
+    <script type='text/javascript'>
+        isIE8 = true;
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        var ExtL = ExtL || {},
+            specificId = '',
+            isClassTemplate = true,
+            isHome = false,
+            isLanding = false,
+            isApi = true,
+            isGuide = false,
+            hasApi = true,
+            hasGuides = true,
+            hasQuickStart = false
+            singleton = false,
+            pageName = 'Array',
+            pageTitle = 'Sencha Test',
+            homePath = '',
+            product = 'test',
+            pversion = '1.0.3-orion',
+            hasVersions = false,
+            myToolkit = 'false';
+
+            if (!isIE8) {
+                document.write('<script type=\"text/javascript\" src=\"js/prism.js\"><\/script>');
+            }
+    </script>
+    <script type="text/javascript" src="js/ace.js"></script>
+    <script type="text/javascript" src="js/beautify.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <div id="help-wrap">
+        <div class="help-header">
+            Docs Help
+            <div id="help-close"></div>
+        </div>
+        <div class="classText">
+            <div class="toc">
+                <h2>Contents</h2>
+                    <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
+                    <a class="toc-page-h3" href="#access-levels">Access Levels</a>
+                    <a class="toc-page-h3" href="#member-types">Member Types</a>
+                    <a class="toc-page-h3" href="#member-syntax">Member Syntax</a>
+                    <a class="toc-page-h3" href="#member-flags">Member Flags</a>
+                    <a class="toc-page-h3" href="#class-icons">Class Icons</a>
+                    <a class="toc-page-h3" href="#member-icons">Member Icons</a>
+                    <a class="toc-page-h2" href="#navigation-and-features">Navigation and Features</a>
+                    <a class="toc-page-h3" href="#class-member-quick-nav-menu">Class Member Quick-Nav Menu</a>
+                    <a class="toc-page-h3" href="#getter-and-setter-methods">Getter and Setter Methods</a>
+                    <a class="toc-page-h3" href="#history-bar">History Bar</a>
+                    <a class="toc-page-h3" href="#search-and-filters">Search and Filters</a>
+                    <a class="toc-page-h3" href="#api-doc-class-metadata">API Doc Class Metadata</a>
+                    <a class="toc-page-h3" href="#expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</a>
+                    <a class="toc-page-h3" href="#desktop-vs-mobile-view">Desktop -vs- Mobile View</a>
+                    <a class="toc-page-h3" href="#viewing-the-class-source">Viewing the Class Source</a>
+            </div>
+            <h2 id="terms-icons-and-labels">Terms, Icons, and Labels</h2>
+    <p>Many classes have shortcut names used when creating (instantiating) a class with a 
+    configuration object.  The shortcut name is referred to as an <code>alias</code> (or <code>xtype</code> if the 
+    class extends Ext.Component).  The alias/xtype is listed next to the class name of 
+    applicable classes for quick reference.</p>
+    <h3 id="access-levels">Access Levels</h3>
+    <p>Framework classes or their members may be specified as <code>private</code> or <code>protected</code>.  Else, 
+    the class / member is <code>public</code>.  <code>Public</code>, <code>protected</code>, and <code>private</code> are access 
+    descriptors used to convey how and when the class or class member should be used.</p>
+    <ul>
+    <li><p><strong>Public</strong> classes and class members are available for use by any other class or 
+    application code and may be relied upon as a stable and persistent within major product 
+    versions.  Public classes and members may safely be extended via a subclass.</p>
+    </li>
+    <li><p><strong>Protected</strong> class members are stable <code>public</code> members intended to be used by the 
+    owning class or its subclasses.  Protected members may safely be extended via a subclass.</p>
+    </li>
+    <li><p><strong>Private</strong> classes and class members are used internally by the framework and are not 
+    intended to be used by application developers.  Private classes and members may change or 
+    be omitted from the framework at any time without notice and should not be relied upon in 
+    application logic.</p>
+    </li>
+    </ul>
+    <h3 id="member-types">Member Types</h3>
+    <ul>
+    <li><strong>Config</strong> - The configuration options for a class.</li>
+    <li><strong>Property</strong> - Set once a class is instantiated. *See Read Only below.</li>
+    <li><strong>Method</strong> - Actions that can be performed by a class.  Methods should be read as 
+    instance methods and can only be called from a instance of a given class.  Static methods 
+    that can be called directly from the class itself will have a <code>static</code> label next to the 
+    method name.  *See Static below.</li>
+    <li><strong>Event</strong> - Events are specific to the framework event system allowing for classes to 
+    programmatically raise an event to be handled by one or more event handler methods.  DOM 
+    events, while handled by the framework event system, are not specifically described 
+    within the API documentation.  *For DOM events refer to the 
+    <a href="../../https@developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+    <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the 
+    framework.</li>
+    <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework 
+    and may use values set in various Theme Variables.</li>
+    </ul>
+    <h3 id="member-syntax">Member Syntax</h3>
+    <p>Below is an example class member that we can disect to show the syntax of a class member 
+    (the lookupComponent method as viewed from the Ext.button.Button class in this case).</p>
+    <div style="position: relative;" class="show-inherited show-protected members">
+        <div style="border: 1px solid #E4E4E4;" class="classmembers member-protected isNotStatic isInherited member-temp-expanded" data-member-name="lookupComponent">
+            <div class="collapse-toggle"></div>
+            <div class="source-class"><a href="javascript:void(0);">Ext.container.Container</a><div class="viewSource"><a href="javascript:void(0);"></a><a target="_blank" href="javascript:void(0);">view source</a></div></div>
+            <div class="member-header">
+            <a href="javascript:void(0);" class="member-name-link"><span data-ref="method-lookupComponent" class="member-name"><strong>lookup</strong>Component</span></a>
+            <span class="params-list"> ( item )</span> : <span class="memberType">Ext.Component</span>
+            <div class="member-tags"><span class="protected">protected</span></div>
+        </div>
+            <p>Called when a raw config object is added to this container either during initialization of the <a href="javascript:void(0);">items</a> config,
+        or when new items are <a href="javascript:void(0);">added), or {@link #insert inserted</a>.</p>
+        <p>This method converts the passed object into an instanced child component.</p>
+        <p>This may be overridden in subclasses when special processing needs to be applied to child creation.</p>
+                    <div class="detail-header">Parameters</div>
+                <p><span class="params-list">item</span> :
+                        <span class="memberType">&nbsp;Object</span>
+                </p>
+                <div class="params-desc"><p>The config object being added.</p></div>
+                <div class="detail-header">Returns</div>
+                <span style="margin-left:12px;" class="memberType">Ext.Component</span>
+                <div class="return-desc"><p>The component to be added.</p>
+            </div>
+        </div>
+    </div>
+    
+    <p>Let&#39;s look at each part of the member row:</p>
+    <ul>
+    <li><strong>Expand/Collapse</strong> - On the left-hand size of the member row is a control used to 
+    expand and collapse each member row to show / hide member details.</li>
+    <li><strong>Member Name</strong> - The name of the class member (<code>lookupComponent</code> in this example)</li>
+    <li><strong>Method Param</strong> - Any required or optional params used by a method (or passed to an 
+    event handler method) will be listed next to the method name within parenthesis 
+    (<code>( item )</code> in this example)</li>
+    <li><strong>Return type</strong> - The class instance or javascript object returned by the method or 
+    property (<code>Ext.Component</code> in this case).  This may be omitted for methods that do not 
+    return anything other than <code>undefined</code> or may display as multiple possible values 
+    separated by a forward slash <code>/</code> signifying that what is returned may depend on the 
+    results of the method call (i.e. a method may return a Component if a get method calls is 
+    successful or <code>false</code> if unsuccessful which would be displayed as 
+    <code>Ext.Component/Boolean</code>).</li>
+    <li><strong>Flags</strong> - Any flags applicable to the member will be displayed next (<code>PROTECTED</code> in 
+    this example - see the Flags section below)</li>
+    <li><strong>Member Origin</strong> - On the right-hand side of the member row is the class where the 
+    member was initially described (<code>Ext.container.Container</code> in this example).  The source 
+    class will be displayed as a blue link if the member originates from the current class 
+    and gray if it is inherited from an ancestor or mixed-in class.</li>
+    <li><strong>Member Source</strong> - On the right-hand side below the member origin class is a link to 
+    view the member&#39;s source (<code>view source</code> in the example)</li>
+    <li><strong>Params List</strong> - Each param for a class method will be listed using the same name 
+    found above in parenthesis, the type of class or object expected, and a description of 
+    the param (<code>item : Object</code> in the example).</li>
+    <li><strong>Returns</strong> - If a class returns a value other than <code>undefined</code> a &quot;Returns&quot; section 
+    will note the type of class or object returned and a description (<code>Ext.Component</code> in the 
+    example)</li>
+    <li><strong>Since</strong> (<em>not shown in the example</em>) - Some members will show which version of the 
+    product the member was first introduced (i.e. <code>Available since 3.4.0</code> - <em>not pictured in 
+    the example</em>) just after the member description</li>
+    <li><strong>Default</strong> (<em>not shown in the example</em>) - Configs often show the default config value 
+    to be applied to a class instance if not overridden (i.e. <code>Defaults to: false</code>)</li>
+    </ul>
+    <h3 id="member-flags">Member Flags</h3>
+    <p>The API documentation uses a number of flags to further commnicate the class member&#39;s 
+    function and intent.  The label may be represented by a text label, an abbreviation, or 
+    an icon.</p>
+    <ul>
+    <li><strong>Required</strong> - Required config when instantiating a class</li>
+    <li><strong>Bindable</strong> - The config has a setter which allows this config to be set via ViewModel 
+    binding</li>
+    <li><strong>Read Only</strong> - The property may be read, but cannot be used to configure / 
+    re-configure a class instance at runtime</li>
+    <li><strong>Singleton</strong> - Singleton classes are instantiated immediately once defined and may not 
+    be instantiated manually</li>
+    <li><strong>Static</strong> - A static method or property is a method or property belonging to the class 
+    itself, not an instance of the class</li>
+    <li><strong>Chainable</strong> - Refers to methods that return the class instance back when called.<br>This enables chained method calls like: <code>classInstance.method1().method2().etc();</code></li>
+    <li><strong>Deprecated</strong> - A class or member that is scheduled for removal in a future 
+    framework version and is provided in the current version for backwards compatibility.<br>Deprecated classes and members will have a message directing you to the preferred class / 
+    method going forward.</li>
+    <li><strong>Removed</strong> - A removed class or member that exists in documentation only as a 
+    reference for users upgrading between framework versions</li>
+    <li><strong>Template</strong> - A method defined within a base class designed to be overridden by 
+    subclasses</li>
+    <li><strong>Abstract</strong> - A class or member may be be defined as abstract.  Abstract classes and 
+    members establish a class structure and provide limited, if any, code.  Class-specific 
+    code will be furnished via overrides in subclasses.</li>
+    <li><strong>Preventable</strong> - Events marked preventable will not fire if <code>false</code> is returned from 
+    an event handler</li>
+    </ul>
+    <h3 id="class-icons">Class Icons</h3>
+    <p><span class="icon-demo class-icon"></span> - Indicates a framework class  </p>
+    <p><span class="icon-demo singleton-icon"></span> - A singleton framework class. *See the 
+    singleton flag for more information  </p>
+    <p><span class="icon-demo component-icon"></span> - A component-type framework class (any 
+    class within the Ext JS framework that extends Ext.Component)  </p>
+    <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide 
+    is new in the currently viewed version</p>
+    <h3 id="member-icons">Member Icons</h3>
+    <p><span class="icon-demo fa fa-cubes"></span> - Indicates a class member of type <code>config</code>  </p>
+    <p><span class="icon-demo fa fa-book"></span> - Indicates a class member of type <code>property</code>  </p>
+    <p><span class="icon-demo fa fa-object-group"></span> - Indicates a class member of type 
+    <code>method</code>  </p>
+    <p><span class="icon-demo fa fa-bolt"></span> - Indicates a class member of type <code>event</code>  </p>
+    <p><span class="icon-demo fa fa-paint-brush"></span> - Indicates a class member of type 
+    <code>theme variable</code>  </p>
+    <p><span class="icon-demo fa fa-tint"></span> - Indicates a class member of type 
+    <code>theme mixin</code>  </p>
+    <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide 
+    is new in the currently viewed version</p>
+    <h2 id="navigation-and-features">Navigation and Features</h2>
+    <h3 id="class-member-quick-nav-menu">Class Member Quick-Nav Menu</h3>
+    <p>Just below the class name on an API doc page is a row of buttons corresponding to the 
+    types of members owned by the current class.  Each button shows a count of members by 
+    type (this count is updated as filters are applied).  Clicking the button will navigate 
+    you to that member section.  Hovering over the member-type button will reveal a popup 
+    menu of all members of that type for quick navigation.</p>
+    <h3 id="getter-and-setter-methods">Getter and Setter Methods</h3>
+    <p>Getting and setter methods that correlate to a class config option will show up in the 
+    methods section as well as in the configs section of both the API doc and the member-type 
+    menus just beneath the config they work with.  The getter and setter method documentation 
+    will be found in the config row for easy reference.</p>
+    <h3 id="history-bar">History Bar</h3>
+    <p>Your page history is kept in localstorage and displayed (using the available real estate) 
+    just below the top title bar.  By default, the only search results shown are the pages 
+    matching the product / version you&#39;re currently viewing.  You can expand what is 
+    displayed by clicking on the <span class="icon-demo history-config"></span> button on the 
+    right-hand side of the history bar and choosing the &quot;All&quot; radio option.  This will show 
+    all recent pages in the history bar for all products / versions.</p>
+    <p>Within the history config menu you will also see a listing of your recent page visits. 
+    The results are filtered by the &quot;Current Product / Version&quot; and &quot;All&quot; radio options. 
+    Clicking on the <span class="icon-demo history-clear"></span> button will clear the history bar as 
+    well as the history kept in local storage.</p>
+    <p>If &quot;All&quot; is selected in the history config menu the checkbox option for &quot;Show product 
+    details in the history bar&quot; will be enabled.  When checked, the product/version for each 
+    historic page will show alongside the page name in the history bar.  Hovering the cursor 
+    over the page names in the history bar will also show the product/version as a tooltip.</p>
+    <h3 id="search-and-filters">Search and Filters</h3>
+    <p>Both API docs and guides can be searched for using the search field at the top of the 
+    page.</p>
+    <p>On API doc pages there is also a filter input field that filters the member rows 
+    using the filter string.  In addition to filtering by string you can filter the class 
+    members by access level and inheritance.  This is done using the checkboxes at the top of 
+    the page.  <strong>Note</strong> that filtering out <code>private</code> members also filters the API class 
+    navigation tree.</p>
+    <p>Clicking on an empty search field will show your last 10 searches for quick navigation.</p>
+    <h3 id="api-doc-class-metadata">API Doc Class Metadata</h3>
+    <p>Each API doc page (with the exception of Javascript primitives pages) has a menu view of 
+    metadata relating to that class.  This metadata view will have one or more of the 
+    following:</p>
+    <ul>
+    <li><strong>Alternate Name</strong> - One or more additional class name synonymns (in Ext JS 6.0.0 the 
+    <code>Ext.button.Button</code> class has an alternate class name of <code>Ext.Button</code>).  Alternate class 
+    names are commonly maintained for backward compatibility.</li>
+    <li><strong>Hierarchy</strong> - The hierararchy view lists the inheritance chain of the current class 
+    up through its ancestor classes up to the root base class.</li>
+    <li><strong>Mixins</strong> - A list of classes that are mixed into the current class</li>
+    <li><strong>Inherited Mixins</strong> - A list of classes that are mixed into an ancestor of the current 
+    class</li>
+    <li><strong>Requires</strong> - All classes required to be defined for the class to be instantiated</li>
+    <li><strong>Uses</strong> - A list of classes potentially used by the class at some point in its 
+    lifecycle, but not necessarily requried for the class to initially be instantiated</li>
+    <li><strong>Subclasses</strong> - Classes that extend the current class</li>
+    </ul>
+    <h3 id="expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</h3>
+    <p>Runnable examples (Fiddles) are expanded on a page by default.  You can collapse and 
+    expand example code blocks individually using the arrow on the top-left of the code 
+    block.  You can also toggle the collapse state of all examples using the toggle button on 
+    the top-right of the page.  The toggle-all state will be remembered between page loads.</p>
+    <p>Class members are collapsed on a page by default.  You can expand and collapse members 
+    using the arrow icon on the left of the member row or globally using the expand / 
+    collapse all toggle button top-right.</p>
+    <h3 id="desktop-vs-mobile-view">Desktop -vs- Mobile View</h3>
+    <p>Viewing the docs on narrower screens or browsers will result in a view optimized for a 
+    smaller form factor.  The primary differences between the desktop and &quot;mobile&quot; view are:</p>
+    <ul>
+    <li>Global navigation will be located in a menu on the left-hand side accessible via the 
+    hamburger menu icon.  The menu houses the following (on most pages):<ul>
+    <li>The name of the current product (as a link to the product landing page)</li>
+    <li>The Sencha icon used to navigate back to the documentation home page</li>
+    <li>The product menu drop-down button</li>
+    <li>Tabs of navigation trees for the API docs and guides</li>
+    </ul>
+    </li>
+    <li>Current context navigation and tools is located on the right-hand side accessible via 
+    the gear icon.  The context menu houses teh following:<ul>
+    <li>The global search input field</li>
+    <li>(<em>API doc</em>) A &quot;Filters&quot; tab with the member filter, expand / collapse all examples 
+    button, expand / collapse all member rows button, the access level filter checkboxes, 
+    and the counts of each member</li>
+    <li>(<em>API doc</em>) A &quot;Related Classes&quot; tab containing the menu of metadata related to the 
+    current class</li>
+    <li>(<em>Guides</em>) The table of contents for the guide</li>
+    </ul>
+    </li>
+    </ul>
+    <h3 id="viewing-the-class-source">Viewing the Class Source</h3>
+    <p>The class source can be viewed by clicking on the class name at the top of an API doc 
+    page.  The source for class members can be viewed by clicking on the &quot;view source&quot; link 
+    on the right-hand side of the member row.</p>
+    
+        </div>
+    </div>
+    <div id="header">
+        <div class="logo">
+            <a href="../default.htm"><img height="32" src="home-images/sencha_logo_thumb.png"/></a>
+        </div>
+        <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
+        <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl landing-product-menu-btn"><div class="callout callout-b"></div></span>
+            <a class="page-title class" href="src/Array.js.html#Array" target="_blank">Array</a>
+        <span id="mobile-context-menu-btn" class="fa fa-cog"></span>
+    </div>
+    <div id="centerContent">
+        <div id="history-nav">
+            <span id="history-config" class="history-config tooltip tooltip-tr-br" data-tip="Configure / Clear History"><div class="callout callout-b"></div></span>
+        </div>
+        <div id="class-tree-ct" class="class-tree">
+            <h2 class="product-header">
+                <div class="logo">
+                    <a href="../default.htm"><img src="home-images/sencha_logo1x.png"/></a>
+                </div>
+                <a href="index.html">Sencha Test 1.0.3 </a>
+                <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn  tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+            </h2>
+            <div id="tree-header" class="pre-load">
+                <div id="guideTab" class="toolbarHeaderButton">
+                    Guides
+                </div>
+                <div id="apiTab" class="toolbarHeaderButton active-tab">
+                    API
+                </div>
+                <div id="hide-class-tree"></div>
+            </div>
+            <div id="tree-scroller">
+                <div id="tree" class="show-private show-protected is-tree">
+                    <div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isNotLeaf" id="singleton-st" isLeaf="false">
+        <span class="tree-expando">▸</span>
+            <span class="singleton-type"></span>
+            <a class="tree-leaf-text" href="ST.html">ST</a>
+    </div>
+        <div class="tree-child-leaves hidden">
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-event" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">event</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member-protected">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-driver" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Driver.html">Driver</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-event" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Event.html">Event</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-gesturequeue" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.GestureQueue.html">GestureQueue</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-injector" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Injector.html">Injector</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-playable" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Playable.html">Playable</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-player" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Player.html">Player</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-recorder" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Recorder.html">Recorder</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-future" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">future</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-button" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Button.html">Button</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-cell" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Cell.html">Cell</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-checkbox" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.CheckBox.html">CheckBox</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-combobox" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.ComboBox.html">ComboBox</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-component" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Component.html">Component</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-dataview" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.DataView.html">DataView</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-element" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Element.html">Element</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-field" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Field.html">Field</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-grid" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Grid.html">Grid</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-item" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Item.html">Item</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-panel" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Panel.html">Panel</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-picker" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Picker.html">Picker</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-row" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Row.html">Row</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-select" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Select.html">Select</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-selection" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Selection.html">Selection</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-selectionmodel" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.SelectionModel.html">SelectionModel</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-textfield" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.TextField.html">TextField</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-locator" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">locator</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-locator-strategy" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.locator.Strategy.html">Strategy</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-alert" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Alert.html">Alert</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-protected">
+                    <div class="tree-leaf-content isLeaf" id="node-st-block" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Block.html">Block</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-browser" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Browser.html">Browser</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-browser-1" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.browser-1.html">browser</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-element" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Element.html">Element</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-gate" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Gate.html">Gate</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-jasmine" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.jasmine.html">jasmine</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-locator" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.Locator.html">Locator</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-options" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.options.html">options</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-os-1" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.os-1.html">os</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-os" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.OS.html">OS</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-spec" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Spec.html">Spec</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-status" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.status.html">status</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-suite" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Suite.html">Suite</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-supports" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.supports.html">supports</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-system" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.system.html">system</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-test" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Test.html">Test</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-protected">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-tests" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.Tests.html">Tests</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-version" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Version.html">Version</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-watchdog" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.WatchDog.html">WatchDog</a>
+                    </div>
+                </div>
+        </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-array" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Array.html">Array</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-boolean" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Boolean.html">Boolean</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-date" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Date.html">Date</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-function" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Function.html">Function</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-number" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Number.html">Number</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-object" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Object.html">Object</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-regexp" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="RegExp.html">RegExp</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-string" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="String.html">String</a>
+    </div>
+</div>
+
+                    <div class="fa fa-plus toggle-tree hide tooltip tooltip-tr-br" data-expand="Expand All Classes" data-collapse="Collapse All Classes"><div class="callout callout-b"></div></div>
+                </div>
+                <div id="guide-tree" class="hide is-tree">
+                    <div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-product_overview" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/product_overview.html">Sencha Test 概述</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-sencha_test_installation" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/sencha_test_installation.html">安装和配置</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-getting_started" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/getting_started.html">入门</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-testing_existing_apps" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/testing_existing_apps.html">测试已有应用程序</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-testing_applications" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/testing_applications.html">测试新建应用程序</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-command_line_archive_server" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/command_line_archive_server.html">命令行工具CLI和归档服务器</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-test_projects_scenarios_suites" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/test_projects_scenarios_suites.html">项目, 场景(Scenarios)和套件(Suites)</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-using_the_test_runner" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/using_the_test_runner.html">使用Test Runner</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-unit_functional_tests" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/unit_functional_tests.html">单元测试 vs 功能测试</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-release_notes" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/release_notes.html">发布说明</a>
+    </div>
+</div>
+
+                    <div class="fa fa-plus toggle-tree hide tooltip tooltip-tr-br" data-expand="Expand All Guides" data-collapse="Collapse All Guides"><div class="callout callout-b"></div></div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="back-to-top">top </a>
+        <div id="rightMembers" class="">
+            
+            
+            <div id="member-toolbars">
+    <div id="member-class-name">
+            <span class='class-icon'></span>
+
+        <h1 class='class'><a href="src/Array.js.html#Array" target="_blank">Array</a>
+        </h1>
+    </div>
+</div>
+<div class="context-menu-ct">
+    <div class="context-header">
+        <div id="hide-context-menu" class="fa fa-caret-right"></div>
+    </div>
+    <div class="search">
+        <form autocomplete="off">
+            <input type="text" type="search" placeholder="search" id="searchtext">
+            <i id="filtersubmit" class="fa fa-search"></i>
+            <span id="help-btn" data-tip="Docs Help" class="tooltip tooltip-tr-br"><div class="callout callout-b"></div></span>
+        </form>
+    </div>
+    <div class="context-menu-tabs">
+        <div id="filterTab" class="toolbarHeaderButton active-tab">
+            Filters
+        </div>
+        <div id="relatedClassesTab" class="toolbarHeaderButton">
+            Related Classes
+        </div>
+    </div>
+    <div id="filters-ct">
+        <div id="toolbar">
+            <div class="memberFilter">
+                <input placeholder="Filter members..." type="search" id="member-filter-field" name="member-filter-field">
+                <div id="toggleExamples" class="fa fa-code tooltip tooltip-tr-br" data-expand="Expand All Examples" data-collapse="Collapse All Examples"><div class="callout callout-b"></div></div>
+                <div id="toggleAll" class="fa fa-plus tooltip tooltip-tr-br" data-expand="Expand All Members" data-collapse="Collapse All Members"><div class="callout callout-b"></div></div>
+            </div>
+            <div id="member-display">
+                <div class="member-access-display"><label><input id="publicCheckbox" type="checkbox" value="member-public" checked=true/>Public</label></div>
+                <div class="member-access-display"><label><input id="protectedCheckbox" type="checkbox" value="member-protected" checked=true/>Protected</label></div>
+                <div class="member-access-display"><label><input id="privateCheckbox" type="checkbox" value="member-private" checked=true/>Private</label></div>
+                <div class="member-access-display"><label><input id="inheritedCheckbox" type="checkbox" value="member-inherited" checked=true/>Inherited</label></div>
+            </div>
+            <div id="member-types-menu" class="member-types-menu">
+                    <a href="#properties" id="properties-button-link"><div id="properties-nav-btn" class="toolbarButton disabled">
+                        <i class="fa fa-book"></i>
+                        <span class="member-type-btn-text">properties</span>
+                        <div id="properties-count" class="nav-btn-count"></div>
+                        <div class="nav-btn-mask"></div>
+                    </div></a>
+                    <a href="#methods" id="methods-button-link"><div id="methods-nav-btn" class="toolbarButton disabled">
+                        <i class="fa fa-object-group"></i>
+                        <span class="member-type-btn-text">methods</span>
+                        <div id="methods-count" class="nav-btn-count"></div>
+                        <div class="nav-btn-mask"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+    <div id="related-classes-context-ct" class="hide">
+        <!-- We'll programmatically copy in the related classes elements here on page load -->
+    </div>
+</div>
+<div id="class-body-wrap" class="class-body-wrap">
+    <div class="body-wrap-inner">
+        <div id="classText" class="classText">
+            <div class="classHead">
+                <div class="classMeta">
+                        <div class="classMetaColumn">
+                            <h3>Hierarchy</h3>
+                            <div class="list"><div class="hierarchy">Array</div></div>
+                        </div>
+                </div>
+            </div>
+                <h2>Summary</h2>
+                <p>In JavaScript, the <a href='Array.html'>Array</a> property of the global object is a constructor for
+array instances.</p>
+<p>An array is a JavaScript object. Note that you shouldn&#39;t use it as an
+associative array, use <a href='Object.html'>Object</a> instead.</p>
+<h1 id="array_creating-an-array">Creating an Array<a class="quick-link" href="#array_creating-an-array"></a></h1>
+<p>The following example creates an array, msgArray, with a length of 0, then assigns values to
+msgArray[0] and msgArray[99], changing the length of the array to 100.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var msgArray = new Array();
+msgArray[0] = &quot;Hello&quot;;
+msgArray[99] = &quot;world&quot;;
+
+if (msgArray.length == 100)
+print(&quot;The length is 100.&quot;);
+</code></pre></div><h1 id="array_creating-a-two-dimensional-array">Creating a Two-dimensional Array<a class="quick-link" href="#array_creating-a-two-dimensional-array"></a></h1>
+<p>The following creates chess board as a two dimensional array of strings. The first move is made by
+copying the &#39;P&#39; in 6,4 to 4,4. The position 4,4 is left blank.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var board =
+[ [&#39;R&#39;,&#39;N&#39;,&#39;B&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;B&#39;,&#39;N&#39;,&#39;R&#39;],
+[&#39;P&#39;,&#39;P&#39;,&#39;P&#39;,&#39;P&#39;,&#39;P&#39;,&#39;P&#39;,&#39;P&#39;,&#39;P&#39;],
+[&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;],
+[&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;],
+[&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;],
+[&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;,&#39; &#39;],
+[&#39;p&#39;,&#39;p&#39;,&#39;p&#39;,&#39;p&#39;,&#39;p&#39;,&#39;p&#39;,&#39;p&#39;,&#39;p&#39;],
+[&#39;r&#39;,&#39;n&#39;,&#39;b&#39;,&#39;q&#39;,&#39;k&#39;,&#39;b&#39;,&#39;n&#39;,&#39;r&#39;]];
+print(board.join(&#39;\n&#39;) + &#39;\n\n&#39;);
+
+// Move King&#39;s Pawn forward 2
+board[4][4] = board[6][4];
+board[6][4] = &#39; &#39;;
+print(board.join(&#39;\n&#39;));
+</code></pre></div><p>Here is the output:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">R,N,B,Q,K,B,N,R
+P,P,P,P,P,P,P,P
+ , , , , , , ,
+ , , , , , , ,
+ , , , , , , ,
+ , , , , , , ,
+p,p,p,p,p,p,p,p
+r,n,b,q,k,b,n,r
+
+R,N,B,Q,K,B,N,R
+P,P,P,P,P,P,P,P
+ , , , , , , ,
+ , , , , , , ,
+ , , , ,p, , ,
+ , , , , , , ,
+p,p,p,p, ,p,p,p
+r,n,b,q,k,b,n,r
+</code></pre></div><h1 id="array_accessing-array-elements">Accessing array elements<a class="quick-link" href="#array_accessing-array-elements"></a></h1>
+<p>Array elements are nothing less than object properties, so they are accessed as such.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var myArray = new Array(&quot;Wind&quot;, &quot;Rain&quot;, &quot;Fire&quot;);
+myArray[0]; // &quot;Wind&quot;
+myArray[1]; // &quot;Rain&quot;
+// etc.
+myArray.length; // 3
+
+// Even if indices are properties, the following notation throws a syntax error
+myArray.2;
+
+// It should be noted that in JavaScript, object property names are strings. Consequently,
+myArray[0] === myArray[&quot;0&quot;];
+myArray[1] === myArray[&quot;1&quot;];
+// etc.
+
+// However, this should be considered carefully
+myArray[02]; // &quot;Fire&quot;. The number 02 is converted as the &quot;2&quot; string
+myArray[&quot;02&quot;]; // undefined. There is no property named &quot;02&quot;
+</code></pre></div><h1 id="array_relationship-between-length-and-numerical-properties">Relationship between length and numerical properties<a class="quick-link" href="#array_relationship-between-length-and-numerical-properties"></a></h1>
+<p>An array&#39;s length property and numerical properties are connected. Here is some
+code explaining how this relationship works.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var a = [];
+
+a[0] = &#39;a&#39;;
+console.log(a[0]); // &#39;a&#39;
+console.log(a.length); // 1
+
+a[1] = 32;
+console.log(a[1]); // 32
+console.log(a.length); // 2
+
+a[13] = 12345;
+console.log(a[13]); // 12345
+console.log(a.length); // 14
+
+a.length = 10;
+console.log(a[13]); // undefined, when reducing the length elements after length+1 are removed
+console.log(a.length); // 10
+</code></pre></div><h1 id="array_creating-an-array-using-the-result-of-a-match">Creating an array using the result of a match<a class="quick-link" href="#array_creating-an-array-using-the-result-of-a-match"></a></h1>
+<p>The result of a match between a regular expression and a string can create an array.
+This array has properties and elements that provide information about the match. An
+array is the return value of RegExp.exec, String.match, and String.replace. To help
+explain these properties and elements, look at the following example and then refer
+to the table below:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// Match one d followed by one or more b&#39;s followed by one d
+// Remember matched b&#39;s and the following d
+// Ignore case
+
+var myRe = /d(b+)(d)/i;
+var myArray = myRe.exec(&quot;cdbBdbsbz&quot;);
+</code></pre></div><p>The properties and elements returned from this match are as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Property/Element</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>input</code></td>
+<td style="text-align:left">A read-only property that reflects the original string against which the</td>
+<td style="text-align:left">cdbBdbsbz</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">regular expression was matched.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>index</code></td>
+<td style="text-align:left">A read-only property that is the zero-based index of the match in the string.</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[0]</code></td>
+<td style="text-align:left">A read-only element that specifies the last matched characters.</td>
+<td style="text-align:left">dbBd</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[1], ...[n]</code></td>
+<td style="text-align:left">Read-only elements that specify the parenthesized substring matches, if included in</td>
+<td style="text-align:left">[1]: bB [2]: d</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">the regular expression. The number of possible parenthesized substrings is unlimited.</td>
+</tr>
+</tbody>
+</table>
+<div class="notice">
+Documentation for this class comes from <a href="../../https@developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="external-link" target="_blank">MDN</a>
+and is available under <a href="../../creativecommons.org/licenses/by-sa/2.0/default.htm" class="external-link" target="_blank">Creative Commons: Attribution-Sharealike license</a>.
+</div>
+
+        </div>
+        <div class="no-visible-members-warning">No members found using the current filters</div>
+        <div class="members">
+                <div id="properties-ct">
+                    <h2 id="properties" class="type">properties</h2>
+                    <a name="properties"></a>
+                          
+                            <div id="property-length" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="length" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-property-length">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#property-length" class="member-name-link"><span data-ref="property-length" class="member-name">length</span></a>
+            
+
+                : <span class="memberType"><a href='Number.html'>Number</a></span>
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Reflects the number of elements in an array.</p>
+<p>The value of the <a href='#property-length'>length</a> property is an integer with a positive sign and a value less than 2 to the 32
+power (232).</p>
+<p>You can set the <a href='#property-length'>length</a> property to truncate an array at any time. When you extend an array by changing
+its <a href='#property-length'>length</a> property, the number of actual elements does not increase; for example, if you set <a href='#property-length'>length</a>
+to 3 when it is currently 2, the array still contains only 2 elements.</p>
+<p>In the following example the array numbers is iterated through by looking at the <a href='#property-length'>length</a> property to see
+how many elements it has. Each value is then doubled.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var numbers = [1,2,3,4,5];
+for (var i = 0; i &lt; numbers.length; i++) {
+    numbers[i] *= 2;
+}
+// numbers is now [2,4,6,8,10];
+</code></pre></div><p>The following example shortens the array <code>statesUS</code> to a length of 50 if the current <a href='#property-length'>length</a> is greater
+than 50.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">if (statesUS.length &gt; 50) {
+    statesUS.length=50
+}
+</code></pre></div>
+    </div>
+  
+                          
+                </div>
+                <div id="methods-ct">
+                    <h2 id="methods" class="type">methods</h2>
+                    <a name="methods"></a>
+                            <div id="method-concat" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="concat" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-concat">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-concat" class="member-name-link"><span data-ref="method-concat" class="member-name">concat</span></a>
+            <span class="params-list"> (
+                        
+                        values
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a new array comprised of this array joined with other array(s) and/or value(s).</p>
+<p><a href='#method-concat'>concat</a> creates a new array consisting of the elements in the <code>this</code> object on which it is called,
+followed in order by, for each argument, the elements of that argument (if the argument is an
+array) or the argument itself (if the argument is not an array).</p>
+<p><a href='#method-concat'>concat</a> does not alter <code>this</code> or any of the arrays provided as arguments but instead returns a
+&quot;one level deep&quot; copy that contains copies of the same elements combined from the original arrays.
+Elements of the original arrays are copied into the new array as follows:
+Object references (and not the actual object): <a href='#method-concat'>concat</a> copies object references into the new
+array. Both the original and new array refer to the same object. That is, if a referenced object is
+modified, the changes are visible to both the new and original arrays.
+Strings and numbers (not <a href='String.html'>String</a> and <a href='Number.html'>Number</a> objects): <a href='#method-concat'>concat</a> copies the values of
+strings and numbers into the new array.</p>
+<p>Any operation on the new array will have no effect on the original arrays, and vice versa.</p>
+<h3>Concatenating two arrays</h3>
+<p>The following code concatenates two arrays:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var alpha = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+var numeric = [1, 2, 3];
+
+// creates array [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 1, 2, 3]; alpha and numeric are unchanged
+var alphaNumeric = alpha.concat(numeric);
+</code></pre></div><h3>Concatenating three arrays</h3>
+<p>The following code concatenates three arrays:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var num1 = [1, 2, 3];
+var num2 = [4, 5, 6];
+var num3 = [7, 8, 9];
+
+// creates array [1, 2, 3, 4, 5, 6, 7, 8, 9]; num1, num2, num3 are unchanged
+var nums = num1.concat(num2, num3);
+</code></pre></div><h3>Concatenating values to an array</h3>
+<p>The following code concatenates three values to an array:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var alpha = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;];
+
+// creates array [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 1, 2, 3], leaving alpha unchanged
+var alphaNumeric = alpha.concat(1, [2, 3]);
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-concat--values">values</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object...</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Arrays and/or values to concatenate to the resulting array.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>New array.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-constructor" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="constructor" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-constructor">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-constructor" class="member-name-link"><span data-ref="method-constructor" class="member-name">constructor</span></a>
+            <span class="params-list"> (
+                        
+                        [items]
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Creates new Array object.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-constructor--items">items</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a> / <a href='Object.html'>Object...</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Either a number that specifies the length of array or any number of items
+for the array.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                            <div id="method-every" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="every" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-every">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-every" class="member-name-link"><span data-ref="method-every" class="member-name">every</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [thisObject]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Tests whether all elements in the array pass the test implemented
+by the provided function.</p>
+<p><a href='#method-every'>every</a> executes the provided <code>callback</code> function once for each element
+present in the array until it finds one where <code>callback</code> returns a
+false value. If such an element is found, the <a href='#method-every'>every</a> method
+immediately returns false. Otherwise, if <code>callback</code> returned a true
+value for all elements, <a href='#method-every'>every</a> will return true. <code>callback</code> is invoked
+only for indexes of the array which have assigned values; it is not
+invoked for indexes which have been deleted or which have never
+been assigned values.</p>
+<p>If a <code>thisObject</code> parameter is provided to <a href='#method-every'>every</a>, it will be used as
+the <code>this</code> for each invocation of the callback. If it is not
+provided, or is <code>null</code>, the global object associated with callback is
+used instead.</p>
+<p><a href='#method-every'>every</a> does not mutate the array on which it is called.</p>
+<p>The range of elements processed by <a href='#method-every'>every</a> is set before the first
+invocation of callback. Elements which are appended to the array
+after the call to every begins will not be visited by <code>callback</code>. If
+existing elements of the array are changed, their value as passed
+to <code>callback</code> will be the value at the time <a href='#method-every'>every</a> visits them;
+elements that are deleted are not visited.</p>
+<p><a href='#method-every'>every</a> acts like the &quot;for all&quot; quantifier in mathematics. In
+particular, for an empty array, it returns true. (It is vacuously
+true that all elements of the empty set satisfy any given
+condition.)</p>
+<p>The following example tests whether all elements in the array are
+bigger than 10.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function isBigEnough(element, index, array) {
+  return (element &gt;= 10);
+}
+var passed = [12, 5, 8, 130, 44].every(isBigEnough);
+// passed is false
+passed = [12, 54, 18, 130, 44].every(isBigEnough);
+// passed is true
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-every--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function to test for each element.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--value">value</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element value.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element index.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array being traversed.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--return">return</span> :
+                                            <span class="memberType">&nbsp;Boolean</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>Should return true when element passes the test.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-every--thisObject">thisObject</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as <code>this</code> when executing <code>callback</code>.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>True when all elements pass the test.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-filter" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="filter" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-filter">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-filter" class="member-name-link"><span data-ref="method-filter" class="member-name">filter</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [thisObject]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Creates a new array with all elements that pass the test
+implemented by the provided function.</p>
+<p><a href='#method-filter'>filter</a> calls a provided <code>callback</code> function once for each element in
+an array, and constructs a new array of all the values for which
+<code>callback</code> returns a true value. <code>callback</code> is invoked only for indexes
+of the array which have assigned values; it is not invoked for
+indexes which have been deleted or which have never been assigned
+values. Array elements which do not pass the <code>callback</code> test are
+simply skipped, and are not included in the new array.</p>
+<p>If a <code>thisObject</code> parameter is provided to <a href='#method-filter'>filter</a>, it will be
+used as the <code>this</code> for each invocation of the <code>callback</code>. If it is not
+provided, or is <code>null</code>, the global object associated with callback is
+used instead.</p>
+<p><a href='#method-filter'>filter</a> does not mutate the array on which it is called.</p>
+<p>The range of elements processed by <a href='#method-filter'>filter</a> is set before the first
+invocation of <code>callback</code>. Elements which are appended to the array
+after the call to <a href='#method-filter'>filter</a> begins will not be visited by <code>callback</code>. If
+existing elements of the array are changed, or deleted, their value
+as passed to <code>callback</code> will be the value at the time <a href='#method-filter'>filter</a> visits
+them; elements that are deleted are not visited.</p>
+<p>The following example uses filter to create a filtered array that
+has all elements with values less than 10 removed.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function isBigEnough(element, index, array) {
+  return (element &gt;= 10);
+}
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// filtered is [12, 130, 44]
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-filter--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function to test for each element.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--value">value</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element value.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element index.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array being traversed.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--return">return</span> :
+                                            <span class="memberType">&nbsp;Boolean</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>Should return true when element passes the test.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-filter--thisObject">thisObject</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as <code>this</code> when executing <code>callback</code>.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>Array of elements that passed the test.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-forEach" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="forEach" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-forEach">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-forEach" class="member-name-link"><span data-ref="method-forEach" class="member-name">forEach</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [thisArg]
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Executes a provided function once per array element.</p>
+<p><a href='#method-forEach'>forEach</a> executes the provided function (<code>callback</code>) once for each element present in the array. <code>callback</code>
+is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which
+have been deleted or which have never been assigned values.</p>
+<p>If a <code>thisArg</code> parameter is provided to <a href='#method-forEach'>forEach</a>, it will be used as the <code>this</code> value for each <code>callback</code>
+invocation as if <code>callback.call(thisArg, element, index, array)</code> was called. If <code>thisArg</code> is <code>undefined</code> or
+<code>null</code>, the <code>this</code> value within the function depends on whether the function is in strict mode or not
+(passed value if in strict mode, global object if in non-strict mode).</p>
+<p>The <code>range</code> of elements processed by <a href='#method-forEach'>forEach</a> is set before the first invocation of <code>callback</code>. Elements
+which are appended to the array after the call to <a href='#method-forEach'>forEach</a> begins will not be visited by <code>callback</code>. If
+existing elements of the array are changed, or deleted, their value as passed to callback will be the
+value at the time <a href='#method-forEach'>forEach</a> visits them; elements that are deleted are not visited.</p>
+<p>The following code logs a line for each element in an array:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function logArrayElements(element, index, array) {
+    console.log(&quot;a[&quot; + index + &quot;] = &quot; + element);
+}
+[2, 5, 9].forEach(logArrayElements);
+// logs:
+// a[0] = 2
+// a[1] = 5
+// a[2] = 9
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-forEach--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function to execute for each element.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--value">value</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element value.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element index.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array being traversed.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-forEach--thisArg">thisArg</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as <code>this</code> when executing <code>callback</code>.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                          
+                            <div id="method-indexOf" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="indexOf" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-indexOf">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-indexOf" class="member-name-link"><span data-ref="method-indexOf" class="member-name">indexOf</span></a>
+            <span class="params-list"> (
+                        
+                        searchElement
+                        , 
+                        [fromIndex]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Number.html'>Number</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
+<p><a href='#method-indexOf'>indexOf</a> compares <code>searchElement</code> to elements of the Array using strict equality (the same method used
+by the <code>===</code>, or triple-equals, operator).</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var array = [2, 5, 9];
+var index = array.indexOf(2);
+// index is 0
+index = array.indexOf(7);
+// index is -1
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-indexOf--searchElement">searchElement</span> :
+                            <span class="memberType">&nbsp;Mixed</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Element to locate in the array.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-indexOf--fromIndex">fromIndex</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The index at which to begin the search. Defaults to 0, i.e. the whole array
+will be searched. If the index is greater than or equal to the length of the array, -1 is returned, i.e.
+the array will not be searched. If negative, it is taken as the offset from the end of the array. Note
+that even when the index is negative, the array is still searched from front to back. If the calculated
+index is less than 0, the whole array will be searched.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Number.html'>Number</a></span>
+                <div class="return-desc"><p>The index of element found or -1.</p>
+</div>
+
+    </div>
+  
+                          
+                            <div id="method-join" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="join" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-join">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-join" class="member-name-link"><span data-ref="method-join" class="member-name">join</span></a>
+            <span class="params-list"> (
+                        
+                        separator
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='String.html'>String</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Joins all elements of an array into a string.</p>
+<p>The string conversions of all array elements are joined into one string.</p>
+<p>The following example creates an array, <code>a</code>, with three elements, then joins the array three times:
+using the default separator, then a comma and a space, and then a plus.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var a = new Array(&quot;Wind&quot;,&quot;Rain&quot;,&quot;Fire&quot;);
+var myVar1 = a.join();      // assigns &quot;Wind,Rain,Fire&quot; to myVar1
+var myVar2 = a.join(&quot;, &quot;);  // assigns &quot;Wind, Rain, Fire&quot; to myVar2
+var myVar3 = a.join(&quot; + &quot;); // assigns &quot;Wind + Rain + Fire&quot; to myVar3
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-join--separator">separator</span> :
+                            <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Specifies a string to separate each element of the array. The separator
+is converted to a string if necessary. If omitted, the array elements are separated with a comma.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='String.html'>String</a></span>
+                <div class="return-desc"><p>A string of the array elements.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-lastIndexOf" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="lastIndexOf" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-lastIndexOf">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-lastIndexOf" class="member-name-link"><span data-ref="method-lastIndexOf" class="member-name">lastIndexOf</span></a>
+            <span class="params-list"> (
+                        
+                        searchElement
+                        , 
+                        [fromIndex]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Number.html'>Number</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns the last index at which a given element can be found in the array, or -1 if it is not present.
+The array is searched backwards, starting at <code>fromIndex</code>.</p>
+<p><a href='#method-lastIndexOf'>lastIndexOf</a> compares <code>searchElement</code> to elements of the Array using strict equality (the same method
+used by the <code>===</code>, or triple-equals, operator).</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var array = [2, 5, 9, 2];
+var index = array.lastIndexOf(2);
+// index is 3
+index = array.lastIndexOf(7);
+// index is -1
+index = array.lastIndexOf(2, 3);
+// index is 3
+index = array.lastIndexOf(2, 2);
+// index is 0
+index = array.lastIndexOf(2, -2);
+// index is 0
+index = array.lastIndexOf(2, -1);
+// index is 3
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-lastIndexOf--searchElement">searchElement</span> :
+                            <span class="memberType">&nbsp;Mixed</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Element to locate in the array.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-lastIndexOf--fromIndex">fromIndex</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The index at which to start searching backwards. Defaults to the array&#39;s
+length, i.e. the whole array will be searched. If the index is greater than or equal to the length of
+the array, the whole array will be searched. If negative, it is taken as the offset from the end of the
+array. Note that even when the index is negative, the array is still searched from back to front. If
+the calculated index is less than 0, -1 is returned, i.e. the array will not be searched.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Number.html'>Number</a></span>
+                <div class="return-desc"><p>The index of element found or -1.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-map" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="map" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-map">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-map" class="member-name-link"><span data-ref="method-map" class="member-name">map</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [thisObject]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Creates a new array with the results of calling a provided function
+on every element in this array.</p>
+<p><a href='#method-map'>map</a> calls a provided <code>callback</code> function once for each element in
+an array, in order, and constructs a new array from the
+results. <code>callback</code> is invoked only for indexes of the array which
+have assigned values; it is not invoked for indexes which have been
+deleted or which have never been assigned values.</p>
+<p>If a <code>thisArg</code> parameter is provided to map, it will be used as the
+<code>this</code> for each invocation of the <code>callback</code>. If it is not provided, or
+is <code>null</code>, the global object associated with callback is used
+instead.</p>
+<p><a href='#method-map'>map</a> does not mutate the array on which it is called.</p>
+<p>The range of elements processed by <a href='#method-map'>map</a> is set before the first
+invocation of <code>callback</code>. Elements which are appended to the array
+after the call to <a href='#method-map'>map</a> begins will not be visited by <code>callback</code>. If
+existing elements of the array are changed, or deleted, their value
+as passed to <code>callback</code> will be the value at the time <a href='#method-map'>map</a> visits
+them; elements that are deleted are not visited.</p>
+<p>The following code creates an array of &quot;plural&quot; forms of nouns from
+an array of their singular forms.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function fuzzyPlural(single) {
+  var result = single.replace(/o/g, &#39;e&#39;);
+  if( single === &#39;kangaroo&#39;){
+    result += &#39;se&#39;;
+  }
+  return result;
+}
+
+var words = [&quot;foot&quot;, &quot;goose&quot;, &quot;moose&quot;, &quot;kangaroo&quot;];
+console.log(words.map(fuzzyPlural));
+
+// [&quot;feet&quot;, &quot;geese&quot;, &quot;meese&quot;, &quot;kangareese&quot;]
+</code></pre></div><p>The following code takes an array of numbers and creates a new
+array containing the square roots of the numbers in the first
+array.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+// roots is now [1, 2, 3], numbers is still [1, 4, 9]
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-map--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function that produces an element of the new Array
+from an element of the current one.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--value">value</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element value.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element index.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array being traversed.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--return">return</span> :
+                                            <span class="memberType">&nbsp;Boolean</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>Should return true when element passes the test.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-map--thisObject">thisObject</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as <code>this</code> when executing <code>callback</code>.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>Array of the return values of <code>callback</code> function.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-pop" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="pop" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-pop">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-pop" class="member-name-link"><span data-ref="method-pop" class="member-name">pop</span></a>
+            
+                :
+                    <span class="memberType"><a href='Object.html'>Object</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>The pop method removes the last element from an array and returns that value to the caller.</p>
+<p><a href='#method-pop'>pop</a> is intentionally generic; this method can be called or applied to objects resembling
+arrays. Objects which do not contain a length property reflecting the last in a series of
+consecutive, zero-based numerical properties may not behave in any meaningful manner.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var myFish = [&quot;angel&quot;, &quot;clown&quot;, &quot;mandarin&quot;, &quot;surgeon&quot;];
+var popped = myFish.pop();
+alert(popped); // Alerts &#39;surgeon&#39;
+</code></pre></div>
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Object.html'>Object</a></span>
+                <div class="return-desc"><p>The last element in the array</p>
+</div>
+
+    </div>
+  
+                          
+                            <div id="method-push" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="push" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-push">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-push" class="member-name-link"><span data-ref="method-push" class="member-name">push</span></a>
+            <span class="params-list"> (
+                        
+                        elements
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Number.html'>Number</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Adds one or more elements to the end of an array and returns the new length of the array.</p>
+<p><a href='#method-push'>push</a> is intentionally generic. This method can be called or applied to objects resembling
+arrays. The push method relies on a length property to determine where to start inserting
+the given values. If the length property cannot be converted into a number, the index used
+is 0. This includes the possibility of length being nonexistent, in which case length will
+also be created.</p>
+<p>The only native, array-like objects are strings, although they are not suitable in
+applications of this method, as strings are immutable.</p>
+<h3>Adding elements to an array</h3>
+<p>The following code creates the sports array containing two elements, then appends two elements
+to it. After the code executes, sports contains 4 elements: &quot;soccer&quot;, &quot;baseball&quot;, &quot;football&quot;
+and &quot;swimming&quot;.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var sports = [&quot;soccer&quot;, &quot;baseball&quot;];
+sports.push(&quot;football&quot;, &quot;swimming&quot;);
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-push--elements">elements</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object...</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The elements to add to the end of the array.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Number.html'>Number</a></span>
+                <div class="return-desc"><p>The new length property of the object upon which the method was called.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-reduce" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="reduce" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-reduce">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-reduce" class="member-name-link"><span data-ref="method-reduce" class="member-name">reduce</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [initialValue]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType">Mixed</span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Applies a function against an accumulator and each value of the
+array (from left-to-right) as to reduce it to a single value.</p>
+<p><a href='#method-reduce'>reduce</a> executes the <code>callback</code> function once for each element
+present in the array, excluding holes in the array.</p>
+<p>The first time the <code>callback</code> is called, <code>previousValue</code> and
+<code>currentValue</code> can be one of two values. If <code>initialValue</code> is
+provided in the call to <a href='#method-reduce'>reduce</a>, then <code>previousValue</code> will be equal to
+<code>initialValue</code> and <code>currentValue</code> will be equal to the first value in
+the array. If no <code>initialValue</code> was provided, then <code>previousValue</code> will
+be equal to the first value in the array and <code>currentValue</code> will be
+equal to the second.</p>
+<p>Suppose the following use of reduce occurred:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">[0,1,2,3,4].reduce(function(previousValue, currentValue, index, array){
+  return previousValue + currentValue;
+});
+</code></pre></div><p>The callback would be invoked four times, with the arguments and
+return values in each call being as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">previousValue</th>
+<th style="text-align:left">currentValue</th>
+<th style="text-align:left">index</th>
+<th style="text-align:left">array</th>
+<th style="text-align:left">return value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">first call</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">second call</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left">third call</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">6</td>
+</tr>
+<tr>
+<td style="text-align:left">fourth call</td>
+<td style="text-align:left">6</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">10</td>
+</tr>
+</tbody>
+</table>
+<p>The value returned by <a href='#method-reduce'>reduce</a> would be that of the last callback
+invocation (10).</p>
+<p>If you were to provide an initial value as the second argument to
+reduce, the result would look like this:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">[0,1,2,3,4].reduce(function(previousValue, currentValue, index, array){
+  return previousValue + currentValue;
+}, 10);
+</code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">previousValue</th>
+<th style="text-align:left">currentValue</th>
+<th style="text-align:left">index</th>
+<th style="text-align:left">array</th>
+<th style="text-align:left">return value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">first call</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">10</td>
+</tr>
+<tr>
+<td style="text-align:left">second call</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">11</td>
+</tr>
+<tr>
+<td style="text-align:left">third call</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">13</td>
+</tr>
+<tr>
+<td style="text-align:left">fourth call</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">16</td>
+</tr>
+<tr>
+<td style="text-align:left">fifth call</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">[0,1,2,3,4]</td>
+<td style="text-align:left">20</td>
+</tr>
+</tbody>
+</table>
+<p>The value returned by <a href='#method-reduce'>reduce</a> this time would be, of course, 20.</p>
+<p>Example: Sum up all values within an array:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var total = [0, 1, 2, 3].reduce(function(a, b) {
+    return a + b;
+});
+// total == 6
+</code></pre></div><p>Example: Flatten an array of arrays:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+    return a.concat(b);
+});
+// flattened is [0, 1, 2, 3, 4, 5]
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-reduce--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function to execute on each value in the array.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--previousValue">previousValue</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The value previously returned in the last
+                        invocation of the <code>callback</code>, or <code>initialValue</code>, if supplied.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--currentValue">currentValue</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The current element being processed in the array.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The index of the current element being processed in the array.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array <a href='#method-reduce'>reduce</a> was called upon.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-reduce--initialValue">initialValue</span> :
+                            <span class="memberType">&nbsp;Mixed</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as the first argument to the first call
+of the <code>callback</code>.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType">Mixed</span>
+                <div class="return-desc"><p>The value returned by final invocation of the <code>callback</code>.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-reduceRight" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="reduceRight" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-reduceRight">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-reduceRight" class="member-name-link"><span data-ref="method-reduceRight" class="member-name">reduceRight</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [initialValue]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType">Mixed</span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Applies a function simultaneously against two values of the array
+(from right-to-left) as to reduce it to a single value.</p>
+<p><a href='#method-reduceRight'>reduceRight</a> executes the <code>callback</code> function once for each
+element present in the array, excluding holes in the array.</p>
+<p>The first time the <code>callback</code> is called, <code>previousValue</code> and
+<code>currentValue</code> can be one of two values. If <code>initialValue</code> is
+provided in the call to <a href='#method-reduceRight'>reduceRight</a>, then <code>previousValue</code> will be equal to
+<code>initialValue</code> and <code>currentValue</code> will be equal to the last value in
+the array. If no <code>initialValue</code> was provided, then <code>previousValue</code> will
+be equal to the last value in the array and <code>currentValue</code> will be
+equal to the second-to-last value.</p>
+<p>Some example run-throughs of the function would look like this:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+    return previousValue + currentValue;
+});
+
+// First call
+previousValue = 4, currentValue = 3, index = 3
+
+// Second call
+previousValue = 7, currentValue = 2, index = 2
+
+// Third call
+previousValue = 9, currentValue = 1, index = 1
+
+// Fourth call
+previousValue = 10, currentValue = 0, index = 0
+
+// array is always the object [0,1,2,3,4] upon which reduceRight was called
+
+// Return Value: 10
+</code></pre></div><p>And if you were to provide an initialValue, the result would look like this:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+    return previousValue + currentValue;
+}, 10);
+
+// First call
+previousValue = 10, currentValue = 4, index = 4
+
+// Second call
+previousValue = 14, currentValue = 3, index = 3
+
+// Third call
+previousValue = 17, currentValue = 2, index = 2
+
+// Fourth call
+previousValue = 19, currentValue = 1, index = 1
+
+// Fifth call
+previousValue = 20, currentValue = 0, index = 0
+
+// array is always the object [0,1,2,3,4] upon which reduceRight was called
+
+// Return Value: 20
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-reduceRight--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function to execute on each value in the array.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--previousValue">previousValue</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The value previously returned in the last
+                        invocation of the <code>callback</code>, or <code>initialValue</code>, if supplied.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--currentValue">currentValue</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The current element being processed in the array.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The index of the current element being processed in the array.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array <a href='#method-reduceRight'>reduceRight</a> was called upon.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-reduceRight--initialValue">initialValue</span> :
+                            <span class="memberType">&nbsp;Mixed</span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as the first argument to the first call
+of the <code>callback</code>.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType">Mixed</span>
+                <div class="return-desc"><p>The value returned by final invocation of the <code>callback</code>.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-reverse" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="reverse" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-reverse">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-reverse" class="member-name-link"><span data-ref="method-reverse" class="member-name">reverse</span></a>
+            
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Reverses the order of the elements of an array -- the first becomes the last, and the
+last becomes the first.</p>
+<p>The reverse method transposes the elements of the calling array object in place, mutating the
+array, and returning a reference to the array.</p>
+<p>The following example creates an array myArray, containing three elements, then reverses the array.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var myArray = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;];
+myArray.reverse();
+</code></pre></div><p>This code changes myArray so that:</p>
+<ul>
+<li>myArray[0] is &quot;three&quot;</li>
+<li>myArray[1] is &quot;two&quot;</li>
+<li>myArray[2] is &quot;one&quot;</li>
+</ul>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>A reference to the array</p>
+</div>
+
+    </div>
+  
+                            <div id="method-shift" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="shift" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-shift">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-shift" class="member-name-link"><span data-ref="method-shift" class="member-name">shift</span></a>
+            
+                :
+                    <span class="memberType"><a href='Object.html'>Object</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Removes the first element from an array and returns that element.</p>
+<p>The <a href='#method-shift'>shift</a> method removes the element at the zeroeth index and shifts the values at consecutive
+indexes down, then returns the removed value.</p>
+<p><a href='#method-shift'>shift</a> is intentionally generic; this method can be called or applied to objects resembling
+arrays. Objects which do not contain a <a href='#property-length'>length</a> property reflecting the last in a series of
+consecutive, zero-based numerical properties may not behave in any meaningful manner.</p>
+<p>The following code displays the <code>myFish</code> array before and after removing its first element. It also
+displays the removed element:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// assumes a println function is defined
+var myFish = [&quot;angel&quot;, &quot;clown&quot;, &quot;mandarin&quot;, &quot;surgeon&quot;];
+println(&quot;myFish before: &quot; + myFish);
+var shifted = myFish.shift();
+println(&quot;myFish after: &quot; + myFish);
+println(&quot;Removed this element: &quot; + shifted);
+</code></pre></div><p>This example displays the following:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">myFish before: angel,clown,mandarin,surgeon
+myFish after: clown,mandarin,surgeon
+Removed this element: angel
+</code></pre></div>
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Object.html'>Object</a></span>
+                <div class="return-desc"><p>The first element of the array prior to shifting.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-slice" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="slice" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-slice">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-slice" class="member-name-link"><span data-ref="method-slice" class="member-name">slice</span></a>
+            <span class="params-list"> (
+                        
+                        begin
+                        , 
+                        end
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Extracts a section of an array and returns a new array.</p>
+<p><a href='#method-slice'>slice</a> does not alter the original array, but returns a new &quot;one level deep&quot; copy that contains
+copies of the elements sliced from the original array. Elements of the original array are copied
+into the new array as follows:</p>
+<ul>
+<li>For object references (and not the actual object), <a href='#method-slice'>slice</a> copies object references into the
+new array. Both the original and new array refer to the same object. If a referenced object
+changes, the changes are visible to both the new and original arrays.</li>
+<li>For strings and numbers (not <a href='String.html'>String</a> and <a href='Number.html'>Number</a> objects), <a href='#method-slice'>slice</a> copies strings
+and numbers into the new array. Changes to the string or number in one array does not affect the
+other array.</li>
+</ul>
+<p>If a new element is added to either array, the other array is not affected.</p>
+<h3>Using slice</h3>
+<p>In the following example, <a href='#method-slice'>slice</a> creates a new array, <code>newCar</code>, from <code>myCar</code>. Both include a
+reference to the object <code>myHonda</code>. When the color of <code>myHonda</code> is changed to purple, both arrays
+reflect the change.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// Using slice, create newCar from myCar.
+var myHonda = { color: &quot;red&quot;, wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+var myCar = [myHonda, 2, &quot;cherry condition&quot;, &quot;purchased 1997&quot;];
+var newCar = myCar.slice(0, 2);
+
+// Print the values of myCar, newCar, and the color of myHonda
+//  referenced from both arrays.
+print(&quot;myCar = &quot; + myCar.toSource());
+print(&quot;newCar = &quot; + newCar.toSource());
+print(&quot;myCar[0].color = &quot; + myCar[0].color);
+print(&quot;newCar[0].color = &quot; + newCar[0].color);
+
+// Change the color of myHonda.
+myHonda.color = &quot;purple&quot;;
+print(&quot;The new color of my Honda is &quot; + myHonda.color);
+
+// Print the color of myHonda referenced from both arrays.
+print(&quot;myCar[0].color = &quot; + myCar[0].color);
+print(&quot;newCar[0].color = &quot; + newCar[0].color);
+</code></pre></div><p>This script writes:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">myCar = [{color:&quot;red&quot;, wheels:4, engine:{cylinders:4, size:2.2}}, 2, &quot;cherry condition&quot;,
+&quot;purchased 1997&quot;]
+newCar = [{color:&quot;red&quot;, wheels:4, engine:{cylinders:4, size:2.2}}, 2]
+myCar[0].color = red
+newCar[0].color = red
+The new color of my Honda is purple
+myCar[0].color = purple
+newCar[0].color = purple
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-slice--begin">begin</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Zero-based index at which to begin extraction.
+As a negative index, <code>start</code> indicates an offset from the end of the sequence. <code>slice(-2)</code> extracts
+the second-to-last element and the last element in the sequence</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-slice--end">end</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Zero-based index at which to end extraction. <a href='#method-slice'>slice</a> extracts up to but not
+including <code>end</code>.
+<code>slice(1,4)</code> extracts the second element through the fourth element (elements indexed 1, 2, and 3).
+As a negative index, end indicates an offset from the end of the sequence. <code>slice(2,-1)</code> extracts
+the third element through the second-to-last element in the sequence.
+If <code>end</code> is omitted, <a href='#method-slice'>slice</a> extracts to the end of the sequence.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>Array from the new start position up to (but not including) the specified end position.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-some" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="some" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-some">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-some" class="member-name-link"><span data-ref="method-some" class="member-name">some</span></a>
+            <span class="params-list"> (
+                        
+                        callback
+                        , 
+                        [thisObject]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Tests whether some element in the array passes the test implemented
+by the provided function.</p>
+<p><a href='#method-some'>some</a> executes the <code>callback</code> function once for each element
+present in the array until it finds one where <code>callback</code> returns a
+true value. If such an element is found, some immediately returns
+true. Otherwise, some returns false. <code>callback</code> is invoked only for
+indexes of the array which have assigned values; it is not invoked
+for indexes which have been deleted or which have never been
+assigned values.</p>
+<p>If a <code>thisObject</code> parameter is provided to some, it will be used as
+the <code>this</code> for each invocation of the <code>callback</code>. If it is not
+provided, or is <code>null</code>, the global object associated with callback is
+used instead.</p>
+<p><a href='#method-some'>some</a> does not mutate the array on which it is called.</p>
+<p>The range of elements processed by <a href='#method-some'>some</a> is set before the first
+invocation of callback. Elements that are appended to the array
+after the call to some begins will not be visited by <code>callback</code>. If
+an existing, unvisited element of the array is changed by <code>callback</code>,
+its value passed to the visiting callback will be the value at the
+time that <a href='#method-some'>some</a> visits that element&#39;s index; elements that are
+deleted are not visited.</p>
+<p>The following example tests whether some element in the array is
+bigger than 10.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function isBigEnough(element, index, array) {
+  return (element &gt;= 10);
+}
+var passed = [2, 5, 8, 1, 4].some(isBigEnough);
+// passed is false
+passed = [12, 5, 8, 1, 4].some(isBigEnough);
+// passed is true
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-some--callback">callback</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function< / a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Function to test for each element.</p>
+</div>
+
+                        <div class="sub-params-list">
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--value">value</span> :
+                                            <span class="memberType">&nbsp;Mixed</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element value.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--index">index</span> :
+                                            <span class="memberType">&nbsp;Number</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The element index.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--array">array</span> :
+                                            <span class="memberType">&nbsp;Array</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>The array being traversed.</p>
+                        </div>
+                        
+                                </div>
+                                <div class="param-row">
+                                    <p><span class="params-list" id="param-callback--return">return</span> :
+                                            <span class="memberType">&nbsp;Boolean</span>
+                                        
+                                    </p>
+                                    <div class="params-desc"><p>Should return true when element passes the test.</p>
+                        </div>
+                        
+                                </div>
+                        </div>
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-some--thisObject">thisObject</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>Object to use as <code>this</code> when executing <code>callback</code>.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>True when at least one element passes the test.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-sort" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="sort" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-sort">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-sort" class="member-name-link"><span data-ref="method-sort" class="member-name">sort</span></a>
+            <span class="params-list"> (
+                        
+                        compareFunction
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Sorts the elements of an array.</p>
+<p>If <code>compareFunction</code> is not supplied, elements are sorted by converting them to strings and
+comparing strings in lexicographic (&quot;dictionary&quot; or &quot;telephone book,&quot; not numerical) order. For
+example, &quot;80&quot; comes before &quot;9&quot; in lexicographic order, but in a numeric sort 9 comes before 80.</p>
+<p>If <code>compareFunction</code> is supplied, the array elements are sorted according to the return value of
+the compare function. If a and b are two elements being compared, then:
+If <code>compareFunction(a, b)</code> is less than 0, sort <code>a</code> to a lower index than <code>b</code>.
+If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and <code>b</code> unchanged with respect to each other, but
+sorted with respect to all different elements. Note: the ECMAscript standard does not guarantee
+this behaviour, and thus not all browsers respect this.
+If <code>compareFunction(a, b)</code> is greater than 0, sort <code>b</code> to a lower index than <code>a</code>.
+<code>compareFunction(a, b)</code> must always returns the same value when given a specific pair of elements a
+and b as its two arguments. If inconsistent results are returned then the sort order is undefined</p>
+<p>So, the compare function has the following form:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function compare(a, b)
+{
+    if (a is less than b by some ordering criterion)
+        return -1;
+    if (a is greater than b by the ordering criterion)
+       return 1;
+    // a must be equal to b
+    return 0;
+}
+</code></pre></div><p>To compare numbers instead of strings, the compare function can simply subtract <code>b</code> from <code>a</code>:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function compareNumbers(a, b)
+{
+return a - b;
+}
+</code></pre></div><p>The sort() method can be conveniently used with closures:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+    return a - b;
+});
+print(numbers);
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-sort--compareFunction">compareFunction</span> :
+                            <span class="memberType">&nbsp;<a href='Function.html'>Function</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Specifies a function that defines the sort order. If omitted, the
+array is sorted lexicographically (in dictionary order) according to the string conversion of each
+element.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>A reference to the array</p>
+</div>
+
+    </div>
+  
+                            <div id="method-splice" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="splice" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-splice">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-splice" class="member-name-link"><span data-ref="method-splice" class="member-name">splice</span></a>
+            <span class="params-list"> (
+                        
+                        index
+                        , 
+                        howMany
+                        , 
+                        elements
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Array.html'>Array</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Adds and/or removes elements from an array.</p>
+<p>If you specify a different number of elements to insert than the number you&#39;re removing, the array
+will have a different length at the end of the call.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// assumes a print function is defined
+var myFish = [&quot;angel&quot;, &quot;clown&quot;, &quot;mandarin&quot;, &quot;surgeon&quot;];
+print(&quot;myFish: &quot; + myFish);
+
+var removed = myFish.splice(2, 0, &quot;drum&quot;);
+print(&quot;After adding 1: &quot; + myFish);
+print(&quot;removed is: &quot; + removed);
+
+removed = myFish.splice(3, 1);
+print(&quot;After removing 1: &quot; + myFish);
+print(&quot;removed is: &quot; + removed);
+
+removed = myFish.splice(2, 1, &quot;trumpet&quot;);
+print(&quot;After replacing 1: &quot; + myFish);
+print(&quot;removed is: &quot; + removed);
+
+removed = myFish.splice(0, 2, &quot;parrot&quot;, &quot;anemone&quot;, &quot;blue&quot;);
+print(&quot;After replacing 2: &quot; + myFish);
+print(&quot;removed is: &quot; + removed);
+</code></pre></div><p>This script displays:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">myFish: angel,clown,mandarin,surgeon
+After adding 1: angel,clown,drum,mandarin,surgeon
+removed is:
+After removing 1: angel,clown,drum,surgeon
+removed is: mandarin
+After replacing 1: angel,clown,trumpet,surgeon
+removed is: drum
+After replacing 2: parrot,anemone,blue,trumpet,surgeon
+removed is: angel,clown
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-splice--index">index</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>Index at which to start changing the array. If negative, will begin that
+many elements from the end.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-splice--howMany">howMany</span> :
+                            <span class="memberType">&nbsp;<a href='Number.html'>Number</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>An integer indicating the number of old array elements to remove. If
+<code>howMany</code> is 0, no elements are removed. In this case, you should specify at least one new element.
+If no <code>howMany</code> parameter is specified all elements after index are removed.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-splice--elements">elements</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object...</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The elements to add to the array. If you don&#39;t specify any
+elements, <a href='#method-splice'>splice</a> simply removes elements from the array.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Array.html'>Array</a></span>
+                <div class="return-desc"><p>An array containing the removed elements. If only one element is removed, an array
+of one element is returned..</p>
+</div>
+
+    </div>
+  
+                          
+                            <div id="method-toString" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="toString" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-toString">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-toString" class="member-name-link"><span data-ref="method-toString" class="member-name">toString</span></a>
+            
+                :
+                    <span class="memberType"><a href='String.html'>String</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a string representing the array and its elements. Overrides the <code>Object.prototype.toString</code>
+method.</p>
+<p>The <a href='Array.html'>Array</a> object overrides the <a href='#method-toString'>toString</a> method of <a href='Object.html'>Object</a>. For Array objects, the
+<a href='#method-toString'>toString</a> method joins the array and returns one string containing each array element separated by
+commas. For example, the following code creates an array and uses <a href='#method-toString'>toString</a> to convert the array
+to a string.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var monthNames = new Array(&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;);
+myVar = monthNames.toString(); // assigns &quot;Jan,Feb,Mar,Apr&quot; to myVar
+</code></pre></div><p>JavaScript calls the <a href='#method-toString'>toString</a> method automatically when an array is to be represented as a text
+value or when an array is referred to in a string concatenation.</p>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='String.html'>String</a></span>
+                <div class="return-desc"><p>The array as a string.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-unshift" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="unshift" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-method-unshift">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-unshift" class="member-name-link"><span data-ref="method-unshift" class="member-name">unshift</span></a>
+            <span class="params-list"> (
+                        
+                        elements
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Number.html'>Number</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Adds one or more elements to the front of an array and returns the new length of the array.</p>
+<p>The <a href='#method-unshift'>unshift</a> method inserts the given values to the beginning of an array-like object.</p>
+<p><a href='#method-unshift'>unshift</a> is intentionally generic; this method can be called or applied to objects resembling
+arrays. Objects which do not contain a <a href='#property-length'>length</a> property reflecting the last in a series of
+consecutive, zero-based numerical properties may not behave in any meaningful manner.</p>
+<p>The following code displays the myFish array before and after adding elements to it.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// assumes a println function exists
+myFish = [&quot;angel&quot;, &quot;clown&quot;];
+println(&quot;myFish before: &quot; + myFish);
+unshifted = myFish.unshift(&quot;drum&quot;, &quot;lion&quot;);
+println(&quot;myFish after: &quot; + myFish);
+println(&quot;New length: &quot; + unshifted);
+</code></pre></div><p>This example displays the following:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">myFish before: [&quot;angel&quot;, &quot;clown&quot;]
+myFish after: [&quot;drum&quot;, &quot;lion&quot;, &quot;angel&quot;, &quot;clown&quot;]
+New length: 4
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-unshift--elements">elements</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object...</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The elements to add to the front of the array.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Number.html'>Number</a></span>
+                <div class="return-desc"><p>The array&#39;s new length.</p>
+</div>
+
+    </div>
+  
+                          
+                            <div id="static-method-isArray" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="isArray" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Array.html">Array<div class="viewSource"><a target="_blank" href="src/Array.js.html#Array-static-method-isArray">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-isArray" class="member-name-link"><span data-ref="static-method-isArray" class="member-name">isArray</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Returns true if an object is an array, false if it is not.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// all following calls return true
+Array.isArray([]);
+Array.isArray([1]);
+Array.isArray( new Array() );
+Array.isArray( Array.prototype ); // Little known fact: Array.prototype itself is an array.
+
+// all following calls return false
+Array.isArray();
+Array.isArray({});
+Array.isArray(null);
+Array.isArray(undefined);
+Array.isArray(17);
+Array.isArray(&quot;Array&quot;);
+Array.isArray(true);
+Array.isArray(false);
+Array.isArray({ __proto__ : Array.prototype });
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-isArray--obj">obj</span> :
+                            <span class="memberType">&nbsp;Mixed</span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object to be checked.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>True when Array.</p>
+</div>
+
+    </div>
+  
+                </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="../../https@www.facebook.com/senchainc/default.htm" target="_blank"><img class="social" src="home-images/fb.png"/></a>
+            <a href="../../https@www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="home-images/in.png"/></a>
+            <a href="../../https@twitter.com/Sencha" target="_blank"><img class="social" src="home-images/twt.png"/></a>
+            Sencha Test 1.0.3  | <a href='../../https@www.sencha.com/legal/terms-of-use/default.htm' target='_blank'>Terms of Use</a>
+        </p>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <h2 class="product-header"><a href="index.html">Sencha Test 1.0.3 </a>
+        <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+        <div id="peekaboo-input" class="peekaboo-input">
+            <input type="text" id="mobile-input" />
+        </div>
+    </h2>
+
+    <div id="product-tree-ct" class="hide">
+        <div id="product-tree">
+            <div class="product-name-ct">
+                    <div id="product-menu-extjs" class="product-name-item">Ext JS</div>
+                    <div id="product-menu-sencha_test" class="product-name-item">Sencha Test</div>
+                    <div id="product-menu-cmd" class="product-name-item">Cmd</div>
+                    <div id="product-menu-gxt" class="product-name-item">GXT</div>
+                    <div id="product-menu-ide_plugins" class="product-name-item">IDE Plugins</div>
+                    <div id="product-menu-sencha_inspector" class="product-name-item">Sencha Inspector</div>
+                    <div id="product-menu-architect" class="product-name-item">Architect</div>
+                    <div id="product-menu-touch" class="product-name-item">Touch</div>
+                    <div id="product-menu-webappmgr" class="product-name-item">Web Application Manager</div>
+            </div>
+                <div class="product-version-ct hide extjs">
+                        <h2>Ext JS</h2>
+                            <h3>6.x</h3>
+                                        <div class="compound-product-item">6.2.0 EA
+                                                <a  href="../extjs/6.2.0-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.2.0-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.2
+                                                <a  href="../extjs/6.0.2-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.0.2-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.1
+                                                <a  href="../extjs/6.0.1-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.0.1-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.0
+                                                <a  href="../extjs/6.0.0-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.0.0-modern/index.html">(modern)</a>
+                                        </div>
+                            <h3>5.x</h3>
+                                        <a class="product-item" href="../extjs/5.1.3/index.html">5.1.3</a>
+                                        <a class="product-item" href="../extjs/5.1.2/index.html">5.1.2</a>
+                                        <a class="product-item" href="../extjs/5.1.1/index.html">5.1.1</a>
+                                        <a class="product-item" href="../extjs/5.1.0/index.html">5.1.0</a>
+                                        <a class="product-item" href="../extjs/5.0.1/index.html">5.0.1</a>
+                                        <a class="product-item" href="../extjs/5.0.0/index.html">5.0.0</a>
+                            <h3>4.x</h3>
+                                        <a class="product-item" href="../extjs/4.2.5/default.htm">4.2.5</a>
+                                        <a class="product-item" href="../extjs/4.1.3/default.htm">4.1.3</a>
+                                        <a class="product-item" href="../extjs/4.0.7/default.htm">4.0.7</a>
+                            <h3>3.x</h3>
+                                        <a class="product-item" href="../extjs/3.4.0/default.htm">3.4.0</a>
+                </div>
+                <div class="product-version-ct hide sencha_test">
+                        <h2>Sencha Test</h2>
+                        <a  href="index.html">Sencha Test</a>
+                </div>
+                <div class="product-version-ct hide cmd">
+                        <h2>Cmd</h2>
+                        <a  href="../cmd/index.html">Cmd</a>
+                </div>
+                <div class="product-version-ct hide gxt">
+                        <h2>GXT</h2>
+                                <a class="product-item" href="../gxt/4.x/index.html">4.x</a>
+                                <a class="product-item" href="../gxt/3.x/index.html">3.x</a>
+                </div>
+                <div class="product-version-ct hide ide_plugins">
+                        <h2>IDE Plugins</h2>
+                        <a  href="../ide_plugins/index.html">IDE Plugins</a>
+                </div>
+                <div class="product-version-ct hide sencha_inspector">
+                        <h2>Sencha Inspector</h2>
+                        <a  href="../sencha_inspector/index.html">Sencha Inspector</a>
+                </div>
+                <div class="product-version-ct hide architect">
+                        <h2>Architect</h2>
+                                <a class="product-item" href="../architect/3/index.html">Architect 3</a>
+                                <a class="product-item" href="../architect/4/index.html">Architect 4 EA</a>
+                </div>
+                <div class="product-version-ct hide touch">
+                        <h2>Touch</h2>
+                            <h3>2.x</h3>
+                                        <a class="product-item" href="../touch/2.4/index.html">Touch 2.4</a>
+                                        <a class="product-item" href="../touch/2.3.1/default.htm">Touch 2.3</a>
+                                        <a class="product-item" href="../touch/2.2.1/default.htm">Touch 2.2</a>
+                                        <a class="product-item" href="../touch/2.0.2/default.htm">Touch 2.0</a>
+                </div>
+                <div class="product-version-ct hide webappmgr">
+                        <h2>Web Application Manager</h2>
+                        <a  href="../webappmgr/index.html">Web Application Manager</a>
+                </div>
+        </div>
+    </div>
+
+    <div id="historyConfigPanel">
+        <div class="history-type-selector">
+            <input id="historyTypeCurrent" type="radio" name="historyType" value="current" checked="true" />
+            <label for="historyTypeCurrent">Current Product / Version</label><br>
+            <input id="historyTypeAll" type="radio" name="historyType" value="all" />
+            <label for="historyTypeAll">All</label><br>
+            <div id="history-label-toggle">
+                <input id="history-all-labels" type="checkbox" checked="true" />
+                <label for="history-all-labels">Show product details in the history bar</label>
+                <div class="mask"></div>
+            </div>
+            <span id="history-clear" class="tooltip tooltip-tr-br" data-tip="Clear History"><div class="history-clear callout callout-b"></div></span>
+        </div>
+        <div id="history-full-list"></div>
+    </div>
+
+    <div id="search-history-panel"></div>
+
+</body>
+    <script type="text/javascript" src="js/searchIndex.js"></script>
+    <script type="text/javascript" src="js/guideSearch.js"></script>
+<!--[if lt IE 9 ]>
+<script type="text/javascript" src="js/media-query-poly.js"></script>
+<style>
+    span.da-inline-fiddle-nav-fiddle.x-fa.fa-play-circle {
+        display: none;
+    }
+</style>
+<![endif]-->
+<script>
+    if (navigator.userAgent.indexOf("Safari") > -1) {
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+    }
+
+    document.onreadystatechange = function () {
+        if (document.readyState == "interactive") {
+            //
+        }
+    }
+</script>
+
+</html>

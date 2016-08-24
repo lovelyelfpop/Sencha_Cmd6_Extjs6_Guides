@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object | Sencha Test 1.0.3 </title>
+    <!--  Generated on August, 12 2016 at 15:48 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:image" content="home-images/sencha-200.png" />
+    <meta property="og:title" content="Object | Sencha Test 1.0.3 " />
+    <meta property="og:description" content="Creates an object wrapper.The Object constructor creates an object wrapper for the given value. If the value is null orundefined, it will create and return a..." />
+    <meta property="og:site_name" content="Sencha Documentation" />
+    <meta property="og:url" content="http://docs.sencha.com/sencha_test/Object.html" />
+    <meta name="description" content="Creates an object wrapper.The Object constructor creates an object wrapper for the given value. If the value is null orundefined, it will create and return a...">
+    <style>
+        /*!
+         *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+         *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+         */
+        /* FONT PATH
+         * -------------------------- */
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('css/fonts/fontawesome-webfont.eot@v=4.5.0');
+            src: url('css/fonts/fontawesome-webfont.eot@#iefix&v=4.5.0') format('embedded-opentype'),
+            url('css/fonts/fontawesome-webfont.woff2@v=4.5.0') format('woff2'),
+            url('css/fonts/fontawesome-webfont.woff@v=4.5.0') format('woff'),
+            url('css/fonts/fontawesome-webfont.ttf@v=4.5.0') format('truetype'),
+            url('css/fonts/fontawesome-webfont.svg@v=4.5.0#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel='canonical' href='default.htm' /><meta name='description' content='Sencha Test API Documentation from Sencha.' />
+</head>
+<body class=" is-api  has-guides   has-api tree-shown">
+    <script type="text/javascript">
+        function getOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return 'ios';
+            } else if(userAgent.match(/Android/i)) {
+                return 'android';
+            }
+        }
+
+        var hash = document.location.hash,
+                rawhash, newhash, prop, member,
+                isIE8 = false;
+
+        if(hash.indexOf('#!') > -1) {
+            hash    = hash.replace('#!/api/','');
+            rawhash = hash.split('-'),
+            prop    = (rawhash[1] == 'static') ? rawhash[2] : rawhash[1],
+            member  = (rawhash[1] == 'static') ? rawhash[3] : rawhash[2],
+            newhash = rawhash[0] + '.html';
+
+            if (prop && member) {
+                newhash += '#' + prop + '-' + member;
+            }
+
+            document.location.href = newhash;
+        }
+
+        document.body.className += ' ' + getOS();
+    </script>
+    <!--[if IE 8]>
+    <script type='text/javascript'>
+        isIE8 = true;
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        var ExtL = ExtL || {},
+            specificId = '',
+            isClassTemplate = true,
+            isHome = false,
+            isLanding = false,
+            isApi = true,
+            isGuide = false,
+            hasApi = true,
+            hasGuides = true,
+            hasQuickStart = false
+            singleton = false,
+            pageName = 'Object',
+            pageTitle = 'Sencha Test',
+            homePath = '',
+            product = 'test',
+            pversion = '1.0.3-orion',
+            hasVersions = false,
+            myToolkit = 'false';
+
+            if (!isIE8) {
+                document.write('<script type=\"text/javascript\" src=\"js/prism.js\"><\/script>');
+            }
+    </script>
+    <script type="text/javascript" src="js/ace.js"></script>
+    <script type="text/javascript" src="js/beautify.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <div id="help-wrap">
+        <div class="help-header">
+            Docs Help
+            <div id="help-close"></div>
+        </div>
+        <div class="classText">
+            <div class="toc">
+                <h2>Contents</h2>
+                    <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
+                    <a class="toc-page-h3" href="#access-levels">Access Levels</a>
+                    <a class="toc-page-h3" href="#member-types">Member Types</a>
+                    <a class="toc-page-h3" href="#member-syntax">Member Syntax</a>
+                    <a class="toc-page-h3" href="#member-flags">Member Flags</a>
+                    <a class="toc-page-h3" href="#class-icons">Class Icons</a>
+                    <a class="toc-page-h3" href="#member-icons">Member Icons</a>
+                    <a class="toc-page-h2" href="#navigation-and-features">Navigation and Features</a>
+                    <a class="toc-page-h3" href="#class-member-quick-nav-menu">Class Member Quick-Nav Menu</a>
+                    <a class="toc-page-h3" href="#getter-and-setter-methods">Getter and Setter Methods</a>
+                    <a class="toc-page-h3" href="#history-bar">History Bar</a>
+                    <a class="toc-page-h3" href="#search-and-filters">Search and Filters</a>
+                    <a class="toc-page-h3" href="#api-doc-class-metadata">API Doc Class Metadata</a>
+                    <a class="toc-page-h3" href="#expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</a>
+                    <a class="toc-page-h3" href="#desktop-vs-mobile-view">Desktop -vs- Mobile View</a>
+                    <a class="toc-page-h3" href="#viewing-the-class-source">Viewing the Class Source</a>
+            </div>
+            <h2 id="terms-icons-and-labels">Terms, Icons, and Labels</h2>
+    <p>Many classes have shortcut names used when creating (instantiating) a class with a 
+    configuration object.  The shortcut name is referred to as an <code>alias</code> (or <code>xtype</code> if the 
+    class extends Ext.Component).  The alias/xtype is listed next to the class name of 
+    applicable classes for quick reference.</p>
+    <h3 id="access-levels">Access Levels</h3>
+    <p>Framework classes or their members may be specified as <code>private</code> or <code>protected</code>.  Else, 
+    the class / member is <code>public</code>.  <code>Public</code>, <code>protected</code>, and <code>private</code> are access 
+    descriptors used to convey how and when the class or class member should be used.</p>
+    <ul>
+    <li><p><strong>Public</strong> classes and class members are available for use by any other class or 
+    application code and may be relied upon as a stable and persistent within major product 
+    versions.  Public classes and members may safely be extended via a subclass.</p>
+    </li>
+    <li><p><strong>Protected</strong> class members are stable <code>public</code> members intended to be used by the 
+    owning class or its subclasses.  Protected members may safely be extended via a subclass.</p>
+    </li>
+    <li><p><strong>Private</strong> classes and class members are used internally by the framework and are not 
+    intended to be used by application developers.  Private classes and members may change or 
+    be omitted from the framework at any time without notice and should not be relied upon in 
+    application logic.</p>
+    </li>
+    </ul>
+    <h3 id="member-types">Member Types</h3>
+    <ul>
+    <li><strong>Config</strong> - The configuration options for a class.</li>
+    <li><strong>Property</strong> - Set once a class is instantiated. *See Read Only below.</li>
+    <li><strong>Method</strong> - Actions that can be performed by a class.  Methods should be read as 
+    instance methods and can only be called from a instance of a given class.  Static methods 
+    that can be called directly from the class itself will have a <code>static</code> label next to the 
+    method name.  *See Static below.</li>
+    <li><strong>Event</strong> - Events are specific to the framework event system allowing for classes to 
+    programmatically raise an event to be handled by one or more event handler methods.  DOM 
+    events, while handled by the framework event system, are not specifically described 
+    within the API documentation.  *For DOM events refer to the 
+    <a href="../../https@developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+    <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the 
+    framework.</li>
+    <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework 
+    and may use values set in various Theme Variables.</li>
+    </ul>
+    <h3 id="member-syntax">Member Syntax</h3>
+    <p>Below is an example class member that we can disect to show the syntax of a class member 
+    (the lookupComponent method as viewed from the Ext.button.Button class in this case).</p>
+    <div style="position: relative;" class="show-inherited show-protected members">
+        <div style="border: 1px solid #E4E4E4;" class="classmembers member-protected isNotStatic isInherited member-temp-expanded" data-member-name="lookupComponent">
+            <div class="collapse-toggle"></div>
+            <div class="source-class"><a href="javascript:void(0);">Ext.container.Container</a><div class="viewSource"><a href="javascript:void(0);"></a><a target="_blank" href="javascript:void(0);">view source</a></div></div>
+            <div class="member-header">
+            <a href="javascript:void(0);" class="member-name-link"><span data-ref="method-lookupComponent" class="member-name"><strong>lookup</strong>Component</span></a>
+            <span class="params-list"> ( item )</span> : <span class="memberType">Ext.Component</span>
+            <div class="member-tags"><span class="protected">protected</span></div>
+        </div>
+            <p>Called when a raw config object is added to this container either during initialization of the <a href="javascript:void(0);">items</a> config,
+        or when new items are <a href="javascript:void(0);">added), or {@link #insert inserted</a>.</p>
+        <p>This method converts the passed object into an instanced child component.</p>
+        <p>This may be overridden in subclasses when special processing needs to be applied to child creation.</p>
+                    <div class="detail-header">Parameters</div>
+                <p><span class="params-list">item</span> :
+                        <span class="memberType">&nbsp;Object</span>
+                </p>
+                <div class="params-desc"><p>The config object being added.</p></div>
+                <div class="detail-header">Returns</div>
+                <span style="margin-left:12px;" class="memberType">Ext.Component</span>
+                <div class="return-desc"><p>The component to be added.</p>
+            </div>
+        </div>
+    </div>
+    
+    <p>Let&#39;s look at each part of the member row:</p>
+    <ul>
+    <li><strong>Expand/Collapse</strong> - On the left-hand size of the member row is a control used to 
+    expand and collapse each member row to show / hide member details.</li>
+    <li><strong>Member Name</strong> - The name of the class member (<code>lookupComponent</code> in this example)</li>
+    <li><strong>Method Param</strong> - Any required or optional params used by a method (or passed to an 
+    event handler method) will be listed next to the method name within parenthesis 
+    (<code>( item )</code> in this example)</li>
+    <li><strong>Return type</strong> - The class instance or javascript object returned by the method or 
+    property (<code>Ext.Component</code> in this case).  This may be omitted for methods that do not 
+    return anything other than <code>undefined</code> or may display as multiple possible values 
+    separated by a forward slash <code>/</code> signifying that what is returned may depend on the 
+    results of the method call (i.e. a method may return a Component if a get method calls is 
+    successful or <code>false</code> if unsuccessful which would be displayed as 
+    <code>Ext.Component/Boolean</code>).</li>
+    <li><strong>Flags</strong> - Any flags applicable to the member will be displayed next (<code>PROTECTED</code> in 
+    this example - see the Flags section below)</li>
+    <li><strong>Member Origin</strong> - On the right-hand side of the member row is the class where the 
+    member was initially described (<code>Ext.container.Container</code> in this example).  The source 
+    class will be displayed as a blue link if the member originates from the current class 
+    and gray if it is inherited from an ancestor or mixed-in class.</li>
+    <li><strong>Member Source</strong> - On the right-hand side below the member origin class is a link to 
+    view the member&#39;s source (<code>view source</code> in the example)</li>
+    <li><strong>Params List</strong> - Each param for a class method will be listed using the same name 
+    found above in parenthesis, the type of class or object expected, and a description of 
+    the param (<code>item : Object</code> in the example).</li>
+    <li><strong>Returns</strong> - If a class returns a value other than <code>undefined</code> a &quot;Returns&quot; section 
+    will note the type of class or object returned and a description (<code>Ext.Component</code> in the 
+    example)</li>
+    <li><strong>Since</strong> (<em>not shown in the example</em>) - Some members will show which version of the 
+    product the member was first introduced (i.e. <code>Available since 3.4.0</code> - <em>not pictured in 
+    the example</em>) just after the member description</li>
+    <li><strong>Default</strong> (<em>not shown in the example</em>) - Configs often show the default config value 
+    to be applied to a class instance if not overridden (i.e. <code>Defaults to: false</code>)</li>
+    </ul>
+    <h3 id="member-flags">Member Flags</h3>
+    <p>The API documentation uses a number of flags to further commnicate the class member&#39;s 
+    function and intent.  The label may be represented by a text label, an abbreviation, or 
+    an icon.</p>
+    <ul>
+    <li><strong>Required</strong> - Required config when instantiating a class</li>
+    <li><strong>Bindable</strong> - The config has a setter which allows this config to be set via ViewModel 
+    binding</li>
+    <li><strong>Read Only</strong> - The property may be read, but cannot be used to configure / 
+    re-configure a class instance at runtime</li>
+    <li><strong>Singleton</strong> - Singleton classes are instantiated immediately once defined and may not 
+    be instantiated manually</li>
+    <li><strong>Static</strong> - A static method or property is a method or property belonging to the class 
+    itself, not an instance of the class</li>
+    <li><strong>Chainable</strong> - Refers to methods that return the class instance back when called.<br>This enables chained method calls like: <code>classInstance.method1().method2().etc();</code></li>
+    <li><strong>Deprecated</strong> - A class or member that is scheduled for removal in a future 
+    framework version and is provided in the current version for backwards compatibility.<br>Deprecated classes and members will have a message directing you to the preferred class / 
+    method going forward.</li>
+    <li><strong>Removed</strong> - A removed class or member that exists in documentation only as a 
+    reference for users upgrading between framework versions</li>
+    <li><strong>Template</strong> - A method defined within a base class designed to be overridden by 
+    subclasses</li>
+    <li><strong>Abstract</strong> - A class or member may be be defined as abstract.  Abstract classes and 
+    members establish a class structure and provide limited, if any, code.  Class-specific 
+    code will be furnished via overrides in subclasses.</li>
+    <li><strong>Preventable</strong> - Events marked preventable will not fire if <code>false</code> is returned from 
+    an event handler</li>
+    </ul>
+    <h3 id="class-icons">Class Icons</h3>
+    <p><span class="icon-demo class-icon"></span> - Indicates a framework class  </p>
+    <p><span class="icon-demo singleton-icon"></span> - A singleton framework class. *See the 
+    singleton flag for more information  </p>
+    <p><span class="icon-demo component-icon"></span> - A component-type framework class (any 
+    class within the Ext JS framework that extends Ext.Component)  </p>
+    <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide 
+    is new in the currently viewed version</p>
+    <h3 id="member-icons">Member Icons</h3>
+    <p><span class="icon-demo fa fa-cubes"></span> - Indicates a class member of type <code>config</code>  </p>
+    <p><span class="icon-demo fa fa-book"></span> - Indicates a class member of type <code>property</code>  </p>
+    <p><span class="icon-demo fa fa-object-group"></span> - Indicates a class member of type 
+    <code>method</code>  </p>
+    <p><span class="icon-demo fa fa-bolt"></span> - Indicates a class member of type <code>event</code>  </p>
+    <p><span class="icon-demo fa fa-paint-brush"></span> - Indicates a class member of type 
+    <code>theme variable</code>  </p>
+    <p><span class="icon-demo fa fa-tint"></span> - Indicates a class member of type 
+    <code>theme mixin</code>  </p>
+    <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide 
+    is new in the currently viewed version</p>
+    <h2 id="navigation-and-features">Navigation and Features</h2>
+    <h3 id="class-member-quick-nav-menu">Class Member Quick-Nav Menu</h3>
+    <p>Just below the class name on an API doc page is a row of buttons corresponding to the 
+    types of members owned by the current class.  Each button shows a count of members by 
+    type (this count is updated as filters are applied).  Clicking the button will navigate 
+    you to that member section.  Hovering over the member-type button will reveal a popup 
+    menu of all members of that type for quick navigation.</p>
+    <h3 id="getter-and-setter-methods">Getter and Setter Methods</h3>
+    <p>Getting and setter methods that correlate to a class config option will show up in the 
+    methods section as well as in the configs section of both the API doc and the member-type 
+    menus just beneath the config they work with.  The getter and setter method documentation 
+    will be found in the config row for easy reference.</p>
+    <h3 id="history-bar">History Bar</h3>
+    <p>Your page history is kept in localstorage and displayed (using the available real estate) 
+    just below the top title bar.  By default, the only search results shown are the pages 
+    matching the product / version you&#39;re currently viewing.  You can expand what is 
+    displayed by clicking on the <span class="icon-demo history-config"></span> button on the 
+    right-hand side of the history bar and choosing the &quot;All&quot; radio option.  This will show 
+    all recent pages in the history bar for all products / versions.</p>
+    <p>Within the history config menu you will also see a listing of your recent page visits. 
+    The results are filtered by the &quot;Current Product / Version&quot; and &quot;All&quot; radio options. 
+    Clicking on the <span class="icon-demo history-clear"></span> button will clear the history bar as 
+    well as the history kept in local storage.</p>
+    <p>If &quot;All&quot; is selected in the history config menu the checkbox option for &quot;Show product 
+    details in the history bar&quot; will be enabled.  When checked, the product/version for each 
+    historic page will show alongside the page name in the history bar.  Hovering the cursor 
+    over the page names in the history bar will also show the product/version as a tooltip.</p>
+    <h3 id="search-and-filters">Search and Filters</h3>
+    <p>Both API docs and guides can be searched for using the search field at the top of the 
+    page.</p>
+    <p>On API doc pages there is also a filter input field that filters the member rows 
+    using the filter string.  In addition to filtering by string you can filter the class 
+    members by access level and inheritance.  This is done using the checkboxes at the top of 
+    the page.  <strong>Note</strong> that filtering out <code>private</code> members also filters the API class 
+    navigation tree.</p>
+    <p>Clicking on an empty search field will show your last 10 searches for quick navigation.</p>
+    <h3 id="api-doc-class-metadata">API Doc Class Metadata</h3>
+    <p>Each API doc page (with the exception of Javascript primitives pages) has a menu view of 
+    metadata relating to that class.  This metadata view will have one or more of the 
+    following:</p>
+    <ul>
+    <li><strong>Alternate Name</strong> - One or more additional class name synonymns (in Ext JS 6.0.0 the 
+    <code>Ext.button.Button</code> class has an alternate class name of <code>Ext.Button</code>).  Alternate class 
+    names are commonly maintained for backward compatibility.</li>
+    <li><strong>Hierarchy</strong> - The hierararchy view lists the inheritance chain of the current class 
+    up through its ancestor classes up to the root base class.</li>
+    <li><strong>Mixins</strong> - A list of classes that are mixed into the current class</li>
+    <li><strong>Inherited Mixins</strong> - A list of classes that are mixed into an ancestor of the current 
+    class</li>
+    <li><strong>Requires</strong> - All classes required to be defined for the class to be instantiated</li>
+    <li><strong>Uses</strong> - A list of classes potentially used by the class at some point in its 
+    lifecycle, but not necessarily requried for the class to initially be instantiated</li>
+    <li><strong>Subclasses</strong> - Classes that extend the current class</li>
+    </ul>
+    <h3 id="expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</h3>
+    <p>Runnable examples (Fiddles) are expanded on a page by default.  You can collapse and 
+    expand example code blocks individually using the arrow on the top-left of the code 
+    block.  You can also toggle the collapse state of all examples using the toggle button on 
+    the top-right of the page.  The toggle-all state will be remembered between page loads.</p>
+    <p>Class members are collapsed on a page by default.  You can expand and collapse members 
+    using the arrow icon on the left of the member row or globally using the expand / 
+    collapse all toggle button top-right.</p>
+    <h3 id="desktop-vs-mobile-view">Desktop -vs- Mobile View</h3>
+    <p>Viewing the docs on narrower screens or browsers will result in a view optimized for a 
+    smaller form factor.  The primary differences between the desktop and &quot;mobile&quot; view are:</p>
+    <ul>
+    <li>Global navigation will be located in a menu on the left-hand side accessible via the 
+    hamburger menu icon.  The menu houses the following (on most pages):<ul>
+    <li>The name of the current product (as a link to the product landing page)</li>
+    <li>The Sencha icon used to navigate back to the documentation home page</li>
+    <li>The product menu drop-down button</li>
+    <li>Tabs of navigation trees for the API docs and guides</li>
+    </ul>
+    </li>
+    <li>Current context navigation and tools is located on the right-hand side accessible via 
+    the gear icon.  The context menu houses teh following:<ul>
+    <li>The global search input field</li>
+    <li>(<em>API doc</em>) A &quot;Filters&quot; tab with the member filter, expand / collapse all examples 
+    button, expand / collapse all member rows button, the access level filter checkboxes, 
+    and the counts of each member</li>
+    <li>(<em>API doc</em>) A &quot;Related Classes&quot; tab containing the menu of metadata related to the 
+    current class</li>
+    <li>(<em>Guides</em>) The table of contents for the guide</li>
+    </ul>
+    </li>
+    </ul>
+    <h3 id="viewing-the-class-source">Viewing the Class Source</h3>
+    <p>The class source can be viewed by clicking on the class name at the top of an API doc 
+    page.  The source for class members can be viewed by clicking on the &quot;view source&quot; link 
+    on the right-hand side of the member row.</p>
+    
+        </div>
+    </div>
+    <div id="header">
+        <div class="logo">
+            <a href="../default.htm"><img height="32" src="home-images/sencha_logo_thumb.png"/></a>
+        </div>
+        <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
+        <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl landing-product-menu-btn"><div class="callout callout-b"></div></span>
+            <a class="page-title class" href="src/Object.js.html#Object" target="_blank">Object</a>
+        <span id="mobile-context-menu-btn" class="fa fa-cog"></span>
+    </div>
+    <div id="centerContent">
+        <div id="history-nav">
+            <span id="history-config" class="history-config tooltip tooltip-tr-br" data-tip="Configure / Clear History"><div class="callout callout-b"></div></span>
+        </div>
+        <div id="class-tree-ct" class="class-tree">
+            <h2 class="product-header">
+                <div class="logo">
+                    <a href="../default.htm"><img src="home-images/sencha_logo1x.png"/></a>
+                </div>
+                <a href="index.html">Sencha Test 1.0.3 </a>
+                <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn  tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+            </h2>
+            <div id="tree-header" class="pre-load">
+                <div id="guideTab" class="toolbarHeaderButton">
+                    Guides
+                </div>
+                <div id="apiTab" class="toolbarHeaderButton active-tab">
+                    API
+                </div>
+                <div id="hide-class-tree"></div>
+            </div>
+            <div id="tree-scroller">
+                <div id="tree" class="show-private show-protected is-tree">
+                    <div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isNotLeaf" id="singleton-st" isLeaf="false">
+        <span class="tree-expando">▸</span>
+            <span class="singleton-type"></span>
+            <a class="tree-leaf-text" href="ST.html">ST</a>
+    </div>
+        <div class="tree-child-leaves hidden">
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-event" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">event</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member-protected">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-driver" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Driver.html">Driver</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-event" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Event.html">Event</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-gesturequeue" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.GestureQueue.html">GestureQueue</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-injector" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Injector.html">Injector</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-playable" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Playable.html">Playable</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-player" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Player.html">Player</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-recorder" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.event.Recorder.html">Recorder</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-future" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">future</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-button" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Button.html">Button</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-cell" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Cell.html">Cell</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-checkbox" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.CheckBox.html">CheckBox</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-combobox" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.ComboBox.html">ComboBox</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-component" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Component.html">Component</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-dataview" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.DataView.html">DataView</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-element" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Element.html">Element</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-field" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Field.html">Field</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-grid" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Grid.html">Grid</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-item" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Item.html">Item</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-panel" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Panel.html">Panel</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-picker" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Picker.html">Picker</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-row" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Row.html">Row</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-select" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Select.html">Select</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-selection" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.Selection.html">Selection</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-selectionmodel" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.SelectionModel.html">SelectionModel</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-textfield" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.future.TextField.html">TextField</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-locator" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">locator</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-locator-strategy" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="ST.locator.Strategy.html">Strategy</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-alert" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Alert.html">Alert</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-protected">
+                    <div class="tree-leaf-content isLeaf" id="node-st-block" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Block.html">Block</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-browser" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Browser.html">Browser</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-browser-1" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.browser-1.html">browser</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-element" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Element.html">Element</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-gate" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Gate.html">Gate</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-jasmine" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.jasmine.html">jasmine</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-locator" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.Locator.html">Locator</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-options" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.options.html">options</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-os-1" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.os-1.html">os</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-os" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.OS.html">OS</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-spec" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Spec.html">Spec</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-status" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.status.html">status</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-suite" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Suite.html">Suite</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-supports" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.supports.html">supports</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-system" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.system.html">system</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-test" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Test.html">Test</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-protected">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-tests" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="ST.Tests.html">Tests</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-version" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.Version.html">Version</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-watchdog" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="ST.WatchDog.html">WatchDog</a>
+                    </div>
+                </div>
+        </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-array" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Array.html">Array</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-boolean" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Boolean.html">Boolean</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-date" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Date.html">Date</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-function" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Function.html">Function</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-number" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Number.html">Number</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-object" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="Object.html">Object</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-regexp" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="RegExp.html">RegExp</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-string" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="String.html">String</a>
+    </div>
+</div>
+
+                    <div class="fa fa-plus toggle-tree hide tooltip tooltip-tr-br" data-expand="Expand All Classes" data-collapse="Collapse All Classes"><div class="callout callout-b"></div></div>
+                </div>
+                <div id="guide-tree" class="hide is-tree">
+                    <div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-product_overview" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/product_overview.html">Sencha Test 概述</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-sencha_test_installation" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/sencha_test_installation.html">安装和配置</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-getting_started" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/getting_started.html">入门</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-testing_existing_apps" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/testing_existing_apps.html">测试已有应用程序</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-testing_applications" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/testing_applications.html">测试新建应用程序</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-command_line_archive_server" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/command_line_archive_server.html">命令行工具CLI和归档服务器</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-test_projects_scenarios_suites" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/test_projects_scenarios_suites.html">项目, 场景(Scenarios)和套件(Suites)</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-using_the_test_runner" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/using_the_test_runner.html">使用Test Runner</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-unit_functional_tests" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/unit_functional_tests.html">单元测试 vs 功能测试</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-release_notes" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="guides/release_notes.html">发布说明</a>
+    </div>
+</div>
+
+                    <div class="fa fa-plus toggle-tree hide tooltip tooltip-tr-br" data-expand="Expand All Guides" data-collapse="Collapse All Guides"><div class="callout callout-b"></div></div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="back-to-top">top </a>
+        <div id="rightMembers" class="">
+            
+            
+            <div id="member-toolbars">
+    <div id="member-class-name">
+            <span class='class-icon'></span>
+
+        <h1 class='class'><a href="src/Object.js.html#Object" target="_blank">Object</a>
+        </h1>
+    </div>
+</div>
+<div class="context-menu-ct">
+    <div class="context-header">
+        <div id="hide-context-menu" class="fa fa-caret-right"></div>
+    </div>
+    <div class="search">
+        <form autocomplete="off">
+            <input type="text" type="search" placeholder="search" id="searchtext">
+            <i id="filtersubmit" class="fa fa-search"></i>
+            <span id="help-btn" data-tip="Docs Help" class="tooltip tooltip-tr-br"><div class="callout callout-b"></div></span>
+        </form>
+    </div>
+    <div class="context-menu-tabs">
+        <div id="filterTab" class="toolbarHeaderButton active-tab">
+            Filters
+        </div>
+        <div id="relatedClassesTab" class="toolbarHeaderButton">
+            Related Classes
+        </div>
+    </div>
+    <div id="filters-ct">
+        <div id="toolbar">
+            <div class="memberFilter">
+                <input placeholder="Filter members..." type="search" id="member-filter-field" name="member-filter-field">
+                <div id="toggleExamples" class="fa fa-code tooltip tooltip-tr-br" data-expand="Expand All Examples" data-collapse="Collapse All Examples"><div class="callout callout-b"></div></div>
+                <div id="toggleAll" class="fa fa-plus tooltip tooltip-tr-br" data-expand="Expand All Members" data-collapse="Collapse All Members"><div class="callout callout-b"></div></div>
+            </div>
+            <div id="member-display">
+                <div class="member-access-display"><label><input id="publicCheckbox" type="checkbox" value="member-public" checked=true/>Public</label></div>
+                <div class="member-access-display"><label><input id="protectedCheckbox" type="checkbox" value="member-protected" checked=true/>Protected</label></div>
+                <div class="member-access-display"><label><input id="privateCheckbox" type="checkbox" value="member-private" checked=true/>Private</label></div>
+                <div class="member-access-display"><label><input id="inheritedCheckbox" type="checkbox" value="member-inherited" checked=true/>Inherited</label></div>
+            </div>
+            <div id="member-types-menu" class="member-types-menu">
+                    <a href="#properties" id="properties-button-link"><div id="properties-nav-btn" class="toolbarButton disabled">
+                        <i class="fa fa-book"></i>
+                        <span class="member-type-btn-text">properties</span>
+                        <div id="properties-count" class="nav-btn-count"></div>
+                        <div class="nav-btn-mask"></div>
+                    </div></a>
+                    <a href="#methods" id="methods-button-link"><div id="methods-nav-btn" class="toolbarButton disabled">
+                        <i class="fa fa-object-group"></i>
+                        <span class="member-type-btn-text">methods</span>
+                        <div id="methods-count" class="nav-btn-count"></div>
+                        <div class="nav-btn-mask"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+    <div id="related-classes-context-ct" class="hide">
+        <!-- We'll programmatically copy in the related classes elements here on page load -->
+    </div>
+</div>
+<div id="class-body-wrap" class="class-body-wrap">
+    <div class="body-wrap-inner">
+        <div id="classText" class="classText">
+            <div class="classHead">
+                <div class="classMeta">
+                        <div class="classMetaColumn">
+                            <h3>Sub-Classes</h3>
+                            <p class="list"><a href='Array.html'>Array</a><br><a href='Boolean.html'>Boolean</a><br><a href='Date.html'>Date</a><br><a href='Function.html'>Function</a><br><a href='Number.html'>Number</a><br><a href='RegExp.html'>RegExp</a><br><a href='ST.html'>ST</a><br><a href='ST.Alert.html'>ST.Alert</a><br><a href='ST.Block.html'>ST.Block</a><br><a href='ST.Browser.html'>ST.Browser</a><br><a href='ST.Element.html'>ST.Element</a><br><a href='ST.event.Driver.html'>ST.event.Driver</a><br><a href='ST.event.Event.html'>ST.event.Event</a><br><a href='ST.event.GestureQueue.html'>ST.event.GestureQueue</a><br><a href='ST.event.Injector.html'>ST.event.Injector</a><br><a href='ST.event.Playable.html'>ST.event.Playable</a><br><a href='ST.future.Element.html'>ST.future.Element</a><br><a href='ST.future.Cell.html'>ST.future.Cell</a><br><a href='ST.future.Item.html'>ST.future.Item</a><br><a href='ST.future.Row.html'>ST.future.Row</a><br><a href='ST.future.Selection.html'>ST.future.Selection</a><br><a href='ST.future.SelectionModel.html'>ST.future.SelectionModel</a><br><a href='ST.Gate.html'>ST.Gate</a><br><a href='ST.jasmine.html'>ST.jasmine</a><br><a href='ST.Locator.html'>ST.Locator</a><br><a href='ST.locator.Strategy.html'>ST.locator.Strategy</a><br><a href='ST.options.html'>ST.options</a><br><a href='ST.OS.html'>ST.OS</a><br><a href='ST.Test.html'>ST.Test</a><br><a href='ST.status.html'>ST.status</a><br><a href='ST.supports.html'>ST.supports</a><br><a href='ST.system.html'>ST.system</a><br><a href='ST.Tests.html'>ST.Tests</a><br><a href='ST.Version.html'>ST.Version</a><br><a href='ST.WatchDog.html'>ST.WatchDog</a><br><a href='String.html'>String</a></p>
+                        </div>
+                </div>
+            </div>
+                <h2>Summary</h2>
+                <p>Creates an object wrapper.</p>
+<p>The Object constructor creates an object wrapper for the given value. If the value is null or
+undefined, it will create and return an empty object, otherwise, it will return an object of a type
+that corresponds to the given value.</p>
+<p>When called in a non-constructor context, Object behaves identically.</p>
+<h1 id="object_using-object-given-undefined-and-null-types">Using Object given undefined and null types<a class="quick-link" href="#object_using-object-given-undefined-and-null-types"></a></h1>
+<p>The following examples store an empty Object object in o:
+    var o = new Object();</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var o = new Object(undefined);
+
+var o = new Object(null);
+</code></pre></div><h1 id="object_using-object-to-create-boolean-objects">Using Object to create Boolean objects<a class="quick-link" href="#object_using-object-to-create-boolean-objects"></a></h1>
+<p>The following examples store Boolean objects in o:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// equivalent to o = new Boolean(true);
+var o = new Object(true);
+
+// equivalent to o = new Boolean(false);
+var o = new Object(Boolean());
+</code></pre></div><div class="notice">
+Documentation for this class comes from <a href="../../https@developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="external-link" target="_blank">MDN</a>
+and is available under <a href="../../creativecommons.org/licenses/by-sa/2.0/default.htm" class="external-link" target="_blank">Creative Commons: Attribution-Sharealike license</a>.
+</div>
+
+        </div>
+        <div class="no-visible-members-warning">No members found using the current filters</div>
+        <div class="members">
+                <div id="properties-ct">
+                    <h2 id="properties" class="type">properties</h2>
+                    <a name="properties"></a>
+                            <div id="property-constructor" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="constructor" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-property-constructor">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#property-constructor" class="member-name-link"><span data-ref="property-constructor" class="member-name">constructor</span></a>
+            
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p> Specifies the function that creates an object&#39;s prototype.</p>
+<p> Returns a reference to the Object function that created the instance&#39;s prototype. Note that the
+ value of this property is a reference to the function itself, not a string containing the
+ function&#39;s name, but it isn&#39;t read only (except for primitive Boolean, Number or String values: 1,
+ true, &quot;read-only&quot;).</p>
+<p> All objects inherit a <code>constructor</code> property from their <a href='#property-prototype'>prototype</a>:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript"> o = new Object // or o = {} in JavaScript 1.2
+ o.constructor == Object
+ a = new Array // or a = [] in JavaScript 1.2
+ a.constructor == Array
+ n = new Number(3)
+ n.constructor == Number
+</code></pre></div><p> Even though you cannot construct most HTML objects, you can do comparisons. For example,</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript"> document.constructor == Document
+ document.form3.constructor == Form
+</code></pre></div><p> The following example creates a prototype, <code>Tree</code>, and an object of that type, theTree. The example then displays the <code>constructor</code> property for the object <code>theTree</code>.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript"> function Tree(name) {
+     this.name = name;
+ }
+ theTree = new Tree(&quot;Redwood&quot;);
+ console.log(&quot;theTree.constructor is &quot; + theTree.constructor);
+</code></pre></div><p> This example displays the following output:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript"> theTree.constructor is function Tree(name) {
+     this.name = name;
+ }
+</code></pre></div><p> The following example shows how to modify constructor value of generic objects. Only true, 1 and
+ &quot;test&quot; variable constructors will not be changed. This example explains that is not always so safe
+ to believe in constructor function.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript"> function Type(){};
+ var    types = [
+     new Array,    [],
+    new Boolean,    true,
+    new Date,
+    new Error,
+    new Function,    function(){},
+    Math,
+    new Number,    1,
+    new Object,    {},
+    new RegExp,    /(?:)/,
+    new String,    &quot;test&quot;
+ ];
+ for(var i = 0; i &lt; types.length; i++){
+     types[i].constructor = Type;
+     types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
+ };
+ alert(types.join(&quot;\n&quot;));
+</code></pre></div>
+    </div>
+  
+                            <div id="property-prototype" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="prototype" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-property-prototype">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#property-prototype" class="member-name-link"><span data-ref="property-prototype" class="member-name">prototype</span></a>
+            
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Allows the addition of properties to all objects of type Object.</p>
+
+    </div>
+  
+                </div>
+                <div id="methods-ct">
+                    <h2 id="methods" class="type">methods</h2>
+                    <a name="methods"></a>
+                            <div id="method-constructor" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="constructor" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-constructor">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-constructor" class="member-name-link"><span data-ref="method-constructor" class="member-name">constructor</span></a>
+            <span class="params-list"> (
+                        
+                        [value]
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Creates new Object.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-constructor--value">value</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>The value to wrap.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                            <div id="method-hasOwnProperty" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="hasOwnProperty" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-hasOwnProperty">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-hasOwnProperty" class="member-name-link"><span data-ref="method-hasOwnProperty" class="member-name">hasOwnProperty</span></a>
+            <span class="params-list"> (
+                        
+                        prop
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a boolean indicating whether an object contains the specified property as a direct property
+of that object and not inherited through the prototype chain.</p>
+<p>Every object descended from <a href='Object.html'>Object</a> inherits the <a href='#method-hasOwnProperty'>hasOwnProperty</a> method. This method can be used
+to determine whether an object has the specified property as a direct property of that object;
+unlike the <code>in</code> operator, this method does not check down the object&#39;s prototype chain.</p>
+<p>The following example determines whether the o object contains a property named prop:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">o = new Object();
+o.prop = &#39;exists&#39;;
+
+function changeO() {
+    o.newprop = o.prop;
+    delete o.prop;
+}
+
+o.hasOwnProperty(&#39;prop&#39;);   //returns true
+changeO();
+o.hasOwnProperty(&#39;prop&#39;);   //returns false
+</code></pre></div><p>The following example differentiates between direct properties and properties inherited through the
+prototype chain:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">o = new Object();
+o.prop = &#39;exists&#39;;
+o.hasOwnProperty(&#39;prop&#39;);             // returns true
+o.hasOwnProperty(&#39;toString&#39;);         // returns false
+o.hasOwnProperty(&#39;hasOwnProperty&#39;);   // returns false
+</code></pre></div><p>The following example shows how to iterate over the properties of an object without executing on
+inherit properties.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var buz = {
+    fog: &#39;stack&#39;
+};
+
+for (var name in buz) {
+    if (buz.hasOwnProperty(name)) {
+        alert(&quot;this is fog (&quot; + name + &quot;) for sure. Value: &quot; + buz[name]);
+    }
+    else {
+        alert(name); // toString or something else
+    }
+}
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-hasOwnProperty--prop">prop</span> :
+                            <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The name of the property to test.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>Returns true if object contains specified property; else
+returns false.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-isPrototypeOf" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="isPrototypeOf" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-isPrototypeOf">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-isPrototypeOf" class="member-name-link"><span data-ref="method-isPrototypeOf" class="member-name">isPrototypeOf</span></a>
+            <span class="params-list"> (
+                        
+                        prototype
+                        , 
+                        object
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a boolean indication whether the specified object is in the prototype chain of the object
+this method is called upon.</p>
+<p><a href='#method-isPrototypeOf'>isPrototypeOf</a> allows you to check whether or not an object exists within another object&#39;s
+prototype chain.</p>
+<p>For example, consider the following prototype chain:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function Fee() {
+    // . . .
+}
+
+function Fi() {
+    // . . .
+}
+Fi.prototype = new Fee();
+
+function Fo() {
+    // . . .
+}
+Fo.prototype = new Fi();
+
+function Fum() {
+    // . . .
+}
+Fum.prototype = new Fo();
+</code></pre></div><p>Later on down the road, if you instantiate <code>Fum</code> and need to check if <code>Fi</code>&#39;s prototype exists
+within the <code>Fum</code> prototype chain, you could do this:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var fum = new Fum();
+. . .
+
+if (Fi.prototype.isPrototypeOf(fum)) {
+// do something safe
+}
+</code></pre></div><p>This, along with the <code>instanceof</code> operator particularly comes in handy if you have code that can
+only function when dealing with objects descended from a specific prototype chain, e.g., to
+guarantee that certain methods or properties will be present on that object.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-isPrototypeOf--prototype">prototype</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>an object to be tested against each link in the prototype chain of the
+<em>object</em> argument</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-isPrototypeOf--object">object</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>the object whose prototype chain will be searched</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>Returns true if object is a prototype and false if not.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-propertyIsEnumerable" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="propertyIsEnumerable" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-propertyIsEnumerable">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-propertyIsEnumerable" class="member-name-link"><span data-ref="method-propertyIsEnumerable" class="member-name">propertyIsEnumerable</span></a>
+            <span class="params-list"> (
+                        
+                        prop
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a boolean indicating if the internal ECMAScript DontEnum attribute is set.</p>
+<p>Every object has a <a href='#method-propertyIsEnumerable'>propertyIsEnumerable</a> method. This method can determine whether the specified
+property in an object can be enumerated by a <code>for...in</code> loop, with the exception of properties
+inherited through the prototype chain. If the object does not have the specified property, this
+method returns false.</p>
+<p>The following example shows the use of <a href='#method-propertyIsEnumerable'>propertyIsEnumerable</a> on objects and arrays:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var o = {};
+var a = [];
+o.prop = &#39;is enumerable&#39;;
+a[0] = &#39;is enumerable&#39;;
+
+o.propertyIsEnumerable(&#39;prop&#39;);   // returns true
+a.propertyIsEnumerable(0);        // returns true
+</code></pre></div><p>The following example demonstrates the enumerability of user-defined versus built-in properties:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var a = [&#39;is enumerable&#39;];
+
+a.propertyIsEnumerable(0);          // returns true
+a.propertyIsEnumerable(&#39;length&#39;);   // returns false
+
+Math.propertyIsEnumerable(&#39;random&#39;);   // returns false
+this.propertyIsEnumerable(&#39;Math&#39;);     // returns false
+</code></pre></div><p>Direct versus inherited properties</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var a = [];
+a.propertyIsEnumerable(&#39;constructor&#39;);         // returns false
+
+function firstConstructor()
+{
+    this.property = &#39;is not enumerable&#39;;
+}
+firstConstructor.prototype.firstMethod = function () {};
+
+function secondConstructor()
+{
+    this.method = function method() { return &#39;is enumerable&#39;; };
+}
+
+secondConstructor.prototype = new firstConstructor;
+secondConstructor.prototype.constructor = secondConstructor;
+
+var o = new secondConstructor();
+o.arbitraryProperty = &#39;is enumerable&#39;;
+
+o.propertyIsEnumerable(&#39;arbitraryProperty&#39;);   // returns true
+o.propertyIsEnumerable(&#39;method&#39;);              // returns true
+o.propertyIsEnumerable(&#39;property&#39;);            // returns false
+
+o.property = &#39;is enumerable&#39;;
+
+o.propertyIsEnumerable(&#39;property&#39;);            // returns true
+
+// These return false as they are on the prototype which
+// propertyIsEnumerable does not consider (even though the last two
+// are iteratable with for-in)
+o.propertyIsEnumerable(&#39;prototype&#39;); // returns false (as of JS 1.8.1/FF3.6)
+o.propertyIsEnumerable(&#39;constructor&#39;); // returns false
+o.propertyIsEnumerable(&#39;firstMethod&#39;); // returns false
+</code></pre></div>
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="method-propertyIsEnumerable--prop">prop</span> :
+                            <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The name of the property to test.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>If the object does not have the specified property, this
+method returns false.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-toLocaleString" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="toLocaleString" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-toLocaleString">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-toLocaleString" class="member-name-link"><span data-ref="method-toLocaleString" class="member-name">toLocaleString</span></a>
+            
+                :
+                    <span class="memberType"><a href='String.html'>String</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a string representing the object. This method is meant to be overridden by derived objects
+for locale-specific purposes.</p>
+<p><a href='Object.html'>Object</a>s <a href='#method-toLocaleString'>toLocaleString</a> returns the result of calling <a href='#method-toString'>toString</a>.</p>
+<p>This function is provided to give objects a generic <a href='#method-toLocaleString'>toLocaleString</a> method, even though not all
+may use it. Currently, only <a href='Array.html'>Array</a>, <a href='Number.html'>Number</a>, and <a href='Date.html'>Date</a> override <a href='#method-toLocaleString'>toLocaleString</a>.</p>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='String.html'>String</a></span>
+                <div class="return-desc"><p>Object represented as a string.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-toString" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="toString" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-toString">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-toString" class="member-name-link"><span data-ref="method-toString" class="member-name">toString</span></a>
+            
+                :
+                    <span class="memberType"><a href='String.html'>String</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns a string representation of the object.</p>
+<p>Every object has a <code>toString()</code> method that is automatically called when the object is to be
+represented as a text value or when an object is referred to in a manner in which a string is
+expected. By default, the <code>toString()</code> method is inherited by every object descended from <a href='Object.html'>Object</a>.
+If this method is not overridden in a custom object, <code>toString()</code> returns &quot;[object type]&quot;, where
+<code>type</code> is the object type. The following code illustrates this:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var o = new Object();
+o.toString();           // returns [object Object]
+</code></pre></div><p>You can create a function to be called in place of the default <code>toString()</code> method. The
+<code>toString()</code> method takes no arguments and should return a string. The <code>toString()</code> method you
+create can be any value you want, but it will be most useful if it carries information about the
+object.</p>
+<p>The following code defines the <code>Dog</code> object type and creates <code>theDog</code>, an object of type <code>Dog</code>:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function Dog(name,breed,color,sex) {
+    this.name=name;
+    this.breed=breed;
+    this.color=color;
+    this.sex=sex;
+}
+
+theDog = new Dog(&quot;Gabby&quot;,&quot;Lab&quot;,&quot;chocolate&quot;,&quot;female&quot;);
+</code></pre></div><p>If you call the <code>toString()</code> method on this custom object, it returns the default value inherited
+from <a href='Object.html'>Object</a>:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">theDog.toString(); //returns [object Object]
+</code></pre></div><p>The following code creates and assigns <code>dogToString()</code> to override the default <code>toString()</code> method.
+This function generates a string containing the name, breed, color, and sex of the object, in the
+form <code>&quot;property = value;&quot;</code>.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Dog.prototype.toString = function dogToString() {
+    var ret = &quot;Dog &quot; + this.name + &quot; is a &quot; + this.sex + &quot; &quot; + this.color + &quot; &quot; + this.breed;
+    return ret;
+}
+</code></pre></div><p>With the preceding code in place, any time theDog is used in a string context, JavaScript
+automatically calls the <code>dogToString()</code> function, which returns the following string:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Dog Gabby is a female chocolate Lab
+</code></pre></div><p><code>toString()</code> can be used with every object and allows you to get its class. To use the
+<code>Object.prototype.toString()</code> with every object, you need to call <code>Function.prototype.call()</code> or
+<code>Function.prototype.apply()</code> on it, passing the object you want to inspect as the first parameter
+called <code>thisArg</code>.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var toString = Object.prototype.toString;
+
+toString.call(new Date); // [object Date]
+toString.call(new String); // [object String]
+toString.call(Math); // [object Math]
+</code></pre></div>
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='String.html'>String</a></span>
+                <div class="return-desc"><p>Object represented as a string.</p>
+</div>
+
+    </div>
+  
+                            <div id="method-valueOf" class="classmembers member member-public isNotStatic  is-not-inherited    " data-member-name="valueOf" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-method-valueOf">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#method-valueOf" class="member-name-link"><span data-ref="method-valueOf" class="member-name">valueOf</span></a>
+            
+                :
+                    <span class="memberType"><a href='Object.html'>Object</a></span>
+
+            <div class="member-tags">
+            </div>
+        </h2>
+
+            <p>Returns the primitive value of the specified object.</p>
+<p>JavaScript calls the <a href='#method-valueOf'>valueOf</a> method to convert an object to a primitive value. You rarely need to
+invoke the <a href='#method-valueOf'>valueOf</a> method yourself; JavaScript automatically invokes it when encountering an
+object where a primitive value is expected.</p>
+<p>By default, the <a href='#method-valueOf'>valueOf</a> method is inherited by every object descended from <a href='Object.html'>Object</a>. Every built-
+in core object overrides this method to return an appropriate value. If an object has no primitive
+value, <a href='#method-valueOf'>valueOf</a> returns the object itself, which is displayed as:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">[object Object]
+</code></pre></div><p>You can use <a href='#method-valueOf'>valueOf</a> within your own code to convert a built-in object into a primitive value.
+When you create a custom object, you can override <code>Object.valueOf</code> to call a custom method instead
+of the default <a href='Object.html'>Object</a> method.</p>
+<p>You can create a function to be called in place of the default <a href='#method-valueOf'>valueOf</a> method. Your function must
+take no arguments.</p>
+<p>Suppose you have an object type <code>myNumberType</code> and you want to create a <a href='#method-valueOf'>valueOf</a> method for it.
+The following code assigns a user-defined function to the object&#39;s valueOf method:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">myNumberType.prototype.valueOf = new Function(functionText)
+</code></pre></div><p>With the preceding code in place, any time an object of type <code>myNumberType</code> is used in a context
+where it is to be represented as a primitive value, JavaScript automatically calls the function
+defined in the preceding code.</p>
+<p>An object&#39;s <a href='#method-valueOf'>valueOf</a> method is usually invoked by JavaScript, but you can invoke it yourself as
+follows:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">myNumber.valueOf()
+</code></pre></div><p>Note: Objects in string contexts convert via the <a href='#method-toString'>toString</a> method, which is different from
+<a href='String.html'>String</a> objects converting to string primitives using <a href='#method-valueOf'>valueOf</a>. All objects have a string
+conversion, if only <code>&quot;[object type]&quot;</code>. But many objects do not convert to number, boolean, or
+function.</p>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Object.html'>Object</a></span>
+                <div class="return-desc"><p>Returns value of the object or the object itself.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-create" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="create" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-create">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-create" class="member-name-link"><span data-ref="static-method-create" class="member-name">create</span></a>
+            <span class="params-list"> (
+                        
+                        proto
+                        , 
+                        [propertiesObject]
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Object.html'>Object</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Creates a new object with the specified prototype object and properties.</p>
+<h2>Classical inheritance with Object.create</h2>
+<p>Below is an example of how to use <code>Object.create</code> to achieve
+classical inheritance, this is for single inheritance, which is all
+that Javascript supports.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">//Shape - superclass
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+Shape.prototype.move = function(x, y) {
+    this.x += x;
+    this.y += y;
+    console.info(&quot;Shape moved.&quot;);
+};
+
+// Rectangle - subclass
+function Rectangle() {
+  Shape.call(this); //call super constructor.
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+
+var rect = new Rectangle();
+
+rect instanceof Rectangle //true.
+rect instanceof Shape //true.
+
+rect.move(); //Outputs, &quot;Shape moved.&quot;
+</code></pre></div><p>If you wish to inherit from multiple objects, then mixins are a possibility.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function MyClass() {
+     SuperClass.call(this);
+     OtherSuperClass.call(this);
+}
+
+MyClass.prototype = Object.create(SuperClass.prototype); //inherit
+mixin(MyClass.prototype, OtherSuperClass.prototype); //mixin
+
+MyClass.prototype.myMethod = function() {
+     // do a thing
+};
+</code></pre></div><p>The mixin function would copy the functions from the superclass
+prototype to the subclass prototype, the mixin function needs to be
+supplied by the user.</p>
+<h2>Using <code>propertiesObject</code> argument with Object.create</h2>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var o;
+
+// create an object with null as prototype
+o = Object.create(null);
+
+
+o = {};
+// is equivalent to:
+o = Object.create(Object.prototype);
+
+
+// Example where we create an object with a couple of sample properties.
+// (Note that the second parameter maps keys to *property descriptors*.)
+o = Object.create(Object.prototype, {
+  // foo is a regular &quot;value property&quot;
+  foo: { writable:true, configurable:true, value: &quot;hello&quot; },
+  // bar is a getter-and-setter (accessor) property
+  bar: {
+    configurable: false,
+    get: function() { return 10 },
+    set: function(value) { console.log(&quot;Setting `o.bar` to&quot;, value) }
+}})
+
+
+function Constructor(){}
+o = new Constructor();
+// is equivalent to:
+o = Object.create(Constructor.prototype);
+// Of course, if there is actual initialization code in the Constructor function, the Object.create cannot reflect it
+
+
+// create a new object whose prototype is a new, empty object
+// and a adding single property &#39;p&#39;, with value 42
+o = Object.create({}, { p: { value: 42 } })
+
+// by default properties ARE NOT writable, enumerable or configurable:
+o.p = 24
+o.p
+//42
+
+o.q = 12
+for (var prop in o) {
+   console.log(prop)
+}
+//&quot;q&quot;
+
+delete o.p
+//false
+
+//to specify an ES3 property
+o2 = Object.create({}, { p: { value: 42, writable: true, enumerable: true, configurable: true } });
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-create--proto">proto</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object which should be the prototype of
+the newly-created object.</p>
+<p>Throws a <code>TypeError</code> exception if the <code>proto</code> parameter isn&#39;t null or
+an object.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-create--propertiesObject">propertiesObject</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        <i class="memberType">(optional)</i>
+                    </p>
+                    <div class="params-desc"><p>If specified and not undefined,
+an object whose enumerable own properties (that is, those
+properties defined upon itself and not enumerable properties along
+its prototype chain) specify property descriptors to be added to
+the newly-created object, with the corresponding property names.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Object.html'>Object</a></span>
+                <div class="return-desc"><p>the newly created object.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-defineProperties" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="defineProperties" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-defineProperties">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-defineProperties" class="member-name-link"><span data-ref="static-method-defineProperties" class="member-name">defineProperties</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                        , 
+                        props
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Defines new or modifies existing properties directly on an object,
+returning the object.</p>
+<p>In essence, it defines all properties corresponding to the
+enumerable own properties of props on the object.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Object.defineProperties(obj, {
+  &quot;property1&quot;: {
+    value: true,
+    writable: true
+  },
+  &quot;property2&quot;: {
+    value: &quot;Hello&quot;,
+    writable: false
+  }
+  // etc. etc.
+});
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-defineProperties--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object on which to define or modify properties.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-defineProperties--props">props</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>An object whose own enumerable properties
+constitute descriptors for the properties to be defined or
+modified.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                            <div id="static-method-defineProperty" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="defineProperty" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-defineProperty">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-defineProperty" class="member-name-link"><span data-ref="static-method-defineProperty" class="member-name">defineProperty</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                        , 
+                        prop
+                        , 
+                        descriptor
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Defines a new property directly on an object, or modifies an
+existing property on an object, and returns the object.</p>
+<p>This method allows precise addition to or modification of a
+property on an object. Normal property addition through assignment
+creates properties which show up during property enumeration
+(for...in loop or <a href='Object.html#static-method-keys'>Object#keys</a> method), whose values may be
+changed, and which may be deleted. This method allows these extra
+details to be changed from their defaults.</p>
+<p>Property descriptors present in objects come in two main flavors:
+data descriptors and accessor descriptors. A data descriptor is a
+property that has a value, which may or may not be writable. An
+accessor descriptor is a property described by a getter-setter pair
+of functions. A descriptor must be one of these two flavors; it
+cannot be both.</p>
+<p>Both data and accessor descriptor is an object with the following
+optional keys:</p>
+<ul>
+<li><p><strong>configurable</strong> True if and only if the type of this property
+descriptor may be changed and if the property may be deleted from
+the corresponding object. Defaults to false.</p>
+</li>
+<li><p><strong>enumerable</strong> True if and only if this property shows up during
+enumeration of the properties on the corresponding
+object. Defaults to false.</p>
+</li>
+</ul>
+<p>A data descriptor is an object with the following optional keys:</p>
+<ul>
+<li><p><strong>value</strong> The value associated with the property. Can be any
+valid JavaScript value (number, object, function, etc) Defaults
+to undefined.</p>
+</li>
+<li><p><strong>writable</strong> True if and only if the value associated with the
+property may be changed with an assignment operator. Defaults to
+false.</p>
+</li>
+</ul>
+<p>An accessor descriptor is an object with the following optional
+keys:</p>
+<ul>
+<li><p><strong>get</strong> A function which serves as a getter for the property, or
+undefined if there is no getter. The function return will be used
+as the value of property. Defaults to undefined.</p>
+</li>
+<li><p><strong>set</strong> A function which serves as a setter for the property, or
+undefined if there is no setter. The function will receive as
+only argument the new value being assigned to the
+property. Defaults to undefined.</p>
+</li>
+</ul>
+<p>Bear in mind that these options are not necessarily own properties
+so, if inherited, will be considered too. In order to ensure these
+defaults are preserved you might freeze the Object.prototype
+upfront, specify all options explicitly, or point to null as
+<strong>proto</strong> property.</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-defineProperty--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object on which to define the property.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-defineProperty--prop">prop</span> :
+                            <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The name of the property to be defined or modified.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-defineProperty--descriptor">descriptor</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The descriptor for the property being
+defined or modified.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                            <div id="static-method-freeze" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="freeze" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-freeze">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-freeze" class="member-name-link"><span data-ref="static-method-freeze" class="member-name">freeze</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Freezes an object: that is, prevents new properties from being
+added to it; prevents existing properties from being removed; and
+prevents existing properties, or their enumerability,
+configurability, or writability, from being changed. In essence the
+object is made effectively immutable. The method returns the object
+being frozen.</p>
+<p>Nothing can be added to or removed from the properties set of a
+frozen object. Any attempt to do so will fail, either silently or
+by throwing a TypeError exception (most commonly, but not
+exclusively, when in strict mode).</p>
+<p>Values cannot be changed for data properties. Accessor properties
+(getters and setters) work the same (and still give the illusion
+that you are changing the value). Note that values that are objects
+can still be modified, unless they are also frozen.</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-freeze--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object to freeze.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                            <div id="static-method-getOwnPropertyDescriptor" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="getOwnPropertyDescriptor" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-getOwnPropertyDescriptor">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-getOwnPropertyDescriptor" class="member-name-link"><span data-ref="static-method-getOwnPropertyDescriptor" class="member-name">getOwnPropertyDescriptor</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                        , 
+                        prop
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType">Mixed</span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Returns a property descriptor for an own property (that is, one
+directly present on an object, not present by dint of being along
+an object&#39;s prototype chain) of a given object.</p>
+<p>This method permits examination of the precise description of a
+property. A property in JavaScript consists of a string-valued name
+and a property descriptor. Further information about property
+descriptor types and their attributes can be found in
+<a href='Object.html#static-method-defineProperty'>Object#defineProperty</a>.</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-getOwnPropertyDescriptor--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object in which to look for the property.</p>
+</div>
+
+                </div>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-getOwnPropertyDescriptor--prop">prop</span> :
+                            <span class="memberType">&nbsp;<a href='String.html'>String</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The name of the property whose description is
+to be retrieved.</p>
+<p>A property descriptor is a record with some of the following
+attributes:</p>
+<ul>
+<li><p><strong>value</strong> The value associated with the property (data
+descriptors only).</p>
+</li>
+<li><p><strong>writable</strong> True if and only if the value associated with
+the property may be changed (data descriptors only).</p>
+</li>
+<li><p><strong>get</strong> A function which serves as a getter for the property,
+ or undefined if there is no getter (accessor descriptors only).</p>
+</li>
+<li><p><strong>set</strong> A function which serves as a setter for the property,
+or undefined if there is no setter (accessor descriptors only).</p>
+</li>
+<li><p><strong>configurable</strong> true if and only if the type of this property
+descriptor may be changed and if the property may be deleted
+from the corresponding object.</p>
+</li>
+<li><p><strong>enumerable</strong> true if and only if this property shows up
+during enumeration of the properties on the corresponding object.</p>
+</li>
+</ul>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType">Mixed</span>
+                <div class="return-desc"><p>Value of the property descriptor.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-getOwnPropertyNames" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="getOwnPropertyNames" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-getOwnPropertyNames">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-getOwnPropertyNames" class="member-name-link"><span data-ref="static-method-getOwnPropertyNames" class="member-name">getOwnPropertyNames</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='String.html'>String[]</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Returns an array of all properties (enumerable or not) found
+directly upon a given object.</p>
+<p>Rreturns an array whose elements are strings corresponding to the
+enumerable and non-enumerable properties found directly upon
+obj. The ordering of the enumerable properties in the array is
+consistent with the ordering exposed by a for...in loop (or by
+<a href='Object.html#static-method-keys'>Object#keys</a>) over the properties of the object. The
+ordering of the non-enumerable properties in the array, and among
+the enumerable properties, is not defined.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+print(Object.getOwnPropertyNames(arr).sort()); // prints &quot;0,1,2,length&quot;
+
+// Array-like object
+var obj = { 0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot;};
+print(Object.getOwnPropertyNames(obj).sort()); // prints &quot;0,1,2&quot;
+
+// Printing property names and values using Array.forEach
+Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
+  print(val + &quot; -&gt; &quot; + obj[val]);
+});
+// prints
+// 0 -&gt; a
+// 1 -&gt; b
+// 2 -&gt; c
+
+// non-enumerable property
+var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; }, enumerable: false } });
+my_obj.foo = 1;
+
+print(Object.getOwnPropertyNames(my_obj).sort()); // prints &quot;foo, getFoo&quot;
+</code></pre></div><p>If you want only the enumerable properties, see <a href='Object.html#static-method-keys'>Object#keys</a>
+or use a for...in loop (although note that this will return
+enumerable properties not found directly upon that object but also
+along the prototype chain for the object unless the latter is
+filtered with <a href='#method-hasOwnProperty'>hasOwnProperty</a>).</p>
+<p>Items on the prototype chain are not listed:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">function ParentClass () {
+}
+ParentClass.prototype.inheritedMethod = function () {
+};
+
+function ChildClass () {
+  this.prop = 5;
+  this.method = function () {};
+}
+ChildClass.prototype = new ParentClass;
+ChildClass.prototype.prototypeMethod = function () {
+};
+
+alert(
+  Object.getOwnPropertyNames(
+    new ChildClass() // [&quot;prop&quot;, &quot;method&quot;]
+  )
+)
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-getOwnPropertyNames--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object whose enumerable and non-enumerable
+own properties are to be returned.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='String.html'>String[]</a></span>
+                <div class="return-desc"><p>Array of property names.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-getPrototypeOf" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="getPrototypeOf" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-getPrototypeOf">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-getPrototypeOf" class="member-name-link"><span data-ref="static-method-getPrototypeOf" class="member-name">getPrototypeOf</span></a>
+            <span class="params-list"> (
+                        
+                        object
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Object.html'>Object</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Returns the prototype (i.e. the internal <code>[[Prototype]]</code>) of the
+specified object.</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-getPrototypeOf--object">object</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object whose prototype is to be returned.
+Throws a TypeError exception if this parameter isn&#39;t an Object.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Object.html'>Object</a></span>
+                <div class="return-desc"><p>the prototype</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-isExtensible" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="isExtensible" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-isExtensible">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-isExtensible" class="member-name-link"><span data-ref="static-method-isExtensible" class="member-name">isExtensible</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Determines if an object is extensible (whether it can have new
+properties added to it).</p>
+<p>Objects are extensible by default: they can have new properties
+added to them, and can be modified. An object can be marked as
+non-extensible using <a href='Object.html#static-method-preventExtensions'>Object#preventExtensions</a>,
+<a href='Object.html#static-method-seal'>Object#seal</a>, or <a href='Object.html#static-method-freeze'>Object#freeze</a>.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// New objects are extensible.
+var empty = {};
+assert(Object.isExtensible(empty) === true);
+
+// ...but that can be changed.
+Object.preventExtensions(empty);
+assert(Object.isExtensible(empty) === false);
+
+// Sealed objects are by definition non-extensible.
+var sealed = Object.seal({});
+assert(Object.isExtensible(sealed) === false);
+
+// Frozen objects are also by definition non-extensible.
+var frozen = Object.freeze({});
+assert(Object.isExtensible(frozen) === false);
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-isExtensible--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object which should be checked.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>True when object is extensible.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-isFrozen" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="isFrozen" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-isFrozen">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-isFrozen" class="member-name-link"><span data-ref="static-method-isFrozen" class="member-name">isFrozen</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Determines if an object is frozen.</p>
+<p>An object is frozen if and only if it is not extensible, all its
+properties are non-configurable, and all its data properties (that
+is, properties which are not accessor properties with getter or
+setter components) are non-writable.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// A new object is extensible, so it is not frozen.
+assert(Object.isFrozen({}) === false);
+
+// An empty object which is not extensible is vacuously frozen.
+var vacuouslyFrozen = Object.preventExtensions({});
+assert(Object.isFrozen(vacuouslyFrozen) === true);
+
+// A new object with one property is also extensible, ergo not frozen.
+var oneProp = { p: 42 };
+assert(Object.isFrozen(oneProp) === false);
+
+// Preventing extensions to the object still doesn&#39;t make it frozen,
+// because the property is still configurable (and writable).
+Object.preventExtensions(oneProp);
+assert(Object.isFrozen(oneProp) === false);
+
+// ...but then deleting that property makes the object vacuously frozen.
+delete oneProp.p;
+assert(Object.isFrozen(oneProp) === true);
+
+// A non-extensible object with a non-writable but still configurable property is not frozen.
+var nonWritable = { e: &quot;plep&quot; };
+Object.preventExtensions(nonWritable);
+Object.defineProperty(nonWritable, &quot;e&quot;, { writable: false }); // make non-writable
+assert(Object.isFrozen(nonWritable) === false);
+
+// Changing that property to non-configurable then makes the object frozen.
+Object.defineProperty(nonWritable, &quot;e&quot;, { configurable: false }); // make non-configurable
+assert(Object.isFrozen(nonWritable) === true);
+
+// A non-extensible object with a non-configurable but still writable property also isn&#39;t frozen.
+var nonConfigurable = { release: &quot;the kraken!&quot; };
+Object.preventExtensions(nonConfigurable);
+Object.defineProperty(nonConfigurable, &quot;release&quot;, { configurable: false });
+assert(Object.isFrozen(nonConfigurable) === false);
+
+// Changing that property to non-writable then makes the object frozen.
+Object.defineProperty(nonConfigurable, &quot;release&quot;, { writable: false });
+assert(Object.isFrozen(nonConfigurable) === true);
+
+// A non-extensible object with a configurable accessor property isn&#39;t frozen.
+var accessor = { get food() { return &quot;yum&quot;; } };
+Object.preventExtensions(accessor);
+assert(Object.isFrozen(accessor) === false);
+
+// ...but make that property non-configurable and it becomes frozen.
+Object.defineProperty(accessor, &quot;food&quot;, { configurable: false });
+assert(Object.isFrozen(accessor) === true);
+
+// But the easiest way for an object to be frozen is if Object.freeze has been called on it.
+var frozen = { 1: 81 };
+assert(Object.isFrozen(frozen) === false);
+Object.freeze(frozen);
+assert(Object.isFrozen(frozen) === true);
+
+// By definition, a frozen object is non-extensible.
+assert(Object.isExtensible(frozen) === false);
+
+// Also by definition, a frozen object is sealed.
+assert(Object.isSealed(frozen) === true);
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-isFrozen--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object which should be checked.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>True if the object is frozen, otherwise false.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-isSealed" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="isSealed" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-isSealed">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-isSealed" class="member-name-link"><span data-ref="static-method-isSealed" class="member-name">isSealed</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='Boolean.html'>Boolean</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Determines if an object is sealed.</p>
+<p>An object is sealed if it is non-extensible and if all its
+properties are non-configurable and therefore not removable (but
+not necessarily non-writable).</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">// Objects aren&#39;t sealed by default.
+var empty = {};
+assert(Object.isSealed(empty) === false);
+
+// If you make an empty object non-extensible, it is vacuously sealed.
+Object.preventExtensions(empty);
+assert(Object.isSealed(empty) === true);
+
+// The same is not true of a non-empty object, unless its properties are all non-configurable.
+var hasProp = { fee: &quot;fie foe fum&quot; };
+Object.preventExtensions(hasProp);
+assert(Object.isSealed(hasProp) === false);
+
+// But make them all non-configurable and the object becomes sealed.
+Object.defineProperty(hasProp, &quot;fee&quot;, { configurable: false });
+assert(Object.isSealed(hasProp) === true);
+
+// The easiest way to seal an object, of course, is Object.seal.
+var sealed = {};
+Object.seal(sealed);
+assert(Object.isSealed(sealed) === true);
+
+// A sealed object is, by definition, non-extensible.
+assert(Object.isExtensible(sealed) === false);
+
+// A sealed object might be frozen, but it doesn&#39;t have to be.
+assert(Object.isFrozen(sealed) === true); // all properties also non-writable
+
+var s2 = Object.seal({ p: 3 });
+assert(Object.isFrozen(s2) === false); // &quot;p&quot; is still writable
+
+var s3 = Object.seal({ get p() { return 0; } });
+assert(Object.isFrozen(s3) === true); // only configurability matters for accessor properties
+</code></pre></div><p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-isSealed--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object which should be checked.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='Boolean.html'>Boolean</a></span>
+                <div class="return-desc"><p>True if the object is sealed, otherwise false.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-keys" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="keys" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-keys">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-keys" class="member-name-link"><span data-ref="static-method-keys" class="member-name">keys</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+                :
+                    <span class="memberType"><a href='String.html'>String[]</a></span>
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Returns an array of a given object&#39;s own enumerable properties, in
+the same order as that provided by a for-in loop (the difference
+being that a for-in loop enumerates properties in the prototype
+chain as well).</p>
+<p>Returns an array whose elements are strings corresponding to the
+enumerable properties found directly upon object. The ordering of
+the properties is the same as that given by looping over the
+properties of the object manually.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">var arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+alert(Object.keys(arr)); // will alert &quot;0,1,2&quot;
+
+// array like object
+var obj = { 0 : &quot;a&quot;, 1 : &quot;b&quot;, 2 : &quot;c&quot;};
+alert(Object.keys(obj)); // will alert &quot;0,1,2&quot;
+
+// getFoo is property which isn&#39;t enumerable
+var my_obj = Object.create({}, { getFoo : { value : function () { return this.foo } } });
+my_obj.foo = 1;
+
+alert(Object.keys(my_obj)); // will alert only foo
+</code></pre></div><p>If you want all properties, even the not enumerable, see
+<a href='Object.html#static-method-getOwnPropertyNames'>Object#getOwnPropertyNames</a>.</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-keys--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object whose enumerable own properties are
+to be returned.</p>
+</div>
+
+                </div>
+
+            <h3 class="detail-header">Returns</h3>
+                :<span style="margin-left:12px;" class="memberType"><a href='String.html'>String[]</a></span>
+                <div class="return-desc"><p>Array of property names.</p>
+</div>
+
+    </div>
+  
+                            <div id="static-method-preventExtensions" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="preventExtensions" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-preventExtensions">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-preventExtensions" class="member-name-link"><span data-ref="static-method-preventExtensions" class="member-name">preventExtensions</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Prevents new properties from ever being added to an object
+(i.e. prevents future extensions to the object).</p>
+<p>An object is extensible if new properties can be added to it.
+<a href='#static-method-preventExtensions'>preventExtensions</a> marks an object as no longer extensible, so that
+it will never have properties beyond the ones it had at the time it
+was marked as non-extensible.  Note that the properties of a
+non-extensible object, in general, may still be deleted. Attempting
+to add new properties to a non-extensible object will fail, either
+silently or by throwing a TypeError (most commonly, but not
+exclusively, when in strict mode).</p>
+<p>It only prevents addition of own properties. Properties can still
+be added to the object prototype.</p>
+<p>If there is a way to turn an extensible object to a non-extensible
+one, there is no way to do the opposite in ECMAScript 5</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-preventExtensions--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object which should be made non-extensible.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                            <div id="static-method-seal" class="classmembers member member-public isStatic  is-not-inherited    " data-member-name="seal" >
+        <div class="collapse-toggle"></div>
+        <div class="source-class"><a href="Object.html">Object<div class="viewSource"><a target="_blank" href="src/Object.js.html#Object-static-method-seal">view source</a></div></a></div>
+        <h2 class="member-header">
+            <a href="#static-method-seal" class="member-name-link"><span data-ref="static-method-seal" class="member-name">seal</span></a>
+            <span class="params-list"> (
+                        
+                        obj
+                            
+
+                )</span>
+
+
+            <div class="member-tags">
+                    <span class="static full-flag">static</span>
+                    <span class="static mini-flag">sta</span>
+            </div>
+        </h2>
+
+            <p>Seals an object, preventing new properties from being added to it
+and marking all existing properties as non-configurable. Values of
+present properties can still be changed as long as they are
+writable.</p>
+<p>By default, objects are extensible (new properties can be added to
+them). Sealing an object prevents new properties from being added
+and marks all existing properties as non-configurable. This has the
+effect of making the set of properties on the object fixed and
+immutable. Making all properties non-configurable also prevents
+them from being converted from data properties to accessor
+properties and vice versa, but it does not prevent the values of
+data properties from being changed. Attempting to delete or add
+properties to a sealed object, or to convert a data property to
+accessor or vice versa, will fail, either silently or by throwing a
+TypeError (most commonly, although not exclusively, when in strict
+mode code).</p>
+<p>The prototype chain remains untouched.</p>
+<p><strong>NOTE:</strong> This method is part of the ECMAScript 5 standard.</p>
+
+            <h3 class="detail-header">Parameters</h3>
+                <div class="param-row">
+                    <p><span class="params-list param-list-item" id="static-method-seal--obj">obj</span> :
+                            <span class="memberType">&nbsp;<a href='Object.html'>Object</a></span>
+                        
+                    </p>
+                    <div class="params-desc"><p>The object which should be sealed.</p>
+</div>
+
+                </div>
+
+    </div>
+  
+                </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="../../https@www.facebook.com/senchainc/default.htm" target="_blank"><img class="social" src="home-images/fb.png"/></a>
+            <a href="../../https@www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="home-images/in.png"/></a>
+            <a href="../../https@twitter.com/Sencha" target="_blank"><img class="social" src="home-images/twt.png"/></a>
+            Sencha Test 1.0.3  | <a href='../../https@www.sencha.com/legal/terms-of-use/default.htm' target='_blank'>Terms of Use</a>
+        </p>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <h2 class="product-header"><a href="index.html">Sencha Test 1.0.3 </a>
+        <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+        <div id="peekaboo-input" class="peekaboo-input">
+            <input type="text" id="mobile-input" />
+        </div>
+    </h2>
+
+    <div id="product-tree-ct" class="hide">
+        <div id="product-tree">
+            <div class="product-name-ct">
+                    <div id="product-menu-extjs" class="product-name-item">Ext JS</div>
+                    <div id="product-menu-sencha_test" class="product-name-item">Sencha Test</div>
+                    <div id="product-menu-cmd" class="product-name-item">Cmd</div>
+                    <div id="product-menu-gxt" class="product-name-item">GXT</div>
+                    <div id="product-menu-ide_plugins" class="product-name-item">IDE Plugins</div>
+                    <div id="product-menu-sencha_inspector" class="product-name-item">Sencha Inspector</div>
+                    <div id="product-menu-architect" class="product-name-item">Architect</div>
+                    <div id="product-menu-touch" class="product-name-item">Touch</div>
+                    <div id="product-menu-webappmgr" class="product-name-item">Web Application Manager</div>
+            </div>
+                <div class="product-version-ct hide extjs">
+                        <h2>Ext JS</h2>
+                            <h3>6.x</h3>
+                                        <div class="compound-product-item">6.2.0 EA
+                                                <a  href="../extjs/6.2.0-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.2.0-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.2
+                                                <a  href="../extjs/6.0.2-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.0.2-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.1
+                                                <a  href="../extjs/6.0.1-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.0.1-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.0
+                                                <a  href="../extjs/6.0.0-classic/index.html">(classic)</a>
+                                                <a  href="../extjs/6.0.0-modern/index.html">(modern)</a>
+                                        </div>
+                            <h3>5.x</h3>
+                                        <a class="product-item" href="../extjs/5.1.3/index.html">5.1.3</a>
+                                        <a class="product-item" href="../extjs/5.1.2/index.html">5.1.2</a>
+                                        <a class="product-item" href="../extjs/5.1.1/index.html">5.1.1</a>
+                                        <a class="product-item" href="../extjs/5.1.0/index.html">5.1.0</a>
+                                        <a class="product-item" href="../extjs/5.0.1/index.html">5.0.1</a>
+                                        <a class="product-item" href="../extjs/5.0.0/index.html">5.0.0</a>
+                            <h3>4.x</h3>
+                                        <a class="product-item" href="../extjs/4.2.5/default.htm">4.2.5</a>
+                                        <a class="product-item" href="../extjs/4.1.3/default.htm">4.1.3</a>
+                                        <a class="product-item" href="../extjs/4.0.7/default.htm">4.0.7</a>
+                            <h3>3.x</h3>
+                                        <a class="product-item" href="../extjs/3.4.0/default.htm">3.4.0</a>
+                </div>
+                <div class="product-version-ct hide sencha_test">
+                        <h2>Sencha Test</h2>
+                        <a  href="index.html">Sencha Test</a>
+                </div>
+                <div class="product-version-ct hide cmd">
+                        <h2>Cmd</h2>
+                        <a  href="../cmd/index.html">Cmd</a>
+                </div>
+                <div class="product-version-ct hide gxt">
+                        <h2>GXT</h2>
+                                <a class="product-item" href="../gxt/4.x/index.html">4.x</a>
+                                <a class="product-item" href="../gxt/3.x/index.html">3.x</a>
+                </div>
+                <div class="product-version-ct hide ide_plugins">
+                        <h2>IDE Plugins</h2>
+                        <a  href="../ide_plugins/index.html">IDE Plugins</a>
+                </div>
+                <div class="product-version-ct hide sencha_inspector">
+                        <h2>Sencha Inspector</h2>
+                        <a  href="../sencha_inspector/index.html">Sencha Inspector</a>
+                </div>
+                <div class="product-version-ct hide architect">
+                        <h2>Architect</h2>
+                                <a class="product-item" href="../architect/3/index.html">Architect 3</a>
+                                <a class="product-item" href="../architect/4/index.html">Architect 4 EA</a>
+                </div>
+                <div class="product-version-ct hide touch">
+                        <h2>Touch</h2>
+                            <h3>2.x</h3>
+                                        <a class="product-item" href="../touch/2.4/index.html">Touch 2.4</a>
+                                        <a class="product-item" href="../touch/2.3.1/default.htm">Touch 2.3</a>
+                                        <a class="product-item" href="../touch/2.2.1/default.htm">Touch 2.2</a>
+                                        <a class="product-item" href="../touch/2.0.2/default.htm">Touch 2.0</a>
+                </div>
+                <div class="product-version-ct hide webappmgr">
+                        <h2>Web Application Manager</h2>
+                        <a  href="../webappmgr/index.html">Web Application Manager</a>
+                </div>
+        </div>
+    </div>
+
+    <div id="historyConfigPanel">
+        <div class="history-type-selector">
+            <input id="historyTypeCurrent" type="radio" name="historyType" value="current" checked="true" />
+            <label for="historyTypeCurrent">Current Product / Version</label><br>
+            <input id="historyTypeAll" type="radio" name="historyType" value="all" />
+            <label for="historyTypeAll">All</label><br>
+            <div id="history-label-toggle">
+                <input id="history-all-labels" type="checkbox" checked="true" />
+                <label for="history-all-labels">Show product details in the history bar</label>
+                <div class="mask"></div>
+            </div>
+            <span id="history-clear" class="tooltip tooltip-tr-br" data-tip="Clear History"><div class="history-clear callout callout-b"></div></span>
+        </div>
+        <div id="history-full-list"></div>
+    </div>
+
+    <div id="search-history-panel"></div>
+
+</body>
+    <script type="text/javascript" src="js/searchIndex.js"></script>
+    <script type="text/javascript" src="js/guideSearch.js"></script>
+<!--[if lt IE 9 ]>
+<script type="text/javascript" src="js/media-query-poly.js"></script>
+<style>
+    span.da-inline-fiddle-nav-fiddle.x-fa.fa-play-circle {
+        display: none;
+    }
+</style>
+<![endif]-->
+<script>
+    if (navigator.userAgent.indexOf("Safari") > -1) {
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+    }
+
+    document.onreadystatechange = function () {
+        if (document.readyState == "interactive") {
+            //
+        }
+    }
+</script>
+
+</html>

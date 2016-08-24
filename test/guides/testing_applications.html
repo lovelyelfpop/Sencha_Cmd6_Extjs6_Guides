@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试新建应用程序 | Sencha Test 1.0.3 </title>
+    <!--  Generated on August, 11 2016 at 15:38 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:image" content="../home-images/sencha-200.png" />
+    <meta property="og:title" content="测试新建应用程序 | Sencha Test 1.0.3 " />
+    <meta property="og:description" content="测试新建应用程序 Sencha Studio allows developers to quickly and automatically test granular aspects of an application or web page. Unit testing ensur..." />
+    <meta property="og:site_name" content="Sencha Documentation" />
+    <meta property="og:url" content="http://docs.sencha.com/sencha_test/testing_applications.html" />
+    <meta name="description" content="测试新建应用程序 Sencha Studio allows developers to quickly and automatically test granular aspects of an application or web page. Unit testing ensur...">
+    <style>
+        /*!
+         *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+         *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+         */
+        /* FONT PATH
+         * -------------------------- */
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('../css/fonts/fontawesome-webfont.eot@v=4.5.0');
+            src: url('../css/fonts/fontawesome-webfont.eot@#iefix&v=4.5.0') format('embedded-opentype'),
+            url('../css/fonts/fontawesome-webfont.woff2@v=4.5.0') format('woff2'),
+            url('../css/fonts/fontawesome-webfont.woff@v=4.5.0') format('woff'),
+            url('../css/fonts/fontawesome-webfont.ttf@v=4.5.0') format('truetype'),
+            url('../css/fonts/fontawesome-webfont.svg@v=4.5.0#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/prism.css">
+        <link rel="stylesheet" type="text/css" href="../css/app.css">
+</head>
+<body class=" is-guide  has-guides   has-api tree-shown">
+    <script type="text/javascript">
+        function getOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return 'ios';
+            } else if(userAgent.match(/Android/i)) {
+                return 'android';
+            }
+        }
+
+        var hash = document.location.hash,
+                rawhash, newhash, prop, member,
+                isIE8 = false;
+
+        if(hash.indexOf('#!') > -1) {
+            hash    = hash.replace('#!/api/','');
+            rawhash = hash.split('-'),
+            prop    = (rawhash[1] == 'static') ? rawhash[2] : rawhash[1],
+            member  = (rawhash[1] == 'static') ? rawhash[3] : rawhash[2],
+            newhash = rawhash[0] + '.html';
+
+            if (prop && member) {
+                newhash += '#' + prop + '-' + member;
+            }
+
+            document.location.href = newhash;
+        }
+
+        document.body.className += ' ' + getOS();
+    </script>
+    <!--[if IE 8]>
+    <script type='text/javascript'>
+        isIE8 = true;
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+        var ExtL = ExtL || {},
+            specificId = 'testing_applications',
+            isClassTemplate = false,
+            isHome = false,
+            isLanding = false,
+            isApi = false,
+            isGuide = true,
+            hasApi = true,
+            hasGuides = true,
+            hasQuickStart = false
+            singleton = false,
+            pageName = '测试新建应用程序',
+            pageTitle = 'Sencha Test',
+            homePath = '../',
+            product = 'test',
+            pversion = '1.0.3-orion',
+            hasVersions = false,
+            myToolkit = '';
+
+            if (!isIE8) {
+                document.write('<script type=\"text/javascript\" src=\"../js/prism.js\"><\/script>');
+            }
+    </script>
+    <script type="text/javascript" src="../js/ace.js"></script>
+    <script type="text/javascript" src="../js/beautify.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <div id="help-wrap">
+        <div class="help-header">
+            Docs Help
+            <div id="help-close"></div>
+        </div>
+        <div class="classText">
+            <div class="toc">
+                <h2>Contents</h2>
+                    <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
+                    <a class="toc-page-h3" href="#access-levels">Access Levels</a>
+                    <a class="toc-page-h3" href="#member-types">Member Types</a>
+                    <a class="toc-page-h3" href="#member-syntax">Member Syntax</a>
+                    <a class="toc-page-h3" href="#member-flags">Member Flags</a>
+                    <a class="toc-page-h3" href="#class-icons">Class Icons</a>
+                    <a class="toc-page-h3" href="#member-icons">Member Icons</a>
+                    <a class="toc-page-h2" href="#navigation-and-features">Navigation and Features</a>
+                    <a class="toc-page-h3" href="#class-member-quick-nav-menu">Class Member Quick-Nav Menu</a>
+                    <a class="toc-page-h3" href="#getter-and-setter-methods">Getter and Setter Methods</a>
+                    <a class="toc-page-h3" href="#history-bar">History Bar</a>
+                    <a class="toc-page-h3" href="#search-and-filters">Search and Filters</a>
+                    <a class="toc-page-h3" href="#api-doc-class-metadata">API Doc Class Metadata</a>
+                    <a class="toc-page-h3" href="#expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</a>
+                    <a class="toc-page-h3" href="#desktop-vs-mobile-view">Desktop -vs- Mobile View</a>
+                    <a class="toc-page-h3" href="#viewing-the-class-source">Viewing the Class Source</a>
+            </div>
+            <h2 id="terms-icons-and-labels">Terms, Icons, and Labels</h2>
+    <p>Many classes have shortcut names used when creating (instantiating) a class with a 
+    configuration object.  The shortcut name is referred to as an <code>alias</code> (or <code>xtype</code> if the 
+    class extends Ext.Component).  The alias/xtype is listed next to the class name of 
+    applicable classes for quick reference.</p>
+    <h3 id="access-levels">Access Levels</h3>
+    <p>Framework classes or their members may be specified as <code>private</code> or <code>protected</code>.  Else, 
+    the class / member is <code>public</code>.  <code>Public</code>, <code>protected</code>, and <code>private</code> are access 
+    descriptors used to convey how and when the class or class member should be used.</p>
+    <ul>
+    <li><p><strong>Public</strong> classes and class members are available for use by any other class or 
+    application code and may be relied upon as a stable and persistent within major product 
+    versions.  Public classes and members may safely be extended via a subclass.</p>
+    </li>
+    <li><p><strong>Protected</strong> class members are stable <code>public</code> members intended to be used by the 
+    owning class or its subclasses.  Protected members may safely be extended via a subclass.</p>
+    </li>
+    <li><p><strong>Private</strong> classes and class members are used internally by the framework and are not 
+    intended to be used by application developers.  Private classes and members may change or 
+    be omitted from the framework at any time without notice and should not be relied upon in 
+    application logic.</p>
+    </li>
+    </ul>
+    <h3 id="member-types">Member Types</h3>
+    <ul>
+    <li><strong>Config</strong> - The configuration options for a class.</li>
+    <li><strong>Property</strong> - Set once a class is instantiated. *See Read Only below.</li>
+    <li><strong>Method</strong> - Actions that can be performed by a class.  Methods should be read as 
+    instance methods and can only be called from a instance of a given class.  Static methods 
+    that can be called directly from the class itself will have a <code>static</code> label next to the 
+    method name.  *See Static below.</li>
+    <li><strong>Event</strong> - Events are specific to the framework event system allowing for classes to 
+    programmatically raise an event to be handled by one or more event handler methods.  DOM 
+    events, while handled by the framework event system, are not specifically described 
+    within the API documentation.  *For DOM events refer to the 
+    <a href="../../../https@developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+    <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the 
+    framework.</li>
+    <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework 
+    and may use values set in various Theme Variables.</li>
+    </ul>
+    <h3 id="member-syntax">Member Syntax</h3>
+    <p>Below is an example class member that we can disect to show the syntax of a class member 
+    (the lookupComponent method as viewed from the Ext.button.Button class in this case).</p>
+    <div style="position: relative;" class="show-inherited show-protected members">
+        <div style="border: 1px solid #E4E4E4;" class="classmembers member-protected isNotStatic isInherited member-temp-expanded" data-member-name="lookupComponent">
+            <div class="collapse-toggle"></div>
+            <div class="source-class"><a href="javascript:void(0);">Ext.container.Container</a><div class="viewSource"><a href="javascript:void(0);"></a><a target="_blank" href="javascript:void(0);">view source</a></div></div>
+            <div class="member-header">
+            <a href="javascript:void(0);" class="member-name-link"><span data-ref="method-lookupComponent" class="member-name"><strong>lookup</strong>Component</span></a>
+            <span class="params-list"> ( item )</span> : <span class="memberType">Ext.Component</span>
+            <div class="member-tags"><span class="protected">protected</span></div>
+        </div>
+            <p>Called when a raw config object is added to this container either during initialization of the <a href="javascript:void(0);">items</a> config,
+        or when new items are <a href="javascript:void(0);">added), or {@link #insert inserted</a>.</p>
+        <p>This method converts the passed object into an instanced child component.</p>
+        <p>This may be overridden in subclasses when special processing needs to be applied to child creation.</p>
+                    <div class="detail-header">Parameters</div>
+                <p><span class="params-list">item</span> :
+                        <span class="memberType">&nbsp;Object</span>
+                </p>
+                <div class="params-desc"><p>The config object being added.</p></div>
+                <div class="detail-header">Returns</div>
+                <span style="margin-left:12px;" class="memberType">Ext.Component</span>
+                <div class="return-desc"><p>The component to be added.</p>
+            </div>
+        </div>
+    </div>
+    
+    <p>Let&#39;s look at each part of the member row:</p>
+    <ul>
+    <li><strong>Expand/Collapse</strong> - On the left-hand size of the member row is a control used to 
+    expand and collapse each member row to show / hide member details.</li>
+    <li><strong>Member Name</strong> - The name of the class member (<code>lookupComponent</code> in this example)</li>
+    <li><strong>Method Param</strong> - Any required or optional params used by a method (or passed to an 
+    event handler method) will be listed next to the method name within parenthesis 
+    (<code>( item )</code> in this example)</li>
+    <li><strong>Return type</strong> - The class instance or javascript object returned by the method or 
+    property (<code>Ext.Component</code> in this case).  This may be omitted for methods that do not 
+    return anything other than <code>undefined</code> or may display as multiple possible values 
+    separated by a forward slash <code>/</code> signifying that what is returned may depend on the 
+    results of the method call (i.e. a method may return a Component if a get method calls is 
+    successful or <code>false</code> if unsuccessful which would be displayed as 
+    <code>Ext.Component/Boolean</code>).</li>
+    <li><strong>Flags</strong> - Any flags applicable to the member will be displayed next (<code>PROTECTED</code> in 
+    this example - see the Flags section below)</li>
+    <li><strong>Member Origin</strong> - On the right-hand side of the member row is the class where the 
+    member was initially described (<code>Ext.container.Container</code> in this example).  The source 
+    class will be displayed as a blue link if the member originates from the current class 
+    and gray if it is inherited from an ancestor or mixed-in class.</li>
+    <li><strong>Member Source</strong> - On the right-hand side below the member origin class is a link to 
+    view the member&#39;s source (<code>view source</code> in the example)</li>
+    <li><strong>Params List</strong> - Each param for a class method will be listed using the same name 
+    found above in parenthesis, the type of class or object expected, and a description of 
+    the param (<code>item : Object</code> in the example).</li>
+    <li><strong>Returns</strong> - If a class returns a value other than <code>undefined</code> a &quot;Returns&quot; section 
+    will note the type of class or object returned and a description (<code>Ext.Component</code> in the 
+    example)</li>
+    <li><strong>Since</strong> (<em>not shown in the example</em>) - Some members will show which version of the 
+    product the member was first introduced (i.e. <code>Available since 3.4.0</code> - <em>not pictured in 
+    the example</em>) just after the member description</li>
+    <li><strong>Default</strong> (<em>not shown in the example</em>) - Configs often show the default config value 
+    to be applied to a class instance if not overridden (i.e. <code>Defaults to: false</code>)</li>
+    </ul>
+    <h3 id="member-flags">Member Flags</h3>
+    <p>The API documentation uses a number of flags to further commnicate the class member&#39;s 
+    function and intent.  The label may be represented by a text label, an abbreviation, or 
+    an icon.</p>
+    <ul>
+    <li><strong>Required</strong> - Required config when instantiating a class</li>
+    <li><strong>Bindable</strong> - The config has a setter which allows this config to be set via ViewModel 
+    binding</li>
+    <li><strong>Read Only</strong> - The property may be read, but cannot be used to configure / 
+    re-configure a class instance at runtime</li>
+    <li><strong>Singleton</strong> - Singleton classes are instantiated immediately once defined and may not 
+    be instantiated manually</li>
+    <li><strong>Static</strong> - A static method or property is a method or property belonging to the class 
+    itself, not an instance of the class</li>
+    <li><strong>Chainable</strong> - Refers to methods that return the class instance back when called.<br>This enables chained method calls like: <code>classInstance.method1().method2().etc();</code></li>
+    <li><strong>Deprecated</strong> - A class or member that is scheduled for removal in a future 
+    framework version and is provided in the current version for backwards compatibility.<br>Deprecated classes and members will have a message directing you to the preferred class / 
+    method going forward.</li>
+    <li><strong>Removed</strong> - A removed class or member that exists in documentation only as a 
+    reference for users upgrading between framework versions</li>
+    <li><strong>Template</strong> - A method defined within a base class designed to be overridden by 
+    subclasses</li>
+    <li><strong>Abstract</strong> - A class or member may be be defined as abstract.  Abstract classes and 
+    members establish a class structure and provide limited, if any, code.  Class-specific 
+    code will be furnished via overrides in subclasses.</li>
+    <li><strong>Preventable</strong> - Events marked preventable will not fire if <code>false</code> is returned from 
+    an event handler</li>
+    </ul>
+    <h3 id="class-icons">Class Icons</h3>
+    <p><span class="icon-demo class-icon"></span> - Indicates a framework class  </p>
+    <p><span class="icon-demo singleton-icon"></span> - A singleton framework class. *See the 
+    singleton flag for more information  </p>
+    <p><span class="icon-demo component-icon"></span> - A component-type framework class (any 
+    class within the Ext JS framework that extends Ext.Component)  </p>
+    <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide 
+    is new in the currently viewed version</p>
+    <h3 id="member-icons">Member Icons</h3>
+    <p><span class="icon-demo fa fa-cubes"></span> - Indicates a class member of type <code>config</code>  </p>
+    <p><span class="icon-demo fa fa-book"></span> - Indicates a class member of type <code>property</code>  </p>
+    <p><span class="icon-demo fa fa-object-group"></span> - Indicates a class member of type 
+    <code>method</code>  </p>
+    <p><span class="icon-demo fa fa-bolt"></span> - Indicates a class member of type <code>event</code>  </p>
+    <p><span class="icon-demo fa fa-paint-brush"></span> - Indicates a class member of type 
+    <code>theme variable</code>  </p>
+    <p><span class="icon-demo fa fa-tint"></span> - Indicates a class member of type 
+    <code>theme mixin</code>  </p>
+    <p><span class="icon-demo display-new"></span> - Indicates that the class, member, or guide 
+    is new in the currently viewed version</p>
+    <h2 id="navigation-and-features">Navigation and Features</h2>
+    <h3 id="class-member-quick-nav-menu">Class Member Quick-Nav Menu</h3>
+    <p>Just below the class name on an API doc page is a row of buttons corresponding to the 
+    types of members owned by the current class.  Each button shows a count of members by 
+    type (this count is updated as filters are applied).  Clicking the button will navigate 
+    you to that member section.  Hovering over the member-type button will reveal a popup 
+    menu of all members of that type for quick navigation.</p>
+    <h3 id="getter-and-setter-methods">Getter and Setter Methods</h3>
+    <p>Getting and setter methods that correlate to a class config option will show up in the 
+    methods section as well as in the configs section of both the API doc and the member-type 
+    menus just beneath the config they work with.  The getter and setter method documentation 
+    will be found in the config row for easy reference.</p>
+    <h3 id="history-bar">History Bar</h3>
+    <p>Your page history is kept in localstorage and displayed (using the available real estate) 
+    just below the top title bar.  By default, the only search results shown are the pages 
+    matching the product / version you&#39;re currently viewing.  You can expand what is 
+    displayed by clicking on the <span class="icon-demo history-config"></span> button on the 
+    right-hand side of the history bar and choosing the &quot;All&quot; radio option.  This will show 
+    all recent pages in the history bar for all products / versions.</p>
+    <p>Within the history config menu you will also see a listing of your recent page visits. 
+    The results are filtered by the &quot;Current Product / Version&quot; and &quot;All&quot; radio options. 
+    Clicking on the <span class="icon-demo history-clear"></span> button will clear the history bar as 
+    well as the history kept in local storage.</p>
+    <p>If &quot;All&quot; is selected in the history config menu the checkbox option for &quot;Show product 
+    details in the history bar&quot; will be enabled.  When checked, the product/version for each 
+    historic page will show alongside the page name in the history bar.  Hovering the cursor 
+    over the page names in the history bar will also show the product/version as a tooltip.</p>
+    <h3 id="search-and-filters">Search and Filters</h3>
+    <p>Both API docs and guides can be searched for using the search field at the top of the 
+    page.</p>
+    <p>On API doc pages there is also a filter input field that filters the member rows 
+    using the filter string.  In addition to filtering by string you can filter the class 
+    members by access level and inheritance.  This is done using the checkboxes at the top of 
+    the page.  <strong>Note</strong> that filtering out <code>private</code> members also filters the API class 
+    navigation tree.</p>
+    <p>Clicking on an empty search field will show your last 10 searches for quick navigation.</p>
+    <h3 id="api-doc-class-metadata">API Doc Class Metadata</h3>
+    <p>Each API doc page (with the exception of Javascript primitives pages) has a menu view of 
+    metadata relating to that class.  This metadata view will have one or more of the 
+    following:</p>
+    <ul>
+    <li><strong>Alternate Name</strong> - One or more additional class name synonymns (in Ext JS 6.0.0 the 
+    <code>Ext.button.Button</code> class has an alternate class name of <code>Ext.Button</code>).  Alternate class 
+    names are commonly maintained for backward compatibility.</li>
+    <li><strong>Hierarchy</strong> - The hierararchy view lists the inheritance chain of the current class 
+    up through its ancestor classes up to the root base class.</li>
+    <li><strong>Mixins</strong> - A list of classes that are mixed into the current class</li>
+    <li><strong>Inherited Mixins</strong> - A list of classes that are mixed into an ancestor of the current 
+    class</li>
+    <li><strong>Requires</strong> - All classes required to be defined for the class to be instantiated</li>
+    <li><strong>Uses</strong> - A list of classes potentially used by the class at some point in its 
+    lifecycle, but not necessarily requried for the class to initially be instantiated</li>
+    <li><strong>Subclasses</strong> - Classes that extend the current class</li>
+    </ul>
+    <h3 id="expanding-and-collapsing-examples-and-class-members">Expanding and Collapsing Examples and Class Members</h3>
+    <p>Runnable examples (Fiddles) are expanded on a page by default.  You can collapse and 
+    expand example code blocks individually using the arrow on the top-left of the code 
+    block.  You can also toggle the collapse state of all examples using the toggle button on 
+    the top-right of the page.  The toggle-all state will be remembered between page loads.</p>
+    <p>Class members are collapsed on a page by default.  You can expand and collapse members 
+    using the arrow icon on the left of the member row or globally using the expand / 
+    collapse all toggle button top-right.</p>
+    <h3 id="desktop-vs-mobile-view">Desktop -vs- Mobile View</h3>
+    <p>Viewing the docs on narrower screens or browsers will result in a view optimized for a 
+    smaller form factor.  The primary differences between the desktop and &quot;mobile&quot; view are:</p>
+    <ul>
+    <li>Global navigation will be located in a menu on the left-hand side accessible via the 
+    hamburger menu icon.  The menu houses the following (on most pages):<ul>
+    <li>The name of the current product (as a link to the product landing page)</li>
+    <li>The Sencha icon used to navigate back to the documentation home page</li>
+    <li>The product menu drop-down button</li>
+    <li>Tabs of navigation trees for the API docs and guides</li>
+    </ul>
+    </li>
+    <li>Current context navigation and tools is located on the right-hand side accessible via 
+    the gear icon.  The context menu houses teh following:<ul>
+    <li>The global search input field</li>
+    <li>(<em>API doc</em>) A &quot;Filters&quot; tab with the member filter, expand / collapse all examples 
+    button, expand / collapse all member rows button, the access level filter checkboxes, 
+    and the counts of each member</li>
+    <li>(<em>API doc</em>) A &quot;Related Classes&quot; tab containing the menu of metadata related to the 
+    current class</li>
+    <li>(<em>Guides</em>) The table of contents for the guide</li>
+    </ul>
+    </li>
+    </ul>
+    <h3 id="viewing-the-class-source">Viewing the Class Source</h3>
+    <p>The class source can be viewed by clicking on the class name at the top of an API doc 
+    page.  The source for class members can be viewed by clicking on the &quot;view source&quot; link 
+    on the right-hand side of the member row.</p>
+    
+        </div>
+    </div>
+    <div id="header">
+        <div class="logo">
+            <a href="../../default.htm"><img height="32" src="../home-images/sencha_logo_thumb.png"/></a>
+        </div>
+        <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
+        <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl landing-product-menu-btn"><div class="callout callout-b"></div></span>
+            <div class="page-title">测试新建应用程序</div>
+        <span id="mobile-context-menu-btn" class="fa fa-cog"></span>
+    </div>
+    <div id="centerContent">
+        <div id="history-nav">
+            <span id="history-config" class="history-config tooltip tooltip-tr-br" data-tip="Configure / Clear History"><div class="callout callout-b"></div></span>
+        </div>
+        <div id="class-tree-ct" class="class-tree">
+            <h2 class="product-header">
+                <div class="logo">
+                    <a href="../../default.htm"><img src="../home-images/sencha_logo1x.png"/></a>
+                </div>
+                <a href="../index.html">Sencha Test 1.0.3 </a>
+                <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn  tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+            </h2>
+            <div id="tree-header" class="pre-load">
+                <div id="guideTab" class="toolbarHeaderButton active-tab">
+                    Guides
+                </div>
+                <div id="apiTab" class="toolbarHeaderButton">
+                    API
+                </div>
+                <div id="hide-class-tree"></div>
+            </div>
+            <div id="tree-scroller">
+                <div id="tree" class="show-private show-protected is-tree">
+                    <div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isNotLeaf" id="singleton-st" isLeaf="false">
+        <span class="tree-expando">▸</span>
+            <span class="singleton-type"></span>
+            <a class="tree-leaf-text" href="../ST.html">ST</a>
+    </div>
+        <div class="tree-child-leaves hidden">
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-event" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">event</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member-protected">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-driver" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.Driver.html">Driver</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-event" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.Event.html">Event</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-gesturequeue" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.GestureQueue.html">GestureQueue</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-injector" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.Injector.html">Injector</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-playable" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.Playable.html">Playable</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-player" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.Player.html">Player</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-event-recorder" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.event.Recorder.html">Recorder</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-future" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">future</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-button" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Button.html">Button</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-cell" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Cell.html">Cell</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-checkbox" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.CheckBox.html">CheckBox</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-combobox" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.ComboBox.html">ComboBox</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-component" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Component.html">Component</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-dataview" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.DataView.html">DataView</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-element" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Element.html">Element</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-field" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Field.html">Field</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-grid" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Grid.html">Grid</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-item" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Item.html">Item</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-panel" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Panel.html">Panel</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-picker" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Picker.html">Picker</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-row" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Row.html">Row</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-select" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Select.html">Select</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-selection" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.Selection.html">Selection</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member-private">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-selectionmodel" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.SelectionModel.html">SelectionModel</a>
+                                    </div>
+                                </div>
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-future-textfield" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.future.TextField.html">TextField</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isNotLeaf" id="branch-st-locator" isLeaf="false">
+                        <span class="tree-expando">▸</span>
+                                <span class="folder-type"></span>
+                            <a class="tree-leaf-text">locator</a>
+                    </div>
+                        <div class="tree-child-leaves hidden">
+                                <div class="tree-leaf tree-member">
+                                    <div class="tree-leaf-content isLeaf" id="node-st-locator-strategy" isLeaf="true">
+                                        <span class="tree-expando hidden">▸</span>
+                                                <span class="class-type"></span>
+                                            <a class="tree-leaf-text" href="../ST.locator.Strategy.html">Strategy</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-alert" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Alert.html">Alert</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-protected">
+                    <div class="tree-leaf-content isLeaf" id="node-st-block" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Block.html">Block</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-browser" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Browser.html">Browser</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-browser-1" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.browser-1.html">browser</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-element" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Element.html">Element</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-gate" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Gate.html">Gate</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-jasmine" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.jasmine.html">jasmine</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-locator" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Locator.html">Locator</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-options" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.options.html">options</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-os-1" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.os-1.html">os</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-os" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.OS.html">OS</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-spec" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Spec.html">Spec</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-status" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.status.html">status</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-suite" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Suite.html">Suite</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-supports" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.supports.html">supports</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-system" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.system.html">system</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-private">
+                    <div class="tree-leaf-content isLeaf" id="node-st-test" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Test.html">Test</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member-protected">
+                    <div class="tree-leaf-content isLeaf" id="singleton-st-tests" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                            <span class="singleton-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Tests.html">Tests</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-version" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.Version.html">Version</a>
+                    </div>
+                </div>
+                <div class="tree-leaf tree-member">
+                    <div class="tree-leaf-content isLeaf" id="node-st-watchdog" isLeaf="true">
+                        <span class="tree-expando hidden">▸</span>
+                                <span class="class-type"></span>
+                            <a class="tree-leaf-text" href="../ST.WatchDog.html">WatchDog</a>
+                    </div>
+                </div>
+        </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-array" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../Array.html">Array</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-boolean" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../Boolean.html">Boolean</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-date" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../Date.html">Date</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-function" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../Function.html">Function</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-number" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../Number.html">Number</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-object" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../Object.html">Object</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-regexp" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../RegExp.html">RegExp</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-string" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="../String.html">String</a>
+    </div>
+</div>
+
+                    <div class="fa fa-plus toggle-tree hide tooltip tooltip-tr-br" data-expand="Expand All Classes" data-collapse="Collapse All Classes"><div class="callout callout-b"></div></div>
+                </div>
+                <div id="guide-tree" class="hide is-tree">
+                    <div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-product_overview" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="product_overview.html">Sencha Test 概述</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-sencha_test_installation" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="sencha_test_installation.html">安装和配置</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-getting_started" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="getting_started.html">入门</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-testing_existing_apps" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="testing_existing_apps.html">测试已有应用程序</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-testing_applications" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="testing_applications.html">测试新建应用程序</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-command_line_archive_server" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="command_line_archive_server.html">命令行工具CLI和归档服务器</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-test_projects_scenarios_suites" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="test_projects_scenarios_suites.html">项目, 场景(Scenarios)和套件(Suites)</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-using_the_test_runner" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="using_the_test_runner.html">使用Test Runner</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-unit_functional_tests" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="unit_functional_tests.html">单元测试 vs 功能测试</a>
+    </div>
+</div>
+<div class="tree-leaf tree-member">
+    <div class="tree-leaf-content isLeaf" id="node-release_notes" isLeaf="true">
+        <span class="tree-expando hidden">▸</span>
+                <span class="class-type"></span>
+            <a class="tree-leaf-text" href="release_notes.html">发布说明</a>
+    </div>
+</div>
+
+                    <div class="fa fa-plus toggle-tree hide tooltip tooltip-tr-br" data-expand="Expand All Guides" data-collapse="Collapse All Guides"><div class="callout callout-b"></div></div>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="back-to-top">top </a>
+        <div id="rightMembers" class="">
+            
+            <div class="context-menu-ct">
+    <div class="context-header">
+        <div id="hide-context-menu" class="fa fa-caret-right"></div>
+    </div>
+    <div class="search">
+        <form autocomplete="off">
+            <input type="text" type="search" placeholder="search" id="searchtext">
+            <i id="filtersubmit" class="fa fa-search"></i>
+            <span id="help-btn" data-tip="Docs Help" class="tooltip tooltip-tr-br"><div class="callout callout-b"></div></span>
+        </form>
+    </div>
+    <div id="toc-context-ct">
+        <!-- context content added at runtime -->
+    </div>
+</div>
+<div class="guide-body-wrap">
+    <div class="body-wrap-inner">
+        <div class="classText">
+
+            <div id="toggleExamples" class="fa fa-code tooltip tooltip-tr-br" data-expand="Expand All Examples" data-collapse="Collapse All Examples"><div class="callout callout-b"></div></div>
+                <div class="toc">
+                    <h2>Contents</h2>
+                        <a class="toc-page-h2" href="#testing_applications_-_generating_a_workspace">Generating a Workspace</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_generating_a_classic_application">Generating a Classic Application</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_testable_class">Adding a Testable Class</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_initializing_a_test_project">Initializing a Test Project</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_scenario">Adding a Scenario</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_suite">Adding a Suite</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_spec">Adding a Spec</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_running_the_test">Running the Test</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_conclusion">Conclusion</a>
+                </div>
+            <h1 id="testing_applications_-_testing_new_applications">测试新建应用程序<a class="quick-link" href="#testing_applications_-_testing_new_applications"></a></h1>
+<p>Sencha Studio allows developers to quickly and automatically test granular aspects of an application or web page. Unit 
+testing ensures that all of the pieces of your application behave as anticipated as your codebase grows and changes.</p>
+<p>In this guide, we&#39;re going to walk through generating a new application and setting up a test environment, creating
+a testable application class, and testing said class with a custom unit test. All of these things can be done directly
+in Sencha Studio.</p>
+<p>If you have an existing application, check out <a href="testing_existing_apps.html" class="external-link" target="_blank">测试已有应用程序</a>.</p>
+<p>This guide assumes some familiarity with the Jasmine test framework.  If you are unfamiliar with Jasmine or test concepts, 
+check out their excellent <a href="../../../jasmine.github.io/2.0/introduction.html" class="external-link" target="_blank">documentation</a> for more information on 
+authoring and editing Jasmine tests.  This guide also makes use of 
+<a href="../../../https@www.sencha.com/products/sencha-cmd/default.htm" class="external-link" target="_blank">Sencha Cmd</a> to generate 
+an <a href="../../../https@www.sencha.com/products/extjs/#overview" class="external-link" target="_blank">Ext JS</a> application and assume you 
+have downloaded / installed them.</p>
+<p>Let&#39;s get started!</p>
+<h2 id="testing_applications_-_generating_a_workspace">Generating a Workspace<a class="quick-link" href="#testing_applications_-_generating_a_workspace"></a></h2>
+<p>We&#39;ll begin by opening Sencha Studio.</p>
+<p>You can generate your required workspace with Sencha Studio by choosing the following 
+from the application toolbar:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Sencha Studio -&gt; New -&gt; Workspace...
+</code></pre></div><p>Select the appropriate file system path and click &quot;OK&quot;.  Your test project should 
+now find itself within your newly generated workspace.</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-blank-workspace.jpg" alt="Sencha Studio New Workspace"></p>
+<p>Next, we&#39;ll add an application to this fresh workspace.</p>
+<h2 id="testing_applications_-_generating_a_classic_application">Generating a Classic Application<a class="quick-link" href="#testing_applications_-_generating_a_classic_application"></a></h2>
+<p>To keep things simple, we&#39;ll generate a classic application within our newly generated workspace.  We can generate our 
+application via Sencha Test as well!</p>
+<p>Simply choose from the application toolbar: </p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Sencha Studio -&gt; New -&gt; Application...
+</code></pre></div><p>Next, enter your application&#39;s name, select classic, and then select your newly generated workspace as the path.  Your 
+application will then show up under your workspace.</p>
+<p><span class="image-wrapper"><span class="image-wrapper"><img src="images/sencha-studio-blank-application.jpg" alt="Sencha Studio New Application"></p>
+<h2 id="testing_applications_-_adding_a_testable_class">Adding a Testable Class<a class="quick-link" href="#testing_applications_-_adding_a_testable_class"></a></h2>
+<p>The starter application has very little functionality, so let&#39;s add something that we can test.  For our purposes, let&#39;s 
+create a WindowEditor class at <code>MyApp/app/view/main/WindowEditor.js</code> using the IDE of your choice.  You can use this code to 
+follow along:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Ext.define(&#39;MyApp.view.main.WindowEditor&#39;, {
+   extend: &#39;Ext.Window&#39;,
+
+   alias: &#39;widget.windoweditor&#39;,
+
+   width:400,
+   height:200,
+   padding:20,
+
+   autoShow: true,
+
+   title: &#39;Update Email&#39;,
+
+   items: [{
+       xtype: &#39;form&#39;,
+       items: [{
+           xtype: &#39;textfield&#39;,
+           allowBlank: false,
+           vtype: &#39;email&#39;
+       },{
+           xtype: &#39;button&#39;,
+           text: &#39;Submit Change&#39;,
+           formBind: true
+       }]
+   }]
+});
+</code></pre></div><p>This class extends a window that contains a form, which in turn, contains a textfield and a button.  We&#39;ve instructed 
+the textfield that we will not allow a blank value, and that any input must pass email validation.</p>
+<p>Additionally, we&#39;ve set <code>formBind</code> true on the button.  This instructs the button to 
+remain in a disabled state until the form considers itself valid.  Once valid, the button 
+will change to a clickable state.</p>
+<p>You can then replace <code>MyApp/app/view/main/MainController.js</code>&#39;s <code>onItemSelected</code> method 
+with the following:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">onItemSelected: function (sender, record) {
+    Ext.create(&#39;MyApp.view.main.WindowEditor&#39;);
+}
+</code></pre></div><p>This will open a faux email-editor for our grid.  You really don&#39;t need to modify this controller code to create the 
+upcoming test in Sencha Studio.  That said, you&#39;ll find that your application&#39;s creation logic often runs parallel to the 
+code you&#39;ll end up writing in your test spec.</p>
+<p>We&#39;ll eventually use this class to test whether or not the button is successfully enabled/disabled as the text input 
+satisfies our prescribed validation.</p>
+<p><strong>Note:</strong> This &quot;editor&quot; doesn&#39;t really do anything at this point, but it should serve our purposes for testing demonstration.  </p>
+<h2 id="testing_applications_-_initializing_a_test_project">Initializing a Test Project<a class="quick-link" href="#testing_applications_-_initializing_a_test_project"></a></h2>
+<p>Let&#39;s get our project settings added by clicking on &quot;Applications&quot; child &quot;Tests&quot; node.  Then click 
+&quot;Initialize Test Project&quot; in the right-hand details panel.  Upon clicking, you should see a few Project Settings.  We 
+shouldn&#39;t need to change anything at this time.  However, if you do modify any of the settings, be sure to click &quot;Save&quot; 
+before proceeding.</p>
+<p>Next, let&#39;s add an application scenario.</p>
+<h2 id="testing_applications_-_adding_a_scenario">Adding a Scenario<a class="quick-link" href="#testing_applications_-_adding_a_scenario"></a></h2>
+<p>A test project must contain a “Scenario” in order to add a suite of test specs.  </p>
+<p><em><strong>Scenario</strong></em> - <em>Scenarios house the test suites that you will soon create.</em></p>
+<p>To create a scenario, click the &quot;+ Add&quot; button under the Scenarios heading.  You can then change the name and file 
+system location of the Scenario.  Typically, you&#39;ll want to name your Scenario based on the content you&#39;ll be testing. In 
+this case, let&#39;s call it &quot;WindowEditor&quot;.  Once added, make sure to click &quot;Save&quot;.  We can now begin adding a suite of 
+test specs to our scenario.  </p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-scenario-added.jpg" alt="Sencha Studio New Scenario"></span></p>
+<h2 id="testing_applications_-_adding_a_suite">Adding a Suite<a class="quick-link" href="#testing_applications_-_adding_a_suite"></a></h2>
+<p>You should now see “WindowEditor” as a child of the &quot;Tests&quot; node.  Go ahead and click on that node, and you should see 
+your local browsers and a panel that says &quot;No tests found&quot;.  Let&#39;s change that!</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-no-tests-found.jpg" alt="Sencha Studio No Tests Found"></span></p>
+<p>Let&#39;s add a Jasmine Test Suite.  </p>
+<p><em><strong>Suite</strong></em> - <em>A suite is a file containing a collection of tests that represent some aspect of your application.  This 
+could be a class, a component, or a grouping of functions.  It really depends on how you choose to organize your 
+test suites.</em></p>
+<p>&quot;Right+Click&quot; the “Window Editor” node and then, click &quot;New-&gt;Jasmine Test Suite&quot;.  A modal window will then pop up 
+that allows you to give your Suite a name.  Let&#39;s call it &quot;WindowValidation&quot;.</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-create-test-suite.jpg" alt="Sencha Studio Create Test Suite"></span>
+<span class="image-wrapper"><img src="images/sencha-studio-windowValidation-test.jpg" alt="Sencha Studio WindowValidation Test"></span></p>
+<p>Once added, you should then see a &quot;WindowValidation.js&quot; file under &quot;WindowEditor&quot;.  Click the new file and you&#39;ll see 
+some stubbed in suite code to get your started.</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">describe(&quot;my test suite&quot;, function() {
+    it(&quot;should pass&quot;, function() {
+        expect(1).toBe(1);
+    });
+});
+</code></pre></div><p>For ease of use, &quot;Right+Click&quot; on the <code>WindowValidation.js</code> tab and then click &quot;Move Right&quot;.  This should split your 
+screen between the WindowEditor and your Scenario&#39;s Test Runner.  This makes it much easier to make changes and test 
+them quickly.</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-move-right.jpg" alt="Sencha Studio Move Tests Right"></span>
+<span class="image-wrapper"><img src="images/sencha-studio-moved-right.jpg" alt="Sencha Studio Moved Tests Right"></span></p>
+<p>Our stubbed in suite code isn&#39;t very helpful in its current form, so let&#39;s go ahead and add a spec to our suite.</p>
+<h2 id="testing_applications_-_adding_a_spec">Adding a Spec<a class="quick-link" href="#testing_applications_-_adding_a_spec"></a></h2>
+<p><em><strong>Spec</strong></em> - <em>A spec is an individual test in the form of a JavaScript function that explains what a portion of your 
+program should accomplish.  We should explain in plain language what the test is expecting.  It should then provide 
+JavaScript that performs the tests for said expectation.</em></p>
+<p>It&#39;s important to note that many times your test may parallel many aspects of your application code in terms of creating 
+classes and obtaining references to components.</p>
+<p>For the time being, go ahead and paste the following suite into your <code>WindowEditor.js</code> 
+file and press &quot;Save&quot;:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">describe(&quot;formBind true&quot;, function() {
+    it(&quot;should disable button if email is not valid&quot;, function(done) {
+
+        // Create and reference the WindowEditor and then 
+        // get reference to the button and textfield
+        var win = Ext.create(&#39;MyApp.view.main.WindowEditor&#39;),
+            button = win.down(&#39;button&#39;),      
+            field  = win.down(&#39;textfield&#39;);
+
+        // Set the field&#39;s value to a valid email address
+        // in order to have the button fire an enable event
+        field.setValue(&#39;valid@email.com&#39;);
+
+        button.on(&#39;enable&#39;, function() {
+
+            // Set the field&#39;s value to an invalid email address (nothing)
+            // in order to have the button fire a disable event
+            field.setValue(&#39;&#39;);
+
+            button.on(&#39;disable&#39;, function() {
+
+                //  Once the disable event has been called after setting a 
+                //  bad value, we can safely say that the button is properly 
+                //  hooked into the form&#39;s validity.  Thusly, we can 
+                //  alert the spec to return by calling the done function.
+                done();    
+            });
+        });
+    });
+});
+</code></pre></div><p>As you can see, we&#39;re testing that the button&#39;s state correctly follows the form&#39;s validity.  If the textfield contains 
+a valid value, the form is valid, and the button should be enabled.  Conversely, if the textfield contains an invalid 
+value, the form is invalid, and the button should be disabled.  This behavior all takes place due to the button&#39;s 
+<code>formBind</code> config being set to <code>true</code>.</p>
+<p>We are able to test that these conditions are properly met by listening to the button&#39;s enable/disable events.  If button 
+fires &quot;enable&quot;, we know that the form has become valid.  If the button fires the &quot;disable&quot; event, we know that the form 
+has become invalid.  At that point, we can be satisfied that the test was successful and then call Jasmine&#39;s <code>done()</code> function.</p>
+<p>In many cases, you would use an expectation to ensure the results meet your postulation.  An expectation is built with 
+the expect function, which takes a value, called the actual.  It is then chained to a Matcher function which takes the 
+expected value.  This determines true/false, or, in other words, pass/fail.</p>
+<p>That said, we don&#39;t necessarily have to use an expectation in this case.  The <code>done()</code> function is passed to the <code>it()</code> method 
+as an argument.  We can use <code>done()</code> by simply calling it when we determine the processing to be complete.  Generally, 
+<code>done()</code> will be called as a &quot;success&quot; callback when dealing with asynchronous testing.  However, we can use it here 
+instead of setting an expectation.  By virtue of reaching the final event, we know that we&#39;ve satisfied our test, so there 
+is no need for an expectation.  If the final event is never fired, <code>done()</code> will not be called, and the test will timeout 
+after 5 seconds, indicating a failure.</p>
+<p>Now that we have a test case, let&#39;s run it and ensure that our application&#39;s editor is successfully measuring our form&#39;s validity.</p>
+<h2 id="testing_applications_-_running_the_test">Running the Test<a class="quick-link" href="#testing_applications_-_running_the_test"></a></h2>
+<p>Now that we have our test connected, let&#39;s walk through running it via a local browser.</p>
+<p>First, select the &quot;WindowEditor&quot; scenario node from the Workspace navigation view to 
+display the scenario&#39;s test runner tab.  Next, select your browser(s) of choice from the 
+left hand Browsers pane in the test runner tab.  For our purposes, we&#39;ll select Chrome.<br>Once selected, you&#39;ll see your selected browser(s) open your connected application.</p>
+<p><strong>Note:</strong> If &quot;sencha app watch&quot; is initializing, you&#39;ll see a yellow eye icon next to the application node.  Your 
+browser will not open until the eye turns black, signifying that &quot;app watch&quot; has initialized.</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-chrome-test-runner.jpg" alt="Sencha Studio Chrome Test Runner"></span></p>
+<p>Select &quot;WindowValidation.js&quot; from the WindowEditor Test Runner and click &quot;Run Selection&quot; 
+from the top toolbar.  If all goes well, you should receive a green checkbox indicating 
+that the test has successfully passed.</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-runner-test-passed.jpg" alt="Sencha Studio Test Runner Passed"></span></p>
+<p>It may be useful to see what happens if the test fails as well, so let&#39;s force that to occur by changing our test case.<br>Replace the following line:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">    // Set the field&#39;s value to a valid email address
+    // in order to have the button fire an enable event
+    field.setValue(&#39;valid@email.com&#39;);
+</code></pre></div><p>with this code:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">    field.setValue(&#39;&#39;);
+</code></pre></div><p>As you can imagine, this change will cause the textfield value to remain invalid, meaning the button&#39;s enable event will 
+never fire and we&#39;ll never call <code>done()</code>.  After 5 seconds, the test will determine itself failed and timeout.</p>
+<p>Save your spec and re-run the selection.  This time you should see a red &quot;1&quot;.  This indicates that one spec failed.  If 
+you expand WindowValidation.js, and then expand <code>formBind true</code>, you&#39;ll see our spec with a red &quot;x&quot; next to it.  If you 
+click on the red &quot;x&quot;, you can then review a summary of the error in the lower summary panel.</p>
+<p><span class="image-wrapper"><img src="images/sencha-studio-runner-test-failed.jpg" alt="Sencha Studio Test Runner Failed"></span></p>
+<h2 id="testing_applications_-_conclusion">Conclusion<a class="quick-link" href="#testing_applications_-_conclusion"></a></h2>
+<p>As you may imagine, this guide only scratches the surface of what can be done with Sencha Test by way of Sencha Studio.  Hopefully, this 
+introduction provides you with the knowledge you&#39;ll need to navigate through and discover the many powerful tools 
+contained within Sencha Studio.</p>
+<p>If you have further questions, concerns, or bug reports, please visit the 
+<a href="../../../https@www.sencha.com/forum/forumdisplay.php@144-Sencha-Test" class="external-link" target="_blank">Sencha Test forums</a>.</p>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="../../../https@www.facebook.com/senchainc/default.htm" target="_blank"><img class="social" src="../home-images/fb.png"/></a>
+            <a href="../../../https@www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../home-images/in.png"/></a>
+            <a href="../../../https@twitter.com/Sencha" target="_blank"><img class="social" src="../home-images/twt.png"/></a>
+            Sencha Test 1.0.3  | <a href='../../../https@www.sencha.com/legal/terms-of-use/default.htm' target='_blank'>Terms of Use</a>
+        </p>
+    </div>
+</div>
+
+            
+        </div>
+    </div>
+    <h2 class="product-header"><a href="../index.html">Sencha Test 1.0.3 </a>
+        <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
+        <div id="peekaboo-input" class="peekaboo-input">
+            <input type="text" id="mobile-input" />
+        </div>
+    </h2>
+
+    <div id="product-tree-ct" class="hide">
+        <div id="product-tree">
+            <div class="product-name-ct">
+                    <div id="product-menu-extjs" class="product-name-item">Ext JS</div>
+                    <div id="product-menu-sencha_test" class="product-name-item">Sencha Test</div>
+                    <div id="product-menu-cmd" class="product-name-item">Cmd</div>
+                    <div id="product-menu-gxt" class="product-name-item">GXT</div>
+                    <div id="product-menu-ide_plugins" class="product-name-item">IDE Plugins</div>
+                    <div id="product-menu-sencha_inspector" class="product-name-item">Sencha Inspector</div>
+                    <div id="product-menu-architect" class="product-name-item">Architect</div>
+                    <div id="product-menu-touch" class="product-name-item">Touch</div>
+                    <div id="product-menu-webappmgr" class="product-name-item">Web Application Manager</div>
+            </div>
+                <div class="product-version-ct hide extjs">
+                        <h2>Ext JS</h2>
+                            <h3>6.x</h3>
+                                        <div class="compound-product-item">6.2.0 EA
+                                                <a  href="../../extjs/6.2.0-classic/index.html">(classic)</a>
+                                                <a  href="../../extjs/6.2.0-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.2
+                                                <a  href="../../extjs/6.0.2-classic/index.html">(classic)</a>
+                                                <a  href="../../extjs/6.0.2-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.1
+                                                <a  href="../../extjs/6.0.1-classic/index.html">(classic)</a>
+                                                <a  href="../../extjs/6.0.1-modern/index.html">(modern)</a>
+                                        </div>
+                                        <div class="compound-product-item">6.0.0
+                                                <a  href="../../extjs/6.0.0-classic/index.html">(classic)</a>
+                                                <a  href="../../extjs/6.0.0-modern/index.html">(modern)</a>
+                                        </div>
+                            <h3>5.x</h3>
+                                        <a class="product-item" href="../../extjs/5.1.3/index.html">5.1.3</a>
+                                        <a class="product-item" href="../../extjs/5.1.2/index.html">5.1.2</a>
+                                        <a class="product-item" href="../../extjs/5.1.1/index.html">5.1.1</a>
+                                        <a class="product-item" href="../../extjs/5.1.0/index.html">5.1.0</a>
+                                        <a class="product-item" href="../../extjs/5.0.1/index.html">5.0.1</a>
+                                        <a class="product-item" href="../../extjs/5.0.0/index.html">5.0.0</a>
+                            <h3>4.x</h3>
+                                        <a class="product-item" href="../../extjs/4.2.5/default.htm">4.2.5</a>
+                                        <a class="product-item" href="../../extjs/4.1.3/default.htm">4.1.3</a>
+                                        <a class="product-item" href="../../extjs/4.0.7/default.htm">4.0.7</a>
+                            <h3>3.x</h3>
+                                        <a class="product-item" href="../../extjs/3.4.0/default.htm">3.4.0</a>
+                </div>
+                <div class="product-version-ct hide sencha_test">
+                        <h2>Sencha Test</h2>
+                        <a  href="../index.html">Sencha Test</a>
+                </div>
+                <div class="product-version-ct hide cmd">
+                        <h2>Cmd</h2>
+                        <a  href="../../cmd/index.html">Cmd</a>
+                </div>
+                <div class="product-version-ct hide gxt">
+                        <h2>GXT</h2>
+                                <a class="product-item" href="../../gxt/4.x/index.html">4.x</a>
+                                <a class="product-item" href="../../gxt/3.x/index.html">3.x</a>
+                </div>
+                <div class="product-version-ct hide ide_plugins">
+                        <h2>IDE Plugins</h2>
+                        <a  href="../../ide_plugins/index.html">IDE Plugins</a>
+                </div>
+                <div class="product-version-ct hide sencha_inspector">
+                        <h2>Sencha Inspector</h2>
+                        <a  href="../../sencha_inspector/index.html">Sencha Inspector</a>
+                </div>
+                <div class="product-version-ct hide architect">
+                        <h2>Architect</h2>
+                                <a class="product-item" href="../../architect/3/index.html">Architect 3</a>
+                                <a class="product-item" href="../../architect/4/index.html">Architect 4 EA</a>
+                </div>
+                <div class="product-version-ct hide touch">
+                        <h2>Touch</h2>
+                            <h3>2.x</h3>
+                                        <a class="product-item" href="../../touch/2.4/index.html">Touch 2.4</a>
+                                        <a class="product-item" href="../../touch/2.3.1/default.htm">Touch 2.3</a>
+                                        <a class="product-item" href="../../touch/2.2.1/default.htm">Touch 2.2</a>
+                                        <a class="product-item" href="../../touch/2.0.2/default.htm">Touch 2.0</a>
+                </div>
+                <div class="product-version-ct hide webappmgr">
+                        <h2>Web Application Manager</h2>
+                        <a  href="../../webappmgr/index.html">Web Application Manager</a>
+                </div>
+        </div>
+    </div>
+
+    <div id="historyConfigPanel">
+        <div class="history-type-selector">
+            <input id="historyTypeCurrent" type="radio" name="historyType" value="current" checked="true" />
+            <label for="historyTypeCurrent">Current Product / Version</label><br>
+            <input id="historyTypeAll" type="radio" name="historyType" value="all" />
+            <label for="historyTypeAll">All</label><br>
+            <div id="history-label-toggle">
+                <input id="history-all-labels" type="checkbox" checked="true" />
+                <label for="history-all-labels">Show product details in the history bar</label>
+                <div class="mask"></div>
+            </div>
+            <span id="history-clear" class="tooltip tooltip-tr-br" data-tip="Clear History"><div class="history-clear callout callout-b"></div></span>
+        </div>
+        <div id="history-full-list"></div>
+    </div>
+
+    <div id="search-history-panel"></div>
+
+</body>
+    <script type="text/javascript" src="../js/searchIndex.js"></script>
+    <script type="text/javascript" src="../js/guideSearch.js"></script>
+<!--[if lt IE 9 ]>
+<script type="text/javascript" src="../js/media-query-poly.js"></script>
+<style>
+    span.da-inline-fiddle-nav-fiddle.x-fa.fa-play-circle {
+        display: none;
+    }
+</style>
+<![endif]-->
+<script>
+    if (navigator.userAgent.indexOf("Safari") > -1) {
+        window.onpageshow = function(event) {
+            if (event.persisted) {
+                window.location.reload()
+            }
+        };
+    }
+
+    document.onreadystatechange = function () {
+        if (document.readyState == "interactive") {
+            //
+        }
+    }
+</script>
+
+</html>
