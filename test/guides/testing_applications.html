@@ -21,12 +21,12 @@
          * -------------------------- */
         @font-face {
             font-family: 'FontAwesome';
-            src: url('../css/fonts/fontawesome-webfont.eot@v=4.5.0');
+            src: url('../css/fonts/fontawesome-webfont.eot?v=4.5.0');
             src: url('../css/fonts/fontawesome-webfont.eot@#iefix&v=4.5.0') format('embedded-opentype'),
-            url('../css/fonts/fontawesome-webfont.woff2@v=4.5.0') format('woff2'),
-            url('../css/fonts/fontawesome-webfont.woff@v=4.5.0') format('woff'),
-            url('../css/fonts/fontawesome-webfont.ttf@v=4.5.0') format('truetype'),
-            url('../css/fonts/fontawesome-webfont.svg@v=4.5.0#fontawesomeregular') format('svg');
+            url('../css/fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'),
+            url('../css/fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'),
+            url('../css/fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'),
+            url('../css/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
             font-weight: normal;
             font-style: normal;
         }
@@ -106,7 +106,7 @@
         </div>
         <div class="classText">
             <div class="toc">
-                <h2>Contents</h2>
+                <h2>内容</h2>
                     <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
                     <a class="toc-page-h3" href="#access-levels">Access Levels</a>
                     <a class="toc-page-h3" href="#member-types">Member Types</a>
@@ -159,7 +159,7 @@
     programmatically raise an event to be handled by one or more event handler methods.  DOM 
     events, while handled by the framework event system, are not specifically described 
     within the API documentation.  *For DOM events refer to the 
-    <a href="../../../https@developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
     <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the 
     framework.</li>
     <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework 
@@ -371,7 +371,7 @@
     </div>
     <div id="header">
         <div class="logo">
-            <a href="../../default.htm"><img height="32" src="../home-images/sencha_logo_thumb.png"/></a>
+            <a href="../../"><img height="32" src="../home-images/sencha_logo_thumb.png"/></a>
         </div>
         <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
         <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl landing-product-menu-btn"><div class="callout callout-b"></div></span>
@@ -385,7 +385,7 @@
         <div id="class-tree-ct" class="class-tree">
             <h2 class="product-header">
                 <div class="logo">
-                    <a href="../../default.htm"><img src="../home-images/sencha_logo1x.png"/></a>
+                    <a href="../../"><img src="../home-images/sencha_logo1x.png"/></a>
                 </div>
                 <a href="../index.html">Sencha Test 1.0.3 </a>
                 <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn  tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
@@ -911,52 +911,41 @@
 
             <div id="toggleExamples" class="fa fa-code tooltip tooltip-tr-br" data-expand="Expand All Examples" data-collapse="Collapse All Examples"><div class="callout callout-b"></div></div>
                 <div class="toc">
-                    <h2>Contents</h2>
-                        <a class="toc-page-h2" href="#testing_applications_-_generating_a_workspace">Generating a Workspace</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_generating_a_classic_application">Generating a Classic Application</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_testable_class">Adding a Testable Class</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_initializing_a_test_project">Initializing a Test Project</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_scenario">Adding a Scenario</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_suite">Adding a Suite</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_spec">Adding a Spec</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_running_the_test">Running the Test</a>
-                        <a class="toc-page-h2" href="#testing_applications_-_conclusion">Conclusion</a>
+                    <h2>内容</h2>
+                        <a class="toc-page-h2" href="#testing_applications_-_generating_a_workspace">创建一个 Workspace</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_generating_a_classic_application">生成一个 Classic 应用程序</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_testable_class">增加一个可测试的类</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_initializing_a_test_project">初始化一个测试项目</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_scenario">增加一个场景(Scenario)</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_suite">增加一个套件(Suite)</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_adding_a_spec">增加一个 Spec</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_running_the_test">执行 Test</a>
+                        <a class="toc-page-h2" href="#testing_applications_-_conclusion">结论</a>
                 </div>
             <h1 id="testing_applications_-_testing_new_applications">测试新建应用程序<a class="quick-link" href="#testing_applications_-_testing_new_applications"></a></h1>
-<p>Sencha Studio allows developers to quickly and automatically test granular aspects of an application or web page. Unit 
-testing ensures that all of the pieces of your application behave as anticipated as your codebase grows and changes.</p>
-<p>In this guide, we&#39;re going to walk through generating a new application and setting up a test environment, creating
-a testable application class, and testing said class with a custom unit test. All of these things can be done directly
-in Sencha Studio.</p>
-<p>If you have an existing application, check out <a href="testing_existing_apps.html" class="external-link" target="_blank">测试已有应用程序</a>.</p>
-<p>This guide assumes some familiarity with the Jasmine test framework.  If you are unfamiliar with Jasmine or test concepts, 
-check out their excellent <a href="../../../jasmine.github.io/2.0/introduction.html" class="external-link" target="_blank">documentation</a> for more information on 
-authoring and editing Jasmine tests.  This guide also makes use of 
-<a href="../../../https@www.sencha.com/products/sencha-cmd/default.htm" class="external-link" target="_blank">Sencha Cmd</a> to generate 
-an <a href="../../../https@www.sencha.com/products/extjs/#overview" class="external-link" target="_blank">Ext JS</a> application and assume you 
-have downloaded / installed them.</p>
-<p>Let&#39;s get started!</p>
-<h2 id="testing_applications_-_generating_a_workspace">Generating a Workspace<a class="quick-link" href="#testing_applications_-_generating_a_workspace"></a></h2>
-<p>We&#39;ll begin by opening Sencha Studio.</p>
-<p>You can generate your required workspace with Sencha Studio by choosing the following 
-from the application toolbar:</p>
+<p>Sencha Studio 允许开发人员快速和自动测试一个应用程序或 web 页面的细微粒度方面。随着代码库的增长，单元 测试可以确保应用程序的所有部分按照你的预期运行。</p>
+<p>本指南, 我们学习生成一个新的应用程序，并设置测试环境, 创建一个可测试的类, 并对它进行单元测试. 所有这些工作都可以在 Sencha Studio 中完成.</p>
+<p>如果你有一个已存在的应用程序, 请看 <a href="testing_existing_apps.html" class="external-link" target="_blank">测试已有应用程序</a>.</p>
+<p>本文假定你已经对 Jasmine 测试框架比较熟悉. 如果你不熟悉 Jasmine 或 测试的概念, 
+请查阅他们优秀的 <a href="http://jasmine.github.io/2.0/introduction.html" class="external-link" target="_blank">文档</a>，来获取更多关于编写 Jasmine 测试的信息. 本指南也使用了
+<a href="https://www.sencha.com/products/sencha-cmd/" class="external-link" target="_blank">Sencha Cmd</a> 来生成
+一个 <a href="https://www.sencha.com/products/extjs/#overview" class="external-link" target="_blank">Ext JS</a> 应用程序，并假定你已经下载安装它了.</p>
+<p>让我们开始吧!</p>
+<h2 id="testing_applications_-_generating_a_workspace">创建一个 Workspace<a class="quick-link" href="#testing_applications_-_generating_a_workspace"></a></h2>
+<p>先打开 Sencha Studio.</p>
+<p>你可以在 Sencha Studio 工具栏上点击下面的菜单来生成你需要的 workspace:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Sencha Studio -&gt; New -&gt; Workspace...
-</code></pre></div><p>Select the appropriate file system path and click &quot;OK&quot;.  Your test project should 
-now find itself within your newly generated workspace.</p>
+</code></pre></div><p>选择合适的文件路径，然后点击 &quot;OK&quot;. 你会发现新生成的 workspace 中有一个测试项目了.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-blank-workspace.jpg" alt="Sencha Studio New Workspace"></p>
-<p>Next, we&#39;ll add an application to this fresh workspace.</p>
-<h2 id="testing_applications_-_generating_a_classic_application">Generating a Classic Application<a class="quick-link" href="#testing_applications_-_generating_a_classic_application"></a></h2>
-<p>To keep things simple, we&#39;ll generate a classic application within our newly generated workspace.  We can generate our 
-application via Sencha Test as well!</p>
-<p>Simply choose from the application toolbar: </p>
+<p>接下来, 我们添加一个应用程序到这个新的 workspace 中.</p>
+<h2 id="testing_applications_-_generating_a_classic_application">生成一个 Classic 应用程序<a class="quick-link" href="#testing_applications_-_generating_a_classic_application"></a></h2>
+<p>简单起见, 我们生成一个 Classic 应用程序到我们的 workspace 中.  我们也可以用 Sencha Test 来生成应用程序!</p>
+<p>点击下面的菜单即可: </p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Sencha Studio -&gt; New -&gt; Application...
-</code></pre></div><p>Next, enter your application&#39;s name, select classic, and then select your newly generated workspace as the path.  Your 
-application will then show up under your workspace.</p>
+</code></pre></div><p>接着, 输入应用程序名称, 选择 classic, 然后把 workspace 的位置作为保存论斤. 你的应用程序就会出现在 workspace 下面了.</p>
 <p><span class="image-wrapper"><span class="image-wrapper"><img src="images/sencha-studio-blank-application.jpg" alt="Sencha Studio New Application"></p>
-<h2 id="testing_applications_-_adding_a_testable_class">Adding a Testable Class<a class="quick-link" href="#testing_applications_-_adding_a_testable_class"></a></h2>
-<p>The starter application has very little functionality, so let&#39;s add something that we can test.  For our purposes, let&#39;s 
-create a WindowEditor class at <code>MyApp/app/view/main/WindowEditor.js</code> using the IDE of your choice.  You can use this code to 
-follow along:</p>
+<h2 id="testing_applications_-_adding_a_testable_class">增加一个可测试的类<a class="quick-link" href="#testing_applications_-_adding_a_testable_class"></a></h2>
+<p>这个简单的应用程序只有很少的功能, 所以我们来加点东西用于测试. 此处, 我们创建一个 WindowEditor 类，在 <code>MyApp/app/view/main/WindowEditor.js</code> 文件里，你可以使用任何 IDE 编写. 你可以使用下面这段代码:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">Ext.define(&#39;MyApp.view.main.WindowEditor&#39;, {
    extend: &#39;Ext.Window&#39;,
 
@@ -983,69 +972,48 @@ follow along:</p>
        }]
    }]
 });
-</code></pre></div><p>This class extends a window that contains a form, which in turn, contains a textfield and a button.  We&#39;ve instructed 
-the textfield that we will not allow a blank value, and that any input must pass email validation.</p>
-<p>Additionally, we&#39;ve set <code>formBind</code> true on the button.  This instructs the button to 
-remain in a disabled state until the form considers itself valid.  Once valid, the button 
-will change to a clickable state.</p>
-<p>You can then replace <code>MyApp/app/view/main/MainController.js</code>&#39;s <code>onItemSelected</code> method 
-with the following:</p>
+</code></pre></div><p>该类继承 window，里面有一个 form, form 里面包含一个文本框和一个按钮. 我们指明了文本框不允许为空而且必须输入一个邮箱地址.</p>
+<p>此外, 我们还把按钮的 <code>formBind</code> 配置为了 true. 这表明，如果表单验证不通过，按钮则一直处于不可用状态. 一旦验证通过, 按钮就可以被点击了.</p>
+<p>你还可以把 <code>MyApp/app/view/main/MainController.js</code> 的 <code>onItemSelected</code> 函数替换为下面的代码:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">onItemSelected: function (sender, record) {
     Ext.create(&#39;MyApp.view.main.WindowEditor&#39;);
 }
-</code></pre></div><p>This will open a faux email-editor for our grid.  You really don&#39;t need to modify this controller code to create the 
-upcoming test in Sencha Studio.  That said, you&#39;ll find that your application&#39;s creation logic often runs parallel to the 
-code you&#39;ll end up writing in your test spec.</p>
-<p>We&#39;ll eventually use this class to test whether or not the button is successfully enabled/disabled as the text input 
-satisfies our prescribed validation.</p>
-<p><strong>Note:</strong> This &quot;editor&quot; doesn&#39;t really do anything at this point, but it should serve our purposes for testing demonstration.  </p>
-<h2 id="testing_applications_-_initializing_a_test_project">Initializing a Test Project<a class="quick-link" href="#testing_applications_-_initializing_a_test_project"></a></h2>
-<p>Let&#39;s get our project settings added by clicking on &quot;Applications&quot; child &quot;Tests&quot; node.  Then click 
-&quot;Initialize Test Project&quot; in the right-hand details panel.  Upon clicking, you should see a few Project Settings.  We 
-shouldn&#39;t need to change anything at this time.  However, if you do modify any of the settings, be sure to click &quot;Save&quot; 
-before proceeding.</p>
-<p>Next, let&#39;s add an application scenario.</p>
-<h2 id="testing_applications_-_adding_a_scenario">Adding a Scenario<a class="quick-link" href="#testing_applications_-_adding_a_scenario"></a></h2>
-<p>A test project must contain a “Scenario” in order to add a suite of test specs.  </p>
-<p><em><strong>Scenario</strong></em> - <em>Scenarios house the test suites that you will soon create.</em></p>
-<p>To create a scenario, click the &quot;+ Add&quot; button under the Scenarios heading.  You can then change the name and file 
-system location of the Scenario.  Typically, you&#39;ll want to name your Scenario based on the content you&#39;ll be testing. In 
-this case, let&#39;s call it &quot;WindowEditor&quot;.  Once added, make sure to click &quot;Save&quot;.  We can now begin adding a suite of 
-test specs to our scenario.  </p>
+</code></pre></div><p>这将为表格打开一个 email editor. 在 Sencha Studio 创建接下来的测试之前，最好不要修改控制器的代码.  也就是说，你会发现，你的应用程序的创建逻辑，和你接下来要写的测试 spec 是平行执行的.</p>
+<p>我们最终会使用这个类来测试，当输入的文本满足我们的规定的时候，按钮是否能够成功启用/禁用。</p>
+<p><strong>注意:</strong> 这个 &quot;editor&quot; 此时其实还没啥功能, 不过已经满足我们测试的需要了.  </p>
+<h2 id="testing_applications_-_initializing_a_test_project">初始化一个测试项目<a class="quick-link" href="#testing_applications_-_initializing_a_test_project"></a></h2>
+<p>我们选择 &quot;Applications&quot; 下的 &quot;Tests&quot; 节点，来设置测试项目. 再点击右手边明细页的 
+&quot;Initialize Test Project&quot;.  点击之后, 你会看到一些项目设置. 此时我们还不需要变动它们. 不过, 如果你改了设置, 记得点击 &quot;Save&quot; 
+才能生效.</p>
+<p>下面, 我们来添加一个应用程序场景(scenario).</p>
+<h2 id="testing_applications_-_adding_a_scenario">增加一个场景(Scenario)<a class="quick-link" href="#testing_applications_-_adding_a_scenario"></a></h2>
+<p>一个测试项目必须要有 “场景”, 而后才能添加一套测试 specs.  </p>
+<p><em><strong>场景</strong></em> - <em>场景下包含了接下来要创建的测试套件.</em></p>
+<p>要创建一个场景, 点击 Scenarios 标题下面的 &quot;+ Add&quot; 按钮. 然后你可以改变场景的名称和文件路径. 通常, 你会基于你将要测试的内容来命名. 此处, 我们取名 &quot;WindowEditor&quot;. 添加完之后, 一定要点击 &quot;Save&quot;. 现在我们可以添加一套测试 specs 到场景中了.  </p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-scenario-added.jpg" alt="Sencha Studio New Scenario"></span></p>
-<h2 id="testing_applications_-_adding_a_suite">Adding a Suite<a class="quick-link" href="#testing_applications_-_adding_a_suite"></a></h2>
-<p>You should now see “WindowEditor” as a child of the &quot;Tests&quot; node.  Go ahead and click on that node, and you should see 
-your local browsers and a panel that says &quot;No tests found&quot;.  Let&#39;s change that!</p>
+<h2 id="testing_applications_-_adding_a_suite">增加一个套件(Suite)<a class="quick-link" href="#testing_applications_-_adding_a_suite"></a></h2>
+<p>现在你可以看到 “WindowEditor” 是 &quot;Tests&quot; 的一个子节点. 点击它, 你会看到一个浏览器列表，还有一个带有 &quot;无测试用例(No tests found)&quot; 字样的面板. 我们来改变它!</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-no-tests-found.jpg" alt="Sencha Studio No Tests Found"></span></p>
-<p>Let&#39;s add a Jasmine Test Suite.  </p>
-<p><em><strong>Suite</strong></em> - <em>A suite is a file containing a collection of tests that represent some aspect of your application.  This 
-could be a class, a component, or a grouping of functions.  It really depends on how you choose to organize your 
-test suites.</em></p>
-<p>&quot;Right+Click&quot; the “Window Editor” node and then, click &quot;New-&gt;Jasmine Test Suite&quot;.  A modal window will then pop up 
-that allows you to give your Suite a name.  Let&#39;s call it &quot;WindowValidation&quot;.</p>
+<p>我们来添加一个 Jasmine 测试套件.  </p>
+<p><em><strong>套件</strong></em> - <em>套件是一个文件，包含了一组 代表应用程序某些方面 的测试. 这些方面可以是一个类，一个组件，或者是一组方法. 具体地，还要取决于你是如何组织你的测试套件的.</em></p>
+<p>&quot;右击&quot; “Window Editor” 节点，然后点击 &quot;New-&gt;Jasmine Test Suite&quot;. 弹出了一个模态对话框，需要你输入套件名称. 我们取名叫 &quot;WindowValidation&quot; 吧.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-create-test-suite.jpg" alt="Sencha Studio Create Test Suite"></span>
 <span class="image-wrapper"><img src="images/sencha-studio-windowValidation-test.jpg" alt="Sencha Studio WindowValidation Test"></span></p>
-<p>Once added, you should then see a &quot;WindowValidation.js&quot; file under &quot;WindowEditor&quot;.  Click the new file and you&#39;ll see 
-some stubbed in suite code to get your started.</p>
+<p>添加好之后, 可以看到 &quot;WindowEditor&quot; 底下多了个 &quot;WindowValidation.js&quot; 文件. 点击这个文件，会看到一段默认代码，方便我们开始.</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">describe(&quot;my test suite&quot;, function() {
     it(&quot;should pass&quot;, function() {
         expect(1).toBe(1);
     });
 });
-</code></pre></div><p>For ease of use, &quot;Right+Click&quot; on the <code>WindowValidation.js</code> tab and then click &quot;Move Right&quot;.  This should split your 
-screen between the WindowEditor and your Scenario&#39;s Test Runner.  This makes it much easier to make changes and test 
-them quickly.</p>
+</code></pre></div><p>为了便于使用, &quot;右击&quot; <code>WindowValidation.js</code> 标签页，点击 &quot;Move Right&quot;. 这个操作会将WindowEditor和你的 场景的测试运行器分隔开来. 这样，改动之后，可以很快地测试它们.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-move-right.jpg" alt="Sencha Studio Move Tests Right"></span>
 <span class="image-wrapper"><img src="images/sencha-studio-moved-right.jpg" alt="Sencha Studio Moved Tests Right"></span></p>
-<p>Our stubbed in suite code isn&#39;t very helpful in its current form, so let&#39;s go ahead and add a spec to our suite.</p>
-<h2 id="testing_applications_-_adding_a_spec">Adding a Spec<a class="quick-link" href="#testing_applications_-_adding_a_spec"></a></h2>
-<p><em><strong>Spec</strong></em> - <em>A spec is an individual test in the form of a JavaScript function that explains what a portion of your 
-program should accomplish.  We should explain in plain language what the test is expecting.  It should then provide 
-JavaScript that performs the tests for said expectation.</em></p>
-<p>It&#39;s important to note that many times your test may parallel many aspects of your application code in terms of creating 
-classes and obtaining references to components.</p>
-<p>For the time being, go ahead and paste the following suite into your <code>WindowEditor.js</code> 
-file and press &quot;Save&quot;:</p>
+<p>目前套件中的代码没什么用处, 我们来给它添加一个 spec.</p>
+<h2 id="testing_applications_-_adding_a_spec">添加一个 Spec<a class="quick-link" href="#testing_applications_-_adding_a_spec"></a></h2>
+<p><em><strong>Spec</strong></em> - <em>指的是一个单独的测试，用一个 JavaScript 函数的形式来解释你的程序应该完成什么. 我们应当用简单的语言来解释测试所期望的结果是什么. 然后提供 JavaScript 代码执行测试，以达到期望.</em></p>
+<p>需要注意的是，对于创建类和获得对组件的引用来说，多次测试可能会并行应用程序代码的多个方面.</p>
+<p>暂时我们先复制下面的代码到你的 <code>WindowEditor.js</code> 
+文件，然后点击 &quot;Save&quot;:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">describe(&quot;formBind true&quot;, function() {
     it(&quot;should disable button if email is not valid&quot;, function(done) {
 
@@ -1076,62 +1044,42 @@ file and press &quot;Save&quot;:</p>
         });
     });
 });
-</code></pre></div><p>As you can see, we&#39;re testing that the button&#39;s state correctly follows the form&#39;s validity.  If the textfield contains 
-a valid value, the form is valid, and the button should be enabled.  Conversely, if the textfield contains an invalid 
-value, the form is invalid, and the button should be disabled.  This behavior all takes place due to the button&#39;s 
-<code>formBind</code> config being set to <code>true</code>.</p>
-<p>We are able to test that these conditions are properly met by listening to the button&#39;s enable/disable events.  If button 
-fires &quot;enable&quot;, we know that the form has become valid.  If the button fires the &quot;disable&quot; event, we know that the form 
-has become invalid.  At that point, we can be satisfied that the test was successful and then call Jasmine&#39;s <code>done()</code> function.</p>
-<p>In many cases, you would use an expectation to ensure the results meet your postulation.  An expectation is built with 
-the expect function, which takes a value, called the actual.  It is then chained to a Matcher function which takes the 
-expected value.  This determines true/false, or, in other words, pass/fail.</p>
-<p>That said, we don&#39;t necessarily have to use an expectation in this case.  The <code>done()</code> function is passed to the <code>it()</code> method 
-as an argument.  We can use <code>done()</code> by simply calling it when we determine the processing to be complete.  Generally, 
-<code>done()</code> will be called as a &quot;success&quot; callback when dealing with asynchronous testing.  However, we can use it here 
-instead of setting an expectation.  By virtue of reaching the final event, we know that we&#39;ve satisfied our test, so there 
-is no need for an expectation.  If the final event is never fired, <code>done()</code> will not be called, and the test will timeout 
-after 5 seconds, indicating a failure.</p>
-<p>Now that we have a test case, let&#39;s run it and ensure that our application&#39;s editor is successfully measuring our form&#39;s validity.</p>
-<h2 id="testing_applications_-_running_the_test">Running the Test<a class="quick-link" href="#testing_applications_-_running_the_test"></a></h2>
-<p>Now that we have our test connected, let&#39;s walk through running it via a local browser.</p>
-<p>First, select the &quot;WindowEditor&quot; scenario node from the Workspace navigation view to 
-display the scenario&#39;s test runner tab.  Next, select your browser(s) of choice from the 
-left hand Browsers pane in the test runner tab.  For our purposes, we&#39;ll select Chrome.<br>Once selected, you&#39;ll see your selected browser(s) open your connected application.</p>
-<p><strong>Note:</strong> If &quot;sencha app watch&quot; is initializing, you&#39;ll see a yellow eye icon next to the application node.  Your 
-browser will not open until the eye turns black, signifying that &quot;app watch&quot; has initialized.</p>
+</code></pre></div><p>可以看到, 我们测试了表单是否验证通过会改变按钮的可用状态. 如果文本框的值有效, 表单验证通过, 按钮就可用. 相反的, 如果输入框值无效，表单验证不通过，按钮就不可用. 这种行为是由于按钮的 <code>formBind</code> 配置被设置为 <code>true</code>.</p>
+<p>我们可以用过监听按钮的 enable/disable 事件来测试这些条件是否达到.  如果按钮触发了 &quot;enable&quot;, 我们就知道表单通过了验证. 如果按钮触发了 &quot;disable&quot; 事件, 那么表单就没有通过验证. 此时, 我们就认为测试成功，然后调用 Jasmine 的 <code>done()</code> 函数.</p>
+<p>很多情况下, 你应该使用一个断言(expectation)来确保结果满足你的要求. 断言使用 expect 函数, 此函数接收一个值, 称作实际值. 然后通过一个接收期望值的 Matcher 函数将2者链接起来. 断言的结果是 true/false, 或者也称作 pass/fail.</p>
+<p>也就是说, 这个例子中我们不需要使用断言.  <code>done()</code> 函数会作为参数传递给 <code>it()</code> 方法. 当我们决定执行完毕时，我们可以简单调用 <code>done()</code> 函数. 在处理异步测试时, 
+<code>done()</code> 通常作为一个 &quot;成功&quot; 回调. 不过此处, 我们可以用 <code>done()</code>，而不需要设置一个断言. 因为在最后的事件中, 我们知道测试已经满足了, 所以不需要断言. 如果最后的事件永远触发不了, <code>done()</code> 就不会被调用, 测试就会在5秒后超时, 表示测试失败了.</p>
+<p>现在我们有了一个测试用例, 我们来执行它，以确保我们的应用程序编辑器正确实现了表单验证.</p>
+<h2 id="testing_applications_-_running_the_test">执行测试<a class="quick-link" href="#testing_applications_-_running_the_test"></a></h2>
+<p>现在已经连接上了测试, 我们用本地浏览器(local browser)运行一下.</p>
+<p>首先, 在 Workspace 导航视图上选择 &quot;WindowEditor&quot; 场景节点，以便显示场景的测试执行标签页. 然后, 在测试执行标签页左侧，根据你的需要选择浏览器.  此处, 我们选择 Chrome.<br> 选择完成后, 你会发现你选择的浏览器正在打开你的应用程序.</p>
+<p><strong>注意:</strong> 如果 &quot;sencha app watch&quot; 正在初始化, 你会在应用程序节点右侧看到一个黄色的眼睛图标. 当图标变成黑色的时候，浏览器才会打开, 表示 &quot;app watch&quot; 初始化完成.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-chrome-test-runner.jpg" alt="Sencha Studio Chrome Test Runner"></span></p>
-<p>Select &quot;WindowValidation.js&quot; from the WindowEditor Test Runner and click &quot;Run Selection&quot; 
-from the top toolbar.  If all goes well, you should receive a green checkbox indicating 
-that the test has successfully passed.</p>
+<p>在 WindowEditor 的测试运行器中选择 &quot;WindowValidation.js&quot;, 然后点击顶栏的 &quot;Run Selection&quot; 
+. 如果一切正常, 你会得到一个绿色的勾，表示测试执行通过.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-runner-test-passed.jpg" alt="Sencha Studio Test Runner Passed"></span></p>
-<p>It may be useful to see what happens if the test fails as well, so let&#39;s force that to occur by changing our test case.<br>Replace the following line:</p>
+<p>再来看看测试失败时发生什么, 我们来改一下测试用例的代码，强制使得测试执行失败.<br>我们把下面的代码:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">    // Set the field&#39;s value to a valid email address
     // in order to have the button fire an enable event
     field.setValue(&#39;valid@email.com&#39;);
-</code></pre></div><p>with this code:</p>
+</code></pre></div><p>改为:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">    field.setValue(&#39;&#39;);
-</code></pre></div><p>As you can imagine, this change will cause the textfield value to remain invalid, meaning the button&#39;s enable event will 
-never fire and we&#39;ll never call <code>done()</code>.  After 5 seconds, the test will determine itself failed and timeout.</p>
-<p>Save your spec and re-run the selection.  This time you should see a red &quot;1&quot;.  This indicates that one spec failed.  If 
-you expand WindowValidation.js, and then expand <code>formBind true</code>, you&#39;ll see our spec with a red &quot;x&quot; next to it.  If you 
-click on the red &quot;x&quot;, you can then review a summary of the error in the lower summary panel.</p>
+</code></pre></div><p>可以想象, 这个改动会使得输入框值无效，按钮的 enable 事件永远不会触发，也就永远不会调用 <code>done()</code>.  5 秒之后, 测试超时并执行失败.</p>
+<p>保存 spec，然后重新执行一下. 你会看到一个红色的 &quot;1&quot;. 表示一个 spec 失败了. 如果你展开 WindowValidation.js, 然后展开 <code>formBind true</code>, 你会看到我们的 spec 后边跟着一个红色的 &quot;x&quot;. 如果你点击红色的 &quot;x&quot;, 你就可以在摘要面板上看到错误的摘要.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-runner-test-failed.jpg" alt="Sencha Studio Test Runner Failed"></span></p>
-<h2 id="testing_applications_-_conclusion">Conclusion<a class="quick-link" href="#testing_applications_-_conclusion"></a></h2>
-<p>As you may imagine, this guide only scratches the surface of what can be done with Sencha Test by way of Sencha Studio.  Hopefully, this 
-introduction provides you with the knowledge you&#39;ll need to navigate through and discover the many powerful tools 
-contained within Sencha Studio.</p>
-<p>If you have further questions, concerns, or bug reports, please visit the 
-<a href="../../../https@www.sencha.com/forum/forumdisplay.php@144-Sencha-Test" class="external-link" target="_blank">Sencha Test forums</a>.</p>
+<h2 id="testing_applications_-_conclusion">结论<a class="quick-link" href="#testing_applications_-_conclusion"></a></h2>
+<p>可以想象, 本指南只接触了通过 Sencha Studio 使用 Sencha Test 的表面. 希望本文为你提供了基础知识，来探索和发现 Sencha Studio 中更多功能强大的工具.</p>
+<p>如果你有更多疑问, 或者 bug 报告, 请访问
+<a href="https://www.sencha.com/forum/forumdisplay.php@144-Sencha-Test" class="external-link" target="_blank">Sencha Test 论坛</a>.</p>
 
         </div>
     </div>
     <div id="footer">
         <p>
-            <a href="../../../https@www.facebook.com/senchainc/default.htm" target="_blank"><img class="social" src="../home-images/fb.png"/></a>
-            <a href="../../../https@www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../home-images/in.png"/></a>
-            <a href="../../../https@twitter.com/Sencha" target="_blank"><img class="social" src="../home-images/twt.png"/></a>
-            Sencha Test 1.0.3  | <a href='../../../https@www.sencha.com/legal/terms-of-use/default.htm' target='_blank'>Terms of Use</a>
+            <a href="https://www.facebook.com/senchainc/" target="_blank"><img class="social" src="../home-images/fb.png"/></a>
+            <a href="https://www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../home-images/in.png"/></a>
+            <a href="https://twitter.com/Sencha" target="_blank"><img class="social" src="../home-images/twt.png"/></a>
+            Sencha Test 1.0.3  | <a href='https://www.sencha.com/legal/terms-of-use/' target='_blank'>Terms of Use</a>
         </p>
     </div>
 </div>
@@ -1186,11 +1134,11 @@ contained within Sencha Studio.</p>
                                         <a class="product-item" href="../../extjs/5.0.1/index.html">5.0.1</a>
                                         <a class="product-item" href="../../extjs/5.0.0/index.html">5.0.0</a>
                             <h3>4.x</h3>
-                                        <a class="product-item" href="../../extjs/4.2.5/default.htm">4.2.5</a>
-                                        <a class="product-item" href="../../extjs/4.1.3/default.htm">4.1.3</a>
-                                        <a class="product-item" href="../../extjs/4.0.7/default.htm">4.0.7</a>
+                                        <a class="product-item" href="../../extjs/4.2.5/">4.2.5</a>
+                                        <a class="product-item" href="../../extjs/4.1.3/">4.1.3</a>
+                                        <a class="product-item" href="../../extjs/4.0.7/">4.0.7</a>
                             <h3>3.x</h3>
-                                        <a class="product-item" href="../../extjs/3.4.0/default.htm">3.4.0</a>
+                                        <a class="product-item" href="../../extjs/3.4.0/">3.4.0</a>
                 </div>
                 <div class="product-version-ct hide sencha_test">
                         <h2>Sencha Test</h2>
@@ -1222,9 +1170,9 @@ contained within Sencha Studio.</p>
                         <h2>Touch</h2>
                             <h3>2.x</h3>
                                         <a class="product-item" href="../../touch/2.4/index.html">Touch 2.4</a>
-                                        <a class="product-item" href="../../touch/2.3.1/default.htm">Touch 2.3</a>
-                                        <a class="product-item" href="../../touch/2.2.1/default.htm">Touch 2.2</a>
-                                        <a class="product-item" href="../../touch/2.0.2/default.htm">Touch 2.0</a>
+                                        <a class="product-item" href="../../touch/2.3.1/">Touch 2.3</a>
+                                        <a class="product-item" href="../../touch/2.2.1/">Touch 2.2</a>
+                                        <a class="product-item" href="../../touch/2.0.2/">Touch 2.0</a>
                 </div>
                 <div class="product-version-ct hide webappmgr">
                         <h2>Web Application Manager</h2>

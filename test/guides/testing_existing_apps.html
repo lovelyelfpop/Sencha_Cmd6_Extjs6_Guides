@@ -21,12 +21,12 @@
          * -------------------------- */
         @font-face {
             font-family: 'FontAwesome';
-            src: url('../css/fonts/fontawesome-webfont.eot@v=4.5.0');
+            src: url('../css/fonts/fontawesome-webfont.eot?v=4.5.0');
             src: url('../css/fonts/fontawesome-webfont.eot@#iefix&v=4.5.0') format('embedded-opentype'),
-            url('../css/fonts/fontawesome-webfont.woff2@v=4.5.0') format('woff2'),
-            url('../css/fonts/fontawesome-webfont.woff@v=4.5.0') format('woff'),
-            url('../css/fonts/fontawesome-webfont.ttf@v=4.5.0') format('truetype'),
-            url('../css/fonts/fontawesome-webfont.svg@v=4.5.0#fontawesomeregular') format('svg');
+            url('../css/fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'),
+            url('../css/fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'),
+            url('../css/fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'),
+            url('../css/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
             font-weight: normal;
             font-style: normal;
         }
@@ -106,7 +106,7 @@
         </div>
         <div class="classText">
             <div class="toc">
-                <h2>Contents</h2>
+                <h2>内容</h2>
                     <a class="toc-page-h2" href="#terms-icons-and-labels">Terms, Icons, and Labels</a>
                     <a class="toc-page-h3" href="#access-levels">Access Levels</a>
                     <a class="toc-page-h3" href="#member-types">Member Types</a>
@@ -159,7 +159,7 @@
     programmatically raise an event to be handled by one or more event handler methods.  DOM 
     events, while handled by the framework event system, are not specifically described 
     within the API documentation.  *For DOM events refer to the 
-    <a href="../../../https@developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Events">event reference</a> page from MDN.</li>
     <li><strong>Theme Variable</strong> - Variables used by the visual theme engine employed by the 
     framework.</li>
     <li><strong>Theme Mixin</strong> - Functions used by the visual theme engine employed by the framework 
@@ -371,7 +371,7 @@
     </div>
     <div id="header">
         <div class="logo">
-            <a href="../../default.htm"><img height="32" src="../home-images/sencha_logo_thumb.png"/></a>
+            <a href="../../"><img height="32" src="../home-images/sencha_logo_thumb.png"/></a>
         </div>
         <span id="mobile-main-nav-menu-btn" class="fa fa-bars"></span>
         <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn tooltip tooltip-tl-bl landing-product-menu-btn"><div class="callout callout-b"></div></span>
@@ -385,7 +385,7 @@
         <div id="class-tree-ct" class="class-tree">
             <h2 class="product-header">
                 <div class="logo">
-                    <a href="../../default.htm"><img src="../home-images/sencha_logo1x.png"/></a>
+                    <a href="../../"><img src="../home-images/sencha_logo1x.png"/></a>
                 </div>
                 <a href="../index.html">Sencha Test 1.0.3 </a>
                 <span data-tip="Product / Version Menu" class="fa fa-chevron-circle-down product-menu-btn  tooltip tooltip-tl-bl"><div class="callout callout-b"></div></span>
@@ -911,100 +911,82 @@
 
             <div id="toggleExamples" class="fa fa-code tooltip tooltip-tr-br" data-expand="Expand All Examples" data-collapse="Collapse All Examples"><div class="callout callout-b"></div></div>
                 <div class="toc">
-                    <h2>Contents</h2>
-                        <a class="toc-page-h2" href="#testing_existing_apps_-_creating_the_workspace">Creating the Workspace</a>
-                        <a class="toc-page-h2" href="#testing_existing_apps_-_creating_the_test_project">Creating the Test Project</a>
-                        <a class="toc-page-h3" href="#testing_existing_apps_-_creating_the_tests">Creating the Tests</a>
-                        <a class="toc-page-h2" href="#testing_existing_apps_-_conclusion">Conclusion</a>
+                    <h2>内容</h2>
+                        <a class="toc-page-h2" href="#testing_existing_apps_-_creating_the_workspace">创建 Workspace</a>
+                        <a class="toc-page-h2" href="#testing_existing_apps_-_creating_the_test_project">创建一个测试项目</a>
+                        <a class="toc-page-h3" href="#testing_existing_apps_-_creating_the_tests">创建测试用例</a>
+                        <a class="toc-page-h2" href="#testing_existing_apps_-_conclusion">结论</a>
                 </div>
             <h1 id="testing_existing_apps_-_testing_existing_applications">测试已有应用程序<a class="quick-link" href="#testing_existing_apps_-_testing_existing_applications"></a></h1>
-<p>Sencha Test can test your existing web applications with minimal setup required. This guide will
-walk you through the process of setting up a Sencha Test Workspace to test an existing application
-that is served by a remote server. Of course, because the application could just as easily be served
-from a local web server, this guide will get you started testing your applications whether you are
-a developer or a test engineer.</p>
-<h2 id="testing_existing_apps_-_creating_the_workspace">Creating the Workspace<a class="quick-link" href="#testing_existing_apps_-_creating_the_workspace"></a></h2>
-<p>You can create a new workspace using the “New Workspace” button on the bottom-right side of the welcome screen.</p>
+<p>Sencha Test 可以用来测试你现有的 web 应用程序，只需要很少的安装配置. 本指南会教你如何配置一个Sencha Test Workspace，来测试一个远程服务器上的已有应用程序. 当然, 因为应用程序也很容易运行在本地 web 服务器, 所以，不管你是开发者还是测试工程师，本指南都会带你入门测试应用程序.</p>
+<h2 id="testing_existing_apps_-_creating_the_workspace">创建 Workspace<a class="quick-link" href="#testing_existing_apps_-_creating_the_workspace"></a></h2>
+<p>你可以点击欢迎界面右下的 “New Workspace” 按钮来创建一个新的 workspace.</p>
 <p><span class="image-wrapper"><img src="images/sencha-studio-new-workspace-button.jpg" alt="Sencha Studio New Workspace Button"></span></p>
 <ol>
-<li>Click the “New Workspace” button.</li>
-<li>Choose the destination Path.</li>
-<li>We can ignore the &quot;SDK Path&quot; since we already have an application.</li>
-<li>Click &quot;OK&quot;.</li>
+<li>点击 “New Workspace” 按钮.</li>
+<li>选择目标位置.</li>
+<li>可以忽略 &quot;SDK Path&quot;, 因为我们已经有了现成的应用程序.</li>
+<li>点击 &quot;OK&quot;.</li>
 </ol>
 <p><span class="image-wrapper"><img src="images/generate-workspace.png" alt="Create Workspace"></span></p>
-<p>Once the workspace has been generated, Sencha Studio will open and you can configure the test project
-by selecting the <strong>Tests</strong> node:</p>
+<p>workspace 生成之后, Sencha Studio 会打开它，你可以选择 <strong>Tests</strong> 节点，对测试项目进行配置:</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-app-step-one.png" alt="Setup Workspace"></span></p>
-<h2 id="testing_existing_apps_-_creating_the_test_project">Creating the Test Project<a class="quick-link" href="#testing_existing_apps_-_creating_the_test_project"></a></h2>
-<p>You can change the location for the test project&#39;s <code>&quot;project.json&quot;</code> file, but the default location (in
-the <code>&quot;test&quot;</code> folder) is typically fine. Inside the test project you can create multiple <strong>Test Scenarios</strong>,
-which are simply collections of tests that can be run independently.</p>
-<p>Select the &quot;Initialize Test Project&quot; button to display the settings screen for the test project.</p>
+<h2 id="testing_existing_apps_-_creating_the_test_project">创建测试项目<a class="quick-link" href="#testing_existing_apps_-_creating_the_test_project"></a></h2>
+<p>你可以改变测试项目的 <code>&quot;project.json&quot;</code> 文件的位置, 不过默认位置 (在
+<code>&quot;test&quot;</code> 文件夹里) 已经挺好的. 在测试项目中可以创建多个<strong>测试场景(Scenarios)</strong>,
+测试场景是测试用例的集合，每个测试用例可以独立执行.</p>
+<p>点击 &quot;Initialize Test Project&quot; 按钮，可以打开测试项目的设置界面.</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-new-test-project.png" alt="Configure Test Project"></span></p>
-<p>See the <a href="test_projects_scenarios_suites.html" class="external-link" target="_blank">Projects, Scenarios and Suites</a> guide for more depth on the
-configuration process, but for simplicity in this guide we are only going to change two things:</p>
+<p>配置过程的详细说明请看 <a href="test_projects_scenarios_suites.html" class="external-link" target="_blank">项目, 场景(Scenarios)和套件(Suites)</a>指南, 但是为了简单起见，本指南只做2件事:</p>
 <ul>
-<li><strong>Location</strong> = <a href="../../../https@www.google.com/default.htm" class="external-link" target="_blank">https://www.google.com/</a></li>
+<li><strong>Location</strong> = <a href="https://www.baidu.com" class="external-link" target="_blank">https://www.baidu.com</a></li>
 <li><strong>Allowed Globals</strong> = *</li>
 </ul>
-<p>Because Google uses a lot of global variables on its page, we will disable global leak detection by
-setting the &quot;Allowed Globals&quot; to the universal wildcard of <code>*</code>.</p>
+<p>因为百度页面上使用了大量的全局变量, 我们需要把 &quot;Allowed Globals&quot; 设为通配符<code>*</code>，来禁用掉 全局变量内存泄漏 的检测.</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-location.png" alt="App Location"></span></p>
-<p>Click the Save button and you will see that the <strong>Tests</strong> node can now be expanded. The children of the Tests
-node are the <strong>Scenarios</strong>. By default a new test project is given a &quot;Unit Tests&quot; scenario. This will suffice
-for the sake of this guide.</p>
+<p>点击 Save 按钮，此时你会看到 <strong>Tests</strong> 节点可以展开了. Tests
+节点的子节点是 <strong>场景(Scenarios)</strong>. 默认地，新建的测试项目会有一个 &quot;Unit Tests&quot; 场景. 对本指南来说，这点足够了.</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-step2.png" alt="App Location"></span></p>
-<h3 id="testing_existing_apps_-_creating_the_tests">Creating the Tests<a class="quick-link" href="#testing_existing_apps_-_creating_the_tests"></a></h3>
-<p>Now that we have a test project and scenario, we can create our first Jasmine tests. To do this inside
-Sencha Studio, right click on the &quot;Unit Tests&quot; scenario node:</p>
+<h3 id="testing_existing_apps_-_creating_the_tests">创建测试用例<a class="quick-link" href="#testing_existing_apps_-_creating_the_tests"></a></h3>
+<p>现在我们有了一个测试项目和场景, 我们可以创建我们的第一个 Jasmine 测试了. 只需要在 Sencha Studio 中, 右击 &quot;Unit Tests&quot; 场景节点:</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-new-suite.png" alt="App Location"></span></p>
-<p>Enter a name when prompted, such as &quot;Tests.js&quot;. A new node will be added to &quot;Unit Tests&quot; and you can
-then open the file. The default Jasmine test suite is very simple so we can move right in and start doing
-some more useful tests.</p>
+<p>在出现的对话框中输入名称, 比如 &quot;Tests.js&quot;. 一个新的节点就被添加到 &quot;Unit Tests&quot; 下面了，你可以打开这个文件. 默认的 Jasmine 测试套件很简单，所以我们可以开始做些更有用的测试.</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-step3.png" alt="Test Suite"></span></p>
-<p>In the example above we are using the Sencha Test Futures API to locate and manipulate the search
-field. This begins with the <code>ST.element()</code> call:</p>
-<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">ST.element(&#39;input[title=&quot;Search&quot;]&#39;)
+<p>上面的例子中，我们使用了 Sencha Test Futures API，来定位和操作搜索框元素. 我们调用 <code>ST.element()</code> 来实现:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">ST.element(&#39;input#kw&#39;)
     .focus()
     .type(&#39;Sencha&#39;);
-</code></pre></div><p>This method returns a &quot;future element&quot;. This is an object whose methods (<code>focus</code> and <code>type</code> among others)
-perform their operations on the element once it is available and visible. In other frameworks, these cases
-are cumbersome to code around, but using the Futures API, this is not an issue.</p>
-<p>To run our test, we select the <strong>Unit Tests</strong> node in the tree. This launches the Interactive Test Runner.
-To get going, we select one of the locally detected browsers (Chrome 48 in this case), and we will see the
-test tree populate with our Jasmine suite and spec.</p>
+</code></pre></div><p>这个函数返回一个 &quot;future 元素&quot;. 它是一个对象，一旦元素可用并且可见，此对象里的函数 (<code>focus</code> 和 <code>type</code> 等)
+就在该元素上进行操作. 在其他测试框架中, 要实现这种可能会比较繁琐，但是使用 Futures API, 这完全不是问题.</p>
+<p>要执行我们的测试, 只要选中 <strong>Unit Tests</strong> 节点。然后会启动交互式测试运行器.
+接着, 我们选择一个本地浏览器(此处则是Chrome 48), 于是我们看到测试树里面出现了我们的 Jasmine 套件和spec[1].</p>
+<p>[1]译者注：一个Suite(describe)包含多个Spec(it), 一个Spec(it)包含多个断言(expect)</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-test-runner.png" alt="Test Runner"></span></p>
-<p>This takes place as soon as we select the browser, because Sencha Studio will launch that browser and
-load the test subject (<a href="../../../https@www.google.com/default.htm" class="external-link" target="_blank">https://www.google.com</a> in this case) which will load all of our tests. If you look
-at the URL in the address bar of the browser, however, you will see something like the following instead
-of the URL we entered:</p>
-<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">http://192.168.0.113:8700/?orionAgentId=1
-</code></pre></div><p>The address and port point at the local machine. To be more specific, the URL points at Sencha Studio
-itself. This is because Sencha Test executes tests (in Sencha Studio and the <strong>stc</strong> command-line) by
-acting as a middle-man or proxy between the browser and the test page or application. This allows Sencha
-Test to inject Jasmine and our tests without modifying the test subject.</p>
-<p>You can learn more about these details in <a href="using_the_test_runner.html" class="external-link" target="_blank">使用Test Runner</a>.</p>
-<p>Once we hit the Run button, we see some search results!</p>
+<p>这一步在我们选择浏览器的时候就会发生, 因为 Sencha Studio 会启动浏览器并加载测试对象 (本例就是<a href="https://www.baidu.com/" class="external-link" target="_blank">https://www.baidu.com</a>) ，测试对象会加载我们的所有测试. 不过，如果你看下浏览器的地址栏, 你会看到 URL 像下面这样，而不是我们输入的地址:</p>
+<div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">http://127.0.0.1:8600/?orionAgentId=1
+</code></pre></div><p>地址和端口指向本地机器. 更具体地说，URL 指向 Sencha Studio
+自身. 这是因为 Sencha Test 是处于浏览器和测试页面/应用程序中间，以中介或代理的方式执行测试 (在 Sencha Studio 和 <strong>stc</strong> 命令行中)的. 这使得 Sencha
+Test 可以把 Jasmine 和我们的测试注入到测试对象中，而无需修改测试对象.</p>
+<p>更多细节请看 <a href="using_the_test_runner.html" class="external-link" target="_blank">使用测试运行器 Test Runner</a>.</p>
+<p>然后点击 Run 按钮, 浏览器中就可以看到搜索结果了!</p>
 <p><span class="image-wrapper"><img src="images/testing-existing-apps-run-tests.png" alt="Test Subject"></span></p>
-<p><em>Note:</em> Because this test manipulates the focus, some browsers will fail if they are not the foreground
-application. In this case, be sure to switch to that browser window as soon as you hit the Run button.</p>
-<h2 id="testing_existing_apps_-_conclusion">Conclusion<a class="quick-link" href="#testing_existing_apps_-_conclusion"></a></h2>
-<p>That is all it takes to get started testing any application. From here you can dig deeper into:</p>
+<p><em>注意:</em> 因为这个测试会聚焦搜索框, 有些浏览器如果不是前台活动窗口的话，可能会执行失败. 此时，在点击 Run 按钮的时候，应该要把浏览器切换到前台运行.</p>
+<h2 id="testing_existing_apps_-_conclusion">结论<a class="quick-link" href="#testing_existing_apps_-_conclusion"></a></h2>
+<p>测试应用程序的入门就这些. 更深层次的请看:</p>
 <ul>
-<li><a href="test_projects_scenarios_suites.html" class="external-link" target="_blank">Projects, Scenarios and Suites</a></li>
-<li><a href="using_the_test_runner.html" class="external-link" target="_blank">使用Test Runner</a></li>
-<li><a href="../../../jasmine.github.io/2.4/introduction.html" class="external-link" target="_blank">Jasmine</a></li>
+<li><a href="test_projects_scenarios_suites.html" class="external-link" target="_blank">项目, 场景(Scenarios)和套件(Suite)</a></li>
+<li><a href="using_the_test_runner.html" class="external-link" target="_blank">使用测试运行器 Test Runner</a></li>
+<li><a href="http://jasmine.github.io/2.4/introduction.html" class="external-link" target="_blank">Jasmine</a></li>
 </ul>
 
         </div>
     </div>
     <div id="footer">
         <p>
-            <a href="../../../https@www.facebook.com/senchainc/default.htm" target="_blank"><img class="social" src="../home-images/fb.png"/></a>
-            <a href="../../../https@www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../home-images/in.png"/></a>
-            <a href="../../../https@twitter.com/Sencha" target="_blank"><img class="social" src="../home-images/twt.png"/></a>
-            Sencha Test 1.0.3  | <a href='../../../https@www.sencha.com/legal/terms-of-use/default.htm' target='_blank'>Terms of Use</a>
+            <a href="https://www.facebook.com/senchainc/" target="_blank"><img class="social" src="../home-images/fb.png"/></a>
+            <a href="https://www.linkedin.com/company/sencha-inc" target="_blank"><img class="social" src="../home-images/in.png"/></a>
+            <a href="https://twitter.com/Sencha" target="_blank"><img class="social" src="../home-images/twt.png"/></a>
+            Sencha Test 1.0.3  | <a href='https://www.sencha.com/legal/terms-of-use/' target='_blank'>Terms of Use</a>
         </p>
     </div>
 </div>
@@ -1059,11 +1041,11 @@ application. In this case, be sure to switch to that browser window as soon as y
                                         <a class="product-item" href="../../extjs/5.0.1/index.html">5.0.1</a>
                                         <a class="product-item" href="../../extjs/5.0.0/index.html">5.0.0</a>
                             <h3>4.x</h3>
-                                        <a class="product-item" href="../../extjs/4.2.5/default.htm">4.2.5</a>
-                                        <a class="product-item" href="../../extjs/4.1.3/default.htm">4.1.3</a>
-                                        <a class="product-item" href="../../extjs/4.0.7/default.htm">4.0.7</a>
+                                        <a class="product-item" href="../../extjs/4.2.5/">4.2.5</a>
+                                        <a class="product-item" href="../../extjs/4.1.3/">4.1.3</a>
+                                        <a class="product-item" href="../../extjs/4.0.7/">4.0.7</a>
                             <h3>3.x</h3>
-                                        <a class="product-item" href="../../extjs/3.4.0/default.htm">3.4.0</a>
+                                        <a class="product-item" href="../../extjs/3.4.0/">3.4.0</a>
                 </div>
                 <div class="product-version-ct hide sencha_test">
                         <h2>Sencha Test</h2>
@@ -1095,9 +1077,9 @@ application. In this case, be sure to switch to that browser window as soon as y
                         <h2>Touch</h2>
                             <h3>2.x</h3>
                                         <a class="product-item" href="../../touch/2.4/index.html">Touch 2.4</a>
-                                        <a class="product-item" href="../../touch/2.3.1/default.htm">Touch 2.3</a>
-                                        <a class="product-item" href="../../touch/2.2.1/default.htm">Touch 2.2</a>
-                                        <a class="product-item" href="../../touch/2.0.2/default.htm">Touch 2.0</a>
+                                        <a class="product-item" href="../../touch/2.3.1/">Touch 2.3</a>
+                                        <a class="product-item" href="../../touch/2.2.1/">Touch 2.2</a>
+                                        <a class="product-item" href="../../touch/2.0.2/">Touch 2.0</a>
                 </div>
                 <div class="product-version-ct hide webappmgr">
                         <h2>Web Application Manager</h2>
