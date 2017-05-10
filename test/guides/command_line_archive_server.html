@@ -912,9 +912,9 @@
             <div id="toggleExamples" class="fa fa-code tooltip tooltip-tr-br" data-expand="Expand All Examples" data-collapse="Collapse All Examples"><div class="callout callout-b"></div></div>
                 <div class="toc">
                     <h2>内容</h2>
-                        <a class="toc-page-h2" href="#command_line_archive_server_-_command_line_syntax">Command Line Syntax</a>
-                        <a class="toc-page-h3" href="#command_line_archive_server_-_required_flags">Required Flags</a>
-                        <a class="toc-page-h2" href="#command_line_archive_server_-_image_comparison">Image Comparison</a>
+                        <a class="toc-page-h2" href="#command_line_archive_server_-_command_line_syntax">命令行语法</a>
+                        <a class="toc-page-h3" href="#command_line_archive_server_-_required_flags">必填标识</a>
+                        <a class="toc-page-h2" href="#command_line_archive_server_-_image_comparison">图像比较</a>
                         <a class="toc-page-h2" href="#command_line_archive_server_-_cloud_based_browser_farm_options">Cloud-based Browser Farm Options</a>
                         <a class="toc-page-h2" href="#command_line_archive_server_-_setting_up_a_result_archive_server">Setting up a Result Archive Server</a>
                         <a class="toc-page-h3" href="#command_line_archive_server_-_starting_the_archive_server">Starting the Archive Server</a>
@@ -927,10 +927,10 @@
 you to execute tests for an existing scenario from the command-line.  The command-line tool doesn&#39;t support launching of 
 local browsers, which means a browser farm and browser pool must be configured for the target scenario.</p>
 <p>Let&#39;s walk through executing a test via CLI.</p>
-<h2 id="command_line_archive_server_-_command_line_syntax">Command Line Syntax<a class="quick-link" href="#command_line_archive_server_-_command_line_syntax"></a></h2>
+<h2 id="command_line_archive_server_-_command_line_syntax">命令行语法<a class="quick-link" href="#command_line_archive_server_-_command_line_syntax"></a></h2>
 <p>The basic command-line syntax for executing a test from the command line is as follows:</p>
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">stc run -o output -p pool -s scenario
-</code></pre></div><h3 id="command_line_archive_server_-_required_flags">Required Flags<a class="quick-link" href="#command_line_archive_server_-_required_flags"></a></h3>
+</code></pre></div><h3 id="command_line_archive_server_-_required_flags">必填标识<a class="quick-link" href="#command_line_archive_server_-_required_flags"></a></h3>
 <p>Here are the optional flags that may be passed along via your command line execution:</p>
 <p><code>-o &lt;output&gt;</code> - Output format. Supported values are <code>text</code>, <code>teamcity</code> and <code>junit</code></p>
 <p><code>-p &lt;pool&gt;</code> - Name of the pool from whence tests will be executed. This must be a pool associated with a browser farm</p>
@@ -943,7 +943,7 @@ local browsers, which means a browser farm and browser pool must be configured f
 <div class="code-snippet-wrap"><div class="code-controls example-collapse-target"><span class="collapse-tool"></span><span class="expand-tool"></span>Sample Code</div><pre><code class="language-javascript">  stc run -o teamcity -p &quot;My WebDriver Pool&quot; -s tests\unit_tests
 </code></pre></div></li>
 </ul>
-<h2 id="command_line_archive_server_-_image_comparison">Image Comparison<a class="quick-link" href="#command_line_archive_server_-_image_comparison"></a></h2>
+<h2 id="command_line_archive_server_-_image_comparison">图像比较<a class="quick-link" href="#command_line_archive_server_-_image_comparison"></a></h2>
 <p>To perform image comparisons from screenshots, Sencha Test will use an existing run as the reference (baseline) against 
 which each image will be compared. If a baseline for comparison is not present, all comparisons will pass, and the 
 resulting archive directory can then be specified as the baseline for future comparisons.</p>
